@@ -154,6 +154,8 @@ A 阶段结束后：
 - `ladder-matrix.csv`：只写代号；
 - `ladder-ratings.csv`：Elo 和区间。
 
+结果库里每一局都要记录过程分的各项指标（DESIGN 12.2），C 阶段的验证要用。
+
 ### 5.3 两项测试的要求
 
 **可钻空子测试（11.5 第 5 条）：**
@@ -179,6 +181,10 @@ B 阶段结束后停下来，等审查。
 
 - **命令：** 按 DESIGN 14.1 实现 grade、scrimmage、league、calibrate、bench；grade 的输出格式按 14.2。
 - **自检：** 按 14.3，包括噪声测试，结果写进 `logs/self-calibration.log`。
+- **过程分：** DESIGN 12.2 是用户要求的雏形，由你补齐：
+  - 按 12.3 的约束和四项验证，用 B 阶段校准对局的数据，提出最终的指标和权重；
+  - 写进 phase-C 报告；
+  - 这属于计分方式，要等评测负责人审查、用户确认后才能冻结。
 - **package/：** 给被测模型的公开材料清单，包括：
   - rules.md、SDK、arena、公开 bot；
   - public 和 scrimmage 地图；
