@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "system": "Linux",
+  "kernel": "6.18.40.1-microsoft-standard-WSL2",
+  "distribution": "Ubuntu 22.04.5 LTS",
+  "pythonRunningProbe": "3.10.12",
+  "hardware": {
+    "cpuModel": "Intel(R) Core(TM) i5-14600KF",
+    "logicalCpus": 20,
+    "memoryKiB": 16288320
+  },
+  "toolchain": {
+    "python313": {
+      "available": false
+    },
+    "gcc11": {
+      "available": true,
+      "exitCode": 0,
+      "firstLine": [
+        "g++-11 (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0"
+      ]
+    },
+    "bubblewrap": {
+      "available": true,
+      "exitCode": 0,
+      "firstLine": [
+        "bubblewrap 0.6.1"
+      ]
+    }
+  },
+  "sandboxSmoke": {
+    "tested": true,
+    "trustedCommand": "/bin/true",
+    "available": true,
+    "exitCode": 0,
+    "firstLine": []
+  },
+  "speedFactor": null,
+  "speedFactorStatus": "not calibrated; no performance acceptance data",
+  "botExecutions": 0
+}
