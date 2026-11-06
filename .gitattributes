@@ -1,0 +1,4 @@
+# Byte-stable text across Windows/WSL checkouts (map/replay hashes depend on it).
+* text=auto eol=lf
+*.gz binary
+*.tar binary

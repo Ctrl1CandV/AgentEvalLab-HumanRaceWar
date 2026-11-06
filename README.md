@@ -4,7 +4,26 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 ## 现在进行到哪一步
 
-看 [STATUS.md](STATUS.md)。
+看 [STATUS.md](STATUS.md)。当前为 A 阶段引擎初版：有规则结算、消息解析和单元测试，尚无可运行的 bot 对局工具，不是已验收的竞技场。
+
+## 开发检查
+
+在 Linux/WSL 的仓库根目录运行：
+
+```sh
+python3.13 tools/check_environment.py
+python3.13 tools/run_tests.py
+```
+
+如果 Windows 上的仓库没有挂载进 WSL，可用宿主 Python 运行：
+
+```sh
+python tools/test_in_wsl.py --python python3.13
+```
+
+此工具只复制本项目公开的引擎、规则和指定测试到 WSL 临时目录，完成后清理临时副本，不安装工具、不联网、不执行 bot。结果写入 `data/engine-tests.json`、`logs/`；测试输入文件附有 SHA-256。默认 `--python python3` 可用于开发检查，但非 3.13 的结果不算正式环境验收。
+
+规则草稿见 [rules/rules.md](rules/rules.md)，测试覆盖与未验证范围见 [tests/COVERAGE.md](tests/COVERAGE.md)，暂定细节见 [docs/IMPLEMENTATION_NOTES.md](docs/IMPLEMENTATION_NOTES.md)。
 
 ## 文件
 
