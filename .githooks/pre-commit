@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+# Pre-commit check for this public repository (docs/DESIGN.md §16).
+# Enable once per clone: git config core.hooksPath .githooks
+#
+# Refuses, among the staged files:
+# - anything under private/ or runs/;
+# - files over 2 MB;
+# - files that look like credentials;
+# - files whose content equals a hidden file listed in private/HIDDEN.sha256.
+set -u
+
+hidden="private/HIDDEN.sha256"
+limit=$((2 * 1024 * 1024))
+status=0
+
+while IFS= read -r -d '' path; do
+  case "$path" in
+    private/* | runs/*)
+      echo "pre-commit: $path is under private/ or runs/, which never enter this repository" >&2
+      status=1
+      continue
+      ;;
+  esac
+  case "${path##*/}" in
+    .env | .env.* | *.pem | *.key | *.p12 | id_rsa* | id_ed25519* | credentials*)
+      echo "pre-commit: $path looks like a credential file" >&2
+      status=1
+      continue
+      ;;
+  esac
+  size=$(git cat-file -s ":$path")
+  if [ "$size" -gt "$limit" ]; then
+    echo "pre-commit: $path is $size bytes, over the 2 MB limit" >&2
+    status=1
+    continue
+  fi
+  if [ -f "$hidden" ]; then
+    sum=$(git show ":$path" | sha256sum | cut -d ' ' -f 1)
+    if grep -q "^$sum" "$hidden"; then
+      echo "pre-commit: $path has the same content as a hidden file listed in $hidden" >&2
+      status=1
+    fi
+  fi
+done < <(git diff --cached --name-only --diff-filter=ACMR -z)
+
+exit $status
