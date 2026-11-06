@@ -1,0 +1,26 @@
+PYTHON 3.13 ENGINE CHECK ONLY: no bot matches, replay files or full sandbox acceptance.
+Python 3.13.15; Linux; PYTHONHASHSEED=0
+Raw-byte streams, crash/timeout handling and output flooding remain untested.
+
+test_ascii_renderer_contains_positions_and_counters (tests.test_protocol.ProtocolTests.test_ascii_renderer_contains_positions_and_counters) ... ok
+test_bad_direction_is_a_warning (tests.test_protocol.ProtocolTests.test_bad_direction_is_a_warning) ... ok
+test_bad_lines_are_independent_not_a_forfeit (tests.test_protocol.ProtocolTests.test_bad_lines_are_independent_not_a_forfeit) ... ok
+test_fire_cannot_target_towers_or_bases (tests.test_protocol.ProtocolTests.test_fire_cannot_target_towers_or_bases) ... ok
+test_first_valid_order_and_independent_base_slots (tests.test_protocol.ProtocolTests.test_first_valid_order_and_independent_base_slots) ... ok
+test_first_well_formed_own_command_wins_even_if_illegal (tests.test_protocol.ProtocolTests.test_first_well_formed_own_command_wins_even_if_illegal) ... ok
+test_init_contains_all_parameters_and_limits (tests.test_protocol.ProtocolTests.test_init_contains_all_parameters_and_limits) ... ok
+test_invalid_events_are_private_other_events_public (tests.test_protocol.ProtocolTests.test_invalid_events_are_private_other_events_public) ... ok
+test_limits_are_explicit_not_hashed_rule_state (tests.test_protocol.ProtocolTests.test_limits_are_explicit_not_hashed_rule_state) ... ok
+test_line_limit_is_utf8_bytes_not_codepoints (tests.test_protocol.ProtocolTests.test_line_limit_is_utf8_bytes_not_codepoints) ... ok
+test_observation_full_information_ore_filter_and_bank (tests.test_protocol.ProtocolTests.test_observation_full_information_ore_filter_and_bank) ... ok
+test_parse_does_not_mutate_state_or_count_warnings_twice (tests.test_protocol.ProtocolTests.test_parse_does_not_mutate_state_or_count_warnings_twice) ... ok
+test_syntax_error_does_not_claim_slot (tests.test_protocol.ProtocolTests.test_syntax_error_does_not_claim_slot) ... ok
+test_turn_byte_limit_and_huge_single_line (tests.test_protocol.ProtocolTests.test_turn_byte_limit_and_huge_single_line) ... ok
+test_turn_line_limit (tests.test_protocol.ProtocolTests.test_turn_line_limit) ... ok
+test_unknown_enemy_and_missing_units_are_not_accepted (tests.test_protocol.ProtocolTests.test_unknown_enemy_and_missing_units_are_not_accepted) ... ok
+test_whitespace_crlf_blank_lines_and_end (tests.test_protocol.ProtocolTests.test_whitespace_crlf_blank_lines_and_end) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.007s
+
+OK

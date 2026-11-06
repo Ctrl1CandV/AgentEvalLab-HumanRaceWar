@@ -1,0 +1,8 @@
+Native WSL setup verification (no model or bot execution)
+isolated Python runtime and Linux process CPU clock: OK
+isolated C++20 compile and execution: OK
+pi 1.4.0 version/help and hrw-dev launcher: OK
+Git history, tracked-file digests and local test history verified during migration.
+Git hook path/executable and venv ignore: OK
+Full bot sandbox, replay, balance and performance acceptance: NOT RUN
+Model authentication and inference: NOT TESTED; user login required if not already configured.

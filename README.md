@@ -6,22 +6,21 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 看 [STATUS.md](STATUS.md)。当前为 A 阶段引擎初版：有规则结算、消息解析和单元测试，尚无可运行的 bot 对局工具，不是已验收的竞技场。
 
-## 开发检查
+## WSL 开发与交接
 
-在 Linux/WSL 的仓库根目录运行：
+主工作区已迁移到 WSL 的 `~/projects/AgentEvalLab-HumanRaceWar`，Windows 原目录仅保留备份。Python 3.13.15、GCC 11.4、bwrap 0.6.1 和 pi 1.4.0 已就绪。启动方式、登录步骤、验证记录与交接提示词见 [docs/WSL_HANDOFF.md](docs/WSL_HANDOFF.md)。
 
-```sh
-python3.13 tools/check_environment.py
-python3.13 tools/run_tests.py
-```
+在 WSL 终端运行 `hrw-dev`，启动器会进入项目并激活 `.venv` 后启动 pi。首次自行完成 `/login`、`/model`；信任当前项目后可使用 `/resume-phase-a` 或 `/process-review`。
 
-如果 Windows 上的仓库没有挂载进 WSL，可用宿主 Python 运行：
+在主工作区检查可信引擎（不会启动 bot）：
 
 ```sh
-python tools/test_in_wsl.py --python python3.13
+cd ~/projects/AgentEvalLab-HumanRaceWar
+.venv/bin/python tools/check_environment.py
+.venv/bin/python tools/run_tests.py
 ```
 
-此工具只复制本项目公开的引擎、规则和指定测试到 WSL 临时目录，完成后清理临时副本，不安装工具、不联网、不执行 bot。结果写入 `data/engine-tests.json`、`logs/`；测试输入文件附有 SHA-256。默认 `--python python3` 可用于开发检查，但非 3.13 的结果不算正式环境验收。
+86 项测试已在 Python 3.13.15 下通过，但 A 阶段整体尚未验收。新证据见 `data/python313-tests.json`、`data/wsl-setup.json` 和 `logs/python313-*.log`。旧的 Python 3.10 开发记录与 Windows 转发工具 `tools/test_in_wsl.py` 保留为历史，不再作为主工作区入口。
 
 规则草稿见 [rules/rules.md](rules/rules.md)，测试覆盖与未验证范围见 [tests/COVERAGE.md](tests/COVERAGE.md)，暂定细节见 [docs/IMPLEMENTATION_NOTES.md](docs/IMPLEMENTATION_NOTES.md)。
 

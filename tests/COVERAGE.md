@@ -1,8 +1,8 @@
 # 规则例子与验证边界
 
-当前入口：仓库根目录执行 `python3 tools/run_tests.py`，或 `python3 -m unittest discover -s tests -t . -v`。全部只用标准库，不启动 bot。正式验收解释器为 Python 3.13；本次因环境缺失，仅做 WSL Python 3.10 开发检查。
+当前入口：WSL 主工作区执行 `.venv/bin/python tools/run_tests.py`，或 `.venv/bin/python -m unittest discover -s tests -t . -v`。全部只用标准库，不启动 bot。2026-11-07 迁移后已用 Python 3.13.15 在 `PYTHONHASHSEED=0`、`1` 两个独立进程中各通过 86 项测试，另外归档确定性与协议测试；证据见 `data/python313-tests.json` 和 `logs/python313-*.log`。这不等于完成 A 阶段整体验收。
 
-Windows 宿主可运行 `python tools/test_in_wsl.py`，将公开代码复制到 WSL 临时目录测试，不依赖 D 盘挂载。它在 `PYTHONHASHSEED=0`、`1` 两个独立进程里各跑一次全套测试，并单独归档确定性、协议测试日志；初始及第 80 回合的状态哈希有固定回归值。安装好要求的解释器后，改用 `--python python3.13`。
+初始及第 80 回合的状态哈希有固定回归值。旧的 `data/engine-tests.json`、`logs/engine-tests*.log` 与 Windows 转发工具 `tools/test_in_wsl.py` 保留为 Python 3.10 时期的历史记录；后续在 WSL 原生目录直接测试，不再经 Windows 临时副本。
 
 ## 规则覆盖
 
@@ -29,9 +29,9 @@ Windows 宿主可运行 `python tools/test_in_wsl.py`，将公开代码复制到
 
 ## 明确尚未验证
 
-- Python 3.13 下的正式测试、完整回放文件的重放与哈希核对。
+- 完整回放文件的重放与哈希核对（Python 3.13.15 引擎测试已通过，但回放工具尚未实现）。
 - 实际 bot 的 UTF-8 字节流、READY/END 分帧、输出洪泛、崩溃、编译失败、死循环和超时。
-- bwrap 文件、网络和进程隔离、资源限额、CPU 绑核、跨命名空间 CPU 时钟、速度折算和框架重试。
+- 完整 bwrap 隔离、资源限额、CPU 绑核、跨命名空间 CPU 时钟、速度折算和框架重试。迁移仅补做可信 Python/C++ 环境探针，不是故障 bot 或沙箱安全验收。
 - 地图生成器全部检查、公开与练习地图集、SDK、动物园和统计验收。
 - 引擎 p95、运行器开销、整局速度及评分效率。
 

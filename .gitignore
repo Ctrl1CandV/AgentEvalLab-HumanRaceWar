@@ -2,7 +2,8 @@
 private/
 runs/
 
-# Build outputs
+# Build outputs and local Python environment
+.venv/
 __pycache__/
 *.pyc
 build/
