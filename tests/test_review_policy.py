@@ -29,7 +29,7 @@ class ReviewPolicyTests(unittest.TestCase):
     def test_seccomp_arch_clone_and_affinity_branches(self):
         with patch("arena.core.seccomp.platform.machine", return_value="x86_64"):
             policy = runtime_filter()
-        for number in (57, 58, 203, 101, 310, 311, 272, 308, 319, 29):
+        for number in (57, 58, 203, 101, 310, 311, 272, 308, 319, 29, 64, 68, 240):
             self.assertEqual(evaluate(policy, number), 0x50000 | errno.EPERM)
         self.assertEqual(evaluate(policy, 435), 0x50000 | errno.ENOSYS)
         self.assertEqual(evaluate(policy, 56, 17), 0x50000 | errno.EPERM)

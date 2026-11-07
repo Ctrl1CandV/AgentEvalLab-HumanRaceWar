@@ -5,6 +5,9 @@ from pathlib import Path
 import sys
 
 from arena.core.replay import ReplayError
+from arena.core.benchmark import run_benchmark, workload_digest
+from arena.core.timing import Calibration
+from arena.core.sandbox import InfrastructureError
 from arena.games.outpost.replay import verify
 from arena.games.outpost.mapgen import TYPES, generate, inspect_layout
 from arena.games.outpost.maps import parse_map
@@ -21,6 +24,13 @@ def main() -> int:
     match.add_argument("--out", type=Path, default=Path("runs/matches"))
     match.add_argument("--seeds", nargs=2, type=int, default=[17, 29])
     match.add_argument("--show-stderr", action="store_true", help="display bounded bot stderr (also archived)")
+    match.add_argument("--timing", type=Path, help="jobs=1 bench result; use its measured CPUs and scaled limits")
+    bench = commands.add_parser("bench", help="measure fixed CPU work at the actual parallel load in bwrap")
+    bench.add_argument("--jobs", type=int, default=6)
+    bench.add_argument("--samples", type=int, default=3)
+    bench.add_argument("--reference", type=Path, help="idle benchmark result from the evaluation machine")
+    bench.add_argument("--sweep", action="store_true", help="also measure 1/2/6/12/16/20 simultaneous workers")
+    bench.add_argument("--out", type=Path, default=Path("runs/bench"))
     mapgen = commands.add_parser("mapgen", help="generate a deterministic symmetric map")
     mapgen.add_argument("--type", choices=TYPES, required=True)
     mapgen.add_argument("--size", type=int, default=32)
@@ -33,6 +43,11 @@ def main() -> int:
     replay.add_argument("--turn", type=int, default=0)
     args = parser.parse_args()
     try:
+        if args.command == "bench":
+            result = run_benchmark(args.out, jobs=args.jobs, samples=args.samples,
+                                   reference=args.reference, sweep=args.sweep)
+            print(json.dumps(result, indent=2))
+            return 0 if result["status"] == "complete" else 2
         if args.command == "mapgen":
             generated = generate(args.type, args.size, args.seed)
             print(generated.text, end="")
@@ -46,7 +61,8 @@ def main() -> int:
             private = Path(__file__).resolve().parents[1] / "private"
             if args.map.resolve().is_relative_to(private) and not args.out.resolve().is_relative_to(private):
                 raise ValueError("hidden map artifacts must stay under private/")
-            row = play([args.a, args.b], args.map.read_text(), args.out, args.seeds)
+            calibration = Calibration.load(args.timing, workload_digest(), jobs=1) if args.timing else None
+            row = play([args.a, args.b], args.map.read_text(), args.out, args.seeds, calibration=calibration)
             print(json.dumps(row, indent=2))
             if args.show_stderr:
                 for path in sorted(Path(row["directory"]).glob("p*/stderr.txt")):
@@ -63,7 +79,7 @@ def main() -> int:
         else:
             print(json.dumps({k: result[k] for k in ("verified", "turns", "result")}, indent=2))
         return 0
-    except (OSError, ValueError, ReplayError) as error:
+    except (OSError, ValueError, ReplayError, InfrastructureError) as error:
         print(f"arena: {error}", file=sys.stderr)
         return 2
 

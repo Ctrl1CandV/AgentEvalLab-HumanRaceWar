@@ -203,7 +203,7 @@ while hrw.read_turn() is not None: hrw.send([])
 
     def test_readonly_filesystems_and_anonymous_file_bypasses(self):
         code = '''import os, errno, ctypes, hrw
-for directory in ('/tmp', '/dev', '/dev/shm'):
+for directory in ('/', '/tmp', '/dev', '/dev/shm'):
     if not os.path.isdir(directory): continue
     try:
         open(directory+'/must-not-write', 'w')
@@ -218,8 +218,9 @@ except OSError as error:
 else:
     raise AssertionError('memfd is writable outside address-space budget')
 libc = ctypes.CDLL(None, use_errno=True)
-assert libc.syscall(29, 0, 4096, 0o1600) == -1
-assert ctypes.get_errno() == errno.EPERM
+for call in (29, 64, 68, 240):
+    assert libc.syscall(call, 0, 4096, 0o1600) == -1
+    assert ctypes.get_errno() == errno.EPERM
 '''+IDLE
         row = self.match(self.bot("memory-policy", code))
         self.assertEqual(row["result"]["faults"], [None, None])

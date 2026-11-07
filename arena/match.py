@@ -5,6 +5,7 @@ from dataclasses import asdict
 from datetime import datetime, timezone
 from hashlib import sha256
 import json
+import math
 import os
 from pathlib import Path
 import traceback
@@ -15,6 +16,7 @@ from arena.core.replay import Writer
 from arena.core.runner import cpu_hard_limit, run
 from arena.core.sandbox import Bubblewrap, InfrastructureError, prepare
 from arena.core.transport import Connection
+from arena.core.timing import Calibration, scale_limits
 from arena.games.outpost import Outpost
 from arena.games.outpost.replay import invalid_events, outcome
 
@@ -27,8 +29,15 @@ def append_result(path: Path, row: dict):
 
 
 def play(sources: list[Path], map_text: str, out: Path, seeds: list[int], *, limits=None,
-         retries: int = 3) -> dict:
+         retries: int = 3, calibration: Calibration | None = None) -> dict:
     game = Outpost(limits)
+    factor = 1.0
+    if calibration is not None:
+        if calibration.jobs != 1:
+            raise ValueError("standalone match requires a jobs=1 benchmark, not batch-load calibration")
+        factor = calibration.factor
+        game = Outpost(scale_limits(game.limits, factor))
+    wall_margin_ms = math.ceil(500*factor)
     # Validate user inputs before allocating an attempted game.
     initial = game.new_match(map_text, {}, seeds)
     if len(sources) != len(initial.players):
@@ -52,6 +61,10 @@ def play(sources: list[Path], map_text: str, out: Path, seeds: list[int], *, lim
         row = {"matchId": run_id, "attempt": attempt, "directory": str(work), "status": "infra_error"}
         try:
             launcher = Bubblewrap()
+            if calibration is not None:
+                if not set(calibration.cpus) <= set(launcher.cpus):
+                    raise ValueError("calibrated CPUs are not available on this process")
+                launcher.cpus = list(calibration.cpus)
             if len(launcher.cpus) < len(sources):
                 raise InfrastructureError("not enough distinct CPUs for this match")
             bots = [prepare(source, work / f"p{p}", launcher, launcher.cpus[p]) for p, source in enumerate(sources)]
@@ -67,11 +80,13 @@ def play(sources: list[Path], map_text: str, out: Path, seeds: list[int], *, lim
                 "mapSha256": sha256(map_text.encode()).hexdigest(),
                 "bots": [{"code": b.code, "sha256": b.digest, "language": b.language,
                           "validationError": b.validation_error} for b in bots],
-                "seeds": seeds, "limits": game.limits, "speedFactor": None,
-                "timingCalibration": "unscaled development limits; benchmark pending",
+                "seeds": seeds, "limits": game.limits, "speedFactor": factor if calibration else None,
+                "timingCalibration": calibration.header() if calibration else "unscaled development limits; no calibration supplied",
+                "wallMarginMs": wall_margin_ms,
+                "cpuHardLimitSeconds": cpu_hard_limit(game.limits, state.rules["TURNS"], factor),
                 "startedAt": datetime.now(timezone.utc).isoformat(), "sandbox": "bwrap",
-                "runtimePolicy": {"version": 2, "singleProcess": True, "maxThreads": 16,
-                                  "tmp": "read-only", "cpuAccounting": "READY/END cumulative differences"},
+                "runtimePolicy": {"version": 3, "singleProcess": True, "maxThreads": 16,
+                                  "rootTmpDev": "read-only", "tmp": "read-only", "cpuAccounting": "READY/END cumulative differences"},
                 "cpus": launcher.cpus[:len(sources)], "compileFaults": compile_faults,
                 "initialStateHash": game.state_hash(state)})
             faults = compile_faults if any(compile_faults) else None
@@ -88,8 +103,8 @@ def play(sources: list[Path], map_text: str, out: Path, seeds: list[int], *, lim
 
             if faults is None:
                 for p, bot in enumerate(bots):
-                    connections.append(Connection(bot, launcher, launcher.cpus[p], cpu_hard_limit(game.limits, state.rules["TURNS"])))
-                failed = run(game, state, connections, game.limits, record)
+                    connections.append(Connection(bot, launcher, launcher.cpus[p], cpu_hard_limit(game.limits, state.rules["TURNS"], factor)))
+                failed = run(game, state, connections, game.limits, record, wall_margin_ms=wall_margin_ms)
                 faults = [r.fault for r in failed] if failed is not None else None
             result = outcome(game, state, faults)
             writer.write({"type": "result", "result": result, "stateHash": game.state_hash(state)})

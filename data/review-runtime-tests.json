@@ -4,6 +4,7 @@
   "scope": "M1/M2/M3/M5/M6 real-bwrap regressions and approved design updates; not phase-A acceptance",
   "sourceBaseCommit": "4e9351d99e67529abb9cf2d8a3abb5c8eaaddb99",
   "inputsScope": "final source content; initial 9 red regressions preceded extra policy/format coverage",
+  "logPresentation": "Public before-runtime-fixes log has unittest subtest trailing whitespace stripped; original raw JSON and its SHA-256 remain unchanged.",
   "inputsSha256": {
     "arena/__init__.py": "c27ee98ee99a1c238dd1e2817c64b236d410cafc16d345e1863a545d0abac58f",
     "arena/__main__.py": "fc21e8294cb71b29dcc7eb44313ba72a4a9c3ec82a6a2b1b93ef1dd36c32afcc",

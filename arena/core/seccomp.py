@@ -19,9 +19,9 @@ def runtime_filter() -> bytes:
             (0x35, 0, 1, 0x40000000),      # reject x32 syscall numbers
             (0x06, 0, 0, kill)]
     # fork, vfork, sched_setaffinity, ptrace, process_vm_{readv,writev},
-    # unshare, setns, memfd_create and SysV shared-memory allocation.
-    # Together with read-only /tmp and /dev, shared-memory files cannot evade AS.
-    for syscall in (57, 58, 203, 101, 310, 311, 272, 308, 319, 29):
+    # unshare, setns, memfd_create, SysV IPC allocation and POSIX message queues.
+    # Together with read-only filesystems, these cannot allocate memory outside AS.
+    for syscall in (57, 58, 203, 101, 310, 311, 272, 308, 319, 29, 64, 68, 240):
         rows += [(0x15, 0, 1, syscall), (0x06, 0, 0, error | errno.EPERM)]
     # glibc falls back to clone when clone3 reports ENOSYS (also for std::thread).
     rows += [(0x15, 0, 1, 435), (0x06, 0, 0, error | errno.ENOSYS),

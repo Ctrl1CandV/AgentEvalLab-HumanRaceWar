@@ -4,7 +4,7 @@ test_cpu_after_end_is_charged_to_next_reply (tests.test_review_runtime.ReviewRun
 test_exit_125_on_turn_five_is_one_bot_loss_not_a_retry (tests.test_review_runtime.ReviewRuntimeTests.test_exit_125_on_turn_five_is_one_bot_loss_not_a_retry) ... FAIL
 test_fork_loop_and_affinity_changes_are_denied (tests.test_review_runtime.ReviewRuntimeTests.test_fork_loop_and_affinity_changes_are_denied) ... FAIL
 test_live_clock_missing_children_file_fails_closed (tests.test_review_runtime.ReviewRuntimeTests.test_live_clock_missing_children_file_fails_closed) ... FAIL
-test_malformed_submission_is_compile_loss (tests.test_review_runtime.ReviewRuntimeTests.test_malformed_submission_is_compile_loss) ... 
+test_malformed_submission_is_compile_loss (tests.test_review_runtime.ReviewRuntimeTests.test_malformed_submission_is_compile_loss) ...
   test_malformed_submission_is_compile_loss (tests.test_review_runtime.ReviewRuntimeTests.test_malformed_submission_is_compile_loss) (source='empty') ... FAIL
   test_malformed_submission_is_compile_loss (tests.test_review_runtime.ReviewRuntimeTests.test_malformed_submission_is_compile_loss) (source='both') ... FAIL
   test_malformed_submission_is_compile_loss (tests.test_review_runtime.ReviewRuntimeTests.test_malformed_submission_is_compile_loss) (source='links') ... FAIL

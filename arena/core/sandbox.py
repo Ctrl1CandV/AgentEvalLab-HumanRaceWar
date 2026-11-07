@@ -108,6 +108,9 @@ class Bubblewrap:
             args += ["--remount-ro", "/tmp", "--remount-ro", "/dev"]
             if seccomp_fd is not None:
                 args += ["--seccomp", str(seccomp_fd)]
+        # bwrap's synthetic root is itself a tmpfs owned by the sandbox user.
+        # Lock it too: read-only /tmp alone still allowed allocations at /file.
+        args += ["--remount-ro", "/"]
         mode = "compile" if writable_build else "runtime"
         return [*args, "--", f"/runtime/bin/{self.python_name}", "-I", "-S", "/launcher.py", mode, *command]
 
