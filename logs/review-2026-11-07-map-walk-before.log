@@ -1,0 +1,41 @@
+test_all_assets_satisfy_independent_home_and_tower_walk_limits (tests.test_map_walk.WalkingMapTests.test_all_assets_satisfy_independent_home_and_tower_walk_limits) ... FAIL
+test_manhattan_near_home_ore_across_a_wall_is_rejected (tests.test_map_walk.WalkingMapTests.test_manhattan_near_home_ore_across_a_wall_is_rejected) ... ERROR
+test_tower_must_be_walk_near_the_same_manhattan_near_ore (tests.test_map_walk.WalkingMapTests.test_tower_must_be_walk_near_the_same_manhattan_near_ore) ... ERROR
+
+======================================================================
+ERROR: test_manhattan_near_home_ore_across_a_wall_is_rejected (tests.test_map_walk.WalkingMapTests.test_manhattan_near_home_ore_across_a_wall_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tests/test_map_walk.py", line 63, in test_manhattan_near_home_ore_across_a_wall_is_rejected
+    self.assertFalse(inspect_layout(board)['checks']['homeWalk'])
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'homeWalk'
+
+======================================================================
+ERROR: test_tower_must_be_walk_near_the_same_manhattan_near_ore (tests.test_map_walk.WalkingMapTests.test_tower_must_be_walk_near_the_same_manhattan_near_ore)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tests/test_map_walk.py", line 69, in test_tower_must_be_walk_near_the_same_manhattan_near_ore
+    self.assertGreater(metrics['nearOreSitesManhattan'], metrics['nearOreSites'])
+                       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'nearOreSitesManhattan'
+
+======================================================================
+FAIL: test_all_assets_satisfy_independent_home_and_tower_walk_limits (tests.test_map_walk.WalkingMapTests.test_all_assets_satisfy_independent_home_and_tower_walk_limits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tests/test_map_walk.py", line 55, in test_all_assets_satisfy_independent_home_and_tower_walk_limits
+    self.assertEqual(violations, [])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [('island-01.map', 'home', (9, 2), 29), ('[1487 chars] 28)] != []
+
+First list contains 40 additional elements.
+First extra element 0:
+('island-01.map', 'home', (9, 2), 29)
+
+Diff is 1659 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.215s
+
+FAILED (failures=1, errors=2)

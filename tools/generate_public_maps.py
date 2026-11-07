@@ -35,7 +35,7 @@ def build(destination: Path) -> dict:
     if len({e["sha256"] for e in entries}) != len(entries):
         raise ValueError("duplicate generated map content")
     catalog = {"schemaVersion": 1, "generatorVersion": GENERATOR_VERSION,
-               "profile": "default-22800-ore-10-sites; zone definition pending I11 confirmation",
+               "profile": "default-22800-ore-10-sites; approved I11 zones/basePath; D5 home-walk<=12 and near-site-walk<=6",
                "publicMaps": 40, "scrimmageMaps": 4, "balanceValidated": False,
                "maps": entries}
     generated_files["catalog.json"] = (json.dumps(catalog, indent=2)+"\n").encode()

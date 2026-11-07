@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatorVersion": 1,
-  "profile": "default-22800-ore-10-sites; zone definition pending I11 confirmation",
+  "generatorVersion": 2,
+  "profile": "default-22800-ore-10-sites; approved I11 zones/basePath; D5 home-walk<=12 and near-site-walk<=6",
   "publicMaps": 40,
   "scrimmageMaps": 4,
   "balanceValidated": false,
@@ -9,7 +9,7 @@
     {
       "path": "public/open-01.map",
       "size": 24,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 0,
       "acceptedSeed": 0,
@@ -21,6 +21,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -53,13 +54,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              9
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              0
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              3
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              6
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              3
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              14,
+              20
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              17,
+              17
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              20
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              23
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              14
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              23
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              21,
+              0
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              13,
+              5
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              23,
+              5
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              0,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              23,
+              11
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              0,
+              12
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              23,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              0,
+              18
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              10,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              23
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/open-02.map",
       "size": 28,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 1,
       "acceptedSeed": 1,
@@ -71,6 +243,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -103,13 +276,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              7
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              2
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              2
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              25
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              25
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              20
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              27
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              20
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              21
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              7,
+              6
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              23,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              22,
+              8
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              1,
+              11
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              13,
+              13
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              14
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              26,
+              16
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              5,
+              19
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              4,
+              20
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              21
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/open-03.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 2,
       "acceptedSeed": 2,
@@ -121,6 +465,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -153,13 +498,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              2,
+              10
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              3
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              7
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              1
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              0
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              5
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              26
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              31
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              30
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              24
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              28
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              21
+            ],
+            "walk": 6
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              27,
+              0
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              12,
+              3
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              4
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              17,
+              4
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              11,
+              10
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              21
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              27
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              20,
+              27
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              19,
+              28
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              4,
+              31
+            ],
+            "nearestNearOreWalk": 3
+          }
+        ]
       }
     },
     {
       "path": "public/open-04.map",
       "size": 36,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 3,
       "acceptedSeed": 3,
@@ -171,6 +687,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -203,13 +720,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              0,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              6
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              1
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              4
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              2
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              33
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              31
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              28,
+              34
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              29
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              29
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              35
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              14,
+              0
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              12,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              9
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              32,
+              11
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              19,
+              13
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              16,
+              22
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              3,
+              24
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              15,
+              26
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              23,
+              31
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              21,
+              35
+            ],
+            "nearestNearOreWalk": 3
+          }
+        ]
       }
     },
     {
       "path": "public/open-05.map",
       "size": 40,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 4,
       "acceptedSeed": 4,
@@ -221,6 +909,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -253,13 +942,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              0,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              5
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              2
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              32,
+              37
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              34
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              31
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              33
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              39,
+              32
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              39,
+              33
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              12,
+              10
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              32,
+              11
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              37,
+              11
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              33,
+              12
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              35,
+              16
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              4,
+              23
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              6,
+              27
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              28
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              7,
+              28
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              27,
+              29
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/open-06.map",
       "size": 24,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 5,
       "acceptedSeed": 5,
@@ -271,6 +1131,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -303,13 +1164,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              6
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              4
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              2
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              4
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              0
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              15,
+              23
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              17,
+              19
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              17,
+              21
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              19
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              17
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              16
+            ],
+            "walk": 5
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              4,
+              1
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              2
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              9,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              21,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              12,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              19
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              19
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              3,
+              21
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              19,
+              22
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/open-07.map",
       "size": 28,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 6,
       "acceptedSeed": 6,
@@ -321,6 +1353,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -353,13 +1386,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              6
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              8
+            ],
+            "walk": 7
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              6
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              0
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              5
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              2
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              25
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              20,
+              22
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              20,
+              27
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              21
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              19
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              21
+            ],
+            "walk": 3
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              14,
+              0
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              4,
+              9
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              9,
+              11
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              16,
+              11
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              23,
+              11
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              4,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              18,
+              16
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              23,
+              18
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              13,
+              27
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/open-08.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 7,
       "acceptedSeed": 7,
@@ -371,6 +1575,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -403,13 +1608,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              6
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              9
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              1
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              0
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              3
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              28
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              31
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              30
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              25
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              22
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              25
+            ],
+            "walk": 3
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              3,
+              0
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              17,
+              3
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              18,
+              11
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              12,
+              13
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              21,
+              13
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              10,
+              18
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              19,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              13,
+              20
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              28
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              28,
+              31
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/open-09.map",
       "size": 36,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 8,
       "acceptedSeed": 8,
@@ -421,6 +1797,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -453,13 +1830,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              5
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              1
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              6
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              1
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              34
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              29
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              34
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              27
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              28
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              30
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              0,
+              1
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              13,
+              3
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              26,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              13
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              32,
+              17
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              3,
+              18
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              19,
+              22
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              9,
+              31
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              22,
+              32
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              35,
+              34
+            ],
+            "nearestNearOreWalk": 3
+          }
+        ]
       }
     },
     {
       "path": "public/open-10.map",
       "size": 40,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 9,
       "acceptedSeed": 9,
@@ -471,6 +2019,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -503,13 +2052,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              9
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              3
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              3
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              5
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              2
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              2
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              37
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              37
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              34
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              36
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              36
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              38,
+              30
+            ],
+            "walk": 6
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              22,
+              1
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              10,
+              7
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              35,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              12
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              35,
+              17
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              4,
+              22
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              23,
+              27
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              4,
+              32
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              29,
+              32
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              17,
+              38
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-01.map",
       "size": 24,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 100,
       "acceptedSeed": 100,
@@ -521,6 +2241,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -553,13 +2274,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              0,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              7
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              8
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              7
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              5
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              17,
+              18
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              16
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              20,
+              15
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              16
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              15
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              17
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              4,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              5
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              11
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              10,
+              11
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              21,
+              11
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              2,
+              12
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              13,
+              12
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              21,
+              12
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              9,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              19,
+              19
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-02.map",
       "size": 28,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 101,
       "acceptedSeed": 101,
@@ -571,6 +2463,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -603,13 +2496,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              6
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              3
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              7
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              4
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              23
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              20
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              24
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              23
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              21
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              23
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              15,
+              0
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              7
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              19,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              25,
+              8
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              26,
+              10
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              1,
+              17
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              2,
+              19
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              8,
+              20
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              20
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              12,
+              27
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-03.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 102,
       "acceptedSeed": 102,
@@ -621,6 +2685,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -653,13 +2718,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              7
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              6
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              0
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              6
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              25
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              31
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              31
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              25
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              24
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              23
+            ],
+            "walk": 6
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              20,
+              6
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              27,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              23,
+              11
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              30,
+              13
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              31,
+              14
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              0,
+              17
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              1,
+              18
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              8,
+              20
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              4,
+              24
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              25
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-04.map",
       "size": 36,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 103,
       "acceptedSeed": 103,
@@ -671,6 +2907,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -703,13 +2940,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              8
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              1
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              1
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              2
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              2
+            ],
+            "walk": 7
+          },
+          {
+            "player": 0,
+            "ore": [
+              10,
+              2
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              33
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              33
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              33
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              34
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              34
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              27
+            ],
+            "walk": 5
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              20,
+              6
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              25,
+              7
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              35,
+              8
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              10
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              26,
+              14
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              9,
+              21
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              15,
+              25
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              0,
+              27
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              10,
+              28
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              15,
+              29
+            ],
+            "nearestNearOreWalk": 3
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-05.map",
       "size": 40,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 104,
       "acceptedSeed": 104,
@@ -721,6 +3129,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -753,24 +3162,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 4
+        "minDepotOreDistance": 4,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              9
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              7
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              1
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              1
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              38
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              32,
+              38
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              35
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              36,
+              32
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              38,
+              30
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              39,
+              31
+            ],
+            "walk": 6
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              25,
+              7
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              35,
+              8
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              12,
+              13
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              11,
+              16
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              6,
+              17
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              33,
+              22
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              28,
+              23
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              27,
+              26
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              4,
+              31
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              14,
+              32
+            ],
+            "nearestNearOreWalk": 3
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-06.map",
       "size": 24,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 105,
       "acceptedSeed": 105,
       "rejectedCandidates": [],
-      "sha256": "90536646451ee32f25061aafa2228dc1d12b76670a7ad7740a3f4f27c3767b40",
+      "sha256": "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -803,13 +3384,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              2,
+              6
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              10
+            ],
+            "walk": 8
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              5
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              4
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              4
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              5
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              16,
+              18
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              17,
+              19
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              19
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              20,
+              18
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              13
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              17
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              22,
+              0
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              13,
+              3
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              18,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              19,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              7,
+              10
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              13
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              4,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              5,
+              19
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              10,
+              20
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              1,
+              23
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-07.map",
       "size": 28,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 106,
       "acceptedSeed": 106,
@@ -821,6 +3573,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -853,13 +3606,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              0
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              3
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              0
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              4
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              19,
+              23
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              19,
+              27
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              24
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              27
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              21
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              23
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              19,
+              3
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              5
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              12,
+              9
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              10
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              13,
+              17
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              15,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              25,
+              20
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              25,
+              22
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              8,
+              24
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-08.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 107,
       "acceptedSeed": 107,
@@ -871,6 +3795,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -903,24 +3828,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              6
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              3
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              4
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              5
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              0
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              31
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              26
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              27
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              28
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              25
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              23
+            ],
+            "walk": 6
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              16,
+              3
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              19,
+              7
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              31,
+              7
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              13,
+              9
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              28,
+              12
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              3,
+              19
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              18,
+              22
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              0,
+              24
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              12,
+              24
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              15,
+              28
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-09.map",
       "size": 36,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 108,
       "acceptedSeed": 108,
       "rejectedCandidates": [],
-      "sha256": "cf8cf577ea58176adcd7fb1f3624480ad04a345d9ba65ab83f923907d0d1bb66",
+      "sha256": "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -953,24 +4050,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              7
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              10
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              2
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              33
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              27
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              35
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              25
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              28
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              27
+            ],
+            "walk": 6
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              5,
+              3
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              9,
+              5
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              6,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              31,
+              7
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              16,
+              16
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              19,
+              19
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              4,
+              28
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              29,
+              28
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              26,
+              30
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              30,
+              32
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/corridor-10.map",
       "size": 40,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 109,
       "acceptedSeed": 109,
       "rejectedCandidates": [],
-      "sha256": "45a78e74bef865bf3c250986703374404f7c5561b3b999a334fa22299fc48ff9",
+      "sha256": "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1003,24 +4272,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              5
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              8
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              0
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              39
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              32
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              35
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              36,
+              31
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              36,
+              34
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              39,
+              31
+            ],
+            "walk": 6
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              11,
+              1
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              12,
+              13
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              9,
+              14
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              25,
+              14
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              0,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              39,
+              21
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              25
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              30,
+              25
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              27,
+              26
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              28,
+              38
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/island-01.map",
       "size": 24,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 200,
       "acceptedSeed": 200,
       "rejectedCandidates": [],
-      "sha256": "6e49d5c88f2802399f333e88c3306d9e715d7535f70dfc655db33a6a4bad715a",
+      "sha256": "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1053,13 +4494,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              5
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              5
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              9
+            ],
+            "walk": 12
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              5
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              4
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              15,
+              19
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              16,
+              18
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              19,
+              17
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              20,
+              14
+            ],
+            "walk": 12
+          },
+          {
+            "player": 1,
+            "ore": [
+              20,
+              18
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              18
+            ],
+            "walk": 3
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              7,
+              1
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              22,
+              1
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              6,
+              3
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              18,
+              5
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              20,
+              6
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              3,
+              17
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              5,
+              18
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              17,
+              20
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              1,
+              22
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              22
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/island-02.map",
       "size": 28,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 201,
       "acceptedSeed": 201,
@@ -1071,6 +4683,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1103,13 +4716,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              7
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              4
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              6
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              6
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              4
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              19,
+              23
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              21
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              21
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              23
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              19
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              20
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              7,
+              1
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              0,
+              3
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              11,
+              3
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              6,
+              10
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              27,
+              12
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              0,
+              15
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              21,
+              17
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              16,
+              24
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              27,
+              24
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              20,
+              26
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/island-03.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 202,
       "acceptedSeed": 202,
@@ -1121,6 +4905,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1153,13 +4938,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              0,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              8
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              5
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              5
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              4
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              27
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              26
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              26
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              23
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              24
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              27
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              6,
+              2
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              15,
+              5
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              29,
+              5
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              1,
+              11
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              17,
+              13
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              30,
+              20
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              2,
+              26
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              26
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              25,
+              29
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/island-04.map",
       "size": 36,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 203,
       "acceptedSeed": 203,
@@ -1171,6 +5127,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1203,13 +5160,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              6
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              5
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              5
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              0
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              1
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              34
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              35
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              30
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              30
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              29
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              31
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              16,
+              0
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              33,
+              0
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              11,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              13,
+              8
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              32,
+              8
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              3,
+              27
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              22,
+              27
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              24,
+              28
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              35
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              19,
+              35
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/island-05.map",
       "size": 40,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 204,
       "acceptedSeed": 204,
@@ -1221,6 +5349,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1253,24 +5382,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              2,
+              7
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              6
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              0
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              1
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              4
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              3
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              36
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              32,
+              35
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              32,
+              38
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              39
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              36,
+              33
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              37,
+              32
+            ],
+            "walk": 3
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              10,
+              0
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              12,
+              5
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              7,
+              10
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              8,
+              16
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              21,
+              17
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              18,
+              22
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              31,
+              23
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              32,
+              29
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              27,
+              34
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              29,
+              39
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/island-06.map",
       "size": 24,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 205,
       "acceptedSeed": 205,
       "rejectedCandidates": [],
-      "sha256": "3f8d1e5e296e3696f8c9e890c063106e9de72f89a5ebc7aba0469379865db470",
+      "sha256": "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1303,24 +5604,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              0,
+              5
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              8
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              3
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              2
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              16,
+              21
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              20
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              19,
+              23
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              20,
+              15
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              18
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              19
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              20,
+              0
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              9,
+              3
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              5
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              11
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              3,
+              12
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              7,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              12,
+              19
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              20
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              3,
+              23
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/island-07.map",
       "size": 28,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 206,
       "acceptedSeed": 206,
       "rejectedCandidates": [],
-      "sha256": "b1bfcf95b04a2e7f9b82c8d1487cca26ee6d666a57dd875b9604fb79637fa9cc",
+      "sha256": "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1330,7 +5803,7 @@
         },
         "groundCells": 634,
         "wallCells": 96,
-        "basePath": 108,
+        "basePath": 54,
         "spawnGround": [
           12,
           12
@@ -1353,13 +5826,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              2,
+              8
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              8
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              0
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              2
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              10,
+              2
+            ],
+            "walk": 10
+          },
+          {
+            "player": 1,
+            "ore": [
+              17,
+              25
+            ],
+            "walk": 10
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              25
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              27
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              23
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              19
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              19
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              16,
+              2
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              3
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              17,
+              7
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              5,
+              10
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              11
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              22,
+              17
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              10,
+              20
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              11,
+              24
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              11,
+              25
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/island-08.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 207,
       "acceptedSeed": 207,
@@ -1371,6 +6015,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1403,13 +6048,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              5
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              7
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              9
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              0
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              0
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              2
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              29
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              31
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              31
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              22
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              24
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              26
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              29,
+              9
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              4,
+              12
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              13,
+              15
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              14,
+              15
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              18,
+              15
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              13,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              17,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              18,
+              16
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              27,
+              19
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              22
+            ],
+            "nearestNearOreWalk": 3
+          }
+        ]
       }
     },
     {
       "path": "public/island-09.map",
       "size": 36,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 208,
       "acceptedSeed": 208,
@@ -1421,6 +6237,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1453,24 +6270,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              0,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              9
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              6
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              5
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              30
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              29
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              35
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              26
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              28
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              29
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              35,
+              0
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              24,
+              6
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              18,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              24,
+              14
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              32,
+              16
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              3,
+              19
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              11,
+              21
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              17,
+              28
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              29
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              0,
+              35
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/island-10.map",
       "size": 40,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 209,
       "acceptedSeed": 209,
       "rejectedCandidates": [],
-      "sha256": "c69946219dbcf022471be1028451a9ffb96c8c4c47c7063f033e5853ea407940",
+      "sha256": "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1503,24 +6492,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              7
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              9
+            ],
+            "walk": 7
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              1
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              0
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              3
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              36
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              39
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              38
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              37,
+              30
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              37,
+              32
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              39,
+              32
+            ],
+            "walk": 5
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              19,
+              3
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              0,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              5,
+              6
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              23,
+              9
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              11,
+              10
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              28,
+              29
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              30
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              34,
+              33
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              39,
+              35
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              36
+            ],
+            "nearestNearOreWalk": 3
+          }
+        ]
       }
     },
     {
       "path": "public/maze-01.map",
       "size": 24,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 300,
       "acceptedSeed": 300,
       "rejectedCandidates": [],
-      "sha256": "91ce9981f8b9f8f2a3ee17bed84035dd5b857f7d4fe91637df8912f1e92eeb17",
+      "sha256": "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1530,7 +6691,7 @@
         },
         "groundCells": 372,
         "wallCells": 150,
-        "basePath": 40,
+        "basePath": 38,
         "spawnGround": [
           12,
           12
@@ -1553,24 +6714,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              1
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              7
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              0
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              3
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              5
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              16,
+              18
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              16,
+              20
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              16,
+              23
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              16
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              22
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              17
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              1,
+              0
+            ],
+            "nearestNearOreWalk": 5
+          },
+          {
+            "site": [
+              21,
+              3
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              20,
+              5
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              22,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              16,
+              11
+            ],
+            "nearestNearOreWalk": 5
+          },
+          {
+            "site": [
+              7,
+              12
+            ],
+            "nearestNearOreWalk": 5
+          },
+          {
+            "site": [
+              1,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              3,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              20
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              22,
+              23
+            ],
+            "nearestNearOreWalk": 5
+          }
+        ]
       }
     },
     {
       "path": "public/maze-02.map",
       "size": 28,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 301,
       "acceptedSeed": 301,
       "rejectedCandidates": [],
-      "sha256": "3957a20d5cd28e6f0661365d0143a8eedb0c64dd402a07e8ed53cfa9078d604c",
+      "sha256": "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1603,24 +6936,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              4,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              2
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              6
+            ],
+            "walk": 12
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              3
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              2
+            ],
+            "walk": 8
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              2
+            ],
+            "walk": 9
+          },
+          {
+            "player": 1,
+            "ore": [
+              18,
+              25
+            ],
+            "walk": 9
+          },
+          {
+            "player": 1,
+            "ore": [
+              19,
+              25
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              20,
+              24
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              21
+            ],
+            "walk": 12
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              25
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              27
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              15,
+              0
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              13,
+              1
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              25,
+              2
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              8,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              18,
+              12
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              9,
+              15
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              19,
+              20
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              25
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              14,
+              26
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              12,
+              27
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/maze-03.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 302,
       "acceptedSeed": 302,
       "rejectedCandidates": [],
-      "sha256": "0313f8a11f416d328bafaaadcffc809e49782689bcef2c36bd60adc510a4d205",
+      "sha256": "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1653,24 +7158,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              4,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              0
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              1
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              0
+            ],
+            "walk": 11
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              3
+            ],
+            "walk": 9
+          },
+          {
+            "player": 0,
+            "ore": [
+              10,
+              2
+            ],
+            "walk": 12
+          },
+          {
+            "player": 1,
+            "ore": [
+              21,
+              29
+            ],
+            "walk": 12
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              28
+            ],
+            "walk": 9
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              31
+            ],
+            "walk": 11
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              30
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              31
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              27
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              21,
+              1
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              27,
+              2
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              13,
+              4
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              29,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              13
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              27
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              18,
+              27
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              4,
+              29
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              10,
+              30
+            ],
+            "nearestNearOreWalk": 3
+          }
+        ]
       }
     },
     {
       "path": "public/maze-04.map",
       "size": 36,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 303,
       "acceptedSeed": 303,
       "rejectedCandidates": [],
-      "sha256": "e05166867c25171777a1842a5567ce30f143892a541367b070367cd466c6ae73",
+      "sha256": "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1703,24 +7380,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              8
+            ],
+            "walk": 7
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              9
+            ],
+            "walk": 8
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              10
+            ],
+            "walk": 8
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              0
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              0
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              2
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              33
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              35
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              35
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              25
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              26
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              34,
+              27
+            ],
+            "walk": 7
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              16,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              6,
+              5
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              29,
+              13
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              6,
+              16
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              2,
+              17
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              33,
+              18
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              29,
+              19
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              6,
+              22
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              29,
+              30
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              19,
+              31
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/maze-05.map",
       "size": 40,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 304,
       "acceptedSeed": 304,
       "rejectedCandidates": [],
-      "sha256": "254d0b82bec003a95c5930b3b169cc1482305ebfeaf9c07b6c2246ff9eb4e54b",
+      "sha256": "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1753,24 +7602,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              0,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              7
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              7
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              0
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              3
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              36
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              39
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              37,
+              32
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              38,
+              32
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              39,
+              32
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              39,
+              39
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              27,
+              4
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              33,
+              4
+            ],
+            "nearestNearOreWalk": 5
+          },
+          {
+            "site": [
+              24,
+              5
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              28,
+              13
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              7,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              32,
+              21
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              26
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              15,
+              34
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              6,
+              35
+            ],
+            "nearestNearOreWalk": 5
+          },
+          {
+            "site": [
+              12,
+              35
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/maze-06.map",
       "size": 24,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 305,
       "acceptedSeed": 305,
       "rejectedCandidates": [],
-      "sha256": "0b753625bee9a9a8fcd671cff849b7b095291f0e101e9a2dd6c3f5ff17a49f36",
+      "sha256": "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1780,7 +7801,7 @@
         },
         "groundCells": 372,
         "wallCells": 150,
-        "basePath": 74,
+        "basePath": 70,
         "spawnGround": [
           12,
           12
@@ -1803,24 +7824,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              0
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              0,
+              8
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              5
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              3
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              0
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              2
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              15,
+              21
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              15,
+              23
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              17,
+              20
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              18
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              15
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              23
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              5,
+              0
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              4,
+              1
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              15,
+              2
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              3,
+              7
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              21,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              16
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              16
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              8,
+              21
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              19,
+              22
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              18,
+              23
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/maze-07.map",
       "size": 28,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 306,
       "acceptedSeed": 306,
       "rejectedCandidates": [],
-      "sha256": "ea1bccc52a028162cf1c62c7a82ae1585f0dda63851b29a89deb5f347a01335f",
+      "sha256": "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1853,13 +8046,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              0,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              8
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              7
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              2,
+              10
+            ],
+            "walk": 10
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              7
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              20
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              17
+            ],
+            "walk": 10
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              20
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              19
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              20
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              23
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              8,
+              1
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              25,
+              1
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              26,
+              7
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              6,
+              12
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              1,
+              13
+            ],
+            "nearestNearOreWalk": 5
+          },
+          {
+            "site": [
+              26,
+              14
+            ],
+            "nearestNearOreWalk": 5
+          },
+          {
+            "site": [
+              21,
+              15
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              1,
+              20
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              2,
+              26
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              19,
+              26
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "public/maze-08.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 307,
       "acceptedSeed": 307,
@@ -1871,6 +8235,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1903,24 +8268,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              7
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              9
+            ],
+            "walk": 8
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              7
+            ],
+            "walk": 11
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              5
+            ],
+            "walk": 8
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              3
+            ],
+            "walk": 7
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              2
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              29
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              28
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              26
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              24
+            ],
+            "walk": 11
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              22
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              24
+            ],
+            "walk": 6
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              27,
+              7
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              8,
+              8
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              16,
+              8
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              30,
+              8
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              0,
+              13
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              31,
+              18
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              1,
+              23
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              15,
+              23
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              23,
+              23
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              4,
+              24
+            ],
+            "nearestNearOreWalk": 3
+          }
+        ]
       }
     },
     {
       "path": "public/maze-09.map",
       "size": 36,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 308,
       "acceptedSeed": 308,
       "rejectedCandidates": [],
-      "sha256": "4add8c1a9cad79ed1b08db17b7f4d4893bd1d77ee0fce1ba5dfd866d38e43693",
+      "sha256": "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1953,24 +8490,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 4
+        "minDepotOreDistance": 4,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              6
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              0
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              3
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              3
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              1
+            ],
+            "walk": 11
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              34
+            ],
+            "walk": 11
+          },
+          {
+            "player": 1,
+            "ore": [
+              29,
+              32
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              32
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              35
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              32,
+              29
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              29
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              11,
+              0
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              12,
+              0
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              0,
+              1
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              19,
+              1
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              31,
+              2
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              4,
+              33
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              16,
+              34
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              35,
+              34
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              23,
+              35
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              24,
+              35
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "public/maze-10.map",
       "size": 40,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 309,
       "acceptedSeed": 309,
       "rejectedCandidates": [],
-      "sha256": "1c36b6deb6811ed81dbecbeed459cd8674f5ea85b86c6cb2dadcd41996b5131d",
+      "sha256": "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -1980,7 +8689,7 @@
         },
         "groundCells": 1266,
         "wallCells": 280,
-        "basePath": 80,
+        "basePath": 84,
         "spawnGround": [
           12,
           12
@@ -2003,13 +8712,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 4
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              3,
+              7
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              6
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              2
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              3
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              4
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              5
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              34
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              35
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              36
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              33,
+              37
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              35,
+              33
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              36,
+              32
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              24,
+              0
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              1,
+              9
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              3,
+              12
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              5,
+              12
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              17,
+              19
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              22,
+              20
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              34,
+              27
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              36,
+              27
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              38,
+              30
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              15,
+              39
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "scrimmage/open-01.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "open",
       "requestedSeed": 10000,
       "acceptedSeed": 10000,
@@ -2021,6 +8901,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -2053,13 +8934,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              3,
+              8
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              3
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              4
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              5
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              2
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              9,
+              3
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              28
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              22,
+              29
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              26
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              27
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              28
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              28,
+              23
+            ],
+            "walk": 5
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              14,
+              2
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              15,
+              5
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              28,
+              7
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              11,
+              9
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              28,
+              10
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              3,
+              21
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              20,
+              22
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              3,
+              24
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              16,
+              26
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              17,
+              29
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "scrimmage/corridor-01.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "corridor",
       "requestedSeed": 10001,
       "acceptedSeed": 10001,
@@ -2071,6 +9123,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -2103,13 +9156,184 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              0,
+              4
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              1,
+              5
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              8
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              1
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              5,
+              6
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              2
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              29
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              25
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              30
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              28,
+              23
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              26
+            ],
+            "walk": 2
+          },
+          {
+            "player": 1,
+            "ore": [
+              31,
+              27
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              16,
+              1
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              8,
+              4
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              20,
+              6
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              20,
+              10
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              27,
+              13
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              4,
+              18
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              11,
+              21
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              11,
+              25
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              23,
+              27
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              15,
+              30
+            ],
+            "nearestNearOreWalk": 2
+          }
+        ]
       }
     },
     {
       "path": "scrimmage/island-01.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "island",
       "requestedSeed": 10002,
       "acceptedSeed": 10002,
@@ -2121,6 +9345,7 @@
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -2153,24 +9378,196 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              1,
+              5
+            ],
+            "walk": 2
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              7
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              3,
+              9
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              4,
+              5
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              6,
+              3
+            ],
+            "walk": 3
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              0
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              31
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              25,
+              28
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              27,
+              26
+            ],
+            "walk": 3
+          },
+          {
+            "player": 1,
+            "ore": [
+              28,
+              22
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              28,
+              24
+            ],
+            "walk": 4
+          },
+          {
+            "player": 1,
+            "ore": [
+              30,
+              26
+            ],
+            "walk": 2
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              6,
+              9
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              17,
+              9
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              19,
+              9
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              13,
+              13
+            ],
+            "nearestNearOreWalk": 4
+          },
+          {
+            "site": [
+              17,
+              15
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              14,
+              16
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              18,
+              18
+            ],
+            "nearestNearOreWalk": 4
+          },
+          {
+            "site": [
+              12,
+              22
+            ],
+            "nearestNearOreWalk": 3
+          },
+          {
+            "site": [
+              14,
+              22
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              25,
+              22
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     },
     {
       "path": "scrimmage/maze-01.map",
       "size": 32,
-      "generatorVersion": 1,
+      "generatorVersion": 2,
       "type": "maze",
       "requestedSeed": 10003,
       "acceptedSeed": 10003,
       "rejectedCandidates": [],
-      "sha256": "fff2c32622490e671191a870279e0a69117648483c76dbba3e9fbd5992b46894",
+      "sha256": "a3207edfa1ef78efd2f1618c7e3adb41d6bd80bf77e6205d3a4562c6099210d1",
       "metrics": {
         "passed": true,
         "checks": {
           "groundConnected": true,
           "basePath": true,
           "homeOre": true,
+          "homeWalk": true,
           "middleOre": true,
           "centerOre": true,
           "towerSites": true,
@@ -2180,7 +9577,7 @@
         },
         "groundCells": 754,
         "wallCells": 216,
-        "basePath": 64,
+        "basePath": 72,
         "spawnGround": [
           12,
           12
@@ -2203,7 +9600,178 @@
         },
         "towerSites": 10,
         "nearOreSites": 10,
-        "minDepotOreDistance": 3
+        "minDepotOreDistance": 3,
+        "nearOreSitesManhattan": 10,
+        "homeOreWalks": [
+          {
+            "player": 0,
+            "ore": [
+              5,
+              5
+            ],
+            "walk": 4
+          },
+          {
+            "player": 0,
+            "ore": [
+              7,
+              4
+            ],
+            "walk": 7
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              0
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              1
+            ],
+            "walk": 5
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              2
+            ],
+            "walk": 6
+          },
+          {
+            "player": 0,
+            "ore": [
+              8,
+              4
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              27
+            ],
+            "walk": 8
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              29
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              30
+            ],
+            "walk": 5
+          },
+          {
+            "player": 1,
+            "ore": [
+              23,
+              31
+            ],
+            "walk": 6
+          },
+          {
+            "player": 1,
+            "ore": [
+              24,
+              27
+            ],
+            "walk": 7
+          },
+          {
+            "player": 1,
+            "ore": [
+              26,
+              26
+            ],
+            "walk": 4
+          }
+        ],
+        "towerOreWalks": [
+          {
+            "site": [
+              21,
+              2
+            ],
+            "nearestNearOreWalk": 1
+          },
+          {
+            "site": [
+              13,
+              7
+            ],
+            "nearestNearOreWalk": 5
+          },
+          {
+            "site": [
+              5,
+              8
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              27,
+              10
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              21,
+              14
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              10,
+              17
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              4,
+              21
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              26,
+              23
+            ],
+            "nearestNearOreWalk": 2
+          },
+          {
+            "site": [
+              18,
+              24
+            ],
+            "nearestNearOreWalk": 5
+          },
+          {
+            "site": [
+              10,
+              29
+            ],
+            "nearestNearOreWalk": 1
+          }
+        ]
       }
     }
   ]

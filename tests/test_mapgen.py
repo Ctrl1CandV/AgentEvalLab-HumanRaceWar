@@ -68,7 +68,7 @@ class MapGeneratorTests(unittest.TestCase):
             "open": "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
             "corridor": "e83e661a53bd70c35300818acd4420c123f8cc739061b71f07a10d05542c81cc",
             "island": "872ce711ba0dbabe2d0c148f0406a1881e0c953c149e634850ccd8431851b6dd",
-            "maze": "eee923590e57aa2aef1d1ae17a39f908c650e6e6cac31ec435ce1f89dc3b1639",
+            "maze": "f429849262370b9e5faaac60bc97542ac76602a713a5b0b9e4e5f7da57b008c1",
         }
         for kind, digest in expected.items():
             result = generate(kind, 32, 7)
@@ -124,6 +124,7 @@ class MapGeneratorTests(unittest.TestCase):
 
     def test_checked_in_catalog_is_complete_unique_and_regenerates(self):
         catalog = json.loads((ROOT / "maps/catalog.json").read_text())
+        self.assertEqual(catalog["generatorVersion"], 2)
         self.assertEqual(len(catalog["maps"]), 44)
         self.assertEqual(Counter(e["type"] for e in catalog["maps"] if e["path"].startswith("public/")),
                          dict.fromkeys(TYPES, 10))

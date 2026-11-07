@@ -2,7 +2,7 @@
 
 规则集：`standard-1` 起点；引擎：`0.1.0-dev`；协议：HRW 1。
 
-**当前已有引擎、沙箱运行器、SDK、match、回放与地图生成工具。** 尚未完成动物园、平衡和效率验收；已有公开地图还需补步行距离检查。边界解释已由 2026-11-07 中途审查确认；规则集仍未冻结。
+**当前已有引擎、沙箱运行器、SDK、match、回放与地图生成工具。** 已提供bench/独立时限折算，公开地图v2已通过步行距离检查；尚未完成批量调度、动物园、平衡和效率验收。边界解释已由 2026-11-07 中途审查确认；规则集仍未冻结。
 
 ## 1. 棋盘与目标
 
@@ -169,6 +169,6 @@ bot 强制单进程，不能 fork/vfork 或改变绑核；可开线程，沙箱�
 .venv/bin/python -m arena replay summary <回放路径>
 ```
 
-`match` 默认把所有尝试、结果和回放留在 `runs/matches/`，可加 `--show-stderr` 查看 stderr。测试地图不是验收地图，速度系数尚未标定。详细用法和限制见 `docs/RUNTIME.md`。
+`match` 默认把所有尝试、结果和回放留在 `runs/matches/`，可加 `--show-stderr` 查看 stderr。测试地图不是验收地图；不提供校准时仍是未折算开发局，正式评测机参考尚未提供。详细用法和限制见 `docs/RUNTIME.md`。
 
 现有 `maps/public/` 40 张和 `maps/scrimmage/` 4 张，均通过当前默认布局检查，但尚无平衡验收结论。可用 `.venv/bin/python -m arena mapgen --type corridor --size 32 --seed 7` 生成地图，用 `.venv/bin/python -m arena mapcheck maps/public/corridor-01.map` 检查默认生成配置。种子、摘要和分区口径见 `maps/catalog.json`、`maps/README.md`；布局检查不会对自定义 match 地图新增限制。`check`、`tournament` 和正式任务包尚未交付。

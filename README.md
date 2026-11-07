@@ -4,7 +4,7 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 ## 现在进行到哪一步
 
-看 [STATUS.md](STATUS.md)。当前 A 阶段已打通沙箱内 Python/C++ 示例对局、gzip JSONL 回放及逐回合验证，并生成按旧版布局口径检查的 44 张公开地图。2026-11-07 中途审查后已修复首批运行器/沙箱问题，地图尚待新增步行检查与再生成；完整计时、动物园、平衡和效率验收尚未完成，不是已验收的竞技场。
+看 [STATUS.md](STATUS.md)。A阶段已打通沙箱内Python/C++示例对局与回放，修复首批运行器问题，提供bench/独立速度折算，并按D5步行检查重新生成44张地图。批量平台、动物园、平衡和效率验收尚未完成，不是已验收的竞技场。当前按BRIEF 3.7登记预算风险并暂停新增实现，等待用户确认；不是A阶段验收停点。
 
 ## WSL 开发与交接
 
@@ -29,7 +29,7 @@ cd ~/projects/AgentEvalLab-HumanRaceWar
 .venv/bin/python -m arena replay verify <命令输出的回放路径>
 ```
 
-此地图只是测试 fixture，不计入正式地图或平衡验收。也可改用 `maps/scrimmage/open-01.map`；公开地图集、生成器与检查命令见 [maps/README.md](maps/README.md)。最新两轮全套测试各132项通过，首批审查修复证据见 `data/review-runtime-tests.json`；旧地图批次证据保留在 `data/mapgen-tests.json`。
+此地图只是测试 fixture，不计入正式地图或平衡验收。也可改用 `maps/scrimmage/open-01.map`；公开地图集、生成器与检查命令见 [maps/README.md](maps/README.md)。最新两轮全套测试各140项通过，见 `data/review-bench-map-tests.json`；首批修复及旧地图证据仍在 `data/review-runtime-tests.json`、`data/mapgen-tests.json`。负载曲线、逐核差异和折算边界见 [docs/TIMING.md](docs/TIMING.md)、`data/timing.json`。
 
 规则草稿见 [rules/rules.md](rules/rules.md)，测试覆盖与未验证范围见 [tests/COVERAGE.md](tests/COVERAGE.md)，暂定细节见 [docs/IMPLEMENTATION_NOTES.md](docs/IMPLEMENTATION_NOTES.md)。
 

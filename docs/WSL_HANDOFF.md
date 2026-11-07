@@ -64,7 +64,7 @@ Python 运行环境在 `~/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gn
 - 86 项引擎测试在 Python 3.13.15 下、两个不同 `PYTHONHASHSEED` 进程里分别通过；另归档 9 项确定性和 17 项协议测试。见 `data/python313-tests.json` 与 `logs/python313-*.log`。
 - bwrap 内可运行该 Python 的标准库、读取自身 Linux 进程 CPU 时钟；可信 C++20 小程序在 bwrap 内编译和运行成功。Agent HOME 和项目没有挂载到这两个探针中。
 - 上述只是环境探针，不是 bot 运行器。资源限额、跨命名空间进程树计时、bot 崩溃/洪泛/超时和完整回放仍未验收。
-- 机器配置和工具状态见 `data/environment-wsl-python313.json`；`data/wsl-setup.json`、`logs/wsl-setup.log` 保留初次迁移记录。当时安装 pi 1.4.0 并使用 `--ignore-scripts`；最终复核时已是 1.5.0，此次没有重装、升级或降级，也不推断这次版本变化的来源。速度系数尚未标定。
+- 机器配置和工具状态见 `data/environment-wsl-python313.json`；`data/wsl-setup.json`、`logs/wsl-setup.log` 保留初次迁移记录。当时安装 pi 1.4.0 并使用 `--ignore-scripts`；最终复核时已是 1.5.0，此次没有重装、升级或降级，也不推断这次版本变化的来源。迁移时速度系数尚未标定；现有本机开发负载曲线见 `data/timing.json`，正式评测机参考仍未知。
 - 迁移基线为 `d2f60c2`：4 个原有 Git 提交、42 个受版本管理文件以及 1 个本地测试历史文件已核对。最终复核确认原 Git 树与历史完整、原文件均在、本地测试历史原始内容保留，`git fsck --full` 通过；另将两份 Windows 迁移中转文件备份到被忽略的 `runs/migration/`，它们不参与开发，不要重新执行迁移脚本。
 - 最终复核又通过两次 86 项引擎测试及可信 Python/C++ 沙箱探针；第一次辅助审计因假定 pi 仍为 1.4.0 而停止，不是引擎失败，改为核对实际软件包版本后通过。全部记录在本地 `runs/development/final-handoff-*` 和 `test-history.jsonl` 中，初次审计记录也保留。没有从远端重新下载仓库；后续交接提交在 WSL 主工作区产生。
 

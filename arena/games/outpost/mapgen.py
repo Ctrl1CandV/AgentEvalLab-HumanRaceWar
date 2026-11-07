@@ -14,7 +14,7 @@ from .model import Map, Position, distance
 
 TYPES = ("open", "corridor", "island", "maze")
 MASK = (1 << 64) - 1
-GENERATOR_VERSION = 1
+GENERATOR_VERSION = 2
 
 
 class SplitMix64:
@@ -62,6 +62,11 @@ def distances(ground: set[Position], starts) -> dict[Position, int]:
     return found
 
 
+def feature_walk(found: dict[Position, int], feature: Position) -> int | None:
+    """Steps between adjacent ground cells; neither feature endpoint is entered."""
+    return min((found[p] for p in adjacent(feature) if p in found), default=None)
+
+
 def zone(pos: Position, bases: tuple[Position, ...]) -> str:
     a, b = (distance(pos, base) for base in bases)
     if 4 <= min(a, b) <= 8:
@@ -77,7 +82,7 @@ def inspect_layout(board: Map) -> dict:
     """Check DESIGN 7.2 under the documented default generation profile.
 
     Structural validity/symmetry is checked by parse_map before this function.
-    All distance tests except basePath are Manhattan distances.
+    Zones use approved I11 Manhattan distances; D5 adds actual ground walks.
     """
     ground = {(x, y) for y, row in enumerate(board.rows) for x, cell in enumerate(row) if cell == "."}
     sites = [(x, y) for y, row in enumerate(board.rows) for x, cell in enumerate(row) if cell == "S"]
@@ -89,7 +94,19 @@ def inspect_layout(board: Map) -> dict:
     spawn = [sum(distance(base, p) <= 2 for p in ground) for base in board.bases]
     deposits = [*board.bases, *sites]
     separation = min((distance(p, q) for p in deposits for q in ore), default=None)
-    near_sites = sum(any(3 <= distance(site, p) <= 5 for p in ore) for site in sites)
+    near_manhattan = sum(any(3 <= distance(site, p) <= 5 for p in ore) for site in sites)
+    tower_walks = []
+    for site in sites:
+        found = distances(ground, adjacent(site))
+        options = [value for p in ore if 3 <= distance(site, p) <= 5
+                   and (value := feature_walk(found, p)) is not None]
+        tower_walks.append({"site": list(site), "nearestNearOreWalk": min(options, default=None)})
+    near_sites = sum(r["nearestNearOreWalk"] is not None and r["nearestNearOreWalk"] <= 6 for r in tower_walks)
+    home_walks = []
+    for player, base in enumerate(board.bases):
+        found = distances(ground, adjacent(base))
+        home_walks.extend({"player": player, "ore": list(p), "walk": feature_walk(found, p)}
+                          for p in ore if zone(p, board.bases) == f"home{player}")
     totals = {name: 0 for name in ("home0", "home1", "middle0", "middle1", "center", "outside")}
     cells = dict.fromkeys(totals, 0)
     for p, amount in ore.items():
@@ -101,6 +118,7 @@ def inspect_layout(board: Map) -> dict:
         "groundConnected": bool(ground) and len(reachable) == len(ground),
         "basePath": path is not None and path*5 >= 6*max(board.width, board.height),
         "homeOre": all(cells[f"home{p}"] == 6 and totals[f"home{p}"] == 2400 for p in (0, 1)),
+        "homeWalk": all(r["walk"] is not None and r["walk"] <= 12 for r in home_walks),
         "middleOre": totals["middle0"] == totals["middle1"] == 6000,
         "centerOre": totals["center"] == 6000 and totals["outside"] == 0,
         "towerSites": 8 <= len(sites) <= 12 and near_sites*2 >= len(sites),
@@ -111,7 +129,9 @@ def inspect_layout(board: Map) -> dict:
     return {"passed": all(checks.values()), "checks": checks, "groundCells": len(ground),
             "wallCells": sum(row.count("#") for row in board.rows), "basePath": path,
             "spawnGround": spawn, "oreCellsByZone": cells, "oreByZone": totals,
-            "towerSites": len(sites), "nearOreSites": near_sites, "minDepotOreDistance": separation}
+            "towerSites": len(sites), "nearOreSites": near_sites, "minDepotOreDistance": separation,
+            "nearOreSitesManhattan": near_manhattan, "homeOreWalks": home_walks,
+            "towerOreWalks": tower_walks}
 
 
 @dataclass(frozen=True)
@@ -261,6 +281,20 @@ class Layout:
                     or not all(any(n in ground for n in adjacent(f)) for f in features)):
                 self.pair(p, ".")
                 continue
+            # Every placement (including later minerals/towers) may lengthen a
+            # previously short home route. Keep it valid without opening walls.
+            found = distances(ground, adjacent(self.bases[0]))
+            home = [ore for ore in [*self.ore, *([p, q] if name == "home" else [])]
+                    if zone(ore, self.bases) == "home0"]
+            if any((value := feature_walk(found, ore)) is None or value > 12 for ore in home):
+                self.pair(p, ".")
+                continue
+            if name == "tower":
+                found = distances(ground, adjacent(p))
+                if not any(3 <= distance(p, ore) <= 5
+                           and (value := feature_walk(found, ore)) is not None and value <= 6 for ore in self.ore):
+                    self.pair(p, ".")
+                    continue
             if name != "tower":
                 self.ore[p] = self.ore[q] = amount
             placed += 1
