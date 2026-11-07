@@ -151,17 +151,25 @@ def exchange(connections: list[Connection], messages: list[list[str]], cpu_ms: l
             unregister(c.process.stdout)
 
         while any(r is None for r in replies):
+            # Pipe readiness wakes immediately. Busy bots only need bounded
+            # watchdog sampling, not a /proc tree scan every 2 ms. Clamp to
+            # remaining CPU/wall budgets so short deadlines are not relaxed.
+            wait_seconds = 0.050
             for i, c in enumerate(connections):
                 if replies[i] is not None:
                     continue
                 if frames[i].done:
                     finish(i, None)
-                elif (c.clock.read_ns()-cpu_start[i] > cpu_ms[i]*1_000_000
-                      or time.monotonic_ns()-starts[i] > wall_ms[i]*1_000_000):
-                    finish(i, "timeout")
+                else:
+                    cpu_left = cpu_ms[i]*1_000_000 - (c.clock.read_ns()-cpu_start[i])
+                    wall_left = wall_ms[i]*1_000_000 - (time.monotonic_ns()-starts[i])
+                    if cpu_left < 0 or wall_left < 0:
+                        finish(i, "timeout")
+                    else:
+                        wait_seconds = min(wait_seconds, cpu_left/1e9, wall_left/1e9)
             if all(r is not None for r in replies):
                 break
-            for key, _ in selector.select(0.002):
+            for key, _ in selector.select(wait_seconds):
                 i, kind = key.data
                 c = connections[i]
                 if kind == "in":
