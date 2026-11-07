@@ -1,0 +1,9 @@
+test_bot_cannot_clear_parent_death_signal (tests.test_cleanup.CleanupTests.test_bot_cannot_clear_parent_death_signal) ... ok
+test_parent_dies_in_preexec_before_bwrap_can_install_its_guard (tests.test_cleanup.CleanupTests.test_parent_dies_in_preexec_before_bwrap_can_install_its_guard) ... ok
+test_sigkill_worker_recovers_unrecorded_attempt_before_resuming (tests.test_cleanup.CleanupTests.test_sigkill_worker_recovers_unrecorded_attempt_before_resuming) ... ok
+test_worker_spawn_failure_is_a_retained_infrastructure_attempt (tests.test_cleanup.CleanupTests.test_worker_spawn_failure_is_a_retained_infrastructure_attempt) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 10.905s
+
+OK
