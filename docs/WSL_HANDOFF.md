@@ -4,7 +4,7 @@
 
 ## 1. 主工作区与启动方式
 
-后续只在 WSL 的 `~/projects/AgentEvalLab-HumanRaceWar` 开发。Windows 原目录保留迁移前备份，不删除、不双向自动同步，不在两边同时修改。
+后续只在 WSL 的 `~/projects/AgentEvalLab-HumanRaceWar` 开发。提交、推送和拉取也都在这个目录执行。Windows 原目录保留迁移前备份，不删除、不双向自动同步，不再参与日常 Git 同步。
 
 在 WSL 终端运行：
 
@@ -37,7 +37,9 @@ pi
 3. 不要把令牌、授权回调、API key 或 `auth.json` 贴进 Agent 对话、交接文件或仓库。
 4. 本次只验证了 pi 的版本、帮助命令及启动器，没有测试模型认证和推理请求。不要把“CLI 已就绪”理解为“模型账号已验证”。
 
-Git 的原有 HTTPS 远端、提交身份和分支跟踪关系已在仓库本地恢复；没有复制 Windows 的 Git 凭据或 credential helper。当前可以本地提交，日后推送认证由用户按需完成；本次没有推送。
+Git 的原有 HTTPS 远端、提交身份和分支跟踪关系已在仓库本地恢复；没有复制 Windows 的 Git 凭据或 credential helper。最终复核的 `git ls-remote` 已能读取远端 main，结果与本地 origin/main 一致；本地提交已实际成功。GitHub 写权限没有测试，首次推送前由用户自行配置或确认 WSL 中的认证，不向 Agent 提供凭据。本次没有执行 push 或 pull。
+
+日常同步先检查状态和远端分叉；没有分叉时可用 `git pull --ff-only origin main`，经授权推送用 `git push origin main`。发生分叉时先审查，不直接强推或覆盖。
 
 ## 2. 已安装与已验证
 
@@ -50,7 +52,7 @@ Git 的原有 HTTPS 远端、提交身份和分支跟踪关系已在仓库本地
 | C++ | GCC / g++ 11.4.0 |
 | 沙箱 | bubblewrap 0.6.1 |
 | Node / npm | 22.23.3 / 10.9.9，沿用已有安装 |
-| pi | `@earendil-works/pi-coding-agent@1.4.0`，用户级 npm 前缀 `~/.local`，安装使用 `--ignore-scripts` |
+| pi | 当前为 `@earendil-works/pi-coding-agent@1.5.0`，用户级前缀 `~/.local`；CLI 与已安装软件包版本一致，版本/帮助检查通过 |
 | 其他工具 | Git 2.34.1、ripgrep 13.0.0、Bash、make 已有 |
 
 Python 运行环境在 `~/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu`。以后实现 bwrap 启动器时，只读挂载这个 Python 运行目录，不要为了运行 Python 而挂载整个用户 HOME；里面有 pi 配置、会话和认证文件。
@@ -60,8 +62,9 @@ Python 运行环境在 `~/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gn
 - 86 项引擎测试在 Python 3.13.15 下、两个不同 `PYTHONHASHSEED` 进程里分别通过；另归档 9 项确定性和 17 项协议测试。见 `data/python313-tests.json` 与 `logs/python313-*.log`。
 - bwrap 内可运行该 Python 的标准库、读取自身 Linux 进程 CPU 时钟；可信 C++20 小程序在 bwrap 内编译和运行成功。Agent HOME 和项目没有挂载到这两个探针中。
 - 上述只是环境探针，不是 bot 运行器。资源限额、跨命名空间进程树计时、bot 崩溃/洪泛/超时和完整回放仍未验收。
-- 机器配置和工具状态见 `data/environment-wsl-python313.json`；迁移与安装摘要见 `data/wsl-setup.json`、`logs/wsl-setup.log`。速度系数尚未标定。
-- 迁移基线为 `d2f60c2`：4 个原有 Git 提交、42 个受版本管理文件以及 1 个本地测试历史文件已核对。使用本地 Git bundle 迁移，没有从远端重新下载仓库。后续交接提交在 WSL 主工作区产生。
+- 机器配置和工具状态见 `data/environment-wsl-python313.json`；`data/wsl-setup.json`、`logs/wsl-setup.log` 保留初次迁移记录。当时安装 pi 1.4.0 并使用 `--ignore-scripts`；最终复核时已是 1.5.0，此次没有重装、升级或降级，也不推断这次版本变化的来源。速度系数尚未标定。
+- 迁移基线为 `d2f60c2`：4 个原有 Git 提交、42 个受版本管理文件以及 1 个本地测试历史文件已核对。最终复核确认原 Git 树与历史完整、原文件均在、本地测试历史原始内容保留，`git fsck --full` 通过；另将两份 Windows 迁移中转文件备份到被忽略的 `runs/migration/`，它们不参与开发，不要重新执行迁移脚本。
+- 最终复核又通过两次 86 项引擎测试及可信 Python/C++ 沙箱探针；第一次辅助审计因假定 pi 仍为 1.4.0 而停止，不是引擎失败，改为核对实际软件包版本后通过。全部记录在本地 `runs/development/final-handoff-*` 和 `test-history.jsonl` 中，初次审计记录也保留。没有从远端重新下载仓库；后续交接提交在 WSL 主工作区产生。
 
 复查命令：
 

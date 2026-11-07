@@ -11,10 +11,12 @@
 - 用户已明确授权在 WSL 安装 Python、迁移整个项目、安装 pi 并配置基础开发环境。后续不在 Windows 备份目录继续开发。
 - Python 3.13.15 已通过已有 uv 0.13.4 安装到用户目录，项目 `.venv` 使用该版本，仅标准库；Ubuntu 的 `/usr/bin/python3` 仍是 3.10.12，未替换。没有使用 sudo，也没有改代理、DNS 或安全设置。
 - 项目经本地 Git bundle 迁入原生 ext4 工作区：基线 `d2f60c2`、4 个原有提交、42 个受跟踪文件和 1 个本地测试历史文件均已核对。保留本地提交身份、无凭据的 HTTPS 远端及跟踪关系，恢复 `.githooks`；没有迁移认证存储，没有推送。
-- pi 1.4.0 已用户级安装，沿用 Node 22.23.3 / npm 10.9.9，安装使用 `--ignore-scripts`。`hrw-dev` 启动器进入项目并激活 `.venv`，版本和帮助命令通过。新 pi 尚未试发模型请求，模型账号由用户通过 `/login`、`/model` 自行配置或验证；不读取凭据。
+- 初次迁移时用户级安装 pi 1.4.0，使用 `--ignore-scripts`。最终复核时已是 **1.5.0**，CLI 与已安装软件包一致；此次只复核，未重装、升级或降级，不推断版本变化来源。Node 22.23.3 / npm 10.9.9 沿用已有安装。`hrw-dev` 的版本和帮助命令通过；模型认证和实际推理未验证，由用户自行配置或确认，不读取凭据。
 - Python 3.13.15 下，两个不同哈希种子的全套 **86 项测试均通过**，另归档 9 项确定性和 17 项协议测试。见 `data/python313-tests.json`、`logs/python313-*.log`；3.10 历史数据未删除。
 - bwrap 内可信 Python 标准库、自身进程 CPU 时钟，以及可信 C++20 小程序的编译运行通过；未挂载 Agent HOME 或项目。这不是完整沙箱、跨命名空间计时、资源限额或故障 bot 验收。见 `data/wsl-setup.json`、`logs/wsl-setup.log`。
-- 交接文档：`docs/WSL_HANDOFF.md`；自动开工说明：`AGENTS.md`；pi 提示词：`/resume-phase-a`、`/process-review`（信任当前项目后可用）。默认项目信任仍为 ask，未自动批准；未复制 Windows 扩展、技能、会话或认证文件。
+- 交接文档：`docs/WSL_HANDOFF.md`；自动开工说明：`AGENTS.md`；pi 提示词：`/resume-phase-a`、`/process-review`（信任当前项目后可用）。默认项目信任设置为 ask，未自动批准；未复制 Windows 扩展、技能、会话或认证文件。
+- 最终复核：原 4 个提交、42 个文件、测试历史原始内容完整，`git fsck --full` 通过；两份迁移中转文件也补存至本地 `runs/migration/`。再次通过两次 86 项引擎测试及 Python/C++ 沙箱探针。第一次辅助审计因旧 pi 版本假设而停止，原始记录保留；核对实际版本后通过，未改引擎或测试源码。
+- 后续 commit/push/pull 均在 WSL 主工作区，Windows 备份不再参与同步。远端读取已通过 `git ls-remote` 验证，远端 main 与本地 origin/main 一致；推送写权限未验证，本次没有 push/pull。复核记录在被忽略的 `runs/development/final-handoff-check.json`。
 
 ## 已有引擎工作
 
@@ -70,9 +72,9 @@
 
 | 阶段 | 模型 token | CPU 小时 | 机器配置 |
 |---|---|---|---|
-| A（进行中） | 当前工具未提供可靠累计计量，未知，待宿主补记 | 对局 0 h；已计量测试 2.9559184 s，约 0.0008211 h；安装、编译探针、开发工具等 CPU 未完整计量，不冒充总量 | i5-14600KF，WSL 可见 20 逻辑 CPU、约 15.53 GiB 内存；速度系数未标定，见 `data/environment-wsl-python313.json` |
+| A（进行中） | 当前工具未提供可靠累计计量，未知，待宿主补记 | 对局 0 h；已计量测试 3.3862897 s，约 0.0009406 h；安装、编译探针、开发工具等 CPU 未完整计量，不冒充总量 | i5-14600KF，WSL 可见 20 逻辑 CPU、约 15.53 GiB 内存；速度系数未标定，见 `data/environment-wsl-python313.json` |
 
-测试 CPU 由原有 2.3393043 s 加本次 Python 3.13.15 检查 0.6166141 s 组成。最新批次见 `data/python313-tests.json`，全部已归档批次历史保留在被忽略的 `runs/development/test-history.jsonl`。这些时间不是性能验收结果，也不包括本对话的模型用量；没有通过新安装的 pi 发起模型调用。
+测试 CPU 由原有 2.3393043 s、首次 Python 3.13.15 检查 0.6166141 s、最终两次复核 0.2164075 s 与 0.2139638 s 组成。首次 3.13 检查见 `data/python313-tests.json`，本次复核见本地 `runs/development/final-handoff-*`；全部已归档批次历史保留在被忽略的 `runs/development/test-history.jsonl`。这些时间不是性能验收结果，也不包括本对话的模型用量；没有通过新安装的 pi 发起模型调用。
 
 ## 本次开工记录
 

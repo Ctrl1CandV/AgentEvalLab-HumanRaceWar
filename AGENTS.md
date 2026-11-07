@@ -1,6 +1,6 @@
 # HumanRaceWar 构建者说明
 
-本仓库的后续搭建和开发在 WSL Ubuntu 22.04 内进行，工作目录为 `~/projects/AgentEvalLab-HumanRaceWar`。Windows 原目录仅保留迁移前备份，不在两边同时开发。
+本仓库的后续搭建和开发在 WSL Ubuntu 22.04 内进行，工作目录为 `~/projects/AgentEvalLab-HumanRaceWar`。Windows 原目录仅保留迁移前备份，不在两边同时开发。后续提交、推送和拉取都在这个 WSL 仓库执行，Windows 备份不再参与同步。
 
 ## 每次开工
 

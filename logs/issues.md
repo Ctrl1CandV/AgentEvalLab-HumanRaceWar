@@ -7,7 +7,8 @@
 | ENV-001 | 已解决 | 用户授权后，通过已有 uv 用户级安装 Python 3.13.15；保留系统 Python 3.10.12，创建无第三方包的 `.venv`。86 项测试在 3.13.15 的两个哈希种子进程中通过。见 `data/python313-tests.json`。 |
 | ENV-002 | 已解决 | 整个项目及本地 Git 历史迁入 WSL `~/projects/AgentEvalLab-HumanRaceWar`，不再依赖 D 盘挂载。42 个原有受跟踪文件和本地测试历史已核对，原 Windows 目录留作备份。见 `data/wsl-setup.json`。 |
 | SANDBOX-001 | 部分探针通过，验收未完成 | bwrap 内可信 Python 标准库及自身进程 CPU 时钟、C++20 编译执行通过，Agent HOME 和项目未挂载。仍无 bot 运行器、跨命名空间计时、资源限制和完整安全验收数据。 |
-| AGENT-001 | CLI 就绪，登录待用户 | pi 1.4.0 和 hrw-dev 启动器版本/帮助检查通过；未读取或迁移认证文件，未测试模型认证和推理。用户通过 `/login`、`/model` 接入自己的账号。 |
+| AGENT-001 | CLI 就绪，认证未验证 | 初次安装记录为 pi 1.4.0；最终复核实际为 1.5.0，CLI 与软件包版本一致，hrw-dev 版本/帮助检查通过。此次没有改动安装或读取认证文件，模型认证和推理未测试。用户自行通过 `/login`、`/model` 配置或确认账号。 |
+| AUDIT-001 | 已解决，原始记录保留 | 最终复核脚本假设 pi 仍为 1.4.0，版本断言停止；实际 CLI/软件包均为 1.5.0。保留当前安装，改为核对实际版本后审计通过。两次引擎测试均为 86 项通过，不是引擎回归。记录在本地 `runs/development/final-handoff-attempt-1.json` 与 `final-handoff-check.json`。 |
 | INSTALL-001 | 已恢复 | 下载时一次 curl TLS EOF、一次 npm ECONNRESET；保留既有代理和 TLS 校验，复用已有 uv，npm 按同一固定版本重试成功。未改 DNS、代理或安全设置。 |
 | SPEC-001 | 待审查 | 初始站位/ID、SPAWN 占格、重复非法指令、伤害记录、失败动作警告和事件对称排序等处理见 `docs/IMPLEMENTATION_NOTES.md` I01–I08 与 STATUS。未修改既定规则参数或评分公式。 |
 | MAP-001 | 未完成 | 当前只有结构校验器和人工测试 fixture，没有生成器、地图资源/连通性验收及正式地图集。 |
