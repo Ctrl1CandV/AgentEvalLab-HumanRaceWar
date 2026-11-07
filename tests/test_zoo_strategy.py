@@ -75,6 +75,18 @@ class ZooStrategyTests(unittest.TestCase):
         state.turn = 80
         return game, state
 
+    def test_opening_military_floor_precedes_tower_expansion(self):
+        game, state = fresh()
+        for p in ((3, 2), (3, 3), (3, 4), (4, 3), (4, 4), (9, 8)):
+            state.add_unit(0, "W", p)
+        state.add_unit(0, "S", (10, 3))
+        for p in ((18, 18), (19, 18), (18, 19), (19, 19), (20, 19)):
+            state.add_unit(1, "S", p)
+        state.players[0].energy = 100
+        state.turn = 25
+        replies = self.probe(game, state, "opening-military-floor")
+        self.assertTrue(any(line.startswith("SPAWN S") for line in replies[0]), replies)
+
     def test_remote_army_does_not_spend_waiting_builders_reserve(self):
         game, state = self.budget_state()
         replies = self.probe(game, state, "remote-budget", count=2, income=50)

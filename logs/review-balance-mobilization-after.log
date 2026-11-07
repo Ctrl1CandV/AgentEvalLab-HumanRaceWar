@@ -1,0 +1,10 @@
+test_nearby_army_can_override_tower_reserve (tests.test_zoo_strategy.ZooStrategyTests.test_nearby_army_can_override_tower_reserve) ... ok
+test_occupied_enemy_base_ports_do_not_stop_distant_advance (tests.test_zoo_strategy.ZooStrategyTests.test_occupied_enemy_base_ports_do_not_stop_distant_advance) ... ok
+test_opening_military_floor_precedes_tower_expansion (tests.test_zoo_strategy.ZooStrategyTests.test_opening_military_floor_precedes_tower_expansion) ... ok
+test_remote_army_does_not_spend_waiting_builders_reserve (tests.test_zoo_strategy.ZooStrategyTests.test_remote_army_does_not_spend_waiting_builders_reserve) ... ok
+test_repeated_contested_moves_eventually_yield_and_engage (tests.test_zoo_strategy.ZooStrategyTests.test_repeated_contested_moves_eventually_yield_and_engage) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.034s
+
+OK
