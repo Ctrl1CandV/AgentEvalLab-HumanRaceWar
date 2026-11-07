@@ -146,12 +146,21 @@ END
 
 既定运行要求：bot 单进程，可多线程，所有线程 CPU 用时相加。初始化 CPU 2,000 ms；每回合 CPU 100 ms，超额从每局 3,000 ms 储备扣除，储备为负判超时。墙钟兜底为本回合时限加剩余储备再加 500 ms。时限会按固定单核基准折算，实际值由 LIMIT 发出；BANK 由运行器更新。内存 512 MiB、写文件 16 MiB、打开文件 64 个，另有整局 CPU 硬上限。标准错误本地最多保留 64 KiB，评分时丢弃。
 
-所有 bot 和 C++ 编译都在沙箱内，不联网；评分和校准使用 bubblewrap。plain 只供已有外层沙箱的本地工作区使用。C++ 编译要求 GCC 11、`g++ -O2 -std=gnu++20 -o bot *.cpp`、60 秒上限；Python 要求 3.13，框架只用标准库。bot 编译失败、无 READY、退出或超时判负；双方同回合出错则平局。沙箱准备、资源或框架故障不算 bot 输，需重跑，仍失败的局不计成绩。**这些进程级行为尚未实现和测试。**
+所有 bot 和 C++ 编译都在沙箱内，不联网；评分和校准使用 bubblewrap。plain 只供已有外层沙箱的本地工作区使用。C++ 编译要求 GCC 11、`g++ -O2 -std=gnu++20 -o bot *.cpp`、60 秒上限；Python 要求 3.13，框架只用标准库。bot 编译失败、无 READY、退出或超时判负；双方同回合出错则平局。沙箱准备、资源或框架故障不算 bot 输，需重跑，仍失败的局不计成绩。**当前 bwrap 开发运行器已有对局与故障测试，但速度折算、完整进程树计量和沙箱验收尚未完成；不能用于正式评分。**
 
 正式评分将面对约 12 级固定阶梯，每级 2–3 个不同风格对手，覆盖进攻、经济、控制。L0–L2 公开；更高阶梯仅公开大致风格，不公开实现。每局得分为 `0.75×胜负分 + 0.25×过程分`，胜负分为胜 1、平 0.5、负 0；逐对手、逐级平均，最后各级等权平均。过程分指标及权重还需要 B/C 阶段数据验证和用户确认，当前引擎不计算评分。
 
 ## 6. 工具交付状态
 
-当前可在仓库根目录运行可信引擎测试：`python3 tools/run_tests.py`。正式验收须使用 Python 3.13。这条命令不会启动 bot。
+在 WSL 工作区用 `.venv/bin/python tools/run_tests.py` 跑开发测试。解释器须为 Python 3.13；运行器测试的 bot 和 C++ 编译都在 bwrap 内执行，不允许裸跑或自动回退 plain。
 
-规划中的 `python3 -m arena check/match/tournament/mapgen/replay`、Python/C++ SDK 及示例均尚未实现；完成后将补齐命令例子和回放说明。本草稿不能替代最终任务包。
+已提供 Python/C++ SDK 及 `example/`，只用标准库。以下命令使用测试地图打通一局，并验证、查看回放：
+
+```sh
+.venv/bin/python -m arena match --a sdk/python/example --b sdk/cpp/example --map tests/fixtures/smoke.map
+.venv/bin/python -m arena replay verify <回放路径>
+.venv/bin/python -m arena replay show <回放路径> --turn 25
+.venv/bin/python -m arena replay summary <回放路径>
+```
+
+`match` 默认把所有尝试、结果和回放留在 `runs/matches/`，可加 `--show-stderr` 查看 stderr。测试地图不是验收地图，速度系数尚未标定。详细用法和限制见 `docs/RUNTIME.md`。`check`、`tournament`、`mapgen` 和正式任务包尚未交付。

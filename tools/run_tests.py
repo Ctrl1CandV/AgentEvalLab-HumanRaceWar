@@ -1,7 +1,8 @@
 """Run trusted unit tests and report measured usage (not a bot benchmark).
 
 No dependencies. --json sends the test log inside a JSON object for archiving.
-The CPU figure covers this process only, not tool launches or model inference.
+CPU figures separate this process from reaped children (sandbox/compile processes).
+They exclude model inference, and are not performance acceptance measurements.
 """
 from __future__ import annotations
 
@@ -10,6 +11,7 @@ import io
 import json
 from pathlib import Path
 import platform
+import resource
 import sys
 import time
 import unittest
@@ -24,12 +26,14 @@ def main() -> int:
     sys.path.insert(0, str(root))
     suite = unittest.defaultTestLoader.discover(str(root / "tests"), pattern=args.pattern, top_level_dir=str(root))
     stream = io.StringIO()
+    child_start = resource.getrusage(resource.RUSAGE_CHILDREN)
     cpu_start, wall_start = time.process_time_ns(), time.perf_counter_ns()
     result = unittest.TextTestRunner(stream=stream, verbosity=2).run(suite)
     cpu_ns, wall_ns = time.process_time_ns() - cpu_start, time.perf_counter_ns() - wall_start
+    children = resource.getrusage(resource.RUSAGE_CHILDREN)
     report = {
         "schemaVersion": 1,
-        "scope": "trusted engine unit tests only; no bot processes; not phase-A acceptance",
+        "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
         "pattern": args.pattern,
         "python": platform.python_version(),
         "system": platform.system(),
@@ -41,6 +45,8 @@ def main() -> int:
         "passed": result.wasSuccessful(),
         "measuredTestProcessCpuSeconds": cpu_ns / 1_000_000_000,
         "measuredTestWallSeconds": wall_ns / 1_000_000_000,
+        "measuredReapedChildrenCpuSeconds": (children.ru_utime+children.ru_stime
+                                             -child_start.ru_utime-child_start.ru_stime),
         "log": stream.getvalue(),
     }
     if args.json:
