@@ -1,0 +1,2210 @@
+{
+  "schemaVersion": 1,
+  "generatorVersion": 1,
+  "profile": "default-22800-ore-10-sites; zone definition pending I11 confirmation",
+  "publicMaps": 40,
+  "scrimmageMaps": 4,
+  "balanceValidated": false,
+  "maps": [
+    {
+      "path": "public/open-01.map",
+      "size": 24,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 0,
+      "acceptedSeed": 0,
+      "rejectedCandidates": [],
+      "sha256": "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 494,
+        "wallCells": 28,
+        "basePath": 38,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/open-02.map",
+      "size": 28,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 1,
+      "acceptedSeed": 1,
+      "rejectedCandidates": [],
+      "sha256": "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 690,
+        "wallCells": 40,
+        "basePath": 46,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/open-03.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 2,
+      "acceptedSeed": 2,
+      "rejectedCandidates": [],
+      "sha256": "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 918,
+        "wallCells": 52,
+        "basePath": 54,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/open-04.map",
+      "size": 36,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 3,
+      "acceptedSeed": 3,
+      "rejectedCandidates": [],
+      "sha256": "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1178,
+        "wallCells": 64,
+        "basePath": 62,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/open-05.map",
+      "size": 40,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 4,
+      "acceptedSeed": 4,
+      "rejectedCandidates": [],
+      "sha256": "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1466,
+        "wallCells": 80,
+        "basePath": 70,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/open-06.map",
+      "size": 24,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 5,
+      "acceptedSeed": 5,
+      "rejectedCandidates": [],
+      "sha256": "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 494,
+        "wallCells": 28,
+        "basePath": 38,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/open-07.map",
+      "size": 28,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 6,
+      "acceptedSeed": 6,
+      "rejectedCandidates": [],
+      "sha256": "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 690,
+        "wallCells": 40,
+        "basePath": 46,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/open-08.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 7,
+      "acceptedSeed": 7,
+      "rejectedCandidates": [],
+      "sha256": "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 918,
+        "wallCells": 52,
+        "basePath": 54,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/open-09.map",
+      "size": 36,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 8,
+      "acceptedSeed": 8,
+      "rejectedCandidates": [],
+      "sha256": "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1178,
+        "wallCells": 64,
+        "basePath": 62,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/open-10.map",
+      "size": 40,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 9,
+      "acceptedSeed": 9,
+      "rejectedCandidates": [],
+      "sha256": "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1466,
+        "wallCells": 80,
+        "basePath": 70,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/corridor-01.map",
+      "size": 24,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 100,
+      "acceptedSeed": 100,
+      "rejectedCandidates": [],
+      "sha256": "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 478,
+        "wallCells": 44,
+        "basePath": 40,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/corridor-02.map",
+      "size": 28,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 101,
+      "acceptedSeed": 101,
+      "rejectedCandidates": [],
+      "sha256": "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 678,
+        "wallCells": 52,
+        "basePath": 48,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/corridor-03.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 102,
+      "acceptedSeed": 102,
+      "rejectedCandidates": [],
+      "sha256": "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 910,
+        "wallCells": 60,
+        "basePath": 54,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/corridor-04.map",
+      "size": 36,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 103,
+      "acceptedSeed": 103,
+      "rejectedCandidates": [],
+      "sha256": "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1174,
+        "wallCells": 68,
+        "basePath": 76,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/corridor-05.map",
+      "size": 40,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 104,
+      "acceptedSeed": 104,
+      "rejectedCandidates": [],
+      "sha256": "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1470,
+        "wallCells": 76,
+        "basePath": 70,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 4
+      }
+    },
+    {
+      "path": "public/corridor-06.map",
+      "size": 24,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 105,
+      "acceptedSeed": 105,
+      "rejectedCandidates": [],
+      "sha256": "90536646451ee32f25061aafa2228dc1d12b76670a7ad7740a3f4f27c3767b40",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 478,
+        "wallCells": 44,
+        "basePath": 38,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/corridor-07.map",
+      "size": 28,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 106,
+      "acceptedSeed": 106,
+      "rejectedCandidates": [],
+      "sha256": "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 678,
+        "wallCells": 52,
+        "basePath": 60,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/corridor-08.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 107,
+      "acceptedSeed": 107,
+      "rejectedCandidates": [],
+      "sha256": "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 910,
+        "wallCells": 60,
+        "basePath": 72,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/corridor-09.map",
+      "size": 36,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 108,
+      "acceptedSeed": 108,
+      "rejectedCandidates": [],
+      "sha256": "cf8cf577ea58176adcd7fb1f3624480ad04a345d9ba65ab83f923907d0d1bb66",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1174,
+        "wallCells": 68,
+        "basePath": 62,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/corridor-10.map",
+      "size": 40,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 109,
+      "acceptedSeed": 109,
+      "rejectedCandidates": [],
+      "sha256": "45a78e74bef865bf3c250986703374404f7c5561b3b999a334fa22299fc48ff9",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1470,
+        "wallCells": 76,
+        "basePath": 132,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-01.map",
+      "size": 24,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 200,
+      "acceptedSeed": 200,
+      "rejectedCandidates": [],
+      "sha256": "6e49d5c88f2802399f333e88c3306d9e715d7535f70dfc655db33a6a4bad715a",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 442,
+        "wallCells": 80,
+        "basePath": 42,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-02.map",
+      "size": 28,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 201,
+      "acceptedSeed": 201,
+      "rejectedCandidates": [],
+      "sha256": "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 634,
+        "wallCells": 96,
+        "basePath": 60,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-03.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 202,
+      "acceptedSeed": 202,
+      "rejectedCandidates": [],
+      "sha256": "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 858,
+        "wallCells": 112,
+        "basePath": 58,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-04.map",
+      "size": 36,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 203,
+      "acceptedSeed": 203,
+      "rejectedCandidates": [],
+      "sha256": "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1114,
+        "wallCells": 128,
+        "basePath": 62,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-05.map",
+      "size": 40,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 204,
+      "acceptedSeed": 204,
+      "rejectedCandidates": [],
+      "sha256": "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1402,
+        "wallCells": 144,
+        "basePath": 70,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-06.map",
+      "size": 24,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 205,
+      "acceptedSeed": 205,
+      "rejectedCandidates": [],
+      "sha256": "3f8d1e5e296e3696f8c9e890c063106e9de72f89a5ebc7aba0469379865db470",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 442,
+        "wallCells": 80,
+        "basePath": 38,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-07.map",
+      "size": 28,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 206,
+      "acceptedSeed": 206,
+      "rejectedCandidates": [],
+      "sha256": "b1bfcf95b04a2e7f9b82c8d1487cca26ee6d666a57dd875b9604fb79637fa9cc",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 634,
+        "wallCells": 96,
+        "basePath": 108,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-08.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 207,
+      "acceptedSeed": 207,
+      "rejectedCandidates": [],
+      "sha256": "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 858,
+        "wallCells": 112,
+        "basePath": 54,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-09.map",
+      "size": 36,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 208,
+      "acceptedSeed": 208,
+      "rejectedCandidates": [],
+      "sha256": "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1114,
+        "wallCells": 128,
+        "basePath": 62,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/island-10.map",
+      "size": 40,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 209,
+      "acceptedSeed": 209,
+      "rejectedCandidates": [],
+      "sha256": "c69946219dbcf022471be1028451a9ffb96c8c4c47c7063f033e5853ea407940",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1402,
+        "wallCells": 144,
+        "basePath": 74,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/maze-01.map",
+      "size": 24,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 300,
+      "acceptedSeed": 300,
+      "rejectedCandidates": [],
+      "sha256": "91ce9981f8b9f8f2a3ee17bed84035dd5b857f7d4fe91637df8912f1e92eeb17",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 372,
+        "wallCells": 150,
+        "basePath": 40,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/maze-02.map",
+      "size": 28,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 301,
+      "acceptedSeed": 301,
+      "rejectedCandidates": [],
+      "sha256": "3957a20d5cd28e6f0661365d0143a8eedb0c64dd402a07e8ed53cfa9078d604c",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 546,
+        "wallCells": 184,
+        "basePath": 72,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/maze-03.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 302,
+      "acceptedSeed": 302,
+      "rejectedCandidates": [],
+      "sha256": "0313f8a11f416d328bafaaadcffc809e49782689bcef2c36bd60adc510a4d205",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 754,
+        "wallCells": 216,
+        "basePath": 70,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/maze-04.map",
+      "size": 36,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 303,
+      "acceptedSeed": 303,
+      "rejectedCandidates": [],
+      "sha256": "e05166867c25171777a1842a5567ce30f143892a541367b070367cd466c6ae73",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 994,
+        "wallCells": 248,
+        "basePath": 62,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/maze-05.map",
+      "size": 40,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 304,
+      "acceptedSeed": 304,
+      "rejectedCandidates": [],
+      "sha256": "254d0b82bec003a95c5930b3b169cc1482305ebfeaf9c07b6c2246ff9eb4e54b",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1266,
+        "wallCells": 280,
+        "basePath": 116,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/maze-06.map",
+      "size": 24,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 305,
+      "acceptedSeed": 305,
+      "rejectedCandidates": [],
+      "sha256": "0b753625bee9a9a8fcd671cff849b7b095291f0e101e9a2dd6c3f5ff17a49f36",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 372,
+        "wallCells": 150,
+        "basePath": 74,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/maze-07.map",
+      "size": 28,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 306,
+      "acceptedSeed": 306,
+      "rejectedCandidates": [],
+      "sha256": "ea1bccc52a028162cf1c62c7a82ae1585f0dda63851b29a89deb5f347a01335f",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 546,
+        "wallCells": 184,
+        "basePath": 56,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/maze-08.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 307,
+      "acceptedSeed": 307,
+      "rejectedCandidates": [],
+      "sha256": "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 756,
+        "wallCells": 214,
+        "basePath": 66,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "public/maze-09.map",
+      "size": 36,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 308,
+      "acceptedSeed": 308,
+      "rejectedCandidates": [],
+      "sha256": "4add8c1a9cad79ed1b08db17b7f4d4893bd1d77ee0fce1ba5dfd866d38e43693",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 994,
+        "wallCells": 248,
+        "basePath": 92,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 4
+      }
+    },
+    {
+      "path": "public/maze-10.map",
+      "size": 40,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 309,
+      "acceptedSeed": 309,
+      "rejectedCandidates": [],
+      "sha256": "1c36b6deb6811ed81dbecbeed459cd8674f5ea85b86c6cb2dadcd41996b5131d",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 1266,
+        "wallCells": 280,
+        "basePath": 80,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 4
+      }
+    },
+    {
+      "path": "scrimmage/open-01.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "open",
+      "requestedSeed": 10000,
+      "acceptedSeed": 10000,
+      "rejectedCandidates": [],
+      "sha256": "6eaddd8b974a4f6b84f9608c96f32f88825e1bf381748f86cafd4e4679d32ff1",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 918,
+        "wallCells": 52,
+        "basePath": 54,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "scrimmage/corridor-01.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "corridor",
+      "requestedSeed": 10001,
+      "acceptedSeed": 10001,
+      "rejectedCandidates": [],
+      "sha256": "596a7087a24d0743f224f78c1639ed118a68e657a0cf542d49521cc116d60743",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 910,
+        "wallCells": 60,
+        "basePath": 54,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "scrimmage/island-01.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "island",
+      "requestedSeed": 10002,
+      "acceptedSeed": 10002,
+      "rejectedCandidates": [],
+      "sha256": "ce3e4379af5a56249ced1e99ffce88337fc95eee62c6195fbcafdb2c01b3696c",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 858,
+        "wallCells": 112,
+        "basePath": 54,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    },
+    {
+      "path": "scrimmage/maze-01.map",
+      "size": 32,
+      "generatorVersion": 1,
+      "type": "maze",
+      "requestedSeed": 10003,
+      "acceptedSeed": 10003,
+      "rejectedCandidates": [],
+      "sha256": "fff2c32622490e671191a870279e0a69117648483c76dbba3e9fbd5992b46894",
+      "metrics": {
+        "passed": true,
+        "checks": {
+          "groundConnected": true,
+          "basePath": true,
+          "homeOre": true,
+          "middleOre": true,
+          "centerOre": true,
+          "towerSites": true,
+          "depotOreSeparation": true,
+          "spawnGround": true,
+          "resourceAccess": true
+        },
+        "groundCells": 754,
+        "wallCells": 216,
+        "basePath": 64,
+        "spawnGround": [
+          12,
+          12
+        ],
+        "oreCellsByZone": {
+          "home0": 6,
+          "home1": 6,
+          "middle0": 10,
+          "middle1": 10,
+          "center": 10,
+          "outside": 0
+        },
+        "oreByZone": {
+          "home0": 2400,
+          "home1": 2400,
+          "middle0": 6000,
+          "middle1": 6000,
+          "center": 6000,
+          "outside": 0
+        },
+        "towerSites": 10,
+        "nearOreSites": 10,
+        "minDepotOreDistance": 3
+      }
+    }
+  ]
+}

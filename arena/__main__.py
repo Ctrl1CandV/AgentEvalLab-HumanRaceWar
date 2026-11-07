@@ -6,6 +6,8 @@ import sys
 
 from arena.core.replay import ReplayError
 from arena.games.outpost.replay import verify
+from arena.games.outpost.mapgen import TYPES, generate, inspect_layout
+from arena.games.outpost.maps import parse_map
 from arena.match import play
 
 
@@ -19,12 +21,27 @@ def main() -> int:
     match.add_argument("--out", type=Path, default=Path("runs/matches"))
     match.add_argument("--seeds", nargs=2, type=int, default=[17, 29])
     match.add_argument("--show-stderr", action="store_true", help="display bounded bot stderr (also archived)")
+    mapgen = commands.add_parser("mapgen", help="generate a deterministic symmetric map")
+    mapgen.add_argument("--type", choices=TYPES, required=True)
+    mapgen.add_argument("--size", type=int, default=32)
+    mapgen.add_argument("--seed", type=int, required=True)
+    mapcheck = commands.add_parser("mapcheck", help="check the default generation profile (not match eligibility)")
+    mapcheck.add_argument("path", type=Path)
     replay = commands.add_parser("replay")
     replay.add_argument("action", choices=("verify", "show", "summary"))
     replay.add_argument("path", type=Path)
     replay.add_argument("--turn", type=int, default=0)
     args = parser.parse_args()
     try:
+        if args.command == "mapgen":
+            generated = generate(args.type, args.size, args.seed)
+            print(generated.text, end="")
+            print(json.dumps(generated.metadata()), file=sys.stderr)
+            return 0
+        if args.command == "mapcheck":
+            result = inspect_layout(parse_map(args.path.read_text()))
+            print(json.dumps(result, indent=2))
+            return 0 if result["passed"] else 1
         if args.command == "match":
             private = Path(__file__).resolve().parents[1] / "private"
             if args.map.resolve().is_relative_to(private) and not args.out.resolve().is_relative_to(private):
