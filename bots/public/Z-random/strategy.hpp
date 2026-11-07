@@ -21,6 +21,7 @@ class Strategy {
     std::uint64_t seed=1469598103934665603ULL, randomState;
     std::vector<std::array<int,4>> edges;
     std::vector<Pos> sites;
+    std::vector<int> guardCells;
     std::map<Pos,std::vector<int>> distances;
     std::set<int> returning;
     std::map<int,int> stalled;
@@ -91,6 +92,16 @@ public:
         distance(home); distance(enemy);
         for (auto [p,amount]:setup.ore) distance(p);
         for (auto p:sites) distance(p);
+        // Idle defenders must not form a ring sealing the unloading ports.
+        // Keep every shortest home-mine route clear; this is terrain geometry,
+        // not a lookup of map names or opponents.
+        std::vector<unsigned char> roads(n);
+        for (auto [ore,amount]:setup.ore) if (hrw::distance(home,ore)<=8) {
+            int length=featureWalk(home,ore);
+            for (int p=0;p<n;++p) if (distance(home)[p]+distance(ore)[p]==length) roads[p]=1;
+        }
+        for (int p=0;p<n;++p) if (ground(pos(p)) && !roads[p] &&
+                hrw::distance(pos(p),home)>=2 && hrw::distance(pos(p),home)<=5) guardCells.push_back(p);
     }
 
     std::vector<std::string> orders(const hrw::Turn& turn) {
@@ -116,15 +127,18 @@ public:
             Pos p={t[0],t[1]}; built.insert(p);
             if (t[2]==you) depots.push_back(p); else targets.push_back({p,t[3],'T'});
         }
-        targets.push_back({enemy,turn.players.at(other)[1],'B'});
+        targets.push_back({enemy,turn.players.at(other)[2],'B'});
         int energy=turn.players.at(you)[0];
         // All purposeful styles can use the free base shot defensively.
         const Target* shot=nullptr;
-        for (const auto& t:targets) if (hrw::distance(t.pos,home)<=parameter("BASE_FIRE_RANGE")) {
+        for (const auto& t:targets) if ((t.kind=='W' || t.kind=='S') && hrw::distance(t.pos,home)<=parameter("BASE_FIRE_RANGE")) {
             if (!shot || std::make_tuple(t.hp,rank(t.pos))<std::make_tuple(shot->hp,rank(shot->pos))) shot=&t;
         }
-        if (shot && (config.mode!=Mode::Random || random(3)==0))
+        std::map<Pos,int> plannedDamage;
+        if (shot && (config.mode!=Mode::Random || random(3)==0)) {
             out.push_back("FIRE "+std::to_string(shot->pos.first)+" "+std::to_string(shot->pos.second));
+            plannedDamage[shot->pos]+=parameter("BASE_FIRE_DMG");
+        }
 
         auto move=[&](const hrw::Unit& u,const std::vector<int>& goals) {
             int start=cell(u.pos()); blocked[start]=0;
@@ -203,10 +217,13 @@ public:
                 auto priority=[&](const Target* t) {
                     bool rush=config.mode==Mode::Rush || config.mode==Mode::WorkerRush;
                     int kind=rush?(t->kind=='B'?0:1):(t->kind=='B'?2:t->kind=='T'?1:0);
-                    return std::make_tuple(kind,t->hp,rank(t->pos));
+                    int remaining=t->hp;
+                    if (config.mode==Mode::Balanced || config.mode==Mode::Turtle) remaining-=plannedDamage[t->pos];
+                    return std::make_tuple(remaining<=0,kind,remaining,rank(t->pos));
                 };
                 auto target=*std::min_element(adjacentEnemies.begin(),adjacentEnemies.end(),[&](auto a,auto b){return priority(a)<priority(b);});
-                out.push_back(command("ATTACK",u.id,target->pos)); continue;
+                out.push_back(command("ATTACK",u.id,target->pos));
+                plannedDamage[target->pos]+=parameter(u.kind=="W"?"WORKER_DMG":"SOLDIER_DMG"); continue;
             }
             if (u.kind=="W" && config.mode!=Mode::WorkerRush) {
                 if (u.carry>=parameter("CARRY_MAX")) returning.insert(u.id);
@@ -269,10 +286,8 @@ public:
                 }
                 int guards=turn.number<assault?2:1;
                 bool guard=enemySoldiers>0 && std::any_of(soldiers.begin(),soldiers.begin()+std::min(guards,int(soldiers.size())),[&](auto s){return s->id==u.id;});
-                if (nearest==inf && guard) {
-                    std::vector<int> cells;
-                    for (int p=0;p<n;++p) if (ground(pos(p)) && hrw::distance(pos(p),home)==parameter("REGEN_RANGE")) cells.push_back(p);
-                    move(u,cells); continue;
+                if (nearest==inf && guard && !guardCells.empty()) {
+                    move(u,guardCells); continue;
                 }
                 if (nearest==inf && turn.number<assault) {
                     std::vector<int> rally;
@@ -283,9 +298,12 @@ public:
                 }
             }
             if (config.mode==Mode::Turtle) {
-                std::vector<int> guard;
-                for (int p=0;p<n;++p) if (ground(pos(p)) && hrw::distance(pos(p),home)==parameter("REGEN_RANGE")) guard.push_back(p);
-                move(u,guard);
+                const Target* intruder=nullptr; int nearest=inf;
+                for (const auto& t:targets) if ((t.kind=='W' || t.kind=='S') && distance(home)[cell(t.pos)]<=10) {
+                    int d=hrw::distance(u.pos(),t.pos);
+                    if (!intruder || std::make_tuple(d,rank(t.pos))<std::make_tuple(nearest,rank(intruder->pos))) { intruder=&t; nearest=d; }
+                }
+                move(u,intruder?adjacent(intruder->pos):guardCells);
             } else move(u,adjacent(goal));
         }
         if (int(own.size())<parameter("POP_CAP") && config.mode!=Mode::Miner) {
@@ -303,6 +321,7 @@ public:
             } else if (config.mode==Mode::Turtle || config.mode==Mode::Harass) {
                 if (int(workers.size())<workersGoal) kind='W';
                 else if (config.mode==Mode::Harass) spawn=soldiers.size()<10;
+                else spawn=int(soldiers.size())<std::min(12,int(guardCells.size()));
             }
             int cost=parameter(kind=='W'?"WORKER_COST":"SOLDIER_COST");
             int reserve=(builderCount && int(depots.size())-1<config.towers)?parameter("TOWER_COST"):0;

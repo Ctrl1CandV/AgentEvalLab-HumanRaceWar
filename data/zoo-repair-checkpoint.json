@@ -1,0 +1,2488 @@
+{
+  "schemaVersion": 1,
+  "scope": "v2 handoff; full regression plus replay inspection, not phase-A acceptance",
+  "baselineTests": {
+    "schemaVersion": 1,
+    "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+    "pattern": "test_*.py",
+    "python": "3.13.15",
+    "system": "Linux",
+    "kernel": "6.18.40.1-microsoft-standard-WSL2",
+    "testsRun": 160,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "measuredTestProcessCpuSeconds": 35.1622009,
+    "measuredTestWallSeconds": 91.54873016,
+    "measuredReapedChildrenCpuSeconds": 4.7731390000000005
+  },
+  "baselineLog": "logs/zoo-v2-baseline.log",
+  "executionFramework": "e6d5e6e2c5a299ed21c89c16ac553371b9688d8370a75a32dd2b2a9a0bc414cb",
+  "zooCatalogSha256": "7ecb312bb39bf7b61ef12be18c28b77a7ef909272349b1b75ae31830f1d386ab",
+  "strategySha256": "cbc36de2edd56706e98855d9c854466c202630043a5181901b7602905e9f5849",
+  "rawFilesSha256": {
+    "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/runs/development/zoo-v3-diagnosis/baseline.json": "6dc44136c558c434bc95e739781abff833eda2a743408f55b3a5880f72668c54",
+    "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/runs/development/zoo-v3-diagnosis/traffic-before.json": "86121f19d221b454ecb40f2cd25512e35d1466d2aa5a987c0a2420964a9d7e91",
+    "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/runs/development/zoo-v3-diagnosis/inspect-traffic.py": "a34ffad15d9efe3294a143ee67263d1c47a6f1be0827239064828ca03d81bb90"
+  },
+  "replayInspection": {
+    "scope": "replay inspection, no bot execution",
+    "sourceReplay": "runs/development/zoo-v2-pilot/tasks/0d7334894f3ec4b3ff972e45d08fb5eab1ccf9fbc470f413fdc3e901c3c31b4a/2d8fbf1a838349f7b960d320d31643a6/matches/99baaac8017b44feacc88d7ff7a09d29/attempt-0/99baaac8017b44feacc88d7ff7a09d29.hrw.jsonl.gz",
+    "result": {
+      "winner": 1,
+      "reason": "turn_limit_deposit",
+      "turns": 300,
+      "scores": [
+        0,
+        0
+      ],
+      "deposited": [
+        1260,
+        1440
+      ],
+      "base_hp": [
+        1000,
+        1000
+      ],
+      "faults": [
+        null,
+        null
+      ],
+      "timeouts": [
+        0,
+        0
+      ],
+      "warnings": [
+        0,
+        0
+      ],
+      "damageDealt": [
+        0,
+        0
+      ],
+      "failedOrders": [
+        0,
+        0
+      ],
+      "failedMoves": [
+        0,
+        0
+      ],
+      "buildContested": [
+        0,
+        0
+      ],
+      "buildContestedSites": 0,
+      "damageEffective": [
+        0,
+        0
+      ]
+    },
+    "samples": [
+      {
+        "turn": 25,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 80,
+            "score": 0,
+            "deposited": 180,
+            "next_serial": 8,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 30,
+            "score": 0,
+            "deposited": 180,
+            "next_serial": 9,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 4,
+            "hp": 40,
+            "carry": 40,
+            "stationaryTurns": 4
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 5,
+            "hp": 40,
+            "carry": 10,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 4
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 2,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 6,
+            "y": 1,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 2,
+            "hp": 40,
+            "carry": 40,
+            "stationaryTurns": 4
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 1,
+            "y": 0,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 6
+          }
+        ],
+        "ownOrders": [
+          "MINE 0 5 5",
+          "MINE 2 5 5",
+          "MOVE 6 N",
+          "MOVE 8 W",
+          "MINE 10 8 2",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 50,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 80,
+            "score": 0,
+            "deposited": 480,
+            "next_serial": 12,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 50,
+            "score": 0,
+            "deposited": 500,
+            "next_serial": 12,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 2,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 5,
+            "hp": 40,
+            "carry": 50,
+            "stationaryTurns": 5
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 29
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 1,
+            "hp": 40,
+            "carry": 30,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 3,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 0,
+            "hp": 40,
+            "carry": 30,
+            "stationaryTurns": 3
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 1,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 31
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 8,
+            "y": 12,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 4,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 0,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          }
+        ],
+        "ownOrders": [
+          "MOVE 0 N",
+          "MINE 2 5 5",
+          "MOVE 6 E",
+          "MOVE 8 S",
+          "MINE 10 8 0",
+          "MOVE 12 E",
+          "MOVE 16 S",
+          "MOVE 20 E",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 75,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 0,
+            "score": 0,
+            "deposited": 600,
+            "next_serial": 14,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 70,
+            "score": 0,
+            "deposited": 620,
+            "next_serial": 13,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 1,
+            "hp": 40,
+            "carry": 40,
+            "stationaryTurns": 3
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 0,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 54
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 1,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 9,
+            "y": 3,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 3,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 2,
+            "y": 0,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 56
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 16,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 18
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 8,
+            "y": 5,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 4,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 0,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 5,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          }
+        ],
+        "ownOrders": [
+          "MINE 0 8 1",
+          "MOVE 18 W",
+          "MOVE 22 S",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 100,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 20,
+            "score": 0,
+            "deposited": 720,
+            "next_serial": 15,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 30,
+            "score": 0,
+            "deposited": 680,
+            "next_serial": 14,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 79
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 2,
+            "y": 5,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 10,
+            "y": 2,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 2,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 1,
+            "y": 1,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 81
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 16,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 43
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 13,
+            "y": 8,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 11
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 0,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 0,
+            "y": 4,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 7,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 28,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          }
+        ],
+        "ownOrders": [
+          "MOVE 0 S",
+          "MOVE 6 S",
+          "MOVE 10 W",
+          "MOVE 26 S",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 125,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 40,
+            "score": 0,
+            "deposited": 840,
+            "next_serial": 16,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 50,
+            "score": 0,
+            "deposited": 900,
+            "next_serial": 16,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 2,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 2,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 104
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 4,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 10,
+            "y": 1,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 3,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 1,
+            "y": 0,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 15,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 13,
+            "y": 8,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 36
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 4,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 7,
+            "y": 7,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 28,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 30,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          }
+        ],
+        "ownOrders": [
+          "MOVE 2 S",
+          "MOVE 14 N",
+          "MOVE 16 N",
+          "MOVE 20 N",
+          "MOVE 24 E",
+          "MOVE 26 S",
+          "MOVE 28 E",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 150,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 0,
+            "score": 0,
+            "deposited": 900,
+            "next_serial": 17,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 70,
+            "score": 0,
+            "deposited": 1020,
+            "next_serial": 17,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 2,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 129
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 11,
+            "y": 0,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 8,
+            "y": 3,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 2,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 0,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 10,
+            "y": 16,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 13,
+            "y": 8,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 61
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 1,
+            "y": 5,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 0,
+            "y": 4,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 8,
+            "y": 10,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 28,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 30,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 32,
+            "owner": 0,
+            "kind": "S",
+            "x": 5,
+            "y": 4,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          }
+        ],
+        "ownOrders": [
+          "MOVE 0 S",
+          "MOVE 6 N",
+          "MOVE 10 E",
+          "MOVE 12 S",
+          "MOVE 22 N",
+          "MOVE 30 W",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 175,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 0,
+            "score": 0,
+            "deposited": 900,
+            "next_serial": 17,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 30,
+            "score": 0,
+            "deposited": 1080,
+            "next_serial": 18,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 1,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 154
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 2,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 10,
+            "y": 0,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 11,
+            "y": 2,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 2,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 17,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 13,
+            "y": 8,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 86
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 2,
+            "y": 4,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 4,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 7,
+            "y": 7,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 28,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 5,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 30,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 32,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          }
+        ],
+        "ownOrders": [
+          "MOVE 0 N",
+          "MOVE 8 N",
+          "MOVE 12 W",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 200,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 120,
+            "score": 0,
+            "deposited": 1020,
+            "next_serial": 17,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 50,
+            "score": 0,
+            "deposited": 1200,
+            "next_serial": 19,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 1,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 2,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 179
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 10,
+            "y": 0,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 10,
+            "y": 1,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 2,
+            "y": 5,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 14,
+            "y": 15,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 13,
+            "y": 8,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 111
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 0,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 5,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 4,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 7,
+            "y": 8,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 28,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 30,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 32,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          }
+        ],
+        "ownOrders": [
+          "MOVE 0 W",
+          "MOVE 2 S",
+          "MOVE 14 N",
+          "MOVE 20 N",
+          "MOVE 24 W",
+          "MOVE 26 S",
+          "MOVE 28 N",
+          "MOVE 32 E",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 225,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 80,
+            "score": 0,
+            "deposited": 1080,
+            "next_serial": 18,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 170,
+            "score": 0,
+            "deposited": 1320,
+            "next_serial": 19,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 1,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 0,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 204
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 10,
+            "y": 1,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 10,
+            "y": 4,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 5,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 16,
+            "y": 16,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 13,
+            "y": 8,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 136
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 0,
+            "y": 5,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 8,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 0,
+            "y": 4,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 8,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 28,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 30,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 32,
+            "owner": 0,
+            "kind": "S",
+            "x": 5,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 34,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          }
+        ],
+        "ownOrders": [
+          "MOVE 0 N",
+          "MOVE 6 W",
+          "MOVE 8 N",
+          "MOVE 10 W",
+          "MOVE 12 N",
+          "MOVE 30 W",
+          "MOVE 34 W",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 250,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 80,
+            "score": 0,
+            "deposited": 1080,
+            "next_serial": 18,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 170,
+            "score": 0,
+            "deposited": 1320,
+            "next_serial": 19,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 2,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 11,
+            "y": 5,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 229
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 0,
+            "y": 4,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 11,
+            "y": 0,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 10,
+            "y": 4,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 4,
+            "y": 4,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 5,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 14,
+            "y": 14,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 13,
+            "y": 8,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 161
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 2,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 5,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 8,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 28,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 30,
+            "owner": 0,
+            "kind": "S",
+            "x": 5,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 32,
+            "owner": 0,
+            "kind": "S",
+            "x": 10,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 34,
+            "owner": 0,
+            "kind": "S",
+            "x": 7,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          }
+        ],
+        "ownOrders": [
+          "MOVE 0 S",
+          "MOVE 2 E",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 275,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 40,
+            "score": 0,
+            "deposited": 1140,
+            "next_serial": 19,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 170,
+            "score": 0,
+            "deposited": 1320,
+            "next_serial": 19,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 1,
+            "y": 2,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 10,
+            "y": 2,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 254
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 1,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 11,
+            "y": 0,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 9,
+            "y": 5,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 3,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 8
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 5,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 16,
+            "y": 13,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 13,
+            "y": 8,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 186
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 2,
+            "y": 5,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 2,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 11,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 28,
+            "owner": 0,
+            "kind": "S",
+            "x": 3,
+            "y": 4,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 30,
+            "owner": 0,
+            "kind": "S",
+            "x": 5,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 32,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 4,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 34,
+            "owner": 0,
+            "kind": "S",
+            "x": 9,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 36,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          }
+        ],
+        "ownOrders": [
+          "MOVE 0 N",
+          "MOVE 6 E",
+          "MOVE 14 S",
+          "MOVE 16 W",
+          "MOVE 22 N",
+          "MOVE 24 N",
+          "MOVE 26 S",
+          "MOVE 28 S",
+          "MOVE 32 S",
+          "END"
+        ],
+        "invalid": []
+      },
+      {
+        "turn": 300,
+        "players": [
+          {
+            "id": 0,
+            "x": 2,
+            "y": 2,
+            "base_hp": 1000,
+            "energy": 60,
+            "score": 0,
+            "deposited": 1260,
+            "next_serial": 20,
+            "damage_dealt": 0,
+            "warnings": 0
+          },
+          {
+            "id": 1,
+            "x": 29,
+            "y": 29,
+            "base_hp": 1000,
+            "energy": 290,
+            "score": 0,
+            "deposited": 1440,
+            "next_serial": 19,
+            "damage_dealt": 0,
+            "warnings": 0
+          }
+        ],
+        "ownUnits": [
+          {
+            "id": 0,
+            "owner": 0,
+            "kind": "W",
+            "x": 7,
+            "y": 0,
+            "hp": 40,
+            "carry": 10,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 2,
+            "owner": 0,
+            "kind": "W",
+            "x": 9,
+            "y": 2,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 4,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 279
+          },
+          {
+            "id": 6,
+            "owner": 0,
+            "kind": "W",
+            "x": 5,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 8,
+            "owner": 0,
+            "kind": "W",
+            "x": 9,
+            "y": 1,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 10,
+            "owner": 0,
+            "kind": "W",
+            "x": 8,
+            "y": 5,
+            "hp": 40,
+            "carry": 60,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 12,
+            "owner": 0,
+            "kind": "W",
+            "x": 3,
+            "y": 1,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 14,
+            "owner": 0,
+            "kind": "S",
+            "x": 0,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 16,
+            "owner": 0,
+            "kind": "S",
+            "x": 14,
+            "y": 13,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 18,
+            "owner": 0,
+            "kind": "W",
+            "x": 13,
+            "y": 8,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 211
+          },
+          {
+            "id": 20,
+            "owner": 0,
+            "kind": "W",
+            "x": 1,
+            "y": 3,
+            "hp": 40,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 22,
+            "owner": 0,
+            "kind": "S",
+            "x": 10,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 24,
+            "owner": 0,
+            "kind": "S",
+            "x": 0,
+            "y": 5,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 26,
+            "owner": 0,
+            "kind": "S",
+            "x": 10,
+            "y": 10,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 28,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 5,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 30,
+            "owner": 0,
+            "kind": "S",
+            "x": 4,
+            "y": 3,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 32,
+            "owner": 0,
+            "kind": "S",
+            "x": 10,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          },
+          {
+            "id": 34,
+            "owner": 0,
+            "kind": "S",
+            "x": 11,
+            "y": 2,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 0
+          },
+          {
+            "id": 36,
+            "owner": 0,
+            "kind": "S",
+            "x": 1,
+            "y": 0,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 2
+          },
+          {
+            "id": 38,
+            "owner": 0,
+            "kind": "S",
+            "x": 5,
+            "y": 1,
+            "hp": 100,
+            "carry": 0,
+            "stationaryTurns": 1
+          }
+        ],
+        "ownOrders": [
+          "MINE 0 8 0",
+          "MOVE 8 S",
+          "MOVE 10 W",
+          "MOVE 20 S",
+          "MOVE 24 S",
+          "MOVE 30 S",
+          "MOVE 34 S",
+          "END"
+        ],
+        "invalid": []
+      }
+    ],
+    "finalBoard": "TURN 300\nP0 energy=60 score=0 hp=1000 deposited=1260\nP1 energy=290 score=0 hp=1000 deposited=1440\n.S..S.#WO.S.#......#.....#......\n...W.S..OWS.#......#.....#......\nS.0...#.OW.S#......#.S...#O.....\n.W..SW#.....#...........O#......\n......#OO...#......#..O..#......\nS...SO#.W...#......#.....#......\n#######.###############.####.###\n......#.....#S.....#.....#O.....\n.....S#.....#W.....#............\n......#...O.#....O.#.....#......\n......#...S........#O.OO.#.S....\n....O.#O....#......#.....#......\n##.#####.##################.####\n......#.....#.S...O#.....#......\n............#........S...#......\n....O.#O....#......#.....#..O...\n...O..#.....#......#....O#.O....\n......#...S........#............\n......#.....#O.....#.....#......\n####.##################.#####.##\n......#.....#......#....O#.O....\n....S.#.OO.O#............#......\n......#.....#.O....#.O...#......\n............#......#...w.#S.....\n.....O#.....#.....S#.....#...s..\n###.####.###############.#######\n......#.....#......#.....#O...s.\n......#..O..#......#...OO#....sw\n......#O...........#...s.#ww.ws.\n.....O#...S.#......#...O.#s..1w.\n......#.....#......#...Ows....s.\n......#.....#......#...O.#ssss.."
+  },
+  "hypothesis": "Global enemy soldier count disables tower reserve even without a nearby threat; requires a focused before/after test. No v3 fix yet.",
+  "totalCpuHours": null,
+  "phaseAComplete": false
+}
