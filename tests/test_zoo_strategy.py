@@ -1,0 +1,115 @@
+"""Small strategy regressions through the real SDK/compiler/runtime in bwrap.
+
+Artificial states isolate decisions; they are not balance games. Every input,
+reply and stderr is retained, including the pre-fix failures.
+"""
+from dataclasses import asdict
+import json
+from pathlib import Path
+import unittest
+from uuid import uuid4
+
+from arena.core.resources import CpuLease
+from arena.core.sandbox import Bubblewrap, prepare
+from arena.core.transport import Connection, exchange
+from tests.helpers import fresh
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class ZooStrategyTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.root = ROOT / "runs/development/zoo-strategy-tests" / uuid4().hex
+        cls.root.mkdir(parents=True)
+        cls.lease = CpuLease(1)
+        cls.lease.__enter__()
+        cls.addClassCleanup(cls.lease.__exit__, None, None, None)
+        cls.launcher = Bubblewrap()
+        cls.launcher.cpus = cls.lease.cpus
+        cls.bot = prepare(ROOT / "bots/public/M-balanced", cls.root / "prepared",
+                          cls.launcher, cls.lease.cpus[0])
+        if cls.bot.compile_fault:
+            raise AssertionError(cls.bot.compile_fault)
+
+    def probe(self, game, state, name, count=1, income=0, opponent_lines=()):
+        conn = Connection(self.bot, self.launcher, self.lease.cpus[0], 10)
+        evidence = {"scope": "synthetic decision probe, not a balance match",
+                    "incomeAddedBetweenTurns": income, "opponentLinesEachTurn": opponent_lines, "replies": []}
+        inputs = [game.init_message(state, 0)]
+        try:
+            reply = exchange([conn], [inputs[0]], [2000], [2500], b"READY")[0]
+            self.assertIsNone(reply.fault)
+            for index in range(count):
+                if index:
+                    state.players[0].energy += income
+                message = game.observation(state, 0)
+                inputs.append(message)
+                reply = exchange([conn], [message], [100], [1000])[0]
+                evidence["replies"].append(reply.record())
+                self.assertIsNone(reply.fault)
+                orders, warnings = game.parse_orders(state, 0, reply.lines)
+                self.assertEqual(warnings, [])
+                game.step(state, [orders, game.parse_orders(state, 1, list(opponent_lines))[0]])
+            return [r["lines"] for r in evidence["replies"]]
+        finally:
+            conn.close()
+            evidence.update(inputs=inputs, finalPlayers=[asdict(p) for p in state.players],
+                            finalTowers=[asdict(t) for t in state.towers.values()],
+                            stderr=conn.stderr.decode(errors="replace"))
+            (self.root / f"{name}.json").write_text(json.dumps(evidence, indent=2) + "\n")
+
+    @staticmethod
+    def budget_state(near=False):
+        game, state = fresh()
+        workers = [(6, 6), (6, 7), (6, 8), (6, 9), (7, 6), (7, 7),
+                   (7, 8), (7, 9), (9, 8), (13, 8)]
+        for p in workers:
+            state.add_unit(0, "W", p)
+        for p in ((10, 3), (11, 3), (12, 3)):
+            state.add_unit(0, "S", p)
+        for p in (((6, 2), (6, 3), (6, 4), (6, 5)) if near else
+                  ((18, 18), (19, 18), (18, 19), (19, 19))):
+            state.add_unit(1, "S", p)
+        state.players[0].energy = 100
+        state.turn = 80
+        return game, state
+
+    def test_remote_army_does_not_spend_waiting_builders_reserve(self):
+        game, state = self.budget_state()
+        replies = self.probe(game, state, "remote-budget", count=2, income=50)
+        self.assertFalse(any(line.startswith("SPAWN") for line in replies[0]), replies)
+        self.assertTrue(any(line.startswith("BUILD") for line in replies[1]), replies)
+        self.assertEqual(len(state.towers), 1)
+
+    def test_repeated_contested_moves_eventually_yield_and_engage(self):
+        game, state = fresh()
+        soldier = state.add_unit(0, "S", (10, 2))
+        opponent = state.add_unit(1, "S", (12, 2))
+        state.players[0].energy = 0
+        state.turn = 150
+        replies = self.probe(game, state, "contested-center", count=8,
+                             opponent_lines=(f"MOVE {opponent.id} W",))
+        self.assertTrue(any(line.startswith(f"ATTACK {soldier.id} ")
+                            for reply in replies for line in reply), replies)
+
+    def test_occupied_enemy_base_ports_do_not_stop_distant_advance(self):
+        game, state = fresh()
+        soldier = state.add_unit(0, "S", (10, 2))
+        for p in ((21, 20), (22, 21), (21, 22), (20, 21)):
+            state.add_unit(1, "W", p)
+        state.players[0].energy = 0
+        state.turn = 150
+        before = abs(soldier.x - 21) + abs(soldier.y - 21)
+        replies = self.probe(game, state, "occupied-base-ports")
+        self.assertTrue(any(line.startswith(f"MOVE {soldier.id} ") for line in replies[0]), replies)
+        self.assertLess(abs(soldier.x - 21) + abs(soldier.y - 21), before)
+
+    def test_nearby_army_can_override_tower_reserve(self):
+        game, state = self.budget_state(near=True)
+        replies = self.probe(game, state, "emergency-budget")
+        self.assertTrue(any(line.startswith("SPAWN S") for line in replies[0]), replies)
+
+
+if __name__ == "__main__":
+    unittest.main()

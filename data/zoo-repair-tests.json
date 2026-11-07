@@ -1,0 +1,1156 @@
+{
+  "schemaVersion": 1,
+  "scope": "three isolated strategy fixes; all failures and pilot revisions retained; not D6 acceptance",
+  "baselineCommit": "c7b26e1",
+  "tests": [
+    {
+      "path": "runs/development/zoo-v3-repair/baseline.json",
+      "sha256": "d938274c59edd611b7c4f45ccf4d163291475de89c91cbbda680cf040018774c",
+      "log": "logs/zoo-repair-baseline.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 160,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 34.8025652,
+      "measuredTestWallSeconds": 88.450740783,
+      "measuredReapedChildrenCpuSeconds": 4.478592
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/budget-after.json",
+      "sha256": "b7dbfe7ad75627a544dff697af779b57cc439a26c6be4c9ddc1ac77368e1bf10",
+      "log": "logs/zoo-repair-budget-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0104341,
+      "measuredTestWallSeconds": 1.898023795,
+      "measuredReapedChildrenCpuSeconds": 0.0051849999999999995
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/budget-before.json",
+      "sha256": "6d1a8051ef26561a525db02853d60a273939c3b73d041720b2f58fc5b5d81fc6",
+      "log": "logs/zoo-repair-budget-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 2,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0095651,
+      "measuredTestWallSeconds": 1.693942198,
+      "measuredReapedChildrenCpuSeconds": 0.004951
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/contention-after.json",
+      "sha256": "ae13179824da1699fadd0d6b71aba21ccb5cb83105a90edfd25e0cfb048c7f8d",
+      "log": "logs/zoo-repair-contention-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0165637,
+      "measuredTestWallSeconds": 1.819953296,
+      "measuredReapedChildrenCpuSeconds": 0.009007
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/contention-before.json",
+      "sha256": "fd58a2801147f9e06ba97c4a5096183aef9e8012a49944c0e5cc6edb1641383d",
+      "log": "logs/zoo-repair-contention-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 4,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0166345,
+      "measuredTestWallSeconds": 1.818956599,
+      "measuredReapedChildrenCpuSeconds": 0.008749999999999999
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/full-after.json",
+      "sha256": "3bef6e0e25875de07d0da02de8273b7bd5bcf0194fbdc74dc3744d1bf8add40c",
+      "log": "logs/zoo-repair-full-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 164,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 35.3089134,
+      "measuredTestWallSeconds": 90.425986097,
+      "measuredReapedChildrenCpuSeconds": 4.407203
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/traffic-after.json",
+      "sha256": "d40c6ff4811a29ddf7338051d170a28f75d47ecf3431704d6d901c1d4d280ac8",
+      "log": "logs/zoo-repair-traffic-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0128354,
+      "measuredTestWallSeconds": 1.960343397,
+      "measuredReapedChildrenCpuSeconds": 0.007199
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/traffic-before.json",
+      "sha256": "9a0c05564d794ec900b6b7595519b0f0ac9958e4ef075b40c6ff138002e95b84",
+      "log": "logs/zoo-repair-traffic-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 3,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0126635,
+      "measuredTestWallSeconds": 1.805954697,
+      "measuredReapedChildrenCpuSeconds": 0.007092
+    }
+  ],
+  "probes": [
+    {
+      "path": "runs/development/zoo-strategy-tests/344fcc6c88c643dba86b154a4483e176/emergency-budget.json",
+      "sha256": "4d9ff579bc2b221f9754c796afef7dbc86f1a8eb005d5ef97aa0221cb6eeb99a"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/344fcc6c88c643dba86b154a4483e176/occupied-base-ports.json",
+      "sha256": "858908d079f84c51913c94348ac2e61ddd46c53be1f909a98c7811546f114dad"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/344fcc6c88c643dba86b154a4483e176/remote-budget.json",
+      "sha256": "272698c5c289c1cb33a3a51550cce0b8ea5f545f267acabfd9c0bbf96303b169"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/451ff283b2f14368bbc3a32d057dafad/contested-center.json",
+      "sha256": "784a1f9adcd8144e277e5b4a3338d0d7b3cbe5db3c48b44a7dc22f6b1fa161ca"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/451ff283b2f14368bbc3a32d057dafad/emergency-budget.json",
+      "sha256": "15a72e8b54741d5e013df3711bd8882d12011ecf01d5d1e5a77313decbc1c7f6"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/451ff283b2f14368bbc3a32d057dafad/occupied-base-ports.json",
+      "sha256": "bd566ae804aadb48c924f4fe73ee9c1cd42f019cdbf1b8f942264e1e350811b1"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/451ff283b2f14368bbc3a32d057dafad/remote-budget.json",
+      "sha256": "404f792cabcda160bc7f1b6b56498f417726fdca19a8d5c8299e4ef3f8c54b58"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/67417617f5ce463f813213bd67a34c49/contested-center.json",
+      "sha256": "76c5ebd45a4ad6c6b670a9013a00cd0d2dc453bf4a4dc63026b0172efca78382"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/67417617f5ce463f813213bd67a34c49/emergency-budget.json",
+      "sha256": "b6344d61dde9c5e4a5ca61095fab1ae0c03a711eac39b81b7f1409b489b3067d"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/67417617f5ce463f813213bd67a34c49/occupied-base-ports.json",
+      "sha256": "e4a5c95fcd8a56e510d78dc70a2bf2051c52e68a81a34befda3e76a796b168e4"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/67417617f5ce463f813213bd67a34c49/remote-budget.json",
+      "sha256": "a6c6c216c04a20e4e90481b23dd8134035aac239ec4ca123199819ad381ce51c"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/9696bdc1edbe4397adc4f4099ed7c1e3/contested-center.json",
+      "sha256": "8b6b1f505040972e5893991bae50be4d9994de8ea799228234a7314f3870e472"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/9696bdc1edbe4397adc4f4099ed7c1e3/emergency-budget.json",
+      "sha256": "9253915aa931545ee6d509e4dec7e77e27bbe566713255d9aacf1e40bb0d68c2"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/9696bdc1edbe4397adc4f4099ed7c1e3/occupied-base-ports.json",
+      "sha256": "181b0bd88518c73e6e19b570910317330fbfd6a65bd04a37283d954cd980c8b5"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/9696bdc1edbe4397adc4f4099ed7c1e3/remote-budget.json",
+      "sha256": "3d05d20bf23cda0188d20aa5518aadcd3cdb5025a71165379ae522aa8220dcf7"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/cf1231a3c55f4e898a7fbfb6323d0184/emergency-budget.json",
+      "sha256": "a16cdbcea612eb56a89de4f4635ae6ac02e8f39b25ab8d58e42d0d7f28aebccc"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/cf1231a3c55f4e898a7fbfb6323d0184/remote-budget.json",
+      "sha256": "25ea0b76b51ffa054ad07637bef8f849308debb225951465130bab25407718d9"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/cfa4bcb213b24fa5bb4b7618db0287fa/emergency-budget.json",
+      "sha256": "3b04e8b7b7f1b6551eb7123f97e36be9fe9ee18bb764361d5ce04ef66b7ca954"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/cfa4bcb213b24fa5bb4b7618db0287fa/remote-budget.json",
+      "sha256": "3b111628020d00b52cf0cc4d7b3a253961463a2b82519e5282dbbcbf047fd873"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/ffed1807e6e74b9e8df5f06bfcae933f/emergency-budget.json",
+      "sha256": "fc25caef8e8a15524f56e0864010e4254a05dcf3870ce02edfbe49f5eb67418b"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/ffed1807e6e74b9e8df5f06bfcae933f/occupied-base-ports.json",
+      "sha256": "9f8b66887f4620381348e67bc243fa97e0dca780705b21202954311e714d1c25"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/ffed1807e6e74b9e8df5f06bfcae933f/remote-budget.json",
+      "sha256": "607b03e27590fbddd1ca209ef8a797a87d9a2dedadb9f99d1c4441f9e1188f26"
+    }
+  ],
+  "directedGames": [
+    {
+      "batch": "zoo-v3-budget-targeted",
+      "players": [
+        0,
+        1
+      ],
+      "seeds": [
+        17,
+        29
+      ],
+      "result": {
+        "winner": 0,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          572,
+          0
+        ],
+        "deposited": [
+          1720,
+          1440
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ],
+        "failedOrders": [
+          0,
+          0
+        ],
+        "failedMoves": [
+          0,
+          0
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/zoo-v3-budget-targeted/tasks/8b5b50441cef9ade976562e28ef2c4d39ea96edc8d8c76899755d580a83d50d5/9349fd8e575a4709822ee787f0c75656/matches/06ddf5ca84f8404dad8def63c838e954/attempt-0/06ddf5ca84f8404dad8def63c838e954.hrw.jsonl.gz",
+      "sha256": "657cbe7fc4a54847df057301304b58a318580c2b71f711a80be2691f87e1840b",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v3-budget-targeted",
+      "players": [
+        1,
+        0
+      ],
+      "seeds": [
+        29,
+        17
+      ],
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          0,
+          572
+        ],
+        "deposited": [
+          1440,
+          1720
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ],
+        "failedOrders": [
+          0,
+          0
+        ],
+        "failedMoves": [
+          0,
+          0
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/zoo-v3-budget-targeted/tasks/4b36316dccd283da1753b84de6e2ab985b9a791615cbec144d669020d4b9b386/1473e9f5be6f43a1bfde324d3a1a8de2/matches/1e330c008cba4153b982dedd78334d4d/attempt-0/1e330c008cba4153b982dedd78334d4d.hrw.jsonl.gz",
+      "sha256": "f873f03c9b5e336ce0653d2f0759a016429a0c20809b361002b9bc5cc4447002",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v4-traffic-targeted",
+      "players": [
+        0,
+        1
+      ],
+      "seeds": [
+        17,
+        29
+      ],
+      "result": {
+        "winner": 0,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          603,
+          0
+        ],
+        "deposited": [
+          1800,
+          1570
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          80,
+          20
+        ],
+        "failedOrders": [
+          68,
+          233
+        ],
+        "failedMoves": [
+          68,
+          233
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          80,
+          20
+        ]
+      },
+      "replay": "runs/development/zoo-v4-traffic-targeted/tasks/77288a6bee66f67692499e87365e7c0edf362e277738f610739d0325634e6b63/054cb3b64adb4532a5b0bd83ccb4640e/matches/bec246320f67428ab5e537ddb643630c/attempt-0/bec246320f67428ab5e537ddb643630c.hrw.jsonl.gz",
+      "sha256": "594ef7c0b7dc21e91109327d2147d0d85d0a80c3c28bc5e9813d4d84953d1437",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v4-traffic-targeted",
+      "players": [
+        1,
+        0
+      ],
+      "seeds": [
+        29,
+        17
+      ],
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          0,
+          603
+        ],
+        "deposited": [
+          1570,
+          1800
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          20,
+          80
+        ],
+        "failedOrders": [
+          233,
+          68
+        ],
+        "failedMoves": [
+          233,
+          68
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          20,
+          80
+        ]
+      },
+      "replay": "runs/development/zoo-v4-traffic-targeted/tasks/431414f304d81c0c2175b51462218d9b2b26c8b4a16fbf2c691b6b8170565343/bf62deda29ae46f883ea68a7a538765f/matches/c258615c5bf541129698ecaf523f146e/attempt-0/c258615c5bf541129698ecaf523f146e.hrw.jsonl.gz",
+      "sha256": "e72572ef83012dcff564cf4bf27d0ed050e3f7126fa3206f860190eedc6dbed3",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v4-traffic-targeted",
+      "players": [
+        0,
+        2
+      ],
+      "seeds": [
+        17,
+        29
+      ],
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          431,
+          884
+        ],
+        "deposited": [
+          1840,
+          1800
+        ],
+        "base_hp": [
+          1000,
+          640
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          3740,
+          110
+        ],
+        "failedOrders": [
+          3,
+          4
+        ],
+        "failedMoves": [
+          3,
+          4
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          3720,
+          110
+        ]
+      },
+      "replay": "runs/development/zoo-v4-traffic-targeted/tasks/1c23855125fdf89a7e89cb2aa60c38280e6f23c2e16016e78c20cf2c871506d5/e56a4458acd6495099733b4ffb386b09/matches/0d5c5e1e68dc490bb3ecfb1f82df69f9/attempt-0/0d5c5e1e68dc490bb3ecfb1f82df69f9.hrw.jsonl.gz",
+      "sha256": "222a4f61288db9f84835b80c082ae473305bd4982f123503fd2dc214fa6623b7",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v4-traffic-targeted",
+      "players": [
+        0,
+        0
+      ],
+      "seeds": [
+        17,
+        29
+      ],
+      "result": {
+        "winner": 0,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          179,
+          0
+        ],
+        "deposited": [
+          1020,
+          840
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          220,
+          800
+        ],
+        "failedOrders": [
+          74,
+          103
+        ],
+        "failedMoves": [
+          74,
+          103
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          220,
+          800
+        ]
+      },
+      "replay": "runs/development/zoo-v4-traffic-targeted/tasks/51ce1a68096f6c245e6f534742086ed7524e32f8ce72e6359ac525c2ac9d2e2c/b94e89b2f52d456489f216006729a266/matches/e3b4caf17bed476792966f2459840f8e/attempt-0/e3b4caf17bed476792966f2459840f8e.hrw.jsonl.gz",
+      "sha256": "5196990cdee059b4fcdbc1545525b6a7ada85c3cb13166a6f39e802faad4c5c5",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v4-traffic-targeted",
+      "players": [
+        0,
+        0
+      ],
+      "seeds": [
+        29,
+        17
+      ],
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          0,
+          179
+        ],
+        "deposited": [
+          840,
+          1020
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          800,
+          220
+        ],
+        "failedOrders": [
+          103,
+          74
+        ],
+        "failedMoves": [
+          103,
+          74
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          800,
+          220
+        ]
+      },
+      "replay": "runs/development/zoo-v4-traffic-targeted/tasks/8327b9a15d18dd464d85527d7a39aa0af48af05eef5dd55ddb89072b9758306a/c0819bd541fd4f91b5fa03818341f2c3/matches/6cc0ce92e0dd4cb7aac969633c2a3239/attempt-0/6cc0ce92e0dd4cb7aac969633c2a3239.hrw.jsonl.gz",
+      "sha256": "636fd3c48af77813fc1249dc33d069baf9cebc6081f8255e7576705283a1721b",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v4-traffic-targeted",
+      "players": [
+        2,
+        0
+      ],
+      "seeds": [
+        29,
+        17
+      ],
+      "result": {
+        "winner": 0,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          884,
+          431
+        ],
+        "deposited": [
+          1800,
+          1840
+        ],
+        "base_hp": [
+          640,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          110,
+          3740
+        ],
+        "failedOrders": [
+          4,
+          3
+        ],
+        "failedMoves": [
+          4,
+          3
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          110,
+          3720
+        ]
+      },
+      "replay": "runs/development/zoo-v4-traffic-targeted/tasks/e53e226257fc90456c9d1e616bbdb08ad30cc61cf45d2def06f93016b0446e48/24ca857957794d7a97ce8c885efeb593/matches/828fd9de65014c1597c09a5cb6d3c3a2/attempt-0/828fd9de65014c1597c09a5cb6d3c3a2.hrw.jsonl.gz",
+      "sha256": "7bc381a3840022fbc2f88b4e80bb9152d340b7bc6dfa09d5479e85fb5459b6b7",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v5-yield-targeted",
+      "players": [
+        0,
+        1
+      ],
+      "seeds": [
+        17,
+        29
+      ],
+      "result": {
+        "winner": 0,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          603,
+          0
+        ],
+        "deposited": [
+          1800,
+          1810
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          160,
+          100
+        ],
+        "failedOrders": [
+          3,
+          3
+        ],
+        "failedMoves": [
+          3,
+          3
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          160,
+          100
+        ]
+      },
+      "replay": "runs/development/zoo-v5-yield-targeted/tasks/b77c1845f1cf93b9f84d0348d17bbacb9991fb4807da39fa56b3b361dd6bd246/e76d1c5f34a64fda9407f78095a12c1d/matches/971c3a15599a4f7abfb943af41580d03/attempt-0/971c3a15599a4f7abfb943af41580d03.hrw.jsonl.gz",
+      "sha256": "140b77a659944a6cc7e6e14f7a06b308dda48ba50405b8598b5ed3dd9bdf80fc",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v5-yield-targeted",
+      "players": [
+        1,
+        0
+      ],
+      "seeds": [
+        29,
+        17
+      ],
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          0,
+          603
+        ],
+        "deposited": [
+          1810,
+          1800
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          100,
+          160
+        ],
+        "failedOrders": [
+          3,
+          3
+        ],
+        "failedMoves": [
+          3,
+          3
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          100,
+          160
+        ]
+      },
+      "replay": "runs/development/zoo-v5-yield-targeted/tasks/72ce534d965708ed975fa47ee0adc901455881641cd29a8e7c59b4536f0f9635/fca7cafc94974c3d9134c6f574d12c19/matches/43db1c976fb14794a457fb933c41050a/attempt-0/43db1c976fb14794a457fb933c41050a.hrw.jsonl.gz",
+      "sha256": "7191536e2382298bc66073c9c2c3e891693c8a17c211ed9982a832f99487381e",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v5-yield-targeted",
+      "players": [
+        0,
+        2
+      ],
+      "seeds": [
+        17,
+        29
+      ],
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          431,
+          884
+        ],
+        "deposited": [
+          1840,
+          1800
+        ],
+        "base_hp": [
+          1000,
+          640
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          3740,
+          110
+        ],
+        "failedOrders": [
+          3,
+          4
+        ],
+        "failedMoves": [
+          3,
+          4
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          3720,
+          110
+        ]
+      },
+      "replay": "runs/development/zoo-v5-yield-targeted/tasks/621313045fd253d1fe237ac78317d2e0a7d89adb423fdd289cea0afc27e437e1/82e7a045013640b3916a86fce09882a9/matches/952f134a03ea41c2a2a5fb3426348833/attempt-0/952f134a03ea41c2a2a5fb3426348833.hrw.jsonl.gz",
+      "sha256": "e5f00158c5c740bbb3d1925a8410ea4b37490f1a9fea975441d3f6ac820b2c1e",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v5-yield-targeted",
+      "players": [
+        2,
+        0
+      ],
+      "seeds": [
+        29,
+        17
+      ],
+      "result": {
+        "winner": 0,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          884,
+          431
+        ],
+        "deposited": [
+          1800,
+          1840
+        ],
+        "base_hp": [
+          640,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          110,
+          3740
+        ],
+        "failedOrders": [
+          4,
+          3
+        ],
+        "failedMoves": [
+          4,
+          3
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          110,
+          3720
+        ]
+      },
+      "replay": "runs/development/zoo-v5-yield-targeted/tasks/2dccedc59f3916b14103cc81418dcb9eb3e0d71a89db5b00d2985ee10af55ae9/8c3776a506264a54b3a3518c537f19f9/matches/c917c3196dc64310895e78b75e5148bf/attempt-0/c917c3196dc64310895e78b75e5148bf.hrw.jsonl.gz",
+      "sha256": "599ee52321e907eecff09259ef360daf75f47c15f722a36687c0d88226693a16",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v5-yield-targeted",
+      "players": [
+        0,
+        0
+      ],
+      "seeds": [
+        17,
+        29
+      ],
+      "result": {
+        "winner": 0,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          108,
+          0
+        ],
+        "deposited": [
+          1260,
+          960
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          590,
+          1040
+        ],
+        "failedOrders": [
+          10,
+          15
+        ],
+        "failedMoves": [
+          10,
+          15
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          580,
+          1020
+        ]
+      },
+      "replay": "runs/development/zoo-v5-yield-targeted/tasks/9234f20b65d0a7acbe634d62e53be9c87f91479ebf5eebacda775ec405d1639a/5b15ae26a9e541f2a6805ade70881fa1/matches/3a3e0061a18a424da33526b2b197dccf/attempt-0/3a3e0061a18a424da33526b2b197dccf.hrw.jsonl.gz",
+      "sha256": "8d51e95dcc7b9890ddc9b761d299270e0c934fa1d4bf5e39f5207cdb79529a82",
+      "verified": true
+    },
+    {
+      "batch": "zoo-v5-yield-targeted",
+      "players": [
+        0,
+        0
+      ],
+      "seeds": [
+        29,
+        17
+      ],
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          0,
+          108
+        ],
+        "deposited": [
+          960,
+          1260
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          1040,
+          590
+        ],
+        "failedOrders": [
+          15,
+          10
+        ],
+        "failedMoves": [
+          15,
+          10
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          1020,
+          580
+        ]
+      },
+      "replay": "runs/development/zoo-v5-yield-targeted/tasks/3364e2b4d33af4dae6ba1bd91336fc8ec792d0ff7e7cf265356f4d6b3e6d76c2/fc006dd188784e649f477a228d9524aa/matches/7094530766914cfb83a4e0248c301c7f/attempt-0/7094530766914cfb83a4e0248c301c7f.hrw.jsonl.gz",
+      "sha256": "801c2860cc8952445c73d481d5d8b541fbc609de5f9e7c5e68c83bfcefdd60be",
+      "verified": true
+    }
+  ],
+  "directedVerificationCpuSeconds": 0.9484799,
+  "pilotReports": [
+    "data/zoo-v3-budget-pilot/report.json",
+    "data/zoo-v4-traffic-pilot/report.json",
+    "data/zoo-v5-yield-pilot/report.json"
+  ],
+  "totalCpuHours": null,
+  "rulesChanged": false,
+  "formalReferenceAvailable": false
+}

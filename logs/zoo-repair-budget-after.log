@@ -1,0 +1,7 @@
+test_nearby_army_can_override_tower_reserve (tests.test_zoo_strategy.ZooStrategyTests.test_nearby_army_can_override_tower_reserve) ... ok
+test_remote_army_does_not_spend_waiting_builders_reserve (tests.test_zoo_strategy.ZooStrategyTests.test_remote_army_does_not_spend_waiting_builders_reserve) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.898s
+
+OK

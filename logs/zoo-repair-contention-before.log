@@ -1,0 +1,20 @@
+test_nearby_army_can_override_tower_reserve (tests.test_zoo_strategy.ZooStrategyTests.test_nearby_army_can_override_tower_reserve) ... ok
+test_occupied_enemy_base_ports_do_not_stop_distant_advance (tests.test_zoo_strategy.ZooStrategyTests.test_occupied_enemy_base_ports_do_not_stop_distant_advance) ... ok
+test_remote_army_does_not_spend_waiting_builders_reserve (tests.test_zoo_strategy.ZooStrategyTests.test_remote_army_does_not_spend_waiting_builders_reserve) ... ok
+test_repeated_contested_moves_eventually_yield_and_engage (tests.test_zoo_strategy.ZooStrategyTests.test_repeated_contested_moves_eventually_yield_and_engage) ... FAIL
+
+======================================================================
+FAIL: test_repeated_contested_moves_eventually_yield_and_engage (tests.test_zoo_strategy.ZooStrategyTests.test_repeated_contested_moves_eventually_yield_and_engage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tests/test_zoo_strategy.py", line 93, in test_repeated_contested_moves_eventually_yield_and_engage
+    self.assertTrue(any(line.startswith(f"ATTACK {soldier.id} ")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        for reply in replies for line in reply), replies)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : [['MOVE 4 E', 'END'], ['MOVE 4 E', 'END'], ['MOVE 4 E', 'END'], ['MOVE 4 E', 'END'], ['MOVE 4 E', 'END'], ['MOVE 4 E', 'END'], ['MOVE 4 E', 'END'], ['MOVE 4 E', 'END']]
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.819s
+
+FAILED (failures=1)

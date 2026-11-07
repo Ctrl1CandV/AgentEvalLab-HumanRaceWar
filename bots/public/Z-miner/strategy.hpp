@@ -24,7 +24,8 @@ class Strategy {
     std::vector<int> guardCells;
     std::map<Pos,std::vector<int>> distances;
     std::set<int> returning;
-    std::map<int,int> stalled;
+    std::map<int,int> stalled, failedMoves;
+    std::map<int,Pos> attemptedFrom;
     static constexpr int inf=100000;
     int cell(Pos p) const { return p.second*w+p.first; }
     Pos pos(int p) const { return {p%w,p/w}; }
@@ -110,17 +111,23 @@ public:
         std::vector<const hrw::Unit*> own,workers,soldiers;
         std::vector<Target> targets;
         std::vector<unsigned char> occupied(n),blocked(n);
-        int enemySoldiers=0;
+        int enemySoldiers=0, threateningSoldiers=0;
         for (const auto& u:turn.units) {
             occupied[cell(u.pos())]=blocked[cell(u.pos())]=1;
             if (u.owner==you) {
                 own.push_back(&u);
                 (u.kind=="W"?workers:soldiers).push_back(&u);
+                auto previous=attemptedFrom.find(u.id);
+                if (previous!=attemptedFrom.end()) {
+                    if (previous->second==u.pos()) ++failedMoves[u.id]; else failedMoves[u.id]=0;
+                }
             } else {
                 targets.push_back({u.pos(),u.hp,u.kind[0]});
                 enemySoldiers+=u.kind=="S";
+                threateningSoldiers+=u.kind=="S" && distance(home)[cell(u.pos())]<=12;
             }
         }
+        attemptedFrom.clear();
         std::set<Pos> built,claimed;
         std::vector<Pos> depots{home};
         for (auto t:turn.towers) {
@@ -141,8 +148,17 @@ public:
         }
 
         auto move=[&](const hrw::Unit& u,const std::vector<int>& goals) {
-            int start=cell(u.pos()); blocked[start]=0;
-            auto d=bfs(goals,blocked); int destination=-1, direction=-1;
+            int start=cell(u.pos());
+            // Count observed failures, not merely issued orders. Brief seeded
+            // pauses let the other side enter a contested cell, then engage.
+            if (failedMoves[u.id]>=2 && mix(seed+std::uint64_t(u.id/2)+std::uint64_t(turn.number))%3!=0) return;
+            blocked[start]=0;
+            auto d=bfs(goals,blocked);
+            // Occupied distant ports (or a queue at a choke) are not walls.
+            // Keep approaching along terrain when no fully vacant route exists;
+            // the next step still obeys occupancy and reservations below.
+            if (d[start]==inf) d=bfs(goals);
+            int destination=-1, direction=-1;
             for (int k=0;k<4;++k) {
                 int q=edges[start][k];
                 if (q>=0 && !blocked[q] && d[q]<d[start] &&
@@ -163,7 +179,7 @@ public:
             }
             if (destination>=0) {
                 out.push_back("MOVE "+std::to_string(u.id)+" "+std::string(1,"NESW"[direction]));
-                blocked[destination]=1; stalled[u.id]=0;
+                blocked[destination]=1; stalled[u.id]=0; attemptedFrom[u.id]=u.pos();
             } else blocked[start]=1;
         };
         std::map<Pos,int> miners;
@@ -325,7 +341,9 @@ public:
             }
             int cost=parameter(kind=='W'?"WORKER_COST":"SOLDIER_COST");
             int reserve=(builderCount && int(depots.size())-1<config.towers)?parameter("TOWER_COST"):0;
-            if (config.mode==Mode::Balanced && int(soldiers.size())<enemySoldiers+1) reserve=0;
+            // Only an army inside the existing home-defense radius is an
+            // emergency. Distant defenders must not starve waiting builders.
+            if (config.mode==Mode::Balanced && threateningSoldiers>0 && int(soldiers.size())<threateningSoldiers+1) reserve=0;
             if (spawn && energy>=cost+reserve) {
                 int where=-1;
                 for (int p=0;p<n;++p) if (ground(pos(p)) && !occupied[p] && !blocked[p] && hrw::distance(pos(p),home)<=parameter("SPAWN_RANGE"))
