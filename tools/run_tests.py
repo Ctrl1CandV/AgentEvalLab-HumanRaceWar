@@ -33,7 +33,7 @@ def main() -> int:
     children = resource.getrusage(resource.RUSAGE_CHILDREN)
     report = {
         "schemaVersion": 1,
-        "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+        "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
         "pattern": args.pattern,
         "python": platform.python_version(),
         "system": platform.system(),

@@ -6,7 +6,7 @@ import os
 import selectors
 import time
 
-from .sandbox import Bot, Bubblewrap, CpuClock, InfrastructureError, STARTED, stop
+from .sandbox import Bot, CpuClock, InfrastructureError, STARTED, stop
 
 MAX_BYTES = 64*1024
 
@@ -65,7 +65,7 @@ class Reply:
 
 
 class Connection:
-    def __init__(self, bot: Bot, launcher: Bubblewrap, cpu: int, cpu_seconds: int):
+    def __init__(self, bot: Bot, launcher, cpu: int, cpu_seconds: int):
         self.bot = bot
         self.launched_ns = time.monotonic_ns()
         self.process = launcher.launch(bot.directory / "source", bot.directory / "sdk", bot.command, cpu,
@@ -76,6 +76,8 @@ class Connection:
         for stream in (self.stdin, self.stdout, self.error_stream):
             os.set_blocking(stream.fileno(), False)
         self.clock = CpuClock(self.process.pid)
+        if launcher.name == "plain":
+            self.clock.observed_descendant = True  # direct child, no bwrap leader
         self.cpu_boundary_ns = 0
         self.pending = b""
         self.started = False

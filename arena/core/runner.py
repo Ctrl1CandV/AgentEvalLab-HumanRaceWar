@@ -2,11 +2,12 @@
 from __future__ import annotations
 
 import math
+import time
 
 from .transport import exchange
 
 
-def run(game, state, connections, limits: dict[str, int], record_turn, *, wall_margin_ms: int = 500):
+def run(game, state, connections, limits: dict[str, int], record_turn, *, wall_margin_ms: int = 500, overheads=None):
     count = len(connections)
     bank = [limits["BANK_MS"]*1_000_000 for _ in connections]
     replies = exchange(connections, [game.init_message(state, p) for p in range(count)],
@@ -15,6 +16,7 @@ def run(game, state, connections, limits: dict[str, int], record_turn, *, wall_m
     if any(r.fault for r in replies):
         return replies
     while game.result(state) is None:
+        start_cpu = time.process_time_ns()
         messages = []
         for player in range(count):
             # BANK belongs to the runner, not deterministic game state.
@@ -31,6 +33,8 @@ def run(game, state, connections, limits: dict[str, int], record_turn, *, wall_m
         packets = [game.parse_orders(state, p, reply.lines)[0] for p, reply in enumerate(replies)]
         game.step(state, packets)
         record_turn("turn", replies, packets, bank)
+        if overheads is not None:
+            overheads.append(time.process_time_ns()-start_cpu)
     return None
 
 

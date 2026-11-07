@@ -73,6 +73,8 @@ def snapshot(source: Path, target: Path) -> str:
 
 
 class Bubblewrap:
+    name = "bwrap"
+
     def __init__(self):
         if os.geteuid() == 0:
             raise InfrastructureError("unprivileged host UID required for the sandbox task limit")
@@ -147,7 +149,8 @@ class Bubblewrap:
 def stop(process: subprocess.Popen, *, close_streams: bool = True) -> None:
     # Kill the bwrap process group; namespace init death also kills all descendants.
     try:
-        os.killpg(process.pid, signal.SIGKILL)
+        if process.poll() is None:
+            os.killpg(process.pid, signal.SIGKILL)
     except ProcessLookupError:
         pass
     process.wait()
@@ -157,7 +160,7 @@ def stop(process: subprocess.Popen, *, close_streams: bool = True) -> None:
                 stream.close()
 
 
-def prepare(source: Path, directory: Path, launcher: Bubblewrap, cpu: int) -> Bot:
+def prepare(source: Path, directory: Path, launcher, cpu: int, *, cache=None) -> Bot:
     directory.mkdir(parents=True, exist_ok=False)
     frozen = directory / "source"
     try:
@@ -181,33 +184,54 @@ def prepare(source: Path, directory: Path, launcher: Bubblewrap, cpu: int) -> Bo
     bot = Bot(source.name, digest, directory, language,
               [f"/runtime/bin/{launcher.python_name}", "-s", "-B", "-u", "/bot/main.py"] if python else ["/build/bot"])
     if cpp:
-        build = directory / "build"
-        build.mkdir()
-        args = ["/usr/bin/g++", "-O2", "-std=gnu++20", "-I/sdk", "-o", "/build/bot",
-                *(f"/bot/{p.name}" for p in cpp)]
-        start = time.monotonic()
-        with (directory / "compile.stdout").open("wb") as out, (directory / "compile.stderr").open("wb") as err:
-            process = launcher.launch(frozen, directory / "sdk", args, cpu, build=build,
-                                      cpu_seconds=60, stdout=out, stderr=err, writable_build=True)
-            try:
-                process.wait(timeout=60)
-            except subprocess.TimeoutExpired:
-                bot.compile_fault = "compile_timeout"
-            finally:
-                stop(process)
-        with (directory / "compile.stdout").open("rb") as stream:
-            started = stream.read(len(STARTED)) == STARTED
-        if not started:
-            raise InfrastructureError("compiler sandbox preparation failed; see compile logs")
-        if process.returncode != 0:
-            bot.compile_fault = bot.compile_fault or "compile_failed"
-        executable = build / "bot"
-        if not bot.compile_fault and (executable.is_symlink() or not executable.is_file()):
-            bot.compile_fault = "compile_missing_output"
-        (directory / "compile.json").write_text(json.dumps({"returncode": process.returncode,
-            "fault": bot.compile_fault, "wallSeconds": time.monotonic()-start,
-            "cpuSeconds": None, "sandbox": "bwrap", "addressSpaceBytes": 2*1024**3}, indent=2)+"\n")
+        if cache is None:
+            compile_bot(bot, launcher, cpu)
+        else:
+            with cache.entry(digest) as (key, entry):
+                hit = cache.restore(entry, directory)
+                if not hit:
+                    compile_bot(bot, launcher, cpu)
+                    if not bot.compile_fault: cache.publish(entry, directory)
+                (directory / "cache.json").write_text(json.dumps({"key": key, "hit": hit,
+                    "compilerIdentity": cache.identity})+"\n")
     return bot
+
+
+def clone_prepared(bot: Bot, directory: Path) -> Bot:
+    from dataclasses import replace
+    shutil.copytree(bot.directory, directory)
+    return replace(bot, directory=directory)
+
+
+def compile_bot(bot: Bot, launcher, cpu: int):
+    directory = bot.directory
+    frozen = directory / "source"
+    build = directory / "build"
+    build.mkdir()
+    args = ["/usr/bin/g++", "-O2", "-std=gnu++20", "-I/sdk", "-o", "/build/bot",
+            *(f"/bot/{p.name}" for p in sorted(frozen.glob("*.cpp")))]
+    start = time.monotonic()
+    with (directory / "compile.stdout").open("wb") as out, (directory / "compile.stderr").open("wb") as err:
+        process = launcher.launch(frozen, directory / "sdk", args, cpu, build=build,
+                                  cpu_seconds=60, stdout=out, stderr=err, writable_build=True)
+        try:
+            process.wait(timeout=60)
+        except subprocess.TimeoutExpired:
+            bot.compile_fault = "compile_timeout"
+        finally:
+            stop(process)
+    with (directory / "compile.stdout").open("rb") as stream:
+        started = stream.read(len(STARTED)) == STARTED
+    if not started:
+        raise InfrastructureError("compiler sandbox preparation failed; see compile logs")
+    if process.returncode != 0:
+        bot.compile_fault = bot.compile_fault or "compile_failed"
+    executable = build / "bot"
+    if not bot.compile_fault and (executable.is_symlink() or not executable.is_file()):
+        bot.compile_fault = "compile_missing_output"
+    (directory / "compile.json").write_text(json.dumps({"returncode": process.returncode,
+        "fault": bot.compile_fault, "wallSeconds": time.monotonic()-start,
+        "cpuSeconds": None, "sandbox": launcher.name, "addressSpaceBytes": 2*1024**3}, indent=2)+"\n")
 
 
 class CpuClock:

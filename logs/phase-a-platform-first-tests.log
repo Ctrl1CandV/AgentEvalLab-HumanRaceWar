@@ -1,0 +1,13 @@
+test_batch_two_slots_swapped_seeds_resume_skip_and_manifest_guard (tests.test_platform.PlatformTests.test_batch_two_slots_swapped_seeds_resume_skip_and_manifest_guard) ... ok
+test_check_valid_and_invalid_sources_and_plain_refuses_this_host (tests.test_platform.PlatformTests.test_check_valid_and_invalid_sources_and_plain_refuses_this_host) ... ok
+test_contested_site_counts_events_and_unique_site_separately (tests.test_platform.PlatformTests.test_contested_site_counts_events_and_unique_site_separately) ... ok
+test_cpp_cache_hits_and_corruption_is_not_silently_used (tests.test_platform.PlatformTests.test_cpp_cache_hits_and_corruption_is_not_silently_used) ... ok
+test_journal_recovers_torn_tail_without_losing_evidence (tests.test_platform.PlatformTests.test_journal_recovers_torn_tail_without_losing_evidence) ... ok
+test_leases_exclude_busy_cpus_and_restore_affinity_on_exception (tests.test_platform.PlatformTests.test_leases_exclude_busy_cpus_and_restore_affinity_on_exception) ... ok
+test_plain_python_cpp_only_inside_real_outer_sandbox (tests.test_platform.PlatformTests.test_plain_python_cpp_only_inside_real_outer_sandbox) ... ok
+test_raw_metrics_split_failures_and_cap_overkill_without_changing_state (tests.test_platform.PlatformTests.test_raw_metrics_split_failures_and_cap_overkill_without_changing_state) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 9.820s
+
+OK

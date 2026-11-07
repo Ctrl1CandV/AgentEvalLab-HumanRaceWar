@@ -20,11 +20,12 @@ class Calibration:
     report_sha256: str
     reference: dict
     workload_sha256: str
+    sandbox: str = 'bwrap'
 
     def header(self) -> dict:
         return {"jobs": self.jobs, "cpus": self.cpus, "speedFactor": self.factor,
                 "reportSha256": self.report_sha256, "reference": self.reference,
-                "workloadSha256": self.workload_sha256}
+                "workloadSha256": self.workload_sha256, "sandbox": self.sandbox}
 
     @classmethod
     def load(cls, path: Path, workload_sha256: str, *, jobs: int) -> "Calibration":
@@ -50,4 +51,6 @@ class Calibration:
         if (not math.isfinite(factor) or type(r["speedFactor"]) not in (int, float)
                 or not math.isclose(r["speedFactor"], factor, rel_tol=1e-12)):
             raise ValueError("inconsistent speed factor")
-        return cls(jobs, tuple(cpus), factor, sha256(raw).hexdigest(), reference, workload_sha256)
+        sandbox = r.get('sandbox', 'bwrap')
+        if sandbox not in ('bwrap', 'plain'): raise ValueError('unknown calibration backend')
+        return cls(jobs, tuple(cpus), factor, sha256(raw).hexdigest(), reference, workload_sha256, sandbox)

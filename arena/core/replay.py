@@ -1,6 +1,7 @@
 """Game-independent append-only gzip JSONL output and replay errors."""
 import gzip
 import json
+import os
 from pathlib import Path
 
 
@@ -25,4 +26,6 @@ class Writer:
 
     def close(self):
         self.stream.close()
+        self.raw.flush()
+        os.fsync(self.raw.fileno())
         self.raw.close()

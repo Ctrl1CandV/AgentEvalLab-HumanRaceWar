@@ -10,6 +10,7 @@ from pathlib import Path
 from arena import __version__
 from arena.core.replay import ReplayError, normalized
 from arena.games.outpost import Outpost
+from arena.games.outpost.metrics import Metrics
 
 
 def invalid_events(state):
@@ -70,6 +71,9 @@ def _verify(path: Path, show_turn: int | None) -> dict:
             raise ReplayError("map digest mismatch")
         game = Outpost(header["limits"])
         state = game.new_match(header["map"], header["params"], header["seeds"])
+        if header.get("metricsVersion", 1) not in (1, 2):
+            raise ReplayError("unsupported metrics version")
+        metrics = Metrics(state) if header.get("metricsVersion", 1) == 2 else None
         if game.state_hash(state) != header["initialStateHash"] or header["ruleset"] != state.rules.name:
             raise ReplayError("initial state mismatch")
         faults = header.get("compileFaults")
@@ -113,6 +117,8 @@ def _verify(path: Path, show_turn: int | None) -> dict:
                     if normalized(accepted) != row["accepted"]:
                         raise ReplayError("accepted orders mismatch")
                     game.step(state, packets)
+                    if metrics is not None:
+                        metrics.observe(state, packets)
                     if normalized(invalid_events(state)) != row["invalid"]:
                         raise ReplayError("invalid orders mismatch")
                     if show_turn == state.turn:
@@ -124,6 +130,8 @@ def _verify(path: Path, show_turn: int | None) -> dict:
                              "towers": sum(t.owner == p.id for t in state.towers.values())} for p in state.players]})
             elif kind == "result":
                 result = outcome(game, state, faults)
+                if metrics is not None:
+                    result.update(metrics.result())
                 if row["result"] != result:
                     raise ReplayError("result mismatch")
                 terminal = True

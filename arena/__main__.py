@@ -12,6 +12,8 @@ from arena.games.outpost.replay import verify
 from arena.games.outpost.mapgen import TYPES, generate, inspect_layout
 from arena.games.outpost.maps import parse_map
 from arena.match import play
+from arena.check import check
+from arena.tournament import run_tournament
 
 
 def main() -> int:
@@ -25,8 +27,28 @@ def main() -> int:
     match.add_argument("--seeds", nargs=2, type=int, default=[17, 29])
     match.add_argument("--show-stderr", action="store_true", help="display bounded bot stderr (also archived)")
     match.add_argument("--timing", type=Path, help="jobs=1 bench result; use its measured CPUs and scaled limits")
+    match.add_argument("--sandbox", choices=("bwrap", "plain"), default="bwrap")
+    inspect = commands.add_parser("check", help="validate/compile and run a few sandboxed protocol turns")
+    inspect.add_argument("bot", type=Path)
+    inspect.add_argument("--turns", type=int, default=5)
+    inspect.add_argument("--out", type=Path, default=Path("runs/checks"))
+    inspect.add_argument("--sandbox", choices=("bwrap", "plain"), default="bwrap")
+    tournament = commands.add_parser("tournament", help="immutable swapped-seat batch with resume and raw results")
+    tournament.add_argument("--bot", type=Path)
+    tournament.add_argument("--opponents", nargs="+", type=Path)
+    tournament.add_argument("--bots", nargs="+", type=Path, help="round-robin instead of a focal submission")
+    tournament.add_argument("--include-self", nargs="*", default=[])
+    tournament.add_argument("--maps", nargs="+", type=Path, required=True)
+    tournament.add_argument("--out", type=Path, required=True)
+    tournament.add_argument("--jobs", type=int, default=6)
+    tournament.add_argument("--seeds", nargs=2, type=int, default=[17,29])
+    tournament.add_argument("--reference", type=Path)
+    tournament.add_argument("--resume", action="store_true")
+    tournament.add_argument("--max-tasks", type=int, help="checkpoint after this many new tasks; retains incomplete status")
+    tournament.add_argument("--sandbox", choices=("bwrap", "plain"), default="bwrap")
     bench = commands.add_parser("bench", help="measure fixed CPU work at the actual parallel load in bwrap")
     bench.add_argument("--jobs", type=int, default=6)
+    bench.add_argument("--sandbox", choices=("bwrap", "plain"), default="bwrap")
     bench.add_argument("--samples", type=int, default=3)
     bench.add_argument("--reference", type=Path, help="idle benchmark result from the evaluation machine")
     bench.add_argument("--sweep", action="store_true", help="also measure 1/2/6/12/16/20 simultaneous workers")
@@ -43,9 +65,24 @@ def main() -> int:
     replay.add_argument("--turn", type=int, default=0)
     args = parser.parse_args()
     try:
+        if args.command == "check":
+            result = check(args.bot,args.out,turns=args.turns,sandbox=args.sandbox)
+            print(json.dumps(result,indent=2))
+            return 0 if result["passed"] else 1
+        if args.command == "tournament":
+            if args.bots and (args.bot or args.opponents):
+                raise ValueError("choose --bots OR --bot/--opponents")
+            if not args.bots and not (args.bot and args.opponents):
+                raise ValueError("provide --bots or --bot with --opponents")
+            sources = args.bots or [args.bot,*args.opponents]
+            result = run_tournament(sources,args.maps,args.out,jobs=args.jobs,
+                focus=None if args.bots else 0,include_self=args.include_self,seeds=args.seeds,
+                reference=args.reference,sandbox=args.sandbox,resume=args.resume,max_tasks=args.max_tasks)
+            print(json.dumps(result,indent=2))
+            return 0 if result["status"]=="complete" else 2
         if args.command == "bench":
             result = run_benchmark(args.out, jobs=args.jobs, samples=args.samples,
-                                   reference=args.reference, sweep=args.sweep)
+                                   reference=args.reference, sweep=args.sweep, sandbox=args.sandbox)
             print(json.dumps(result, indent=2))
             return 0 if result["status"] == "complete" else 2
         if args.command == "mapgen":
@@ -62,7 +99,7 @@ def main() -> int:
             if args.map.resolve().is_relative_to(private) and not args.out.resolve().is_relative_to(private):
                 raise ValueError("hidden map artifacts must stay under private/")
             calibration = Calibration.load(args.timing, workload_digest(), jobs=1) if args.timing else None
-            row = play([args.a, args.b], args.map.read_text(), args.out, args.seeds, calibration=calibration)
+            row = play([args.a, args.b], args.map.read_text(), args.out, args.seeds, calibration=calibration, sandbox=args.sandbox)
             print(json.dumps(row, indent=2))
             if args.show_stderr:
                 for path in sorted(Path(row["directory"]).glob("p*/stderr.txt")):

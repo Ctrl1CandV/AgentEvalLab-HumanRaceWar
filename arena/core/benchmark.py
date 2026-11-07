@@ -13,6 +13,7 @@ import traceback
 from uuid import uuid4
 
 from .sandbox import Bubblewrap, InfrastructureError, ROOT, prepare
+from .resources import CpuLease
 from .transport import Connection, exchange
 
 SOURCE = ROOT / "arena/bench"
@@ -23,8 +24,24 @@ def workload_digest() -> str:
 
 
 def run_benchmark(out: Path, *, jobs: int = 6, samples: int = 3,
-                  reference: Path | None = None, sweep: bool = False) -> dict:
-    launcher = Bubblewrap()
+                  reference: Path | None = None, sweep: bool = False, sandbox='bwrap', _cpu_pool=None) -> dict:
+    if sandbox not in ('bwrap','plain'): raise ValueError('unknown benchmark backend')
+    if sandbox == 'plain' and 2*jobs+1>8: raise ValueError('plain workspace benchmark exceeds 8 CPUs')
+    if _cpu_pool is not None:
+        return _run_benchmark(out, jobs, samples, reference, sweep, _cpu_pool, sandbox)
+    capacity = len(os.sched_getaffinity(0))
+    if sandbox == 'plain': capacity = min(8, capacity)
+    workers = capacity if sweep else 2*jobs
+    with CpuLease(workers, reserve_runner=not sweep) as lease:
+        return _run_benchmark(out, jobs, samples, reference, sweep, lease.pool, sandbox)
+
+
+def _run_benchmark(out, jobs, samples, reference, sweep, pool, sandbox):
+    if sandbox == 'bwrap': launcher = Bubblewrap()
+    else:
+        from .plain import Plain
+        launcher = Plain()
+    launcher.cpus = list(pool)
     available = launcher.cpus
     if type(jobs) is not int or jobs < 1 or 2*jobs >= len(available):
         raise ValueError("bench needs 2*jobs worker CPUs plus a separate runner CPU")
@@ -47,7 +64,7 @@ def run_benchmark(out: Path, *, jobs: int = 6, samples: int = 3,
     directory.mkdir(parents=True)
     model = next((line.split(":", 1)[1].strip() for line in Path("/proc/cpuinfo").read_text().splitlines()
                   if line.startswith("model name")), "unknown")
-    report = {"schemaVersion": 1, "status": "incomplete", "scope": "CPU load calibration, not full efficiency acceptance",
+    report = {"schemaVersion": 1, "status": "incomplete", "sandbox": sandbox, "scope": "CPU load calibration, not full efficiency acceptance",
               "workloadSha256": workload_digest(), "jobs": jobs, "samples": samples,
               "cpus": available[:2*jobs], "startedAt": datetime.now(timezone.utc).isoformat(),
               "directory": str(directory), "machine": {"cpu": model, "availableCpus": available,

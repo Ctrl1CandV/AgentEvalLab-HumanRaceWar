@@ -144,21 +144,21 @@ END
 
 ## 5. 提交格式、运行限制与评分概述
 
-提交是一个目录：Python 入口为 `main.py`；C++ 为顶层一个或多个 `*.cpp`。两种入口只能选一种。不得含符号链接（包括提交目录本身）或特殊文件；单文件至多 16 MiB，总量至多 64 MiB。`__pycache__` 不进入源码快照。无入口、两种入口都有、链接或超大小均按提交编译失败判负，并保存明确原因；`check` 将使用同一校验。
+提交是一个目录：Python 入口为 `main.py`；C++ 为顶层一个或多个 `*.cpp`。两种入口只能选一种。不得含符号链接（包括提交目录本身）或特殊文件；单文件至多 16 MiB，总量至多 64 MiB。`__pycache__` 不进入源码快照。无入口、两种入口都有、链接或超大小均按提交编译失败判负，并保存明确原因；`check` 使用同一校验。
 
 bot 强制单进程，不能 fork/vfork 或改变绑核；可开线程，沙箱任务总上限为 16（含主线程和沙箱管理进程，因此 bot 可创建的工作线程可能少于 15）。所有线程 CPU 用时相加，包括已退出线程；不能用创建短命线程规避计时。初始化 CPU 2,000 ms；每回合 CPU 100 ms，超额从每局 3,000 ms 储备扣除，储备为负判超时。每回合用时是本次 END 与上次 END 的累计 CPU 之差，第一回合从 READY 算起。墙钟兜底为本回合时限加剩余储备再加 500 ms。
 
-按实际并行度运行的固定基准将折算时限、储备、墙钟余量和整局 CPU 硬上限，实际值由 LIMIT 发出；BANK 由运行器更新。已提供 `bench --jobs N`；独立对局可用 `match --timing <jobs=1的bench结果>` 按测得的系数与CPU运行。不提供校准时仍使用明确标记的未折算开发时限；批量调度尚未接线，不能据此宣称正式评分验收完成。
+按实际并行度运行的固定基准将折算时限、储备、墙钟余量和整局 CPU 硬上限，实际值由 LIMIT 发出；BANK 由运行器更新。已提供 `bench --jobs N`；独立对局可用 `match --timing <jobs=1的bench结果>` 按测得的系数与CPU运行。不提供校准时仍使用明确标记的未折算开发时限；`tournament` 会按相同并行度和CPU池测量并折算，但仍不能据此宣称正式评分验收完成。
 
 运行时地址空间 512 MiB，单文件上限 16 MiB，打开文件至多 64 个，禁用 core dump。**运行时合成根目录 `/`、`/tmp` 和 `/dev` 文件系统只读，不支持写临时文件或共享内存文件；标准输入输出和设备读写不因此禁用。** 这是当前实现选择，不承诺可写 64 MiB 临时空间；本地 plain 工具也须告知相同评分限制。运行时禁止新进程/命名空间、修改绑核、ptrace/跨进程内存访问及内存文件、SysV IPC和POSIX消息队列分配。普通线程、锁和条件变量仍可用。标准错误本地最多保留 64 KiB，评分时丢弃。
 
-所有 bot 和 C++ 编译都在沙箱内，不联网；评分和校准使用 bubblewrap。plain 只供已有外层沙箱的本地工作区使用。C++ 编译要求 GCC 11、`g++ -O2 -std=gnu++20 -I/sdk -o bot *.cpp`、60 秒上限、地址空间 2 GiB；编译临时文件使用本方磁盘构建目录，不使用无总量限制的 RAM tmpfs。Python 要求 3.13，框架只用标准库。bot 编译失败、无 READY、启动标记后以任何退出码退出或超时判负；双方同回合出错则平局。运行器未收到可信启动标记的沙箱准备失败、机器资源或框架故障不算 bot 输，最多重试三次并保留所有记录；隐藏对手或地图配置错误不能算提交方输。**当前真实 bwrap 回归已覆盖这些修正，但完整沙箱验收、批量折算接线和全局 CPU 调度尚未完成；不能用于正式评分。**
+所有 bot 和 C++ 编译都在沙箱内，不联网；评分和校准使用 bubblewrap。plain 只供已有外层沙箱的本地工作区使用。C++ 编译要求 GCC 11、`g++ -O2 -std=gnu++20 -I/sdk -o bot *.cpp`、60 秒上限、地址空间 2 GiB；编译临时文件使用本方磁盘构建目录，不使用无总量限制的 RAM tmpfs。Python 要求 3.13，框架只用标准库。bot 编译失败、无 READY、启动标记后以任何退出码退出或超时判负；双方同回合出错则平局。运行器未收到可信启动标记的沙箱准备失败、机器资源或框架故障不算 bot 输，最多重试三次并保留所有记录；隐藏对手或地图配置错误不能算提交方输。**真实 bwrap 回归、批量折算接线和全局 CPU 租约已有；完整沙箱/效率验收仍在进行，不能用于正式评分。**
 
 评分看对固定阶梯的对局表现，胜负最重要，细节不公开。约 12 级，每级 2–3 个不同风格对手，覆盖进攻、经济、控制：L0–L2 为公开的简单策略；L3–L5 有任务分配和局部估计；L6–L9 会搜索、调整打法和选路线；L10–L11 为长期开发和调参的强对手。模型应尽力赢，不需要知道内部评分细节。
 
 ## 6. 工具交付状态
 
-在 WSL 工作区用 `.venv/bin/python tools/run_tests.py` 跑开发测试。解释器须为 Python 3.13；运行器测试的 bot 和 C++ 编译都在 bwrap 内执行，不允许裸跑或自动回退 plain。
+在 WSL 工作区用 `.venv/bin/python tools/run_tests.py` 跑开发测试。解释器须为 Python 3.13；运行器测试的 bot 和 C++ 编译都在 bwrap 内执行（plain 路径也有明确的外层 bwrap），不允许裸跑或自动回退 plain。
 
 已提供 Python/C++ SDK 及 `example/`，只用标准库。以下命令使用测试地图打通一局，并验证、查看回放：
 
@@ -171,4 +171,4 @@ bot 强制单进程，不能 fork/vfork 或改变绑核；可开线程，沙箱�
 
 `match` 默认把所有尝试、结果和回放留在 `runs/matches/`，可加 `--show-stderr` 查看 stderr。测试地图不是验收地图；不提供校准时仍是未折算开发局，正式评测机参考尚未提供。详细用法和限制见 `docs/RUNTIME.md`。
 
-现有 `maps/public/` 40 张和 `maps/scrimmage/` 4 张，均通过当前默认布局检查，但尚无平衡验收结论。可用 `.venv/bin/python -m arena mapgen --type corridor --size 32 --seed 7` 生成地图，用 `.venv/bin/python -m arena mapcheck maps/public/corridor-01.map` 检查默认生成配置。种子、摘要和分区口径见 `maps/catalog.json`、`maps/README.md`；布局检查不会对自定义 match 地图新增限制。`check`、`tournament` 和正式任务包尚未交付。
+现有 `maps/public/` 40 张和 `maps/scrimmage/` 4 张，均通过当前默认布局检查，但尚无平衡验收结论。可用 `.venv/bin/python -m arena mapgen --type corridor --size 32 --seed 7` 生成地图，用 `.venv/bin/python -m arena mapcheck maps/public/corridor-01.map` 检查默认生成配置。种子、摘要和分区口径见 `maps/catalog.json`、`maps/README.md`；布局检查不会对自定义 match 地图新增限制。`check <bot目录>` 和 `tournament --bot <bot目录> --opponents <目录...> --maps <地图目录> --jobs N --out <结果目录>` 已提供，支持 `--resume`；完整用法见 `docs/BATCH.md`。plain 只能显式接入已隔离的本地外层沙箱，不是宿主裸跑开关；8核工作区最多3个并行对局并留runner核，正式评分仍用bwrap。正式任务包尚未交付。

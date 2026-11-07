@@ -11,6 +11,7 @@
 | `mapgen-tests.json` | 44 张地图的默认布局检查、两次 119 项测试、8 局换边联调及本批全部对局尝试；未作平衡验收 | A（地图/集成开发检查） |
 | `review-runtime-tests.json` | 2026-11-07中途审查首批M1/M2/M3/M5/M6修复、失败复现、两轮132项测试及全部新增尝试；不是阶段验收 | A（审查修复开发检查） |
 | `review-bench-map-tests.json` | bench/独立折算、根tmpfs补查、地图v2与D5反例、两轮140项测试、全部新增74次对局尝试（含8局v2地图校准换边联调）及10次bench调用索引 | A（开发检查，非整体验收） |
+| `platform-tests.json` | check/缓存/全局CPU租约/进程调度/续跑/结果库/tournament及原始指标v2；两轮150项、全部153次新增尝试、24次bench和外层plain集成 | A（平台开发检查，非整体验收） |
 | `usage-pi-local.json` | 仅本项目本地pi会话usage数值的去重汇总；含缓存输入，历史及未报告用量仍缺失，不导出对话或个人配置 | A（不完整用量） |
 | `zoo-matrix.csv` | 动物园各 bot 之间的局数、胜、平、负，分地图类型 | A |
 | `balance.json` | 先后手公平、平局率、对局长度分布、结束方式 | A |
