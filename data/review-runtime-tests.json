@@ -1,0 +1,3471 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T06:01:07.994411+00:00",
+  "scope": "M1/M2/M3/M5/M6 real-bwrap regressions and approved design updates; not phase-A acceptance",
+  "sourceBaseCommit": "4e9351d99e67529abb9cf2d8a3abb5c8eaaddb99",
+  "inputsScope": "final source content; initial 9 red regressions preceded extra policy/format coverage",
+  "inputsSha256": {
+    "arena/__init__.py": "c27ee98ee99a1c238dd1e2817c64b236d410cafc16d345e1863a545d0abac58f",
+    "arena/__main__.py": "fc21e8294cb71b29dcc7eb44313ba72a4a9c3ec82a6a2b1b93ef1dd36c32afcc",
+    "arena/core/__init__.py": "b9fd5a40006c1a07a6ddd2c8e67e311c5a7812745bf413d3e630a13e636e0b5d",
+    "arena/core/game.py": "2b13b954c9f88c113af968c5d932869bbde7d075a2522ae524e655a2bec787df",
+    "arena/core/replay.py": "cbb9c6c47bb6d69e40ca963efc538829c7481d034847ed65d50c4826b0f12e84",
+    "arena/core/runner.py": "73fef602c1d32ba52388555ff994332cd421e3f0e895b0ac307fcefe47bf8a6c",
+    "arena/core/sandbox.py": "09427e8b5595ceba2ac055ea08eae3ac8ac1ca82e057cbc2e8e74ad080b66a67",
+    "arena/core/sandbox_exec.py": "475be76ae79a3047405f5dd82df93207e26cc8872154f6f475abc8d5657ff585",
+    "arena/core/seccomp.py": "1f71db37678624acb1994a410a674d1128fe756ed3b736e3f48f34bec719e051",
+    "arena/core/transport.py": "1e36b7166e66089e5fbc6c9940d14eeee37078219da646203a4c6565f1efc843",
+    "arena/games/__init__.py": "d625bdadfa5c3c3c052387ebf65d2be95ee4421a9beaf24430bdce9df2e4933f",
+    "arena/games/outpost/__init__.py": "6bc25a25aabfde53faed2a2a4718281c85cfc751233a7ef7bd9f6628f5ac97c3",
+    "arena/games/outpost/engine.py": "1fed2771b6481683866aa7f0de4c5b7b049a18776c35e28cde320f85651b2d4a",
+    "arena/games/outpost/mapgen.py": "f25038c9e91a9fe7314239ece469255bfee551e386768a8df6a59646d939e462",
+    "arena/games/outpost/maps.py": "b10d01cde226624d6fa5417e09ca72c32d9221a33a6e29444a6b6213a941cb67",
+    "arena/games/outpost/model.py": "cacdb4c426ae65a9f18250ae2f2eacf77d0deeda0e0fdb2d4ccfe0bf85c69a06",
+    "arena/games/outpost/orders.py": "3ccbbc3f47dbefc2fe0d2809275d097911a39e76cc98d8a25fb43a3fa1d910fc",
+    "arena/games/outpost/replay.py": "a19ff8bb15538de4b4a5565f7807ee479c3e21c499089c3c8304e0a93badb1cd",
+    "arena/games/outpost/rules.py": "b42dc19b354dd1e4b98230fb3b9364771297db5d5617a430075c131ba4889503",
+    "arena/match.py": "9b8806c2c5f9934e48baf104ebec766f260f51f88732b814c3447f522bdb55ff",
+    "rules/rules.md": "9a48d5a50372bef38512fa4671331ff15ae4452e37e09fdf1b95affc2b1dc56c",
+    "sdk/cpp/example/main.cpp": "3203d71b9bf393f59abc0c1e107e991faa200e7799ce37ae42c2dd0552c2c117",
+    "sdk/cpp/hrw.hpp": "899d6fbb7bd6e2d0b12284e2af46aac1869ac5d469520b37aace7796728e238a",
+    "sdk/python/example/main.py": "ca34643486833714e3449f0d90aca6bdad8ce76119c60b90636d777e1710ba3d",
+    "sdk/python/hrw.py": "ed0373ce69e43709144454026b72378da6386108450edb244e53be77c054ca71",
+    "tests/__init__.py": "920872ec61e99debad6479fe79f9ac689514bb3596432792b651d487ebe3d7d7",
+    "tests/fixtures/smoke.map": "d96754f03e51d4e8a27a39990208f3167c4f7bb3737a2850c4bbb6d929c6cbcf",
+    "tests/helpers.py": "b756f0d423c54da143bf764d1d44932fecb2505712d511b32b1823e0b3023459",
+    "tests/test_determinism.py": "d942cff4889e4b2d09732bd5e645cfb34b95d8f344ca148126bd62cbb168c51e",
+    "tests/test_mapgen.py": "9d42dd83a8ab2a917209c422947d720d1e5b7cf3a0347d23cd8e8422e262d150",
+    "tests/test_protocol.py": "fc7e1e5d7ea3266772d9dbbe824b85dfb1859e8875ee625a494ffb525ef00526",
+    "tests/test_review_policy.py": "64234818cd0bb3a9bcd601999ac57c31344694097918e328cb753997e9bf9815",
+    "tests/test_review_runtime.py": "6fdb6c64774b821a3f243a41becca22991b0253ffd221a1c06de91fc01c3a940",
+    "tests/test_rules.py": "26e2536ba9eff4eaba54ab2bad706d4bf215ff7784f325b7fc92b03c70fbd698",
+    "tests/test_runtime.py": "f653ee3ef82de55ab17b01b8e1e5a3fae77e1249a62d1b2fc5b70da881e9b375",
+    "tests/test_sdk.py": "c539328b32a901a1e258e620fd530eadfb8165506da5c2a14ebbc11807898b91",
+    "tools/run_tests.py": "8503df905fb31ca8f86ba9a2d6ae88033db5c01d89e750ac199d4e6dd60adce3"
+  },
+  "tests": [
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 119,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 27.1439691,
+      "measuredTestWallSeconds": 30.730568151,
+      "measuredReapedChildrenCpuSeconds": 0.044154,
+      "label": "baseline",
+      "logFile": "logs/review-2026-11-07-baseline.log",
+      "rawReport": "runs/development/review-2026-11-07/baseline.json",
+      "rawReportSha256": "092971b663e702a042ba6d8232de0f193ac4a6d7cac1b043c02009250016e5a2",
+      "pythonHashSeed": null
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_review_runtime.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 9,
+      "failures": 12,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.2904082,
+      "measuredTestWallSeconds": 1.732976694,
+      "measuredReapedChildrenCpuSeconds": 0.028409999999999998,
+      "label": "before-runtime-fixes",
+      "logFile": "logs/review-2026-11-07-before-runtime-fixes.log",
+      "rawReport": "runs/development/review-2026-11-07/before-runtime-fixes.json",
+      "rawReportSha256": "0a0a3ccd68042b317c24bcd9729a87136e1083e6fdd66248ee5f1951e435b0b1",
+      "pythonHashSeed": null
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_review_runtime.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.4496279,
+      "measuredTestWallSeconds": 1.672236896,
+      "measuredReapedChildrenCpuSeconds": 0.019915,
+      "label": "after-runtime-fixes-1",
+      "logFile": "logs/review-2026-11-07-after-runtime-fixes-1.log",
+      "rawReport": "runs/development/review-2026-11-07/after-runtime-fixes-1.json",
+      "rawReportSha256": "43dda81b856959a99d94a67169005bdf24e096a6dc5ffcfdb3823ecdbd5dc892",
+      "pythonHashSeed": null
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 132,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 27.796252,
+      "measuredTestWallSeconds": 32.688071135,
+      "measuredReapedChildrenCpuSeconds": 0.069905,
+      "label": "full-runtime-default",
+      "logFile": "logs/review-2026-11-07-full-runtime-default.log",
+      "rawReport": "runs/development/review-2026-11-07/full-runtime-default.json",
+      "rawReportSha256": "ac4fbae606fd08ca8126c0692fbae134e4b0ef18a62558112df429252ea7a85f",
+      "pythonHashSeed": null
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 132,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 27.5237378,
+      "measuredTestWallSeconds": 32.423612429,
+      "measuredReapedChildrenCpuSeconds": 0.07114999999999999,
+      "label": "full-runtime-seed1",
+      "logFile": "logs/review-2026-11-07-full-runtime-seed1.log",
+      "rawReport": "runs/development/review-2026-11-07/full-runtime-seed1.json",
+      "rawReportSha256": "fb5ea3706f403fc31fb876d737b1a91b0d9d7536dfe8164c00458e46cf8c63f6",
+      "pythonHashSeed": "1"
+    }
+  ],
+  "lsp": {
+    "server": "pyright",
+    "files": 7,
+    "diagnostics": 0
+  },
+  "policy": {
+    "architecture": "Linux x86-64 only, fail closed otherwise",
+    "compilerAddressSpaceBytes": 2147483648,
+    "runtimeAddressSpaceBytes": 536870912,
+    "namespaceTaskLimit": 16,
+    "observedWorkerThreads": {
+      "python": 14,
+      "cpp": 14
+    },
+    "tmp": "read-only, approved M3 alternative; compiler temporary files are disk-backed",
+    "cpu": "cumulative READY/END boundaries; process clocks retain exited-thread CPU"
+  },
+  "newAttemptCounts": {
+    "complete": 76,
+    "infra_error": 19,
+    "configuration_error": 4
+  },
+  "newAttempts": [
+    {
+      "matchId": "a881991f6f4e4185b38154e57b0211a0",
+      "attempt": 0,
+      "directory": "runs/development/runtime/032462f1f1ba468d829f3e636906a320/matches/a881991f6f4e4185b38154e57b0211a0/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/032462f1f1ba468d829f3e636906a320/matches/a881991f6f4e4185b38154e57b0211a0/attempt-0/a881991f6f4e4185b38154e57b0211a0.hrw.jsonl.gz",
+      "replaySha256": "8ce92e2eef7c657f24faec8b426d338299ec3820575e73af72425a80d995beaa"
+    },
+    {
+      "matchId": "a23e68290cd3441da367f6a91ec0d094",
+      "attempt": 0,
+      "directory": "runs/development/runtime/087c3d9cff0f478e8554f01e078dd9d7/matches/a23e68290cd3441da367f6a91ec0d094/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 6,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/087c3d9cff0f478e8554f01e078dd9d7/matches/a23e68290cd3441da367f6a91ec0d094/attempt-0/a23e68290cd3441da367f6a91ec0d094.hrw.jsonl.gz",
+      "replaySha256": "278e80e2fcb8ebfc6c65302ab190ffcbdb64c65db30b8181280b05ceb7422a14"
+    },
+    {
+      "matchId": "892b2a1b155346de819ea3703b6731b7",
+      "attempt": 0,
+      "directory": "runs/development/runtime/0b3f68969b9240a69b0588c0f6c13b95/bad-sandbox/892b2a1b155346de819ea3703b6731b7/attempt-0",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "f73315df82d3483dac53706cb591412f",
+      "attempt": 0,
+      "directory": "runs/development/runtime/0bdafb4224c84c4ba5c79b9276484b69/matches/f73315df82d3483dac53706cb591412f/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_deposit",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          660,
+          820
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/0bdafb4224c84c4ba5c79b9276484b69/matches/f73315df82d3483dac53706cb591412f/attempt-0/f73315df82d3483dac53706cb591412f.hrw.jsonl.gz",
+      "replaySha256": "c476c996fbc3b93710a6a23936d6ca5b3af61417aeb217efda7d2f7b025a4393"
+    },
+    {
+      "matchId": "bb8d06eaf75f4bea99f03c13fd62a266",
+      "attempt": 0,
+      "directory": "runs/development/runtime/0f3c678f46984c9184fa3f12dad0c54c/matches/bb8d06eaf75f4bea99f03c13fd62a266/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_deposit",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          600
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/0f3c678f46984c9184fa3f12dad0c54c/matches/bb8d06eaf75f4bea99f03c13fd62a266/attempt-0/bb8d06eaf75f4bea99f03c13fd62a266.hrw.jsonl.gz",
+      "replaySha256": "7efab9d976603f7facfa58a44615c662a4409fa6e3ce89144199f733d598c3d5"
+    },
+    {
+      "matchId": "0a8930ea109648769e3b18a83cbba6c8",
+      "attempt": 0,
+      "directory": "runs/development/runtime/187c02d9d7ea4ca9b34e04d0a9874d9e/matches/0a8930ea109648769e3b18a83cbba6c8/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          "crash"
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/187c02d9d7ea4ca9b34e04d0a9874d9e/matches/0a8930ea109648769e3b18a83cbba6c8/attempt-0/0a8930ea109648769e3b18a83cbba6c8.hrw.jsonl.gz",
+      "replaySha256": "92618202d23f218acfb0674f1a2d167f643f9d5fa829f19aab7967c04a21ac52"
+    },
+    {
+      "matchId": "0d795975d89041fb8fdce489b5c1a552",
+      "attempt": 0,
+      "directory": "runs/development/runtime/187c02d9d7ea4ca9b34e04d0a9874d9e/matches/0d795975d89041fb8fdce489b5c1a552/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/187c02d9d7ea4ca9b34e04d0a9874d9e/matches/0d795975d89041fb8fdce489b5c1a552/attempt-0/0d795975d89041fb8fdce489b5c1a552.hrw.jsonl.gz",
+      "replaySha256": "dc48f41b56bdf6fcb1e7024fefbbd16baf42439ceec5db06221387ab106a530e"
+    },
+    {
+      "matchId": "7531f72553ec411886b74d30595bb85c",
+      "attempt": 0,
+      "directory": "runs/development/runtime/1f50c1f586f34f8eac3f4fd10c08d93b/matches/7531f72553ec411886b74d30595bb85c/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/1f50c1f586f34f8eac3f4fd10c08d93b/matches/7531f72553ec411886b74d30595bb85c/attempt-0/7531f72553ec411886b74d30595bb85c.hrw.jsonl.gz",
+      "replaySha256": "4421ac5518de4f83529889f19d73d72099f956fba5ab97206b45b4991f2550b5"
+    },
+    {
+      "matchId": "d70a505f7ef044f9be8b0bb9966faf6a",
+      "attempt": 0,
+      "directory": "runs/development/runtime/21f1cd2cb9db49cbaeae409d2a1e6c8a/bad-sandbox/d70a505f7ef044f9be8b0bb9966faf6a/attempt-0",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "d5687f1526ae4b3196d78f9cac6e20c4",
+      "attempt": 0,
+      "directory": "runs/development/runtime/2459ed152d564e37b2457bc74e99ae86/missing/d5687f1526ae4b3196d78f9cac6e20c4/attempt-0",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "d5687f1526ae4b3196d78f9cac6e20c4",
+      "attempt": 1,
+      "directory": "runs/development/runtime/2459ed152d564e37b2457bc74e99ae86/missing/d5687f1526ae4b3196d78f9cac6e20c4/attempt-1",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "d5687f1526ae4b3196d78f9cac6e20c4",
+      "attempt": 2,
+      "directory": "runs/development/runtime/2459ed152d564e37b2457bc74e99ae86/missing/d5687f1526ae4b3196d78f9cac6e20c4/attempt-2",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "d5687f1526ae4b3196d78f9cac6e20c4",
+      "attempt": 3,
+      "directory": "runs/development/runtime/2459ed152d564e37b2457bc74e99ae86/missing/d5687f1526ae4b3196d78f9cac6e20c4/attempt-3",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "95f2d7b8f295492ba368f165a6abc7fa",
+      "attempt": 0,
+      "directory": "runs/development/runtime/26b261da1284497dae16f1be30b0c738/matches/95f2d7b8f295492ba368f165a6abc7fa/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_deposit",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          600
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/26b261da1284497dae16f1be30b0c738/matches/95f2d7b8f295492ba368f165a6abc7fa/attempt-0/95f2d7b8f295492ba368f165a6abc7fa.hrw.jsonl.gz",
+      "replaySha256": "85b4e67c9be53826793158e42e0ee1e7f0df2a59308c11645bc98509df353772"
+    },
+    {
+      "matchId": "079cde5b234b4399ae5a0485dea1cf26",
+      "attempt": 0,
+      "directory": "runs/development/runtime/2d79d28bf52241e1a041ec950ad416ab/matches/079cde5b234b4399ae5a0485dea1cf26/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          300300,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/2d79d28bf52241e1a041ec950ad416ab/matches/079cde5b234b4399ae5a0485dea1cf26/attempt-0/079cde5b234b4399ae5a0485dea1cf26.hrw.jsonl.gz",
+      "replaySha256": "1f6076e18b4710c5d26c413276294447f5f3cd5c0a229b736ab859b3cbc950d4"
+    },
+    {
+      "matchId": "05966a9afa144b2e90a6c0ec5ab063ad",
+      "attempt": 0,
+      "directory": "runs/development/runtime/36c24466b0b8462c8d34f6b9e7aee2f6/matches/05966a9afa144b2e90a6c0ec5ab063ad/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/36c24466b0b8462c8d34f6b9e7aee2f6/matches/05966a9afa144b2e90a6c0ec5ab063ad/attempt-0/05966a9afa144b2e90a6c0ec5ab063ad.hrw.jsonl.gz",
+      "replaySha256": "816a902058fc7dd9dbb9e999b9aabbdc8e16e581d0e19ab6e7635e32fdf527ba"
+    },
+    {
+      "matchId": "3e7d6ee7e7f84ab8827974e26e603ce4",
+      "attempt": 0,
+      "directory": "runs/development/runtime/36c24466b0b8462c8d34f6b9e7aee2f6/matches/3e7d6ee7e7f84ab8827974e26e603ce4/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/36c24466b0b8462c8d34f6b9e7aee2f6/matches/3e7d6ee7e7f84ab8827974e26e603ce4/attempt-0/3e7d6ee7e7f84ab8827974e26e603ce4.hrw.jsonl.gz",
+      "replaySha256": "d622abe9bfcc619b5de7b979b7d301f1e35fc047efd0fcaf3046094dd58c4714"
+    },
+    {
+      "matchId": "dec0d1ceb387427fa5191c64e26b37eb",
+      "attempt": 0,
+      "directory": "runs/development/runtime/40e739bb76de44b59273258bc30ccbc2/matches/dec0d1ceb387427fa5191c64e26b37eb/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/40e739bb76de44b59273258bc30ccbc2/matches/dec0d1ceb387427fa5191c64e26b37eb/attempt-0/dec0d1ceb387427fa5191c64e26b37eb.hrw.jsonl.gz",
+      "replaySha256": "b75c114d546a4f873a9e767c16901361bda775cb1935190efb8f89cdf0e44c2e"
+    },
+    {
+      "matchId": "20f824c50dc44ac19a6921413db81617",
+      "attempt": 0,
+      "directory": "runs/development/runtime/4e954490f59c41dba9740f8e967b4fa8/matches/20f824c50dc44ac19a6921413db81617/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "wall_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/4e954490f59c41dba9740f8e967b4fa8/matches/20f824c50dc44ac19a6921413db81617/attempt-0/20f824c50dc44ac19a6921413db81617.hrw.jsonl.gz",
+      "replaySha256": "e09cca7fa739688a36bfaef08e7cd3c63b3f59653c70cc9565dae0c6a7501c72"
+    },
+    {
+      "matchId": "aeacc2fe7bc945b490d3dc27b91bd10f",
+      "attempt": 0,
+      "directory": "runs/development/runtime/4f6f87852cde4fcfbc97935464c40d74/matches/aeacc2fe7bc945b490d3dc27b91bd10f/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          300300,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/4f6f87852cde4fcfbc97935464c40d74/matches/aeacc2fe7bc945b490d3dc27b91bd10f/attempt-0/aeacc2fe7bc945b490d3dc27b91bd10f.hrw.jsonl.gz",
+      "replaySha256": "351bf1cf0f0b553c10323a94ed4d7e5b6c2287431d0a2e4c063ce570bd5a3e06"
+    },
+    {
+      "matchId": "c62c7349c2d54f0f8771a2ad347dabb8",
+      "attempt": 0,
+      "directory": "runs/development/runtime/56031ffa87c74c1c85d21fe356c5bcf1/matches/c62c7349c2d54f0f8771a2ad347dabb8/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/56031ffa87c74c1c85d21fe356c5bcf1/matches/c62c7349c2d54f0f8771a2ad347dabb8/attempt-0/c62c7349c2d54f0f8771a2ad347dabb8.hrw.jsonl.gz",
+      "replaySha256": "024f82018e9032a026023a5d123c14e80a75630c495faa5e48ca82fdcf8bc418"
+    },
+    {
+      "matchId": "0f90eb9aa0a24c77bdf1856de57b66df",
+      "attempt": 0,
+      "directory": "runs/development/runtime/5f7407644d7c488e9a1e01ca8938a974/matches/0f90eb9aa0a24c77bdf1856de57b66df/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 6,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/5f7407644d7c488e9a1e01ca8938a974/matches/0f90eb9aa0a24c77bdf1856de57b66df/attempt-0/0f90eb9aa0a24c77bdf1856de57b66df.hrw.jsonl.gz",
+      "replaySha256": "a8ff414844af1abbd16e56c31a6af0e875eeb2989f94f6c6af26f638730c8331"
+    },
+    {
+      "matchId": "27afc15ee15944289249c9555fa55456",
+      "attempt": 0,
+      "directory": "runs/development/runtime/7b604591ee054694a7a5a779b954ecd2/matches/27afc15ee15944289249c9555fa55456/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/7b604591ee054694a7a5a779b954ecd2/matches/27afc15ee15944289249c9555fa55456/attempt-0/27afc15ee15944289249c9555fa55456.hrw.jsonl.gz",
+      "replaySha256": "dc7f350880547ed0215fb19f0622b9b97d7c63fd9e85f61dd67d0082f48382c2"
+    },
+    {
+      "matchId": "8bf92b1d35bc4a359764d87c8ed96a01",
+      "attempt": 0,
+      "directory": "runs/development/runtime/7b604591ee054694a7a5a779b954ecd2/matches/8bf92b1d35bc4a359764d87c8ed96a01/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/7b604591ee054694a7a5a779b954ecd2/matches/8bf92b1d35bc4a359764d87c8ed96a01/attempt-0/8bf92b1d35bc4a359764d87c8ed96a01.hrw.jsonl.gz",
+      "replaySha256": "f4260e17dbf20ab3f8fe026f7e82dfd0a1f11e823105b07437df778317628787"
+    },
+    {
+      "matchId": "d1d60b2ae538460f8a667f80729b218f",
+      "attempt": 0,
+      "directory": "runs/development/runtime/7e1a17a9fc714c35a92d3ce4091e81b3/bad-sandbox/d1d60b2ae538460f8a667f80729b218f/attempt-0",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "12ef6659391d49cd9a49f1d00aed67ce",
+      "attempt": 0,
+      "directory": "runs/development/runtime/9aedf39040c841288fcac38e3006ffd7/matches/12ef6659391d49cd9a49f1d00aed67ce/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "wall_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/9aedf39040c841288fcac38e3006ffd7/matches/12ef6659391d49cd9a49f1d00aed67ce/attempt-0/12ef6659391d49cd9a49f1d00aed67ce.hrw.jsonl.gz",
+      "replaySha256": "ca8e4995b320510771418f7b60b79c2ed841371d2baa64e19b33e1f1251f4004"
+    },
+    {
+      "matchId": "368c333e2324442bb38116d835842423",
+      "attempt": 0,
+      "directory": "runs/development/runtime/9aedf39040c841288fcac38e3006ffd7/matches/368c333e2324442bb38116d835842423/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/9aedf39040c841288fcac38e3006ffd7/matches/368c333e2324442bb38116d835842423/attempt-0/368c333e2324442bb38116d835842423.hrw.jsonl.gz",
+      "replaySha256": "d278f3b537eec03c1c61a9af2ac71fc716c0fbb5c99e1846f39bee5b79691396"
+    },
+    {
+      "matchId": "f3a66097acac45409d231101491e055c",
+      "attempt": 0,
+      "directory": "runs/development/runtime/a2e03d57b0604a4bbcb0c5003368d7b0/missing/f3a66097acac45409d231101491e055c/attempt-0",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "f3a66097acac45409d231101491e055c",
+      "attempt": 1,
+      "directory": "runs/development/runtime/a2e03d57b0604a4bbcb0c5003368d7b0/missing/f3a66097acac45409d231101491e055c/attempt-1",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "f3a66097acac45409d231101491e055c",
+      "attempt": 2,
+      "directory": "runs/development/runtime/a2e03d57b0604a4bbcb0c5003368d7b0/missing/f3a66097acac45409d231101491e055c/attempt-2",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "f3a66097acac45409d231101491e055c",
+      "attempt": 3,
+      "directory": "runs/development/runtime/a2e03d57b0604a4bbcb0c5003368d7b0/missing/f3a66097acac45409d231101491e055c/attempt-3",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "60ac835bbb834a36b445b6024a0b97a6",
+      "attempt": 0,
+      "directory": "runs/development/runtime/ac705d2da1e346ba89d09bf1c9f31468/matches/60ac835bbb834a36b445b6024a0b97a6/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 6,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/ac705d2da1e346ba89d09bf1c9f31468/matches/60ac835bbb834a36b445b6024a0b97a6/attempt-0/60ac835bbb834a36b445b6024a0b97a6.hrw.jsonl.gz",
+      "replaySha256": "66c93793479dfbc80156ef20296ffa8f4ed8304b06d2fdb2f9f9c65809151a12"
+    },
+    {
+      "matchId": "744d74ecb0fb44c580ce9477f922a867",
+      "attempt": 0,
+      "directory": "runs/development/runtime/ae1731bbb1904ecdb528191bf94c8c27/matches/744d74ecb0fb44c580ce9477f922a867/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "wall_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/ae1731bbb1904ecdb528191bf94c8c27/matches/744d74ecb0fb44c580ce9477f922a867/attempt-0/744d74ecb0fb44c580ce9477f922a867.hrw.jsonl.gz",
+      "replaySha256": "6484a6f2ec8c9061a65178aa86a688cd1dc31a80fb0ce7475266ab4124d5766c"
+    },
+    {
+      "matchId": "1ab9350366f642c5be1fc04d053a55f5",
+      "attempt": 0,
+      "directory": "runs/development/runtime/b3d75bb47cc34dfca99ffd818602bdcd/matches/1ab9350366f642c5be1fc04d053a55f5/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "wall_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/b3d75bb47cc34dfca99ffd818602bdcd/matches/1ab9350366f642c5be1fc04d053a55f5/attempt-0/1ab9350366f642c5be1fc04d053a55f5.hrw.jsonl.gz",
+      "replaySha256": "15d6628015d3f8233bb8cad5d962e5e038b80b80d01c8781b741158f9d5bc524"
+    },
+    {
+      "matchId": "7fbbfc6a8beb4bc482c41dbc9e074169",
+      "attempt": 0,
+      "directory": "runs/development/runtime/b7f37170b5f34ea3b187c79a1751ee57/matches/7fbbfc6a8beb4bc482c41dbc9e074169/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_deposit",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          660,
+          820
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/b7f37170b5f34ea3b187c79a1751ee57/matches/7fbbfc6a8beb4bc482c41dbc9e074169/attempt-0/7fbbfc6a8beb4bc482c41dbc9e074169.hrw.jsonl.gz",
+      "replaySha256": "a65559f81cb9222473cf9d70d5b51fab1d4859cda7b4ed3578b1615306124e7a"
+    },
+    {
+      "matchId": "379104884fba43de80aa9828ad4719f7",
+      "attempt": 0,
+      "directory": "runs/development/runtime/c26d42cfc5fd4def974f65ebd506e2fa/matches/379104884fba43de80aa9828ad4719f7/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "wall_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/c26d42cfc5fd4def974f65ebd506e2fa/matches/379104884fba43de80aa9828ad4719f7/attempt-0/379104884fba43de80aa9828ad4719f7.hrw.jsonl.gz",
+      "replaySha256": "9dbfed4c13d20561f8a5b0ebb96127b9ef5203906208dd2cfea502635698bb7c"
+    },
+    {
+      "matchId": "91ac82882d1243fa90277832f6d89456",
+      "attempt": 0,
+      "directory": "runs/development/runtime/c26d42cfc5fd4def974f65ebd506e2fa/matches/91ac82882d1243fa90277832f6d89456/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/c26d42cfc5fd4def974f65ebd506e2fa/matches/91ac82882d1243fa90277832f6d89456/attempt-0/91ac82882d1243fa90277832f6d89456.hrw.jsonl.gz",
+      "replaySha256": "4997a1a79db8c653100e2aecbd3df1b6427aea4527464c98a4561fcc48d03ddc"
+    },
+    {
+      "matchId": "9b2f8e8354de4022ac7617bb0c857fa5",
+      "attempt": 0,
+      "directory": "runs/development/runtime/cdb8e17ba3434b17a0db8e4aafe07f8a/matches/9b2f8e8354de4022ac7617bb0c857fa5/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/cdb8e17ba3434b17a0db8e4aafe07f8a/matches/9b2f8e8354de4022ac7617bb0c857fa5/attempt-0/9b2f8e8354de4022ac7617bb0c857fa5.hrw.jsonl.gz",
+      "replaySha256": "84d809a28e65825398a77bc6aa42dc2d6d35aa097b3176240a7dc2338e4c746d"
+    },
+    {
+      "matchId": "c1284262745146658ac2055a684d84fb",
+      "attempt": 0,
+      "directory": "runs/development/runtime/cdb8e17ba3434b17a0db8e4aafe07f8a/matches/c1284262745146658ac2055a684d84fb/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/cdb8e17ba3434b17a0db8e4aafe07f8a/matches/c1284262745146658ac2055a684d84fb/attempt-0/c1284262745146658ac2055a684d84fb.hrw.jsonl.gz",
+      "replaySha256": "76f54c592e798fed0898f9e84f7543aad9d217092799c0027517180e9c7533a5"
+    },
+    {
+      "matchId": "cf425af87bda462db577722ff0f450c0",
+      "attempt": 0,
+      "directory": "runs/development/runtime/ce37644327a04e22976932e2a99bafc7/matches/cf425af87bda462db577722ff0f450c0/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "wall_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/ce37644327a04e22976932e2a99bafc7/matches/cf425af87bda462db577722ff0f450c0/attempt-0/cf425af87bda462db577722ff0f450c0.hrw.jsonl.gz",
+      "replaySha256": "40091eda48566ae8bb240f01db1e3e9cc30ebc486daff6738982e5cb3b56d015"
+    },
+    {
+      "matchId": "eebd7c1df04a4df6bd2b69152e01c02d",
+      "attempt": 0,
+      "directory": "runs/development/runtime/ce37644327a04e22976932e2a99bafc7/matches/eebd7c1df04a4df6bd2b69152e01c02d/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          null
+        ],
+        "timeouts": [
+          1,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/ce37644327a04e22976932e2a99bafc7/matches/eebd7c1df04a4df6bd2b69152e01c02d/attempt-0/eebd7c1df04a4df6bd2b69152e01c02d.hrw.jsonl.gz",
+      "replaySha256": "7115cfab70b21fcb6666eddf4aa7f8ba6c90ad45fd8d993e5682a52699db3fc0"
+    },
+    {
+      "matchId": "ef1d1ab02f9d466fb03e746aee440888",
+      "attempt": 0,
+      "directory": "runs/development/runtime/dd4d67d7641c48bcba0430a113133474/matches/ef1d1ab02f9d466fb03e746aee440888/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_deposit",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          600
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/dd4d67d7641c48bcba0430a113133474/matches/ef1d1ab02f9d466fb03e746aee440888/attempt-0/ef1d1ab02f9d466fb03e746aee440888.hrw.jsonl.gz",
+      "replaySha256": "5d81e31aacd58ac999d146b38671b0e88f9af730976f454a9935885932194ef0"
+    },
+    {
+      "matchId": "38afc65e68cb47b2b2d42d68d66f4cf8",
+      "attempt": 0,
+      "directory": "runs/development/runtime/e12e10995ba14f429b5d6a1740ecb313/missing/38afc65e68cb47b2b2d42d68d66f4cf8/attempt-0",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "38afc65e68cb47b2b2d42d68d66f4cf8",
+      "attempt": 1,
+      "directory": "runs/development/runtime/e12e10995ba14f429b5d6a1740ecb313/missing/38afc65e68cb47b2b2d42d68d66f4cf8/attempt-1",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "38afc65e68cb47b2b2d42d68d66f4cf8",
+      "attempt": 2,
+      "directory": "runs/development/runtime/e12e10995ba14f429b5d6a1740ecb313/missing/38afc65e68cb47b2b2d42d68d66f4cf8/attempt-2",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "38afc65e68cb47b2b2d42d68d66f4cf8",
+      "attempt": 3,
+      "directory": "runs/development/runtime/e12e10995ba14f429b5d6a1740ecb313/missing/38afc65e68cb47b2b2d42d68d66f4cf8/attempt-3",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "7d5af422feb04bb199df2957ae62ec47",
+      "attempt": 0,
+      "directory": "runs/development/runtime/e5d674b087844b36a075440aa85cc25c/matches/7d5af422feb04bb199df2957ae62ec47/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          300300,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/e5d674b087844b36a075440aa85cc25c/matches/7d5af422feb04bb199df2957ae62ec47/attempt-0/7d5af422feb04bb199df2957ae62ec47.hrw.jsonl.gz",
+      "replaySha256": "436c2fb2864da7388d49f49494d91b9d73d2c7d2448719565fee3e49bdf9984b"
+    },
+    {
+      "matchId": "a404ee941be342f3b32503e62f1cfdfd",
+      "attempt": 0,
+      "directory": "runs/development/runtime/eda4ad8b089d42a888da24e620554ed9/matches/a404ee941be342f3b32503e62f1cfdfd/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/eda4ad8b089d42a888da24e620554ed9/matches/a404ee941be342f3b32503e62f1cfdfd/attempt-0/a404ee941be342f3b32503e62f1cfdfd.hrw.jsonl.gz",
+      "replaySha256": "f5868360cce0fa49479f9216c97e4355a0cc9343354fc947fe51a5cf343a4359"
+    },
+    {
+      "matchId": "5ba7d95a646a4177b24fa8931dfc130c",
+      "attempt": 0,
+      "directory": "runs/development/runtime/efe506be8c684d0ebc10200fc967a2ec/matches/5ba7d95a646a4177b24fa8931dfc130c/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/efe506be8c684d0ebc10200fc967a2ec/matches/5ba7d95a646a4177b24fa8931dfc130c/attempt-0/5ba7d95a646a4177b24fa8931dfc130c.hrw.jsonl.gz",
+      "replaySha256": "82bb5f8de949bef3cbb566ef525e179988802a9266b5980e530068b381d70c65"
+    },
+    {
+      "matchId": "62c5a655e1654912873bb714a5ed2cbc",
+      "attempt": 0,
+      "directory": "runs/development/runtime/efe506be8c684d0ebc10200fc967a2ec/matches/62c5a655e1654912873bb714a5ed2cbc/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          "crash"
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/efe506be8c684d0ebc10200fc967a2ec/matches/62c5a655e1654912873bb714a5ed2cbc/attempt-0/62c5a655e1654912873bb714a5ed2cbc.hrw.jsonl.gz",
+      "replaySha256": "ff7b7f71ce4bd790fa863c2c28e32dbcd3ead766a9199d7420610367286e9a53"
+    },
+    {
+      "matchId": "5a6b12bb2ab14745936b61ea74e7dc35",
+      "attempt": 0,
+      "directory": "runs/development/runtime/eff67eaf95de42319f4e1b6b247be6f8/matches/5a6b12bb2ab14745936b61ea74e7dc35/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          "crash"
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/eff67eaf95de42319f4e1b6b247be6f8/matches/5a6b12bb2ab14745936b61ea74e7dc35/attempt-0/5a6b12bb2ab14745936b61ea74e7dc35.hrw.jsonl.gz",
+      "replaySha256": "96e7b18351a4d5f966d2cabc2f2113b57f2613d72ce472359f6a0cd19bcbf094"
+    },
+    {
+      "matchId": "bd94c0ca38204fb2b374c7f38dbc2051",
+      "attempt": 0,
+      "directory": "runs/development/runtime/eff67eaf95de42319f4e1b6b247be6f8/matches/bd94c0ca38204fb2b374c7f38dbc2051/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/eff67eaf95de42319f4e1b6b247be6f8/matches/bd94c0ca38204fb2b374c7f38dbc2051/attempt-0/bd94c0ca38204fb2b374c7f38dbc2051.hrw.jsonl.gz",
+      "replaySha256": "a6b32f77a4ade2aecf1479c63f9f6468a0d4baa2be29ffab64c8909d6c1af4b4"
+    },
+    {
+      "matchId": "217f981ba49946b7a2eea92539a2a0aa",
+      "attempt": 0,
+      "directory": "runs/development/runtime/fa8e5eb866bb4bca8584b8644aac7b84/matches/217f981ba49946b7a2eea92539a2a0aa/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/fa8e5eb866bb4bca8584b8644aac7b84/matches/217f981ba49946b7a2eea92539a2a0aa/attempt-0/217f981ba49946b7a2eea92539a2a0aa.hrw.jsonl.gz",
+      "replaySha256": "657a98765ff53ffefd63f0fd2b4e9832cb71329e71f85952f7d86f081adc7401"
+    },
+    {
+      "matchId": "0c0d087d80654e7f97d5ec8f5ff61038",
+      "attempt": 0,
+      "directory": "runs/development/runtime/fcdeb16761cc403abbbf268080dee93d/matches/0c0d087d80654e7f97d5ec8f5ff61038/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_deposit",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          660,
+          820
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/runtime/fcdeb16761cc403abbbf268080dee93d/matches/0c0d087d80654e7f97d5ec8f5ff61038/attempt-0/0c0d087d80654e7f97d5ec8f5ff61038.hrw.jsonl.gz",
+      "replaySha256": "a57dcba702ee08668c6ad51017029a0755b9343d4d1a9d70059398477823ebc5"
+    },
+    {
+      "matchId": "169008ed64744eeb8f9d0e6ae70e2a03",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/04a50ac4bc6849c381566a9aec86935a/matches/169008ed64744eeb8f9d0e6ae70e2a03/attempt-0",
+      "status": "configuration_error",
+      "error": "ValueError"
+    },
+    {
+      "matchId": "2a87c23eb74647c29ae4825a3459f53a",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/04a50ac4bc6849c381566a9aec86935a/matches/2a87c23eb74647c29ae4825a3459f53a/attempt-0",
+      "status": "configuration_error",
+      "error": "ValueError"
+    },
+    {
+      "matchId": "3dce5b6ce9414e058ded3f25bd31eb68",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/04a50ac4bc6849c381566a9aec86935a/matches/3dce5b6ce9414e058ded3f25bd31eb68/attempt-0",
+      "status": "configuration_error",
+      "error": "ValueError"
+    },
+    {
+      "matchId": "5c74d6ecd3d944d1987332eb91e0bad1",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/04a50ac4bc6849c381566a9aec86935a/matches/5c74d6ecd3d944d1987332eb91e0bad1/attempt-0",
+      "status": "configuration_error",
+      "error": "ValueError"
+    },
+    {
+      "matchId": "d33d2a0955f64b04a75acff1ce91c432",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/08ffb219c9034ba294bf298b4409d7fd/matches/d33d2a0955f64b04a75acff1ce91c432/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/08ffb219c9034ba294bf298b4409d7fd/matches/d33d2a0955f64b04a75acff1ce91c432/attempt-0/d33d2a0955f64b04a75acff1ce91c432.hrw.jsonl.gz",
+      "replaySha256": "6acaebb8a961fb4f54981f8e159d2f759d72f584af4eca95344b322947f142b3"
+    },
+    {
+      "matchId": "37a8a54f6d614f38958bc448856fd252",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/37a8a54f6d614f38958bc448856fd252/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/37a8a54f6d614f38958bc448856fd252/attempt-0/37a8a54f6d614f38958bc448856fd252.hrw.jsonl.gz",
+      "replaySha256": "cf47390589204d28b9ac1c84b81f339224555927bad9b49283ef0d1b605ff5a9"
+    },
+    {
+      "matchId": "3c3229f59a4b466fac67cd6b59853d5c",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/3c3229f59a4b466fac67cd6b59853d5c/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/3c3229f59a4b466fac67cd6b59853d5c/attempt-0/3c3229f59a4b466fac67cd6b59853d5c.hrw.jsonl.gz",
+      "replaySha256": "c678d87c324ce6bdad1ebe93a4386359e424690f8e154cd20d6a8b083e000842"
+    },
+    {
+      "matchId": "a32727faff094b07b9e4eb93c00c3908",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/a32727faff094b07b9e4eb93c00c3908/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/a32727faff094b07b9e4eb93c00c3908/attempt-0/a32727faff094b07b9e4eb93c00c3908.hrw.jsonl.gz",
+      "replaySha256": "96a6cbf920cf87314053285a950072b81c4c9e5858c5b3efcd370a41cd5cbeeb"
+    },
+    {
+      "matchId": "c83065da1ef44bbfafdba08297439610",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/c83065da1ef44bbfafdba08297439610/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/c83065da1ef44bbfafdba08297439610/attempt-0/c83065da1ef44bbfafdba08297439610.hrw.jsonl.gz",
+      "replaySha256": "6ae3d4da239c0eb689acc87890492b7eb4b00581ac16ce6cc9fe0c9b17466e87"
+    },
+    {
+      "matchId": "d4a3f088add74628abc320ce73685be7",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/d4a3f088add74628abc320ce73685be7/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/d4a3f088add74628abc320ce73685be7/attempt-0/d4a3f088add74628abc320ce73685be7.hrw.jsonl.gz",
+      "replaySha256": "c7136644e4342ce884e6134f1ea60f9e9d366ce3ba485a7b113e3fa60dbfa953"
+    },
+    {
+      "matchId": "ffb259b438ca44b8a59b1f8fab4a7f8a",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/ffb259b438ca44b8a59b1f8fab4a7f8a/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/1231906584974ecd80956f406493fbc4/matches/ffb259b438ca44b8a59b1f8fab4a7f8a/attempt-0/ffb259b438ca44b8a59b1f8fab4a7f8a.hrw.jsonl.gz",
+      "replaySha256": "f99cb4c2f6a4e665cbd7198215350a698b391dcf602328c61ad18325967f65f9"
+    },
+    {
+      "matchId": "2b9634940a7948e28eb4b4eee67b3a57",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/13f6f73a7f5742b58c801cf26ebb5ae0/matches/2b9634940a7948e28eb4b4eee67b3a57/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/13f6f73a7f5742b58c801cf26ebb5ae0/matches/2b9634940a7948e28eb4b4eee67b3a57/attempt-0/2b9634940a7948e28eb4b4eee67b3a57.hrw.jsonl.gz",
+      "replaySha256": "7c9841e8da1598e502df2ba8b03073d34c24dc42e790b3a6e0111215749be00c"
+    },
+    {
+      "matchId": "ef3ec43574c241169b6196081700415d",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/1b21d5b071324c7791b5fb7bb91c4243/matches/ef3ec43574c241169b6196081700415d/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/1b21d5b071324c7791b5fb7bb91c4243/matches/ef3ec43574c241169b6196081700415d/attempt-0/ef3ec43574c241169b6196081700415d.hrw.jsonl.gz",
+      "replaySha256": "ef4a442154c09a4cf238a50558f744c53dba4d7740103dd57effd91e9574d17a"
+    },
+    {
+      "matchId": "82984f70debd47e2b922230f8aa79e17",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/30ee9cacb4d845c9a7644923ced6acc9/matches/82984f70debd47e2b922230f8aa79e17/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/30ee9cacb4d845c9a7644923ced6acc9/matches/82984f70debd47e2b922230f8aa79e17/attempt-0/82984f70debd47e2b922230f8aa79e17.hrw.jsonl.gz",
+      "replaySha256": "e88a954064617474be625c66e314045c5f449be27c87ad6c47f3c4208e095dc7"
+    },
+    {
+      "matchId": "68fc32ef2de34f9d8ec514c68eff4ad0",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/375bb377671d43afa9b4baa91a3908b6/matches/68fc32ef2de34f9d8ec514c68eff4ad0/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/375bb377671d43afa9b4baa91a3908b6/matches/68fc32ef2de34f9d8ec514c68eff4ad0/attempt-0/68fc32ef2de34f9d8ec514c68eff4ad0.hrw.jsonl.gz",
+      "replaySha256": "0652bd9bb800b441081d2e6caa811b938022db0ab41ef5d32ffe6bb499edb036"
+    },
+    {
+      "matchId": "eeaf258d7cc64ac59462b42d8d4bdffb",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/3b78521c33044e58b2cdf56bd3a18449/matches/eeaf258d7cc64ac59462b42d8d4bdffb/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 4,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/3b78521c33044e58b2cdf56bd3a18449/matches/eeaf258d7cc64ac59462b42d8d4bdffb/attempt-0/eeaf258d7cc64ac59462b42d8d4bdffb.hrw.jsonl.gz",
+      "replaySha256": "4a73b90db010161207dd93d91329e644beadfd568abc638bf634dfb82e2dd143"
+    },
+    {
+      "matchId": "ad63a79d354b4c27b5dd773c1dceee27",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/3d32acd678354cf2937bf6ab8eb94074/matches/ad63a79d354b4c27b5dd773c1dceee27/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/3d32acd678354cf2937bf6ab8eb94074/matches/ad63a79d354b4c27b5dd773c1dceee27/attempt-0/ad63a79d354b4c27b5dd773c1dceee27.hrw.jsonl.gz",
+      "replaySha256": "1b364c9225a3dd24e8c283f23629f5efd32d1783f9faa8a529718165e19655dc"
+    },
+    {
+      "matchId": "56dfcac453d048ce8cc5606c626487dd",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/4deddd5cf5024915bb1be85fad7eebbe/matches/56dfcac453d048ce8cc5606c626487dd/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 4,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/4deddd5cf5024915bb1be85fad7eebbe/matches/56dfcac453d048ce8cc5606c626487dd/attempt-0/56dfcac453d048ce8cc5606c626487dd.hrw.jsonl.gz",
+      "replaySha256": "c0e7c994e486fd07f8264382a12ccd5ce246b78039eebee0f986601ddd4d9a40"
+    },
+    {
+      "matchId": "d0b02bbe5a4140008e6c2712344c9568",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/4f4c38f57cef4b0c9e2ce6d1046300a6/matches/d0b02bbe5a4140008e6c2712344c9568/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/4f4c38f57cef4b0c9e2ce6d1046300a6/matches/d0b02bbe5a4140008e6c2712344c9568/attempt-0/d0b02bbe5a4140008e6c2712344c9568.hrw.jsonl.gz",
+      "replaySha256": "f49fcdc9a3adf69060a4641a353db7df75b2da1f3319c83795b11f11ffc7e793"
+    },
+    {
+      "matchId": "cad853ede38c499a83f1cea7fba44271",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/5d40b02ac58a4e1387b9db80953b1f21/matches/cad853ede38c499a83f1cea7fba44271/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/5d40b02ac58a4e1387b9db80953b1f21/matches/cad853ede38c499a83f1cea7fba44271/attempt-0/cad853ede38c499a83f1cea7fba44271.hrw.jsonl.gz",
+      "replaySha256": "19f0a5be109a3f43a0988b6a2fa131fe54e6c462ed47a820ff29046ac9a47eea"
+    },
+    {
+      "matchId": "161529d13d0f433a82cdd54d1fcec7c6",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/161529d13d0f433a82cdd54d1fcec7c6/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/161529d13d0f433a82cdd54d1fcec7c6/attempt-0/161529d13d0f433a82cdd54d1fcec7c6.hrw.jsonl.gz",
+      "replaySha256": "997ec77218a997cb0d1a606f992bf82af888454bea17e2b4ac9622a6fb9db3cc"
+    },
+    {
+      "matchId": "234190168b404c94910ee4c022d74c4c",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/234190168b404c94910ee4c022d74c4c/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/234190168b404c94910ee4c022d74c4c/attempt-0/234190168b404c94910ee4c022d74c4c.hrw.jsonl.gz",
+      "replaySha256": "199c82f39586802d59d56a8c344156dcda3ada8a6f6d4ad34ebfba8b070dd590"
+    },
+    {
+      "matchId": "8473302d820943bcb66b219e3a34d457",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/8473302d820943bcb66b219e3a34d457/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/8473302d820943bcb66b219e3a34d457/attempt-0/8473302d820943bcb66b219e3a34d457.hrw.jsonl.gz",
+      "replaySha256": "a26f36c3fb719909f707d4d39b68fd5243ac93667a82c8bfc07ec8ef1b790247"
+    },
+    {
+      "matchId": "a08bc30d99df4ae09e13df4a44c5d1ca",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/a08bc30d99df4ae09e13df4a44c5d1ca/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/a08bc30d99df4ae09e13df4a44c5d1ca/attempt-0/a08bc30d99df4ae09e13df4a44c5d1ca.hrw.jsonl.gz",
+      "replaySha256": "a6e8ae106ef92085fe9dd71626626ad2f74f4383601f83dd186a6e498623d51a"
+    },
+    {
+      "matchId": "e7b00d1f6ea4456bbb98697e768e299f",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/e7b00d1f6ea4456bbb98697e768e299f/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/e7b00d1f6ea4456bbb98697e768e299f/attempt-0/e7b00d1f6ea4456bbb98697e768e299f.hrw.jsonl.gz",
+      "replaySha256": "95d1ccc15cb627864d0848866cd3aba5de696f21e9796899387b5248f1abb128"
+    },
+    {
+      "matchId": "efb495f18a784d859d5f9465b582f630",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/efb495f18a784d859d5f9465b582f630/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/634fecf39cea4fdfb180253139ed220c/matches/efb495f18a784d859d5f9465b582f630/attempt-0/efb495f18a784d859d5f9465b582f630.hrw.jsonl.gz",
+      "replaySha256": "28b1eeb02ee9d24106b10ca493a893434629967d3f2d034d32d3e466c634b194"
+    },
+    {
+      "matchId": "17ad3f9cc01e4bbca8303229b3bbf52d",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/671e3d626cba4f76ab5251c0d65b1943/matches/17ad3f9cc01e4bbca8303229b3bbf52d/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/671e3d626cba4f76ab5251c0d65b1943/matches/17ad3f9cc01e4bbca8303229b3bbf52d/attempt-0/17ad3f9cc01e4bbca8303229b3bbf52d.hrw.jsonl.gz",
+      "replaySha256": "9d0749de9475a9192ffb3574072fde7bb24b6ed79380f4d940bfb5082b8f9d69"
+    },
+    {
+      "matchId": "32f96e06d9a146cca32405b6cdff722f",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/671e3d626cba4f76ab5251c0d65b1943/matches/32f96e06d9a146cca32405b6cdff722f/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/671e3d626cba4f76ab5251c0d65b1943/matches/32f96e06d9a146cca32405b6cdff722f/attempt-0/32f96e06d9a146cca32405b6cdff722f.hrw.jsonl.gz",
+      "replaySha256": "6c6d94a526bd23c19cfddc3d8c2e3cea2c9bf34688960e05139c7cfc622403ca"
+    },
+    {
+      "matchId": "8a8171a92b864c28aa2d4faf0b1b0c3e",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/671e3d626cba4f76ab5251c0d65b1943/matches/8a8171a92b864c28aa2d4faf0b1b0c3e/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/671e3d626cba4f76ab5251c0d65b1943/matches/8a8171a92b864c28aa2d4faf0b1b0c3e/attempt-0/8a8171a92b864c28aa2d4faf0b1b0c3e.hrw.jsonl.gz",
+      "replaySha256": "92e1bbe013e4461ddbb632c3225b24e956ffed8f3e884e7876b0b0ea1a8b97dd"
+    },
+    {
+      "matchId": "bdc705054ac54d96b181daf255cfd9c2",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/671e3d626cba4f76ab5251c0d65b1943/matches/bdc705054ac54d96b181daf255cfd9c2/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "compile_failed",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/671e3d626cba4f76ab5251c0d65b1943/matches/bdc705054ac54d96b181daf255cfd9c2/attempt-0/bdc705054ac54d96b181daf255cfd9c2.hrw.jsonl.gz",
+      "replaySha256": "8323ef36f1435b84661b636a04d51bbe917d07465db27d848381e48a0192430a"
+    },
+    {
+      "matchId": "7ccf18304cdb41d786e33181247ca473",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/6b6964c44cc5486195782dabc86d6d37/matches/7ccf18304cdb41d786e33181247ca473/attempt-0",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "7ccf18304cdb41d786e33181247ca473",
+      "attempt": 1,
+      "directory": "runs/development/review-runtime/6b6964c44cc5486195782dabc86d6d37/matches/7ccf18304cdb41d786e33181247ca473/attempt-1",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "7ccf18304cdb41d786e33181247ca473",
+      "attempt": 2,
+      "directory": "runs/development/review-runtime/6b6964c44cc5486195782dabc86d6d37/matches/7ccf18304cdb41d786e33181247ca473/attempt-2",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "7ccf18304cdb41d786e33181247ca473",
+      "attempt": 3,
+      "directory": "runs/development/review-runtime/6b6964c44cc5486195782dabc86d6d37/matches/7ccf18304cdb41d786e33181247ca473/attempt-3",
+      "status": "infra_error",
+      "error": "InfrastructureError"
+    },
+    {
+      "matchId": "63b0002b3c164bb8a2b5c371a9fa9628",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/7d1f7b187b364409a27cd83e1283f79e/matches/63b0002b3c164bb8a2b5c371a9fa9628/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/7d1f7b187b364409a27cd83e1283f79e/matches/63b0002b3c164bb8a2b5c371a9fa9628/attempt-0/63b0002b3c164bb8a2b5c371a9fa9628.hrw.jsonl.gz",
+      "replaySha256": "632461e52004fa9253e259dbefffd498471cfb86b64b8c86add8c3d74b1250bd"
+    },
+    {
+      "matchId": "3fa26c877133409caf42ec817a4f3888",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/83b1775842cd416b9531d33ccced51c0/matches/3fa26c877133409caf42ec817a4f3888/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/83b1775842cd416b9531d33ccced51c0/matches/3fa26c877133409caf42ec817a4f3888/attempt-0/3fa26c877133409caf42ec817a4f3888.hrw.jsonl.gz",
+      "replaySha256": "fdda781929e5964dd04e58dd3d1e7894beb4cf4100a1684e9fffec19b6f46178"
+    },
+    {
+      "matchId": "508d23bdf0004e42804490a5f6dc280b",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/8b3abae210674a5180d1973b765464fc/matches/508d23bdf0004e42804490a5f6dc280b/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/8b3abae210674a5180d1973b765464fc/matches/508d23bdf0004e42804490a5f6dc280b/attempt-0/508d23bdf0004e42804490a5f6dc280b.hrw.jsonl.gz",
+      "replaySha256": "a14d89d890d446ec53b095aca230a7eca4d938346292b0ea1735081e94ea6fb9"
+    },
+    {
+      "matchId": "6b3c4e829aed4c6a867317f6d997f859",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/8d5b2959995649e98979d8b5319f1423/matches/6b3c4e829aed4c6a867317f6d997f859/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/8d5b2959995649e98979d8b5319f1423/matches/6b3c4e829aed4c6a867317f6d997f859/attempt-0/6b3c4e829aed4c6a867317f6d997f859.hrw.jsonl.gz",
+      "replaySha256": "442c283908c65128b586dbbe81ea38b85f66ee6884042da839f0c08ffc9c40bf"
+    },
+    {
+      "matchId": "42d52b855cec45b3af788e97bd3d62cf",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/905750400ee748f09c723e07ea274519/matches/42d52b855cec45b3af788e97bd3d62cf/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/905750400ee748f09c723e07ea274519/matches/42d52b855cec45b3af788e97bd3d62cf/attempt-0/42d52b855cec45b3af788e97bd3d62cf.hrw.jsonl.gz",
+      "replaySha256": "1de6d6d8dc2cc004a9a8fa0ab41189c8cc234d0c0e0b1490b68feaa659d6bb9b"
+    },
+    {
+      "matchId": "68f9fc97cc4b42d196250765a145aa45",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/94c0a50ef8954dbca532c86e4a7511c3/matches/68f9fc97cc4b42d196250765a145aa45/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/94c0a50ef8954dbca532c86e4a7511c3/matches/68f9fc97cc4b42d196250765a145aa45/attempt-0/68f9fc97cc4b42d196250765a145aa45.hrw.jsonl.gz",
+      "replaySha256": "3c8b693411358da67ebae77297c0a261acf9cd91d5306bce759e054ccd26c252"
+    },
+    {
+      "matchId": "8c13fb722938493eb96e0ca20a4a1d8e",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/9f977b195b0e4039927cbb2cb96a5888/matches/8c13fb722938493eb96e0ca20a4a1d8e/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 4,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/9f977b195b0e4039927cbb2cb96a5888/matches/8c13fb722938493eb96e0ca20a4a1d8e/attempt-0/8c13fb722938493eb96e0ca20a4a1d8e.hrw.jsonl.gz",
+      "replaySha256": "f7fecde9dd7418d0638bfcc6a29b4297ad01209e1488d67189790fa7bf5deac7"
+    },
+    {
+      "matchId": "4dc7545122ff44a78746c3fd25253976",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/aef5e96ad84e43c08e737c4af6ad131f/matches/4dc7545122ff44a78746c3fd25253976/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/aef5e96ad84e43c08e737c4af6ad131f/matches/4dc7545122ff44a78746c3fd25253976/attempt-0/4dc7545122ff44a78746c3fd25253976.hrw.jsonl.gz",
+      "replaySha256": "4796315063e7e636558e850e44789c9d545ce937d2482c90d3af96b5d46478c2"
+    },
+    {
+      "matchId": "600ae777de534617876777562493c577",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/b4fa7a4d59d346769366638399a59055/matches/600ae777de534617876777562493c577/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": null,
+        "reason": "turn_limit_draw",
+        "turns": 300,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/b4fa7a4d59d346769366638399a59055/matches/600ae777de534617876777562493c577/attempt-0/600ae777de534617876777562493c577.hrw.jsonl.gz",
+      "replaySha256": "7a17ab89b788b6a7a722df1783ca3cbedcbf68b1e9f881e10c35eb405df50e43"
+    },
+    {
+      "matchId": "6706a4bf70784d98a2bb7cc0f7797567",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/e471bc59d42046d2864cdafdef45b356/matches/6706a4bf70784d98a2bb7cc0f7797567/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/e471bc59d42046d2864cdafdef45b356/matches/6706a4bf70784d98a2bb7cc0f7797567/attempt-0/6706a4bf70784d98a2bb7cc0f7797567.hrw.jsonl.gz",
+      "replaySha256": "5861ddb25f976f3854743705522148ff395474bb617cd05ca805972560b9ed65"
+    },
+    {
+      "matchId": "991f64026c3d410eae20c547385dd813",
+      "attempt": 0,
+      "directory": "runs/development/review-runtime/f393ff0838184533a538d4757cf3edec/matches/991f64026c3d410eae20c547385dd813/attempt-0",
+      "status": "complete",
+      "result": {
+        "winner": 1,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "crash",
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ]
+      },
+      "replay": "runs/development/review-runtime/f393ff0838184533a538d4757cf3edec/matches/991f64026c3d410eae20c547385dd813/attempt-0/991f64026c3d410eae20c547385dd813.hrw.jsonl.gz",
+      "replaySha256": "3b46fd4f52f985b71e1f2083104c2f2a6fe62f474063aac10e2bc6914110b019"
+    }
+  ],
+  "allNewCompleteReplaysVerified": 76,
+  "historicalSmokeReplayVerified": true,
+  "probeArtifacts": "runs/development/review-runtime/ (includes bounded failing probes, replies, stderr and compilation logs)",
+  "usage": {
+    "measuredTestProcessCpuSeconds": 83.20399499999999,
+    "recordedReplyCpuSeconds": 8.3919452,
+    "totalCpuHours": null,
+    "modelTokens": "see data/usage-pi-local.json; incomplete phase total"
+  },
+  "remaining": [
+    "M4 bench/load scaling/Q2",
+    "M7 walking distances/map regeneration",
+    "S1/S2 raw diagnostics",
+    "check/cache/scheduler/results/tournament",
+    "M8 zoo matrix/Q3",
+    "complete sandbox/cleanup/efficiency acceptance"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "available local pi sessions with matching project cwd; all branches, deduplicated copied entries; no transcript/config/auth exported",
+  "sessionFiles": 2,
+  "usageEntriesByKind": {
+    "assistant": 188,
+    "compaction": 1
+  },
+  "zeroUsageEntries": 2,
+  "entriesMissingUsage": 0,
+  "reportedTokens": {
+    "input": 662509,
+    "output": 142021,
+    "cacheRead": 23577088,
+    "cacheWrite": 0,
+    "reasoning": 59658,
+    "totalTokens": 24381618
+  },
+  "completePhaseTotal": null,
+  "limits": "API-reported counts only; reasoning is a subset of output, not added again. Cached input includes repeated contexts, not unique generated tokens. Missing Windows/other sessions and unreported calls cannot be recovered.",
+  "measuredAt": "2026-11-07T06:01:07.994411+00:00",
+  "measurementTiming": "snapshot before final review-runtime documentation and archival; later messages not included"
+}

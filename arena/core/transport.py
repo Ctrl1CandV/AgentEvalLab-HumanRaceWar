@@ -76,6 +76,7 @@ class Connection:
         for stream in (self.stdin, self.stdout, self.error_stream):
             os.set_blocking(stream.fileno(), False)
         self.clock = CpuClock(self.process.pid)
+        self.cpu_boundary_ns = 0
         self.pending = b""
         self.started = False
         self.handshake = Frame(STARTED.strip())
@@ -110,7 +111,7 @@ def exchange(connections: list[Connection], messages: list[list[str]], cpu_ms: l
     frames = [Frame(marker) for _ in connections]
     outgoing = [memoryview(("\n".join(m)+"\n").encode()) for m in messages]
     starts = [c.launched_ns if marker == b"READY" else time.monotonic_ns() for c in connections]
-    cpu_start = [0 if marker == b"READY" else c.clock.read_ns() for c in connections]
+    cpu_start = [c.cpu_boundary_ns for c in connections]
     replies: list[Reply | None] = [None] * count
     with selectors.DefaultSelector() as selector:
         for i, c in enumerate(connections):
@@ -129,15 +130,19 @@ def exchange(connections: list[Connection], messages: list[list[str]], cpu_ms: l
 
         def finish(i, fault):
             c = connections[i]
-            cpu = max(0, c.clock.read_ns()-cpu_start[i])
+            total_cpu = c.clock.read_ns()
+            cpu = max(0, total_cpu-cpu_start[i])
             wall = time.monotonic_ns()-starts[i]
             # Boundaries apply even when END and the timeout arrive together.
             if cpu > cpu_ms[i]*1_000_000:
                 fault = "cpu_timeout"
             elif wall > wall_ms[i]*1_000_000:
                 fault = "wall_timeout"
-            if not c.started or c.process.poll() == 125:
-                raise InfrastructureError("sandbox preparation failed (or exited 125); see attempt artifacts")
+            if not c.started:
+                raise InfrastructureError("sandbox preparation failed before trusted startup marker; see attempt artifacts")
+            if not c.clock.observed_descendant and c.process.poll() is None:
+                raise InfrastructureError("startup marker received but bot process could not be measured")
+            c.cpu_boundary_ns = total_cpu
             replies[i] = Reply(frames[i].lines(), cpu, wall, fault,
                                "proc_stat" if c.clock.fallback else "process_cpu_clock")
             unregister(c.process.stdin)

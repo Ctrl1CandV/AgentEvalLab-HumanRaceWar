@@ -6,15 +6,16 @@
 |---|---|---|
 | ENV-001 | 已解决 | 用户授权后，通过已有 uv 用户级安装 Python 3.13.15；保留系统 Python 3.10.12，创建无第三方包的 `.venv`。86 项测试在 3.13.15 的两个哈希种子进程中通过。见 `data/python313-tests.json`。 |
 | ENV-002 | 已解决 | 整个项目及本地 Git 历史迁入 WSL `~/projects/AgentEvalLab-HumanRaceWar`，不再依赖 D 盘挂载。42 个原有受跟踪文件和本地测试历史已核对，原 Windows 目录留作备份。见 `data/wsl-setup.json`。 |
-| SANDBOX-001 | 首局与隔离测试通过，验收未完成 | bwrap 内 Python/C++ 示例、故障 bot、资源限额、绑核、环境清理和跨命名空间 CPU 时钟已有测试。仍缺短命子进程计量、进程树总资源/清理矩阵、单进程约束强制执行、速度标定及全局核锁。见 `docs/RUNTIME.md`。 |
+| SANDBOX-001 | 首批审查修正通过，验收未完成 | M2/M3/M5 已补单进程seccomp、线程任务上限、禁止改绑核、END累计CPU、proc缺失报错、只读/tmp及编译2GiB；真实Python/C++线程探针通过。仍缺完整压力/清理矩阵、编译树总资源、速度标定与全局核锁。见 `data/review-runtime-tests.json`、`docs/RUNTIME.md`。 |
+| RUNTIME-002 | 已修复，失败复现保留 | M1退出125不再算infra_error；M6格式错误不再算configuration_error，改判提交方编译失败并保留原因。旧的错误重试和误分类结果均保留；两轮132项通过。 |
 | RUNTIME-001 | 已修复，失败复现保留 | 初版传输层将非法 UTF-8 字节换成 U+FFFD，重编码后膨胀字节预算，导致后续合法行被丢弃。1 项定点测试先失败，改为逐字节禁用 NUL 占位后通过；不改引擎规则。见 `logs/runtime-utf8-before-fix.log`、`runtime-utf8-after-fix.log`，最终两次 107 项测试全部通过。 |
 | AGENT-001 | CLI 就绪，认证未验证 | 初次安装记录为 pi 1.4.0；最终复核实际为 1.5.0，CLI 与软件包版本一致，hrw-dev 版本/帮助检查通过。此次没有改动安装或读取认证文件，模型认证和推理未测试。用户自行通过 `/login`、`/model` 配置或确认账号。 |
 | AUDIT-001 | 已解决，原始记录保留 | 最终复核脚本假设 pi 仍为 1.4.0，版本断言停止；实际 CLI/软件包均为 1.5.0。保留当前安装，改为核对实际版本后审计通过。两次引擎测试均为 86 项通过，不是引擎回归。记录在本地 `runs/development/final-handoff-attempt-1.json` 与 `final-handoff-check.json`。 |
 | INSTALL-001 | 已恢复 | 下载时一次 curl TLS EOF、一次 npm ECONNRESET；保留既有代理和 TLS 校验，复用已有 uv，npm 按同一固定版本重试成功。未改 DNS、代理或安全设置。 |
-| SPEC-001 | 待审查 | 初始站位/ID、SPAWN 占格、重复非法指令、伤害记录、失败动作警告和事件对称排序等处理见 `docs/IMPLEMENTATION_NOTES.md` I01–I11 与 STATUS。未修改既定规则参数或评分公式。 |
-| MAP-001 | 默认布局通过，平衡未完成 | 四类生成器、40 张 public 和 4 张 scrimmage 地图已交付，全部通过默认资源/连通性等检查；种子、摘要和指标见 `maps/catalog.json`。分区/路径口径 I11 待确认，不能把布局检查当作动物园或先后手公平性验收。 |
+| SPEC-001 | 已裁定，附加实现进行中 | 2026-11-07审查已同意I01–I11；D1–D10已纳入DESIGN/BRIEF，原游戏参数/结算不变。S1/S2原始统计和D5/D6后续执行尚未完成，过程分公式仍不冻结，评分局数不改。 |
+| MAP-001 | 旧口径通过，新步行检查待修 | I11分区/basePath已批准；M7指出矿/塔可能隔墙绕远。D5已入设计，待bench后补步行检查、升生成器版本并重新生成44张图，不私自放宽；也尚无平衡/公平性结论。 |
 | EVAL-001 | 未开始 | 已有开发测试对局和完整回放，并已在四类生成地图上联调，但没有动物园矩阵，不能报告平衡、公平性、对局长度、结束方式比例。 |
 | PERF-001 | 未开始 | 速度系数未知；测试运行时长不是 DESIGN 6.4 性能数据。 |
-| USAGE-001 | 计量不完整 | token 和总 CPU 小时仍未知；测试宿主时间、回放回复 CPU 采样分别记录，编译与短命进程等不完整。不得将直接回收子进程的 rusage 当作整个沙箱用量。见 `data/runtime-tests.json`、`data/mapgen-tests.json`。 |
+| USAGE-001 | 计量不完整 | 本地pi已取得部分API用量24,381,618 token（大量缓存输入，非独立生成量或扣费），完整阶段总量和总CPU小时仍未知；测试宿主与回复CPU分别记录，编译等不完整。见 `data/usage-pi-local.json`、各批次tests数据；不得把直接回收子进程rusage当完整沙箱总量。 |
 
 尚未达到 A 阶段终点，不生成“已完成”的阶段报告，不进入 B 阶段。

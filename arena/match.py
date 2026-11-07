@@ -35,10 +35,10 @@ def play(sources: list[Path], map_text: str, out: Path, seeds: list[int], *, lim
         raise ValueError("one bot per player required")
     if not 0 <= retries <= 3:
         raise ValueError("retries must be between zero and three")
-    sources = [p.resolve() for p in sources]
+    sources = [p.absolute() for p in sources]
     out = out.resolve()
     private = Path(__file__).resolve().parents[1] / "private"
-    if any(p.is_relative_to(private) for p in sources) and not out.is_relative_to(private):
+    if any(p.resolve().is_relative_to(private) for p in sources) and not out.is_relative_to(private):
         raise ValueError("hidden bot artifacts must stay under private/")
     run_id = uuid4().hex
     directory = out / run_id
@@ -55,6 +55,9 @@ def play(sources: list[Path], map_text: str, out: Path, seeds: list[int], *, lim
             if len(launcher.cpus) < len(sources):
                 raise InfrastructureError("not enough distinct CPUs for this match")
             bots = [prepare(source, work / f"p{p}", launcher, launcher.cpus[p]) for p, source in enumerate(sources)]
+            if any(bot.compile_fault and source.resolve().is_relative_to(private)
+                   for bot, source in zip(bots, sources)):
+                raise ValueError("hidden ladder bot is invalid; see private attempt artifacts")
             state = game.new_match(map_text, {}, seeds)
             replay = work / f"{run_id}.hrw.jsonl.gz"
             writer = Writer(replay)
@@ -62,10 +65,13 @@ def play(sources: list[Path], map_text: str, out: Path, seeds: list[int], *, lim
             writer.write({"type": "header", "replayVersion": 1, "engineVersion": __version__, "game": game.id,
                 "ruleset": state.rules.name, "params": dict(state.rules.values), "map": map_text,
                 "mapSha256": sha256(map_text.encode()).hexdigest(),
-                "bots": [{"code": b.code, "sha256": b.digest, "language": b.language} for b in bots],
+                "bots": [{"code": b.code, "sha256": b.digest, "language": b.language,
+                          "validationError": b.validation_error} for b in bots],
                 "seeds": seeds, "limits": game.limits, "speedFactor": None,
                 "timingCalibration": "unscaled development limits; benchmark pending",
                 "startedAt": datetime.now(timezone.utc).isoformat(), "sandbox": "bwrap",
+                "runtimePolicy": {"version": 2, "singleProcess": True, "maxThreads": 16,
+                                  "tmp": "read-only", "cpuAccounting": "READY/END cumulative differences"},
                 "cpus": launcher.cpus[:len(sources)], "compileFaults": compile_faults,
                 "initialStateHash": game.state_hash(state)})
             faults = compile_faults if any(compile_faults) else None
