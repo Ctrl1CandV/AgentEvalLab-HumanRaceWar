@@ -184,13 +184,17 @@ public:
         };
         std::map<Pos,int> miners;
         int minimumSoldiers=std::min(3,enemySoldiers+1);
+        // Establish one useful depot, then match the visible army before
+        // paying for further expansion. No opponent/style or map lookup.
+        int towerGoal=config.towers;
+        if (config.mode==Mode::Balanced && int(soldiers.size())<enemySoldiers) towerGoal=std::min(towerGoal,1);
         int builderCount=std::min(config.builders,std::max(0,int(workers.size())-(config.mode==Mode::Balanced?5:3)));
         // Expansion must not reserve the money needed by the existing opening
         // military floor. Once that floor is met, distant armies still cannot
         // cancel a waiting builder's reserve (the v3 starvation regression).
         if (config.mode==Mode::Balanced && int(soldiers.size())<minimumSoldiers) builderCount=0;
         std::set<int> builders;
-        if (int(depots.size())-1<config.towers)
+        if (int(depots.size())-1<towerGoal)
             for (int i=0;i<builderCount;++i) builders.insert(workers[workers.size()-1-i]->id);
 
         for (const auto* pointer:own) {
@@ -337,6 +341,7 @@ public:
             else if (config.mode==Mode::Balanced) {
                 int desired=std::min(parameter("POP_CAP")-workersGoal,std::max({3,enemySoldiers+3,turn.number/7}));
                 if (int(soldiers.size())<minimumSoldiers) kind='S';
+                else if (workers.size()>=6 && int(soldiers.size())<enemySoldiers) kind='S';
                 else if (int(workers.size())<workersGoal) kind='W';
                 else spawn=int(soldiers.size())<desired;
             } else if (config.mode==Mode::Turtle || config.mode==Mode::Harass) {
@@ -345,7 +350,7 @@ public:
                 else spawn=int(soldiers.size())<std::min(12,int(guardCells.size()));
             }
             int cost=parameter(kind=='W'?"WORKER_COST":"SOLDIER_COST");
-            int reserve=(builderCount && int(depots.size())-1<config.towers)?parameter("TOWER_COST"):0;
+            int reserve=(builderCount && int(depots.size())-1<towerGoal)?parameter("TOWER_COST"):0;
             // Only an army inside the existing home-defense radius is an
             // emergency. Distant defenders must not starve waiting builders.
             if (config.mode==Mode::Balanced && threateningSoldiers>0 && int(soldiers.size())<threateningSoldiers+1) reserve=0;

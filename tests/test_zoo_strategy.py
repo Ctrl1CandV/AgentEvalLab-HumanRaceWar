@@ -13,6 +13,7 @@ from arena.core.resources import CpuLease
 from arena.core.sandbox import Bubblewrap, prepare
 from arena.core.transport import Connection, exchange
 from tests.helpers import fresh
+from arena.games.outpost.model import Tower
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -86,6 +87,31 @@ class ZooStrategyTests(unittest.TestCase):
         state.turn = 25
         replies = self.probe(game, state, "opening-military-floor")
         self.assertTrue(any(line.startswith("SPAWN S") for line in replies[0]), replies)
+
+    def test_one_forward_depot_is_enough_until_military_parity(self):
+        game, state = self.budget_state()
+        state.towers[(12, 8)] = Tower(0, 12, 8, 300)
+        replies = self.probe(game, state, "one-depot-before-parity")
+        self.assertTrue(any(line.startswith("SPAWN S") for line in replies[0]), replies)
+
+    def production_state(self, worker_count):
+        game, state = self.budget_state()
+        workers = [u for u in state.units.values() if u.owner == 0 and u.kind == "W"]
+        for u in workers[worker_count:]:
+            del state.units[u.id]
+        for p in ((10, 8), (12, 8), (13, 15), (11, 15)):
+            state.towers[p] = Tower(0, *p, 300)
+        return game, state
+
+    def test_military_shortfall_precedes_extra_workers_once_economy_exists(self):
+        game, state = self.production_state(6)
+        replies = self.probe(game, state, "military-before-extra-workers")
+        self.assertTrue(any(line.startswith("SPAWN S") for line in replies[0]), replies)
+
+    def test_military_matching_still_rebuilds_a_minimal_economy(self):
+        game, state = self.production_state(2)
+        replies = self.probe(game, state, "minimum-economy")
+        self.assertTrue(any(line.startswith("SPAWN W") for line in replies[0]), replies)
 
     def test_remote_army_does_not_spend_waiting_builders_reserve(self):
         game, state = self.budget_state()

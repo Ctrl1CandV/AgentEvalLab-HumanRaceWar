@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "zooVersion": 6,
+  "zooVersion": 7,
   "status": "development, not strength calibrated",
-  "strategyTemplateSha256": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c",
+  "strategyTemplateSha256": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa",
   "bots": [
     {
       "name": "Z-idle",
@@ -16,7 +16,7 @@
       "path": "bots/public/Z-idle",
       "sourceSha256": {
         "main.cpp": "17aece9db384d45dab4417c098a6174d356a7ab32bf02d09d3488f53f5055419",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     },
     {
@@ -31,7 +31,7 @@
       "path": "bots/public/Z-random",
       "sourceSha256": {
         "main.cpp": "15a5c28e76edd76635fc2c9d99a5fa22ccaa1a8f8574174c5b8a3a539a0d0400",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     },
     {
@@ -46,7 +46,7 @@
       "path": "bots/public/Z-miner",
       "sourceSha256": {
         "main.cpp": "ef3bf5c415a33e45f26c0111b246f9275f19e5b6e482bc95e2d1082df9d7ff02",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     },
     {
@@ -61,7 +61,7 @@
       "path": "bots/public/Z-rush",
       "sourceSha256": {
         "main.cpp": "4f7cc74ab58abc81fba2b6cdf92fe6748c9fb8f8970403288717f996ee4f893d",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     },
     {
@@ -76,7 +76,7 @@
       "path": "bots/public/Z-wrush",
       "sourceSha256": {
         "main.cpp": "3b14f04df93bfd05501ceafa1852866f6cffeac96d284caa7a8a1c4332b2c36a",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     },
     {
@@ -91,7 +91,7 @@
       "path": "bots/public/Z-eco",
       "sourceSha256": {
         "main.cpp": "867014525bb8361cfb8cdfc23a3c3ff2f00df6858111cbd4b18ba2452ce18e75",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     },
     {
@@ -106,7 +106,7 @@
       "path": "bots/public/Z-turtle",
       "sourceSha256": {
         "main.cpp": "fe2dcea8c7520048a3cbc39cbfe6fb3aa53b5f3bf92aa34dc9552d89494f35d7",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     },
     {
@@ -121,7 +121,7 @@
       "path": "bots/public/Z-towers",
       "sourceSha256": {
         "main.cpp": "b77b83d5c17eaa30a28b587fdcc2daa24538aca28fcf7de5d50773e5db9ce392",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     },
     {
@@ -136,7 +136,7 @@
       "path": "bots/public/Z-harass",
       "sourceSha256": {
         "main.cpp": "c2cadb14bd7099505a9dbe14c602a8052eaa5d81d55bd53c0306e118d9050658",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     },
     {
@@ -151,7 +151,7 @@
       "path": "bots/public/M-balanced",
       "sourceSha256": {
         "main.cpp": "7c39e71f91174b2b61b8c0486a8468aca1f7b03a134fbcfc7f06607813634271",
-        "strategy.hpp": "c46c13c92b0c5d8aba84f0bd16be1cb41e654b4ed082af27dc79505c90dde04c"
+        "strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa"
       }
     }
   ],
