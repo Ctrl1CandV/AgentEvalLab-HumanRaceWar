@@ -14,6 +14,7 @@ from arena.core.sandbox import Bubblewrap, prepare
 from arena.core.transport import Connection, exchange
 from tests.helpers import fresh
 from arena.games.outpost.model import Tower
+from tools.generate_zoo import STYLES
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -191,11 +192,12 @@ class ZooStrategyTests(unittest.TestCase):
                 else:
                     self.assertLess(abs(soldier.x - 21) + abs(soldier.y - 21), 21)
 
-    def test_economy_changes_to_army_at_the_fixed_twelve_worker_target(self):
+    def test_economy_changes_to_army_at_its_declared_fixed_worker_target(self):
         eco = prepare(ROOT / "bots/public/Z-eco", self.root / "prepared-eco",
                       self.launcher, self.lease.cpus[0])
         self.assertIsNone(eco.compile_fault)
-        for workers, kind in ((11, "W"), (12, "S")):
+        target = STYLES["Z-eco"][1]
+        for workers, kind in ((target - 1, "W"), (target, "S")):
             with self.subTest(workers=workers):
                 game, state = fresh()
                 for i in range(workers):

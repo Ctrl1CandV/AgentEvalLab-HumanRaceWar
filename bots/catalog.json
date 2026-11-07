@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "zooVersion": 11,
+  "zooVersion": 12,
   "status": "development, not strength calibrated",
   "strategyTemplateSha256": "215c0b8182475ef1917289369d9b98cf370ba7a8e29795aa36eec882d31a4517",
   "bots": [
@@ -83,14 +83,14 @@
       "name": "Z-eco",
       "configuration": [
         "Economy",
-        12,
+        16,
         0,
         0,
         95
       ],
       "path": "bots/public/Z-eco",
       "sourceSha256": {
-        "main.cpp": "66cac8ea49fc17f1ee8e836333cbd76c3b18923fcec188b0ae8ba37e36c4149c",
+        "main.cpp": "efc8fc034404bf09087c48aec63ac0dc12ee61c4254c4c36cbd92900d097edf9",
         "strategy.hpp": "215c0b8182475ef1917289369d9b98cf370ba7a8e29795aa36eec882d31a4517"
       }
     },
