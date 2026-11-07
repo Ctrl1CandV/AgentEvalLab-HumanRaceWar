@@ -33,8 +33,8 @@ class ZooStrategyTests(unittest.TestCase):
         if cls.bot.compile_fault:
             raise AssertionError(cls.bot.compile_fault)
 
-    def probe(self, game, state, name, count=1, income=0, opponent_lines=()):
-        conn = Connection(self.bot, self.launcher, self.lease.cpus[0], 10)
+    def probe(self, game, state, name, count=1, income=0, opponent_lines=(), prepared=None):
+        conn = Connection(prepared or self.bot, self.launcher, self.lease.cpus[0], 10)
         evidence = {"scope": "synthetic decision probe, not a balance match",
                     "incomeAddedBetweenTurns": income, "opponentLinesEachTurn": opponent_lines, "replies": []}
         inputs = [game.init_message(state, 0)]
@@ -190,6 +190,20 @@ class ZooStrategyTests(unittest.TestCase):
                     self.assertLess(abs(soldier.x - 10) + abs(soldier.y - 8), 3)
                 else:
                     self.assertLess(abs(soldier.x - 21) + abs(soldier.y - 21), 21)
+
+    def test_economy_changes_to_army_at_the_fixed_twelve_worker_target(self):
+        eco = prepare(ROOT / "bots/public/Z-eco", self.root / "prepared-eco",
+                      self.launcher, self.lease.cpus[0])
+        self.assertIsNone(eco.compile_fault)
+        for workers, kind in ((11, "W"), (12, "S")):
+            with self.subTest(workers=workers):
+                game, state = fresh()
+                for i in range(workers):
+                    state.add_unit(0, "W", (3 + i % 4, 3 + i // 4))
+                state.players[0].energy = 100
+                state.turn = 40
+                replies = self.probe(game, state, f"eco-fixed-target-{workers}", prepared=eco)
+                self.assertTrue(any(line.startswith(f"SPAWN {kind}") for line in replies[0]), replies)
 
     def test_nearby_army_can_override_tower_reserve(self):
         game, state = self.budget_state(near=True)
