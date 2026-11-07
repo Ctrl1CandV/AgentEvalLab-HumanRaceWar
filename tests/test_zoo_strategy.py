@@ -205,6 +205,24 @@ class ZooStrategyTests(unittest.TestCase):
                 replies = self.probe(game, state, f"eco-fixed-target-{workers}", prepared=eco)
                 self.assertTrue(any(line.startswith(f"SPAWN {kind}") for line in replies[0]), replies)
 
+    def test_distant_mining_worker_does_not_recall_the_main_army(self):
+        game, state = fresh()
+        soldier = state.add_unit(0, "S", (15, 8))
+        state.add_unit(1, "W", (6, 6))
+        state.players[0].energy = 0
+        state.turn = 150
+        self.probe(game, state, "ignore-distant-mining-worker")
+        self.assertLess(abs(soldier.x - 21) + abs(soldier.y - 21), 19)
+
+    def test_worker_at_the_home_base_still_triggers_interception(self):
+        game, state = fresh()
+        soldier = state.add_unit(0, "S", (8, 2))
+        state.add_unit(1, "W", (3, 2))
+        state.players[0].energy = 0
+        state.turn = 150
+        self.probe(game, state, "intercept-base-worker")
+        self.assertLess(abs(soldier.x - 3) + abs(soldier.y - 2), 5)
+
     def test_nearby_army_can_override_tower_reserve(self):
         game, state = self.budget_state(near=True)
         replies = self.probe(game, state, "emergency-budget")

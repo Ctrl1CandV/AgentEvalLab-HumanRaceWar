@@ -302,7 +302,10 @@ public:
                 int nearest=inf;
                 // Nearby or midfield troops intercept a closer home threat;
                 // a force already nearer the enemy base keeps advancing.
-                for (const auto& t:targets) if ((t.kind=='S' || t.kind=='W') && distance(home)[cell(t.pos)]<=12 &&
+                // A mining worker is not an army raid. Workers only trigger
+                // this response when approaching the base's immediate perimeter.
+                for (const auto& t:targets) if (((t.kind=='S' && distance(home)[cell(t.pos)]<=12) ||
+                        (t.kind=='W' && hrw::distance(home,t.pos)<=parameter("BASE_FIRE_RANGE")+1)) &&
                         (distance(t.pos)[start]<=12 || distance(t.pos)[start]<=distance(enemy)[start])) {
                     int d=distance(home)[cell(t.pos)];
                     if (d<nearest || (d==nearest && rank(t.pos)<rank(goal))) { goal=t.pos; nearest=d; }
