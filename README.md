@@ -4,7 +4,7 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 ## 现在进行到哪一步
 
-看 [STATUS.md](STATUS.md)。当前为 A 阶段引擎初版：有规则结算、消息解析和单元测试，尚无可运行的 bot 对局工具，不是已验收的竞技场。
+看 [STATUS.md](STATUS.md)。当前 A 阶段已打通沙箱内 Python/C++ 示例对局、gzip JSONL 回放及逐回合验证；地图集、动物园、平衡和效率验收尚未完成，不是已验收的竞技场。
 
 ## WSL 开发与交接
 
@@ -12,7 +12,7 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 在 WSL 终端运行 `hrw-dev`，启动器会进入项目并激活 `.venv` 后启动 pi。首次自行完成 `/login`、`/model`；信任当前项目后可使用 `/resume-phase-a` 或 `/process-review`。
 
-在主工作区检查可信引擎（不会启动 bot）：
+在主工作区运行开发检查（运行器测试中的 bot 与编译只在 bwrap 内执行）：
 
 ```sh
 cd ~/projects/AgentEvalLab-HumanRaceWar
@@ -20,7 +20,16 @@ cd ~/projects/AgentEvalLab-HumanRaceWar
 .venv/bin/python tools/run_tests.py
 ```
 
-86 项测试已在 Python 3.13.15 下通过，但 A 阶段整体尚未验收。新证据见 `data/python313-tests.json`、`data/wsl-setup.json` 和 `logs/python313-*.log`。旧的 Python 3.10 开发记录与 Windows 转发工具 `tools/test_in_wsl.py` 保留为历史，不再作为主工作区入口。
+原 86 项引擎测试与迁移记录保留在 `data/python313-tests.json`、`data/wsl-setup.json` 和 `logs/python313-*.log`。新增运行器验证见 `data/runtime-tests.json`；用法与验证边界见 [docs/RUNTIME.md](docs/RUNTIME.md)。旧的 Python 3.10 开发记录与 Windows 转发工具 `tools/test_in_wsl.py` 保留为历史，不再作为主工作区入口。
+
+打通开发用首局：
+
+```sh
+.venv/bin/python -m arena match --a sdk/python/example --b sdk/cpp/example --map tests/fixtures/smoke.map
+.venv/bin/python -m arena replay verify <命令输出的回放路径>
+```
+
+此地图只是测试 fixture，不计入正式地图或平衡验收。
 
 规则草稿见 [rules/rules.md](rules/rules.md)，测试覆盖与未验证范围见 [tests/COVERAGE.md](tests/COVERAGE.md)，暂定细节见 [docs/IMPLEMENTATION_NOTES.md](docs/IMPLEMENTATION_NOTES.md)。
 

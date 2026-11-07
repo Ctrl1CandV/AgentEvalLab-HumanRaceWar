@@ -1,6 +1,6 @@
 # 规则例子与验证边界
 
-当前入口：WSL 主工作区执行 `.venv/bin/python tools/run_tests.py`，或 `.venv/bin/python -m unittest discover -s tests -t . -v`。全部只用标准库，不启动 bot。2026-11-07 迁移后已用 Python 3.13.15 在 `PYTHONHASHSEED=0`、`1` 两个独立进程中各通过 86 项测试，另外归档确定性与协议测试；证据见 `data/python313-tests.json` 和 `logs/python313-*.log`。这不等于完成 A 阶段整体验收。
+当前入口：WSL 主工作区执行 `.venv/bin/python tools/run_tests.py`，或 `.venv/bin/python -m unittest discover -s tests -t . -v`。全部只用标准库；新增 `test_runtime.py` 会通过 bwrap 执行示例、故障 bot 和 C++ 编译，不会在宿主裸跑。2026-11-07 迁移时的引擎检查已用 Python 3.13.15 在 `PYTHONHASHSEED=0`、`1` 两个独立进程中各通过 86 项测试，另外归档确定性与协议测试；证据见 `data/python313-tests.json` 和 `logs/python313-*.log`。这不等于完成 A 阶段整体验收。
 
 初始及第 80 回合的状态哈希有固定回归值。旧的 `data/engine-tests.json`、`logs/engine-tests*.log` 与 Windows 转发工具 `tools/test_in_wsl.py` 保留为 Python 3.10 时期的历史记录；后续在 WSL 原生目录直接测试，不再经 Windows 临时副本。
 
@@ -27,12 +27,24 @@
 
 测试中的人工局面可刻意不满足地图生成器的资源布局验收，以便单独触发规则。它们不能作为 public 地图数量、动物园对局数或地图平衡数据。
 
+## 新增运行器与 SDK 开发检查
+
+`test_sdk.py` 的 2 项测试覆盖 Python SDK 字段、未知关键字、EOF、输出、曼哈顿距离与 BFS。`test_runtime.py` 的 19 项测试覆盖：
+
+- 分块/CRLF/Unicode 空白分帧，超长伪 END、有界存储和持续输出后的标记恢复；非法 UTF-8 不膨胀字节预算、不丢弃后续合法指令；
+- Python/C++ 示例完整 300 回合、采矿 bot 胜 idle、回放 show/summary/verify，以及地图、指令、警告、哈希、结果篡改和不完整回放；
+- 单方/双方崩溃、无 READY、初始化死循环、回合 CPU/墙钟超时、时间储备只扣超额不回充；
+- 编译失败、乱码/洪泛输出仍只记警告、无 END 洪泛被限时、stderr 64 KiB 上限；
+- 真实 bwrap 环境清理、无 HOME/项目挂载、只读源码、无外网接口、资源限额、绑核和跨命名空间 CPU 时钟；
+- 缺少 bwrap 和真实沙箱准备失败不算 bot 输，初次加三次重试全部归档，源码符号链接拒绝。
+
+共 107 项开发测试；证据见 `data/runtime-tests.json`、`logs/runtime-*.log`。所有测试对局及失败尝试保留在 `runs/development/runtime/`，不挑选结果。CLI 首局另存 `runs/development/cli-smoke/`；代表性公开回放见 `replays/runtime-smoke.hrw.jsonl.gz`。以上仍不是 A 阶段总体验收。
+
 ## 明确尚未验证
 
-- 完整回放文件的重放与哈希核对（Python 3.13.15 引擎测试已通过，但回放工具尚未实现）。
-- 实际 bot 的 UTF-8 字节流、READY/END 分帧、输出洪泛、崩溃、编译失败、死循环和超时。
-- 完整 bwrap 隔离、资源限额、CPU 绑核、跨命名空间 CPU 时钟、速度折算和框架重试。迁移仅补做可信 Python/C++ 环境探针，不是故障 bot 或沙箱安全验收。
-- 地图生成器全部检查、公开与练习地图集、SDK、动物园和统计验收。
-- 引擎 p95、运行器开销、整局速度及评分效率。
+- 完整沙箱攻击面、进程树总资源与短命子进程计量、线程/进程树清理矩阵、速度折算；单进程约束尚未强制执行。
+- 多局全局独占核、并行调度、断点续跑、共享结果库及正式工作区 plain 集成。
+- 地图生成器全部检查、公开与练习地图集、动物园和统计验收。
+- 引擎 p95、运行器开销、满负荷整局速度及评分效率。
 
-因此测试通过只表示 A1 引擎的开发检查通过，不能填报 A 阶段的 10 项总体验收通过。
+因此测试通过只表示引擎及首局运行器的开发检查通过，不能填报 A 阶段的 10 项总体验收通过。
