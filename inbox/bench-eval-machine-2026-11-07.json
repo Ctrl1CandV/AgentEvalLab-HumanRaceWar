@@ -1,0 +1,4103 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "sandbox": "bwrap",
+  "scope": "CPU load calibration, not full efficiency acceptance",
+  "workloadSha256": "6ad783455d6c625c0675f8b29d8e6af843f463e993ee4490a2b9baee20076348",
+  "jobs": 1,
+  "samples": 3,
+  "cpus": [
+    0,
+    1
+  ],
+  "startedAt": "2026-11-07T14:34:07.711120+00:00",
+  "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1",
+  "machine": {
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "availableCpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "kernel": "6.18.54.1-microsoft-standard-WSL2",
+    "architecture": "x86_64",
+    "memoryBytes": 14455549952
+  },
+  "runs": [
+    {
+      "instances": 1,
+      "sample": 0,
+      "status": "complete",
+      "cpus": [
+        0
+      ],
+      "runnerCpu": 1,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n1-sample0",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23151465,
+          "wall_ns": 52342722,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 259181615 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 262588175,
+          "wall_ns": 487324792,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        259181615
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 1,
+      "sample": 1,
+      "status": "complete",
+      "cpus": [
+        0
+      ],
+      "runnerCpu": 1,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n1-sample1",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23196541,
+          "wall_ns": 50744621,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 251759735 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 254085555,
+          "wall_ns": 342254380,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        251759735
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 1,
+      "sample": 2,
+      "status": "complete",
+      "cpus": [
+        0
+      ],
+      "runnerCpu": 1,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n1-sample2",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21782692,
+          "wall_ns": 48395023,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 283833001 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 286544959,
+          "wall_ns": 574659831,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        283833001
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 2,
+      "sample": 0,
+      "status": "complete",
+      "cpus": [
+        0,
+        1
+      ],
+      "runnerCpu": 2,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n2-sample0",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25165051,
+          "wall_ns": 57974435,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24435968,
+          "wall_ns": 52306350,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 269159137 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 270189863,
+          "wall_ns": 546098444,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 276974880 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 280566387,
+          "wall_ns": 561589190,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        269159137,
+        276974880
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 2,
+      "sample": 1,
+      "status": "complete",
+      "cpus": [
+        0,
+        1
+      ],
+      "runnerCpu": 2,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n2-sample1",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22013945,
+          "wall_ns": 54509388,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 20232315,
+          "wall_ns": 48737349,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 254348979 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 257751984,
+          "wall_ns": 514193603,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 282509577 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 286376186,
+          "wall_ns": 570733801,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        254348979,
+        282509577
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 2,
+      "sample": 2,
+      "status": "complete",
+      "cpus": [
+        0,
+        1
+      ],
+      "runnerCpu": 2,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n2-sample2",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26617744,
+          "wall_ns": 62867486,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 19288006,
+          "wall_ns": 41273489,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 282831559 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 286743118,
+          "wall_ns": 571458027,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 277518890 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 278150761,
+          "wall_ns": 556290687,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        282831559,
+        277518890
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 6,
+      "sample": 0,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runnerCpu": 6,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n6-sample0",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23986273,
+          "wall_ns": 50658238,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22201785,
+          "wall_ns": 47385797,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24018615,
+          "wall_ns": 51432227,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 18117904,
+          "wall_ns": 44465395,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 19077444,
+          "wall_ns": 51641594,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22976965,
+          "wall_ns": 55475059,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 263384679 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 266525513,
+          "wall_ns": 531417233,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 267045677 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 268683919,
+          "wall_ns": 540166384,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 246765650 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 247183452,
+          "wall_ns": 496682488,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 258964135 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 260077877,
+          "wall_ns": 521300282,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 277967027 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 279231803,
+          "wall_ns": 561519719,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 248772658 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 251606351,
+          "wall_ns": 502904806,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        263384679,
+        267045677,
+        246765650,
+        258964135,
+        277967027,
+        248772658
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 6,
+      "sample": 1,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runnerCpu": 6,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n6-sample1",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 17922795,
+          "wall_ns": 58331927,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25332888,
+          "wall_ns": 55774911,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23847643,
+          "wall_ns": 54516108,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 20866771,
+          "wall_ns": 48325396,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21050525,
+          "wall_ns": 52033759,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21321026,
+          "wall_ns": 47327456,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 249888488 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 249949030,
+          "wall_ns": 503461422,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 262388524 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 265721875,
+          "wall_ns": 530652648,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 276852494 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 279496926,
+          "wall_ns": 559646469,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 261828111 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 263333323,
+          "wall_ns": 524744366,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 258181078 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 260017062,
+          "wall_ns": 521413238,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 275018705 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 278687924,
+          "wall_ns": 559966360,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        249888488,
+        262388524,
+        276852494,
+        261828111,
+        258181078,
+        275018705
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 6,
+      "sample": 2,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "runnerCpu": 6,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n6-sample2",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21668001,
+          "wall_ns": 46898551,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 19628688,
+          "wall_ns": 48017159,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21997533,
+          "wall_ns": 48139629,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 19862824,
+          "wall_ns": 43839358,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21130110,
+          "wall_ns": 45804189,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24697910,
+          "wall_ns": 51138005,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 258676015 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 260584693,
+          "wall_ns": 518258113,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 271280802 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 273631551,
+          "wall_ns": 546898412,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 260293524 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 262486488,
+          "wall_ns": 524288688,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 259762083 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 260864451,
+          "wall_ns": 525336304,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 248093549 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 250208723,
+          "wall_ns": 502504033,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 262409538 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 264530527,
+          "wall_ns": 530623126,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        258676015,
+        271280802,
+        260293524,
+        259762083,
+        248093549,
+        262409538
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 12,
+      "sample": 0,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "runnerCpu": 12,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n12-sample0",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22164091,
+          "wall_ns": 92261450,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23346391,
+          "wall_ns": 87186830,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23338478,
+          "wall_ns": 76539871,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 19987228,
+          "wall_ns": 68854483,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21759005,
+          "wall_ns": 63324370,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22572522,
+          "wall_ns": 55108086,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26552991,
+          "wall_ns": 56402272,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26779771,
+          "wall_ns": 55692466,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27578884,
+          "wall_ns": 32980147,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28476337,
+          "wall_ns": 40986549,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27443111,
+          "wall_ns": 33312505,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27009162,
+          "wall_ns": 44783469,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 280458026 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 282451935,
+          "wall_ns": 565742391,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 266849560 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 269745268,
+          "wall_ns": 538148105,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 279555867 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 281487415,
+          "wall_ns": 565201174,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 280222584 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 283677037,
+          "wall_ns": 566682709,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 278162808 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 280402300,
+          "wall_ns": 561635918,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 279991416 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 281763349,
+          "wall_ns": 561074303,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 283709839 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 286809637,
+          "wall_ns": 574332084,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 270285021 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 270940500,
+          "wall_ns": 543878992,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 261860966 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 265146995,
+          "wall_ns": 266489676,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 289880727 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 291255479,
+          "wall_ns": 292715769,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 275886573 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 276998078,
+          "wall_ns": 324413271,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 281815924 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 282498602,
+          "wall_ns": 284074955,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        280458026,
+        266849560,
+        279555867,
+        280222584,
+        278162808,
+        279991416,
+        283709839,
+        270285021,
+        261860966,
+        289880727,
+        275886573,
+        281815924
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 12,
+      "sample": 1,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "runnerCpu": 12,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n12-sample1",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22640022,
+          "wall_ns": 99106025,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25729836,
+          "wall_ns": 91374761,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27122867,
+          "wall_ns": 83552847,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26171251,
+          "wall_ns": 75793321,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24598786,
+          "wall_ns": 67073961,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23425562,
+          "wall_ns": 59597515,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26091998,
+          "wall_ns": 64694131,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24285498,
+          "wall_ns": 66197872,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 30212023,
+          "wall_ns": 47542954,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27489540,
+          "wall_ns": 37976506,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24742882,
+          "wall_ns": 34218849,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 32257875,
+          "wall_ns": 53963056,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 272416529 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 275656443,
+          "wall_ns": 553345476,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 278806083 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 281908659,
+          "wall_ns": 565028134,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 261344672 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 262692556,
+          "wall_ns": 527461608,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 280136873 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 282106662,
+          "wall_ns": 563997280,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 279749929 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 280873365,
+          "wall_ns": 563231298,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 263962364 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 265422207,
+          "wall_ns": 531364067,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 260913309 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 263439345,
+          "wall_ns": 528535428,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 285472827 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 286404645,
+          "wall_ns": 574970688,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 316227174 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 319408464,
+          "wall_ns": 321281574,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 280190309 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 284111251,
+          "wall_ns": 285939780,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 272228024 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 276065369,
+          "wall_ns": 357941007,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 311500067 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 312531736,
+          "wall_ns": 335022284,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        272416529,
+        278806083,
+        261344672,
+        280136873,
+        279749929,
+        263962364,
+        260913309,
+        285472827,
+        316227174,
+        280190309,
+        272228024,
+        311500067
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 12,
+      "sample": 2,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "runnerCpu": 12,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n12-sample2",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26398940,
+          "wall_ns": 89760697,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26918943,
+          "wall_ns": 85385839,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23043040,
+          "wall_ns": 78838524,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25273403,
+          "wall_ns": 69628061,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26093260,
+          "wall_ns": 61804347,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21739626,
+          "wall_ns": 53912036,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24204704,
+          "wall_ns": 58293179,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21290918,
+          "wall_ns": 50080968,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23023692,
+          "wall_ns": 48159083,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27257647,
+          "wall_ns": 42559529,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28497185,
+          "wall_ns": 41193717,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28504584,
+          "wall_ns": 57427626,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 269767864 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 271829692,
+          "wall_ns": 541991448,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 274164435 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 274922359,
+          "wall_ns": 552850392,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 262175164 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 265518676,
+          "wall_ns": 527426770,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 265675041 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 268284120,
+          "wall_ns": 534513754,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 287833279 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 289164498,
+          "wall_ns": 577396045,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 265232867 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 265659481,
+          "wall_ns": 532456457,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 278998319 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 280111641,
+          "wall_ns": 561276240,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 279292420 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 282092034,
+          "wall_ns": 562705604,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 278666959 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 282389288,
+          "wall_ns": 283649429,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 298640067 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 301755345,
+          "wall_ns": 303741147,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 283817928 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 286086119,
+          "wall_ns": 302301595,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 282581390 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 283038020,
+          "wall_ns": 284681554,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        269767864,
+        274164435,
+        262175164,
+        265675041,
+        287833279,
+        265232867,
+        278998319,
+        279292420,
+        278666959,
+        298640067,
+        283817928,
+        282581390
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 16,
+      "sample": 0,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "runnerCpu": 16,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n16-sample0",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25628327,
+          "wall_ns": 132565099,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27015516,
+          "wall_ns": 121140813,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27829837,
+          "wall_ns": 116242233,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27001444,
+          "wall_ns": 105931747,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 19727129,
+          "wall_ns": 99785973,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23142468,
+          "wall_ns": 89787587,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25522643,
+          "wall_ns": 82380561,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25878021,
+          "wall_ns": 76025844,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25677909,
+          "wall_ns": 67904937,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 30200565,
+          "wall_ns": 57766305,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25105417,
+          "wall_ns": 52220010,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 30396770,
+          "wall_ns": 46987961,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 31276358,
+          "wall_ns": 40270603,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28473966,
+          "wall_ns": 39653915,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28772007,
+          "wall_ns": 53393408,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23658988,
+          "wall_ns": 50753625,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 275719244 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 279365480,
+          "wall_ns": 557515028,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 268991613 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 272892815,
+          "wall_ns": 545546739,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 281201676 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 281764412,
+          "wall_ns": 566270507,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 265612167 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 268647486,
+          "wall_ns": 536821500,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 273780350 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 276605586,
+          "wall_ns": 552482691,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 251529345 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 253997686,
+          "wall_ns": 508228733,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 281978723 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 284771720,
+          "wall_ns": 572464495,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 268782670 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 270117009,
+          "wall_ns": 542899338,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 282422961 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 285074400,
+          "wall_ns": 420442863,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 283505377 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 284055372,
+          "wall_ns": 304415912,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 286689737 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 290533099,
+          "wall_ns": 425473711,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 255457504 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 255617245,
+          "wall_ns": 258500493,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 251436499 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 254828785,
+          "wall_ns": 257161015,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 263423166 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 267463071,
+          "wall_ns": 269667780,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 276397259 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 278960191,
+          "wall_ns": 376291112,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 252803325 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 253689141,
+          "wall_ns": 466645452,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        275719244,
+        268991613,
+        281201676,
+        265612167,
+        273780350,
+        251529345,
+        281978723,
+        268782670,
+        282422961,
+        283505377,
+        286689737,
+        255457504,
+        251436499,
+        263423166,
+        276397259,
+        252803325
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 16,
+      "sample": 1,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "runnerCpu": 16,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n16-sample1",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21844103,
+          "wall_ns": 128513694,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28570370,
+          "wall_ns": 123251190,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23937133,
+          "wall_ns": 114190380,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24730544,
+          "wall_ns": 105723782,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21144386,
+          "wall_ns": 94199390,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22935757,
+          "wall_ns": 86706934,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27099941,
+          "wall_ns": 79429039,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21497496,
+          "wall_ns": 71232075,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25398056,
+          "wall_ns": 63846359,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26514064,
+          "wall_ns": 57693208,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27584656,
+          "wall_ns": 51626336,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28626351,
+          "wall_ns": 52474604,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24174485,
+          "wall_ns": 42378106,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22793047,
+          "wall_ns": 57153535,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 20410868,
+          "wall_ns": 42934876,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21301249,
+          "wall_ns": 50782397,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 255258540 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 259055149,
+          "wall_ns": 519671087,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 267659176 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 271281556,
+          "wall_ns": 543420456,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 252550643 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 253269378,
+          "wall_ns": 508524618,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 273554756 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 274826411,
+          "wall_ns": 553130210,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 289167967 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 292505146,
+          "wall_ns": 587419265,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 247824288 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 251018711,
+          "wall_ns": 503189041,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 265482690 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 265984580,
+          "wall_ns": 536480544,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 269541976 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 270152682,
+          "wall_ns": 544367343,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 265029329 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 266741925,
+          "wall_ns": 269473986,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 251819983 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 254857504,
+          "wall_ns": 395023740,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 281265240 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 282087325,
+          "wall_ns": 452766793,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 255026828 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 257770723,
+          "wall_ns": 462859210,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 272919056 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 273508710,
+          "wall_ns": 276809806,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 278830410 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 279883561,
+          "wall_ns": 425056652,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 268864207 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 271920652,
+          "wall_ns": 274851101,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 296775637 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 297349519,
+          "wall_ns": 300557040,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        255258540,
+        267659176,
+        252550643,
+        273554756,
+        289167967,
+        247824288,
+        265482690,
+        269541976,
+        265029329,
+        251819983,
+        281265240,
+        255026828,
+        272919056,
+        278830410,
+        268864207,
+        296775637
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 16,
+      "sample": 2,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "runnerCpu": 16,
+      "fullSaturationDiagnostic": false,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n16-sample2",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22706791,
+          "wall_ns": 130992628,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25947590,
+          "wall_ns": 120135022,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24970268,
+          "wall_ns": 114426041,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23429765,
+          "wall_ns": 99816513,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23439896,
+          "wall_ns": 94908698,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28128703,
+          "wall_ns": 84743328,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21379135,
+          "wall_ns": 80011096,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22025037,
+          "wall_ns": 68559613,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23529352,
+          "wall_ns": 60688582,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22844991,
+          "wall_ns": 57418052,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27499084,
+          "wall_ns": 55753312,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 29492691,
+          "wall_ns": 43834978,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27164311,
+          "wall_ns": 61076954,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27525975,
+          "wall_ns": 44446831,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23666777,
+          "wall_ns": 38689267,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28052177,
+          "wall_ns": 39094965,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 265085228 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 267436054,
+          "wall_ns": 716747026,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 250455689 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 253558886,
+          "wall_ns": 505432812,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 256229734 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 257657663,
+          "wall_ns": 515582509,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 256187437 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 258597439,
+          "wall_ns": 516447676,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 268044789 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 269693105,
+          "wall_ns": 539988768,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 289664891 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 292289878,
+          "wall_ns": 584995707,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 302789794 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 304595601,
+          "wall_ns": 392098992,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 268094455 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 270824378,
+          "wall_ns": 377016783,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 281064618 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 282056426,
+          "wall_ns": 411271399,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 256179641 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 260334376,
+          "wall_ns": 466413505,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 268046008 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 271975203,
+          "wall_ns": 274260633,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 273550197 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 275233339,
+          "wall_ns": 415905572,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 258765506 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 261603825,
+          "wall_ns": 345122249,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 281083402 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 282161273,
+          "wall_ns": 351187307,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 239869174 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 242285745,
+          "wall_ns": 244616155,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 231897685 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 231993774,
+          "wall_ns": 234430397,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        265085228,
+        250455689,
+        256229734,
+        256187437,
+        268044789,
+        289664891,
+        302789794,
+        268094455,
+        281064618,
+        256179641,
+        268046008,
+        273550197,
+        258765506,
+        281083402,
+        239869174,
+        231897685
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 20,
+      "sample": 0,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "runnerCpu": null,
+      "fullSaturationDiagnostic": true,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n20-sample0",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24867577,
+          "wall_ns": 134007538,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22900542,
+          "wall_ns": 128958271,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 18384628,
+          "wall_ns": 118266922,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22063511,
+          "wall_ns": 117227382,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24096266,
+          "wall_ns": 112657491,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23604824,
+          "wall_ns": 104612178,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26604400,
+          "wall_ns": 94105370,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21352256,
+          "wall_ns": 86045239,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27144185,
+          "wall_ns": 77451553,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26377570,
+          "wall_ns": 75159577,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 29684448,
+          "wall_ns": 70428057,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23147956,
+          "wall_ns": 65688524,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26226733,
+          "wall_ns": 61138160,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28788920,
+          "wall_ns": 55433152,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28929055,
+          "wall_ns": 48354753,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26024083,
+          "wall_ns": 39852706,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27924759,
+          "wall_ns": 32867381,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25554460,
+          "wall_ns": 28970087,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28331150,
+          "wall_ns": 31974923,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27357379,
+          "wall_ns": 35755986,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 269310427 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 272539780,
+          "wall_ns": 551312016,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 284643059 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 285747364,
+          "wall_ns": 576760678,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 292702038 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 296048057,
+          "wall_ns": 595010255,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 261413107 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 263206297,
+          "wall_ns": 529256716,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 281692257 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 283398547,
+          "wall_ns": 569387931,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 305340319 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 307766586,
+          "wall_ns": 614125862,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 258917670 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 259333922,
+          "wall_ns": 524135092,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 248840443 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 250144652,
+          "wall_ns": 500954887,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 245369473 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 247674697,
+          "wall_ns": 353879130,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 258801174 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 262638779,
+          "wall_ns": 332340172,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 259233568 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 260775759,
+          "wall_ns": 433215313,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 273295279 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 273862356,
+          "wall_ns": 472300456,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 226569509 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 226957836,
+          "wall_ns": 320132959,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 260213117 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 260816146,
+          "wall_ns": 336179417,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 273435110 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 275127199,
+          "wall_ns": 281159290,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 317952128 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 320823245,
+          "wall_ns": 346258384,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 226960477 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 228141751,
+          "wall_ns": 237514024,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 259799487 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 262596915,
+          "wall_ns": 270362283,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 331754905 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 332924280,
+          "wall_ns": 340707933,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 319757335 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 322866164,
+          "wall_ns": 330579213,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        269310427,
+        284643059,
+        292702038,
+        261413107,
+        281692257,
+        305340319,
+        258917670,
+        248840443,
+        245369473,
+        258801174,
+        259233568,
+        273295279,
+        226569509,
+        260213117,
+        273435110,
+        317952128,
+        226960477,
+        259799487,
+        331754905,
+        319757335
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 20,
+      "sample": 1,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "runnerCpu": null,
+      "fullSaturationDiagnostic": true,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n20-sample1",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24792776,
+          "wall_ns": 151874790,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23726814,
+          "wall_ns": 144494852,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23924441,
+          "wall_ns": 137745235,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25219611,
+          "wall_ns": 133978692,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 20583696,
+          "wall_ns": 129767709,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22690265,
+          "wall_ns": 121626221,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 29151383,
+          "wall_ns": 113550150,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24853368,
+          "wall_ns": 105795278,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25177803,
+          "wall_ns": 97426509,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22883310,
+          "wall_ns": 94161685,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26458113,
+          "wall_ns": 89614509,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26565805,
+          "wall_ns": 82698749,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27528716,
+          "wall_ns": 74591567,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22682023,
+          "wall_ns": 69724567,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27282268,
+          "wall_ns": 63606545,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 30347903,
+          "wall_ns": 56596630,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28084256,
+          "wall_ns": 48699223,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26031380,
+          "wall_ns": 52493814,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25289646,
+          "wall_ns": 53592596,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24807323,
+          "wall_ns": 38320665,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 315289457 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 316796872,
+          "wall_ns": 644821449,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 271103163 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 272613432,
+          "wall_ns": 552591920,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 291433807 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 292970259,
+          "wall_ns": 588590180,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 288504043 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 291603325,
+          "wall_ns": 586236595,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 318705763 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 319837748,
+          "wall_ns": 644397122,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 289101026 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 292909648,
+          "wall_ns": 590931523,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 269426360 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 270401020,
+          "wall_ns": 544010208,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 302805150 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 303700275,
+          "wall_ns": 612139413,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 255203032 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 258244512,
+          "wall_ns": 262038340,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 297912297 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 301413825,
+          "wall_ns": 438538501,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 244899959 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 247909573,
+          "wall_ns": 325983468,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 271129413 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 271633489,
+          "wall_ns": 363483207,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 270769296 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 271664588,
+          "wall_ns": 423877701,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 287090988 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 287846680,
+          "wall_ns": 291815183,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 276095394 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 276437440,
+          "wall_ns": 371256659,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 257178426 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 257751142,
+          "wall_ns": 347504784,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 279662251 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 283067279,
+          "wall_ns": 298343400,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 266827484 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 266901155,
+          "wall_ns": 271053627,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 342777969 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 345203764,
+          "wall_ns": 409540915,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 296769268 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 297639453,
+          "wall_ns": 375806992,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        315289457,
+        271103163,
+        291433807,
+        288504043,
+        318705763,
+        289101026,
+        269426360,
+        302805150,
+        255203032,
+        297912297,
+        244899959,
+        271129413,
+        270769296,
+        287090988,
+        276095394,
+        257178426,
+        279662251,
+        266827484,
+        342777969,
+        296769268
+      ],
+      "checksum": 6597450476956493677
+    },
+    {
+      "instances": 20,
+      "sample": 2,
+      "status": "complete",
+      "cpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "runnerCpu": null,
+      "fullSaturationDiagnostic": true,
+      "directory": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/n20-sample2",
+      "ready": [
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 23518717,
+          "wall_ns": 139822001,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 25789931,
+          "wall_ns": 130073666,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 18116700,
+          "wall_ns": 122699990,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 20735703,
+          "wall_ns": 115764251,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22924515,
+          "wall_ns": 107908065,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21585181,
+          "wall_ns": 99730885,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24555165,
+          "wall_ns": 92037661,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24007886,
+          "wall_ns": 84178815,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 28258999,
+          "wall_ns": 76259592,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22914931,
+          "wall_ns": 67414881,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22646241,
+          "wall_ns": 64492948,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 24033655,
+          "wall_ns": 60240483,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27674594,
+          "wall_ns": 53115638,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21439479,
+          "wall_ns": 48952887,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26549895,
+          "wall_ns": 40947874,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 21360645,
+          "wall_ns": 38773215,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 26095976,
+          "wall_ns": 36839949,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 29020673,
+          "wall_ns": 39224256,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 22922125,
+          "wall_ns": 34964391,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "READY"
+          ],
+          "cpu_ns": 27091230,
+          "wall_ns": 35770594,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "replies": [
+        {
+          "lines": [
+            "BENCH 276983080 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 277233993,
+          "wall_ns": 561551407,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 288806690 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 290508970,
+          "wall_ns": 582729351,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 285186302 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 286346123,
+          "wall_ns": 574388827,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 256168948 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 257990236,
+          "wall_ns": 518937910,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 288488711 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 291796656,
+          "wall_ns": 584336835,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 284300463 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 287700107,
+          "wall_ns": 576442163,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 233612093 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 235192640,
+          "wall_ns": 474788364,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 247265199 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 250049189,
+          "wall_ns": 499957639,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 270278782 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 274168209,
+          "wall_ns": 425042447,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 276556712 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 278394947,
+          "wall_ns": 295051866,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 291715064 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 295315409,
+          "wall_ns": 396557064,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 268560203 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 270228429,
+          "wall_ns": 370736651,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 299692879 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 301469859,
+          "wall_ns": 374722823,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 263948074 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 264729863,
+          "wall_ns": 393812189,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 231588514 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 234179116,
+          "wall_ns": 379678181,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 263745297 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 264618026,
+          "wall_ns": 273981629,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 237932621 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 241373833,
+          "wall_ns": 252639446,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 227517878 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 229253602,
+          "wall_ns": 238548332,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 226070027 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 226428860,
+          "wall_ns": 237296576,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        },
+        {
+          "lines": [
+            "BENCH 287436039 6597450476956493677",
+            "END"
+          ],
+          "cpu_ns": 291424474,
+          "wall_ns": 300994660,
+          "fault": null,
+          "clock": "process_cpu_clock"
+        }
+      ],
+      "cpuNs": [
+        276983080,
+        288806690,
+        285186302,
+        256168948,
+        288488711,
+        284300463,
+        233612093,
+        247265199,
+        270278782,
+        276556712,
+        291715064,
+        268560203,
+        299692879,
+        263948074,
+        231588514,
+        263745297,
+        237932621,
+        227517878,
+        226070027,
+        287436039
+      ],
+      "checksum": 6597450476956493677
+    }
+  ],
+  "curve": [
+    {
+      "instances": 1,
+      "medianCpuNs": 259181615,
+      "minCpuNs": 251759735,
+      "maxCpuNs": 283833001,
+      "byCpuMedianNs": {
+        "0": 259181615
+      },
+      "runnerCpu": 1
+    },
+    {
+      "instances": 2,
+      "medianCpuNs": 277246885.0,
+      "minCpuNs": 254348979,
+      "maxCpuNs": 282831559,
+      "byCpuMedianNs": {
+        "0": 269159137,
+        "1": 277518890
+      },
+      "runnerCpu": 2
+    },
+    {
+      "instances": 6,
+      "medianCpuNs": 261060817.5,
+      "minCpuNs": 246765650,
+      "maxCpuNs": 277967027,
+      "byCpuMedianNs": {
+        "0": 258676015,
+        "1": 267045677,
+        "2": 260293524,
+        "3": 259762083,
+        "4": 258181078,
+        "5": 262409538
+      },
+      "runnerCpu": 6
+    },
+    {
+      "instances": 12,
+      "medianCpuNs": 279145369.5,
+      "minCpuNs": 260913309,
+      "maxCpuNs": 316227174,
+      "byCpuMedianNs": {
+        "0": 272416529,
+        "1": 274164435,
+        "2": 262175164,
+        "3": 280136873,
+        "4": 279749929,
+        "5": 265232867,
+        "6": 278998319,
+        "7": 279292420,
+        "8": 278666959,
+        "9": 289880727,
+        "10": 275886573,
+        "11": 282581390
+      },
+      "runnerCpu": 12
+    },
+    {
+      "instances": 16,
+      "medianCpuNs": 268070231.5,
+      "minCpuNs": 231897685,
+      "maxCpuNs": 302789794,
+      "byCpuMedianNs": {
+        "0": 265085228,
+        "1": 267659176,
+        "2": 256229734,
+        "3": 265612167,
+        "4": 273780350,
+        "5": 251529345,
+        "6": 281978723,
+        "7": 268782670,
+        "8": 281064618,
+        "9": 256179641,
+        "10": 281265240,
+        "11": 255457504,
+        "12": 258765506,
+        "13": 278830410,
+        "14": 268864207,
+        "15": 252803325
+      },
+      "runnerCpu": 16
+    },
+    {
+      "instances": 20,
+      "medianCpuNs": 272212346.0,
+      "minCpuNs": 226070027,
+      "maxCpuNs": 342777969,
+      "byCpuMedianNs": {
+        "0": 276983080,
+        "1": 284643059,
+        "2": 291433807,
+        "3": 261413107,
+        "4": 288488711,
+        "5": 289101026,
+        "6": 258917670,
+        "7": 248840443,
+        "8": 255203032,
+        "9": 276556712,
+        "10": 259233568,
+        "11": 271129413,
+        "12": 270769296,
+        "13": 263948074,
+        "14": 273435110,
+        "15": 263745297,
+        "16": 237932621,
+        "17": 259799487,
+        "18": 331754905,
+        "19": 296769268
+      },
+      "runnerCpu": null
+    }
+  ],
+  "singleInstance": {
+    "instances": 1,
+    "medianCpuNs": 259181615,
+    "minCpuNs": 251759735,
+    "maxCpuNs": 283833001,
+    "byCpuMedianNs": {
+      "0": 259181615
+    },
+    "runnerCpu": 1
+  },
+  "reference": {
+    "kind": "local-development-idle",
+    "cpuNs": 259181615,
+    "machine": {
+      "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+      "availableCpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "kernel": "6.18.54.1-microsoft-standard-WSL2",
+      "architecture": "x86_64",
+      "memoryBytes": 14455549952
+    }
+  },
+  "loadedMedianCpuNs": 277246885.0,
+  "speedFactor": 1.0697012016072205,
+  "checksum": 6597450476956493677,
+  "measuredHarnessCpuSeconds": 1.135373936,
+  "recordedBenchmarkCpuSeconds": 46.477012908,
+  "resultFile": "/home/claude-dev/hrw-bench-reference.json/023262de04024d58b678dd5e27c7d8f1/result.json"
+}
