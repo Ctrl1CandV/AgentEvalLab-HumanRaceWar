@@ -165,6 +165,32 @@ class ZooStrategyTests(unittest.TestCase):
         self.probe(game, state, "nearby-interception")
         self.assertLess(abs(soldier.x - 6) + abs(soldier.y - 2), 2)
 
+    def test_midfield_army_answers_a_home_threat_closer_than_enemy_base(self):
+        game, state = fresh()
+        state.add_unit(0, "S", (4, 3))
+        soldier = state.add_unit(0, "S", (15, 8))
+        state.add_unit(1, "S", (6, 2))
+        state.players[0].energy = 0
+        state.turn = 150
+        self.probe(game, state, "midfield-interception")
+        self.assertLess(abs(soldier.x - 6) + abs(soldier.y - 2), 15)
+
+    def test_tower_deficit_switches_objective_without_disabling_local_clearing(self):
+        for own_tower in (False, True):
+            with self.subTest(own_tower=own_tower):
+                game, state = fresh()
+                soldier = state.add_unit(0, "S", (11, 10))
+                state.towers[(10, 8)] = Tower(1, 10, 8, 300)
+                if own_tower:
+                    state.towers[(13, 15)] = Tower(0, 13, 15, 300)
+                state.players[0].energy = 0
+                state.turn = 150
+                self.probe(game, state, f"tower-objective-{own_tower}")
+                if own_tower:
+                    self.assertLess(abs(soldier.x - 10) + abs(soldier.y - 8), 3)
+                else:
+                    self.assertLess(abs(soldier.x - 21) + abs(soldier.y - 21), 21)
+
     def test_nearby_army_can_override_tower_reserve(self):
         game, state = self.budget_state(near=True)
         replies = self.probe(game, state, "emergency-budget")

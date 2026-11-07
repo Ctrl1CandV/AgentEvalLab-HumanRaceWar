@@ -135,6 +135,8 @@ public:
             if (t[2]==you) depots.push_back(p); else targets.push_back({p,t[3],'T'});
         }
         targets.push_back({enemy,turn.players.at(other)[2],'B'});
+        int ownTowers=int(depots.size())-1;
+        int enemyTowers=int(built.size())-ownTowers;
         int energy=turn.players.at(you)[0];
         // All purposeful styles can use the free base shot defensively.
         const Target* shot=nullptr;
@@ -298,13 +300,16 @@ public:
             }
             if (config.mode==Mode::Balanced) {
                 int nearest=inf;
-                // Nearby troops intercept; a distant expedition must not
-                // abandon its objective for every intruder near home.
-                for (const auto& t:targets) if ((t.kind=='S' || t.kind=='W') && distance(home)[cell(t.pos)]<=12 && distance(t.pos)[start]<=12) {
+                // Nearby or midfield troops intercept a closer home threat;
+                // a force already nearer the enemy base keeps advancing.
+                for (const auto& t:targets) if ((t.kind=='S' || t.kind=='W') && distance(home)[cell(t.pos)]<=12 &&
+                        (distance(t.pos)[start]<=12 || distance(t.pos)[start]<=distance(enemy)[start])) {
                     int d=distance(home)[cell(t.pos)];
                     if (d<nearest || (d==nearest && rank(t.pos)<rank(goal))) { goal=t.pos; nearest=d; }
                 }
-                if (nearest==inf && turn.number>=assault) {
+                // When outnumbered in towers, pursue the other win condition
+                // instead of endlessly sweeping nearby scoring outposts.
+                if (nearest==inf && turn.number>=assault && ownTowers>=enemyTowers) {
                     int best=distance(enemy)[start];
                     for (const auto& t:targets) if (t.kind=='T') {
                         int d=distance(t.pos)[start]+8;
