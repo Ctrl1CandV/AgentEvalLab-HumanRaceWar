@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tools/measure_efficiency.py", line 159, in <module>
+    main()
+    ~~~~^^
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tools/measure_efficiency.py", line 117, in main
+    report['engine'] = engine_samples(map_path, out)
+                       ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tools/measure_efficiency.py", line 82, in engine_samples
+    current = deepcopy(state)  # Fixture/reset cost excluded explicitly.
+  File "/home/claude-dev/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/copy.py", line 163, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/home/claude-dev/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/copy.py", line 260, in _reconstruct
+    state = deepcopy(state, memo)
+  File "/home/claude-dev/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/copy.py", line 137, in deepcopy
+    y = copier(x, memo)
+  File "/home/claude-dev/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/copy.py", line 222, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ~~~~~~~~^^^^^^^^^^^^^
+  File "/home/claude-dev/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/copy.py", line 163, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+  File "/home/claude-dev/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/copy.py", line 260, in _reconstruct
+    state = deepcopy(state, memo)
+  File "/home/claude-dev/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/copy.py", line 137, in deepcopy
+    y = copier(x, memo)
+  File "/home/claude-dev/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/copy.py", line 222, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ~~~~~~~~^^^^^^^^^^^^^
+  File "/home/claude-dev/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/lib/python3.13/copy.py", line 152, in deepcopy
+    rv = reductor(4)
+TypeError: cannot pickle 'mappingproxy' object

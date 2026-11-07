@@ -1,0 +1,28 @@
+test_address_space_and_descriptors_are_hard_limited (tests.test_security_acceptance.SecurityAcceptanceTests.test_address_space_and_descriptors_are_hard_limited) ... ok
+test_bounded_compile_tree_is_removed_on_stop_and_records_policy_gap (tests.test_security_acceptance.SecurityAcceptanceTests.test_bounded_compile_tree_is_removed_on_stop_and_records_policy_gap) ... ok
+test_exited_thread_cpu_is_not_lost (tests.test_security_acceptance.SecurityAcceptanceTests.test_exited_thread_cpu_is_not_lost) ... ok
+test_no_network_or_host_paths_and_runtime_code_is_readonly (tests.test_security_acceptance.SecurityAcceptanceTests.test_no_network_or_host_paths_and_runtime_code_is_readonly) ... FAIL
+
+======================================================================
+FAIL: test_no_network_or_host_paths_and_runtime_code_is_readonly (tests.test_security_acceptance.SecurityAcceptanceTests.test_no_network_or_host_paths_and_runtime_code_is_readonly)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tests/test_security_acceptance.py", line 78, in test_no_network_or_host_paths_and_runtime_code_is_readonly
+            self.probe('isolation', '''import hrw, os, errno, socket
+            ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    assert set(os.environ)=={'PATH','HOME','TMPDIR','TMP','TEMP','LANG','LC_ALL','PYTHONHASHSEED','PYTHONDONTWRITEBYTECODE','PYTHONPATH'}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<12 lines>...
+    hrw.read_setup();hrw.ready();hrw.read_turn();hrw.send([]);hrw.read_turn()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ''')
+    ^^^^
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tests/test_security_acceptance.py", line 46, in probe
+    self.assertTrue(all(r.fault is None for r in replies), replies)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : [Reply(lines=[''], cpu_ns=30147200, wall_ns=33770400, fault='crash', clock='process_cpu_clock'), Reply(lines=[''], cpu_ns=0, wall_ns=53800, fault='crash', clock='process_cpu_clock')]
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.206s
+
+FAILED (failures=1)

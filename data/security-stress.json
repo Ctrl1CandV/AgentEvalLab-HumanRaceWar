@@ -1,0 +1,446 @@
+{
+  "scope": "bounded 6 concurrent games/12 bots; threaded timeout and cleanup",
+  "summary": {
+    "schemaVersion": 1,
+    "status": "complete",
+    "tasks": 6,
+    "completed": 6,
+    "remaining": 0,
+    "jobs": 6,
+    "sandbox": "bwrap",
+    "newExecutions": 6,
+    "directory": "runs/development/security-stress-v1/batch",
+    "results": "runs/development/security-stress-v1/batch/results.jsonl",
+    "infraErrorAttempts": 0
+  },
+  "results": [
+    {
+      "taskId": "8fc77872e36604f6b9914abd32a4d3a8e2f9a2f29c6300442da6a39719b9c306",
+      "result": {
+        "winner": null,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          "cpu_timeout"
+        ],
+        "timeouts": [
+          1,
+          1
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ],
+        "failedOrders": [
+          0,
+          0
+        ],
+        "failedMoves": [
+          0,
+          0
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          0,
+          0
+        ]
+      },
+      "botCpuNs": [
+        3620295700,
+        3619587400
+      ],
+      "harnessCpuNs": 33761700,
+      "wallNs": 3639046783,
+      "replay": "runs/development/security-stress-v1/batch/tasks/8fc77872e36604f6b9914abd32a4d3a8e2f9a2f29c6300442da6a39719b9c306/2a0cd98300c946b1885b4043d508dff0/matches/435a8d87082342fb9a71515373cbf331/attempt-0/435a8d87082342fb9a71515373cbf331.hrw.jsonl.gz"
+    },
+    {
+      "taskId": "8ac5a3c915d51e2709f001c3bf0491391bb9ddce886c374a6b3eb06673d5925c",
+      "result": {
+        "winner": null,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          "cpu_timeout"
+        ],
+        "timeouts": [
+          1,
+          1
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ],
+        "failedOrders": [
+          0,
+          0
+        ],
+        "failedMoves": [
+          0,
+          0
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          0,
+          0
+        ]
+      },
+      "botCpuNs": [
+        3621095800,
+        3622449600
+      ],
+      "harnessCpuNs": 34151700,
+      "wallNs": 3651223183,
+      "replay": "runs/development/security-stress-v1/batch/tasks/8ac5a3c915d51e2709f001c3bf0491391bb9ddce886c374a6b3eb06673d5925c/9ed57506dd5c4178a9ed375669b60cb6/matches/e439a665b3a04247ba8f6bed61a61271/attempt-0/e439a665b3a04247ba8f6bed61a61271.hrw.jsonl.gz"
+    },
+    {
+      "taskId": "dba5a2ec5df97d56e3ed34b739cd0480c8b704b16c4c0bde5da69e3715ac6eb6",
+      "result": {
+        "winner": null,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          "cpu_timeout"
+        ],
+        "timeouts": [
+          1,
+          1
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ],
+        "failedOrders": [
+          0,
+          0
+        ],
+        "failedMoves": [
+          0,
+          0
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          0,
+          0
+        ]
+      },
+      "botCpuNs": [
+        3622998600,
+        3619220800
+      ],
+      "harnessCpuNs": 33128600,
+      "wallNs": 3651553783,
+      "replay": "runs/development/security-stress-v1/batch/tasks/dba5a2ec5df97d56e3ed34b739cd0480c8b704b16c4c0bde5da69e3715ac6eb6/3a0c0534eb0f422cb255e8459ac70668/matches/b33f5fe60ce8450d93514ae3f8437e20/attempt-0/b33f5fe60ce8450d93514ae3f8437e20.hrw.jsonl.gz"
+    },
+    {
+      "taskId": "5acc11896e1105816a25e6eab6f1749ff6c903aca6a41935ac1d5f0f206bb370",
+      "result": {
+        "winner": null,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          "cpu_timeout"
+        ],
+        "timeouts": [
+          1,
+          1
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ],
+        "failedOrders": [
+          0,
+          0
+        ],
+        "failedMoves": [
+          0,
+          0
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          0,
+          0
+        ]
+      },
+      "botCpuNs": [
+        3623408700,
+        3623454400
+      ],
+      "harnessCpuNs": 32905300,
+      "wallNs": 3655290783,
+      "replay": "runs/development/security-stress-v1/batch/tasks/5acc11896e1105816a25e6eab6f1749ff6c903aca6a41935ac1d5f0f206bb370/ea46f9bbf73348f39e068d376fdb7909/matches/ca6e0ebdf9c143739e789ad1f750a0e8/attempt-0/ca6e0ebdf9c143739e789ad1f750a0e8.hrw.jsonl.gz"
+    },
+    {
+      "taskId": "0f2bb5102bbc2b24bba11062eec95ba56080886463d5d2bbd77d98d6ba590968",
+      "result": {
+        "winner": null,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          "cpu_timeout"
+        ],
+        "timeouts": [
+          1,
+          1
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ],
+        "failedOrders": [
+          0,
+          0
+        ],
+        "failedMoves": [
+          0,
+          0
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          0,
+          0
+        ]
+      },
+      "botCpuNs": [
+        3624676400,
+        3619106400
+      ],
+      "harnessCpuNs": 34540800,
+      "wallNs": 3644491483,
+      "replay": "runs/development/security-stress-v1/batch/tasks/0f2bb5102bbc2b24bba11062eec95ba56080886463d5d2bbd77d98d6ba590968/3da672dc06fd40138d543b472f63b3c4/matches/ae624c9046444081806b2ef42b2164f2/attempt-0/ae624c9046444081806b2ef42b2164f2.hrw.jsonl.gz"
+    },
+    {
+      "taskId": "8ebdee5e321881f1b08dc24110afa09956dfefc36084902b5d23ac1af09f332a",
+      "result": {
+        "winner": null,
+        "reason": "bot_fault",
+        "turns": 0,
+        "scores": [
+          0,
+          0
+        ],
+        "deposited": [
+          0,
+          0
+        ],
+        "base_hp": [
+          1000,
+          1000
+        ],
+        "faults": [
+          "cpu_timeout",
+          "cpu_timeout"
+        ],
+        "timeouts": [
+          1,
+          1
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          0,
+          0
+        ],
+        "failedOrders": [
+          0,
+          0
+        ],
+        "failedMoves": [
+          0,
+          0
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          0,
+          0
+        ]
+      },
+      "botCpuNs": [
+        3625857200,
+        3626034000
+      ],
+      "harnessCpuNs": 36796200,
+      "wallNs": 3657786283,
+      "replay": "runs/development/security-stress-v1/batch/tasks/8ebdee5e321881f1b08dc24110afa09956dfefc36084902b5d23ac1af09f332a/6597ce4b100d460abad97d390bfaf839/matches/c87a0c4bacd44c5e86d3758283080b50/attempt-0/c87a0c4bacd44c5e86d3758283080b50.hrw.jsonl.gz"
+    }
+  ],
+  "sandboxPidStatesAfterCompletion": {
+    "144113": null,
+    "144116": null,
+    "144119": null,
+    "144122": null,
+    "144124": null,
+    "144128": null,
+    "144151": null,
+    "144162": null,
+    "144165": null,
+    "144196": null,
+    "144197": null,
+    "144230": null
+  },
+  "replayAudit": {
+    "replays": [
+      {
+        "path": "runs/development/security-stress-v1/batch/tasks/0f2bb5102bbc2b24bba11062eec95ba56080886463d5d2bbd77d98d6ba590968/3da672dc06fd40138d543b472f63b3c4/matches/ae624c9046444081806b2ef42b2164f2/attempt-0/ae624c9046444081806b2ef42b2164f2.hrw.jsonl.gz",
+        "sha256": "41d1055590bbfa43c078e377d8fe3f90d55c2f60e84faf80dedf84e3c4f140e8",
+        "verified": true,
+        "verificationCpuNs": 1257500,
+        "error": null
+      },
+      {
+        "path": "runs/development/security-stress-v1/batch/tasks/5acc11896e1105816a25e6eab6f1749ff6c903aca6a41935ac1d5f0f206bb370/ea46f9bbf73348f39e068d376fdb7909/matches/ca6e0ebdf9c143739e789ad1f750a0e8/attempt-0/ca6e0ebdf9c143739e789ad1f750a0e8.hrw.jsonl.gz",
+        "sha256": "e1fb69ea00d93070a7472842108a3542713040614b666e708e703854f2bc73fd",
+        "verified": true,
+        "verificationCpuNs": 997200,
+        "error": null
+      },
+      {
+        "path": "runs/development/security-stress-v1/batch/tasks/8ac5a3c915d51e2709f001c3bf0491391bb9ddce886c374a6b3eb06673d5925c/9ed57506dd5c4178a9ed375669b60cb6/matches/e439a665b3a04247ba8f6bed61a61271/attempt-0/e439a665b3a04247ba8f6bed61a61271.hrw.jsonl.gz",
+        "sha256": "9995ef4e04502f910e33e6232e74303bc6fa824109d6ad708b280018b0007e22",
+        "verified": true,
+        "verificationCpuNs": 935900,
+        "error": null
+      },
+      {
+        "path": "runs/development/security-stress-v1/batch/tasks/8ebdee5e321881f1b08dc24110afa09956dfefc36084902b5d23ac1af09f332a/6597ce4b100d460abad97d390bfaf839/matches/c87a0c4bacd44c5e86d3758283080b50/attempt-0/c87a0c4bacd44c5e86d3758283080b50.hrw.jsonl.gz",
+        "sha256": "22cf090304207908ed15b0e9cf3f1791a6dde66a6f3d4cbb246649723320aa65",
+        "verified": true,
+        "verificationCpuNs": 1064900,
+        "error": null
+      },
+      {
+        "path": "runs/development/security-stress-v1/batch/tasks/8fc77872e36604f6b9914abd32a4d3a8e2f9a2f29c6300442da6a39719b9c306/2a0cd98300c946b1885b4043d508dff0/matches/435a8d87082342fb9a71515373cbf331/attempt-0/435a8d87082342fb9a71515373cbf331.hrw.jsonl.gz",
+        "sha256": "7a913a221d6b1395637838c64e43be44c317cab468c1a46b38e462cbd7a3c9b7",
+        "verified": true,
+        "verificationCpuNs": 900700,
+        "error": null
+      },
+      {
+        "path": "runs/development/security-stress-v1/batch/tasks/dba5a2ec5df97d56e3ed34b739cd0480c8b704b16c4c0bde5da69e3715ac6eb6/3a0c0534eb0f422cb255e8459ac70668/matches/b33f5fe60ce8450d93514ae3f8437e20/attempt-0/b33f5fe60ce8450d93514ae3f8437e20.hrw.jsonl.gz",
+        "sha256": "aadf247cff594f76b52653c32891ec4e44e94bc5519386fb0414fe7795e63777",
+        "verified": true,
+        "verificationCpuNs": 1131100,
+        "error": null
+      }
+    ],
+    "allVerified": true,
+    "verificationCpuNs": 6287300,
+    "wallNs": 214535599,
+    "scope": "Current verifier checks transcript semantics; not timing authenticity or an independent-machine rerun."
+  },
+  "allCorrectTimeouts": true,
+  "allKnownLeadersStopped": true,
+  "limits": "Leader/namespace cleanup plus separate descendant probes; not all kernel attack surfaces or hard aggregate compiler resources.",
+  "totalCpuHours": null
+}

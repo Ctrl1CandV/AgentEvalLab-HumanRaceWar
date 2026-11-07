@@ -1,0 +1,254 @@
+[
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/eb82b06a7960d1dcc3c4f874b52c22402ee2024bf9b5530b2406b00609b253cf/a95f686a534c41eda3ddd6b7d5269f48/matches/1b76e1fab8ba493e8b15557e4b52c768/attempt-0/1b76e1fab8ba493e8b15557e4b52c768.hrw.jsonl.gz",
+    "sha256": "85b3d96f48cfa5827600473c921a41a21bf3303332cd9d677d183a0b8b106dde",
+    "verified": true,
+    "verificationCpuNs": 118480900,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/ebf478b0ca307904ca9444fc2deb66ed4b85547bc83deac515fc5e45d18bf66b/f9158136094244038dac3e5c1a61461c/matches/f938578e76d1456b88f65c2663ecedad/attempt-0/f938578e76d1456b88f65c2663ecedad.hrw.jsonl.gz",
+    "sha256": "fe3ddba0037246dc8c1310a03df15990f446ce90c89bc89a9ecc5555f77cf39b",
+    "verified": true,
+    "verificationCpuNs": 81397600,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/ec16d0ec354f19d5c1022f13e61b5783342de2eefb320d117485cae8b073850e/3d13169efe53469889dee981030d55b9/matches/7b98102a3ed8477f80ed7b03b86d340c/attempt-0/7b98102a3ed8477f80ed7b03b86d340c.hrw.jsonl.gz",
+    "sha256": "4f44434424bc36fe2604f372047a6ff1dcdb29b27eadd4fbd17612e541e5797f",
+    "verified": true,
+    "verificationCpuNs": 65952200,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/ec2c7a5c0387580e9f8f519ff651892adfea1949351cb20f57c1f66b29bb6751/d947f5e043f645c890acb1ce2b24d4a8/matches/b42577685e6b417abe0dadc5cee2e83b/attempt-0/b42577685e6b417abe0dadc5cee2e83b.hrw.jsonl.gz",
+    "sha256": "d31d4288c4edd774a2e9e5ca6388f9d858073daeff19aa093aff632b259d6c02",
+    "verified": true,
+    "verificationCpuNs": 44903500,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/ecf8cdab3ac4359eea3c0290d394b61331804025e385cd529467f62198cb686d/9482e3197aac438bade6a7958485011f/matches/d891b526d2f84f118aca140ca4f7ca41/attempt-0/d891b526d2f84f118aca140ca4f7ca41.hrw.jsonl.gz",
+    "sha256": "7d065ba9842e5ebad03493e2f93bed811826b78988accdbe960495186d7bd442",
+    "verified": true,
+    "verificationCpuNs": 19521800,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/ee3a19e508d50079c3ce85880e516578079b8a9d3d2bd634a1bbcae7d81aa7f0/7f4ce858d8dc463786d03a43c3116611/matches/6a5cc6767a6b4487a16e107d205c1e80/attempt-0/6a5cc6767a6b4487a16e107d205c1e80.hrw.jsonl.gz",
+    "sha256": "d5e14498c70cce88425b580bb40e91b58ec8d309840efb0582169faaa99c431c",
+    "verified": true,
+    "verificationCpuNs": 84648200,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/ee824887531bc122fea9fc3e9a38903fab3f5094dde540526dee4fb19aa00353/2522e12e070547999a2450bf23274287/matches/57610d01dd6c4e3fb84bea15807c3dba/attempt-0/57610d01dd6c4e3fb84bea15807c3dba.hrw.jsonl.gz",
+    "sha256": "9ce610f02802d9abc554be87d5cf6fbcbb7c4a81f91d520f5f3a208084d2a39b",
+    "verified": true,
+    "verificationCpuNs": 29307300,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/ef13b6d96c3a294c0c94e6a718adb25c085057b5038e2f0966b7bfe5c66ef5f9/449d8392194a41f3a3e381cecf0bcab7/matches/b5f7b83f77ca42a28c78b81a75931ec3/attempt-0/b5f7b83f77ca42a28c78b81a75931ec3.hrw.jsonl.gz",
+    "sha256": "7fef948c500e107f3b4971ff21d9f2d635b854f7713a147b37038d8983e6b89d",
+    "verified": true,
+    "verificationCpuNs": 58415200,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/eff49109bcaf9ce8566ed33f36f59643dff7636424f27de1a9cce4ba4f96baa8/d1582d3c3780466183863b1c26c19628/matches/c144cb23e2824e958c695c64b521e1ea/attempt-0/c144cb23e2824e958c695c64b521e1ea.hrw.jsonl.gz",
+    "sha256": "8cd449f104177067f5cafb5b2d49fcd5fce89b8e526c7459a6b5508cbd94174b",
+    "verified": true,
+    "verificationCpuNs": 25869800,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f037fac7df24fa98f25fa873bac57fa86a8d86d274c40c7ae3e56cd311d23a25/d7470985567c492abf160b07fc8ba4bb/matches/e3e7524eb8594fbdbb98f4da5d13a4fc/attempt-0/e3e7524eb8594fbdbb98f4da5d13a4fc.hrw.jsonl.gz",
+    "sha256": "c2e60c86c0d2192fc21ba425866290858f08c0b2c45772dfe6fcbb1295fa4f3c",
+    "verified": true,
+    "verificationCpuNs": 56219700,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f076573d21f0240ad51e13381f708db71e80fe8335da04c9b80d7be4f7a7da67/5806f6a9246343e0a4b7754cb4ecab91/matches/4093f1fbeaf8469d8f8d33ea12514ba5/attempt-0/4093f1fbeaf8469d8f8d33ea12514ba5.hrw.jsonl.gz",
+    "sha256": "b4cbbe875d001db20b2a91475364bd81fdb34c83ae6cf88d9102674d668d0336",
+    "verified": true,
+    "verificationCpuNs": 63605100,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f2979d15db67111cbaffe6c788613b04fef2ea3ef869c454361291080d6bc215/1424539e77cf4771b4eca03a4220c4a5/matches/70c65d8437064d7f83345b3a1702bf13/attempt-0/70c65d8437064d7f83345b3a1702bf13.hrw.jsonl.gz",
+    "sha256": "37b1ceaee37a078b108632ca42380fa8f2e6712cee7fadf4f7acaf0b31c7d0d4",
+    "verified": true,
+    "verificationCpuNs": 59189400,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f2d2bd11fccb1cc2140e70923a29ffd982d000be7722d25e0539bc48d0d2f6e5/e0223ae328c04cfbbaa79bba9a22b04b/matches/f90a808d851c442a925d37c8170be44d/attempt-0/f90a808d851c442a925d37c8170be44d.hrw.jsonl.gz",
+    "sha256": "7b78a304dc314b84d41f5757254cdf5c239845eb1f348c0e253f89b689dd0893",
+    "verified": true,
+    "verificationCpuNs": 96538500,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f37d325aeb515def91fc0ee217704d5dcf6e53603fd3f6c3a73fa237a8ab5ef7/735b41c7799d44e9a2b9cee4f7363cc6/matches/fa465ca619a8443c8a320971a0b3385c/attempt-0/fa465ca619a8443c8a320971a0b3385c.hrw.jsonl.gz",
+    "sha256": "d481e2d10307395d623ef0ca9bb6af7a9bbbabe87ab81d010e39d052bdb69261",
+    "verified": true,
+    "verificationCpuNs": 41541300,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f3a9b40a6a7718a6b38b77cddebda7587d0b5264606ebb535cf8cf51d2cf25ea/e9e1e7f6f9154565acd73f3bcad174bc/matches/3462af6b7db747bcbcc8d6f4f718c8e1/attempt-0/3462af6b7db747bcbcc8d6f4f718c8e1.hrw.jsonl.gz",
+    "sha256": "0b03437bef89959403aa9e34e6fc5373b539689cb73eb890190edbac39ff744e",
+    "verified": true,
+    "verificationCpuNs": 70672400,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f3d2b1fe92a19b877815243139d0117da5689e28c8d85bebab7e2ce355402719/0126184659814ae5b0e55f294c0fa783/matches/332959b37adc4fca9fbea2b091c36610/attempt-0/332959b37adc4fca9fbea2b091c36610.hrw.jsonl.gz",
+    "sha256": "f16fa9f586eeddd4641467de9de601d98a887baeea8afff1d9f50c6238d7e9a3",
+    "verified": true,
+    "verificationCpuNs": 23563400,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f41fc16d8d2c8acc0cda0fcb6580ec217fefd9f2f9ce715817643d61b2675dfb/119f167bafd44eed9ccb3cde55639a18/matches/3f1d3fbf324b439bbbe4c0837c01c12c/attempt-0/3f1d3fbf324b439bbbe4c0837c01c12c.hrw.jsonl.gz",
+    "sha256": "49d8157535a861f0b1b0bc536645633fc195788add8fb1a3401ba9cf8447e26e",
+    "verified": true,
+    "verificationCpuNs": 50848000,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f4a67287efa225f4c7d09c704ed40862b160ee50cb931644702d6eeb37f6d16a/2afe6a7abf7043d5a5bbcccd55fa6e70/matches/d520c0277121431f82a295824e9d70cb/attempt-0/d520c0277121431f82a295824e9d70cb.hrw.jsonl.gz",
+    "sha256": "9f05e497b024ea66b3a20f7420369015ee1ca5b4c7a6d45caa9873d1faf97b12",
+    "verified": true,
+    "verificationCpuNs": 24699400,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f5c6cdbf27b28f0f3a6033d85a1842b4763a878d71de4b8a830ed9ed59b0cc21/bf812183ea1c4e8596445d83984de47f/matches/245a5c78ec0d4fd9b0cb1966f7979b0a/attempt-0/245a5c78ec0d4fd9b0cb1966f7979b0a.hrw.jsonl.gz",
+    "sha256": "6e78788083aad76760cdc055fc03b14e1492f0c4054f2c2b7873e90ff124c845",
+    "verified": true,
+    "verificationCpuNs": 37784500,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f7f44d4a6ecdf641130e3b1ae0cd954a0f3f98c95684e296ca51a63b3969b0b0/9ce732f52550460dba214cf3420c4b52/matches/6e0c77c42f77445f9b899fe1302a1f6e/attempt-0/6e0c77c42f77445f9b899fe1302a1f6e.hrw.jsonl.gz",
+    "sha256": "7abf7d0c3a6e8ddfddce862e9822e4fd80b2a12fcf69bd0d81c2e6e82d532564",
+    "verified": true,
+    "verificationCpuNs": 76437500,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f7f9c273dbd958a9d47ce604e496220be95849afb55972ff517bfc25c3877324/98f872261f484056acf9be8565e4624c/matches/0571ec0930dd4a8abd2f7178fad2f88b/attempt-0/0571ec0930dd4a8abd2f7178fad2f88b.hrw.jsonl.gz",
+    "sha256": "e2f92924f4f34a72bdddfaeb45bc31a2295227c42c38a5ad122e1ff67652d28b",
+    "verified": true,
+    "verificationCpuNs": 73386300,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f88cccb0e0d6887878a67c009a01f48e67262db51c55af6c03451050196cbd5e/93be13c187cb46f0bf23eacd59a47cb2/matches/9e714b483d7149988910d72791cc9318/attempt-0/9e714b483d7149988910d72791cc9318.hrw.jsonl.gz",
+    "sha256": "8b1ee23a36328628194d3d97872f806b2794c73c412ea681f6b2a6a05094d6e8",
+    "verified": true,
+    "verificationCpuNs": 85471200,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f929762ec695325b17a5346609f3823719a4eb7960b1347d5af36085907a928c/db2eb0f10f9c4461a405bbb7de445e3d/matches/41439a749e204c7992f2759ba2cdf0b9/attempt-0/41439a749e204c7992f2759ba2cdf0b9.hrw.jsonl.gz",
+    "sha256": "b7387e75ac772eaca74437f43a10760b2762f253cfe66c2478dd3cb68348a1b3",
+    "verified": true,
+    "verificationCpuNs": 121440800,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f95c8eeb49cf69ffe5c6c76e56b00a97f470d0c1778d345ebee8d9f3988373bc/0bd32fc91c65443bbae25a070afbec93/matches/8b7443c797474932b717db69a9172a88/attempt-0/8b7443c797474932b717db69a9172a88.hrw.jsonl.gz",
+    "sha256": "49aaf5fe82bf193fcfb35f1e8fc97f541a8c47728b20cc5fd0bd793f8994235a",
+    "verified": true,
+    "verificationCpuNs": 25580900,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/f9f7d5528c79b6718486ccf652b6b9df6beedf51c5dcfa2c56416ed939dd7183/5737859821da483da3367754bc180787/matches/c9da54725dde410f90d85e5296858b87/attempt-0/c9da54725dde410f90d85e5296858b87.hrw.jsonl.gz",
+    "sha256": "e869536f17aaeaa38df4e055c89616a4e7a0a91c522f4587f8e450c54bef5716",
+    "verified": true,
+    "verificationCpuNs": 141804300,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/fbc6dd2d1d1e29511251c19c7f2ffca5b72c318c2803264a977cb73ac57bf90c/0715807b65a54105b6eb637091d4132f/matches/12239177a48c4bf8932fe30594cada30/attempt-0/12239177a48c4bf8932fe30594cada30.hrw.jsonl.gz",
+    "sha256": "14b155c424a1cbdff1d5532865d6453771cbb88326b553859dc522cb141e1476",
+    "verified": true,
+    "verificationCpuNs": 82922400,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/fbea3a30d5ba70569f9baf4956519c0eec90219f9f334e5062ac271e7920a7e6/0b03cb36f55d4e9393236d7716b52fd4/matches/d5b64c3ce6bf4bf8a9d6db36cec1cb82/attempt-0/d5b64c3ce6bf4bf8a9d6db36cec1cb82.hrw.jsonl.gz",
+    "sha256": "6711f75b7ffd8fe967a6b21f37bee91bf4b3baa8dcc167703f1f8750539d8ffb",
+    "verified": true,
+    "verificationCpuNs": 71160700,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/fefd21932bcb888a8c52789352ddff6193fca36779d35bc75a3dc2efead3a62c/4eb1ad037c2d4963a5aaabe08b7dd0d5/matches/de75f27d68a2412ead44ea554fac2e6d/attempt-0/de75f27d68a2412ead44ea554fac2e6d.hrw.jsonl.gz",
+    "sha256": "8ab1ec0845339472c354fceefba4d114ac058270bdcfd27646b276e20fcc7447",
+    "verified": true,
+    "verificationCpuNs": 29026000,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/ff30cff99aeb2283e3b4848d6872a938f1e062298589272800f030342ba6bf13/956fa6cf65f84d4480ac3e20543e0298/matches/654c7225e5cf4a1f90d52160ea62a2bb/attempt-0/654c7225e5cf4a1f90d52160ea62a2bb.hrw.jsonl.gz",
+    "sha256": "c87a91c2f7127198df1fff43497f5083e85468546f933ec1f1a3f25aa258bc70",
+    "verified": true,
+    "verificationCpuNs": 41892500,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-pilot/tasks/ff692bd52ab0bb8721297fe3ae044737ceef10805c1918674dcb4dce12c12473/34030d657e8e4befb923f3039332de0e/matches/918fd06f0ee9488fbe6dc128a88545a0/attempt-0/918fd06f0ee9488fbe6dc128a88545a0.hrw.jsonl.gz",
+    "sha256": "41eeea9a0533c1a57117eea68fa4efe3a8f40107f916820b5bf746c43f73e1ca",
+    "verified": true,
+    "verificationCpuNs": 27727800,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-targeted/tasks/2dccedc59f3916b14103cc81418dcb9eb3e0d71a89db5b00d2985ee10af55ae9/8c3776a506264a54b3a3518c537f19f9/matches/c917c3196dc64310895e78b75e5148bf/attempt-0/c917c3196dc64310895e78b75e5148bf.hrw.jsonl.gz",
+    "sha256": "599ee52321e907eecff09259ef360daf75f47c15f722a36687c0d88226693a16",
+    "verified": true,
+    "verificationCpuNs": 78978500,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-targeted/tasks/3364e2b4d33af4dae6ba1bd91336fc8ec792d0ff7e7cf265356f4d6b3e6d76c2/fc006dd188784e649f477a228d9524aa/matches/7094530766914cfb83a4e0248c301c7f/attempt-0/7094530766914cfb83a4e0248c301c7f.hrw.jsonl.gz",
+    "sha256": "801c2860cc8952445c73d481d5d8b541fbc609de5f9e7c5e68c83bfcefdd60be",
+    "verified": true,
+    "verificationCpuNs": 74349400,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-targeted/tasks/621313045fd253d1fe237ac78317d2e0a7d89adb423fdd289cea0afc27e437e1/82e7a045013640b3916a86fce09882a9/matches/952f134a03ea41c2a2a5fb3426348833/attempt-0/952f134a03ea41c2a2a5fb3426348833.hrw.jsonl.gz",
+    "sha256": "e5f00158c5c740bbb3d1925a8410ea4b37490f1a9fea975441d3f6ac820b2c1e",
+    "verified": true,
+    "verificationCpuNs": 77783900,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-targeted/tasks/72ce534d965708ed975fa47ee0adc901455881641cd29a8e7c59b4536f0f9635/fca7cafc94974c3d9134c6f574d12c19/matches/43db1c976fb14794a457fb933c41050a/attempt-0/43db1c976fb14794a457fb933c41050a.hrw.jsonl.gz",
+    "sha256": "7191536e2382298bc66073c9c2c3e891693c8a17c211ed9982a832f99487381e",
+    "verified": true,
+    "verificationCpuNs": 77852400,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-targeted/tasks/9234f20b65d0a7acbe634d62e53be9c87f91479ebf5eebacda775ec405d1639a/5b15ae26a9e541f2a6805ade70881fa1/matches/3a3e0061a18a424da33526b2b197dccf/attempt-0/3a3e0061a18a424da33526b2b197dccf.hrw.jsonl.gz",
+    "sha256": "8d51e95dcc7b9890ddc9b761d299270e0c934fa1d4bf5e39f5207cdb79529a82",
+    "verified": true,
+    "verificationCpuNs": 74426600,
+    "error": null
+  },
+  {
+    "path": "runs/development/zoo-v5-yield-targeted/tasks/b77c1845f1cf93b9f84d0348d17bbacb9991fb4807da39fa56b3b361dd6bd246/e76d1c5f34a64fda9407f78095a12c1d/matches/971c3a15599a4f7abfb943af41580d03/attempt-0/971c3a15599a4f7abfb943af41580d03.hrw.jsonl.gz",
+    "sha256": "140b77a659944a6cc7e6e14f7a06b308dda48ba50405b8598b5ed3dd9bdf80fc",
+    "verified": true,
+    "verificationCpuNs": 73380500,
+    "error": null
+  }
+]

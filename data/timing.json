@@ -1,5 +1,22 @@
 {
   "schemaVersion": 1,
+  "efficiencyAcceptance": {
+    "status": "not passed; development-host evidence only",
+    "date": "2026-11-07",
+    "sourceReports": ["data/efficiency-v2.json", "data/efficiency-v3.json", "data/efficiency-v4.json"],
+    "latestReport": "data/efficiency-v4.json",
+    "method": "80-unit 40x40 engine fixtures: 3x1000 samples after 30 warmup; parse, step, hash, both observations. 3 single games and 6 concurrent games per version, both bots consume at least the calibrated TURN_CPU_MS for 300 turns; all bots/compilers in bwrap.",
+    "engineWorstRepeatCpuP95Ms": 0.785,
+    "engineWorstRepeatWallP95Ms": 0.7867,
+    "runnerJobs1CpuMs": {"mean": 1.2018777778, "p95": 1.3858, "max": 1.6872},
+    "runnerJobs6CpuMs": {"mean": 1.7866690556, "p95": 2.192, "max": 7.5831},
+    "singleGameWallSeconds": [31.225286545, 31.233403847, 31.225499846],
+    "sixJobGameWallSeconds": [36.067359819, 36.087527817, 36.057895614, 36.077747013, 36.060212710, 36.051702509],
+    "localSpeedFactorJobs1": 1.004610567133549,
+    "localSpeedFactorJobs6": 1.17107960237343,
+    "formalEvaluationSpeedFactor": null,
+    "limits": "Mean/p95 do not hide >3ms outliers; six-job games exceed 35s. Spinner may overshoot due to clock granularity and parsing, charged to BANK. No threshold changes; evaluation-host reference and full C-stage scoring efficiency remain unavailable. Older curve below is retained historical evidence."
+  },
   "checkedAt": "2026-11-07T06:55:13.256170+00:00",
   "scope": "M4/Q2 development-host load curve; not full DESIGN 6.4 efficiency acceptance or evaluation-machine calibration",
   "inputsSha256": {

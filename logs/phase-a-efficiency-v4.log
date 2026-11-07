@@ -1,0 +1,60 @@
+{
+  "jobs1": {
+    "games": 3,
+    "complete300NoFault": true,
+    "wallSeconds": [
+      31.225286545,
+      31.233403847,
+      31.225499846
+    ],
+    "allGamesWithin35Seconds": true,
+    "turnHarnessCpuNs": {
+      "n": 900,
+      "min": 1033000,
+      "median": 1175050.0,
+      "mean": 1201877.7777777778,
+      "p95": 1385800,
+      "max": 1687200
+    },
+    "allTurnHarnessCpuWithin3ms": true,
+    "botCpuSeconds": [
+      62.0211621,
+      62.0235133,
+      62.0241469
+    ],
+    "harnessCpuSeconds": 1.1045983,
+    "limits": "Harness CPU includes engine/I/O/recording, excludes bot CPU. Wall includes launch/clone/cleanup, excludes prior cached compilation. VM/OS scheduling can inflate wall."
+  },
+  "jobs6": {
+    "games": 6,
+    "complete300NoFault": true,
+    "wallSeconds": [
+      36.067359819,
+      36.087527817,
+      36.057895614,
+      36.077747013,
+      36.06021271,
+      36.051702509
+    ],
+    "allGamesWithin35Seconds": false,
+    "turnHarnessCpuNs": {
+      "n": 1800,
+      "min": 1181200,
+      "median": 1749400.0,
+      "mean": 1786669.0555555555,
+      "p95": 2192000,
+      "max": 7583100
+    },
+    "allTurnHarnessCpuWithin3ms": false,
+    "botCpuSeconds": [
+      71.4754655,
+      71.4891584,
+      71.4739382,
+      71.4651783,
+      71.4711433,
+      71.4789407
+    ],
+    "harnessCpuSeconds": 3.2762603,
+    "limits": "Harness CPU includes engine/I/O/recording, excludes bot CPU. Wall includes launch/clone/cleanup, excludes prior cached compilation. VM/OS scheduling can inflate wall."
+  }
+}

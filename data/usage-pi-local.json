@@ -1,22 +1,22 @@
 {
   "scope": "available local pi sessions with matching project cwd; all branches, deduplicated copied entries; no transcript/config/auth exported",
-  "sessionFiles": 2,
+  "sessionFiles": 3,
   "usageEntriesByKind": {
-    "assistant": 377,
-    "compaction": 4
+    "assistant": 509,
+    "compaction": 5
   },
-  "zeroUsageEntries": 3,
+  "zeroUsageEntries": 6,
   "entriesMissingUsage": 0,
   "reportedTokens": {
-    "input": 1326345,
-    "output": 504997,
-    "cacheRead": 57184512,
+    "input": 1713317,
+    "output": 627690,
+    "cacheRead": 74980992,
     "cacheWrite": 0,
-    "reasoning": 306377,
-    "totalTokens": 59015854
+    "reasoning": 374257,
+    "totalTokens": 77321999
   },
   "completePhaseTotal": null,
-  "measuredAt": "2026-11-07T10:26:22.178951+00:00",
+  "measuredAt": "2026-11-07T13:43:55.095984+00:00",
   "limits": "API-reported counts only; reasoning is already included in output. Cached input includes repeated contexts, not unique generated tokens or subscription billing. Missing Windows/other sessions and unreported calls cannot be recovered.",
   "previousSnapshots": [
     {
@@ -62,7 +62,29 @@
       "measuredAt": "2026-11-07T07:07:32.245962+00:00",
       "limits": "API-reported counts only; reasoning is already included in output. Cached input includes repeated contexts, not unique generated tokens or subscription billing. Missing Windows/other sessions and unreported calls cannot be recovered.",
       "measurementTiming": "Snapshot before final benchmark/map evidence and documentation archival; later messages not included."
+    },
+    {
+      "scope": "available local pi sessions with matching project cwd; all branches, deduplicated copied entries; no transcript/config/auth exported",
+      "sessionFiles": 2,
+      "usageEntriesByKind": {
+        "assistant": 377,
+        "compaction": 4
+      },
+      "zeroUsageEntries": 3,
+      "entriesMissingUsage": 0,
+      "reportedTokens": {
+        "input": 1326345,
+        "output": 504997,
+        "cacheRead": 57184512,
+        "cacheWrite": 0,
+        "reasoning": 306377,
+        "totalTokens": 59015854
+      },
+      "completePhaseTotal": null,
+      "measuredAt": "2026-11-07T10:26:22.178951+00:00",
+      "limits": "API-reported counts only; reasoning is already included in output. Cached input includes repeated contexts, not unique generated tokens or subscription billing. Missing Windows/other sessions and unreported calls cannot be recovered.",
+      "measurementTiming": "Snapshot before cleanup/zoo archival and later work; subsequent messages excluded."
     }
   ],
-  "measurementTiming": "Snapshot before cleanup/zoo archival and later work; subsequent messages excluded."
+  "measurementTiming": "Snapshot during v5 public matrix and acceptance archival; later messages excluded."
 }

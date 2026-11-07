@@ -1,0 +1,9 @@
+test_address_space_and_descriptors_are_hard_limited (tests.test_security_acceptance.SecurityAcceptanceTests.test_address_space_and_descriptors_are_hard_limited) ... ok
+test_bounded_compile_tree_is_removed_on_stop_and_records_policy_gap (tests.test_security_acceptance.SecurityAcceptanceTests.test_bounded_compile_tree_is_removed_on_stop_and_records_policy_gap) ... ok
+test_exited_thread_cpu_is_not_lost (tests.test_security_acceptance.SecurityAcceptanceTests.test_exited_thread_cpu_is_not_lost) ... ok
+test_no_network_or_host_paths_and_runtime_code_is_readonly (tests.test_security_acceptance.SecurityAcceptanceTests.test_no_network_or_host_paths_and_runtime_code_is_readonly) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.201s
+
+OK

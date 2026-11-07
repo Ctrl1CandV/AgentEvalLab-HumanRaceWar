@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded safety validation, not unrestricted hostile-code certification",
+  "passedPhaseA": false,
+  "checks": {
+    "runtime512MiBAddressSpace": true,
+    "runtimeFd64": true,
+    "exitedThreadCpuCharged": true,
+    "noHostHomeOrNetworkRoute": true,
+    "readonlySourceAndSdk": true,
+    "sixJobThreadedTimeoutAndCleanup": true,
+    "finiteCompileTreeCleanup": true
+  },
+  "probes": [
+    {
+      "path": "runs/development/security-acceptance-tests/053a24dca1f3478ea0e2b67fc2af9c60/compile-tree.json",
+      "sha256": "a05f39543e01db38bf666242fb8400ebfc3f86500f444031bf7c12c4f5ba64fa"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/1cb043d0749e4fb2b7bf5ca86cebd671/probe.json",
+      "sha256": "a1f3d9fa8fc5cc0d0e8b030563d5c2bfbf5c2c94ec8cf01cc1a706e278b51860"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/1e3c874e21ba4ea6a437d72f6b8873fc/compile-tree.json",
+      "sha256": "8723f69321eebfc8062a4a781b54d2ad825a46941f062d2091db82534fbef30c"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/1ec24ccc224e4a8cbbd4e7ccf6f99990/probe.json",
+      "sha256": "f499f886b82d0a53abf68795005c97ddd004258ae6721c6f3b28e9d82559170a"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/29e7e39fb723423db18b462659dc83e8/probe.json",
+      "sha256": "ea8f3ca7d622722d7afee10c8a4b664ce6c09cb58e336f57db653998a9c1c82c"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/2aa6df9ae9684ed193e0a8e66014c62b/probe.json",
+      "sha256": "be84d1d26b40d31e0b7b0ce76fec4a255020783d7f419b4a39cfd9f46b57e170"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/2c013744ab154270b841e4fa0a46fc3d/probe.json",
+      "sha256": "46730a76ff5f1861be42f7b78f6ab0456c977dd738a160d99ed1c475a3d71e9a"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/2e83d425184f436e9c6e982bcaf25445/probe.json",
+      "sha256": "c7ee1ed5d58d427a29f0fa79417ecbdd2cc7afc02dbc297d32e28196b35b3e4d"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/31f2bae6ff034a0b9dc2bbc6d6819e95/poll-count.json",
+      "sha256": "8caf27436127fecbd85e866b7e528bb649914e8f4a2fda241dd42fdc6da6d8e6"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/3745b9fcdd4e41988f4a6028e354a7f8/probe.json",
+      "sha256": "e59cc29ccb6bf85197d1b1e1b7edc21e0722888d0e8eb8f2317d46e936fa3bf5"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/382d70ee542d4a05aa88684a0c49ace1/compile-tree.json",
+      "sha256": "5f68b1b7f6ed7fb8d73d03c4bf2f5197609678dc58a8df6d8873b82c76dd5803"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/3d9ce1cbb097461c9d7a6db7233f9b4f/probe.json",
+      "sha256": "57ed41d8b9a3881d50bcb94a5d3455e8703837b4f4eac2459ec66705033cc542"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/40712e66e02e40d4bb21792d2aadd885/probe.json",
+      "sha256": "a2df1078c6bbe41aa0d1b6e9b5a59da25ecea974b0bd30e432703b17427ed854"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/46857272b29244e4a72d9db895858a36/compile-tree.json",
+      "sha256": "d1f8d8efc0a606f0b04cedf25ff403237bd2d340cf07c54177a1328ba281a4d9"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/54f66e58bb984fa9b88cd80bf59a5eb8/probe.json",
+      "sha256": "9b6092f69392139e3818d63c15a5009af5b6e2261899e55190cbd7f414f4d406"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/595a053ec4b848baa8a6ef2a6a34043b/compile-tree.json",
+      "sha256": "021d95c70c20101f1d837aa053da321e977e2f2d9ad9852050d8c3716f36e726"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/5a4542dad0a34a9394b35ab07b11f5e8/poll-count.json",
+      "sha256": "cbab003c1fe9bb28f2a18d80701ffbdf31eb02fac1526e24fead24c7fbb00eba"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/634d867fccbc480ab75c59a7fdda9906/probe.json",
+      "sha256": "f99430fd50f1d1033d3f4280680308cd105cb830046d8a2cff85c152eaeb0315"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/7765b2e6bd7a4f88bff6bfe400f864ac/probe.json",
+      "sha256": "282319e013fddda81266500f373973f7f0ef11813c0af78927f23151ac96c851"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/8dbf622b876441acb3e31ddb4bbe1979/poll-count.json",
+      "sha256": "d2ee02552a6c8bbe511bf12aac37bbf975f784cbc907dd8da52ee2e737d02702"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/94078153648f4a5c90fdcc4ffa617d6c/probe.json",
+      "sha256": "73ea507d03224fda8aed79ab4968fbdc0b4f27b3f09f7c536bc601be4a155e34"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/9845c0269fd64558acaba052dc73569e/probe.json",
+      "sha256": "4f6350d662a043f4c63fea35137c451a8f69b53cfed4a4fdfc88a76d3ed4c2aa"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/98e51caabb2a403ba344eba1b3e954bc/probe.json",
+      "sha256": "af7c97a70923deb51640f3608b7939701832cd7dd53bdabe35fdc649444c9f79"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/a695833d68934523a2e58753b615b457/poll-count.json",
+      "sha256": "0b100b5eb36d129ec1a2ed2140fc24b017fce6103f8b0d4857e11f209ffbbd3c"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/ad404a66951b4284ab49694752171081/poll-count.json",
+      "sha256": "602bf94abe668e9be029f0538967b997c1d1aafba878597f7b292576aad4ea7f"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/b253bff8aeee429cb223eb4dc953ee48/probe.json",
+      "sha256": "81bbfc859bd73ff692b24d988b33f1dbb1180e5635a27cb31aadd223083c8728"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/b977997763b74df8ada8adc8fb579da8/probe.json",
+      "sha256": "5725ec8c61a42daf790f25da9e7e9d35ea14ebe98bd0aff22879103363d2f07c"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/cd36523b414e4cfe9669a883fbc6032a/probe.json",
+      "sha256": "c6424a3ab3b1d235c77e17ac87a44edc8e5fe65d25d07afd87d9cb3ff2994898"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/d10f75f315184bee9c261c6e68fbdace/compile-tree.json",
+      "sha256": "ed7d43d22003f621d183e220493bfb56b2ebbec5d4d5f9b87651cc88a7cab861"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/d1f88cdf09b145f0bf27e1b9c570b259/short-deadline.json",
+      "sha256": "f9a75f1e3ad1d4885bb57f9b30e95849cf2c89b236eb044f6cd5c1450bc4345b"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/d9839aba37294d10bd1728dd1d68fcc1/probe.json",
+      "sha256": "495b0d23885da6c97cd999b9d83691d81cdca2ccf1470ce4f4a4eb78d791347a"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/dd8a8d5fc57047158a38146b98edd274/probe.json",
+      "sha256": "14231e93682329886507e745c8c147f264a4c1a67822a70f5b46fd04d974ce0c"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/ee843a7ec7874158a3e1600361537cef/probe.json",
+      "sha256": "b65ba354352109914a2934b46f4998e8d0f0edbaa3318fb1c9d11e63bd46b8d6"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/f156196ca608483b8e9579673c746117/compile-tree.json",
+      "sha256": "a6ce31d14bc14fb0a0d6732729eaf143c663f419c047313d614af40f0665c8b3"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/f31a8614bb94423888c8dec383505690/probe.json",
+      "sha256": "4825c4a80320c53e57c184782bf3b2218d8a33934ffa4f583071cb832c4d475a"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/fb1025c1a6d1428da766761076d7de5f/compile-tree.json",
+      "sha256": "f9b39b21d2939e2e93d777780bdaeb7c1453f85a332794f4fd96ab908feb10ff"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/fc61fa28fe4f4e808a1dbdfb3c9f7db9/probe.json",
+      "sha256": "cc0e3f9a79f0373eb32af3d5b0a2139c6d63bb8171eef99928e39a4c6a6e0246"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/fcd58505e9284d20b00a291c92729a28/short-deadline.json",
+      "sha256": "2f0e8b101e4058563812cf16f1ab779f16daab250141823893eb60928c8c88f7"
+    },
+    {
+      "path": "runs/development/security-acceptance-tests/fdb0bbdc59fa49e5bb2e7b4684d190ba/probe.json",
+      "sha256": "962dc8bb825213b372fb440bf6a81c57b22fb2207d094707e56b57838a34a75e"
+    }
+  ],
+  "stress": "data/security-stress.json",
+  "testEvidence": "data/phase-a-validation.json",
+  "compilerProbe": {
+    "path": "runs/development/security-acceptance-tests/d10f75f315184bee9c261c6e68fbdace/compile-tree.json",
+    "policy": {
+      "ready": true,
+      "addressSpace": [
+        2147483648,
+        2147483648
+      ],
+      "tasks": [
+        63593,
+        63593
+      ],
+      "affinity": [
+        0
+      ]
+    },
+    "observedProcesses": 5
+  },
+  "blocked": {
+    "aggregateCompilerHardLimits": false,
+    "delegatedCgroupAvailable": false,
+    "evidence": "Compile-mode probe inherited RLIMIT_NPROC=63593, RLIMIT_AS=2GiB per process; no compiler-tree memory/CPU/disk hard quota. /sys/fs/cgroup is not writable; no host settings changed.",
+    "decisionRequired": "Approve aggregate compiler resource contract and a delegated cgroup v2 integration or an explicitly weaker watchdog guarantee; do not silently treat sampled RSS as a hard total cap."
+  },
+  "probeTestCorrections": [
+    "Initial isolation assertion omitted bwrap-generated PWD=/bot; two failing runs retained, sandbox environment policy unchanged."
+  ],
+  "totalCpuHours": null
+}

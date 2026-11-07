@@ -16,12 +16,19 @@
 | `zoo-v1-pilot/` | 初版10策略、4张练习图的368局完整结果、地图bootstrap、全回放验证；M对骚扰/铺塔各50%，明确未达平衡条件 | A（练习图诊断，不是D6验收） |
 | `zoo-v2-pilot/` | 第二版368局练习矩阵，全回放验证；M对骚扰4胜2平2负、对铺塔4胜4负，自对弈全为回合上限，未达平衡条件 | A（练习图诊断，不是D6验收） |
 | `zoo-repair-checkpoint.json` | v2代码下单轮160项回归，以及maze失败回放中的驻塔工兵/资金停滞证据；资金分配根因待定点测试，未修v3 | A（会话交接，非阶段停点） |
+| `zoo-repair-tests.json`、`zoo-v3-budget-pilot/`、`zoo-v4-traffic-pilot/`、`zoo-v5-yield-pilot/` | 资金/交通各最小失败测试、窄修、14局定向及三版各368局独立练习矩阵；全部回放验证，不混池 | A（策略诊断） |
+| `zoo-v5-public/` | 正式40图3680局及地图bootstrap/逐回放审计；无bot故障，平衡1/2/7未通过 | A（正式D6，未通过） |
+| `phase-a-validation.json`、`phase-a-validation-attempts-*.json`、`phase-a-validation-replays-*.json` | 两轮170项、全部5036 complete与30 infra_error索引、最终框架全回放复核；分块文件摘要在主索引中 | A（未冻结验收检查点） |
+| `phase-a-security.json`、`security-stress.json` | 运行时有界资源/清理及6局压力通过；编译树总资源仍无硬约束，明确未完成安全验收 | A（部分通过） |
+| `efficiency-v2.json`、`efficiency-v3.json`、`efficiency-v4.json` | 2/20/50ms看门狗版本；各三组引擎样本、3个单局/6并发满预算局及本地校准。全部原始极值保留，六局整局>35秒 | A（未全部通过） |
 | `usage-pi-local.json` | 仅本项目本地pi会话usage数值的去重汇总；含缓存输入，历史及未报告用量仍缺失，不导出对话或个人配置 | A（不完整用量） |
 | `zoo-matrix.csv` | 动物园各 bot 之间的局数、胜、平、负，分地图类型 | A |
 | `balance.json` | 先后手公平、平局率、对局长度分布、结束方式 | A |
-| `timing.json` | 已有本机两批并发负载曲线、逐核样本及本地速度系数；引擎p95、运行器开销、整局和整套评分效率仍待测 | A（bench开发检查）、后续C |
+| `timing.json` | 保留两批负载曲线，新增三版效率测量索引：本机引擎p95通过，六局整局/开销极值未全部通过；正式参考及C阶段整套评分未知 | A（部分通过）、后续C |
 | `ladder-matrix.csv` | 阶梯各 bot 之间的成对对局数、胜、平、负（只写代号） | B |
 | `ladder-ratings.csv` | 各级各 bot 的 Elo、区间、风格、sha256 | B |
 | `standard-budget.json` | 标准预算自测：投入的 token 和时间、主分数、每一级的成绩 | B |
+
+`phase-a-checkpoint.sha256` 是本次未冻结审查检查点的公开文件清单，排除自身、runs和.venv；不代替A阶段通过后的发布MANIFEST。
 
 隐藏的 bot 只写代号和 sha256。
