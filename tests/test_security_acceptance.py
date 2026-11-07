@@ -1,7 +1,7 @@
 """Bounded real-sandbox resource/cleanup probes, not a claim of complete security.
 
 No fork bomb, host OOM, credential access or network contact. Compile-tree
-inspection records the still-missing aggregate policy rather than inventing one.
+inspection checks the approved per-process/task contract, not aggregate cgroups.
 """
 import json
 import os
@@ -143,7 +143,7 @@ for path in ('/bot/main.py','/sdk/hrw.py'):
 hrw.read_setup();hrw.ready();hrw.read_turn();hrw.send([]);hrw.read_turn()
 ''')
 
-    def test_bounded_compile_tree_is_removed_on_stop_and_records_policy_gap(self):
+    def test_bounded_compile_tree_is_removed_on_stop_and_records_limits(self):
         source = self.root / 'source'; source.mkdir()
         build = self.root / 'build'; build.mkdir()
         code = '''import json,os,resource,time
@@ -190,10 +190,11 @@ time.sleep(30)
             after = {pid: process_state(pid) for pid in observed}
             (self.root / 'compile-tree.json').write_text(json.dumps({'stdout': stdout.decode(errors='replace'),
                 'processes': observed, 'afterStop': after, 'aggregateHardLimitImplemented': False,
-                'limits': 'Finite two-child diagnostic. RLIMIT_AS is per process; this does not prove a hard aggregate memory/CPU/disk/task cap.'}, indent=2)+'\n')
+                'limits': 'Finite two-child diagnostic. AS=2GiB per process and NPROC=16; no aggregate memory/CPU/disk claim. Approved review contract uses serialized trusted compilation.'}, indent=2)+'\n')
         self.assertTrue(all(s in (None, 'Z') for s in after.values()), after)
         detail = json.loads(stdout.decode().splitlines()[1])
         self.assertEqual(detail['addressSpace'], [2*1024**3]*2)
+        self.assertEqual(detail['tasks'], [16, 16])
 
 
 if __name__ == '__main__':

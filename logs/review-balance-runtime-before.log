@@ -1,0 +1,52 @@
+test_compile_limits_inside_real_bwrap (tests.test_review_balance.ReviewBalanceRuntimeTests.test_compile_limits_inside_real_bwrap) ... FAIL
+test_cpu_lock_respects_tmpdir (tests.test_review_balance.ReviewBalanceRuntimeTests.test_cpu_lock_respects_tmpdir) ... FAIL
+test_empty_tmpdir_falls_back_to_tmp (tests.test_review_balance.ReviewBalanceRuntimeTests.test_empty_tmpdir_falls_back_to_tmp) ... ok
+test_prepare_waits_for_machine_compile_lock (tests.test_review_balance.ReviewBalanceRuntimeTests.test_prepare_waits_for_machine_compile_lock) ... ERROR
+
+======================================================================
+ERROR: test_prepare_waits_for_machine_compile_lock (tests.test_review_balance.ReviewBalanceRuntimeTests.test_prepare_waits_for_machine_compile_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tests/test_review_balance.py", line 75, in test_prepare_waits_for_machine_compile_lock
+    with resources.CompileLease():
+         ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'arena.core.resources' has no attribute 'CompileLease'
+
+======================================================================
+FAIL: test_compile_limits_inside_real_bwrap (tests.test_review_balance.ReviewBalanceRuntimeTests.test_compile_limits_inside_real_bwrap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tests/test_review_balance.py", line 54, in test_compile_limits_inside_real_bwrap
+    self.assertEqual(limits, {'RLIMIT_NPROC': [16, 16], 'RLIMIT_AS': [2*1024**3]*2,
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             'RLIMIT_FSIZE': [64*1024**2]*2, 'RLIMIT_CPU': [60, 60]})
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'RLIMIT_NPROC': [63593, 63593], 'RLIMIT_AS': [2147483648, [69 chars] 60]} != {'RLIMIT_NPROC': [16, 16], 'RLIMIT_AS': [2147483648, 214748[63 chars] 60]}
+  {'RLIMIT_AS': [2147483648, 2147483648],
+   'RLIMIT_CPU': [60, 60],
+-  'RLIMIT_FSIZE': [16777216, 16777216],
+?                   -  ---    -  ---
+
++  'RLIMIT_FSIZE': [67108864, 67108864],
+?                      +++ +     +++ +
+
+-  'RLIMIT_NPROC': [63593, 63593]}
+?                    ----   ----
+
++  'RLIMIT_NPROC': [16, 16]}
+?                   +   +
+
+
+======================================================================
+FAIL: test_cpu_lock_respects_tmpdir (tests.test_review_balance.ReviewBalanceRuntimeTests.test_cpu_lock_respects_tmpdir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/tests/test_review_balance.py", line 25, in test_cpu_lock_respects_tmpdir
+    self.assertTrue(expected.is_dir())
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.023s
+
+FAILED (failures=2, errors=1)

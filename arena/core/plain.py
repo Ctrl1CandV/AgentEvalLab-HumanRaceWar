@@ -63,7 +63,8 @@ class Plain:
             os.sched_setaffinity(0, {cpu})
             for kind, value in ((resource.RLIMIT_AS, (2048 if writable_build else 512)*1024**2),
                                 (resource.RLIMIT_CPU, cpu_seconds), (resource.RLIMIT_NOFILE,64),
-                                (resource.RLIMIT_FSIZE,16*1024**2),(resource.RLIMIT_CORE,0)):
+                                (resource.RLIMIT_FSIZE,(64 if writable_build else 16)*1024**2),
+                                (resource.RLIMIT_CORE,0)):
                 resource.setrlimit(kind,(value,value))
             if not writable_build: install_filter()
         env = {**ENV, 'PYTHONPATH':str(sdk)}

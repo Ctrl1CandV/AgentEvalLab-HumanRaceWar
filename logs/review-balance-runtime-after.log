@@ -1,0 +1,9 @@
+test_compile_limits_inside_real_bwrap (tests.test_review_balance.ReviewBalanceRuntimeTests.test_compile_limits_inside_real_bwrap) ... ok
+test_cpu_lock_respects_tmpdir (tests.test_review_balance.ReviewBalanceRuntimeTests.test_cpu_lock_respects_tmpdir) ... ok
+test_empty_tmpdir_falls_back_to_tmp (tests.test_review_balance.ReviewBalanceRuntimeTests.test_empty_tmpdir_falls_back_to_tmp) ... ok
+test_prepare_waits_for_machine_compile_lock (tests.test_review_balance.ReviewBalanceRuntimeTests.test_prepare_waits_for_machine_compile_lock) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.431s
+
+OK

@@ -6,10 +6,9 @@ import sys
 # Set the per-user-namespace task limit AFTER bwrap has created that namespace.
 # Setting it on the host before bwrap forks would count unrelated host tasks.
 mode, command = sys.argv[1], sys.argv[2:]
-if mode == "runtime":
-    resource.setrlimit(resource.RLIMIT_NPROC, (16, 16))
-elif mode != "compile":
+if mode not in ("runtime", "compile"):
     raise RuntimeError("unknown trusted launch mode")
+resource.setrlimit(resource.RLIMIT_NPROC, (16, 16))
 os.write(1, b"HRW_SANDBOX_STARTED\n")
 try:
     os.execv(command[0], command)

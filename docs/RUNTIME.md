@@ -39,7 +39,7 @@
 
 宿主上的实际 bot 和 C++ 编译都使用 bwrap；没有 plain 回退。外层沙箱内的本地工具可显式使用 plain，契约及边界见 `docs/BATCH.md`。沙箱不联网，不挂载 Agent HOME、宿主 `/etc`、整个项目或另一个 bot，只挂载系统运行库、Python 安装目录、本方源码和公开 SDK。源码与运行时构建产物只读；编译时仅本方构建目录可写。启动环境使用固定白名单，不继承代理、认证或个人配置。
 
-每个 bot 在本局内绑定不同 CPU，运行时 512 MiB 地址空间、16 MiB 单文件、64 个文件描述符、整局 CPU 硬限额、禁用 core dump。C++ 编译为 GCC 11 的 `-O2 -std=gnu++20 -I/sdk`，墙钟上限 60 秒、地址空间 2 GiB；临时文件位于本方磁盘构建目录，避免编译器写无界 RAM tmpfs。
+每个 bot 在本局内绑定不同 CPU，运行时 512 MiB 地址空间、16 MiB 单文件、64 个文件描述符、整局 CPU 硬限额、禁用 core dump。C++ 编译为 GCC 11 的 `-O2 -std=gnu++20 -I/sdk`，墙钟/CPU均上限60秒、逐进程地址空间2 GiB、任务数16、单文件64 MiB；prepare路径共用编译锁，不论缓存目录一次只运行一个编译器。临时文件位于本方磁盘构建目录，避免编译器写无界 RAM tmpfs。
 
 运行时由标准库生成的 x86-64 seccomp BPF 强制禁止 fork/vfork、非线程 clone 和 sched_setaffinity；clone3 返回 ENOSYS，使 Python/glibc/C++ 线程回退到受检查的 clone。拒绝 i386/x32 或未知宿主架构。可信启动器在新 user namespace 内设置 RLIMIT_NPROC=16，包含管理进程、主线程和工作线程；本机 Python/C++ 均实测最多 14 个工作线程。拒绝以 root 宿主 UID 使用此启动器，避免 RLIMIT_NPROC 豁免。
 
@@ -57,6 +57,6 @@
 
 `check`、内容摘要编译缓存、全局CPU租约、进程调度/共享JSONL/续跑和`tournament`已接入，见 `docs/BATCH.md`。新回放含可重算的原始诊断指标v2，仍验证旧回放。外层bwrap内已实跑plain的Python/C++工具链；SIGTERM杀死controller后已验证worker清理及续跑不重复任务。
 
-新补512MiB地址空间/64描述符、已退出线程计费、网络/路径/只读检查、有限编译进程树清理，以及6局/12bot并发线程超时压力；全部已知沙箱leader停止，回放全部验证，见 `data/phase-a-security.json`。编译探针仍显示RLIMIT_NPROC继承宿主63593，2GiB地址空间是逐进程的；没有编译树总内存/CPU/磁盘硬配额。cgroup目录不可写，本次没有修改宿主安全配置，不能把有限探针通过说成完整安全验收。
+新补512MiB地址空间/64描述符、已退出线程计费、网络/路径/只读检查、有限编译进程树清理，以及6局/12bot并发线程超时压力；全部已知沙箱leader停止，回放全部验证，见 `data/phase-a-security.json`。旧编译探针显示NPROC继承63593，原证据保留。按第二次审查裁定，已改NPROC=16、单文件64MiB和全局串行锁，真实bwrap及跨进程回归通过；2GiB仍是逐进程限额，不声称整树内存/磁盘硬配额。审查明确无需cgroup，未改宿主设置。
 
-3680局正式动物园矩阵已完成但平衡未通过，效率已有实测但六局整局和开销极值未全部达标；正式评测机参考也仍缺。详见 `reports/phase-A-review-request.md`，不是A阶段完成报告。不要用平台联调局填报平衡、公平性或动物园验收。涉及隐藏 bot 或地图时，输出也必须放在 `private/`；CLI 会拒绝已知私有输入写往公开路径，本次没有创建隐藏内容。
+旧3680局正式动物园矩阵的平衡仍未通过。第二次审查将runner门槛明确为p95、整局为300×折算TURN+5秒，因此既有v4效率数据达到；最大值仍报告。评测机参考已提供，后续批次使用该参考。详见 `inbox/2026-11-07-phase-a.md` 与STATUS；旧 `reports/phase-A-review-request.md` 是历史请求，不是A阶段完成报告。不要用平台联调局填报平衡、公平性或动物园验收。涉及隐藏 bot 或地图时，输出也必须放在 `private/`；CLI 会拒绝已知私有输入写往公开路径，本次没有创建隐藏内容。

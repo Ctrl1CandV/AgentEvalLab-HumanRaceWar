@@ -14,6 +14,39 @@ import time
 from .sandbox import InfrastructureError
 
 
+def lock_directory():
+    # All cooperating arena commands must use the same TMPDIR on a host.
+    directory = Path(os.environ.get('TMPDIR') or '/tmp') / f'hrw-cpu-locks-{os.getuid()}'
+    directory.mkdir(mode=0o700, exist_ok=True)
+    info = directory.lstat()
+    if not stat.S_ISDIR(info.st_mode) or info.st_uid != os.getuid() or info.st_mode & 0o077:
+        raise InfrastructureError('unsafe global resource-lock directory')
+    return directory
+
+
+def open_lock(directory, name):
+    fd = os.open(directory / name, os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW | os.O_CLOEXEC, 0o600)
+    info = os.fstat(fd)
+    if info.st_uid != os.getuid() or not stat.S_ISREG(info.st_mode) or info.st_mode & 0o077:
+        os.close(fd)
+        raise InfrastructureError('unsafe resource lock file')
+    return fd
+
+
+class CompileLease(AbstractContextManager):
+    """One compiler at a time across cooperating arena processes, not per cache."""
+    def __init__(self):
+        self.fd = open_lock(lock_directory(), 'compile')
+        try:
+            fcntl.flock(self.fd, fcntl.LOCK_EX)
+        except BaseException:
+            os.close(self.fd)
+            raise
+
+    def __exit__(self, *args):
+        os.close(self.fd)
+
+
 class CpuLease(AbstractContextManager):
     def __init__(self, workers: int, *, exact=None, reserve_runner=True, runner_count=1, timeout=30.0):
         self.mask = set(os.sched_getaffinity(0))
@@ -25,11 +58,7 @@ class CpuLease(AbstractContextManager):
         if exact is not None and (len(exact) != workers or len(set(exact)) != workers
                                   or not set(exact) <= self.mask):
             raise ValueError('invalid requested CPU pool')
-        directory = Path('/tmp') / f'hrw-cpu-locks-{os.getuid()}'
-        directory.mkdir(mode=0o700, exist_ok=True)
-        info = directory.lstat()
-        if not stat.S_ISDIR(info.st_mode) or info.st_uid != os.getuid() or info.st_mode & 0o077:
-            raise InfrastructureError('unsafe global CPU-lock directory')
+        directory = lock_directory()
         self.files = []
         self.cpus = []
         self.runners = []
@@ -41,11 +70,7 @@ class CpuLease(AbstractContextManager):
                 requested += sorted(self.mask-set(exact))
             try:
                 for cpu in requested:
-                    fd = os.open(directory / str(cpu), os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW | os.O_CLOEXEC, 0o600)
-                    info = os.fstat(fd)
-                    if info.st_uid != os.getuid() or not stat.S_ISREG(info.st_mode):
-                        os.close(fd)
-                        raise InfrastructureError('unsafe CPU lock file')
+                    fd = open_lock(directory, str(cpu))
                     try:
                         fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
                     except BlockingIOError:

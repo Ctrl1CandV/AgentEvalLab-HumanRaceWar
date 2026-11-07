@@ -135,7 +135,8 @@ class Bubblewrap:
             parent_death_guard(parent)
             os.sched_setaffinity(0, {cpu})
             address_space = (2048 if writable_build else 512)*1024*1024
-            for kind, value in ((resource.RLIMIT_AS, address_space), (resource.RLIMIT_FSIZE, 16*1024*1024),
+            file_size = (64 if writable_build else 16)*1024*1024
+            for kind, value in ((resource.RLIMIT_AS, address_space), (resource.RLIMIT_FSIZE, file_size),
                                 (resource.RLIMIT_NOFILE, 64), (resource.RLIMIT_CPU, cpu_seconds),
                                 (resource.RLIMIT_CORE, 0)):
                 resource.setrlimit(kind, (value, value))
@@ -214,6 +215,14 @@ def clone_prepared(bot: Bot, directory: Path) -> Bot:
 
 
 def compile_bot(bot: Bot, launcher, cpu: int):
+    from .resources import CompileLease
+    # Queue time is not compiler execution time. Keep the lock through cleanup;
+    # no compiler or bot inherits its descriptor.
+    with CompileLease():
+        _compile_locked(bot, launcher, cpu)
+
+
+def _compile_locked(bot: Bot, launcher, cpu: int):
     directory = bot.directory
     frozen = directory / "source"
     build = directory / "build"
@@ -241,7 +250,9 @@ def compile_bot(bot: Bot, launcher, cpu: int):
         bot.compile_fault = "compile_missing_output"
     (directory / "compile.json").write_text(json.dumps({"returncode": process.returncode,
         "fault": bot.compile_fault, "wallSeconds": time.monotonic()-start,
-        "cpuSeconds": None, "sandbox": launcher.name, "addressSpaceBytes": 2*1024**3}, indent=2)+"\n")
+        "cpuSeconds": None, "sandbox": launcher.name, "addressSpaceBytes": 2*1024**3,
+        "taskLimit": 16, "fileSizeBytes": 64*1024**2, "cpuLimitSeconds": 60,
+        "wallLimitSeconds": 60, "serialized": True}, indent=2)+"\n")
 
 
 class CpuClock:

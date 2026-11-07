@@ -9,7 +9,8 @@ from uuid import uuid4
 
 from .sandbox import InfrastructureError
 
-FLAGS = ['-O2', '-std=gnu++20', '-I/sdk', 'AS=2147483648', 'CPU=60', 'wall=60', 'cache-v1']
+FLAGS = ['-O2', '-std=gnu++20', '-I/sdk', 'AS=2147483648', 'CPU=60', 'wall=60',
+         'NPROC=16', 'FSIZE=67108864', 'serialized', 'cache-v2']
 
 
 def compiler_identity():
