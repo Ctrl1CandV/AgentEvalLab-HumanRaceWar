@@ -4,7 +4,7 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 ## 现在进行到哪一步
 
-看 [STATUS.md](STATUS.md)。当前 A 阶段已打通沙箱内 Python/C++ 示例对局、gzip JSONL 回放及逐回合验证；地图集、动物园、平衡和效率验收尚未完成，不是已验收的竞技场。
+看 [STATUS.md](STATUS.md)。当前 A 阶段已打通沙箱内 Python/C++ 示例对局、gzip JSONL 回放及逐回合验证，并生成通过默认布局检查的 44 张公开地图；完整计时、动物园、平衡和效率验收尚未完成，不是已验收的竞技场。
 
 ## WSL 开发与交接
 
@@ -29,7 +29,7 @@ cd ~/projects/AgentEvalLab-HumanRaceWar
 .venv/bin/python -m arena replay verify <命令输出的回放路径>
 ```
 
-此地图只是测试 fixture，不计入正式地图或平衡验收。
+此地图只是测试 fixture，不计入正式地图或平衡验收。也可改用 `maps/scrimmage/open-01.map`；公开地图集、生成器与检查命令见 [maps/README.md](maps/README.md)。最新两轮全套测试各 119 项通过，地图批次证据见 `data/mapgen-tests.json`。
 
 规则草稿见 [rules/rules.md](rules/rules.md)，测试覆盖与未验证范围见 [tests/COVERAGE.md](tests/COVERAGE.md)，暂定细节见 [docs/IMPLEMENTATION_NOTES.md](docs/IMPLEMENTATION_NOTES.md)。
 

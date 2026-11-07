@@ -1,0 +1,40 @@
+{
+  "passed": false,
+  "checks": {
+    "groundConnected": true,
+    "basePath": true,
+    "homeOre": false,
+    "middleOre": false,
+    "centerOre": false,
+    "towerSites": false,
+    "depotOreSeparation": false,
+    "spawnGround": true,
+    "resourceAccess": true
+  },
+  "groundCells": 564,
+  "wallCells": 2,
+  "basePath": 38,
+  "spawnGround": [
+    12,
+    12
+  ],
+  "oreCellsByZone": {
+    "home0": 1,
+    "home1": 1,
+    "middle0": 1,
+    "middle1": 1,
+    "center": 0,
+    "outside": 0
+  },
+  "oreByZone": {
+    "home0": 400,
+    "home1": 400,
+    "middle0": 400,
+    "middle1": 400,
+    "center": 0,
+    "outside": 0
+  },
+  "towerSites": 4,
+  "nearOreSites": 2,
+  "minDepotOreDistance": 2
+}

@@ -163,4 +163,6 @@ END
 .venv/bin/python -m arena replay summary <回放路径>
 ```
 
-`match` 默认把所有尝试、结果和回放留在 `runs/matches/`，可加 `--show-stderr` 查看 stderr。测试地图不是验收地图，速度系数尚未标定。详细用法和限制见 `docs/RUNTIME.md`。`check`、`tournament`、`mapgen` 和正式任务包尚未交付。
+`match` 默认把所有尝试、结果和回放留在 `runs/matches/`，可加 `--show-stderr` 查看 stderr。测试地图不是验收地图，速度系数尚未标定。详细用法和限制见 `docs/RUNTIME.md`。
+
+现有 `maps/public/` 40 张和 `maps/scrimmage/` 4 张，均通过当前默认布局检查，但尚无平衡验收结论。可用 `.venv/bin/python -m arena mapgen --type corridor --size 32 --seed 7` 生成地图，用 `.venv/bin/python -m arena mapcheck maps/public/corridor-01.map` 检查默认生成配置。种子、摘要和分区口径见 `maps/catalog.json`、`maps/README.md`；布局检查不会对自定义 match 地图新增限制。`check`、`tournament` 和正式任务包尚未交付。
