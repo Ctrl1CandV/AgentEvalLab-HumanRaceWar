@@ -143,6 +143,28 @@ class ZooStrategyTests(unittest.TestCase):
         self.assertTrue(any(line.startswith(f"MOVE {soldier.id} ") for line in replies[0]), replies)
         self.assertLess(abs(soldier.x - 21) + abs(soldier.y - 21), before)
 
+    def test_distant_siege_force_is_not_recalled_for_a_home_intruder(self):
+        game, state = fresh()
+        state.add_unit(0, "S", (4, 3))  # The ordinary home guard.
+        soldier = state.add_unit(0, "S", (19, 21))
+        state.add_unit(1, "S", (6, 2))
+        state.players[0].energy = 0
+        state.turn = 150
+        before = abs(soldier.x - 21) + abs(soldier.y - 21)
+        replies = self.probe(game, state, "no-global-recall")
+        self.assertTrue(any(line.startswith(f"MOVE {soldier.id} ") for line in replies[0]), replies)
+        self.assertLess(abs(soldier.x - 21) + abs(soldier.y - 21), before)
+
+    def test_nearby_reinforcements_still_intercept_a_home_intruder(self):
+        game, state = fresh()
+        state.add_unit(0, "S", (4, 3))
+        soldier = state.add_unit(0, "S", (8, 2))
+        state.add_unit(1, "S", (6, 2))
+        state.players[0].energy = 0
+        state.turn = 150
+        self.probe(game, state, "nearby-interception")
+        self.assertLess(abs(soldier.x - 6) + abs(soldier.y - 2), 2)
+
     def test_nearby_army_can_override_tower_reserve(self):
         game, state = self.budget_state(near=True)
         replies = self.probe(game, state, "emergency-budget")

@@ -298,7 +298,9 @@ public:
             }
             if (config.mode==Mode::Balanced) {
                 int nearest=inf;
-                for (const auto& t:targets) if ((t.kind=='S' || t.kind=='W') && distance(home)[cell(t.pos)]<=12) {
+                // Nearby troops intercept; a distant expedition must not
+                // abandon its objective for every intruder near home.
+                for (const auto& t:targets) if ((t.kind=='S' || t.kind=='W') && distance(home)[cell(t.pos)]<=12 && distance(t.pos)[start]<=12) {
                     int d=distance(home)[cell(t.pos)];
                     if (d<nearest || (d==nearest && rank(t.pos)<rank(goal))) { goal=t.pos; nearest=d; }
                 }
