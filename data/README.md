@@ -18,6 +18,10 @@
 | `zoo-repair-checkpoint.json` | v2代码下单轮160项回归，以及maze失败回放中的驻塔工兵/资金停滞证据；资金分配根因待定点测试，未修v3 | A（会话交接，非阶段停点） |
 | `zoo-repair-tests.json`、`zoo-v3-budget-pilot/`、`zoo-v4-traffic-pilot/`、`zoo-v5-yield-pilot/` | 资金/交通各最小失败测试、窄修、14局定向及三版各368局独立练习矩阵；全部回放验证，不混池 | A（策略诊断） |
 | `zoo-v5-public/` | 正式40图3680局及地图bootstrap/逐回放审计；无bot故障，平衡1/2/7未通过 | A（正式D6，未通过） |
+| `harassment-v5/`、`harassment-analysis-tests.json` | 旧v5全部720局骚扰对局的工兵死亡位置、交战前兵力和结束方式；逐回合hash核对，4项统计/战斗例子通过 | A（全量成因诊断） |
+| `review-balance-runtime.json` | 第二次审查编译16任务/64MiB文件/串行锁及TMPDIR修复；失败复现、174项全套 | A（审查修复） |
+| `zoo-p1-worker-survival/`、`zoo-p2-slower-mining/`、`zoo-p3-soldier-cost/` | 各3680局独立参数试验及全部回放审计，均未通过平衡；不混池、不覆盖v5 | A（完整D6失败候选） |
+| `zoo-v6-regression.json`、`zoo-v7-regression.json` | M开局军事底线、兵力匹配优先于继续扩张的真实bwrap失败/通过回归，源码版本各自保存 | A（策略修复，不替代矩阵） |
 | `phase-a-validation.json`、`phase-a-validation-attempts-*.json`、`phase-a-validation-replays-*.json` | 两轮170项、全部5036 complete与30 infra_error索引、最终框架全回放复核；分块文件摘要在主索引中 | A（未冻结验收检查点） |
 | `phase-a-security.json`、`security-stress.json` | 运行时有界资源/清理及6局压力通过；编译树总资源仍无硬约束，明确未完成安全验收 | A（部分通过） |
 | `efficiency-v2.json`、`efficiency-v3.json`、`efficiency-v4.json` | 2/20/50ms看门狗版本；各三组引擎样本、3个单局/6并发满预算局及本地校准。全部原始极值保留，六局整局>35秒 | A（未全部通过） |
@@ -29,6 +33,6 @@
 | `ladder-ratings.csv` | 各级各 bot 的 Elo、区间、风格、sha256 | B |
 | `standard-budget.json` | 标准预算自测：投入的 token 和时间、主分数、每一级的成绩 | B |
 
-`phase-a-checkpoint.sha256` 是本次未冻结审查检查点的公开文件清单，排除自身、runs和.venv；不代替A阶段通过后的发布MANIFEST。
+`phase-a-checkpoint.sha256` 是提交3076570时的历史未冻结检查点，后续审查修正不会覆盖其原摘要；它不描述当前工作树，不代替A通过后的发布MANIFEST。第二次审查已确认v4效率数据按p95及折算后整局上限达到；评测机bench已到inbox，旧数据中的“参考未知/待裁定”保留为历史表述。编译资源按第二次审查的逐进程/任务/串行契约补齐，不再等待cgroup。
 
 隐藏的 bot 只写代号和 sha256。

@@ -1,0 +1,6 @@
+{
+  "WORKER_HP": 60,
+  "WORKER_DMG": 10,
+  "SOLDIER_COST": 80,
+  "START_ENERGY": 500
+}
