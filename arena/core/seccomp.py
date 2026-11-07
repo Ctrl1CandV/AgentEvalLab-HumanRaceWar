@@ -23,6 +23,15 @@ def runtime_filter() -> bytes:
     # Together with read-only filesystems, these cannot allocate memory outside AS.
     for syscall in (57, 58, 203, 101, 310, 311, 272, 308, 319, 29, 64, 68, 240):
         rows += [(0x15, 0, 1, syscall), (0x06, 0, 0, error | errno.EPERM)]
+    # Do not let a bot clear/change the SIGKILL parent-death guarantee.
+    # Other prctl operations retain their prior behavior.
+    rows += [(0x15, 0, 6, 157),             # prctl
+             (0x20, 0, 0, 16),              # option
+             (0x15, 0, 3, 1),               # PR_SET_PDEATHSIG
+             (0x20, 0, 0, 24),              # requested signal
+             (0x15, 1, 0, 9),               # only SIGKILL may be retained
+             (0x06, 0, 0, error | errno.EPERM),
+             (0x06, 0, 0, allow)]
     # glibc falls back to clone when clone3 reports ENOSYS (also for std::thread).
     rows += [(0x15, 0, 1, 435), (0x06, 0, 0, error | errno.ENOSYS),
              (0x15, 0, 4, 56),              # clone

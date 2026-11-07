@@ -4,6 +4,10 @@
 
 初始及第 80 回合的状态哈希有固定回归值。旧的 `data/engine-tests.json`、`logs/engine-tests*.log` 与 Windows 转发工具 `tools/test_in_wsl.py` 保留为 Python 3.10 时期的历史记录；后续在 WSL 原生目录直接测试，不再经 Windows 临时副本。
 
+## 清理补查（策略v4）
+
+`test_cleanup.py`增加5项：fork/preexec窗口内杀父进程、禁止清除死亡信号、worker启动失败跨续跑累计4次后不再尝试该任务、SIGKILL后恢复半截attempt、冻结地图改变属于配置错误而非bot负。外层plain补双槽批量并在宿主预留整个CPU池。初轮4项为3失败/1错误；修复后连同两项初版动物园回归，两个哈希种子全套各157项通过。新增归档117条记录（88 complete、25 infra_error、4 configuration_error）及原运行器漏写的一次worker启动的job证据，见 `data/cleanup-tests.json`；不是完整安全验收。
+
 ## 批量平台与原始统计
 
 `test_platform.py` 的10项回归覆盖：warnings/failedOrders分列、失败移动、争塔去重、1HP目标过量伤害截断而状态哈希不变；CPU租约冲突/affinity恢复；JSONL撕裂尾部原样保留；真实C++缓存命中与损坏拒绝；check格式错误/协议检查；宿主拒绝plain与外层bwrap中的Python/C++/本地bench/折算对局；双槽CPU不重叠、换边换种子、完整任务跳过、清单变动拒绝；controller被SIGTERM后的清理与续跑，以及旧公开回放兼容。

@@ -13,7 +13,7 @@ import traceback
 from uuid import uuid4
 
 from arena import __version__
-from arena.core.journal import append as append_result
+from arena.core.journal import append as append_result, atomic_json
 from arena.core.replay import Writer
 from arena.core.resources import CpuLease
 from arena.core.runner import cpu_hard_limit, run
@@ -95,7 +95,7 @@ def _play(sources, map_text, out, seeds, *, limits, retries, calibration, sandbo
                 'timingCalibration':calibration.header() if calibration else 'unscaled development limits; no calibration supplied',
                 'wallMarginMs':wall_margin_ms,'cpuHardLimitSeconds':cpu_hard_limit(game.limits,state.rules['TURNS'],factor),
                 'startedAt':datetime.now(timezone.utc).isoformat(),'sandbox':sandbox,
-                'runtimePolicy':{'version':3,'singleProcess':True,'maxThreads':16,
+                'runtimePolicy':{'version':4,'parentDeath':'SIGKILL; cannot clear','singleProcess':True,'maxThreads':16,
                     'rootTmpDev':'read-only' if sandbox=='bwrap' else 'outer-sandbox policy; no inner filesystem isolation',
                     'tmp':'read-only' if sandbox=='bwrap' else 'outer-sandbox policy',
                     'cpuAccounting':'READY/END cumulative differences'},
@@ -120,6 +120,7 @@ def _play(sources, map_text, out, seeds, *, limits, retries, calibration, sandbo
                 for p,bot in enumerate(bots):
                     connections.append(Connection(bot,launcher,allocation['bots'][p],cpu_hard_limit(game.limits,state.rules['TURNS'],factor)))
                     row['sandboxPids'] = [c.process.pid for c in connections]
+                    atomic_json(work/'sandbox-pids.json',{'pids':row['sandboxPids']})
                 failed = run(game,state,connections,game.limits,record,wall_margin_ms=wall_margin_ms,
                              overheads=row['turnHarnessCpuNs'])
                 faults = [r.fault for r in failed] if failed is not None else None

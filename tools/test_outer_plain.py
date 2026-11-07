@@ -8,7 +8,8 @@ from uuid import uuid4
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from arena.core.sandbox import ENV, snapshot
+from arena.core.sandbox import ENV, snapshot, parent_death_guard
+from arena.core.resources import CpuLease
 
 
 def run(out: Path):
@@ -26,13 +27,15 @@ from arena.match import play
 from arena.games.outpost.replay import verify
 from arena.core.benchmark import run_benchmark,workload_digest
 from arena.core.timing import Calibration
+from arena.tournament import run_tournament
 base=Path('/workspace')
 checks=[check(base/'sdk'/lang/'example',base/'evidence/checks',sandbox='plain') for lang in ('python','cpp')]
 bench=run_benchmark(base/'evidence/bench',jobs=1,samples=1,sandbox='plain')
 cal=Calibration.load(Path(bench['resultFile']),workload_digest(),jobs=1)
 row=play([base/'sdk/python/example',base/'sdk/cpp/example'],(base/'maps/scrimmage/open-01.map').read_text(),base/'evidence/matches',[17,29],sandbox='plain',calibration=cal)
 verified=verify(Path(row['replay']))['verified'] if row['status']=='complete' else False
-report={'passed':all(r['passed'] for r in checks) and row['status']=='complete' and verified,'checks':checks,'bench':bench,'match':row,'replayVerified':verified}
+batch=run_tournament([base/'sdk/python/example',base/'sdk/cpp/example'],[base/'maps/scrimmage/open-01.map'],base/'evidence/batch',jobs=2,sandbox='plain')
+report={'passed':all(r['passed'] for r in checks) and row['status']=='complete' and verified and batch['status']=='complete','checks':checks,'bench':bench,'match':row,'batch':batch,'replayVerified':verified}
 print(json.dumps(report))
 '''
     (workspace/'probe.py').write_text(probe)
@@ -43,10 +46,13 @@ print(json.dumps(report))
            '--bind',str(workspace/'tmp'),'/tmp','--ro-bind',str(marker),'/hrw-outer-sandbox.json',
            '--remount-ro','/dev','--remount-ro','/','--clearenv','--setenv','PATH','/usr/bin:/bin',
            '--chdir','/workspace','--','/runtime/bin/'+Path(sys.executable).resolve().name,'-I','-S','/workspace/probe.py']
-    cpus=sorted(os.sched_getaffinity(0))[:8]
-    with (work/'stdout.json').open('wb') as stdout,(work/'stderr.log').open('wb') as stderr:
-        process=subprocess.run(args,env=ENV,stdout=stdout,stderr=stderr,timeout=90,
-                               preexec_fn=lambda:os.sched_setaffinity(0,set(cpus)))
+    capacity=min(8,len(os.sched_getaffinity(0)))
+    with CpuLease(capacity-1) as lease,(work/'stdout.json').open('wb') as stdout,(work/'stderr.log').open('wb') as stderr:
+        cpus=lease.pool; parent=os.getpid()
+        def setup():
+            parent_death_guard(parent)
+            os.sched_setaffinity(0,set(cpus))
+        process=subprocess.run(args,env=ENV,stdout=stdout,stderr=stderr,timeout=90,preexec_fn=setup)
     report={'returncode':process.returncode,'directory':str(work),'outerSandbox':'bwrap','cpus':cpus}
     if process.returncode==0: report.update(json.loads((work/'stdout.json').read_text()))
     else: report['passed']=False

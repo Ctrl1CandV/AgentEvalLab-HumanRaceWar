@@ -45,6 +45,8 @@
 
 合成根目录 `/`、`/tmp`、`/dev` 文件系统运行时只读，阻止通过大量临时文件耗尽 RAM；memfd、SysV IPC和POSIX消息队列分配也被禁用，避免这些途径绕过地址空间限额。补查发现只限制 `/tmp` 仍允许在 bwrap 合成根 tmpfs 写文件，因此新增根目录回归并修正，前后失败/通过日志均保留；回放运行策略版本升到3。此只读选择已经公开写入 `rules/rules.md`，不是承诺可写 64 MiB；plain 本地工具也已明示相同评分限制，但其文件隔离由外层负责。
 
+策略v4补齐父死亡窗口：fork前记下父PID，preexec先安装SIGKILL再核对父PID，不能只依赖exec之后的bwrap。运行时seccomp拒绝清除/更改PDEATHSIG；可信worker同样在fork到exec间受保护，再切换到可清理的SIGTERM处理。启动后持久化sandbox-pids sidecar用于诊断；PID属于当时执行命名空间，不应当作任意宿主PID发信号。
+
 跨命名空间进程 CPU 时钟累计全部线程（含已退出线程），只遍历可信启动进程的 leaders/children，不再每 2 ms 遍历全部线程。bot 不得创建子进程；找不到活动进程的 proc 接口或无法定位可计量后代时 fail closed。时钟不可用仍标记回退 `/proc/<pid>/stat`。完整清理/压力矩阵及平台兼容验收仍未完成，不将这些修正夸大为完整恶意提交服务安全认证。
 
 `bench --jobs N` 和独立 `match --timing` 已实现，见 `docs/TIMING.md`、`data/timing.json`。独立match仅接受jobs=1结果；批量调度器在相同CPU池/jobs下测量后接线，backend也须匹配。时限、BANK、墙钟余量和CPU硬上限同时折算，回放记录系数、参考及校准摘要。未提供校准时 `speedFactor` 仍为 `null`，明确使用未折算的开发默认时限，不冒充正式评分。每回合 CPU 为这次 END 与上次 END 的累计读数之差，第一回合基线为 READY；END 后直到下次发消息之间的后台计算也计入下一回合。`BANK` 内部按纳秒扣除超额，不回充，消息显示向下取整的毫秒数。墙钟兜底包括本回合预算、剩余储备和 500 ms；初始化为初始化预算加 500 ms。两方均发送观察后并发收取回复，不把两方思考串行相加。

@@ -16,16 +16,19 @@ from arena.core.benchmark import run_benchmark, workload_digest
 from arena.core.cache import CompileCache
 from arena.core.journal import append, atomic_json, records
 from arena.core.resources import CpuLease
-from arena.core.sandbox import ROOT, Bot, Bubblewrap, InfrastructureError, prepare, snapshot
+from arena.core.sandbox import ROOT, Bot, Bubblewrap, InfrastructureError, parent_death_guard, prepare, snapshot
 from arena.core.timing import Calibration
 from arena.games.outpost.maps import parse_map
 from arena.games.outpost.replay import verify
 
 
-def fingerprint():
-    return sha256(b''.join(str(p.relative_to(ROOT)).encode()+p.read_bytes()
-                          for base in ('arena','sdk') for p in sorted((ROOT/base).rglob('*'))
-                          if p.is_file() and '__pycache__' not in p.parts)).hexdigest()
+def fingerprint(root=ROOT):
+    files=[]
+    for base in ('arena','sdk'):
+        for path in sorted((root/base).rglob('*')):
+            if path.is_symlink(): raise ValueError('framework snapshot contains a symbolic link')
+            if path.is_file() and '__pycache__' not in path.parts: files.append(path)
+    return sha256(b''.join(str(p.relative_to(root)).encode()+p.read_bytes() for p in files)).hexdigest()
 
 
 def map_files(paths):
@@ -104,9 +107,40 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
                 raise InfrastructureError('completed replay changed; refusing to skip or overwrite evidence')
         known={(r['matchId'],r['attempt']) for r in records(out/'attempts.jsonl')}
 
-        def ingest(task):
+        def ingest(task, *, settled=False, verify_complete=True):
+            task_dir=out/'tasks'/task['taskId']
+            if settled:
+                # Only after worker exit or reacquiring its inherited CPU locks:
+                # a live worker may still be finishing its durable terminal row.
+                for execution in sorted(task_dir.glob('*')):
+                    if not (execution/'job.json').exists(): continue
+                    groups=list((execution/'matches').glob('*'))
+                    for group in groups:
+                        ledger=group/'results.jsonl'
+                        recorded={r['attempt'] for r in records(ledger)}
+                        for work in sorted(group.glob('attempt-*')):
+                            number=int(work.name.removeprefix('attempt-'))
+                            if number in recorded: continue
+                            result_file=work/'result.json'
+                            row=None
+                            if result_file.exists():
+                                try: row=json.loads(result_file.read_text())
+                                except json.JSONDecodeError: pass  # keep the original truncated bytes
+                            if row is None:
+                                row={'matchId':group.name,'attempt':number,'taskId':task['taskId'],
+                                     'directory':str(work),'status':'infra_error','recovered':True,
+                                     'error':'worker_terminated_before_attempt_result'}
+                            append(ledger,row)
+                    key=('worker-'+execution.name,0)
+                    if not groups and key not in known:
+                        reply_file=execution/'worker-result.json'
+                        reply=json.loads(reply_file.read_text()) if reply_file.exists() else {}
+                        append(out/'attempts.jsonl',{'matchId':key[0],'attempt':0,'taskId':task['taskId'],
+                            'directory':str(execution),'status':'configuration_error' if reply.get('error')=='ValueError' else 'infra_error',
+                            'error':reply.get('error','worker_exit_without_result'),'recovered':True})
+                        known.add(key)
             rows=[]
-            for ledger in sorted((out/'tasks'/task['taskId']).glob('*/matches/*/results.jsonl')):
+            for ledger in sorted(task_dir.glob('*/matches/*/results.jsonl')):
                 for row in records(ledger):
                     if row.get('taskId')!=task['taskId']: raise InfrastructureError('task ledger identity mismatch')
                     key=(row['matchId'],row['attempt'])
@@ -118,8 +152,11 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
                 if len(complete)!=1: raise InfrastructureError('more than one completed execution for a task')
                 row={**complete[0],**task}
                 if task['taskId'] not in finished:
-                    # Recovery verifies a terminal transcript before adopting it.
-                    verify(Path(row['replay']))
+                    # Recoveries replay before adoption. Normal trusted-worker
+                    # results defer the full audit, avoiding a serial engine rerun
+                    # in the controller's scheduling loop.
+                    if verify_complete: verify(Path(row['replay']))
+                    row['replayVerifiedOnIngest']=verify_complete
                     append(out/'results.jsonl',row); finished[task['taskId']]=row
                 return True
             return False
@@ -142,6 +179,16 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
             capacity=min(8,len(os.sched_getaffinity(0))) if sandbox=='plain' else len(os.sched_getaffinity(0))
             runner_count=min(jobs,capacity-2*jobs)
             with CpuLease(2*jobs,exact=prior_cal.cpus if prior_cal else None,runner_count=runner_count) as lease:
+                for task in manifest['tasks']:
+                    if task['taskId'] not in finished: ingest(task,settled=True)
+                archived=records(out/'attempts.jsonl')
+                failures=Counter(r.get('taskId') for r in archived if r['status']=='infra_error')
+                invalid={r.get('taskId') for r in archived if r['status']=='configuration_error'}
+                pending=[t for t in manifest['tasks'] if t['taskId'] not in finished
+                         and failures[t['taskId']]<4 and t['taskId'] not in invalid]
+                if max_tasks is not None: pending=pending[:max_tasks]
+                if fingerprint(out/'runtime')!=request['framework']:
+                    raise ValueError('frozen framework changed')
                 if sandbox=='bwrap': launcher=Bubblewrap()
                 else:
                     from arena.core.plain import Plain
@@ -177,34 +224,37 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
                         while queue and idle:
                             slot=idle.pop(0); task=queue.pop(0)
                             execution=out/'tasks'/task['taskId']/uuid4().hex; execution.mkdir(parents=True)
-                            config={'taskId':task['taskId'],'sources':[str(sources[i]) for i in task['players']],
+                            config={'taskId':task['taskId'],'controllerPid':os.getpid(),'sources':[str(sources[i]) for i in task['players']],
                                 'prepared':[{**asdict(prepared[i]),'directory':str(prepared[i].directory)} for i in task['players']],
                                 'map':str(out/'runtime'/f'map-{task["mapIndex"]}.map'),'seeds':task['seeds'],
                                 'out':str(execution/'matches'),'reply':str(execution/'worker-result.json'),
                                 'sandbox':sandbox,'ruleset':ruleset or {},'timing':timing,
-                                'retries':3-failures[task['taskId']],
+                                'retries':3-failures[task['taskId']], 'framework':request['framework'],
+                                'mapSha256':request['mapHashes'][task['mapIndex']],
                                 'allocation':{'jobs':jobs,'pool':lease.cpus,'bots':lease.cpus[slot*2:slot*2+2],
                                               'runners':[lease.runners[slot%len(lease.runners)]]}}
                             atomic_json(execution/'job.json',config)
                             stdout=(execution/'worker.stdout').open('wb'); stderr=(execution/'worker.stderr').open('wb')
+                            parent_pid=os.getpid()
                             try:
                                 process=subprocess.Popen([sys.executable,'-m','arena.worker',str(execution/'job.json')],
                                     cwd=out/'runtime',env={'PATH':'/usr/bin:/bin','LANG':'C.UTF-8','PYTHONHASHSEED':'0',
                                                          'PYTHONDONTWRITEBYTECODE':'1'},stdout=stdout,stderr=stderr,start_new_session=True,
-                                    pass_fds=tuple(lease.files))
+                                    pass_fds=tuple(lease.files),preexec_fn=lambda:parent_death_guard(parent_pid))
+                            except (OSError,subprocess.SubprocessError) as error:
+                                key=('worker-'+execution.name,0)
+                                append(out/'attempts.jsonl',{'matchId':key[0],'attempt':0,'taskId':task['taskId'],
+                                    'directory':str(execution),'status':'infra_error','error':type(error).__name__})
+                                known.add(key)
+                                append(out/'executions.jsonl',{'taskId':task['taskId'],'directory':str(execution),
+                                    'completed':False,'error':type(error).__name__,'phase':'spawn'})
+                                raise InfrastructureError('worker spawn failed; attempt retained') from error
                             finally: stdout.close(); stderr.close()
                             active[slot]=(process,task,execution)
                             atomic_json(execution/'started.json',{'workerPid':process.pid,'slot':slot})
                         for slot,(process,task,execution) in list(active.items()):
                             if process.poll() is None: continue
-                            success=ingest(task)
-                            if not success and not list((execution/'matches').glob('*/results.jsonl')):
-                                reply_path=execution/'worker-result.json'
-                                reply=json.loads(reply_path.read_text()) if reply_path.exists() else {}
-                                append(out/'attempts.jsonl',{'matchId':'worker-'+execution.name,'attempt':0,
-                                    'taskId':task['taskId'],'directory':str(execution),
-                                    'status':'configuration_error' if reply.get('error')=='ValueError' else 'infra_error',
-                                    'error':reply.get('error','worker_exit_without_result')})
+                            success=ingest(task,settled=True,verify_complete=process.returncode!=0)
                             receipt={'taskId':task['taskId'],'returncode':process.returncode,'completed':success,
                                      'directory':str(execution),'wallSinceBatchStart':time.monotonic()-start}
                             append(out/'executions.jsonl',receipt); executed.append(receipt)
@@ -216,7 +266,7 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
                     for process,task,execution in active.values():
                         try: process.wait(timeout=10)
                         except subprocess.TimeoutExpired: process.kill(); process.wait()
-                        ingest(task)
+                        ingest(task,settled=True)
                         append(out/'executions.jsonl',{'taskId':task['taskId'],'returncode':process.returncode,
                             'completed':task['taskId'] in finished,'directory':str(execution),'interrupted':True})
         remaining=len(manifest['tasks'])-len(finished)

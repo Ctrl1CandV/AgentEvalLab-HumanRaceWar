@@ -1,6 +1,7 @@
 """Linux bubblewrap launcher. Never falls back to host/plain execution."""
 from __future__ import annotations
 
+import ctypes
 from dataclasses import dataclass
 from hashlib import sha256
 import json
@@ -72,6 +73,13 @@ def snapshot(source: Path, target: Path) -> str:
     return sha256(json.dumps(hashes, ensure_ascii=True, separators=(",", ":")).encode()).hexdigest()
 
 
+def parent_death_guard(parent: int):
+    # PR_SET_PDEATHSIG is not retroactive. Check the pre-fork parent's identity
+    # after installing it, closing the fork -> exec -> bwrap startup race.
+    if ctypes.CDLL(None).prctl(1, signal.SIGKILL, 0, 0, 0) or os.getppid() != parent:
+        os._exit(125)
+
+
 class Bubblewrap:
     name = "bwrap"
 
@@ -122,7 +130,9 @@ class Bubblewrap:
         if cpu not in self.cpus:
             raise InfrastructureError("CPU not available in current affinity mask")
 
+        parent = os.getpid()
         def limits():
+            parent_death_guard(parent)
             os.sched_setaffinity(0, {cpu})
             address_space = (2048 if writable_build else 512)*1024*1024
             for kind, value in ((resource.RLIMIT_AS, address_space), (resource.RLIMIT_FSIZE, 16*1024*1024),
@@ -187,7 +197,7 @@ def prepare(source: Path, directory: Path, launcher, cpu: int, *, cache=None) ->
         if cache is None:
             compile_bot(bot, launcher, cpu)
         else:
-            with cache.entry(digest) as (key, entry):
+            with cache.entry([launcher.name, digest]) as (key, entry):
                 hit = cache.restore(entry, directory)
                 if not hit:
                     compile_bot(bot, launcher, cpu)

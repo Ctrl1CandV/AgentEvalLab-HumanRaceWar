@@ -11,7 +11,7 @@ import resource
 import subprocess
 import sys
 
-from .sandbox import ENV, InfrastructureError
+from .sandbox import ENV, InfrastructureError, parent_death_guard
 from .seccomp import runtime_filter
 
 MARKER = Path('/hrw-outer-sandbox.json')
@@ -57,7 +57,9 @@ class Plain:
             for prefix, path in paths.items():
                 if arg == prefix or arg.startswith(prefix+'/'): return str(path)+arg[len(prefix):]
             return arg
+        parent = os.getpid()
         def limits():
+            parent_death_guard(parent)
             os.sched_setaffinity(0, {cpu})
             for kind, value in ((resource.RLIMIT_AS, (2048 if writable_build else 512)*1024**2),
                                 (resource.RLIMIT_CPU, cpu_seconds), (resource.RLIMIT_NOFILE,64),
