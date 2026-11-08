@@ -1,0 +1,2990 @@
+{
+  "schemaVersion": 1,
+  "batch": "runs/development/zoo-v5-public",
+  "games": 720,
+  "scope": "All harassment games in this immutable matrix; replay-only, hash-checked; contacts are target-turns, not independent battles.",
+  "distanceDefinitions": {
+    "homeL1": "Manhattan distance from base",
+    "homeWalk": "shortest terrain walk from base (first adjacent ground costs one)",
+    "localSoldiers": "pre-attack living soldier counts within Manhattan radius 4 of target; not path-aware"
+  },
+  "byOpponent": {
+    "M-balanced": {
+      "all": {
+        "games": 80,
+        "harassWins": 50,
+        "winReasons": {
+          "base_destroyed": 50
+        },
+        "victimWorkerDeaths": 1218,
+        "workerDeathHomeL1Median": 10.0,
+        "workerDeathHomeWalkMedian": 11.0,
+        "workerDeathsWithinBaseFireRange2": 6,
+        "workerDeathsWithinHomeL1_8": 400,
+        "workerDeathsWithNoFriendlySoldierWithin4": 564,
+        "workerDeathOrders": {
+          "ATTACK": 1218
+        },
+        "soldierTargetTurnContacts": 14734,
+        "contactGlobalSoldiersHarassMedian": 10.0,
+        "contactGlobalSoldiersOpponentMedian": 4.0,
+        "contactLocalSoldiersHarassMedian": 2.0,
+        "contactLocalSoldiersOpponentMedian": 2.0,
+        "contactGlobalHarassToOpponentRatioMedian": 2.0,
+        "contactLocalHarassToOpponentRatioMedian": 1.0,
+        "contactRatioZeroDenominatorGlobal": 1418,
+        "contactRatioZeroDenominatorLocal": 2326,
+        "contactHarassGlobalAdvantageFraction": 0.8143070449300936,
+        "contactHarassLocalAdvantageFraction": 0.5027826795167639,
+        "turnSamples": {
+          "25": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 5.0,
+            "opponentSoldiersMedian": 1.0,
+            "harassDepositMedian": 420.0,
+            "opponentDepositMedian": 360.0
+          },
+          "50": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 3.0,
+            "harassDepositMedian": 980.0,
+            "opponentDepositMedian": 930.0
+          },
+          "75": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 6.0,
+            "harassDepositMedian": 1440.0,
+            "opponentDepositMedian": 1440.0
+          },
+          "100": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 5.0,
+            "harassDepositMedian": 1860.0,
+            "opponentDepositMedian": 1880.0
+          },
+          "150": {
+            "gamesPresent": 78,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 3.0,
+            "harassDepositMedian": 2460.0,
+            "opponentDepositMedian": 2310.0
+          }
+        }
+      },
+      "byType": {
+        "open": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 332,
+          "workerDeathHomeL1Median": 10.0,
+          "workerDeathHomeWalkMedian": 11.0,
+          "workerDeathsWithinBaseFireRange2": 4,
+          "workerDeathsWithinHomeL1_8": 134,
+          "workerDeathsWithNoFriendlySoldierWithin4": 168,
+          "workerDeathOrders": {
+            "ATTACK": 332
+          },
+          "soldierTargetTurnContacts": 3012,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 3.0,
+          "contactLocalSoldiersHarassMedian": 3.0,
+          "contactLocalSoldiersOpponentMedian": 1.0,
+          "contactGlobalHarassToOpponentRatioMedian": 2.5,
+          "contactLocalHarassToOpponentRatioMedian": 1.0,
+          "contactRatioZeroDenominatorGlobal": 532,
+          "contactRatioZeroDenominatorLocal": 804,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 0.6181938911022576,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 1.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 360.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 3.5,
+              "harassDepositMedian": 980.0,
+              "opponentDepositMedian": 960.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 6.0,
+              "harassDepositMedian": 1440.0,
+              "opponentDepositMedian": 1440.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 3.0,
+              "harassDepositMedian": 1855.0,
+              "opponentDepositMedian": 1740.0
+            },
+            "150": {
+              "gamesPresent": 18,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 2400.0,
+              "opponentDepositMedian": 2280.0
+            }
+          }
+        },
+        "corridor": {
+          "games": 20,
+          "harassWins": 16,
+          "winReasons": {
+            "base_destroyed": 16
+          },
+          "victimWorkerDeaths": 352,
+          "workerDeathHomeL1Median": 10.0,
+          "workerDeathHomeWalkMedian": 10.0,
+          "workerDeathsWithinBaseFireRange2": 0,
+          "workerDeathsWithinHomeL1_8": 128,
+          "workerDeathsWithNoFriendlySoldierWithin4": 142,
+          "workerDeathOrders": {
+            "ATTACK": 352
+          },
+          "soldierTargetTurnContacts": 4022,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 4.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 2.0,
+          "contactGlobalHarassToOpponentRatioMedian": 2.3333333333333335,
+          "contactLocalHarassToOpponentRatioMedian": 1.0,
+          "contactRatioZeroDenominatorGlobal": 378,
+          "contactRatioZeroDenominatorLocal": 612,
+          "contactHarassGlobalAdvantageFraction": 0.8199900546991546,
+          "contactHarassLocalAdvantageFraction": 0.5156638488314271,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 1.0,
+              "harassDepositMedian": 470.0,
+              "opponentDepositMedian": 360.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 3.0,
+              "harassDepositMedian": 1010.0,
+              "opponentDepositMedian": 960.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 5.0,
+              "harassDepositMedian": 1470.0,
+              "opponentDepositMedian": 1505.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 4.5,
+              "harassDepositMedian": 1910.0,
+              "opponentDepositMedian": 1890.0
+            },
+            "150": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.5,
+              "harassDepositMedian": 2510.0,
+              "opponentDepositMedian": 2310.0
+            }
+          }
+        },
+        "island": {
+          "games": 20,
+          "harassWins": 10,
+          "winReasons": {
+            "base_destroyed": 10
+          },
+          "victimWorkerDeaths": 354,
+          "workerDeathHomeL1Median": 12.0,
+          "workerDeathHomeWalkMedian": 12.0,
+          "workerDeathsWithinBaseFireRange2": 0,
+          "workerDeathsWithinHomeL1_8": 66,
+          "workerDeathsWithNoFriendlySoldierWithin4": 184,
+          "workerDeathOrders": {
+            "ATTACK": 354
+          },
+          "soldierTargetTurnContacts": 4418,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 6.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 2.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.6666666666666667,
+          "contactLocalHarassToOpponentRatioMedian": 1.0,
+          "contactRatioZeroDenominatorGlobal": 288,
+          "contactRatioZeroDenominatorLocal": 580,
+          "contactHarassGlobalAdvantageFraction": 0.8198279764599367,
+          "contactHarassLocalAdvantageFraction": 0.447713897691263,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 1.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 360.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 1020.0,
+              "opponentDepositMedian": 930.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 7.0,
+              "harassDepositMedian": 1500.0,
+              "opponentDepositMedian": 1470.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 6.0,
+              "harassDepositMedian": 1920.0,
+              "opponentDepositMedian": 1925.0
+            },
+            "150": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 4.5,
+              "harassDepositMedian": 2490.0,
+              "opponentDepositMedian": 2530.0
+            }
+          }
+        },
+        "maze": {
+          "games": 20,
+          "harassWins": 4,
+          "winReasons": {
+            "base_destroyed": 4
+          },
+          "victimWorkerDeaths": 180,
+          "workerDeathHomeL1Median": 9.0,
+          "workerDeathHomeWalkMedian": 11.0,
+          "workerDeathsWithinBaseFireRange2": 2,
+          "workerDeathsWithinHomeL1_8": 72,
+          "workerDeathsWithNoFriendlySoldierWithin4": 70,
+          "workerDeathOrders": {
+            "ATTACK": 180
+          },
+          "soldierTargetTurnContacts": 3282,
+          "contactGlobalSoldiersHarassMedian": 7.0,
+          "contactGlobalSoldiersOpponentMedian": 5.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 2.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.4,
+          "contactLocalHarassToOpponentRatioMedian": 1.0,
+          "contactRatioZeroDenominatorGlobal": 220,
+          "contactRatioZeroDenominatorLocal": 330,
+          "contactHarassGlobalAdvantageFraction": 0.6294942108470445,
+          "contactHarassLocalAdvantageFraction": 0.45521023765996343,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.0,
+              "opponentSoldiersMedian": 1.0,
+              "harassDepositMedian": 300.0,
+              "opponentDepositMedian": 300.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 8.0,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 740.0,
+              "opponentDepositMedian": 810.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 9.0,
+              "opponentSoldiersMedian": 5.5,
+              "harassDepositMedian": 987.5,
+              "opponentDepositMedian": 1215.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 8.5,
+              "opponentSoldiersMedian": 6.5,
+              "harassDepositMedian": 1135.0,
+              "opponentDepositMedian": 1545.0
+            },
+            "150": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 7.0,
+              "opponentSoldiersMedian": 4.5,
+              "harassDepositMedian": 1445.0,
+              "opponentDepositMedian": 1990.0
+            }
+          }
+        }
+      }
+    },
+    "Z-eco": {
+      "all": {
+        "games": 80,
+        "harassWins": 66,
+        "winReasons": {
+          "base_destroyed": 54,
+          "turn_limit_deposit": 12
+        },
+        "victimWorkerDeaths": 2174,
+        "workerDeathHomeL1Median": 9.0,
+        "workerDeathHomeWalkMedian": 9.0,
+        "workerDeathsWithinBaseFireRange2": 82,
+        "workerDeathsWithinHomeL1_8": 1032,
+        "workerDeathsWithNoFriendlySoldierWithin4": 1304,
+        "workerDeathOrders": {
+          "MOVE": 838,
+          "MINE": 410,
+          "NONE": 926
+        },
+        "soldierTargetTurnContacts": 11574,
+        "contactGlobalSoldiersHarassMedian": 10.0,
+        "contactGlobalSoldiersOpponentMedian": 6.0,
+        "contactLocalSoldiersHarassMedian": 2.0,
+        "contactLocalSoldiersOpponentMedian": 2.0,
+        "contactGlobalHarassToOpponentRatioMedian": 1.4285714285714286,
+        "contactLocalHarassToOpponentRatioMedian": 1.0,
+        "contactRatioZeroDenominatorGlobal": 880,
+        "contactRatioZeroDenominatorLocal": 1418,
+        "contactHarassGlobalAdvantageFraction": 0.6784171418697079,
+        "contactHarassLocalAdvantageFraction": 0.4243995161569034,
+        "turnSamples": {
+          "25": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 5.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 420.0,
+            "opponentDepositMedian": 420.0
+          },
+          "50": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 3.0,
+            "harassDepositMedian": 960.0,
+            "opponentDepositMedian": 1200.0
+          },
+          "75": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 6.0,
+            "harassDepositMedian": 1440.0,
+            "opponentDepositMedian": 1802.5
+          },
+          "100": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 5.0,
+            "harassDepositMedian": 1860.0,
+            "opponentDepositMedian": 2200.0
+          },
+          "150": {
+            "gamesPresent": 62,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 4.0,
+            "harassDepositMedian": 2340.0,
+            "opponentDepositMedian": 2705.0
+          }
+        }
+      },
+      "byType": {
+        "open": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 686,
+          "workerDeathHomeL1Median": 10.0,
+          "workerDeathHomeWalkMedian": 10.0,
+          "workerDeathsWithinBaseFireRange2": 6,
+          "workerDeathsWithinHomeL1_8": 248,
+          "workerDeathsWithNoFriendlySoldierWithin4": 480,
+          "workerDeathOrders": {
+            "MINE": 180,
+            "MOVE": 396,
+            "NONE": 110
+          },
+          "soldierTargetTurnContacts": 2428,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 6.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 1.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.6666666666666667,
+          "contactLocalHarassToOpponentRatioMedian": 1.0,
+          "contactRatioZeroDenominatorGlobal": 160,
+          "contactRatioZeroDenominatorLocal": 396,
+          "contactHarassGlobalAdvantageFraction": 0.9497528830313015,
+          "contactHarassLocalAdvantageFraction": 0.5222405271828665,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 420.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 3.0,
+              "harassDepositMedian": 980.0,
+              "opponentDepositMedian": 1200.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 6.0,
+              "harassDepositMedian": 1440.0,
+              "opponentDepositMedian": 1830.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 6.0,
+              "harassDepositMedian": 1860.0,
+              "opponentDepositMedian": 2250.0
+            },
+            "150": {
+              "gamesPresent": 12,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 3.0,
+              "harassDepositMedian": 2340.0,
+              "opponentDepositMedian": 2820.0
+            }
+          }
+        },
+        "corridor": {
+          "games": 20,
+          "harassWins": 12,
+          "winReasons": {
+            "base_destroyed": 12
+          },
+          "victimWorkerDeaths": 494,
+          "workerDeathHomeL1Median": 10.0,
+          "workerDeathHomeWalkMedian": 10.0,
+          "workerDeathsWithinBaseFireRange2": 4,
+          "workerDeathsWithinHomeL1_8": 206,
+          "workerDeathsWithNoFriendlySoldierWithin4": 330,
+          "workerDeathOrders": {
+            "MOVE": 266,
+            "MINE": 126,
+            "NONE": 102
+          },
+          "soldierTargetTurnContacts": 3616,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 11.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 3.0,
+          "contactGlobalHarassToOpponentRatioMedian": 0.8333333333333334,
+          "contactLocalHarassToOpponentRatioMedian": 0.75,
+          "contactRatioZeroDenominatorGlobal": 198,
+          "contactRatioZeroDenominatorLocal": 250,
+          "contactHarassGlobalAdvantageFraction": 0.42035398230088494,
+          "contactHarassLocalAdvantageFraction": 0.29314159292035397,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 470.0,
+              "opponentDepositMedian": 420.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.5,
+              "harassDepositMedian": 1015.0,
+              "opponentDepositMedian": 1282.5
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 5.5,
+              "harassDepositMedian": 1490.0,
+              "opponentDepositMedian": 1950.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1860.0,
+              "opponentDepositMedian": 2282.5
+            },
+            "150": {
+              "gamesPresent": 14,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 6.0,
+              "harassDepositMedian": 2460.0,
+              "opponentDepositMedian": 3180.0
+            }
+          }
+        },
+        "island": {
+          "games": 20,
+          "harassWins": 14,
+          "winReasons": {
+            "base_destroyed": 10,
+            "turn_limit_deposit": 4
+          },
+          "victimWorkerDeaths": 556,
+          "workerDeathHomeL1Median": 10.0,
+          "workerDeathHomeWalkMedian": 10.0,
+          "workerDeathsWithinBaseFireRange2": 0,
+          "workerDeathsWithinHomeL1_8": 206,
+          "workerDeathsWithNoFriendlySoldierWithin4": 298,
+          "workerDeathOrders": {
+            "NONE": 348,
+            "MINE": 90,
+            "MOVE": 118
+          },
+          "soldierTargetTurnContacts": 3466,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 8.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 2.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.1111111111111112,
+          "contactLocalHarassToOpponentRatioMedian": 1.0,
+          "contactRatioZeroDenominatorGlobal": 176,
+          "contactRatioZeroDenominatorLocal": 424,
+          "contactHarassGlobalAdvantageFraction": 0.6151182919792267,
+          "contactHarassLocalAdvantageFraction": 0.36468551644547026,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 420.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 3.5,
+              "harassDepositMedian": 960.0,
+              "opponentDepositMedian": 1205.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 8.5,
+              "harassDepositMedian": 1500.0,
+              "opponentDepositMedian": 1955.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 8.0,
+              "harassDepositMedian": 1920.0,
+              "opponentDepositMedian": 2255.0
+            },
+            "150": {
+              "gamesPresent": 18,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 8.0,
+              "harassDepositMedian": 2520.0,
+              "opponentDepositMedian": 2940.0
+            }
+          }
+        },
+        "maze": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 12,
+            "turn_limit_deposit": 8
+          },
+          "victimWorkerDeaths": 438,
+          "workerDeathHomeL1Median": 6.0,
+          "workerDeathHomeWalkMedian": 7.0,
+          "workerDeathsWithinBaseFireRange2": 72,
+          "workerDeathsWithinHomeL1_8": 372,
+          "workerDeathsWithNoFriendlySoldierWithin4": 196,
+          "workerDeathOrders": {
+            "NONE": 366,
+            "MOVE": 58,
+            "MINE": 14
+          },
+          "soldierTargetTurnContacts": 2064,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 3.0,
+          "contactLocalSoldiersHarassMedian": 4.0,
+          "contactLocalSoldiersOpponentMedian": 2.0,
+          "contactGlobalHarassToOpponentRatioMedian": 2.5,
+          "contactLocalHarassToOpponentRatioMedian": 1.3333333333333333,
+          "contactRatioZeroDenominatorGlobal": 346,
+          "contactRatioZeroDenominatorLocal": 348,
+          "contactHarassGlobalAdvantageFraction": 0.9176356589147286,
+          "contactHarassLocalAdvantageFraction": 0.6395348837209303,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 300.0,
+              "opponentDepositMedian": 330.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 8.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 740.0,
+              "opponentDepositMedian": 655.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 9.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 987.5,
+              "opponentDepositMedian": 865.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1165.0,
+              "opponentDepositMedian": 985.0
+            },
+            "150": {
+              "gamesPresent": 18,
+              "harassSoldiersMedian": 9.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1320.0,
+              "opponentDepositMedian": 1060.0
+            }
+          }
+        }
+      }
+    },
+    "Z-idle": {
+      "all": {
+        "games": 80,
+        "harassWins": 80,
+        "winReasons": {
+          "base_destroyed": 80
+        },
+        "victimWorkerDeaths": 144,
+        "workerDeathHomeL1Median": 1.0,
+        "workerDeathHomeWalkMedian": 1.0,
+        "workerDeathsWithinBaseFireRange2": 144,
+        "workerDeathsWithinHomeL1_8": 144,
+        "workerDeathsWithNoFriendlySoldierWithin4": 144,
+        "workerDeathOrders": {
+          "NONE": 144
+        },
+        "soldierTargetTurnContacts": 0,
+        "contactGlobalSoldiersHarassMedian": null,
+        "contactGlobalSoldiersOpponentMedian": null,
+        "contactLocalSoldiersHarassMedian": null,
+        "contactLocalSoldiersOpponentMedian": null,
+        "contactGlobalHarassToOpponentRatioMedian": null,
+        "contactLocalHarassToOpponentRatioMedian": null,
+        "contactRatioZeroDenominatorGlobal": 0,
+        "contactRatioZeroDenominatorLocal": 0,
+        "contactHarassGlobalAdvantageFraction": null,
+        "contactHarassLocalAdvantageFraction": null,
+        "turnSamples": {
+          "25": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 4.5,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 420.0,
+            "opponentDepositMedian": 0.0
+          },
+          "50": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 960.0,
+            "opponentDepositMedian": 0.0
+          },
+          "75": {
+            "gamesPresent": 66,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1440.0,
+            "opponentDepositMedian": 0.0
+          },
+          "100": {
+            "gamesPresent": 28,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1800.0,
+            "opponentDepositMedian": 0.0
+          },
+          "150": {
+            "gamesPresent": 4,
+            "harassSoldiersMedian": 9.5,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1750.0,
+            "opponentDepositMedian": 0.0
+          }
+        }
+      },
+      "byType": {
+        "open": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 40,
+          "workerDeathHomeL1Median": 1.0,
+          "workerDeathHomeWalkMedian": 1.0,
+          "workerDeathsWithinBaseFireRange2": 40,
+          "workerDeathsWithinHomeL1_8": 40,
+          "workerDeathsWithNoFriendlySoldierWithin4": 40,
+          "workerDeathOrders": {
+            "NONE": 40
+          },
+          "soldierTargetTurnContacts": 0,
+          "contactGlobalSoldiersHarassMedian": null,
+          "contactGlobalSoldiersOpponentMedian": null,
+          "contactLocalSoldiersHarassMedian": null,
+          "contactLocalSoldiersOpponentMedian": null,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 0,
+          "contactRatioZeroDenominatorLocal": 0,
+          "contactHarassGlobalAdvantageFraction": null,
+          "contactHarassLocalAdvantageFraction": null,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 990.0,
+              "opponentDepositMedian": 0.0
+            },
+            "75": {
+              "gamesPresent": 14,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1440.0,
+              "opponentDepositMedian": 0.0
+            },
+            "100": {
+              "gamesPresent": 2,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1680.0,
+              "opponentDepositMedian": 0.0
+            }
+          }
+        },
+        "corridor": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 40,
+          "workerDeathHomeL1Median": 1.0,
+          "workerDeathHomeWalkMedian": 1.0,
+          "workerDeathsWithinBaseFireRange2": 40,
+          "workerDeathsWithinHomeL1_8": 40,
+          "workerDeathsWithNoFriendlySoldierWithin4": 40,
+          "workerDeathOrders": {
+            "NONE": 40
+          },
+          "soldierTargetTurnContacts": 0,
+          "contactGlobalSoldiersHarassMedian": null,
+          "contactGlobalSoldiersOpponentMedian": null,
+          "contactLocalSoldiersHarassMedian": null,
+          "contactLocalSoldiersOpponentMedian": null,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 0,
+          "contactRatioZeroDenominatorLocal": 0,
+          "contactHarassGlobalAdvantageFraction": null,
+          "contactHarassLocalAdvantageFraction": null,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1035.0,
+              "opponentDepositMedian": 0.0
+            },
+            "75": {
+              "gamesPresent": 16,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1500.0,
+              "opponentDepositMedian": 0.0
+            },
+            "100": {
+              "gamesPresent": 6,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1920.0,
+              "opponentDepositMedian": 0.0
+            },
+            "150": {
+              "gamesPresent": 2,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 2700.0,
+              "opponentDepositMedian": 0.0
+            }
+          }
+        },
+        "island": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 38,
+          "workerDeathHomeL1Median": 1.0,
+          "workerDeathHomeWalkMedian": 1.0,
+          "workerDeathsWithinBaseFireRange2": 38,
+          "workerDeathsWithinHomeL1_8": 38,
+          "workerDeathsWithNoFriendlySoldierWithin4": 38,
+          "workerDeathOrders": {
+            "NONE": 38
+          },
+          "soldierTargetTurnContacts": 0,
+          "contactGlobalSoldiersHarassMedian": null,
+          "contactGlobalSoldiersOpponentMedian": null,
+          "contactLocalSoldiersHarassMedian": null,
+          "contactLocalSoldiersOpponentMedian": null,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 0,
+          "contactRatioZeroDenominatorLocal": 0,
+          "contactHarassGlobalAdvantageFraction": null,
+          "contactHarassLocalAdvantageFraction": null,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 990.0,
+              "opponentDepositMedian": 0.0
+            },
+            "75": {
+              "gamesPresent": 16,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1470.0,
+              "opponentDepositMedian": 0.0
+            },
+            "100": {
+              "gamesPresent": 4,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1947.5,
+              "opponentDepositMedian": 0.0
+            }
+          }
+        },
+        "maze": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 26,
+          "workerDeathHomeL1Median": 1.0,
+          "workerDeathHomeWalkMedian": 1.0,
+          "workerDeathsWithinBaseFireRange2": 26,
+          "workerDeathsWithinHomeL1_8": 26,
+          "workerDeathsWithNoFriendlySoldierWithin4": 26,
+          "workerDeathOrders": {
+            "NONE": 26
+          },
+          "soldierTargetTurnContacts": 0,
+          "contactGlobalSoldiersHarassMedian": null,
+          "contactGlobalSoldiersOpponentMedian": null,
+          "contactLocalSoldiersHarassMedian": null,
+          "contactLocalSoldiersOpponentMedian": null,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 0,
+          "contactRatioZeroDenominatorLocal": 0,
+          "contactHarassGlobalAdvantageFraction": null,
+          "contactHarassLocalAdvantageFraction": null,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 3.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 300.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 7.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 705.0,
+              "opponentDepositMedian": 0.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 995.0,
+              "opponentDepositMedian": 0.0
+            },
+            "100": {
+              "gamesPresent": 16,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1170.0,
+              "opponentDepositMedian": 0.0
+            },
+            "150": {
+              "gamesPresent": 2,
+              "harassSoldiersMedian": 9.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 800.0,
+              "opponentDepositMedian": 0.0
+            }
+          }
+        }
+      }
+    },
+    "Z-miner": {
+      "all": {
+        "games": 80,
+        "harassWins": 80,
+        "winReasons": {
+          "base_destroyed": 80
+        },
+        "victimWorkerDeaths": 158,
+        "workerDeathHomeL1Median": 4.0,
+        "workerDeathHomeWalkMedian": 4.0,
+        "workerDeathsWithinBaseFireRange2": 20,
+        "workerDeathsWithinHomeL1_8": 158,
+        "workerDeathsWithNoFriendlySoldierWithin4": 158,
+        "workerDeathOrders": {
+          "MINE": 78,
+          "MOVE": 50,
+          "NONE": 30
+        },
+        "soldierTargetTurnContacts": 2278,
+        "contactGlobalSoldiersHarassMedian": 10.0,
+        "contactGlobalSoldiersOpponentMedian": 0.0,
+        "contactLocalSoldiersHarassMedian": 3.0,
+        "contactLocalSoldiersOpponentMedian": 0.0,
+        "contactGlobalHarassToOpponentRatioMedian": null,
+        "contactLocalHarassToOpponentRatioMedian": null,
+        "contactRatioZeroDenominatorGlobal": 2278,
+        "contactRatioZeroDenominatorLocal": 2278,
+        "contactHarassGlobalAdvantageFraction": 1.0,
+        "contactHarassLocalAdvantageFraction": 1.0,
+        "turnSamples": {
+          "25": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 4.5,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 420.0,
+            "opponentDepositMedian": 180.0
+          },
+          "50": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 960.0,
+            "opponentDepositMedian": 480.0
+          },
+          "75": {
+            "gamesPresent": 72,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1455.0,
+            "opponentDepositMedian": 635.0
+          },
+          "100": {
+            "gamesPresent": 44,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1840.0,
+            "opponentDepositMedian": 720.0
+          },
+          "150": {
+            "gamesPresent": 12,
+            "harassSoldiersMedian": 9.5,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1190.0,
+            "opponentDepositMedian": 980.0
+          }
+        }
+      },
+      "byType": {
+        "open": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 40,
+          "workerDeathHomeL1Median": 3.5,
+          "workerDeathHomeWalkMedian": 3.5,
+          "workerDeathsWithinBaseFireRange2": 10,
+          "workerDeathsWithinHomeL1_8": 40,
+          "workerDeathsWithNoFriendlySoldierWithin4": 40,
+          "workerDeathOrders": {
+            "MINE": 20,
+            "MOVE": 14,
+            "NONE": 6
+          },
+          "soldierTargetTurnContacts": 486,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 4.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 486,
+          "contactRatioZeroDenominatorLocal": 486,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 180.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 990.0,
+              "opponentDepositMedian": 450.0
+            },
+            "75": {
+              "gamesPresent": 16,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1440.0,
+              "opponentDepositMedian": 600.0
+            },
+            "100": {
+              "gamesPresent": 4,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1710.0,
+              "opponentDepositMedian": 660.0
+            }
+          }
+        },
+        "corridor": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 40,
+          "workerDeathHomeL1Median": 4.0,
+          "workerDeathHomeWalkMedian": 4.0,
+          "workerDeathsWithinBaseFireRange2": 4,
+          "workerDeathsWithinHomeL1_8": 40,
+          "workerDeathsWithNoFriendlySoldierWithin4": 40,
+          "workerDeathOrders": {
+            "MINE": 20,
+            "MOVE": 18,
+            "NONE": 2
+          },
+          "soldierTargetTurnContacts": 464,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 4.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 464,
+          "contactRatioZeroDenominatorLocal": 464,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 210.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1035.0,
+              "opponentDepositMedian": 480.0
+            },
+            "75": {
+              "gamesPresent": 18,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1500.0,
+              "opponentDepositMedian": 640.0
+            },
+            "100": {
+              "gamesPresent": 8,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1830.0,
+              "opponentDepositMedian": 720.0
+            },
+            "150": {
+              "gamesPresent": 2,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 2700.0,
+              "opponentDepositMedian": 1260.0
+            }
+          }
+        },
+        "island": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 40,
+          "workerDeathHomeL1Median": 4.0,
+          "workerDeathHomeWalkMedian": 4.0,
+          "workerDeathsWithinBaseFireRange2": 4,
+          "workerDeathsWithinHomeL1_8": 40,
+          "workerDeathsWithNoFriendlySoldierWithin4": 40,
+          "workerDeathOrders": {
+            "MINE": 20,
+            "MOVE": 10,
+            "NONE": 10
+          },
+          "soldierTargetTurnContacts": 646,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 646,
+          "contactRatioZeroDenominatorLocal": 646,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 210.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 990.0,
+              "opponentDepositMedian": 480.0
+            },
+            "75": {
+              "gamesPresent": 18,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1500.0,
+              "opponentDepositMedian": 600.0
+            },
+            "100": {
+              "gamesPresent": 14,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1860.0,
+              "opponentDepositMedian": 600.0
+            }
+          }
+        },
+        "maze": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 38,
+          "workerDeathHomeL1Median": 4.0,
+          "workerDeathHomeWalkMedian": 4.0,
+          "workerDeathsWithinBaseFireRange2": 2,
+          "workerDeathsWithinHomeL1_8": 38,
+          "workerDeathsWithNoFriendlySoldierWithin4": 38,
+          "workerDeathOrders": {
+            "MOVE": 8,
+            "NONE": 12,
+            "MINE": 18
+          },
+          "soldierTargetTurnContacts": 682,
+          "contactGlobalSoldiersHarassMedian": 9.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 682,
+          "contactRatioZeroDenominatorLocal": 682,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 3.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 300.0,
+              "opponentDepositMedian": 180.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 7.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 705.0,
+              "opponentDepositMedian": 450.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 995.0,
+              "opponentDepositMedian": 660.0
+            },
+            "100": {
+              "gamesPresent": 18,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1060.0,
+              "opponentDepositMedian": 840.0
+            },
+            "150": {
+              "gamesPresent": 10,
+              "harassSoldiersMedian": 9.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1080.0,
+              "opponentDepositMedian": 880.0
+            }
+          }
+        }
+      }
+    },
+    "Z-random": {
+      "all": {
+        "games": 80,
+        "harassWins": 80,
+        "winReasons": {
+          "base_destroyed": 80
+        },
+        "victimWorkerDeaths": 366,
+        "workerDeathHomeL1Median": 4.0,
+        "workerDeathHomeWalkMedian": 4.0,
+        "workerDeathsWithinBaseFireRange2": 102,
+        "workerDeathsWithinHomeL1_8": 332,
+        "workerDeathsWithNoFriendlySoldierWithin4": 208,
+        "workerDeathOrders": {
+          "MINE": 24,
+          "MOVE": 166,
+          "ATTACK": 86,
+          "NONE": 90
+        },
+        "soldierTargetTurnContacts": 1690,
+        "contactGlobalSoldiersHarassMedian": 10.0,
+        "contactGlobalSoldiersOpponentMedian": 2.0,
+        "contactLocalSoldiersHarassMedian": 3.0,
+        "contactLocalSoldiersOpponentMedian": 1.0,
+        "contactGlobalHarassToOpponentRatioMedian": 5.0,
+        "contactLocalHarassToOpponentRatioMedian": 2.5,
+        "contactRatioZeroDenominatorGlobal": 122,
+        "contactRatioZeroDenominatorLocal": 480,
+        "contactHarassGlobalAdvantageFraction": 1.0,
+        "contactHarassLocalAdvantageFraction": 0.8260355029585799,
+        "turnSamples": {
+          "25": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 4.5,
+            "opponentSoldiersMedian": 2.0,
+            "harassDepositMedian": 420.0,
+            "opponentDepositMedian": 0.0
+          },
+          "50": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 2.0,
+            "harassDepositMedian": 990.0,
+            "opponentDepositMedian": 10.0
+          },
+          "75": {
+            "gamesPresent": 76,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 2.0,
+            "harassDepositMedian": 1445.0,
+            "opponentDepositMedian": 30.0
+          },
+          "100": {
+            "gamesPresent": 42,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 2.0,
+            "harassDepositMedian": 1800.0,
+            "opponentDepositMedian": 60.0
+          },
+          "150": {
+            "gamesPresent": 10,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 1.0,
+            "harassDepositMedian": 1420.0,
+            "opponentDepositMedian": 180.0
+          }
+        }
+      },
+      "byType": {
+        "open": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 82,
+          "workerDeathHomeL1Median": 5.0,
+          "workerDeathHomeWalkMedian": 5.0,
+          "workerDeathsWithinBaseFireRange2": 20,
+          "workerDeathsWithinHomeL1_8": 74,
+          "workerDeathsWithNoFriendlySoldierWithin4": 48,
+          "workerDeathOrders": {
+            "MOVE": 40,
+            "ATTACK": 16,
+            "NONE": 18,
+            "MINE": 8
+          },
+          "soldierTargetTurnContacts": 304,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 2.0,
+          "contactLocalSoldiersHarassMedian": 4.0,
+          "contactLocalSoldiersOpponentMedian": 1.0,
+          "contactGlobalHarassToOpponentRatioMedian": 5.0,
+          "contactLocalHarassToOpponentRatioMedian": 3.0,
+          "contactRatioZeroDenominatorGlobal": 0,
+          "contactRatioZeroDenominatorLocal": 102,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 0.8421052631578947,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 990.0,
+              "opponentDepositMedian": 20.0
+            },
+            "75": {
+              "gamesPresent": 16,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1440.0,
+              "opponentDepositMedian": 30.0
+            },
+            "100": {
+              "gamesPresent": 4,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1710.0,
+              "opponentDepositMedian": 20.0
+            }
+          }
+        },
+        "corridor": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 94,
+          "workerDeathHomeL1Median": 4.0,
+          "workerDeathHomeWalkMedian": 4.0,
+          "workerDeathsWithinBaseFireRange2": 20,
+          "workerDeathsWithinHomeL1_8": 80,
+          "workerDeathsWithNoFriendlySoldierWithin4": 56,
+          "workerDeathOrders": {
+            "MINE": 8,
+            "MOVE": 46,
+            "ATTACK": 18,
+            "NONE": 22
+          },
+          "soldierTargetTurnContacts": 424,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 2.0,
+          "contactLocalSoldiersHarassMedian": 4.0,
+          "contactLocalSoldiersOpponentMedian": 1.0,
+          "contactGlobalHarassToOpponentRatioMedian": 5.0,
+          "contactLocalHarassToOpponentRatioMedian": 2.75,
+          "contactRatioZeroDenominatorGlobal": 4,
+          "contactRatioZeroDenominatorLocal": 132,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 0.8726415094339622,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1035.0,
+              "opponentDepositMedian": 15.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1485.0,
+              "opponentDepositMedian": 40.0
+            },
+            "100": {
+              "gamesPresent": 10,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1830.0,
+              "opponentDepositMedian": 40.0
+            },
+            "150": {
+              "gamesPresent": 2,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 2700.0,
+              "opponentDepositMedian": 220.0
+            }
+          }
+        },
+        "island": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 90,
+          "workerDeathHomeL1Median": 4.0,
+          "workerDeathHomeWalkMedian": 4.0,
+          "workerDeathsWithinBaseFireRange2": 24,
+          "workerDeathsWithinHomeL1_8": 84,
+          "workerDeathsWithNoFriendlySoldierWithin4": 48,
+          "workerDeathOrders": {
+            "NONE": 18,
+            "MINE": 6,
+            "MOVE": 40,
+            "ATTACK": 26
+          },
+          "soldierTargetTurnContacts": 416,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 2.0,
+          "contactLocalSoldiersHarassMedian": 3.0,
+          "contactLocalSoldiersOpponentMedian": 1.0,
+          "contactGlobalHarassToOpponentRatioMedian": 5.0,
+          "contactLocalHarassToOpponentRatioMedian": 3.0,
+          "contactRatioZeroDenominatorGlobal": 10,
+          "contactRatioZeroDenominatorLocal": 88,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 0.9182692307692307,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1020.0,
+              "opponentDepositMedian": 0.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1550.0,
+              "opponentDepositMedian": 30.0
+            },
+            "100": {
+              "gamesPresent": 8,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 1.0,
+              "harassDepositMedian": 1977.5,
+              "opponentDepositMedian": 65.0
+            }
+          }
+        },
+        "maze": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 100,
+          "workerDeathHomeL1Median": 3.0,
+          "workerDeathHomeWalkMedian": 3.0,
+          "workerDeathsWithinBaseFireRange2": 38,
+          "workerDeathsWithinHomeL1_8": 94,
+          "workerDeathsWithNoFriendlySoldierWithin4": 56,
+          "workerDeathOrders": {
+            "NONE": 32,
+            "MOVE": 40,
+            "ATTACK": 26,
+            "MINE": 2
+          },
+          "soldierTargetTurnContacts": 546,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 2.0,
+          "contactLocalSoldiersHarassMedian": 3.0,
+          "contactLocalSoldiersOpponentMedian": 1.0,
+          "contactGlobalHarassToOpponentRatioMedian": 5.0,
+          "contactLocalHarassToOpponentRatioMedian": 2.0,
+          "contactRatioZeroDenominatorGlobal": 108,
+          "contactRatioZeroDenominatorLocal": 158,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 0.7106227106227107,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 3.5,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 300.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 7.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 705.0,
+              "opponentDepositMedian": 10.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 995.0,
+              "opponentDepositMedian": 45.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 2.0,
+              "harassDepositMedian": 1235.0,
+              "opponentDepositMedian": 80.0
+            },
+            "150": {
+              "gamesPresent": 8,
+              "harassSoldiersMedian": 9.5,
+              "opponentSoldiersMedian": 1.0,
+              "harassDepositMedian": 1110.0,
+              "opponentDepositMedian": 150.0
+            }
+          }
+        }
+      }
+    },
+    "Z-rush": {
+      "all": {
+        "games": 80,
+        "harassWins": 74,
+        "winReasons": {
+          "base_destroyed": 60,
+          "turn_limit_deposit": 14
+        },
+        "victimWorkerDeaths": 134,
+        "workerDeathHomeL1Median": 4.0,
+        "workerDeathHomeWalkMedian": 4.0,
+        "workerDeathsWithinBaseFireRange2": 12,
+        "workerDeathsWithinHomeL1_8": 134,
+        "workerDeathsWithNoFriendlySoldierWithin4": 98,
+        "workerDeathOrders": {
+          "MINE": 60,
+          "NONE": 28,
+          "MOVE": 46
+        },
+        "soldierTargetTurnContacts": 12108,
+        "contactGlobalSoldiersHarassMedian": 9.0,
+        "contactGlobalSoldiersOpponentMedian": 4.0,
+        "contactLocalSoldiersHarassMedian": 2.0,
+        "contactLocalSoldiersOpponentMedian": 1.0,
+        "contactGlobalHarassToOpponentRatioMedian": 1.75,
+        "contactLocalHarassToOpponentRatioMedian": 1.0,
+        "contactRatioZeroDenominatorGlobal": 760,
+        "contactRatioZeroDenominatorLocal": 2064,
+        "contactHarassGlobalAdvantageFraction": 0.8901552692434754,
+        "contactHarassLocalAdvantageFraction": 0.5796167822926991,
+        "turnSamples": {
+          "25": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 4.0,
+            "opponentSoldiersMedian": 4.0,
+            "harassDepositMedian": 420.0,
+            "opponentDepositMedian": 180.0
+          },
+          "50": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 9.0,
+            "opponentSoldiersMedian": 6.0,
+            "harassDepositMedian": 1010.0,
+            "opponentDepositMedian": 480.0
+          },
+          "75": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 9.0,
+            "opponentSoldiersMedian": 5.0,
+            "harassDepositMedian": 1470.0,
+            "opponentDepositMedian": 660.0
+          },
+          "100": {
+            "gamesPresent": 74,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 3.0,
+            "harassDepositMedian": 1800.0,
+            "opponentDepositMedian": 840.0
+          },
+          "150": {
+            "gamesPresent": 38,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 2.0,
+            "harassDepositMedian": 2400.0,
+            "opponentDepositMedian": 1200.0
+          }
+        }
+      },
+      "byType": {
+        "open": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 40,
+          "workerDeathHomeL1Median": 4.0,
+          "workerDeathHomeWalkMedian": 4.0,
+          "workerDeathsWithinBaseFireRange2": 6,
+          "workerDeathsWithinHomeL1_8": 40,
+          "workerDeathsWithNoFriendlySoldierWithin4": 30,
+          "workerDeathOrders": {
+            "MINE": 22,
+            "MOVE": 16,
+            "NONE": 2
+          },
+          "soldierTargetTurnContacts": 2462,
+          "contactGlobalSoldiersHarassMedian": 8.0,
+          "contactGlobalSoldiersOpponentMedian": 4.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 1.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.8,
+          "contactLocalHarassToOpponentRatioMedian": 1.0,
+          "contactRatioZeroDenominatorGlobal": 146,
+          "contactRatioZeroDenominatorLocal": 636,
+          "contactHarassGlobalAdvantageFraction": 0.9805036555645816,
+          "contactHarassLocalAdvantageFraction": 0.5215272136474411,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 180.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 8.0,
+              "opponentSoldiersMedian": 5.0,
+              "harassDepositMedian": 990.0,
+              "opponentDepositMedian": 480.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 8.5,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 1350.0,
+              "opponentDepositMedian": 650.0
+            },
+            "100": {
+              "gamesPresent": 14,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 1.0,
+              "harassDepositMedian": 1680.0,
+              "opponentDepositMedian": 780.0
+            }
+          }
+        },
+        "corridor": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 40,
+          "workerDeathHomeL1Median": 5.0,
+          "workerDeathHomeWalkMedian": 5.0,
+          "workerDeathsWithinBaseFireRange2": 2,
+          "workerDeathsWithinHomeL1_8": 40,
+          "workerDeathsWithNoFriendlySoldierWithin4": 36,
+          "workerDeathOrders": {
+            "MINE": 16,
+            "NONE": 10,
+            "MOVE": 14
+          },
+          "soldierTargetTurnContacts": 2906,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 4.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 1.0,
+          "contactGlobalHarassToOpponentRatioMedian": 2.0,
+          "contactLocalHarassToOpponentRatioMedian": 2.0,
+          "contactRatioZeroDenominatorGlobal": 376,
+          "contactRatioZeroDenominatorLocal": 570,
+          "contactHarassGlobalAdvantageFraction": 0.9291121816930489,
+          "contactHarassLocalAdvantageFraction": 0.660013764624914,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 180.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 9.0,
+              "opponentSoldiersMedian": 5.0,
+              "harassDepositMedian": 1020.0,
+              "opponentDepositMedian": 480.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 9.0,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 1500.0,
+              "opponentDepositMedian": 690.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 1.5,
+              "harassDepositMedian": 1860.0,
+              "opponentDepositMedian": 890.0
+            },
+            "150": {
+              "gamesPresent": 8,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 1.5,
+              "harassDepositMedian": 2580.0,
+              "opponentDepositMedian": 1350.0
+            }
+          }
+        },
+        "island": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 18,
+            "turn_limit_deposit": 2
+          },
+          "victimWorkerDeaths": 40,
+          "workerDeathHomeL1Median": 4.5,
+          "workerDeathHomeWalkMedian": 4.5,
+          "workerDeathsWithinBaseFireRange2": 4,
+          "workerDeathsWithinHomeL1_8": 40,
+          "workerDeathsWithNoFriendlySoldierWithin4": 24,
+          "workerDeathOrders": {
+            "NONE": 6,
+            "MOVE": 14,
+            "MINE": 20
+          },
+          "soldierTargetTurnContacts": 3302,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 4.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 1.0,
+          "contactGlobalHarassToOpponentRatioMedian": 2.25,
+          "contactLocalHarassToOpponentRatioMedian": 1.0,
+          "contactRatioZeroDenominatorGlobal": 154,
+          "contactRatioZeroDenominatorLocal": 730,
+          "contactHarassGlobalAdvantageFraction": 0.9818291944276196,
+          "contactHarassLocalAdvantageFraction": 0.5857056329497274,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 4.5,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 210.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 6.5,
+              "harassDepositMedian": 1020.0,
+              "opponentDepositMedian": 480.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 6.5,
+              "harassDepositMedian": 1540.0,
+              "opponentDepositMedian": 720.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 4.5,
+              "harassDepositMedian": 1920.0,
+              "opponentDepositMedian": 840.0
+            },
+            "150": {
+              "gamesPresent": 12,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 1.5,
+              "harassDepositMedian": 2460.0,
+              "opponentDepositMedian": 1140.0
+            }
+          }
+        },
+        "maze": {
+          "games": 20,
+          "harassWins": 14,
+          "winReasons": {
+            "turn_limit_deposit": 12,
+            "base_destroyed": 2
+          },
+          "victimWorkerDeaths": 14,
+          "workerDeathHomeL1Median": 5.0,
+          "workerDeathHomeWalkMedian": 5.0,
+          "workerDeathsWithinBaseFireRange2": 0,
+          "workerDeathsWithinHomeL1_8": 14,
+          "workerDeathsWithNoFriendlySoldierWithin4": 8,
+          "workerDeathOrders": {
+            "NONE": 10,
+            "MINE": 2,
+            "MOVE": 2
+          },
+          "soldierTargetTurnContacts": 3438,
+          "contactGlobalSoldiersHarassMedian": 6.0,
+          "contactGlobalSoldiersOpponentMedian": 5.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 2.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.4285714285714286,
+          "contactLocalHarassToOpponentRatioMedian": 1.5,
+          "contactRatioZeroDenominatorGlobal": 84,
+          "contactRatioZeroDenominatorLocal": 128,
+          "contactHarassGlobalAdvantageFraction": 0.7044793484584061,
+          "contactHarassLocalAdvantageFraction": 0.5474112856311809,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 3.5,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 300.0,
+              "opponentDepositMedian": 180.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 6.0,
+              "opponentSoldiersMedian": 6.5,
+              "harassDepositMedian": 705.0,
+              "opponentDepositMedian": 450.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 6.5,
+              "opponentSoldiersMedian": 6.0,
+              "harassDepositMedian": 995.0,
+              "opponentDepositMedian": 660.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 5.0,
+              "harassDepositMedian": 1175.0,
+              "opponentDepositMedian": 890.0
+            },
+            "150": {
+              "gamesPresent": 18,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 1530.0,
+              "opponentDepositMedian": 1200.0
+            }
+          }
+        }
+      }
+    },
+    "Z-towers": {
+      "all": {
+        "games": 80,
+        "harassWins": 70,
+        "winReasons": {
+          "base_destroyed": 70
+        },
+        "victimWorkerDeaths": 1914,
+        "workerDeathHomeL1Median": 10.0,
+        "workerDeathHomeWalkMedian": 11.0,
+        "workerDeathsWithinBaseFireRange2": 78,
+        "workerDeathsWithinHomeL1_8": 776,
+        "workerDeathsWithNoFriendlySoldierWithin4": 1914,
+        "workerDeathOrders": {
+          "NONE": 784,
+          "MOVE": 786,
+          "MINE": 330,
+          "BUILD": 14
+        },
+        "soldierTargetTurnContacts": 1870,
+        "contactGlobalSoldiersHarassMedian": 10.0,
+        "contactGlobalSoldiersOpponentMedian": 0.0,
+        "contactLocalSoldiersHarassMedian": 6.0,
+        "contactLocalSoldiersOpponentMedian": 0.0,
+        "contactGlobalHarassToOpponentRatioMedian": null,
+        "contactLocalHarassToOpponentRatioMedian": null,
+        "contactRatioZeroDenominatorGlobal": 1870,
+        "contactRatioZeroDenominatorLocal": 1870,
+        "contactHarassGlobalAdvantageFraction": 1.0,
+        "contactHarassLocalAdvantageFraction": 1.0,
+        "turnSamples": {
+          "25": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 4.5,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 420.0,
+            "opponentDepositMedian": 300.0
+          },
+          "50": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1020.0,
+            "opponentDepositMedian": 660.0
+          },
+          "75": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1500.0,
+            "opponentDepositMedian": 1010.0
+          },
+          "100": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1920.0,
+            "opponentDepositMedian": 1230.0
+          },
+          "150": {
+            "gamesPresent": 58,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 2460.0,
+            "opponentDepositMedian": 1620.0
+          }
+        }
+      },
+      "byType": {
+        "open": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 328,
+          "workerDeathHomeL1Median": 8.0,
+          "workerDeathHomeWalkMedian": 8.0,
+          "workerDeathsWithinBaseFireRange2": 16,
+          "workerDeathsWithinHomeL1_8": 178,
+          "workerDeathsWithNoFriendlySoldierWithin4": 328,
+          "workerDeathOrders": {
+            "MOVE": 146,
+            "NONE": 66,
+            "MINE": 108,
+            "BUILD": 8
+          },
+          "soldierTargetTurnContacts": 432,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 6.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 432,
+          "contactRatioZeroDenominatorLocal": 432,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 300.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1020.0,
+              "opponentDepositMedian": 660.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1480.0,
+              "opponentDepositMedian": 1000.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1920.0,
+              "opponentDepositMedian": 1200.0
+            },
+            "150": {
+              "gamesPresent": 10,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 2460.0,
+              "opponentDepositMedian": 1440.0
+            }
+          }
+        },
+        "corridor": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 514,
+          "workerDeathHomeL1Median": 10.0,
+          "workerDeathHomeWalkMedian": 10.0,
+          "workerDeathsWithinBaseFireRange2": 12,
+          "workerDeathsWithinHomeL1_8": 214,
+          "workerDeathsWithNoFriendlySoldierWithin4": 514,
+          "workerDeathOrders": {
+            "NONE": 128,
+            "MOVE": 308,
+            "MINE": 78
+          },
+          "soldierTargetTurnContacts": 486,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 5.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 486,
+          "contactRatioZeroDenominatorLocal": 486,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 270.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1035.0,
+              "opponentDepositMedian": 705.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1485.0,
+              "opponentDepositMedian": 1010.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1875.0,
+              "opponentDepositMedian": 1230.0
+            },
+            "150": {
+              "gamesPresent": 10,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 2520.0,
+              "opponentDepositMedian": 1560.0
+            }
+          }
+        },
+        "island": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 472,
+          "workerDeathHomeL1Median": 9.0,
+          "workerDeathHomeWalkMedian": 9.0,
+          "workerDeathsWithinBaseFireRange2": 10,
+          "workerDeathsWithinHomeL1_8": 184,
+          "workerDeathsWithNoFriendlySoldierWithin4": 472,
+          "workerDeathOrders": {
+            "NONE": 146,
+            "MINE": 106,
+            "MOVE": 214,
+            "BUILD": 6
+          },
+          "soldierTargetTurnContacts": 412,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 6.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 412,
+          "contactRatioZeroDenominatorLocal": 412,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 300.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1020.0,
+              "opponentDepositMedian": 690.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1520.0,
+              "opponentDepositMedian": 990.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1980.0,
+              "opponentDepositMedian": 1250.0
+            },
+            "150": {
+              "gamesPresent": 18,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 2580.0,
+              "opponentDepositMedian": 1680.0
+            }
+          }
+        },
+        "maze": {
+          "games": 20,
+          "harassWins": 10,
+          "winReasons": {
+            "base_destroyed": 10
+          },
+          "victimWorkerDeaths": 600,
+          "workerDeathHomeL1Median": 12.0,
+          "workerDeathHomeWalkMedian": 12.0,
+          "workerDeathsWithinBaseFireRange2": 40,
+          "workerDeathsWithinHomeL1_8": 200,
+          "workerDeathsWithNoFriendlySoldierWithin4": 600,
+          "workerDeathOrders": {
+            "NONE": 444,
+            "MOVE": 118,
+            "MINE": 38
+          },
+          "soldierTargetTurnContacts": 540,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 6.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 540,
+          "contactRatioZeroDenominatorLocal": 540,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 3.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 300.0,
+              "opponentDepositMedian": 240.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 7.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 705.0,
+              "opponentDepositMedian": 600.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 995.0,
+              "opponentDepositMedian": 1020.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1205.0,
+              "opponentDepositMedian": 1205.0
+            },
+            "150": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1665.0,
+              "opponentDepositMedian": 1625.0
+            }
+          }
+        }
+      }
+    },
+    "Z-turtle": {
+      "all": {
+        "games": 80,
+        "harassWins": 78,
+        "winReasons": {
+          "base_destroyed": 44,
+          "turn_limit_deposit": 34
+        },
+        "victimWorkerDeaths": 934,
+        "workerDeathHomeL1Median": 7.0,
+        "workerDeathHomeWalkMedian": 7.0,
+        "workerDeathsWithinBaseFireRange2": 204,
+        "workerDeathsWithinHomeL1_8": 778,
+        "workerDeathsWithNoFriendlySoldierWithin4": 312,
+        "workerDeathOrders": {
+          "ATTACK": 934
+        },
+        "soldierTargetTurnContacts": 17166,
+        "contactGlobalSoldiersHarassMedian": 10.0,
+        "contactGlobalSoldiersOpponentMedian": 6.0,
+        "contactLocalSoldiersHarassMedian": 2.0,
+        "contactLocalSoldiersOpponentMedian": 3.0,
+        "contactGlobalHarassToOpponentRatioMedian": 1.25,
+        "contactLocalHarassToOpponentRatioMedian": 0.5,
+        "contactRatioZeroDenominatorGlobal": 2376,
+        "contactRatioZeroDenominatorLocal": 2586,
+        "contactHarassGlobalAdvantageFraction": 0.6656180822556216,
+        "contactHarassLocalAdvantageFraction": 0.27589420948386345,
+        "turnSamples": {
+          "25": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 4.5,
+            "opponentSoldiersMedian": 4.0,
+            "harassDepositMedian": 420.0,
+            "opponentDepositMedian": 420.0
+          },
+          "50": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 8.0,
+            "harassDepositMedian": 990.0,
+            "opponentDepositMedian": 1015.0
+          },
+          "75": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 9.0,
+            "harassDepositMedian": 1470.0,
+            "opponentDepositMedian": 1440.0
+          },
+          "100": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 9.0,
+            "harassDepositMedian": 1860.0,
+            "opponentDepositMedian": 1830.0
+          },
+          "150": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 9.0,
+            "opponentSoldiersMedian": 7.0,
+            "harassDepositMedian": 2397.5,
+            "opponentDepositMedian": 2155.0
+          }
+        }
+      },
+      "byType": {
+        "open": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 14,
+            "turn_limit_deposit": 6
+          },
+          "victimWorkerDeaths": 276,
+          "workerDeathHomeL1Median": 7.0,
+          "workerDeathHomeWalkMedian": 7.0,
+          "workerDeathsWithinBaseFireRange2": 64,
+          "workerDeathsWithinHomeL1_8": 204,
+          "workerDeathsWithNoFriendlySoldierWithin4": 106,
+          "workerDeathOrders": {
+            "ATTACK": 276
+          },
+          "soldierTargetTurnContacts": 4718,
+          "contactGlobalSoldiersHarassMedian": 8.0,
+          "contactGlobalSoldiersOpponentMedian": 6.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 3.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.25,
+          "contactLocalHarassToOpponentRatioMedian": 0.5,
+          "contactRatioZeroDenominatorGlobal": 796,
+          "contactRatioZeroDenominatorLocal": 864,
+          "contactHarassGlobalAdvantageFraction": 0.6998728274692666,
+          "contactHarassLocalAdvantageFraction": 0.2789317507418398,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 420.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 7.5,
+              "harassDepositMedian": 990.0,
+              "opponentDepositMedian": 990.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 8.0,
+              "harassDepositMedian": 1440.0,
+              "opponentDepositMedian": 1360.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 9.5,
+              "opponentSoldiersMedian": 8.0,
+              "harassDepositMedian": 1820.0,
+              "opponentDepositMedian": 1790.0
+            },
+            "150": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 7.0,
+              "opponentSoldiersMedian": 6.5,
+              "harassDepositMedian": 2400.0,
+              "opponentDepositMedian": 2105.0
+            }
+          }
+        },
+        "corridor": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 14,
+            "turn_limit_deposit": 6
+          },
+          "victimWorkerDeaths": 224,
+          "workerDeathHomeL1Median": 6.5,
+          "workerDeathHomeWalkMedian": 6.5,
+          "workerDeathsWithinBaseFireRange2": 80,
+          "workerDeathsWithinHomeL1_8": 180,
+          "workerDeathsWithNoFriendlySoldierWithin4": 76,
+          "workerDeathOrders": {
+            "ATTACK": 224
+          },
+          "soldierTargetTurnContacts": 4840,
+          "contactGlobalSoldiersHarassMedian": 9.0,
+          "contactGlobalSoldiersOpponentMedian": 7.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 3.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.1111111111111112,
+          "contactLocalHarassToOpponentRatioMedian": 0.5,
+          "contactRatioZeroDenominatorGlobal": 716,
+          "contactRatioZeroDenominatorLocal": 758,
+          "contactHarassGlobalAdvantageFraction": 0.640495867768595,
+          "contactHarassLocalAdvantageFraction": 0.2516528925619835,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 420.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 8.0,
+              "harassDepositMedian": 1035.0,
+              "opponentDepositMedian": 1020.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 9.0,
+              "harassDepositMedian": 1485.0,
+              "opponentDepositMedian": 1500.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 9.5,
+              "opponentSoldiersMedian": 9.5,
+              "harassDepositMedian": 1890.0,
+              "opponentDepositMedian": 1942.5
+            },
+            "150": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 8.0,
+              "opponentSoldiersMedian": 6.5,
+              "harassDepositMedian": 2510.0,
+              "opponentDepositMedian": 2273.5
+            }
+          }
+        },
+        "island": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "turn_limit_deposit": 10,
+            "base_destroyed": 10
+          },
+          "victimWorkerDeaths": 174,
+          "workerDeathHomeL1Median": 6.0,
+          "workerDeathHomeWalkMedian": 6.0,
+          "workerDeathsWithinBaseFireRange2": 42,
+          "workerDeathsWithinHomeL1_8": 152,
+          "workerDeathsWithNoFriendlySoldierWithin4": 74,
+          "workerDeathOrders": {
+            "ATTACK": 174
+          },
+          "soldierTargetTurnContacts": 4606,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 8.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 4.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.1111111111111112,
+          "contactLocalHarassToOpponentRatioMedian": 0.42857142857142855,
+          "contactRatioZeroDenominatorGlobal": 526,
+          "contactRatioZeroDenominatorLocal": 564,
+          "contactHarassGlobalAdvantageFraction": 0.5770733825445071,
+          "contactHarassLocalAdvantageFraction": 0.22405557967867998,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 5.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 480.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 10.0,
+              "harassDepositMedian": 1020.0,
+              "opponentDepositMedian": 1020.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 12.0,
+              "harassDepositMedian": 1500.0,
+              "opponentDepositMedian": 1530.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 11.5,
+              "harassDepositMedian": 1937.5,
+              "opponentDepositMedian": 1920.0
+            },
+            "150": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 9.0,
+              "harassDepositMedian": 2427.5,
+              "opponentDepositMedian": 2195.0
+            }
+          }
+        },
+        "maze": {
+          "games": 20,
+          "harassWins": 18,
+          "winReasons": {
+            "turn_limit_deposit": 12,
+            "base_destroyed": 6
+          },
+          "victimWorkerDeaths": 260,
+          "workerDeathHomeL1Median": 6.0,
+          "workerDeathHomeWalkMedian": 7.0,
+          "workerDeathsWithinBaseFireRange2": 18,
+          "workerDeathsWithinHomeL1_8": 242,
+          "workerDeathsWithNoFriendlySoldierWithin4": 56,
+          "workerDeathOrders": {
+            "ATTACK": 260
+          },
+          "soldierTargetTurnContacts": 3002,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 4.0,
+          "contactLocalSoldiersHarassMedian": 3.0,
+          "contactLocalSoldiersOpponentMedian": 3.0,
+          "contactGlobalHarassToOpponentRatioMedian": 1.6666666666666667,
+          "contactLocalHarassToOpponentRatioMedian": 0.8,
+          "contactRatioZeroDenominatorGlobal": 338,
+          "contactRatioZeroDenominatorLocal": 400,
+          "contactHarassGlobalAdvantageFraction": 0.7881412391738841,
+          "contactHarassLocalAdvantageFraction": 0.38974017321785476,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 3.5,
+              "opponentSoldiersMedian": 4.0,
+              "harassDepositMedian": 300.0,
+              "opponentDepositMedian": 390.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 7.0,
+              "opponentSoldiersMedian": 5.5,
+              "harassDepositMedian": 705.0,
+              "opponentDepositMedian": 740.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 7.0,
+              "harassDepositMedian": 995.0,
+              "opponentDepositMedian": 890.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 9.0,
+              "opponentSoldiersMedian": 7.0,
+              "harassDepositMedian": 1170.0,
+              "opponentDepositMedian": 1020.0
+            },
+            "150": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 9.5,
+              "opponentSoldiersMedian": 4.5,
+              "harassDepositMedian": 1530.0,
+              "opponentDepositMedian": 1245.0
+            }
+          }
+        }
+      }
+    },
+    "Z-wrush": {
+      "all": {
+        "games": 80,
+        "harassWins": 80,
+        "winReasons": {
+          "base_destroyed": 80
+        },
+        "victimWorkerDeaths": 640,
+        "workerDeathHomeL1Median": 32.0,
+        "workerDeathHomeWalkMedian": 36.5,
+        "workerDeathsWithinBaseFireRange2": 0,
+        "workerDeathsWithinHomeL1_8": 0,
+        "workerDeathsWithNoFriendlySoldierWithin4": 640,
+        "workerDeathOrders": {
+          "ATTACK": 640
+        },
+        "soldierTargetTurnContacts": 3306,
+        "contactGlobalSoldiersHarassMedian": 10.0,
+        "contactGlobalSoldiersOpponentMedian": 0.0,
+        "contactLocalSoldiersHarassMedian": 3.0,
+        "contactLocalSoldiersOpponentMedian": 0.0,
+        "contactGlobalHarassToOpponentRatioMedian": null,
+        "contactLocalHarassToOpponentRatioMedian": null,
+        "contactRatioZeroDenominatorGlobal": 3306,
+        "contactRatioZeroDenominatorLocal": 3306,
+        "contactHarassGlobalAdvantageFraction": 1.0,
+        "contactHarassLocalAdvantageFraction": 1.0,
+        "turnSamples": {
+          "25": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 4.5,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 420.0,
+            "opponentDepositMedian": 0.0
+          },
+          "50": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 990.0,
+            "opponentDepositMedian": 0.0
+          },
+          "75": {
+            "gamesPresent": 80,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1455.0,
+            "opponentDepositMedian": 0.0
+          },
+          "100": {
+            "gamesPresent": 56,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1915.0,
+            "opponentDepositMedian": 0.0
+          },
+          "150": {
+            "gamesPresent": 16,
+            "harassSoldiersMedian": 10.0,
+            "opponentSoldiersMedian": 0.0,
+            "harassDepositMedian": 1907.5,
+            "opponentDepositMedian": 0.0
+          }
+        }
+      },
+      "byType": {
+        "open": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 160,
+          "workerDeathHomeL1Median": 35.5,
+          "workerDeathHomeWalkMedian": 35.5,
+          "workerDeathsWithinBaseFireRange2": 0,
+          "workerDeathsWithinHomeL1_8": 0,
+          "workerDeathsWithNoFriendlySoldierWithin4": 160,
+          "workerDeathOrders": {
+            "ATTACK": 160
+          },
+          "soldierTargetTurnContacts": 692,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 4.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 692,
+          "contactRatioZeroDenominatorLocal": 692,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 990.0,
+              "opponentDepositMedian": 0.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1440.0,
+              "opponentDepositMedian": 0.0
+            },
+            "100": {
+              "gamesPresent": 10,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1860.0,
+              "opponentDepositMedian": 0.0
+            }
+          }
+        },
+        "corridor": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 160,
+          "workerDeathHomeL1Median": 27.5,
+          "workerDeathHomeWalkMedian": 33.0,
+          "workerDeathsWithinBaseFireRange2": 0,
+          "workerDeathsWithinHomeL1_8": 0,
+          "workerDeathsWithNoFriendlySoldierWithin4": 160,
+          "workerDeathOrders": {
+            "ATTACK": 160
+          },
+          "soldierTargetTurnContacts": 734,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 4.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 734,
+          "contactRatioZeroDenominatorLocal": 734,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 5.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1035.0,
+              "opponentDepositMedian": 0.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1485.0,
+              "opponentDepositMedian": 0.0
+            },
+            "100": {
+              "gamesPresent": 10,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1920.0,
+              "opponentDepositMedian": 0.0
+            },
+            "150": {
+              "gamesPresent": 2,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 2700.0,
+              "opponentDepositMedian": 0.0
+            }
+          }
+        },
+        "island": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 160,
+          "workerDeathHomeL1Median": 26.0,
+          "workerDeathHomeWalkMedian": 30.5,
+          "workerDeathsWithinBaseFireRange2": 0,
+          "workerDeathsWithinHomeL1_8": 0,
+          "workerDeathsWithNoFriendlySoldierWithin4": 160,
+          "workerDeathOrders": {
+            "ATTACK": 160
+          },
+          "soldierTargetTurnContacts": 880,
+          "contactGlobalSoldiersHarassMedian": 10.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 2.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 880,
+          "contactRatioZeroDenominatorLocal": 880,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 4.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 420.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1020.0,
+              "opponentDepositMedian": 0.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1530.0,
+              "opponentDepositMedian": 0.0
+            },
+            "100": {
+              "gamesPresent": 16,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1950.0,
+              "opponentDepositMedian": 0.0
+            },
+            "150": {
+              "gamesPresent": 4,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 2462.5,
+              "opponentDepositMedian": 0.0
+            }
+          }
+        },
+        "maze": {
+          "games": 20,
+          "harassWins": 20,
+          "winReasons": {
+            "base_destroyed": 20
+          },
+          "victimWorkerDeaths": 160,
+          "workerDeathHomeL1Median": 33.5,
+          "workerDeathHomeWalkMedian": 47.5,
+          "workerDeathsWithinBaseFireRange2": 0,
+          "workerDeathsWithinHomeL1_8": 0,
+          "workerDeathsWithNoFriendlySoldierWithin4": 160,
+          "workerDeathOrders": {
+            "ATTACK": 160
+          },
+          "soldierTargetTurnContacts": 1000,
+          "contactGlobalSoldiersHarassMedian": 9.0,
+          "contactGlobalSoldiersOpponentMedian": 0.0,
+          "contactLocalSoldiersHarassMedian": 3.0,
+          "contactLocalSoldiersOpponentMedian": 0.0,
+          "contactGlobalHarassToOpponentRatioMedian": null,
+          "contactLocalHarassToOpponentRatioMedian": null,
+          "contactRatioZeroDenominatorGlobal": 1000,
+          "contactRatioZeroDenominatorLocal": 1000,
+          "contactHarassGlobalAdvantageFraction": 1.0,
+          "contactHarassLocalAdvantageFraction": 1.0,
+          "turnSamples": {
+            "25": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 3.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 300.0,
+              "opponentDepositMedian": 0.0
+            },
+            "50": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 6.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 705.0,
+              "opponentDepositMedian": 0.0
+            },
+            "75": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 10.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 995.0,
+              "opponentDepositMedian": 0.0
+            },
+            "100": {
+              "gamesPresent": 20,
+              "harassSoldiersMedian": 9.5,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1205.0,
+              "opponentDepositMedian": 0.0
+            },
+            "150": {
+              "gamesPresent": 10,
+              "harassSoldiersMedian": 9.0,
+              "opponentSoldiersMedian": 0.0,
+              "harassDepositMedian": 1260.0,
+              "opponentDepositMedian": 0.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "sourceFiles": {
+    "M-balanced": {
+      "raw": "runs/development/zoo-v5-public/harassment-M-balanced.json",
+      "sha256": "daeb898b29e1d56544c32ad96219737e61e1889ba26b4cb97b2f4351cf852d9e"
+    },
+    "Z-eco": {
+      "raw": "runs/development/zoo-v5-public/harassment-Z-eco.json",
+      "sha256": "ffd361fb4a5ea80fa0cf1a4306f025f3c18d9886cbae679710e4c9191c2f1856"
+    },
+    "Z-idle": {
+      "raw": "runs/development/zoo-v5-public/harassment-Z-idle.json",
+      "sha256": "a5771844dcf535de6cbff4e88cf6a6413418963d78af6247351bab15c1e2029b"
+    },
+    "Z-miner": {
+      "raw": "runs/development/zoo-v5-public/harassment-Z-miner.json",
+      "sha256": "3f44114c3e9636ea4af389296fa9a9d425aff031e204297d2618156af562f946"
+    },
+    "Z-random": {
+      "raw": "runs/development/zoo-v5-public/harassment-Z-random.json",
+      "sha256": "ae32044040313b51eefe89c213865b78a5bd4e073d9e87b630888954e49c4733"
+    },
+    "Z-rush": {
+      "raw": "runs/development/zoo-v5-public/harassment-Z-rush.json",
+      "sha256": "a1e657d4c30c8dd0e0787cfd8df9ad9f651aa0bd26dde7a3495013bc9105a7d2"
+    },
+    "Z-towers": {
+      "raw": "runs/development/zoo-v5-public/harassment-Z-towers.json",
+      "sha256": "70ef063526e2a38ded8b6fd39d34e015229a10217ea31dc8c0f3893c7c11318b"
+    },
+    "Z-turtle": {
+      "raw": "runs/development/zoo-v5-public/harassment-Z-turtle.json",
+      "sha256": "7ed6dfa246d788ddf2ba9cf7e6be34045af31a9292ab0eb09de3f251ab2626a6"
+    },
+    "Z-wrush": {
+      "raw": "runs/development/zoo-v5-public/harassment-Z-wrush.json",
+      "sha256": "b263cd1981ce9fd8d03d08e8af2d7d147c7a18605d21b4abfcd2f8281554ddcd"
+    }
+  },
+  "analysisCpuNs": 29193002200,
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/harassment-v5/report.json",
+    "originalSha256": "0d268317a3e4830d3a0acc8334c1fedba66104ddef08247632eba945f831add9",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

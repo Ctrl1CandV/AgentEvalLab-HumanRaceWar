@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "zooVersion": 7,
+  "change": "M matches visible army before extra workers/towers, with six-worker economic floor and one initial depot",
+  "tests": [
+    {
+      "path": "runs/development/review-balance-2026-11-07/allocation-before.json",
+      "sha256": "ac2ea7751ccefe2d768d68bdfa6f8b73e1855374b1f96bd1e3a8d9dbedf1fe60",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/review-balance-allocation-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 8,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0284883,
+      "measuredTestWallSeconds": 1.981933117,
+      "measuredReapedChildrenCpuSeconds": 0.018155
+    },
+    {
+      "path": "runs/development/review-balance-2026-11-07/allocation-after.json",
+      "sha256": "3d5683163e86917be64f5979262b35bb6e09d9ecd78c3ef838be324d68aa1915",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/review-balance-allocation-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0235462,
+      "measuredTestWallSeconds": 2.014877516,
+      "measuredReapedChildrenCpuSeconds": 0.015629999999999998
+    }
+  ],
+  "sourceSha256": {
+    "tools/zoo_strategy.hpp": "5d0f8aa8196070c330891ccfa306ea02e3c5dee5610319df55758248c9661efa",
+    "tools/generate_zoo.py": "bf1a552dc7bcebf7dd947cca7fc12a914da3b1867a23be06adc876bec567d24c",
+    "bots/catalog.json": "5206f9dc68168ac07976d775ef497c030c0fcd942aa1b5e4f9a4a5dcead3da54",
+    "tests/test_zoo_strategy.py": "2699146f3aa0ec28784be6233b5cfcea3896473cb5a1e23f1c87092356a09ddb"
+  },
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v7-regression.json",
+    "originalSha256": "ceab766b30a0ae33e5398f462a9c9d02688cd2d82b01e9aa348b52a6083edae1",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

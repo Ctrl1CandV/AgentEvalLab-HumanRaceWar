@@ -1,6 +1,0 @@
-test_invalid_utf8_does_not_expand_transport_byte_budget (tests.test_runtime.FrameTests.test_invalid_utf8_does_not_expand_transport_byte_budget) ... ok
-
-----------------------------------------------------------------------
-Ran 1 test in 0.004s
-
-OK

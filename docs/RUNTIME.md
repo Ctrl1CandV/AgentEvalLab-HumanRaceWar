@@ -57,6 +57,6 @@
 
 `check`、内容摘要编译缓存、全局CPU租约、进程调度/共享JSONL/续跑和`tournament`已接入，见 `docs/BATCH.md`。新回放含可重算的原始诊断指标v2，仍验证旧回放。外层bwrap内已实跑plain的Python/C++工具链；SIGTERM杀死controller后已验证worker清理及续跑不重复任务。
 
-新补512MiB地址空间/64描述符、已退出线程计费、网络/路径/只读检查、有限编译进程树清理，以及6局/12bot并发线程超时压力；全部已知沙箱leader停止，回放全部验证，见 `data/phase-a-security.json`。旧编译探针显示NPROC继承63593，原证据保留。按第二次审查裁定，已改NPROC=16、单文件64MiB和全局串行锁，真实bwrap及跨进程回归通过；2GiB仍是逐进程限额，不声称整树内存/磁盘硬配额。审查明确无需cgroup，未改宿主设置。
+新补512MiB地址空间/64描述符、已退出线程计费、网络/路径/只读检查、有限编译进程树清理，以及6局/12bot并发线程超时压力；全部已知沙箱leader停止，回放全部验证，见 `data/phase-a/history/phase-a-security.json`。旧编译探针显示NPROC继承63593，原证据保留。按第二次审查裁定，已改NPROC=16、单文件64MiB和全局串行锁，真实bwrap及跨进程回归通过；2GiB仍是逐进程限额，不声称整树内存/磁盘硬配额。审查明确无需cgroup，未改宿主设置。
 
-旧v5矩阵失败仍保留；最终standard-1/v15完整矩阵已全部通过，见 `reports/phase-A.md`。二审明确runner取p95、整局为300×折算TURN+5秒；最终v5效率复测亦通过，最大值照留。评测机空闲参考已用于新矩阵和效率折算。详见 `inbox/2026-11-07-phase-a.md` 与STATUS；旧 `reports/phase-A-review-request.md` 是历史请求，不是A阶段完成报告。不要用平台联调局填报平衡、公平性或动物园验收。涉及隐藏 bot 或地图时，输出也必须放在 `private/`；CLI 会拒绝已知私有输入写往公开路径，本次没有创建隐藏内容。
+旧v5矩阵失败仍保留；最终standard-1/v15完整矩阵已全部通过，见 `reports/phase-A.md`。二审明确runner取p95、整局为300×折算TURN+5秒；最终v5效率复测亦通过，最大值照留。评测机空闲参考已用于新矩阵和效率折算。详见 `inbox/2026-11-07-phase-a.md` 与STATUS；旧 `reports/archive/2026-11-07-phase-A-review-request.md` 是历史请求，不是A阶段完成报告。不要用平台联调局填报平衡、公平性或动物园验收。涉及隐藏 bot 或地图时，输出也必须放在 `private/`；CLI 会拒绝已知私有输入写往公开路径，本次没有创建隐藏内容。

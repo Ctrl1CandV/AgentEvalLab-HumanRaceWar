@@ -1,0 +1,9551 @@
+{
+  "schemaVersion": 1,
+  "scope": "one batch only; scrimmage reports are diagnostic, never D6 acceptance",
+  "batch": "runs/development/zoo-v4-traffic-pilot",
+  "request": {
+    "sources": [
+      "bots/public/M-balanced",
+      "bots/public/Z-eco",
+      "bots/public/Z-harass",
+      "bots/public/Z-idle",
+      "bots/public/Z-miner",
+      "bots/public/Z-random",
+      "bots/public/Z-rush",
+      "bots/public/Z-towers",
+      "bots/public/Z-turtle",
+      "bots/public/Z-wrush"
+    ],
+    "maps": [
+      "maps/scrimmage/corridor-01.map",
+      "maps/scrimmage/island-01.map",
+      "maps/scrimmage/maze-01.map",
+      "maps/scrimmage/open-01.map"
+    ],
+    "jobs": 6,
+    "pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "seeds": [
+      17,
+      29
+    ],
+    "sandbox": "bwrap",
+    "ruleset": {},
+    "framework": "e6d5e6e2c5a299ed21c89c16ac553371b9688d8370a75a32dd2b2a9a0bc414cb",
+    "referenceSha256": null,
+    "sourceHashes": [
+      "1da79849a9cdd226f71ba9e8cfc712d4d4034018e0e7d5d8032028d70a2757f6",
+      "58a356667b181deba7138e1e9e5727c58ed43274686ddd9ba4aae56265cd2bce",
+      "02fc391bba4f2fd579c296d45d6affe9c545a319f16e3b45d0d21a52d41274c4",
+      "de3e2ed08e45d46a17285dff67744bad2bf967ec37a6e5a8bcfcdb77e108beb8",
+      "97f9cd63f8bb25f1fd063383eeb91c8b17950c3d073da2c32fb3b5c098836d82",
+      "7d78a501954248bd788df526febd8e44116a50f241c0cff7c1abf952722a005d",
+      "5a25666900e59b616d50c0c0d18ac062b8e80ad7960403c3c26a0996599f3d4c",
+      "df167c5316c618e9551df75053865c4eaca927c6b3d3d14d747d0050d5ccc62d",
+      "c14fd4dfaca948709f121229d541ace26c95066171a029e8b5c7d3ee960be87c",
+      "294dfb084a33320cb65973d8686dbff3637e36a9bdd2be30b0faff76a8964aa1"
+    ],
+    "mapHashes": [
+      "596a7087a24d0743f224f78c1639ed118a68e657a0cf542d49521cc116d60743",
+      "ce3e4379af5a56249ced1e99ffce88337fc95eee62c6195fbcafdb2c01b3696c",
+      "a3207edfa1ef78efd2f1618c7e3adb41d6bd80bf77e6205d3a4562c6099210d1",
+      "6eaddd8b974a4f6b84f9608c96f32f88825e1bf381748f86cafd4e4679d32ff1"
+    ]
+  },
+  "bots": [
+    "M-balanced",
+    "Z-eco",
+    "Z-harass",
+    "Z-idle",
+    "Z-miner",
+    "Z-random",
+    "Z-rush",
+    "Z-towers",
+    "Z-turtle",
+    "Z-wrush"
+  ],
+  "expectedGames": 368,
+  "completedGames": 368,
+  "complete": true,
+  "attemptCounts": {
+    "complete": 368
+  },
+  "inputsSha256": {
+    "manifest.json": "ed245617050182bd3d118062c813f0b82ebae433e92a8bc2ea1626d3a181b19a",
+    "results.jsonl": "4c27af7137235f8e549b5e457ab6368c788a817e752106ae30a3c7073488d7dc",
+    "attempts.jsonl": "d40d163ff1fb7cc743b25a7180d12a272927bba1aada597227acf3c2845440b5"
+  },
+  "verificationFramework": "e6d5e6e2c5a299ed21c89c16ac553371b9688d8370a75a32dd2b2a9a0bc414cb",
+  "executionFramework": "e6d5e6e2c5a299ed21c89c16ac553371b9688d8370a75a32dd2b2a9a0bc414cb",
+  "replayAudit": {
+    "allVerified": true,
+    "verificationCpuNs": 25349876600,
+    "wallNs": 6611028404,
+    "scope": "Current verifier checks transcript semantics; not timing authenticity or an independent-machine rerun."
+  },
+  "bootstrap": {
+    "unit": "map; both swapped seats retained together",
+    "replicates": 4000,
+    "seed": 4219,
+    "interval": "95% percentile, nearest-rank endpoints",
+    "limits": "Conditional on this map collection and these bot seeds. No multiple-testing correction or timing authentication."
+  },
+  "rateDefinitions": {
+    "winRate": "wins / games",
+    "scoreRate": "(wins + .5 * draws) / games"
+  },
+  "humanReview": "pending",
+  "phaseAComplete": false,
+  "eligiblePublicD6Matrix": false,
+  "botFaultGames": 0,
+  "protocolWarnings": 0,
+  "recordedUsage": {
+    "botCpuNs": 45494969100,
+    "matchHarnessCpuNs": 87977002500,
+    "turnHarnessCpuNsP95": 1629900,
+    "turnHarnessCpuNsMax": 2986100,
+    "replayVerificationCpuNs": 25349876600,
+    "totalCpuHours": null,
+    "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+  },
+  "matrix": [
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-eco",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-eco",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-eco",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-eco",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-eco",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-harass",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-harass",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-harass",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-harass",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-harass",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-idle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-idle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-idle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-idle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-idle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-miner",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-miner",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-miner",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-miner",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-miner",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-random",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-random",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-random",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-random",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-random",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-rush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 6,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.75,
+      "scoreRate": 0.75,
+      "winRateCI95": [
+        0.25,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-rush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-rush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-rush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-rush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-towers",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-towers",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-towers",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-towers",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-towers",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-turtle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-turtle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-turtle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-turtle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-turtle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-wrush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-wrush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-wrush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-wrush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "M-balanced",
+      "opponent": "Z-wrush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "M-balanced",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "M-balanced",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "M-balanced",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "M-balanced",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "M-balanced",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-harass",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-harass",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-harass",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-harass",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-harass",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-idle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-idle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-idle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-idle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-idle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-miner",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 6,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.75,
+      "scoreRate": 0.75,
+      "winRateCI95": [
+        0.25,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-miner",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-miner",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-miner",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-miner",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-random",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-random",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-random",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-random",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-random",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-rush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-rush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-rush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-rush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-rush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-towers",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 6,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.75,
+      "scoreRate": 0.75,
+      "winRateCI95": [
+        0.25,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-towers",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-towers",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-towers",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-towers",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-turtle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 6,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.75,
+      "scoreRate": 0.75,
+      "winRateCI95": [
+        0.25,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-turtle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-turtle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-turtle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-turtle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-wrush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-wrush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-wrush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-wrush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-eco",
+      "opponent": "Z-wrush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "M-balanced",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "M-balanced",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "M-balanced",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "M-balanced",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "M-balanced",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-eco",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-eco",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-eco",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-eco",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-eco",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-idle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-idle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-idle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-idle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-idle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-miner",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-miner",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-miner",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-miner",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-miner",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-random",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-random",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-random",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-random",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-random",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-rush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 6,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.75,
+      "scoreRate": 0.75,
+      "winRateCI95": [
+        0.25,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-rush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-rush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-rush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-rush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-towers",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-towers",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-towers",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-towers",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-towers",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-turtle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-turtle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-turtle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-turtle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-turtle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-wrush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-wrush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-wrush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-wrush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-harass",
+      "opponent": "Z-wrush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "M-balanced",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "M-balanced",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "M-balanced",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "M-balanced",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "M-balanced",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-eco",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-eco",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-eco",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-eco",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-eco",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-harass",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-harass",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-harass",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-harass",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-harass",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-miner",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-miner",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-miner",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-miner",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-miner",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-random",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-random",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-random",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-random",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-random",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-rush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-rush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-rush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-rush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-rush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-towers",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-towers",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-towers",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-towers",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-towers",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-turtle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-turtle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-turtle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-turtle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-turtle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-wrush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-wrush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-wrush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-wrush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-idle",
+      "opponent": "Z-wrush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "M-balanced",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "M-balanced",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "M-balanced",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "M-balanced",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "M-balanced",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-eco",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 2,
+      "draws": 0,
+      "losses": 6,
+      "winRate": 0.25,
+      "scoreRate": 0.25,
+      "winRateCI95": [
+        0.0,
+        0.75
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-eco",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-eco",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-eco",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-eco",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-harass",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-harass",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-harass",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-harass",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-harass",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-idle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-idle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-idle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-idle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-idle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-random",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-random",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-random",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-random",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-random",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-rush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-rush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-rush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-rush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-rush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-towers",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-towers",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-towers",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-towers",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-towers",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-turtle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 2,
+      "draws": 4,
+      "losses": 2,
+      "winRate": 0.25,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        0.75
+      ],
+      "scoreRateCI95": [
+        0.125,
+        0.875
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-turtle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-turtle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "winRate": 0.0,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-turtle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-turtle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "winRate": 0.0,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-wrush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-wrush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-wrush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-wrush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-miner",
+      "opponent": "Z-wrush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "M-balanced",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "M-balanced",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "M-balanced",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "M-balanced",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "M-balanced",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-eco",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-eco",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-eco",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-eco",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-eco",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-harass",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-harass",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-harass",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-harass",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-harass",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-idle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-idle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-idle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-idle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-idle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-miner",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-miner",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-miner",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-miner",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-miner",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-rush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-rush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-rush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-rush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-rush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-towers",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-towers",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-towers",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-towers",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-towers",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-turtle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-turtle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-turtle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-turtle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-turtle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-wrush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-wrush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-wrush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-wrush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-random",
+      "opponent": "Z-wrush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "M-balanced",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 2,
+      "draws": 0,
+      "losses": 6,
+      "winRate": 0.25,
+      "scoreRate": 0.25,
+      "winRateCI95": [
+        0.0,
+        0.75
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "M-balanced",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "M-balanced",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "M-balanced",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "M-balanced",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-eco",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-eco",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-eco",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-eco",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-eco",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-harass",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 2,
+      "draws": 0,
+      "losses": 6,
+      "winRate": 0.25,
+      "scoreRate": 0.25,
+      "winRateCI95": [
+        0.0,
+        0.75
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-harass",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-harass",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-harass",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-harass",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-idle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-idle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-idle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-idle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-idle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-miner",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-miner",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-miner",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-miner",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-miner",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-random",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-random",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-random",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-random",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-random",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-towers",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 6,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.75,
+      "scoreRate": 0.75,
+      "winRateCI95": [
+        0.25,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-towers",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-towers",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-towers",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-towers",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-turtle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-turtle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-turtle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-turtle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-turtle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-wrush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-wrush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-wrush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-wrush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-rush",
+      "opponent": "Z-wrush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "M-balanced",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "M-balanced",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "M-balanced",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "M-balanced",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "M-balanced",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-eco",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 2,
+      "draws": 0,
+      "losses": 6,
+      "winRate": 0.25,
+      "scoreRate": 0.25,
+      "winRateCI95": [
+        0.0,
+        0.75
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-eco",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-eco",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-eco",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-eco",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-harass",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-harass",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-harass",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-harass",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-harass",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-idle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-idle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-idle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-idle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-idle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-miner",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-miner",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-miner",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-miner",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-miner",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-random",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-random",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-random",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-random",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-random",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-rush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 2,
+      "draws": 0,
+      "losses": 6,
+      "winRate": 0.25,
+      "scoreRate": 0.25,
+      "winRateCI95": [
+        0.0,
+        0.75
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-rush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-rush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-rush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-rush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-turtle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-turtle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-turtle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-turtle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-turtle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-wrush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-wrush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-wrush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-wrush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-towers",
+      "opponent": "Z-wrush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "M-balanced",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "M-balanced",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "M-balanced",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "M-balanced",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "M-balanced",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-eco",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 2,
+      "draws": 0,
+      "losses": 6,
+      "winRate": 0.25,
+      "scoreRate": 0.25,
+      "winRateCI95": [
+        0.0,
+        0.75
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-eco",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-eco",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-eco",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-eco",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-harass",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-harass",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-harass",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-harass",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-harass",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-idle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-idle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-idle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-idle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-idle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-miner",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 2,
+      "draws": 4,
+      "losses": 2,
+      "winRate": 0.25,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        0.75
+      ],
+      "scoreRateCI95": [
+        0.125,
+        0.875
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-miner",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-miner",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "winRate": 0.0,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-miner",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-miner",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 2,
+      "losses": 0,
+      "winRate": 0.0,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-random",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-random",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-random",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-random",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-random",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-rush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 4,
+      "draws": 0,
+      "losses": 4,
+      "winRate": 0.5,
+      "scoreRate": 0.5,
+      "winRateCI95": [
+        0.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-rush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-rush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-rush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-rush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-towers",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-towers",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-towers",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-towers",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-towers",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-wrush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-wrush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-wrush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-wrush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-turtle",
+      "opponent": "Z-wrush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "M-balanced",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "M-balanced",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "M-balanced",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "M-balanced",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "M-balanced",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-eco",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-eco",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-eco",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-eco",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-eco",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-harass",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-harass",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-harass",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-harass",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-harass",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-idle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 8,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-idle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-idle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-idle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-idle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 2,
+      "draws": 0,
+      "losses": 0,
+      "winRate": 1.0,
+      "scoreRate": 1.0,
+      "winRateCI95": [
+        1.0,
+        1.0
+      ],
+      "scoreRateCI95": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-miner",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-miner",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-miner",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-miner",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-miner",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-random",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-random",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-random",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-random",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-random",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-rush",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-rush",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-rush",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-rush",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-rush",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-towers",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-towers",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-towers",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-towers",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-towers",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-turtle",
+      "mapType": "all",
+      "games": 8,
+      "maps": 4,
+      "wins": 0,
+      "draws": 0,
+      "losses": 8,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-turtle",
+      "mapType": "corridor",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-turtle",
+      "mapType": "island",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-turtle",
+      "mapType": "maze",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bot": "Z-wrush",
+      "opponent": "Z-turtle",
+      "mapType": "open",
+      "games": 2,
+      "maps": 1,
+      "wins": 0,
+      "draws": 0,
+      "losses": 2,
+      "winRate": 0.0,
+      "scoreRate": 0.0,
+      "winRateCI95": [
+        0.0,
+        0.0
+      ],
+      "scoreRateCI95": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "fairness": [
+    {
+      "bot": "M-balanced",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    },
+    {
+      "bot": "Z-eco",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    },
+    {
+      "bot": "Z-harass",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    },
+    {
+      "bot": "Z-idle",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    },
+    {
+      "bot": "Z-miner",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    },
+    {
+      "bot": "Z-random",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    },
+    {
+      "bot": "Z-rush",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    },
+    {
+      "bot": "Z-towers",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    },
+    {
+      "bot": "Z-turtle",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    },
+    {
+      "bot": "Z-wrush",
+      "maps": 4,
+      "seatScoreRateDifference": 0.0,
+      "CI95": [
+        0.0,
+        0.0
+      ],
+      "within3PointsAndCIContainsZero": true
+    }
+  ],
+  "balancedSelf": {
+    "games": 8,
+    "maps": 4,
+    "medianTurns": 300.0,
+    "by60Fraction": 0.0,
+    "endReasons": {
+      "turn_limit_score": 6,
+      "base_destroyed": 2
+    },
+    "baseEndingFraction": 0.25,
+    "turnLimitFraction": 0.75,
+    "seedWinners": {
+      "17": 6,
+      "29": 2
+    }
+  },
+  "drawRateExcludingIdleAndSameName": 0.013888888888888888,
+  "diagnosticsByMapType": {
+    "maze": {
+      "games": 92,
+      "turns": 25556,
+      "failedMoves": 49512,
+      "failedOrders": 49514,
+      "buildContested": 0,
+      "buildContestedSites": 0,
+      "baseEndings": 14
+    },
+    "island": {
+      "games": 92,
+      "turns": 20292,
+      "failedMoves": 32546,
+      "failedOrders": 32586,
+      "buildContested": 0,
+      "buildContestedSites": 0,
+      "baseEndings": 44
+    },
+    "corridor": {
+      "games": 92,
+      "turns": 20674,
+      "failedMoves": 72318,
+      "failedOrders": 72448,
+      "buildContested": 76,
+      "buildContestedSites": 38,
+      "baseEndings": 42
+    },
+    "open": {
+      "games": 92,
+      "turns": 18162,
+      "failedMoves": 3422,
+      "failedOrders": 3516,
+      "buildContested": 0,
+      "buildContestedSites": 0,
+      "baseEndings": 60
+    }
+  },
+  "observedChecks": {
+    "fairness": true,
+    "drawRateBelow10": true,
+    "selfMedianAtLeast120": true,
+    "selfBy60Below20": true,
+    "bothEndings20To80": true,
+    "noBotFaultsOrProtocolWarnings": true
+  },
+  "rateChecks": {
+    "winRate": {
+      "counters": {
+        "Z-miner": [
+          "Z-rush",
+          "Z-eco",
+          "Z-turtle",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-rush": [
+          "Z-harass"
+        ],
+        "Z-wrush": [
+          "Z-miner",
+          "Z-rush",
+          "Z-eco",
+          "Z-turtle",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-eco": [
+          "Z-harass"
+        ],
+        "Z-turtle": [
+          "Z-miner",
+          "Z-eco",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-towers": [
+          "Z-rush",
+          "Z-eco"
+        ],
+        "Z-harass": []
+      },
+      "eachSingleLosesToAnother": false,
+      "balancedOverall70": false,
+      "balancedEveryType55": false
+    },
+    "scoreRate": {
+      "counters": {
+        "Z-miner": [
+          "Z-rush",
+          "Z-eco",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-rush": [
+          "Z-harass"
+        ],
+        "Z-wrush": [
+          "Z-miner",
+          "Z-rush",
+          "Z-eco",
+          "Z-turtle",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-eco": [
+          "Z-harass"
+        ],
+        "Z-turtle": [
+          "Z-eco",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-towers": [
+          "Z-rush",
+          "Z-eco"
+        ],
+        "Z-harass": []
+      },
+      "eachSingleLosesToAnother": false,
+      "balancedOverall70": false,
+      "balancedEveryType55": false
+    }
+  },
+  "numericalBalanceConditionsMetUnderBothRateConventions": false,
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v4-traffic-pilot/report.json",
+    "originalSha256": "19fdb9a5916a8b0eb59eb77d89b6235339d3a692983168bbac5471c0affee424",
+    "omittedLocalSections": {
+      "replayAudit/replays": 368
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

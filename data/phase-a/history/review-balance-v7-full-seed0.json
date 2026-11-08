@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+  "pattern": "test_*.py",
+  "python": "3.13.15",
+  "system": "Linux",
+  "kernel": "6.18.40.1-microsoft-standard-WSL2",
+  "testsRun": 182,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "measuredTestProcessCpuSeconds": 33.1586171,
+  "measuredTestWallSeconds": 89.914043661,
+  "measuredReapedChildrenCpuSeconds": 4.095269,
+  "sourceReport": "runs/development/review-balance-2026-11-07/v7-full-seed0.json",
+  "sourceReportSha256": "5f91c2e8f65f111c996d184eab526878dedc3116d8e77f3f3614da2de39fc7ff",
+  "log": "runs/local-evidence/509f1f8-before-summary-only/logs/review-balance-v7-full-seed0.log",
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/review-balance-v7-full-seed0.json",
+    "originalSha256": "11e9ff95f015ab32886248b23a74b427a1b8efcacaa7a489a157242ded6421b4",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

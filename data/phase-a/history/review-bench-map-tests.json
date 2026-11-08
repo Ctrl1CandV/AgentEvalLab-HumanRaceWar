@@ -1,0 +1,741 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T07:20:59.849715+00:00",
+  "scope": "M4/Q2 development benchmark, M7/D5 maps v2, synthetic-root follow-up; not phase-A acceptance",
+  "sourceBaseCommit": "a0dc35589f495e02b3e6e1afd6fd3a5865424f0d",
+  "inputsScope": "Final source digests; full 140-test runs cover this source including then-uncommitted map v2. Initial map-walk failure used v1 assets/checker. Public logs strip trailing whitespace; raw JSON remains unchanged.",
+  "inputsSha256": {
+    "arena/__init__.py": "c27ee98ee99a1c238dd1e2817c64b236d410cafc16d345e1863a545d0abac58f",
+    "arena/__main__.py": "d2360b7aa74ae64c1244895b8d12c606e88eb2031c48196b8c9c6ee7c5dd8449",
+    "arena/bench/main.cpp": "6ad783455d6c625c0675f8b29d8e6af843f463e993ee4490a2b9baee20076348",
+    "arena/core/__init__.py": "b9fd5a40006c1a07a6ddd2c8e67e311c5a7812745bf413d3e630a13e636e0b5d",
+    "arena/core/benchmark.py": "752565a7b36c5461b11a2561bca51179e1d109af499359a938d1261448db026a",
+    "arena/core/game.py": "2b13b954c9f88c113af968c5d932869bbde7d075a2522ae524e655a2bec787df",
+    "arena/core/replay.py": "cbb9c6c47bb6d69e40ca963efc538829c7481d034847ed65d50c4826b0f12e84",
+    "arena/core/runner.py": "ee81fb947b14f6bdc04100e9edccb21347d1d086f8b4b7904b4e5e1948c8fa1c",
+    "arena/core/sandbox.py": "4fed66755f77829e45c449a032b30ac18c92dde92069772579967a01467c05af",
+    "arena/core/sandbox_exec.py": "475be76ae79a3047405f5dd82df93207e26cc8872154f6f475abc8d5657ff585",
+    "arena/core/seccomp.py": "9b3b632cadf2b5fb02b6ac4e2c4a497a8ab4723702f731a0f511c9ecac1eab8b",
+    "arena/core/timing.py": "ab849c0f91cd61f3c1f8445a9a3c51219adccef68e89c1f3f2fca308bb5328f4",
+    "arena/core/transport.py": "1e36b7166e66089e5fbc6c9940d14eeee37078219da646203a4c6565f1efc843",
+    "arena/games/__init__.py": "d625bdadfa5c3c3c052387ebf65d2be95ee4421a9beaf24430bdce9df2e4933f",
+    "arena/games/outpost/__init__.py": "6bc25a25aabfde53faed2a2a4718281c85cfc751233a7ef7bd9f6628f5ac97c3",
+    "arena/games/outpost/engine.py": "1fed2771b6481683866aa7f0de4c5b7b049a18776c35e28cde320f85651b2d4a",
+    "arena/games/outpost/mapgen.py": "565fbcd276890d6ede27eeff12adaad8acd471d0928b52f8c75fce3b277bf3e3",
+    "arena/games/outpost/maps.py": "b10d01cde226624d6fa5417e09ca72c32d9221a33a6e29444a6b6213a941cb67",
+    "arena/games/outpost/model.py": "cacdb4c426ae65a9f18250ae2f2eacf77d0deeda0e0fdb2d4ccfe0bf85c69a06",
+    "arena/games/outpost/orders.py": "3ccbbc3f47dbefc2fe0d2809275d097911a39e76cc98d8a25fb43a3fa1d910fc",
+    "arena/games/outpost/replay.py": "a19ff8bb15538de4b4a5565f7807ee479c3e21c499089c3c8304e0a93badb1cd",
+    "arena/games/outpost/rules.py": "b42dc19b354dd1e4b98230fb3b9364771297db5d5617a430075c131ba4889503",
+    "arena/match.py": "d1f8208321d81a2ffa591728349797abefb5561012a8ae2cd6475ad3d02cfd45",
+    "maps/catalog.json": "302a354392021564a0aa936b8f321f8c8dd6b9fef6de5e5f5952aeb601b61eba",
+    "sdk/cpp/example/main.cpp": "3203d71b9bf393f59abc0c1e107e991faa200e7799ce37ae42c2dd0552c2c117",
+    "sdk/cpp/hrw.hpp": "899d6fbb7bd6e2d0b12284e2af46aac1869ac5d469520b37aace7796728e238a",
+    "sdk/python/example/main.py": "ca34643486833714e3449f0d90aca6bdad8ce76119c60b90636d777e1710ba3d",
+    "sdk/python/hrw.py": "ed0373ce69e43709144454026b72378da6386108450edb244e53be77c054ca71",
+    "tests/__init__.py": "920872ec61e99debad6479fe79f9ac689514bb3596432792b651d487ebe3d7d7",
+    "tests/fixtures/smoke.map": "d96754f03e51d4e8a27a39990208f3167c4f7bb3737a2850c4bbb6d929c6cbcf",
+    "tests/helpers.py": "b756f0d423c54da143bf764d1d44932fecb2505712d511b32b1823e0b3023459",
+    "tests/test_benchmark.py": "01019a060e28d02afff7cecbe85645ca318805a63719045920b0bca9afdbb31b",
+    "tests/test_determinism.py": "d942cff4889e4b2d09732bd5e645cfb34b95d8f344ca148126bd62cbb168c51e",
+    "tests/test_map_walk.py": "a683d89361dcfc4a090c780496eca173902bb8ac28be3456fa32ff509a1e8919",
+    "tests/test_mapgen.py": "d92a8453e5b83af6c8f31e3ea746511df6464ac518ea56509c81e602323e908d",
+    "tests/test_protocol.py": "fc7e1e5d7ea3266772d9dbbe824b85dfb1859e8875ee625a494ffb525ef00526",
+    "tests/test_review_policy.py": "62e25178eee54f347d8cb7d77d429f0b406777eef0c3b5b436c76f8f8c98ec1b",
+    "tests/test_review_runtime.py": "15239f21193c1f3858fbb506bc30b99e79b5e0eabf1b63c628088ea394dc7761",
+    "tests/test_rules.py": "26e2536ba9eff4eaba54ab2bad706d4bf215ff7784f325b7fc92b03c70fbd698",
+    "tests/test_runtime.py": "f653ee3ef82de55ab17b01b8e1e5a3fae77e1249a62d1b2fc5b70da881e9b375",
+    "tests/test_sdk.py": "c539328b32a901a1e258e620fd530eadfb8165506da5c2a14ebbc11807898b91",
+    "tools/generate_public_maps.py": "31214c5096f96e8fffc0cca1ba6e176b0890988f7ab86caf3908f02e5005bb37",
+    "tools/run_tests.py": "8503df905fb31ca8f86ba9a2d6ae88033db5c01d89e750ac199d4e6dd60adce3"
+  },
+  "tests": [
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_benchmark.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0392206,
+      "measuredTestWallSeconds": 0.779072401,
+      "measuredReapedChildrenCpuSeconds": 0.011881,
+      "label": "benchmark-tests-1",
+      "pythonHashSeed": null,
+      "rawReport": "runs/development/review-2026-11-07/benchmark-tests-1.json",
+      "rawReportSha256": "d57e01d1bceeb490be9bef3f3bbabe7a2660dbc492a86d5f3029546ff2aaeb47",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/review-2026-11-07-benchmark-tests-1.log"
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_map_walk.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 3,
+      "failures": 1,
+      "errors": 2,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.202232,
+      "measuredTestWallSeconds": 0.214662521,
+      "measuredReapedChildrenCpuSeconds": 0.0,
+      "label": "map-walk-before",
+      "pythonHashSeed": null,
+      "rawReport": "runs/development/review-2026-11-07/map-walk-before.json",
+      "rawReportSha256": "6e03c31a063b0eaada6358698593f7d801740e7373d018d5811f8665e6424314",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/review-2026-11-07-map-walk-before.log"
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_map*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 8.3887252,
+      "measuredTestWallSeconds": 8.38900588,
+      "measuredReapedChildrenCpuSeconds": 0.0,
+      "label": "map-v2-tests",
+      "pythonHashSeed": null,
+      "rawReport": "runs/development/review-2026-11-07/map-v2-tests.json",
+      "rawReportSha256": "542e1a59d505f3edd62d861fc4901b634063d3fbf99f8f5d44872490a26b2711",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/review-2026-11-07-map-v2-tests.log"
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 140,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 32.1792373,
+      "measuredTestWallSeconds": 37.771490275,
+      "measuredReapedChildrenCpuSeconds": 0.081646,
+      "label": "full-bench-map-seed0",
+      "pythonHashSeed": 0,
+      "rawReport": "runs/development/review-2026-11-07/full-bench-map-seed0.json",
+      "rawReportSha256": "672ba1759a4e59f8fab951fcab8cd2f15aa9a4393c0d9c66482cc7e151500721",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/review-2026-11-07-full-bench-map-seed0.log"
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; runtime tests execute bots/compilers only in bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 140,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 31.9291762,
+      "measuredTestWallSeconds": 37.523520347,
+      "measuredReapedChildrenCpuSeconds": 0.08232099999999999,
+      "label": "full-bench-map-seed1",
+      "pythonHashSeed": 1,
+      "rawReport": "runs/development/review-2026-11-07/full-bench-map-seed1.json",
+      "rawReportSha256": "be3b04241d863031821880bcd4fe060f6ed8d96fc3603ab1dd77435fd3b52502",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/review-2026-11-07-full-bench-map-seed1.log"
+    }
+  ],
+  "lsp": {
+    "files": 14,
+    "finalDiagnostics": 0,
+    "earlierMapTestOptionalValueDiagnosticsFixed": 2
+  },
+  "directRootRegression": {
+    "beforeExit": 1,
+    "afterExit": 0,
+    "afterTests": 2,
+    "stderr": "runs/development/review-runtime/afadd1364d39411f9047809cf634d6bf/matches/cce3d939f7224749b83cb15d94799078/attempt-0/p0/stderr.txt",
+    "cpuUsageUnknown": true
+  },
+  "mapSet": {
+    "oldCatalogSha256": "53534ed7b9da6456e6bf00988aa61d99f89d2dd82433a5d0bc81ab14efd009f7",
+    "newCatalogSha256": "302a354392021564a0aa936b8f321f8c8dd6b9fef6de5e5f5952aeb601b61eba",
+    "oldHomeWalkViolations": [
+      {
+        "path": "public/island-01.map",
+        "player": 0,
+        "ore": [
+          9,
+          2
+        ],
+        "walk": 29
+      },
+      {
+        "path": "public/island-01.map",
+        "player": 1,
+        "ore": [
+          14,
+          21
+        ],
+        "walk": 29
+      },
+      {
+        "path": "public/island-07.map",
+        "player": 0,
+        "ore": [
+          10,
+          2
+        ],
+        "walk": 74
+      },
+      {
+        "path": "public/island-07.map",
+        "player": 1,
+        "ore": [
+          17,
+          25
+        ],
+        "walk": 74
+      },
+      {
+        "path": "public/maze-01.map",
+        "player": 0,
+        "ore": [
+          10,
+          2
+        ],
+        "walk": 46
+      },
+      {
+        "path": "public/maze-01.map",
+        "player": 1,
+        "ore": [
+          13,
+          21
+        ],
+        "walk": 46
+      },
+      {
+        "path": "public/maze-02.map",
+        "player": 0,
+        "ore": [
+          2,
+          8
+        ],
+        "walk": 20
+      },
+      {
+        "path": "public/maze-02.map",
+        "player": 0,
+        "ore": [
+          2,
+          9
+        ],
+        "walk": 19
+      },
+      {
+        "path": "public/maze-02.map",
+        "player": 0,
+        "ore": [
+          4,
+          7
+        ],
+        "walk": 19
+      },
+      {
+        "path": "public/maze-02.map",
+        "player": 1,
+        "ore": [
+          23,
+          20
+        ],
+        "walk": 19
+      },
+      {
+        "path": "public/maze-02.map",
+        "player": 1,
+        "ore": [
+          25,
+          18
+        ],
+        "walk": 19
+      },
+      {
+        "path": "public/maze-02.map",
+        "player": 1,
+        "ore": [
+          25,
+          19
+        ],
+        "walk": 20
+      },
+      {
+        "path": "public/maze-03.map",
+        "player": 0,
+        "ore": [
+          2,
+          8
+        ],
+        "walk": 26
+      },
+      {
+        "path": "public/maze-03.map",
+        "player": 0,
+        "ore": [
+          2,
+          10
+        ],
+        "walk": 24
+      },
+      {
+        "path": "public/maze-03.map",
+        "player": 1,
+        "ore": [
+          29,
+          21
+        ],
+        "walk": 24
+      },
+      {
+        "path": "public/maze-03.map",
+        "player": 1,
+        "ore": [
+          29,
+          23
+        ],
+        "walk": 26
+      },
+      {
+        "path": "public/maze-04.map",
+        "player": 0,
+        "ore": [
+          8,
+          1
+        ],
+        "walk": 13
+      },
+      {
+        "path": "public/maze-04.map",
+        "player": 0,
+        "ore": [
+          10,
+          2
+        ],
+        "walk": 14
+      },
+      {
+        "path": "public/maze-04.map",
+        "player": 1,
+        "ore": [
+          25,
+          33
+        ],
+        "walk": 14
+      },
+      {
+        "path": "public/maze-04.map",
+        "player": 1,
+        "ore": [
+          27,
+          34
+        ],
+        "walk": 13
+      },
+      {
+        "path": "public/maze-06.map",
+        "player": 0,
+        "ore": [
+          5,
+          7
+        ],
+        "walk": 22
+      },
+      {
+        "path": "public/maze-06.map",
+        "player": 0,
+        "ore": [
+          6,
+          6
+        ],
+        "walk": 20
+      },
+      {
+        "path": "public/maze-06.map",
+        "player": 1,
+        "ore": [
+          17,
+          17
+        ],
+        "walk": 20
+      },
+      {
+        "path": "public/maze-06.map",
+        "player": 1,
+        "ore": [
+          18,
+          16
+        ],
+        "walk": 22
+      },
+      {
+        "path": "public/maze-07.map",
+        "player": 0,
+        "ore": [
+          7,
+          0
+        ],
+        "walk": 35
+      },
+      {
+        "path": "public/maze-07.map",
+        "player": 0,
+        "ore": [
+          8,
+          1
+        ],
+        "walk": 35
+      },
+      {
+        "path": "public/maze-07.map",
+        "player": 0,
+        "ore": [
+          9,
+          3
+        ],
+        "walk": 34
+      },
+      {
+        "path": "public/maze-07.map",
+        "player": 1,
+        "ore": [
+          18,
+          24
+        ],
+        "walk": 34
+      },
+      {
+        "path": "public/maze-07.map",
+        "player": 1,
+        "ore": [
+          19,
+          26
+        ],
+        "walk": 35
+      },
+      {
+        "path": "public/maze-07.map",
+        "player": 1,
+        "ore": [
+          20,
+          27
+        ],
+        "walk": 35
+      },
+      {
+        "path": "public/maze-09.map",
+        "player": 0,
+        "ore": [
+          0,
+          8
+        ],
+        "walk": 76
+      },
+      {
+        "path": "public/maze-09.map",
+        "player": 0,
+        "ore": [
+          8,
+          1
+        ],
+        "walk": 13
+      },
+      {
+        "path": "public/maze-09.map",
+        "player": 1,
+        "ore": [
+          27,
+          34
+        ],
+        "walk": 13
+      },
+      {
+        "path": "public/maze-09.map",
+        "player": 1,
+        "ore": [
+          35,
+          27
+        ],
+        "walk": 76
+      },
+      {
+        "path": "public/maze-10.map",
+        "player": 0,
+        "ore": [
+          2,
+          10
+        ],
+        "walk": 30
+      },
+      {
+        "path": "public/maze-10.map",
+        "player": 1,
+        "ore": [
+          37,
+          29
+        ],
+        "walk": 30
+      },
+      {
+        "path": "scrimmage/maze-01.map",
+        "player": 0,
+        "ore": [
+          2,
+          10
+        ],
+        "walk": 28
+      },
+      {
+        "path": "scrimmage/maze-01.map",
+        "player": 0,
+        "ore": [
+          3,
+          7
+        ],
+        "walk": 32
+      },
+      {
+        "path": "scrimmage/maze-01.map",
+        "player": 1,
+        "ore": [
+          28,
+          24
+        ],
+        "walk": 32
+      },
+      {
+        "path": "scrimmage/maze-01.map",
+        "player": 1,
+        "ore": [
+          29,
+          21
+        ],
+        "walk": 28
+      }
+    ],
+    "changedMapFiles": [
+      "public/corridor-06.map",
+      "public/corridor-09.map",
+      "public/corridor-10.map",
+      "public/island-01.map",
+      "public/island-06.map",
+      "public/island-07.map",
+      "public/island-10.map",
+      "public/maze-01.map",
+      "public/maze-02.map",
+      "public/maze-03.map",
+      "public/maze-04.map",
+      "public/maze-05.map",
+      "public/maze-06.map",
+      "public/maze-07.map",
+      "public/maze-09.map",
+      "public/maze-10.map",
+      "scrimmage/maze-01.map"
+    ],
+    "seedCandidates": 44,
+    "rejectedSeedCandidates": 0,
+    "byType": {
+      "open": {
+        "maps": 11,
+        "maxHomeWalk": 8,
+        "minNearOreSites": 10
+      },
+      "corridor": {
+        "maps": 11,
+        "maxHomeWalk": 8,
+        "minNearOreSites": 10
+      },
+      "island": {
+        "maps": 11,
+        "maxHomeWalk": 12,
+        "minNearOreSites": 10
+      },
+      "maze": {
+        "maps": 11,
+        "maxHomeWalk": 12,
+        "minNearOreSites": 10
+      }
+    },
+    "generatorVersion": 2,
+    "terrainWallMasksAndBasesUnchanged": true,
+    "oldAssetsBackup": "runs/development/review-2026-11-07/maps-v1-before-walk",
+    "rejectionRate": 0.0,
+    "rejectionScope": "Whole-map seed candidates; resource placement candidates are filtered by walking constraints, not counted as seed retries.",
+    "balanceValidated": false
+  },
+  "newAttemptCounts": {
+    "complete": 64,
+    "infra_error": 10
+  },
+  "allNewCompleteReplaysVerified": true,
+  "historicalSmokeReplayVerified": true,
+  "benchmarkAttemptCounts": {
+    "complete": 7,
+    "incomplete": 3
+  },
+  "benchmarkAttempts": [
+    {
+      "status": "complete",
+      "resultFile": "runs/development/bench-smoke/483c4d42aa5c46d7889fbd8559010742/result.json",
+      "jobs": 1,
+      "samples": 1,
+      "directory": "runs/development/bench-smoke/483c4d42aa5c46d7889fbd8559010742",
+      "rawReportSha256": "bf684029b61f7abde95808d6c54f06c45d595cef1010e54f4d9fe4e6d3af1cfc",
+      "recordedWorkloadCpuSeconds": 0.4090314,
+      "groupAttempts": 2,
+      "error": null
+    },
+    {
+      "status": "complete",
+      "resultFile": "runs/development/benchmark-tests/3336214f4bc34866971d66e77a0c5903/310c38f0b958441794f99654675d270c/result.json",
+      "jobs": 1,
+      "samples": 1,
+      "directory": "runs/development/benchmark-tests/3336214f4bc34866971d66e77a0c5903/310c38f0b958441794f99654675d270c",
+      "rawReportSha256": "58100575cd9736e047b1eab47013c66ba8a2c6912f06e2ab58ef214d645fde86",
+      "recordedWorkloadCpuSeconds": 0.4100443,
+      "groupAttempts": 2,
+      "error": null
+    },
+    {
+      "status": "incomplete",
+      "resultFile": "runs/development/benchmark-tests/387af58b6bd3427bb29366db16618514/36b0e25d2fca4073a65918b44f2a584c/result.json",
+      "jobs": 1,
+      "samples": 1,
+      "directory": "runs/development/benchmark-tests/387af58b6bd3427bb29366db16618514/36b0e25d2fca4073a65918b44f2a584c",
+      "rawReportSha256": "ab266175aefd20e9b180f3c01a184cf5e36846bbea3e1f41b6e18cc62d4fbba0",
+      "recordedWorkloadCpuSeconds": 0.0,
+      "groupAttempts": 1,
+      "error": "InfrastructureError"
+    },
+    {
+      "status": "incomplete",
+      "resultFile": "runs/development/benchmark-tests/47f56758a9184bdabaf532a041d0780e/1b9ee71e56a24843a7b7750e81ff127f/result.json",
+      "jobs": 1,
+      "samples": 1,
+      "directory": "runs/development/benchmark-tests/47f56758a9184bdabaf532a041d0780e/1b9ee71e56a24843a7b7750e81ff127f",
+      "rawReportSha256": "71651a56c0a17508ba61576fa846808261d3ebad8ee360c13bd142dd6ff3799e",
+      "recordedWorkloadCpuSeconds": 0.0,
+      "groupAttempts": 1,
+      "error": "InfrastructureError"
+    },
+    {
+      "status": "complete",
+      "resultFile": "runs/development/benchmark-tests/8d7119fcbe674a08aefa6b4ed3172368/5701c9ec87f44a60a7e8fbc97ed7b967/result.json",
+      "jobs": 1,
+      "samples": 1,
+      "directory": "runs/development/benchmark-tests/8d7119fcbe674a08aefa6b4ed3172368/5701c9ec87f44a60a7e8fbc97ed7b967",
+      "rawReportSha256": "10dae5802d9276af1e03f8330e1ca06bdab3ef770ee0e7e0f2d891b284a69ff7",
+      "recordedWorkloadCpuSeconds": 0.4127862,
+      "groupAttempts": 2,
+      "error": null
+    },
+    {
+      "status": "incomplete",
+      "resultFile": "runs/development/benchmark-tests/b7dd6a71252b44ee81f56bc6b2b6bf0e/35e1d34373b44618a0f67dd714a7aeef/result.json",
+      "jobs": 1,
+      "samples": 1,
+      "directory": "runs/development/benchmark-tests/b7dd6a71252b44ee81f56bc6b2b6bf0e/35e1d34373b44618a0f67dd714a7aeef",
+      "rawReportSha256": "92b40a038e3534baf844e1949c24954f029d720f756931fe79bc22d7707c209f",
+      "recordedWorkloadCpuSeconds": 0.0,
+      "groupAttempts": 1,
+      "error": "InfrastructureError"
+    },
+    {
+      "status": "complete",
+      "resultFile": "runs/development/benchmark-tests/f6689f74f9204cf8ac4878a878809d41/a5ab6076b27142cab7dc91c98130b760/result.json",
+      "jobs": 1,
+      "samples": 1,
+      "directory": "runs/development/benchmark-tests/f6689f74f9204cf8ac4878a878809d41/a5ab6076b27142cab7dc91c98130b760",
+      "rawReportSha256": "ddf931f3ab3479764981c37f65a3ef86450fc3b78ac950082006427a10f1f052",
+      "recordedWorkloadCpuSeconds": 0.4082016,
+      "groupAttempts": 2,
+      "error": null
+    },
+    {
+      "status": "complete",
+      "resultFile": "runs/development/load-benchmark/536282898d584d91b554606b706d5417/result.json",
+      "jobs": 6,
+      "samples": 3,
+      "directory": "runs/development/load-benchmark/536282898d584d91b554606b706d5417",
+      "rawReportSha256": "e8cc5aea47c61d5ba1dc6244f4d2eb4dcbdacb6484f4246f7810b73c0140c67a",
+      "recordedWorkloadCpuSeconds": 27.0892745,
+      "groupAttempts": 18,
+      "error": null
+    },
+    {
+      "status": "complete",
+      "resultFile": "runs/development/load-benchmark/5d30bc73ac674f4eb4fa0ecd59f6a0b9/result.json",
+      "jobs": 6,
+      "samples": 3,
+      "directory": "runs/development/load-benchmark/5d30bc73ac674f4eb4fa0ecd59f6a0b9",
+      "rawReportSha256": "3789fbb3694168f106c0e80fdc73201373dfca0b9a8731f1130fb3329f3a4658",
+      "recordedWorkloadCpuSeconds": 27.247499,
+      "groupAttempts": 18,
+      "error": null
+    },
+    {
+      "status": "complete",
+      "resultFile": "runs/development/map-v2-calibration/71246af19ef444b49a00b79defd04374/result.json",
+      "jobs": 1,
+      "samples": 3,
+      "directory": "runs/development/map-v2-calibration/71246af19ef444b49a00b79defd04374",
+      "rawReportSha256": "1e50eeadef183fa3b777073b46a96540d41b2d79a96083120708abeabe79b4d9",
+      "recordedWorkloadCpuSeconds": 1.2486114,
+      "groupAttempts": 6,
+      "error": null
+    }
+  ],
+  "timingEvidence": "data/timing.json",
+  "calibratedMapIntegration": {
+    "timing": "runs/development/map-v2-calibration/71246af19ef444b49a00b79defd04374/result.json",
+    "speedFactor": 0.9972392986023455,
+    "scope": "calibrated CLI integration on v2 scrimmage maps, not balance or efficiency acceptance"
+  },
+  "usage": {
+    "measuredTestProcessCpuSeconds": 72.7385913,
+    "recordedReplyCpuSeconds": 8.1121237,
+    "totalCpuHours": null,
+    "standaloneSweeps": "see data/timing.json; nested benchmark harness CPU is already included in test-host CPU",
+    "unmeasured": "compiler, direct root/policy checks, map generation, replay audit, LSP, tools and other activity"
+  },
+  "remaining": [
+    "batch calibration/global CPU scheduling",
+    "check/cache/result store/tournament",
+    "raw warnings/failedOrders/damageEffective statistics",
+    "zoo/balance/fairness/efficiency matrices",
+    "complete sandbox cleanup/stress validation",
+    "BRIEF 3.7 token-budget decision before new implementation"
+  ],
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/review-bench-map-tests.json",
+    "originalSha256": "a96b7987fd2ac576a80a8cfcab15269e3dfedee6579324ad0fcc8a4d8effd4c1",
+    "omittedLocalSections": {
+      "newAttempts": 74,
+      "calibratedMapIntegration/runs": 8
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

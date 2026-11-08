@@ -6,6 +6,12 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 A阶段交付和审查入口见 [reports/phase-A.md](reports/phase-A.md)、[STATUS.md](STATUS.md)。standard-1采用已验证P7参数，动物园v15；最终40图3680局全部条件通过，两个哈希种子全套各198项通过。引擎、SDK、沙箱、bench、check、缓存、调度、结果库和tournament均已交付，见 [docs/BATCH.md](docs/BATCH.md)。按用户授权完成核对后推送，随后等待审查，不进入B；构建检查通过不等于评测负责人已验收。
 
+## 目录和上传范围
+
+代码布局保持不变；阶段汇总集中在 `data/phase-a/`，历史说明移入 `docs/history/` 和 `reports/archive/`。目录入口见 [docs/REPOSITORY.md](docs/REPOSITORY.md)。
+
+**对局只在开发机运行、存储。** 远端只上传代码、必要测试/配置、审查文档和汇总；不上传回放、逐局表、结果库或逐局索引。之前已上传的明细已从最新树撤下，但旧Git历史仍在，本轮不改写历史或强推。
+
 ## WSL 开发与交接
 
 主工作区已迁移到 WSL 的 `~/projects/AgentEvalLab-HumanRaceWar`，Windows 原目录仅保留备份。Python 3.13.15、GCC 11.4、bwrap 0.6.1 和 pi 1.5.0 已就绪（pi 版本按最终复核结果记录）。启动方式、登录步骤、验证记录与交接提示词见 [docs/WSL_HANDOFF.md](docs/WSL_HANDOFF.md)。
@@ -20,7 +26,7 @@ cd ~/projects/AgentEvalLab-HumanRaceWar
 .venv/bin/python tools/run_tests.py
 ```
 
-原 86 项引擎测试与迁移记录保留在 `data/python313-tests.json`、`data/wsl-setup.json` 和 `logs/python313-*.log`。新增运行器验证见 `data/runtime-tests.json`；用法与验证边界见 [docs/RUNTIME.md](docs/RUNTIME.md)。旧的 Python 3.10 开发记录与 Windows 转发工具 `tools/test_in_wsl.py` 保留为历史，不再作为主工作区入口。
+原86项引擎测试、迁移及早期运行器验证汇总位于 `data/phase-a/history/`，完整旧日志在本机归档；用法与验证边界见 [docs/RUNTIME.md](docs/RUNTIME.md)。旧的 Python 3.10 开发记录与 Windows 转发工具 `tools/test_in_wsl.py` 保留为历史，不再作为主工作区入口。
 
 打通开发用首局：
 
@@ -29,7 +35,7 @@ cd ~/projects/AgentEvalLab-HumanRaceWar
 .venv/bin/python -m arena replay verify <命令输出的回放路径>
 ```
 
-此地图只是测试 fixture，不计入正式地图或平衡验收。也可改用 `maps/scrimmage/open-01.map`；公开地图集、生成器与检查命令见 [maps/README.md](maps/README.md)。最新两轮全套测试各198项通过，见 `data/phase-a-final-tests.json`；首轮失败、旧平台及地图批次证据均保留。负载曲线、逐核差异和折算边界见 [docs/TIMING.md](docs/TIMING.md)、`data/timing.json`。
+此地图只是测试 fixture，不计入正式地图或平衡验收。也可改用 `maps/scrimmage/open-01.map`；公开地图集、生成器与检查命令见 [maps/README.md](maps/README.md)。交审前两轮全套测试各198项通过，见 `data/phase-a/acceptance/tests.json`；本轮目录/发布检查见 `data/phase-a/acceptance/publication.json`。首轮失败、旧平台及地图证据均保留。负载曲线、逐核差异和折算边界见 [docs/TIMING.md](docs/TIMING.md)、`data/timing.json`。
 
 规则见 [rules/rules.md](rules/rules.md)，测试覆盖与未验证范围见 [tests/COVERAGE.md](tests/COVERAGE.md)，暂定细节见 [docs/IMPLEMENTATION_NOTES.md](docs/IMPLEMENTATION_NOTES.md)。
 
@@ -42,7 +48,7 @@ cd ~/projects/AgentEvalLab-HumanRaceWar
 | `rules/` | 给被测模型的规则全文；规则和参数的改动记录 | 构建者 |
 | `STATUS.md` | 当前状态，构建期间每天更新 | 构建者 |
 | `reports/` | 阶段报告 | 构建者 |
-| `data/`、`logs/`、`replays/` | 审查用的数据、日志和少量回放 | 构建者 |
+| `data/`、`logs/` | 审查汇总与必要诊断，不含逐局数据 | 构建者 |
 | `inbox/` | 审查意见 | 评测负责人写，用户放入 |
 | `arena/`、`sdk/`、`bots/`、`maps/`、`ladder/`、`package/`、`tests/` | 代码和公开材料，A 阶段起创建 | 构建者 |
 | `private/` | 隐藏内容，不入库 | 构建者 |
@@ -54,7 +60,7 @@ cd ~/projects/AgentEvalLab-HumanRaceWar
 git config core.hooksPath .githooks
 ```
 
-这一步启用提交前检查，会拦住隐藏内容、大文件和看起来像凭据的文件。
+这一步启用提交前检查，会拦住隐藏内容、大文件、疑似凭据及已知逐局数据格式；需要项目Python3.13解释器。
 
 ## 审查流程
 

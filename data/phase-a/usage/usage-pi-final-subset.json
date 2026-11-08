@@ -1,0 +1,34 @@
+{
+  "scope": "available local pi sessions with matching project cwd; all branches, deduplicated copied entries; no transcript/config/auth exported",
+  "sessionFiles": 2,
+  "usageEntriesByKind": {
+    "assistant": 440,
+    "compaction": 3
+  },
+  "zeroUsageEntries": 6,
+  "entriesMissingUsage": 0,
+  "unavailableSessionFiles": 0,
+  "unreadableEntries": 0,
+  "inconsistentTotals": 0,
+  "reportedTokens": {
+    "input": 936724,
+    "output": 420223,
+    "cacheRead": 69545728,
+    "cacheWrite": 0,
+    "reasoning": 267011,
+    "totalTokens": 70902675
+  },
+  "completePhaseTotal": null,
+  "measuredAt": "2026-11-08T05:48:31.483568+00:00",
+  "limits": "API-reported counts only; reasoning is already included in output. Cached input includes repeated contexts, not unique generated tokens or subscription billing. Missing Windows/other sessions and unreported calls cannot be recovered. Current inventory is incomplete relative to the previous snapshot; do not add overlapping totals.",
+  "measurementTiming": "Snapshot during final Phase-A delivery; later calls excluded. Zero/missing reported usage is not proof of zero consumption.",
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/usage-pi-final-subset.json",
+    "originalSha256": "a267db039dad60b16fc7c84e01b5b4ae043d3a54b0597b19f85416aa8000f652",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

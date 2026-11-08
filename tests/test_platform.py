@@ -21,6 +21,7 @@ from arena.games.outpost.metrics import Metrics
 from arena.games.outpost.replay import verify
 from arena.tournament import run_tournament
 from tests.helpers import fresh, settle
+from tests.synthetic_replay import legacy_replay
 from tools.test_outer_plain import run as outer_plain
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -155,7 +156,7 @@ class PlatformTests(unittest.TestCase):
             for pid in row.get('sandboxPids',[]): self.assertFalse(Path(f'/proc/{pid}').exists())
 
     def test_legacy_replay_still_verifies(self):
-        self.assertTrue(verify(ROOT/'replays/runtime-smoke.hrw.jsonl.gz')['verified'])
+        self.assertTrue(verify(legacy_replay(self.root/'legacy.hrw.jsonl.gz'))['verified'])
 
     def test_batch_two_slots_swapped_seeds_resume_skip_and_manifest_guard(self):
         out=self.root/'batch'

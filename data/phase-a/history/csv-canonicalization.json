@@ -1,0 +1,374 @@
+{
+  "scope": "Canonical LF bytes agree with Git text policy; CSV cells unchanged; original generated CRLF bytes retained locally",
+  "files": [
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p1-worker-survival/games-corridor.csv",
+      "originalSha256": "9ba83eb93712bb4c7b62c95a4db0f32aa653b530154a75ddbe958af9230ed8de",
+      "canonicalSha256": "9cf7dba8fff10ba1f14ee6e4a8c93c4ede95e6e442e9369d7b47023f27d4a107",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p1-worker-survival/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p1-worker-survival/games-island.csv",
+      "originalSha256": "501722e9cc1451b49d371156119d19280111d6bf49d14040a62c596d341cc2d9",
+      "canonicalSha256": "d35a2987a3448a13280636670e7ad23f2f9967291ef215e2ad817c33f69a7f9d",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p1-worker-survival/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p1-worker-survival/games-maze.csv",
+      "originalSha256": "356408f82d5eb3e3787a70275c4ef825eba5a879a59e6bfd83c9464afcafe208",
+      "canonicalSha256": "2da3caac60cc2791551ff001bf0f02a2643223ac25a4d6d18ad0aef78a4e0a4a",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p1-worker-survival/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p1-worker-survival/games-open.csv",
+      "originalSha256": "8252bcaf2b93314a81cc70c6b6f7802b8091433246fd116f983d82bc03971a69",
+      "canonicalSha256": "959f50f4d5618eee2c5070ddca6aff52217ecdc1a87b23681aac2ced59ccb421",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p1-worker-survival/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p2-slower-mining/games-corridor.csv",
+      "originalSha256": "855b108751407047e92191c789a08f3afbd835e41e6887e632114a2224dcf590",
+      "canonicalSha256": "98f915e49fb81bac60fc36e6e1674366b22075c34b702de7d2676a51e9ca0f33",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p2-slower-mining/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p2-slower-mining/games-island.csv",
+      "originalSha256": "91bdcc9f3a29d951731c86bfd23b5e82d14f530ed2a22d3324ffbc6ce1bccf6c",
+      "canonicalSha256": "8617dff8cf42265c88e7c6fec5250afd1ce2a010d704092642a56dbd42a1699f",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p2-slower-mining/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p2-slower-mining/games-maze.csv",
+      "originalSha256": "957a9d6f6323f389b134f73c761221a6fac3558f9575434294356bc5f71223fc",
+      "canonicalSha256": "c3e89dde3020fbf8fb0d0fcf4e79a6d35ccad3e12164192865e9dabb9fe36d8c",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p2-slower-mining/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p2-slower-mining/games-open.csv",
+      "originalSha256": "e366b6b107c3fa30398d8a0f0ae2568deb1e700291e088667ff4ba8abba275d5",
+      "canonicalSha256": "a8de65d3be0f454a09f0d6df7fb242d6375199ab00a0488e984b322e4ce2adc0",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p2-slower-mining/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p3-soldier-cost/games-corridor.csv",
+      "originalSha256": "45cc4b20ca099501399c73070ee05f1867cd50f959ad432c76e10b1e9f9ec9b5",
+      "canonicalSha256": "c9ecb2b3190bb25053d2a160bce348a28c3f6d4196f3b0db149abb83b28f3abb",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p3-soldier-cost/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p3-soldier-cost/games-island.csv",
+      "originalSha256": "d1c37ecb1776d7f92957b9707cba5742771d7ccd13e90fdb2656b1c30fb457ef",
+      "canonicalSha256": "25881fdfdca1512aa9fc272b85cbbb08bd849b86c72699f1386671832f9db451",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p3-soldier-cost/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p3-soldier-cost/games-maze.csv",
+      "originalSha256": "5bd003f99aee17049cc1d5091b0d47536c6f336a155cc5e2f62915e6892c9027",
+      "canonicalSha256": "8fb459f89698ae20d82c169b6b82dcaf671c8c70d33f8e1a045ed88a2b5dcf93",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p3-soldier-cost/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p3-soldier-cost/games-open.csv",
+      "originalSha256": "441b1ec55310c15ec8f4a77ae477ea0ffd402c5f7ca313a5daf039a5e3831e2c",
+      "canonicalSha256": "95ff1a3baa11ac94231965409a584edecf6165e5334f02eb5f79ee4139e88227",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p3-soldier-cost/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p4-opening/games-corridor.csv",
+      "originalSha256": "7ec7f3e70a6f263c93103c863d7da95794bbf9ebd12b5b342a3c40aef0374823",
+      "canonicalSha256": "7552afe181c98f60fe4daeb72c264d3a1d95a21f785b78d9e006ce27d0332b31",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p4-opening/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p4-opening/games-island.csv",
+      "originalSha256": "97cd388dd0cb0584f67fda7e150278332dfc6c141c1ab34cb24dc38d8b0e1ef3",
+      "canonicalSha256": "074247bb24088c8f159c4e423560794723de8735a0e941a914500e50a4b967ba",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p4-opening/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p4-opening/games-maze.csv",
+      "originalSha256": "79801645b20b216a5a537e7834f7474d08d85c849f16f7e0d05b79bf12b6eb21",
+      "canonicalSha256": "77ad56cb0b720d9afb946b927b5f8bf2db099e2b8df64284949acbdff1b2135e",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p4-opening/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p4-opening/games-open.csv",
+      "originalSha256": "1f89597a31d109f60dbab284642c82963beb28235b73f63c7aa15584b2f7679c",
+      "canonicalSha256": "e90cb36ab5049a7d268fd2d8d2f6dd857eab0a2c20bf94a41e0a538023dd5e4b",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p4-opening/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p5-siege/games-corridor.csv",
+      "originalSha256": "e76ff6ebee65c9f3b5fdb4069ea7b391e2b1c611539e941c3f39af2d81a6145d",
+      "canonicalSha256": "e0fb0026cd79886915a4ec72c8d65219d78e658984cf437391eb7a0f1ee630c5",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p5-siege/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p5-siege/games-island.csv",
+      "originalSha256": "9f2e00ee9db33242db6caa71b565012e022dd0e595d208981185e495297c1243",
+      "canonicalSha256": "6b12bfc22e3516e621e867240da03a790c08d25620b88948632aa044ac4cc603",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p5-siege/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p5-siege/games-maze.csv",
+      "originalSha256": "9138d9c1294db36ac3394f5e868651b3defbbe6887709d8a4c345430b9658e94",
+      "canonicalSha256": "0b3bbae7804dc40509e7e690ac5bcf88be6c34fbecf7b9d936575ffa37232cc8",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p5-siege/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p5-siege/games-open.csv",
+      "originalSha256": "c58f7ae55927bf16a5b51cd90f439037d8c603142b3d20d2aa3ee1ddd9a2d73d",
+      "canonicalSha256": "8dcd777954407aa277d12ced6f80e40e5ff22ac47b5bcb0c6fc5a972980f031c",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p5-siege/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p6-worker-cost/games-corridor.csv",
+      "originalSha256": "3baf0d4a3cc677882d05051406c5435282caccd022870b525a76383c2d9ee78c",
+      "canonicalSha256": "ba357237889a613476cd48567fb3e162d7b3a2652e414c2d034ec5d93de43fad",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p6-worker-cost/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p6-worker-cost/games-island.csv",
+      "originalSha256": "01855f216d9b4cc7676747865be4a230783cda9b25f33af03facd094aba7d87d",
+      "canonicalSha256": "f73ae8d001ec69cf293ecd4ad116ace3996d6ea1d2f467d4195cec2512fed314",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p6-worker-cost/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p6-worker-cost/games-maze.csv",
+      "originalSha256": "4755bc049aa1d4bb047ac703e8c7b9d8f9fa6e349b20f84a1da7477889d20e30",
+      "canonicalSha256": "c7d28eac94f03cab70c45ecfb35e165ecf65f37e3d95a52ba6d84c1d73bb0779",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p6-worker-cost/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p6-worker-cost/games-open.csv",
+      "originalSha256": "359bb600d9342b9319c07829fea1087a5a700e5be5d8e60f0b28a5ae1abe90b5",
+      "canonicalSha256": "710d3cdf7fd4d9db9ca2fb36a6a8fd27cc4cad99a80771c878bc6ba6fe1376a1",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p6-worker-cost/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p7-start-workers/games-corridor.csv",
+      "originalSha256": "cfa9730d4a27e1db794868bb85c9af7cc85ee634019cfb8217c5ec290060c4f3",
+      "canonicalSha256": "0b19f72a3c6a0b017ac8483dbcc692a8a87325a932103bf0a47c8d7745b2f171",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p7-start-workers/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p7-start-workers/games-island.csv",
+      "originalSha256": "78c6574244a8c32d163eb1289a63b0806a111415f47383b34efa2cb6571e4ccf",
+      "canonicalSha256": "26d7c73c4431a3cb18e270d5eded02c47f8179ad1de7c9c71e5ac309021e3795",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p7-start-workers/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p7-start-workers/games-maze.csv",
+      "originalSha256": "52ab0ce0e6d62188270d2a821eb7459ccc89f906ccea46683c38321b729c69d6",
+      "canonicalSha256": "723cc1aafecb7d4a117d72753072c5e6b89bd9969148b11d8e06371a97aa77a3",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p7-start-workers/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-p7-start-workers/games-open.csv",
+      "originalSha256": "d2cf0ca37d5f74adff78bd03b834a812152b1b6f2629a9a8b1e2d2e82134fbd5",
+      "canonicalSha256": "174f65fa4af36c855f59ef7e8f9535f3d315e0f68bc448f3b62f33eeb5fe37ff",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-p7-start-workers/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-standard-1-final/games-corridor.csv",
+      "originalSha256": "49b760d4c687ddd4d458fb6c10f7a9d3ef71b4ace685969315c5394054a39692",
+      "canonicalSha256": "499fe5e7979a045efff4ed88bf89d2cac904050c0e5b68261f86557a6a281712",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-standard-1-final/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-standard-1-final/games-island.csv",
+      "originalSha256": "76617dfa5d21e9ce0b3f84df098860a39f6ac748174d2dfe361395a7428fbd2f",
+      "canonicalSha256": "a8116238a8da33ef422eae6de6286071b407db67590a090a34663f44d9ab7fc8",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-standard-1-final/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-standard-1-final/games-maze.csv",
+      "originalSha256": "5b362f6795e5e5eace98b5b6c726ada332cc6ea5bd533a33007f020af92011f1",
+      "canonicalSha256": "e5c2d8602dba17416e1d690c761056cbcc25980c3f4219012853eb2cfdac622e",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-standard-1-final/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-standard-1-final/games-open.csv",
+      "originalSha256": "6e0c96bdf9be5a772794bebd5793774d3e6652e39e2eda0cb964dd23c21db169",
+      "canonicalSha256": "9ec7b3f127a7111ff0228caf9f1c7ee63508923ba322a49cbdb86e916b6459ee",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-standard-1-final/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v10-p7-public/games-corridor.csv",
+      "originalSha256": "beb8e7125266650c6cfadd19802ea4a981cb75ae0c0fef8c4027900fdef416b3",
+      "canonicalSha256": "5dff8a064101215880b3e677ae0f8e4540598b46f12f6635ad9d65f7395e7cb8",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v10-p7-public/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v10-p7-public/games-island.csv",
+      "originalSha256": "fe1dce3f71a959510e891284b75035e3900cbcfd244b57fca49e0bd17e3ab8aa",
+      "canonicalSha256": "4bf01dfeaa00bce92fbdbfca3ed39897d39a2f3885798931d92c23bb531c3318",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v10-p7-public/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v10-p7-public/games-maze.csv",
+      "originalSha256": "919f3f2d9eccb38268d1765d2b64ee25d4c006a97a7ca5ee84d4c0649d226c70",
+      "canonicalSha256": "db969891722dfd9eab8467e1d43f285d31ce9859315f5e759744e2e8cc25a8e5",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v10-p7-public/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v10-p7-public/games-open.csv",
+      "originalSha256": "8319e7e061c4a040c54397226d4511e629ff071b2d35df2d01142666af753dfd",
+      "canonicalSha256": "8a5740f5e1ae0e2023945b655f0bf80db71121990be2f466de5087f0a5838f1e",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v10-p7-public/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v12-p7-public/games-corridor.csv",
+      "originalSha256": "7792e55db7ac9e459f78037ccd2c1dd4eaede3c6d52321cc8a6a92e8e3f5b77f",
+      "canonicalSha256": "dfedca4ccd5b6d5273d3ddd244c888d5efc2f6f8a7db138f7b6cc99f0243620e",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v12-p7-public/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v12-p7-public/games-island.csv",
+      "originalSha256": "8172a2a99ebc86d7f91b01aec41d20a2abd66c88fd888bbc1c8400c1f70c0c79",
+      "canonicalSha256": "c50f7c47cdf8fbf87dd5cdd53bbad9a524632e3eb3d63d5099e390d68ad690cd",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v12-p7-public/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v12-p7-public/games-maze.csv",
+      "originalSha256": "b6af1df13f611c2c1095fc38d748a4ae415397a2fbbdb4af0223c4e6ea170605",
+      "canonicalSha256": "80b988d33e0dec97705fdab8f5b5cb916e1ee7bcff2125c871b1229549654ad5",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v12-p7-public/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v12-p7-public/games-open.csv",
+      "originalSha256": "4e6da89086eae23e81a0ecb3fe9a36755a04a107aacabe2455bdd3b10b18b2fb",
+      "canonicalSha256": "236a61dc6a4e1af66ed6d0eca487f4c98dc039cb466b7aad0d82b5f2954c9b7f",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v12-p7-public/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v14-p7-public/games-corridor.csv",
+      "originalSha256": "6c3bee7acd67b14e4a45d7eab145944042caa95253dbbdc174882cbb182c199b",
+      "canonicalSha256": "8c3d13c497de602a9473d30ec6629c39203725ac1b2043950fee1219eeeb697b",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v14-p7-public/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v14-p7-public/games-island.csv",
+      "originalSha256": "24f41ccc9c9a98fff2e6826b3caea4d334fe1cadd7bae84f7acedf40c1a2fbfe",
+      "canonicalSha256": "09414ff7f7e59d6aba138d937f1d6b882597e51e051b5fb180d54c591135b2ec",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v14-p7-public/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v14-p7-public/games-maze.csv",
+      "originalSha256": "ab4b1049336ab1f9f80bcd3be8329a367bc2505409ffafe0dac67892a3a7e701",
+      "canonicalSha256": "1c17b7664aef3381f661bf015e2926f4d7cf2940ec08e315c5f85b8c359dc353",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v14-p7-public/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v14-p7-public/games-open.csv",
+      "originalSha256": "e4b25d88284f29de11db7e2949391cee4e262dc4ad6e1c72d81ccc5fc13e6d5d",
+      "canonicalSha256": "f8f803eea35c51d53042d88ffe18770529403b9864ae198f339342f39c55224b",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v14-p7-public/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v15-p7-public/games-corridor.csv",
+      "originalSha256": "3ca78fff1683fa0fd5c4ac2118e63efe504de14127668d3d9c5f8314b5c55261",
+      "canonicalSha256": "3eb82f379220ea3663f3743f841faa0e29d7b5c900ec3b7dc21eb0881fefa1b4",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v15-p7-public/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v15-p7-public/games-island.csv",
+      "originalSha256": "dff48ca6a3d70e4481aee595924c858e0038560f86c6c0b9fff9cee58f8a0188",
+      "canonicalSha256": "32a7643efee351b0bd8c2ba4d84fabbed96977579add7582610a85bc331fcf90",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v15-p7-public/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v15-p7-public/games-maze.csv",
+      "originalSha256": "9d20a1be25d4913862c2c76740aea87456c5b382c86af8683735edcef03104dc",
+      "canonicalSha256": "046a5172f2997f1d3789f08a21cfa9a7c50391bd9d074b2969f9143562fd7ea6",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v15-p7-public/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v15-p7-public/games-open.csv",
+      "originalSha256": "a05a5982d4d69877b72421ca809fc952b98c74d64ee7ed80f7651e367a60f443",
+      "canonicalSha256": "79b92e2662e453f30c9ad2e0f5f5fb486135319db297df542b63f8d4f89c174f",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v15-p7-public/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v7-p7-public/games-corridor.csv",
+      "originalSha256": "4114ada7dbdf228e816749924ab42e89dd89acbf204d202fb00aa8a508562dc8",
+      "canonicalSha256": "f25f091504dafc53da3914effe7ca171131dc8c1de5617af1831fd643c57be19",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v7-p7-public/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v7-p7-public/games-island.csv",
+      "originalSha256": "884c7d79562b2c5aed2591a8ec5480fb2623f3e5bf7636aff630627c1364f25c",
+      "canonicalSha256": "ae56422dad90b6ec858697d21d91aa9570ef35746dea06723c6972de518c3d86",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v7-p7-public/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v7-p7-public/games-maze.csv",
+      "originalSha256": "6c532dccd272af2e52e3508b5bd0d2849aaf1a6df374498476fd0bdae68bff64",
+      "canonicalSha256": "b950e3d1d073e898dc6393c34e846a36f1f3be58905995ff1daf91bb2daced57",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v7-p7-public/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v7-p7-public/games-open.csv",
+      "originalSha256": "16d85b14965322cb297bbccefea423f4c8b87b67f689bf1e446e37acaa351190",
+      "canonicalSha256": "0951aeeb4c59d6ea2ea052641c65b4fa1aec1bb4279045f2fd4e44c37cb567b9",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v7-p7-public/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v8-p7-public/games-corridor.csv",
+      "originalSha256": "710d29954565421986e8604b233c6a6ace5c7b0dfbbb0a95acdb93bbf4a87155",
+      "canonicalSha256": "cec45ed620731b55f285f5c25830d53e124cef410da051a7fd4e6eb9779daeb3",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v8-p7-public/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v8-p7-public/games-island.csv",
+      "originalSha256": "bbc6a6f26689574f6ce726bc5ca82145c44c86060d8418ba458ceffa3c432ef0",
+      "canonicalSha256": "eaa3df6a876c0eabf3a43bbea265b1e82099e748b233c27f44c31fd3058017d9",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v8-p7-public/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v8-p7-public/games-maze.csv",
+      "originalSha256": "11dd46291aed67e480609ec722ad7bc7dfdb04295288ae13e6235b2175b4dfc6",
+      "canonicalSha256": "2d161aa48f5d356515ea712e610138751ebe5a43c08a7420504e441095a9f4c2",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v8-p7-public/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v8-p7-public/games-open.csv",
+      "originalSha256": "1ef2e57649855334de9d4ba24edcfd65e19c1bb3d7fe45705ea4d9216df10233",
+      "canonicalSha256": "67ae1a6199cb880b1d77a126d3e952c735d1116f6a5a6a55b4ee32e9649e473f",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v8-p7-public/games-open.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v9-p7-public/games-corridor.csv",
+      "originalSha256": "4af565f7d1546c564a985374479aa344881bf5d44e27577f5fc0d4be328f14f1",
+      "canonicalSha256": "1121786d7d78137e3bd19c3fc196b96b4b295cb0c21e52f1fb155d3e5d4107a8",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v9-p7-public/games-corridor.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v9-p7-public/games-island.csv",
+      "originalSha256": "3f71e5dc91c60c4089bbe8c63137f9d31da525fe94188cc33b0bfa561c1500fb",
+      "canonicalSha256": "dc2466e3c866c42f040210843e8159262ee38b100c66d39e1f1c6a376237be8e",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v9-p7-public/games-island.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v9-p7-public/games-maze.csv",
+      "originalSha256": "021b32d7e9f8b618c1236f6e9625f883200c425ef8d7fd42dbecf16fefd046f2",
+      "canonicalSha256": "4129a61c5986661108532a780fcd375080ef2185404ec07f3c3b128b9dbd4201",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v9-p7-public/games-maze.csv"
+    },
+    {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v9-p7-public/games-open.csv",
+      "originalSha256": "6d341bc0f1bc40a98e8b55821f9b5208f704c927500ca9588d3d53524a7f5bec",
+      "canonicalSha256": "eaf7444abc87a077bed59df378e69d2ba0b361e16ebf84e75adce0d69a37e9e8",
+      "originalCopy": "runs/development/phase-a-final-2026-11-08/csv-originals/data/zoo-v9-p7-public/games-open.csv"
+    }
+  ],
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/csv-canonicalization.json",
+    "originalSha256": "c6ee6ed4aba74dd2f88fb92a17c36d5200cc949ca3ad44f8b0be91b2fb26b344",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

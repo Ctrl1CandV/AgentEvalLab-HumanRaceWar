@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "scope": "Publication footprint and directory cleanup only; no new acceptance matches, no Phase B.",
+  "generatedAtUTC": "2026-11-08T07:35:56.119922+00:00",
+  "previousPublishedSnapshot": "509f1f8060dfaac2ef4319f09fbec0ad9bacce18",
+  "localFullArchive": "runs/local-evidence/509f1f8-before-summary-only",
+  "localArchiveManifestSha256": "b4203dd84a68ed8fb4aacb2964351347466987bc4175a039ff93509cd57de3a8",
+  "preservation": {
+    "archivedOriginalsVerified": 555,
+    "matrixAggregatesUnchanged": 21,
+    "rawFilesArchived": 367,
+    "oldLogsArchived": 100,
+    "reviewArtifactsMoved": 80,
+    "catalogReviewArtifacts": 69
+  },
+  "directoryLayout": "docs/REPOSITORY.md",
+  "fileCatalog": "data/phase-a/catalog.json",
+  "previousDataAndReplayBytes": 164678407,
+  "currentDataAndReplayBytesExcludingThisReport": 5013215,
+  "sizesNote": "Working delivery files, not Git history, database size, unique disk usage or transferred pack size.",
+  "gameCodeAndInputsChanged": false,
+  "engineSdkFingerprintUnchanged": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414",
+  "newAcceptanceGames": 0,
+  "cleanCheckout": {
+    "scope": "Staged-tree export, with no real replay files or local full-evidence archive. Synthetic engine fixtures only; no bot/compiler/matrix execution.",
+    "checkout": "runs/development/publication-policy-2026-11-08/checkout-2ab23555da6c4cb89d524e182f7ebc91",
+    "realReplayFilesBeforeTests": 0,
+    "full198TestSuitesRerun": false,
+    "newAcceptanceGames": 0
+  },
+  "unitRuns": [
+    {
+      "testsRun": 79,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "processCpuSeconds": 0.32771,
+      "wallSeconds": 0.393331011000555,
+      "hashSeed": "0"
+    },
+    {
+      "testsRun": 79,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "processCpuSeconds": 0.3219533,
+      "wallSeconds": 0.3852211110006465,
+      "hashSeed": "1"
+    }
+  ],
+  "testLog": "logs/phase-a/publication.log",
+  "testLogSha256": "820934be2bb4d86b304399ed54f1a535f668958313bc2e3e014fb52d7409f8ab",
+  "validatedSourceSha256": {
+    "tools/publication.py": "1ef16ed4d81f6e825ec1392de27e3860205083640c312945d9759e17a803e152",
+    "tests/synthetic_replay.py": "504453569d1564ce24350626d79f67a5aeea04f0ecff2ec1b78fe9b49221315e",
+    "tests/test_publication.py": "e9fd48c5b2d2468dae9c2914f488ceb19aeb355b4f26c7f1bbf7cde2b33c0a53",
+    "tests/test_opening_analysis.py": "f3c2df585c6cd55815ed8394014d7fb0a35d93c88c4cb71e922be11bd0f82bc1",
+    "tests/test_platform.py": "e7fb7ad2b725ba2e3efba50d0795983a0cf2b8a7470c16d1a4846a4196823b43",
+    "tests/test_rules.py": "64668bbf94b20dcae147f982fcc98d1aba53d610f1907a46204dceddb35c3dce",
+    "tests/helpers.py": "4a0fb71cbab4b77eb0049fd0c291a8c8571f96f65b2c2bd8e449b85a0e23c674"
+  },
+  "lsp": {
+    "server": "pyright",
+    "files": 7,
+    "initialDiagnostics": 9,
+    "finalDiagnostics": 0,
+    "fix": "Explicit type narrowing in publication unit test; no ignore/suppression."
+  },
+  "publicationGuard": {
+    "stagedBytesChecked": true,
+    "embeddedAttemptInOldFailureLogRejectedBeforeFix": true,
+    "embeddedAttemptRowsRemovedFromReviewLog": 1,
+    "fullOriginalFailureLog": "runs/local-evidence/509f1f8-before-summary-only/logs/phase-a-final-full-seed0-first.log",
+    "knownSchemasOnly": true
+  },
+  "limits": [
+    "Previous 198-test full suites and 61789 replay audit are historical, not rerun by this packaging task.",
+    "Only synthetic replay fixtures were generated for unit tests; they are not experimental games.",
+    "Existing raw runs, all failed evidence and original archived bytes remain on this host.",
+    "Previously pushed data remains in old Git history. No history rewrite or force push.",
+    "Previous token/phase CPU snapshots exclude this cleanup; no complete total is claimed."
+  ]
+}

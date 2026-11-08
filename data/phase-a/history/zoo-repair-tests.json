@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "scope": "three isolated strategy fixes; all failures and pilot revisions retained; not D6 acceptance",
+  "baselineCommit": "c7b26e1",
+  "tests": [
+    {
+      "path": "runs/development/zoo-v3-repair/baseline.json",
+      "sha256": "d938274c59edd611b7c4f45ccf4d163291475de89c91cbbda680cf040018774c",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/zoo-repair-baseline.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 160,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 34.8025652,
+      "measuredTestWallSeconds": 88.450740783,
+      "measuredReapedChildrenCpuSeconds": 4.478592
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/budget-after.json",
+      "sha256": "b7dbfe7ad75627a544dff697af779b57cc439a26c6be4c9ddc1ac77368e1bf10",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/zoo-repair-budget-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0104341,
+      "measuredTestWallSeconds": 1.898023795,
+      "measuredReapedChildrenCpuSeconds": 0.0051849999999999995
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/budget-before.json",
+      "sha256": "6d1a8051ef26561a525db02853d60a273939c3b73d041720b2f58fc5b5d81fc6",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/zoo-repair-budget-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 2,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0095651,
+      "measuredTestWallSeconds": 1.693942198,
+      "measuredReapedChildrenCpuSeconds": 0.004951
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/contention-after.json",
+      "sha256": "ae13179824da1699fadd0d6b71aba21ccb5cb83105a90edfd25e0cfb048c7f8d",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/zoo-repair-contention-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0165637,
+      "measuredTestWallSeconds": 1.819953296,
+      "measuredReapedChildrenCpuSeconds": 0.009007
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/contention-before.json",
+      "sha256": "fd58a2801147f9e06ba97c4a5096183aef9e8012a49944c0e5cc6edb1641383d",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/zoo-repair-contention-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 4,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0166345,
+      "measuredTestWallSeconds": 1.818956599,
+      "measuredReapedChildrenCpuSeconds": 0.008749999999999999
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/full-after.json",
+      "sha256": "3bef6e0e25875de07d0da02de8273b7bd5bcf0194fbdc74dc3744d1bf8add40c",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/zoo-repair-full-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 164,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 35.3089134,
+      "measuredTestWallSeconds": 90.425986097,
+      "measuredReapedChildrenCpuSeconds": 4.407203
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/traffic-after.json",
+      "sha256": "d40c6ff4811a29ddf7338051d170a28f75d47ecf3431704d6d901c1d4d280ac8",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/zoo-repair-traffic-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0128354,
+      "measuredTestWallSeconds": 1.960343397,
+      "measuredReapedChildrenCpuSeconds": 0.007199
+    },
+    {
+      "path": "runs/development/zoo-v3-repair/traffic-before.json",
+      "sha256": "9a0c05564d794ec900b6b7595519b0f0ac9958e4ef075b40c6ff138002e95b84",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/zoo-repair-traffic-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 3,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0126635,
+      "measuredTestWallSeconds": 1.805954697,
+      "measuredReapedChildrenCpuSeconds": 0.007092
+    }
+  ],
+  "probes": [
+    {
+      "path": "runs/development/zoo-strategy-tests/344fcc6c88c643dba86b154a4483e176/emergency-budget.json",
+      "sha256": "4d9ff579bc2b221f9754c796afef7dbc86f1a8eb005d5ef97aa0221cb6eeb99a"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/344fcc6c88c643dba86b154a4483e176/occupied-base-ports.json",
+      "sha256": "858908d079f84c51913c94348ac2e61ddd46c53be1f909a98c7811546f114dad"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/344fcc6c88c643dba86b154a4483e176/remote-budget.json",
+      "sha256": "272698c5c289c1cb33a3a51550cce0b8ea5f545f267acabfd9c0bbf96303b169"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/451ff283b2f14368bbc3a32d057dafad/contested-center.json",
+      "sha256": "784a1f9adcd8144e277e5b4a3338d0d7b3cbe5db3c48b44a7dc22f6b1fa161ca"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/451ff283b2f14368bbc3a32d057dafad/emergency-budget.json",
+      "sha256": "15a72e8b54741d5e013df3711bd8882d12011ecf01d5d1e5a77313decbc1c7f6"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/451ff283b2f14368bbc3a32d057dafad/occupied-base-ports.json",
+      "sha256": "bd566ae804aadb48c924f4fe73ee9c1cd42f019cdbf1b8f942264e1e350811b1"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/451ff283b2f14368bbc3a32d057dafad/remote-budget.json",
+      "sha256": "404f792cabcda160bc7f1b6b56498f417726fdca19a8d5c8299e4ef3f8c54b58"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/67417617f5ce463f813213bd67a34c49/contested-center.json",
+      "sha256": "76c5ebd45a4ad6c6b670a9013a00cd0d2dc453bf4a4dc63026b0172efca78382"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/67417617f5ce463f813213bd67a34c49/emergency-budget.json",
+      "sha256": "b6344d61dde9c5e4a5ca61095fab1ae0c03a711eac39b81b7f1409b489b3067d"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/67417617f5ce463f813213bd67a34c49/occupied-base-ports.json",
+      "sha256": "e4a5c95fcd8a56e510d78dc70a2bf2051c52e68a81a34befda3e76a796b168e4"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/67417617f5ce463f813213bd67a34c49/remote-budget.json",
+      "sha256": "a6c6c216c04a20e4e90481b23dd8134035aac239ec4ca123199819ad381ce51c"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/9696bdc1edbe4397adc4f4099ed7c1e3/contested-center.json",
+      "sha256": "8b6b1f505040972e5893991bae50be4d9994de8ea799228234a7314f3870e472"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/9696bdc1edbe4397adc4f4099ed7c1e3/emergency-budget.json",
+      "sha256": "9253915aa931545ee6d509e4dec7e77e27bbe566713255d9aacf1e40bb0d68c2"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/9696bdc1edbe4397adc4f4099ed7c1e3/occupied-base-ports.json",
+      "sha256": "181b0bd88518c73e6e19b570910317330fbfd6a65bd04a37283d954cd980c8b5"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/9696bdc1edbe4397adc4f4099ed7c1e3/remote-budget.json",
+      "sha256": "3d05d20bf23cda0188d20aa5518aadcd3cdb5025a71165379ae522aa8220dcf7"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/cf1231a3c55f4e898a7fbfb6323d0184/emergency-budget.json",
+      "sha256": "a16cdbcea612eb56a89de4f4635ae6ac02e8f39b25ab8d58e42d0d7f28aebccc"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/cf1231a3c55f4e898a7fbfb6323d0184/remote-budget.json",
+      "sha256": "25ea0b76b51ffa054ad07637bef8f849308debb225951465130bab25407718d9"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/cfa4bcb213b24fa5bb4b7618db0287fa/emergency-budget.json",
+      "sha256": "3b04e8b7b7f1b6551eb7123f97e36be9fe9ee18bb764361d5ce04ef66b7ca954"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/cfa4bcb213b24fa5bb4b7618db0287fa/remote-budget.json",
+      "sha256": "3b111628020d00b52cf0cc4d7b3a253961463a2b82519e5282dbbcbf047fd873"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/ffed1807e6e74b9e8df5f06bfcae933f/emergency-budget.json",
+      "sha256": "fc25caef8e8a15524f56e0864010e4254a05dcf3870ce02edfbe49f5eb67418b"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/ffed1807e6e74b9e8df5f06bfcae933f/occupied-base-ports.json",
+      "sha256": "9f8b66887f4620381348e67bc243fa97e0dca780705b21202954311e714d1c25"
+    },
+    {
+      "path": "runs/development/zoo-strategy-tests/ffed1807e6e74b9e8df5f06bfcae933f/remote-budget.json",
+      "sha256": "607b03e27590fbddd1ca209ef8a797a87d9a2dedadb9f99d1c4441f9e1188f26"
+    }
+  ],
+  "directedVerificationCpuSeconds": 0.9484799,
+  "pilotReports": [
+    "data/phase-a/matrices/zoo-v3-budget-pilot.json",
+    "data/phase-a/matrices/zoo-v4-traffic-pilot.json",
+    "data/phase-a/matrices/zoo-v5-yield-pilot.json"
+  ],
+  "totalCpuHours": null,
+  "rulesChanged": false,
+  "formalReferenceAvailable": false,
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-repair-tests.json",
+    "originalSha256": "507cfa656ea52fe1cc11e74506bbd59e46b92fb7ff098edd685ed8596824464a",
+    "omittedLocalSections": {
+      "directedGames": 14
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

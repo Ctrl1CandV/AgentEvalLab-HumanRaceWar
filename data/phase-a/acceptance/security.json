@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "scope": "Phase-A bounded validation under the compiler contract approved in inbox/2026-11-07-phase-a.md; not exhaustive hostile-code certification",
+  "passedApprovedContract": true,
+  "tests": "data/phase-a/acceptance/tests.json",
+  "runtimeAndCompileStress": "data/phase-a/history/security-stress.json",
+  "compilerContractRegression": "data/phase-a/regressions/review-balance-runtime.json",
+  "startupRaceRegression": "data/phase-a/acceptance/startup-race.json",
+  "compilerContract": {
+    "tasks": 16,
+    "perProcessAddressSpaceBytes": 2147483648,
+    "perProcessCpuSeconds": 60,
+    "wallSeconds": 60,
+    "perFileBytes": 67108864,
+    "serialization": "cooperating arena processes sharing UID and TMPDIR; queue time excluded from execution deadline",
+    "aggregateCgroupQuota": false
+  },
+  "latestCompileCleanupProbe": {
+    "path": "runs/development/security-acceptance-tests/a699793700f6489a8ebbd9f199a16bf1/compile-tree.json",
+    "sha256": "0b085e238579614e47c643ca3056790b1604dcf6e28bbc099b214c72476caa1b",
+    "policy": {
+      "ready": true,
+      "addressSpace": [
+        2147483648,
+        2147483648
+      ],
+      "tasks": [
+        16,
+        16
+      ],
+      "affinity": [
+        0
+      ]
+    },
+    "afterStop": {
+      "57477": null,
+      "57478": null,
+      "57479": null,
+      "57481": null,
+      "57480": null
+    }
+  },
+  "runtimeLimits": {
+    "addressSpaceBytes": 536870912,
+    "fileDescriptors": 64,
+    "tasks": 16,
+    "filesystem": "read-only runtime root/tmp/dev, no host HOME, no network route",
+    "cpu": "cumulative process clocks including exited threads; END boundaries; fail closed when live measurement unavailable"
+  },
+  "historicalEvidence": "data/phase-a/history/phase-a-security.json",
+  "limits": "The stress report is historical; final full regressions recheck resources/cleanup. No aggregate memory/disk hard quota, external compiler lock, other-UID guarantee or evaluation-host deployment claim.",
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/phase-a-security-final.json",
+    "originalSha256": "660bbe4004a9b4ad537c7061c9842ef3d746ed0448cf999ce2003379d67a4633",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

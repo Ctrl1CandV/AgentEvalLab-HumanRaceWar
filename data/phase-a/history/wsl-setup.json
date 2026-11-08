@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-06T17:09:49.472621+00:00",
+  "purpose": "Native WSL development handoff; not deployment to the evaluation machine",
+  "project": "~/projects/AgentEvalLab-HumanRaceWar",
+  "filesystem": "ext4",
+  "python": "3.13.15",
+  "systemPythonUnchanged": "Python 3.10.12",
+  "pythonInstallMethod": "Existing uv, user-local CPython standalone distribution",
+  "pythonRuntime": "~/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu",
+  "venv": ".venv (standard library only, created without pip)",
+  "uv": "uv 0.13.4 (x86_64-unknown-linux-gnu)",
+  "node": "v22.23.3",
+  "npm": "10.9.9",
+  "pi": "1.4.0",
+  "piPackage": "@earendil-works/pi-coding-agent@1.4.0",
+  "piInstallFlags": [
+    "--global",
+    "--prefix ~/.local",
+    "--ignore-scripts"
+  ],
+  "piPackageIntegrity": "sha512-Z41LpZ3yYHSC/UUps6Mr39UMFPwH8elhJBG9DY1P7kuzsE5qSK/6eMj2EHzO5evJRQWLbKSqUMw+4nCNtIyiQg==",
+  "piLauncher": "~/.local/bin/hrw-dev",
+  "piVersionAndHelpPassed": true,
+  "modelAuthentication": "Not read, migrated, configured or tested by this session",
+  "modelCalls": 0,
+  "botExecutions": 0,
+  "sandboxSmoke": {
+    "python": "isolated Python runtime and Linux process CPU clock: OK",
+    "cpp": "isolated C++20 compile and execution: OK",
+    "agentHomeAndProjectNotMounted": true
+  },
+  "sandboxAcceptance": "Not complete: resource enforcement, cross-namespace accounting and hostile bot cases pending",
+  "networkConfiguration": "Used existing login-shell proxy settings; no proxy, DNS or security changes",
+  "projectTrust": "ask; not auto-approved",
+  "migration": {
+    "destination": "~/projects/AgentEvalLab-HumanRaceWar",
+    "sourceHead": "d2f60c29bf3ffc9fae6fa1016aeca91618f992e6",
+    "trackedFilesVerified": 42,
+    "localFilesVerified": 1,
+    "gitHistoryVerified": true,
+    "preCommitExecutable": true,
+    "gitAuthorConfigured": true,
+    "originRestoredWithoutCredentials": true,
+    "sourceRetainedAsBackup": true,
+    "gitStateAtMigration": "clean"
+  },
+  "engineTests": "data/phase-a/history/python313-tests.json",
+  "environment": "data/phase-a/history/environment-wsl-python313.json",
+  "speedFactor": null,
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/wsl-setup.json",
+    "originalSha256": "47b8f7bc55ba0221d660bdcb142e76c173639d6fd86c379250507d070dcd53f1",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

@@ -2,6 +2,19 @@
 private/
 runs/
 
+# Review-only publication: full games and per-game indexes remain on this host.
+/replays/*
+!/replays/README.md
+*.hrw.jsonl.gz
+*.jsonl
+*.sqlite
+*.sqlite3
+/data/**/games-*.csv
+/data/**/attempts-*.json
+/data/**/replays-*.json
+/data/phase-a-validation-attempts-*.json
+/data/phase-a-validation-replays-*.json
+
 # Build outputs and local Python environment
 .venv/
 __pycache__/

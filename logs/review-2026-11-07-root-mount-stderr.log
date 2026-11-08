@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/bot/main.py", line 9, in <module>
-    raise AssertionError(directory+' is writable')
-AssertionError: / is writable

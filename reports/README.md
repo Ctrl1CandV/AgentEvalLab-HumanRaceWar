@@ -1,7 +1,7 @@
-# reports
+# 审查报告
 
-`phase-A.md`、`phase-B.md`、`phase-C.md` 是各阶段的报告，格式见 BRIEF 第 7 节，阶段结束时上传。报告里不写隐藏 bot 的实现，也不写它们的弱点。
+- [`phase-A.md`](phase-A.md)：A阶段交付及逐项检查结果；当前停点为等待审查。
+- [`phase-A-balance-rework.md`](phase-A-balance-rework.md)：二审后的诊断、参数与策略试验过程，包含失败版本。
+- [`archive/2026-11-07-phase-A-review-request.md`](archive/2026-11-07-phase-A-review-request.md)：此前资源、效率和平衡的历史审查请求，不作为当前阻塞清单。
 
-当前入口是 `phase-A.md`（2026-11-08）；是否完成最后核对、推送和停点以STATUS为准，未经审查不进入B。
-
-`phase-A-review-request.md` 是2026-11-07的历史未通过项/资源与效率口径请求；`phase-A-balance-rework.md` 保留二审后的诊断与失败过程，不用最终通过结果覆盖旧结论。
+数据入口在`data/`，只上传审查汇总；原始对局与旧完整日志留本机。目录和历史限制见`docs/REPOSITORY.md`。未经阶段审查，不进入B。

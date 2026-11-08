@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 1,
+  "batch": "runs/development/zoo-p4-opening",
+  "scope": "Replay-only opening diagnostics: all rush/harass and eco/harass pairings.\n\nFirst contact means a soldier ATTACKing another soldier (not base FIRE).\nEconomy samples count units after settlement; first-contact strength is before it.\n",
+  "byFocus": {
+    "Z-rush": {
+      "games": 80,
+      "milestones": {
+        "firstFocusSoldier": {
+          "observedGames": 80,
+          "median": 1.0
+        },
+        "focus24Workers": {
+          "observedGames": 0,
+          "median": null
+        },
+        "firstFocusWorkerDeath": {
+          "observedGames": 60,
+          "median": 91.0
+        }
+      },
+      "samples": {
+        "25": {
+          "gamesPresent": 80,
+          "workers": 2.0,
+          "energy": 40.0,
+          "deposited": 180.0,
+          "soldiersFocusHarass": [
+            8.0,
+            8.0
+          ]
+        },
+        "40": {
+          "gamesPresent": 80,
+          "workers": 2.0,
+          "energy": 60.0,
+          "deposited": 360.0,
+          "soldiersFocusHarass": [
+            10.0,
+            10.0
+          ]
+        },
+        "50": {
+          "gamesPresent": 80,
+          "workers": 2.0,
+          "energy": 80.0,
+          "deposited": 480.0,
+          "soldiersFocusHarass": [
+            9.0,
+            10.0
+          ]
+        },
+        "60": {
+          "gamesPresent": 80,
+          "workers": 2.0,
+          "energy": 60.0,
+          "deposited": 600.0,
+          "soldiersFocusHarass": [
+            9.0,
+            10.0
+          ]
+        },
+        "75": {
+          "gamesPresent": 80,
+          "workers": 2.0,
+          "energy": 40.0,
+          "deposited": 660.0,
+          "soldiersFocusHarass": [
+            7.0,
+            10.0
+          ]
+        },
+        "95": {
+          "gamesPresent": 74,
+          "workers": 2.0,
+          "energy": 20.0,
+          "deposited": 840.0,
+          "soldiersFocusHarass": [
+            6.0,
+            10.0
+          ]
+        },
+        "120": {
+          "gamesPresent": 60,
+          "workers": 2.0,
+          "energy": 40.0,
+          "deposited": 1000.0,
+          "soldiersFocusHarass": [
+            5.5,
+            10.0
+          ]
+        }
+      },
+      "firstSoldierContact": {
+        "games": 80,
+        "medianTurn": 39.0,
+        "focusWorkerKilledBeforeContact": 0,
+        "globalMedianFocusHarass": [
+          10.0,
+          10.0
+        ],
+        "localMedianFocusHarass": [
+          3.0,
+          2.0
+        ]
+      }
+    },
+    "Z-eco": {
+      "games": 80,
+      "milestones": {
+        "firstFocusSoldier": {
+          "observedGames": 76,
+          "median": 36.0
+        },
+        "focus24Workers": {
+          "observedGames": 72,
+          "median": 32.0
+        },
+        "firstFocusWorkerDeath": {
+          "observedGames": 78,
+          "median": 60.0
+        }
+      },
+      "samples": {
+        "25": {
+          "gamesPresent": 80,
+          "workers": 19.0,
+          "energy": 70.0,
+          "deposited": 420.0,
+          "soldiersFocusHarass": [
+            0.0,
+            8.5
+          ]
+        },
+        "40": {
+          "gamesPresent": 80,
+          "workers": 24.0,
+          "energy": 60.0,
+          "deposited": 885.0,
+          "soldiersFocusHarass": [
+            3.0,
+            10.0
+          ]
+        },
+        "50": {
+          "gamesPresent": 80,
+          "workers": 24.0,
+          "energy": 50.0,
+          "deposited": 1160.0,
+          "soldiersFocusHarass": [
+            6.0,
+            10.0
+          ]
+        },
+        "60": {
+          "gamesPresent": 80,
+          "workers": 24.0,
+          "energy": 40.0,
+          "deposited": 1416.5,
+          "soldiersFocusHarass": [
+            7.0,
+            10.0
+          ]
+        },
+        "75": {
+          "gamesPresent": 80,
+          "workers": 23.0,
+          "energy": 32.5,
+          "deposited": 1635.0,
+          "soldiersFocusHarass": [
+            8.0,
+            10.0
+          ]
+        },
+        "95": {
+          "gamesPresent": 80,
+          "workers": 21.0,
+          "energy": 30.0,
+          "deposited": 1920.0,
+          "soldiersFocusHarass": [
+            7.5,
+            10.0
+          ]
+        },
+        "120": {
+          "gamesPresent": 74,
+          "workers": 17.0,
+          "energy": 40.0,
+          "deposited": 2150.0,
+          "soldiersFocusHarass": [
+            7.0,
+            10.0
+          ]
+        }
+      },
+      "firstSoldierContact": {
+        "games": 76,
+        "medianTurn": 58.0,
+        "focusWorkerKilledBeforeContact": 40,
+        "globalMedianFocusHarass": [
+          7.5,
+          10.0
+        ],
+        "localMedianFocusHarass": [
+          2.0,
+          2.0
+        ]
+      }
+    }
+  },
+  "files": {
+    "Z-rush": {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/harassment-opening-p4/Z-rush.json",
+      "sha256": "ee0f05c0f4d7729193841dfc21280bb66a5f28bea6ef1d2379d1f040df0c4b6d"
+    },
+    "Z-eco": {
+      "path": "runs/local-evidence/509f1f8-before-summary-only/data/harassment-opening-p4/Z-eco.json",
+      "sha256": "41f4d4389ce54e5cea4b717e43bf336a6fe8d654043861a08c0bc14ab129bf29"
+    }
+  },
+  "analysisCpuNs": 9972964100,
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/harassment-opening-p4/report.json",
+    "originalSha256": "3b4b3aef5b4fbb421c737bf3d9ba44cd18479f4213ee0e46059a51c3705834ef",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

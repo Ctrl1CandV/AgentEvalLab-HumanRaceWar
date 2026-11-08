@@ -291,10 +291,21 @@
   },
   "schemaVersion": 1,
   "scope": "Final standard-1 / zoo v15 only; 40 public maps, no pooling",
-  "source": "data/zoo-standard-1-final/report.json",
-  "sourceSha256": "c39edd74a7a31902f7643c1e7676f986180889c9ebc7eaaab48ed2b2e39f0ea8",
+  "source": "data/phase-a/matrices/zoo-standard-1-final.json",
+  "sourceSha256": "c5685ec4aa1349400a46089fc1ccec6799dc25bdad7fcf7eb6de5b67ae7f494b",
   "phaseAComplete": true,
   "frozen": true,
   "reviewStatus": "awaiting phase review; no Phase B",
-  "previousBaseline": "data/phase-a-baseline-v5/balance.json"
+  "previousBaseline": "data/phase-a/history/baseline-v5-balance.json",
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/balance.json",
+    "originalSha256": "72256f42bb156ee753124e8400b97efa50cd6ee4a8c8b712601841fb4ca5ddeb",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {
+      "data/zoo-standard-1-final/report.json": "c39edd74a7a31902f7643c1e7676f986180889c9ebc7eaaab48ed2b2e39f0ea8"
+    },
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
 }

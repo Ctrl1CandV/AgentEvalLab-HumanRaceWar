@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "zooVersion": 15,
+  "scope": "M-only builder task allocation and three-builder cap; all single-style behavior unchanged",
+  "tests": [
+    {
+      "sourceReport": "runs/development/review-balance-2026-11-07/three-builders-tests.json",
+      "sha256": "a1ed5f09fe8fcec509e68e6c77924521d4f7f79303fdc23bc708efe2db63c681",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/review-balance-three-builders-tests.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 17,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0450297,
+      "measuredTestWallSeconds": 3.595383335,
+      "measuredReapedChildrenCpuSeconds": 0.031941
+    },
+    {
+      "sourceReport": "runs/development/review-balance-2026-11-07/builder-assignment-before.json",
+      "sha256": "d8122a96fdb2f22b833a9d5006fd86c20484e2350d010ecac56f4467866a35e8",
+      "log": "logs/phase-a/regressions/builders-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 18,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0480881,
+      "measuredTestWallSeconds": 3.753649879,
+      "measuredReapedChildrenCpuSeconds": 0.033533
+    },
+    {
+      "sourceReport": "runs/development/review-balance-2026-11-07/builder-reserve-before.json",
+      "sha256": "6225fd9345308081d37535882ca613a22bb790049a197baac82d06adbe1d9a92",
+      "log": "logs/phase-a/regressions/reserve-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 19,
+      "failures": 3,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0564714,
+      "measuredTestWallSeconds": 3.738251983,
+      "measuredReapedChildrenCpuSeconds": 0.038778
+    },
+    {
+      "sourceReport": "runs/development/review-balance-2026-11-07/builder-assignment-after.json",
+      "sha256": "141a9f2c8dbc36cdab1db1af32b73547713469bc75b55d8439bc5d80f05fb278",
+      "log": "logs/phase-a/regressions/builders-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0503026,
+      "measuredTestWallSeconds": 3.618587824,
+      "measuredReapedChildrenCpuSeconds": 0.03621
+    }
+  ],
+  "targetedConclusion": "both maze-01 losses retained; targeted evidence is not the acceptance denominator",
+  "completeMatrix": "data/phase-a/matrices/zoo-v15-p7-public.json",
+  "beforeInputs": {
+    "runs/development/review-balance-2026-11-07/v15-before/generate_zoo.py": "655dd56adfc005054839b8e1bec420150107c91782cc1aac3a9222f266ba8068",
+    "runs/development/review-balance-2026-11-07/v15-before/zoo_strategy.hpp": "384991b29bc4466bcd76dc5b93559e6494cf68cde833b35a8d1cdc4cb9a074dc"
+  },
+  "sourceSha256": {
+    "tools/zoo_strategy.hpp": "497650100e9e5aaf0e13609a4ec0f1fa9997d9990f59e433721d88871e500433",
+    "tools/generate_zoo.py": "655dd56adfc005054839b8e1bec420150107c91782cc1aac3a9222f266ba8068",
+    "bots/catalog.json": "09aaa290fc1605216f42f55951fd5f8f38d30a4194fc91bc29de61847c9da29e",
+    "tests/test_zoo_strategy.py": "5638ee570f2f1a01afbfb9a8691bb7ad1cc07877595c4e5ca93000ac3cd3bf7e"
+  },
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v15-regression.json",
+    "originalSha256": "96c38ddc049d182396c3edd247029252430a48861b8a6621efc476b483d49ba2",
+    "omittedLocalSections": {
+      "targeted": 2
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

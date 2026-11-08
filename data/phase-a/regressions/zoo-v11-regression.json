@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "zooVersion": 11,
+  "change": "M distinguishes remote mining workers from soldiers and workers threatening the base perimeter",
+  "tests": [
+    {
+      "sourceReport": "runs/development/review-balance-2026-11-07/worker-threat-before.json",
+      "sha256": "d7c1cf013257d3465a53bfbc7c2382c9e1e4881b185d68856c86a8d32642ec41",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/review-balance-worker-threat-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 15,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0476251,
+      "measuredTestWallSeconds": 3.997994918,
+      "measuredReapedChildrenCpuSeconds": 0.032834999999999996
+    },
+    {
+      "sourceReport": "runs/development/review-balance-2026-11-07/worker-threat-after.json",
+      "sha256": "a955b000d38e2d08469d623dabf6caa4b61b9bb1edf9f501edc5781379863358",
+      "log": "runs/local-evidence/509f1f8-before-summary-only/logs/review-balance-worker-threat-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.041894,
+      "measuredTestWallSeconds": 3.470226515,
+      "measuredReapedChildrenCpuSeconds": 0.029885999999999996
+    }
+  ],
+  "sourceSha256": {
+    "tools/zoo_strategy.hpp": "215c0b8182475ef1917289369d9b98cf370ba7a8e29795aa36eec882d31a4517",
+    "tools/generate_zoo.py": "6793cdfdc3f9e464bb0cadbdafbdc0a723bde8ca9bbdbe82fbbee3c80ecceefb",
+    "bots/catalog.json": "5434d59de90832d4ec8950745523dd31900c4e06ea070474ab7081d5faf07ea2",
+    "tests/test_zoo_strategy.py": "5e2dadd7e3508be866da58f7047ed0e1cdf6fc99642a0c70e070291bbfeb8076"
+  },
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v11-regression.json",
+    "originalSha256": "7140a3b7ef4ca09c6ffc68d8b05cec10552e28373699797751748e1fbb4e0852",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

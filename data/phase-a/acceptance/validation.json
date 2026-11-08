@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "scope": "All persisted public match-attempt result.json under runs, deduplicated by matchId/attempt. Scheduling, compilation, direct probes and intentionally damaged replay fixtures remain in their separate reports; they are not counted as games.",
+  "measuredAt": "2026-11-08T05:36:52.198620+00:00",
+  "framework": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414",
+  "collectorSha256": "b5afa6d91bab03bb007de5de0780f46906c89d92aa37cd11f83935622daf742a",
+  "attemptCounts": {
+    "complete": 61789,
+    "infra_error": 186,
+    "configuration_error": 4
+  },
+  "allCompletedReplaysVerified": true,
+  "replayAudit": {
+    "allVerified": true,
+    "verificationCpuNs": 4718212565800,
+    "wallNs": 792154233302,
+    "scope": "Current verifier checks transcript semantics; not timing authenticity or an independent-machine rerun."
+  },
+  "recordedUsage": {
+    "botCpuNs": 9220154586500,
+    "matchHarnessCpuNs": 12885167518000,
+    "missingBotCpuCounters": 447,
+    "missingHarnessCpuCounters": 370,
+    "currentAuditCpuNs": 4718212565800,
+    "completePhaseCpuHours": null,
+    "limits": "Distinct match-attempt counters only, plus this audit. No RUSAGE_CHILDREN added. Compilation, controllers, previous verification, direct probes and missing counters prevent a complete phase total."
+  },
+  "attemptsCount": 61979,
+  "replaysCount": 61789,
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/phase-a-final-validation/report.json",
+    "originalSha256": "e1f0564ff8bad042615d7fd7fe6151c25cda268b31d9cd0d61ae0dcfd2243cd8",
+    "omittedLocalSections": {
+      "storedDuplicateArtifacts": 0,
+      "attemptsIndexes": 124,
+      "replaysIndexes": 124
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

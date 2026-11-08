@@ -1,0 +1,3193 @@
+{
+  "schemaVersion": 1,
+  "scope": "Fourteen separate complete candidate matrices, not pooled; v15/P7 selected. Final identical D6 rerun verifies the shipping framework, not extra independent samples.",
+  "trials": [
+    {
+      "name": "zoo-p1-worker-survival",
+      "report": "data/phase-a/matrices/zoo-p1-worker-survival.json",
+      "reportSha256": "d68e8019209c0d201d308f79dd5ed7939b4c78719eec57a676823befceb98ade",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10
+      },
+      "sourceHashes": [
+        "e1e0ac10c6e0c6029ca29acb0d94e033b460dbcc2b54005b28833b3919917e0e",
+        "eed98771b359a9dd1391f835a2bc4fcd316dfb0a72bdbad4f9eb8e8ee7efe8e7",
+        "b6ce164c0a87fc86806feaee6c442f5a79d7128eff40733710afe0df27c6441c",
+        "86f7869f37bd37d0caca3eb221671dc99910b58097ef2d0b3e633aff2fdcf404",
+        "c7be7267149f103f10ccf5abec7a9854d27dea06ec1e3067eee5216b81faef10",
+        "23a30ec7d9ff74e6b3fb69055e6c359c99074624f817838e6afa8734366304a7",
+        "996d30a75944ccdfe780836370c09ec8d213c730f4ef5d727c90587e96af7ae0",
+        "6e215ddca710f0e594241091be495c71f73f9048fb6fc965f58c0eefc60c8d83",
+        "7d5a14ca8e02c100965c7df0d7ad906af6baf30be2659bc2b85139698ff89feb",
+        "4d8a1e5d491f7c1529ffd5d38593c0cbf0b4f3a9400555ea58e62607bcc0145a"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 380100774200,
+        "matchHarnessCpuNs": 679100435000,
+        "turnHarnessCpuNsP95": 1273600,
+        "turnHarnessCpuNsMax": 5698500,
+        "replayVerificationCpuNs": 198926556300,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 60,
+          "base_destroyed": 20
+        },
+        "baseEndingFraction": 0.25,
+        "turnLimitFraction": 0.75,
+        "seedWinners": {
+          "17": 52,
+          "29": 28
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-p1-worker-survival/timing-selection.json",
+        "sha256": "7c00c3fa9c8f70fbff201d20f59fb33fd3377ed925e05447fe34d6809d146837",
+        "speedFactor": 0.6045305335411233,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-p2-slower-mining",
+      "report": "data/phase-a/matrices/zoo-p2-slower-mining.json",
+      "reportSha256": "3d85992a8a6193bbe6d1fc1fa6c47142d44589953a360197e33d3ce6d6eb630c",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "MINE_RATE": 5
+      },
+      "sourceHashes": [
+        "e1e0ac10c6e0c6029ca29acb0d94e033b460dbcc2b54005b28833b3919917e0e",
+        "eed98771b359a9dd1391f835a2bc4fcd316dfb0a72bdbad4f9eb8e8ee7efe8e7",
+        "b6ce164c0a87fc86806feaee6c442f5a79d7128eff40733710afe0df27c6441c",
+        "86f7869f37bd37d0caca3eb221671dc99910b58097ef2d0b3e633aff2fdcf404",
+        "c7be7267149f103f10ccf5abec7a9854d27dea06ec1e3067eee5216b81faef10",
+        "23a30ec7d9ff74e6b3fb69055e6c359c99074624f817838e6afa8734366304a7",
+        "996d30a75944ccdfe780836370c09ec8d213c730f4ef5d727c90587e96af7ae0",
+        "6e215ddca710f0e594241091be495c71f73f9048fb6fc965f58c0eefc60c8d83",
+        "7d5a14ca8e02c100965c7df0d7ad906af6baf30be2659bc2b85139698ff89feb",
+        "4d8a1e5d491f7c1529ffd5d38593c0cbf0b4f3a9400555ea58e62607bcc0145a"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 363896085000,
+        "matchHarnessCpuNs": 680079063400,
+        "turnHarnessCpuNsP95": 1259800,
+        "turnHarnessCpuNsMax": 9778100,
+        "replayVerificationCpuNs": 194241733000,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": false,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 76,
+          "base_destroyed": 4
+        },
+        "baseEndingFraction": 0.05,
+        "turnLimitFraction": 0.95,
+        "seedWinners": {
+          "29": 34,
+          "17": 46
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-p2-slower-mining/timing-selection.json",
+        "sha256": "93fafdf1bf76b17e85a1fd896fb4beacb2eff648af7f200bac023fc63b163d59",
+        "speedFactor": 0.6011460342200584,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-p3-soldier-cost",
+      "report": "data/phase-a/matrices/zoo-p3-soldier-cost.json",
+      "reportSha256": "f78459be3a50285dd24ed3bf44b8a24ec6e2e6649222f7ce430f2d2c8d1f6db0",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 150
+      },
+      "sourceHashes": [
+        "e1e0ac10c6e0c6029ca29acb0d94e033b460dbcc2b54005b28833b3919917e0e",
+        "eed98771b359a9dd1391f835a2bc4fcd316dfb0a72bdbad4f9eb8e8ee7efe8e7",
+        "b6ce164c0a87fc86806feaee6c442f5a79d7128eff40733710afe0df27c6441c",
+        "86f7869f37bd37d0caca3eb221671dc99910b58097ef2d0b3e633aff2fdcf404",
+        "c7be7267149f103f10ccf5abec7a9854d27dea06ec1e3067eee5216b81faef10",
+        "23a30ec7d9ff74e6b3fb69055e6c359c99074624f817838e6afa8734366304a7",
+        "996d30a75944ccdfe780836370c09ec8d213c730f4ef5d727c90587e96af7ae0",
+        "6e215ddca710f0e594241091be495c71f73f9048fb6fc965f58c0eefc60c8d83",
+        "7d5a14ca8e02c100965c7df0d7ad906af6baf30be2659bc2b85139698ff89feb",
+        "4d8a1e5d491f7c1529ffd5d38593c0cbf0b4f3a9400555ea58e62607bcc0145a"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 373480584000,
+        "matchHarnessCpuNs": 684002518900,
+        "turnHarnessCpuNsP95": 1231000,
+        "turnHarnessCpuNsMax": 5423300,
+        "replayVerificationCpuNs": 200669591300,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": false,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 70,
+          "base_destroyed": 10
+        },
+        "baseEndingFraction": 0.125,
+        "turnLimitFraction": 0.875,
+        "seedWinners": {
+          "29": 36,
+          "17": 44
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-p3-soldier-cost/timing-selection.json",
+        "sha256": "65de62ce0d373fa37d0c69c763e5b2b975da8e7cb3de3fa3792735a198a59ab1",
+        "speedFactor": 0.6078882176885888,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-p4-opening",
+      "report": "data/phase-a/matrices/zoo-p4-opening.json",
+      "reportSha256": "6a9b7ad31bda3b0250e32d5d9e3f0be0eb15c8d3a83549bae6d7d4d49f05589a",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500
+      },
+      "sourceHashes": [
+        "e1e0ac10c6e0c6029ca29acb0d94e033b460dbcc2b54005b28833b3919917e0e",
+        "eed98771b359a9dd1391f835a2bc4fcd316dfb0a72bdbad4f9eb8e8ee7efe8e7",
+        "b6ce164c0a87fc86806feaee6c442f5a79d7128eff40733710afe0df27c6441c",
+        "86f7869f37bd37d0caca3eb221671dc99910b58097ef2d0b3e633aff2fdcf404",
+        "c7be7267149f103f10ccf5abec7a9854d27dea06ec1e3067eee5216b81faef10",
+        "23a30ec7d9ff74e6b3fb69055e6c359c99074624f817838e6afa8734366304a7",
+        "996d30a75944ccdfe780836370c09ec8d213c730f4ef5d727c90587e96af7ae0",
+        "6e215ddca710f0e594241091be495c71f73f9048fb6fc965f58c0eefc60c8d83",
+        "7d5a14ca8e02c100965c7df0d7ad906af6baf30be2659bc2b85139698ff89feb",
+        "4d8a1e5d491f7c1529ffd5d38593c0cbf0b4f3a9400555ea58e62607bcc0145a"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 419297855900,
+        "matchHarnessCpuNs": 743120929100,
+        "turnHarnessCpuNsP95": 1444500,
+        "turnHarnessCpuNsMax": 15066700,
+        "replayVerificationCpuNs": 216392822400,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 60,
+          "turn_limit_deposit": 4,
+          "base_destroyed": 16
+        },
+        "baseEndingFraction": 0.2,
+        "turnLimitFraction": 0.8,
+        "seedWinners": {
+          "17": 54,
+          "29": 26
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-p4-opening/timing-selection.json",
+        "sha256": "377d4191e7dd18cf3c28cbdb6155af0996f38f1bc3f6d0b1cfa48d6a77b12208",
+        "speedFactor": 0.6107335198138958,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-p5-siege",
+      "report": "data/phase-a/matrices/zoo-p5-siege.json",
+      "reportSha256": "6ffd2c0953ce0d10c2ee27989bf1ec3f58eaf7ed026d2603da0eb4af7e735914",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600
+      },
+      "sourceHashes": [
+        "e1e0ac10c6e0c6029ca29acb0d94e033b460dbcc2b54005b28833b3919917e0e",
+        "eed98771b359a9dd1391f835a2bc4fcd316dfb0a72bdbad4f9eb8e8ee7efe8e7",
+        "b6ce164c0a87fc86806feaee6c442f5a79d7128eff40733710afe0df27c6441c",
+        "86f7869f37bd37d0caca3eb221671dc99910b58097ef2d0b3e633aff2fdcf404",
+        "c7be7267149f103f10ccf5abec7a9854d27dea06ec1e3067eee5216b81faef10",
+        "23a30ec7d9ff74e6b3fb69055e6c359c99074624f817838e6afa8734366304a7",
+        "996d30a75944ccdfe780836370c09ec8d213c730f4ef5d727c90587e96af7ae0",
+        "6e215ddca710f0e594241091be495c71f73f9048fb6fc965f58c0eefc60c8d83",
+        "7d5a14ca8e02c100965c7df0d7ad906af6baf30be2659bc2b85139698ff89feb",
+        "4d8a1e5d491f7c1529ffd5d38593c0cbf0b4f3a9400555ea58e62607bcc0145a"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 398632269900,
+        "matchHarnessCpuNs": 697901212000,
+        "turnHarnessCpuNsP95": 1379500,
+        "turnHarnessCpuNsMax": 7747300,
+        "replayVerificationCpuNs": 211269078600,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 60,
+          "turn_limit_deposit": 4,
+          "base_destroyed": 16
+        },
+        "baseEndingFraction": 0.2,
+        "turnLimitFraction": 0.8,
+        "seedWinners": {
+          "17": 54,
+          "29": 26
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-p5-siege/timing-selection.json",
+        "sha256": "845af85346a772edd31b17bc331cc55c11902b333eb2d7851c8f810867b7c238",
+        "speedFactor": 0.6083139809125736,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-p6-worker-cost",
+      "report": "data/phase-a/matrices/zoo-p6-worker-cost.json",
+      "reportSha256": "22fcad9e1ebb857616d7939735a528c3d8555bbddb35d37ce92b2b5a44b43c46",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40
+      },
+      "sourceHashes": [
+        "e1e0ac10c6e0c6029ca29acb0d94e033b460dbcc2b54005b28833b3919917e0e",
+        "eed98771b359a9dd1391f835a2bc4fcd316dfb0a72bdbad4f9eb8e8ee7efe8e7",
+        "b6ce164c0a87fc86806feaee6c442f5a79d7128eff40733710afe0df27c6441c",
+        "86f7869f37bd37d0caca3eb221671dc99910b58097ef2d0b3e633aff2fdcf404",
+        "c7be7267149f103f10ccf5abec7a9854d27dea06ec1e3067eee5216b81faef10",
+        "23a30ec7d9ff74e6b3fb69055e6c359c99074624f817838e6afa8734366304a7",
+        "996d30a75944ccdfe780836370c09ec8d213c730f4ef5d727c90587e96af7ae0",
+        "6e215ddca710f0e594241091be495c71f73f9048fb6fc965f58c0eefc60c8d83",
+        "7d5a14ca8e02c100965c7df0d7ad906af6baf30be2659bc2b85139698ff89feb",
+        "4d8a1e5d491f7c1529ffd5d38593c0cbf0b4f3a9400555ea58e62607bcc0145a"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 414067828800,
+        "matchHarnessCpuNs": 723767992800,
+        "turnHarnessCpuNsP95": 1387900,
+        "turnHarnessCpuNsMax": 6004000,
+        "replayVerificationCpuNs": 223686258900,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 54,
+          "base_destroyed": 24,
+          "turn_limit_deposit": 2
+        },
+        "baseEndingFraction": 0.3,
+        "turnLimitFraction": 0.7,
+        "seedWinners": {
+          "17": 54,
+          "29": 26
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-p6-worker-cost/timing-selection.json",
+        "sha256": "6e01f3e31fd9aca737fe16dee1d439467f009c59f00f089205f8e305206eb927",
+        "speedFactor": 0.5861156471302951,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-p7-start-workers",
+      "report": "data/phase-a/matrices/zoo-p7-start-workers.json",
+      "reportSha256": "c3021aaff5ac47f094a12df0743267414eba92527ff4a927c8a29fd055ee5a52",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "e1e0ac10c6e0c6029ca29acb0d94e033b460dbcc2b54005b28833b3919917e0e",
+        "eed98771b359a9dd1391f835a2bc4fcd316dfb0a72bdbad4f9eb8e8ee7efe8e7",
+        "b6ce164c0a87fc86806feaee6c442f5a79d7128eff40733710afe0df27c6441c",
+        "86f7869f37bd37d0caca3eb221671dc99910b58097ef2d0b3e633aff2fdcf404",
+        "c7be7267149f103f10ccf5abec7a9854d27dea06ec1e3067eee5216b81faef10",
+        "23a30ec7d9ff74e6b3fb69055e6c359c99074624f817838e6afa8734366304a7",
+        "996d30a75944ccdfe780836370c09ec8d213c730f4ef5d727c90587e96af7ae0",
+        "6e215ddca710f0e594241091be495c71f73f9048fb6fc965f58c0eefc60c8d83",
+        "7d5a14ca8e02c100965c7df0d7ad906af6baf30be2659bc2b85139698ff89feb",
+        "4d8a1e5d491f7c1529ffd5d38593c0cbf0b4f3a9400555ea58e62607bcc0145a"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 442724171600,
+        "matchHarnessCpuNs": 776321899600,
+        "turnHarnessCpuNsP95": 1477200,
+        "turnHarnessCpuNsMax": 13300200,
+        "replayVerificationCpuNs": 233366317500,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 64,
+          "base_destroyed": 16
+        },
+        "baseEndingFraction": 0.2,
+        "turnLimitFraction": 0.8,
+        "seedWinners": {
+          "17": 48,
+          "29": 32
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-p7-start-workers/timing-selection.json",
+        "sha256": "117b3b5b3b5abaa8525e9e812d75235a1ec2f7d871d1942db5a8ce57025a5023",
+        "speedFactor": 0.5890919384849115,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-v7-p7-public",
+      "report": "data/phase-a/matrices/zoo-v7-p7-public.json",
+      "reportSha256": "b374d976405893b6587d6b73d54ddd58b2c434f5605b28f6a18be75e91e90363",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "24dce2de227ad13503e0e83aa367bfd5fdf9b61ce3315cf3562b34a2ee75d55a",
+        "72b4413945317ccbed0a506ce11c1c1561f255b1c07f85fdc937603044aca5c3",
+        "9fcef44c09f2fb17d513f2b8ff4e57dbc6db8d65cb38d3956cba1b6c3cfc6ba5",
+        "0c8f081915ba162c7a503dd8dd7193bc117936328c610c87fae6b706a29eb828",
+        "b41e42c775de718c2cc7988b04cd25d26ef5122299bd7f0e9587ae5a46b214b8",
+        "8a07fe59d2b781656aee5ebbe5893f69dee66f23c85da4c8fecf640637d34d35",
+        "824fbf9eda2d322d416abb3aeca16e82343b3f169bec9c87065df96a3607ee41",
+        "cb170c3503cf0ff91787d8eec79feb8ca2eb108e5b0b8eac7ead12d892e8fb9d",
+        "fffcde443db46b61d8ea9fac61b6ac72f78ce6aa9c03a8cf76b44bb9b7a82088",
+        "45b7cf8a7e0494a775b318fe99251da7a790ebb774a831742ab47f546380ae63"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 425563416800,
+        "matchHarnessCpuNs": 733220847900,
+        "turnHarnessCpuNsP95": 1355400,
+        "turnHarnessCpuNsMax": 2899500,
+        "replayVerificationCpuNs": 232356958200,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": false,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 76,
+          "base_destroyed": 4
+        },
+        "baseEndingFraction": 0.05,
+        "turnLimitFraction": 0.95,
+        "seedWinners": {
+          "17": 54,
+          "29": 26
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-v7-p7-public/timing-selection.json",
+        "sha256": "942d3beaf38ee5c8e1ad156dbe80e8c9fa0894255d372ede9eca5535bb1310f6",
+        "speedFactor": 0.5973975044487627,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-v8-p7-public",
+      "report": "data/phase-a/matrices/zoo-v8-p7-public.json",
+      "reportSha256": "3c01c8512202df4baa5c5b5d9b00065870048814e9349af007bcf6c2d9300925",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "28dd71f151d427e702c2eb3f9f634cdf47c69bfa0942c7dd8ca3087f4a60ad72",
+        "dec2e4e70c2c59c5849bee6e0412ad201aeaa11656dc08a0ecb7614c29742a9c",
+        "17fe8095ec9a068028206a974e7473170405fa024fcc6670f9cafb076b4d0398",
+        "9cf85301b1ab60595e29bc3bb727b14669e5d69f6cb61edcbf43177a3878e811",
+        "e201f63aa2a37b3c0e333d4bf0ca7d9115ce1a4a0b2dc7b26d79377dcca0cc33",
+        "836873f12f92e0cd48d790df9b64388c0c0f9aab6f4cf5e0d89cbf3a4c11d095",
+        "00f336e0cd7f865f6d0f18e6c7cb5e2c4a3772788127f7a6115cfb7c0444143c",
+        "49108c7fd1443ec2a0b284e411be0e60c7e60182deee92203114b61be92e4557",
+        "37c16d1d27ca95cbcb89d0b513b7c47d14731af88c411dbe0f839dc35041492f",
+        "a77cc1702a57299d1c2c3bde37c4b4a2c1ad90558b444ddb1a2426d6ebd5fa57"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 422722801000,
+        "matchHarnessCpuNs": 729911257000,
+        "turnHarnessCpuNsP95": 1352900,
+        "turnHarnessCpuNsMax": 2910000,
+        "replayVerificationCpuNs": 230447902800,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": false,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 64,
+          "base_destroyed": 16
+        },
+        "baseEndingFraction": 0.2,
+        "turnLimitFraction": 0.8,
+        "seedWinners": {
+          "17": 44,
+          "29": 36
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-v8-p7-public/timing-selection.json",
+        "sha256": "7481c9365b452a9a88cc5141c5d1ea33b67907c4d150376555602ed2cab439f5",
+        "speedFactor": 0.6094714704204617,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-v9-p7-public",
+      "report": "data/phase-a/matrices/zoo-v9-p7-public.json",
+      "reportSha256": "ce9e3cd49cb3168d2c0d4feaf478068107cb10befe86c017f9ca228ca2531ba0",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "fcdd8b7df297cef72737a0ca4e43526550cf8fcc9c6c2f8a5de3b6cb9fd00d5f",
+        "cf51fc53479b2cb1262c9ee457e5fbdf5ee404fc6aca7691f41f51ba19e048b7",
+        "63f0e88c24e1ebeaebbd0de3fea5a9e89499f988b37137e557633c6e3d9a07c3",
+        "067939dbfca779a928d2e204de47c0e98dbc50f7bcd0ef23896033bac685113b",
+        "8f52e4d81bc186ff4e00d1b40e474d40d47cea5bc18b631c9d767ef7e7ca482c",
+        "e85617e17c6b2e7d120b3ddecd60264df34c3edff70dc3c332d51615beff2186",
+        "2128cfef731698575104d2cff20eb8a6995c7c432363fc773c703dc77c097847",
+        "015683536b28ed675b395e261e610c5d9ad031c1e9227941d4030f5f4d207163",
+        "106a0147ba1a5315706aa8898f3b856d49982e2e964256761e86e267bfb19f43",
+        "5a5f26c6ace042af97dd27a6b2d66e3f50fe5c2ed3e924f63951753025207af5"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 422489504200,
+        "matchHarnessCpuNs": 729558620300,
+        "turnHarnessCpuNsP95": 1351900,
+        "turnHarnessCpuNsMax": 3331300,
+        "replayVerificationCpuNs": 231884108200,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush",
+              "Z-harass"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": []
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": false,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 68,
+          "base_destroyed": 12
+        },
+        "baseEndingFraction": 0.15,
+        "turnLimitFraction": 0.85,
+        "seedWinners": {
+          "17": 46,
+          "29": 34
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-v9-p7-public/timing-selection.json",
+        "sha256": "58d700a5f974abee3d4c99a3b72e12536d0a548f4e58f57be05cabd89bf2e5ac",
+        "speedFactor": 0.6016904401186017,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-v10-p7-public",
+      "report": "data/phase-a/matrices/zoo-v10-p7-public.json",
+      "reportSha256": "f256c801c72885b57a541f9746266aad4893cbe25969066bb3bb7128c7337c5f",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "fcdd8b7df297cef72737a0ca4e43526550cf8fcc9c6c2f8a5de3b6cb9fd00d5f",
+        "835ef8b329cd76a537e41ab03755b3a11d47b172e1b0bf04f48541416ada3d6d",
+        "63f0e88c24e1ebeaebbd0de3fea5a9e89499f988b37137e557633c6e3d9a07c3",
+        "067939dbfca779a928d2e204de47c0e98dbc50f7bcd0ef23896033bac685113b",
+        "8f52e4d81bc186ff4e00d1b40e474d40d47cea5bc18b631c9d767ef7e7ca482c",
+        "e85617e17c6b2e7d120b3ddecd60264df34c3edff70dc3c332d51615beff2186",
+        "2128cfef731698575104d2cff20eb8a6995c7c432363fc773c703dc77c097847",
+        "015683536b28ed675b395e261e610c5d9ad031c1e9227941d4030f5f4d207163",
+        "106a0147ba1a5315706aa8898f3b856d49982e2e964256761e86e267bfb19f43",
+        "5a5f26c6ace042af97dd27a6b2d66e3f50fe5c2ed3e924f63951753025207af5"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 396347501500,
+        "matchHarnessCpuNs": 700990638900,
+        "turnHarnessCpuNsP95": 1297400,
+        "turnHarnessCpuNsMax": 3067200,
+        "replayVerificationCpuNs": 221119451000,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": false,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 68,
+          "base_destroyed": 12
+        },
+        "baseEndingFraction": 0.15,
+        "turnLimitFraction": 0.85,
+        "seedWinners": {
+          "17": 46,
+          "29": 34
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-v10-p7-public/timing-selection.json",
+        "sha256": "878e1afd97d7c2ba27fb68cba4f42f5889f9d881b0c1912703a0308ae3712dbe",
+        "speedFactor": 0.6068536149834548,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-v12-p7-public",
+      "report": "data/phase-a/matrices/zoo-v12-p7-public.json",
+      "reportSha256": "c50b4400f8b4a08ee121d4c086113feb1fb0a8b95b852ab68e4c90157309593f",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "4540a4066e40b562cf132dc24747b80424b35b87e17655e6156c410b2fcfea87",
+        "263ec1ee3b72c21254125539694056a87c005894930ae4052dd7758eda8ea025",
+        "752f0e38fa2db95be69d59de7126d6ecb51ed383b052c672f89bfa926880b50e",
+        "16881036c0bae37512d7b1b8a43ea5192c98733f0e6c906812c8636396508a38",
+        "d67052e1aecd2fe000deccc9fdeb0ee0145c4aa7147882d7ca924126b4dde1e4",
+        "f3cae601f08bd7ec6ed43a5a9d005709c2dd6449b39f3ee15354cdccee840e1f",
+        "f133ba7b54c8e3535469bb6f9bd1fba9dd35face8220a8a35c170640933474fc",
+        "48ad213cb452540f9bc5f23636a9c47c634992560fd5f831f099aca8e20c2a5a",
+        "e3db3c7b329f2ff7432e7e0a5c0aaef3ccab810f05ba5a4736399d9e02a97608",
+        "b4bd18cbb031b1c27d9eca6df82e6a41ace270faae63a0224b7a6ebec68405de"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 412542065600,
+        "matchHarnessCpuNs": 725277189500,
+        "turnHarnessCpuNsP95": 1350000,
+        "turnHarnessCpuNsMax": 8259700,
+        "replayVerificationCpuNs": 233713372300,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": false,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": false,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 68,
+          "base_destroyed": 12
+        },
+        "baseEndingFraction": 0.15,
+        "turnLimitFraction": 0.85,
+        "seedWinners": {
+          "17": 46,
+          "29": 34
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-v12-p7-public/timing-selection.json",
+        "sha256": "50bc7baba1543614b24036535b30cc917bd65708e3dd2dc815fe63266fc6f7cd",
+        "speedFactor": 0.6060798332474315,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-v14-p7-public",
+      "report": "data/phase-a/matrices/zoo-v14-p7-public.json",
+      "reportSha256": "01278348dea14900106c620b1a6038f6106a7e50aa2d5749ea310e6b22e2afee",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "219d610a9a70484bbade08572220804d22da9ca2ca1fdd133a4444f631cb4747",
+        "6bbcf3acff7a30713287ec83ae0b8e8e8bbd36f45541db3a38f71da6db2b0ee3",
+        "0b92070c9703914a374e7cb4a68c3e8bd7bcca6e1c51c131f4cefe59eeae2c9a",
+        "3ceb1e798357390108fc81be361578082fbe2ee14a3fe8e768f745c35d72c575",
+        "6fb638938069ac64bc2aa4546da31104dd5603513905f055c6ea0258a8f35b2f",
+        "b1a8d06da68c9dd18c8706cf3b1aedeabbffe93ebb40fdbacd161a7e9c1079be",
+        "636ed23e4e8f3ee399cd40e49af01d9a3cca2a712a6da72ab6b85d3ee75544af",
+        "e10017b23c533427cbc7b2e26a88a47aa17fcd92211d5d536a42bc1054713273",
+        "2a5bb1fdd6bbbb309a99ebb85f61506db5c5f77d660fcdd9249e8ca46d842054",
+        "cb59094b741aa4b90273e464a82687f5292f603dd8b14d0ee97bb2587ae2ccf0"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 459464745700,
+        "matchHarnessCpuNs": 852992401900,
+        "turnHarnessCpuNsP95": 1720900,
+        "turnHarnessCpuNsMax": 5902800,
+        "replayVerificationCpuNs": 254939346100,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": true,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": true,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 60,
+          "base_destroyed": 20
+        },
+        "baseEndingFraction": 0.25,
+        "turnLimitFraction": 0.75,
+        "seedWinners": {
+          "17": 48,
+          "29": 32
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-v14-p7-public/timing-selection.json",
+        "sha256": "bbccdeca514b9d3054ca4c50de7f3c269c1962d758577004e6375c66a74a0794",
+        "speedFactor": 0.6056739402599988,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-v15-p7-public",
+      "report": "data/phase-a/matrices/zoo-v15-p7-public.json",
+      "reportSha256": "a845dfd7d3bef0e5496d1384126a52907fb5f8461eb0db4664fe9f32c68dec8b",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "273fecd4a9039d73914454bbcce078462afce2071c87b468c7f2d8bf6d731d8a",
+        "e9d7296c5777b86bf85aa55ceb5ae4ec164628b6e6678c62d903198af408ff4e",
+        "9bb4d7effb2568ac78c22dcff20867862e951f15880d23355d5de2d9804d28b3",
+        "f4e7db81e83dafcf60d531da7b505b030751655f5c4d6f6e032de2a786a4db66",
+        "b67d8c1278ef6f68ff3ea9a584c2747a5998332feb57f1e135211941d8ef9b4e",
+        "800b4e4c34b0107a47af9bafd63ef6a1af10035fb251d3a0fd2ebb63e58aaee5",
+        "2d089a189f255bdec967fb4c13f5512afa5d9bc23f6bafd88b7b86c079edcd2e",
+        "3a93ef4f1d84b0e50a811f0622a75235d0d5b15156fd215ad44bbfaa51cecc78",
+        "1d9e34836ef9d265c3f17408b7575b78a6533dc6eee05eb5bee21af42a8e6b61",
+        "535bc499deb1b378c04627c8909ef872f25899c490ee23e7a6cc7975f3e37798"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 462803569200,
+        "matchHarnessCpuNs": 862763741200,
+        "turnHarnessCpuNsP95": 1733900,
+        "turnHarnessCpuNsMax": 6835100,
+        "replayVerificationCpuNs": 259894005600,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": true,
+          "balancedOverall70": true,
+          "balancedEveryType55": true
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": true,
+          "balancedOverall70": true,
+          "balancedEveryType55": true
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 60,
+          "base_destroyed": 20
+        },
+        "baseEndingFraction": 0.25,
+        "turnLimitFraction": 0.75,
+        "seedWinners": {
+          "17": 50,
+          "29": 30
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-v15-p7-public/timing-selection.json",
+        "sha256": "834be40b9abe8935aff572e026cf116a40e8b2845f1e7a96900228722aae0112",
+        "speedFactor": 0.6088408315535807,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    }
+  ],
+  "inFlight": null,
+  "controlledParameterInputsMatch": true,
+  "selectedCandidate": "zoo-v15-p7-public",
+  "finalVerification": {
+    "report": "data/phase-a/matrices/zoo-standard-1-final.json",
+    "sha256": "c5685ec4aa1349400a46089fc1ccec6799dc25bdad7fcf7eb6de5b67ae7f494b",
+    "games": 3680,
+    "sameSourcesAndMaps": true,
+    "sameAllOutcomesAndRawGameMetrics": true,
+    "speedFactor": 0.586292164280248
+  },
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/phase-a-balance-trials.json",
+    "originalSha256": "ca59565155c2c586ce4a8b6b1858f9b7626cff289323c8467674d35ce1fcac96",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {
+      "data/zoo-p1-worker-survival/report.json": "c40955460825c46849214c8efed232b2f1d18b0d512bef6d26d35923e1caa32d",
+      "data/zoo-p2-slower-mining/report.json": "93adc8ee18bfc2f1f2fa23f63c6356a77607de2c80ea093a5db154ccabf53ae6",
+      "data/zoo-p3-soldier-cost/report.json": "d614c5ce2b36721edd2ba6bb091bfd9829a2cca1afd1faa976af3a95c25f7a1b",
+      "data/zoo-p4-opening/report.json": "3af8d95f19085be133b19118424dd6d5e2bb1e1729b222c1ae7553c6944381e3",
+      "data/zoo-p5-siege/report.json": "c8fd3e51b0b0bd3cd42b1627e004fdf1ab0b3d66bafa1cd0745e810b4684d948",
+      "data/zoo-p6-worker-cost/report.json": "1a20d1ea7fb47e57689a1c3960c0b1961f817e5d07d3864e6a6c5b25b0bab8dd",
+      "data/zoo-p7-start-workers/report.json": "bb6e0b243661c7027f1e22eb5b45ab4c24689dd3be92857ca92c9fb43be69f6c",
+      "data/zoo-v7-p7-public/report.json": "310d04654babf55614e5364ce63850bd108007f0c0b897c5b6157f2134865d64",
+      "data/zoo-v8-p7-public/report.json": "7355e931e9c7f4f84a01b92e950eee56c5ffd7cb461d85cd8f100cbdcc6941f1",
+      "data/zoo-v9-p7-public/report.json": "39dfbfcd582704d575a2b507a2937fdeff052c043097cfb20e4239ae12f7ce5c",
+      "data/zoo-v10-p7-public/report.json": "53e08dc8e1dadcb82da71e5167978efa6f3590814068a9cd7f2471ad19e53e56",
+      "data/zoo-v12-p7-public/report.json": "3718e32f0d1f24e327bdb5626ec2d67512d0175887d7610ec0fc6753de480091",
+      "data/zoo-v14-p7-public/report.json": "67ec89ebf916af2d10b6ef75d58b97b120a26a35792d5833e60285a04dd91384",
+      "data/zoo-v15-p7-public/report.json": "ebff3807d46cd9eedd5bb4f4ce3de9e5e58b9683dfefe9ab9af37c007f007a21",
+      "data/zoo-standard-1-final/report.json": "c39edd74a7a31902f7643c1e7676f986180889c9ebc7eaaab48ed2b2e39f0ea8"
+    },
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

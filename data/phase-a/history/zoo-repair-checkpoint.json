@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "scope": "v2 handoff; full regression plus replay inspection, not phase-A acceptance",
+  "baselineTests": {
+    "schemaVersion": 1,
+    "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+    "pattern": "test_*.py",
+    "python": "3.13.15",
+    "system": "Linux",
+    "kernel": "6.18.40.1-microsoft-standard-WSL2",
+    "testsRun": 160,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "measuredTestProcessCpuSeconds": 35.1622009,
+    "measuredTestWallSeconds": 91.54873016,
+    "measuredReapedChildrenCpuSeconds": 4.7731390000000005
+  },
+  "baselineLog": "runs/local-evidence/509f1f8-before-summary-only/logs/zoo-v2-baseline.log",
+  "executionFramework": "e6d5e6e2c5a299ed21c89c16ac553371b9688d8370a75a32dd2b2a9a0bc414cb",
+  "zooCatalogSha256": "7ecb312bb39bf7b61ef12be18c28b77a7ef909272349b1b75ae31830f1d386ab",
+  "strategySha256": "cbc36de2edd56706e98855d9c854466c202630043a5181901b7602905e9f5849",
+  "rawFilesSha256": {
+    "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/runs/development/zoo-v3-diagnosis/baseline.json": "6dc44136c558c434bc95e739781abff833eda2a743408f55b3a5880f72668c54",
+    "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/runs/development/zoo-v3-diagnosis/traffic-before.json": "86121f19d221b454ecb40f2cd25512e35d1466d2aa5a987c0a2420964a9d7e91",
+    "/home/claude-dev/projects/AgentEvalLab-HumanRaceWar/runs/development/zoo-v3-diagnosis/inspect-traffic.py": "a34ffad15d9efe3294a143ee67263d1c47a6f1be0827239064828ca03d81bb90"
+  },
+  "hypothesis": "Global enemy soldier count disables tower reserve even without a nearby threat; requires a focused before/after test. No v3 fix yet.",
+  "totalCpuHours": null,
+  "phaseAComplete": false,
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-repair-checkpoint.json",
+    "originalSha256": "e5c03aceda7284e2395058f216f1acab9e6a87c640aa9f32387a1bcb00a1e7ea",
+    "omittedLocalSections": {
+      "replayInspection": 5
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

@@ -3,19 +3,33 @@
   "currentEfficiencyAcceptance": {
     "status": "passed Phase-A numerical efficiency gates; awaiting phase review",
     "date": "2026-11-08",
-    "sourceReport": "data/efficiency-v5.json",
+    "sourceReport": "data/phase-a/acceptance/efficiency.json",
     "reference": "inbox/bench-eval-machine-2026-11-07.json",
     "referenceIdleMedianCpuNs": 259181615,
     "developmentHostSpeedFactorJobs1": 0.5294474687180262,
     "developmentHostSpeedFactorJobs6": 0.5931340847613747,
-    "engineCpuP95Ms": [0.7437, 0.7214, 0.7203],
+    "engineCpuP95Ms": [
+      0.7437,
+      0.7214,
+      0.7203
+    ],
     "runnerJobs1CpuP95Ms": 1.0278,
     "runnerJobs6CpuP95Ms": 1.6236,
     "runnerJobs6CpuMaxMs": 3.9046,
     "jobs1TurnCpuMs": 53,
     "jobs6TurnCpuMs": 60,
-    "jobs1GameWallSeconds": [16.830607231, 16.82470688, 16.826447141],
-    "jobs6GameWallSeconds": [19.239386548, 19.233473548, 19.238145047, 19.243739847, 19.236075346, 19.227897745],
+    "jobs1GameWallSecondsSummary": {
+      "count": 3,
+      "min": 16.82470688,
+      "max": 16.830607231,
+      "mean": 16.827253750666667
+    },
+    "jobs6GameWallSecondsSummary": {
+      "count": 6,
+      "min": 19.227897745,
+      "max": 19.243739847,
+      "mean": 19.2364530135
+    },
     "jobs1GameWallLimitSeconds": 20.9,
     "jobs6GameWallLimitSeconds": 23.0,
     "complete300NoFaultGames": 9,
@@ -26,15 +40,38 @@
     "historicalAssessmentBeforeSecondReview": true,
     "status": "not passed; development-host evidence only",
     "date": "2026-11-07",
-    "sourceReports": ["data/efficiency-v2.json", "data/efficiency-v3.json", "data/efficiency-v4.json"],
-    "latestReport": "data/efficiency-v4.json",
+    "sourceReports": [
+      "data/phase-a/history/efficiency-v2.json",
+      "data/phase-a/history/efficiency-v3.json",
+      "data/phase-a/history/efficiency-v4.json"
+    ],
+    "latestReport": "data/phase-a/history/efficiency-v4.json",
     "method": "80-unit 40x40 engine fixtures: 3x1000 samples after 30 warmup; parse, step, hash, both observations. 3 single games and 6 concurrent games per version, both bots consume at least the calibrated TURN_CPU_MS for 300 turns; all bots/compilers in bwrap.",
     "engineWorstRepeatCpuP95Ms": 0.785,
     "engineWorstRepeatWallP95Ms": 0.7867,
-    "runnerJobs1CpuMs": {"mean": 1.2018777778, "p95": 1.3858, "max": 1.6872},
-    "runnerJobs6CpuMs": {"mean": 1.7866690556, "p95": 2.192, "max": 7.5831},
-    "singleGameWallSeconds": [31.225286545, 31.233403847, 31.225499846],
-    "sixJobGameWallSeconds": [36.067359819, 36.087527817, 36.057895614, 36.077747013, 36.060212710, 36.051702509],
+    "runnerJobs1CpuMs": {
+      "mean": 1.2018777778,
+      "p95": 1.3858,
+      "max": 1.6872
+    },
+    "runnerJobs6CpuMs": {
+      "mean": 1.7866690556,
+      "p95": 2.192,
+      "max": 7.5831
+    },
+    "singleGameWallSeconds": [
+      31.225286545,
+      31.233403847,
+      31.225499846
+    ],
+    "sixJobGameWallSeconds": [
+      36.067359819,
+      36.087527817,
+      36.057895614,
+      36.077747013,
+      36.06021271,
+      36.051702509
+    ],
     "localSpeedFactorJobs1": 1.004610567133549,
     "localSpeedFactorJobs6": 1.17107960237343,
     "formalEvaluationSpeedFactor": null,
@@ -8443,5 +8480,17 @@
     "recordedStandaloneSweepWorkloadCpuSeconds": 54.3367735,
     "includesCompilerCpu": false,
     "totalCpuHours": null
+  },
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/timing.json",
+    "originalSha256": "1074eafdb183b50692db6b5e86db5733b14ace8f7c84b3b10f9313809d8f2df9",
+    "omittedLocalSections": {
+      "currentEfficiencyAcceptance/jobs1GameWallSeconds": 3,
+      "currentEfficiencyAcceptance/jobs6GameWallSeconds": 6
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
   }
 }

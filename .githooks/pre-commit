@@ -6,7 +6,8 @@
 # - anything under private/ or runs/;
 # - files over 2 MB;
 # - files that look like credentials;
-# - files whose content equals a hidden file listed in private/HIDDEN.sha256.
+# - files whose content equals a hidden file listed in private/HIDDEN.sha256;
+# - raw game records/replays/indexes (only review summaries are published).
 set -u
 
 hidden="private/HIDDEN.sha256"
@@ -42,5 +43,14 @@ while IFS= read -r -d '' path; do
     fi
   fi
 done < <(git diff --cached --name-only --diff-filter=ACMR -z)
+
+if [ -x .venv/bin/python ]; then
+  .venv/bin/python tools/publication.py --staged || status=1
+elif command -v python3.13 >/dev/null 2>&1; then
+  python3.13 tools/publication.py --staged || status=1
+else
+  echo "pre-commit: Python 3.13 is required for the review-only publication check" >&2
+  status=1
+fi
 
 exit $status

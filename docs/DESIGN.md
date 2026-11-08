@@ -879,10 +879,10 @@ AgentEvalLab 的评分器包装会把它转成"评分结果 v2"。`infraErrors >
 
   `private/` 在 .gitignore 里，永远不提交、不推送。
 - **公开的报告和数据里**，隐藏 bot 只写代号、风格标签、sha256 和统计数据，不写实现细节，也不写它的弱点。
-- **公开的回放**只包括公开 bot 之间的对局。
+- **上传范围（用户2026-11-08补充）：** GitHub只保存审查所需代码、配置、测试、文档和汇总；实际对局回放、逐局结果、结果库与逐局审计索引均留在开发机。公开bot示例回放也不上传。所有失败照常完整保留在本机，不改变统计分母。
 - **不提交任何凭据、令牌和个人信息。**
 - **提交前检查：** 仓库带 `.githooks/pre-commit`，拒绝以下内容：
-  - `private/` 和 `runs/` 下的文件；
+  - `private/` 和 `runs/` 下的文件，以及实际对局回放、逐局表和逐局索引；
   - 超过 2 MB 的文件；
   - 看起来像凭据的文件；
   - 内容和 `private/HIDDEN.sha256` 里任何一个隐藏文件相同的文件。
@@ -893,7 +893,7 @@ AgentEvalLab 的评分器包装会把它转成"评分结果 v2"。`infraErrors >
   - 那个 bot 或那张地图作废（降为公开），换新的；
   - 只删掉提交是不够的，GitHub 上的历史可能已经被缓存。
 - **private/ 的管理：** 可以用一个只在本地的 git 仓库管理历史（不设远程），并备份到用户的大硬盘上。
-- **MANIFEST.sha256：** 列出全部文件（包括 `private/`）的路径和 sha256，迁移时用来核对。
+- **清单：** 根 `MANIFEST.sha256` 核对上传的审查树；完整原始证据在本机另附清单。迁移隐藏资产时仍需单独的私有清单（包括private文件），不把对局文件或私有文件放进Git。目录约定见 `docs/REPOSITORY.md`。
 
 ---
 
@@ -954,7 +954,7 @@ AgentEvalLab 的评分器包装会把它转成"评分结果 v2"。`infraErrors >
 
 ## 附录 A：规则参数（standard-1 交审配置）
 
-2026-11-08采用P7参数与动物园v15的完整D6结果，见 `rules/CHANGELOG.md`、`rules/standard-1.json` 和 `data/zoo-v15-p7-public/`。下列默认值与引擎同步；原始起点保存在Git历史及 `tests/fixtures/starting-rules.json`，附录B保留原始估算。所有参数候选及失败结果分别保存，机制、协议与验收阈值未变。
+2026-11-08采用P7参数与动物园v15的完整D6结果，见 `rules/CHANGELOG.md`、`rules/standard-1.json` 和 `data/phase-a/matrices/zoo-v15-p7-public.json`。下列默认值与引擎同步；原始起点保存在Git历史及 `tests/fixtures/starting-rules.json`，附录B保留原始估算。所有参数候选及失败结果分别保存，机制、协议与验收阈值未变。
 
 ### 规则参数（A 阶段只在下列范围内调整）
 

@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-07T11:19:19.410723+00:00",
+  "sourceBaseCommit": "801bb559bfadbb3636d84170ac7a56b0dd67bfbb",
+  "scope": "cleanup/startup regression plus initial zoo SDK tests, not full sandbox or balance acceptance",
+  "inputsScope": "Final working tree; 157-test runs include the two initial zoo tests. Before tests used the pre-fix runtime and four initial cleanup cases. Zoo-first has a test-adapter END parsing error, not bot faults; fixed before both full runs.",
+  "inputsSha256": {
+    "arena/__init__.py": "c27ee98ee99a1c238dd1e2817c64b236d410cafc16d345e1863a545d0abac58f",
+    "arena/__main__.py": "6c91fc482b63be6cfa94c64fe89bf5445fa36f087983fe4ca1759a829638f055",
+    "arena/bench/main.cpp": "6ad783455d6c625c0675f8b29d8e6af843f463e993ee4490a2b9baee20076348",
+    "arena/check.py": "7f85a79fc5bd7e12d821ea09f0a3a073640ccfccacaa7ccabb029388a2fe9dc9",
+    "arena/core/__init__.py": "b9fd5a40006c1a07a6ddd2c8e67e311c5a7812745bf413d3e630a13e636e0b5d",
+    "arena/core/benchmark.py": "900bb86d95f0e31e5420f1d1872dee4d43cc5cdd7235b37dc89646b2938e1cc1",
+    "arena/core/cache.py": "e4ec5baf55d7350b8a981e6040902aa59130a37a11ee43692542a6ae2676f2b9",
+    "arena/core/game.py": "2b13b954c9f88c113af968c5d932869bbde7d075a2522ae524e655a2bec787df",
+    "arena/core/journal.py": "027f6f5dbe793565d3751550960c99c1ce8ad0e996698731fd70116325830af7",
+    "arena/core/plain.py": "301ba85c505ae80cb6ad1b7af0fcb4c2d6f8761051cd24f85cbaded5373eaebc",
+    "arena/core/replay.py": "6f459fc9eb7b1e33cad946f40b88e5bac07b73709b6a4670f22a61397639e46c",
+    "arena/core/resources.py": "d00cb96f9ad412722f8ce4d490f9a472e4c10dd68f1cd222f3c3c99a63474cea",
+    "arena/core/runner.py": "8ec945bed409698ffa69332010cd3e49a5650d78a406e8f7e5816b9c2b6ea2a9",
+    "arena/core/sandbox.py": "3e5a247b758e5f712e6053dd360c7ddab28520f1f37fe6b29bc152d4030dc42b",
+    "arena/core/sandbox_exec.py": "475be76ae79a3047405f5dd82df93207e26cc8872154f6f475abc8d5657ff585",
+    "arena/core/seccomp.py": "ef8901c2fa05e0ddd953b67ee8bbaba7c1073e6e372a72ac8823532207623762",
+    "arena/core/timing.py": "689bf17d5716c6c3bcb7cf3cd2c1ed94cb92255dcaed6e789234b6d0fd24f686",
+    "arena/core/transport.py": "51736909c626c186a4f3e421be9786ba556d3f9b5dd6a817e72d4793862127c9",
+    "arena/games/__init__.py": "d625bdadfa5c3c3c052387ebf65d2be95ee4421a9beaf24430bdce9df2e4933f",
+    "arena/games/outpost/__init__.py": "6bc25a25aabfde53faed2a2a4718281c85cfc751233a7ef7bd9f6628f5ac97c3",
+    "arena/games/outpost/engine.py": "1fed2771b6481683866aa7f0de4c5b7b049a18776c35e28cde320f85651b2d4a",
+    "arena/games/outpost/mapgen.py": "565fbcd276890d6ede27eeff12adaad8acd471d0928b52f8c75fce3b277bf3e3",
+    "arena/games/outpost/maps.py": "b10d01cde226624d6fa5417e09ca72c32d9221a33a6e29444a6b6213a941cb67",
+    "arena/games/outpost/metrics.py": "c40005cab384765c83ccc197ff0bdb458897a6be26ca93953ea5d81a9ccd0668",
+    "arena/games/outpost/model.py": "cacdb4c426ae65a9f18250ae2f2eacf77d0deeda0e0fdb2d4ccfe0bf85c69a06",
+    "arena/games/outpost/orders.py": "3ccbbc3f47dbefc2fe0d2809275d097911a39e76cc98d8a25fb43a3fa1d910fc",
+    "arena/games/outpost/replay.py": "939fe7c52562631433b5cd842ba19682a8aaff5d7416ecac5913426d6cf797c7",
+    "arena/games/outpost/rules.py": "b42dc19b354dd1e4b98230fb3b9364771297db5d5617a430075c131ba4889503",
+    "arena/match.py": "15aaf637acfedef3b834898799e961a493c556dfe3032a91dcbfe92be96ba0c2",
+    "arena/tournament.py": "f629596b418b91544e489b208ece7256929c94b24fa7ebdd69ae9ce03342d746",
+    "arena/worker.py": "8d02c9cbf5481bd355c798a1f4f5e25fe3b21e2b0b78a0252b639eb5fb971d84",
+    "bots/public/M-balanced/main.cpp": "7c39e71f91174b2b61b8c0486a8468aca1f7b03a134fbcfc7f06607813634271",
+    "bots/public/M-balanced/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "bots/public/Z-eco/main.cpp": "867014525bb8361cfb8cdfc23a3c3ff2f00df6858111cbd4b18ba2452ce18e75",
+    "bots/public/Z-eco/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "bots/public/Z-harass/main.cpp": "c2cadb14bd7099505a9dbe14c602a8052eaa5d81d55bd53c0306e118d9050658",
+    "bots/public/Z-harass/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "bots/public/Z-idle/main.cpp": "17aece9db384d45dab4417c098a6174d356a7ab32bf02d09d3488f53f5055419",
+    "bots/public/Z-idle/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "bots/public/Z-miner/main.cpp": "ef3bf5c415a33e45f26c0111b246f9275f19e5b6e482bc95e2d1082df9d7ff02",
+    "bots/public/Z-miner/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "bots/public/Z-random/main.cpp": "15a5c28e76edd76635fc2c9d99a5fa22ccaa1a8f8574174c5b8a3a539a0d0400",
+    "bots/public/Z-random/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "bots/public/Z-rush/main.cpp": "4f7cc74ab58abc81fba2b6cdf92fe6748c9fb8f8970403288717f996ee4f893d",
+    "bots/public/Z-rush/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "bots/public/Z-towers/main.cpp": "b77b83d5c17eaa30a28b587fdcc2daa24538aca28fcf7de5d50773e5db9ce392",
+    "bots/public/Z-towers/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "bots/public/Z-turtle/main.cpp": "fe2dcea8c7520048a3cbc39cbfe6fb3aa53b5f3bf92aa34dc9552d89494f35d7",
+    "bots/public/Z-turtle/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "bots/public/Z-wrush/main.cpp": "3b14f04df93bfd05501ceafa1852866f6cffeac96d284caa7a8a1c4332b2c36a",
+    "bots/public/Z-wrush/strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60",
+    "sdk/cpp/example/main.cpp": "3203d71b9bf393f59abc0c1e107e991faa200e7799ce37ae42c2dd0552c2c117",
+    "sdk/cpp/hrw.hpp": "899d6fbb7bd6e2d0b12284e2af46aac1869ac5d469520b37aace7796728e238a",
+    "sdk/python/example/main.py": "ca34643486833714e3449f0d90aca6bdad8ce76119c60b90636d777e1710ba3d",
+    "sdk/python/hrw.py": "ed0373ce69e43709144454026b72378da6386108450edb244e53be77c054ca71",
+    "tests/__init__.py": "920872ec61e99debad6479fe79f9ac689514bb3596432792b651d487ebe3d7d7",
+    "tests/fixtures/smoke.map": "d96754f03e51d4e8a27a39990208f3167c4f7bb3737a2850c4bbb6d929c6cbcf",
+    "tests/helpers.py": "b756f0d423c54da143bf764d1d44932fecb2505712d511b32b1823e0b3023459",
+    "tests/test_benchmark.py": "01019a060e28d02afff7cecbe85645ca318805a63719045920b0bca9afdbb31b",
+    "tests/test_cleanup.py": "b90668cb2bab35faa6480bc82c66a17b3b05f143a5a3f16fc29f16d8d263af90",
+    "tests/test_determinism.py": "d942cff4889e4b2d09732bd5e645cfb34b95d8f344ca148126bd62cbb168c51e",
+    "tests/test_map_walk.py": "a683d89361dcfc4a090c780496eca173902bb8ac28be3456fa32ff509a1e8919",
+    "tests/test_mapgen.py": "d92a8453e5b83af6c8f31e3ea746511df6464ac518ea56509c81e602323e908d",
+    "tests/test_platform.py": "d8c19f9def80443257c8c14439f307c7a5c7750aec56ff685fc50c325ccadd8b",
+    "tests/test_protocol.py": "fc7e1e5d7ea3266772d9dbbe824b85dfb1859e8875ee625a494ffb525ef00526",
+    "tests/test_review_policy.py": "62e25178eee54f347d8cb7d77d429f0b406777eef0c3b5b436c76f8f8c98ec1b",
+    "tests/test_review_runtime.py": "15239f21193c1f3858fbb506bc30b99e79b5e0eabf1b63c628088ea394dc7761",
+    "tests/test_rules.py": "26e2536ba9eff4eaba54ab2bad706d4bf215ff7784f325b7fc92b03c70fbd698",
+    "tests/test_runtime.py": "f653ee3ef82de55ab17b01b8e1e5a3fae77e1249a62d1b2fc5b70da881e9b375",
+    "tests/test_sdk.py": "c539328b32a901a1e258e620fd530eadfb8165506da5c2a14ebbc11807898b91",
+    "tests/test_zoo.py": "1fc9b20bff38519f7ed9516135410f7acc511b565cca097b82ab045423525796",
+    "tools/analyze_zoo.py": "be490435b5369695d3a24b69d331740188e91723102d768baebebe4f5d20216d",
+    "tools/audit_replays.py": "602a85a1327f63702cbbd8e43d6e325486d933f77c35d101dda483ba03a7897e",
+    "tools/check_environment.py": "29ac144a73b80d0f1c746a631222f0c8b7dc2f739d5e27a6ebaa9b616fc7f1ab",
+    "tools/generate_public_maps.py": "31214c5096f96e8fffc0cca1ba6e176b0890988f7ab86caf3908f02e5005bb37",
+    "tools/generate_zoo.py": "6f8699bb56de61266cd2d389a33b4f60da7ba7d74edf590b431d808230e01d72",
+    "tools/run_tests.py": "a66ec005ba4a543cf6508c69b8f53f07944774fd723f6e457e647fa178903ced",
+    "tools/test_in_wsl.py": "afb9196bbcad5f7af10833d563fe75fbb1ce41a8560985c9dd60d818025e369f",
+    "tools/test_outer_plain.py": "1d9b0be01f43bf67784eea5ff57080e4e194b5d037900fa4551bbe0e39b342c8",
+    "tools/zoo_strategy.hpp": "e6cbcec3a833de573aec877736207eef4d4c63e2c4ea7a6c463f26971a033c60"
+  },
+  "tests": [
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_cleanup.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 4,
+      "failures": 3,
+      "errors": 1,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.13415,
+      "measuredTestWallSeconds": 4.722913008,
+      "measuredReapedChildrenCpuSeconds": 0.279972,
+      "label": "before",
+      "rawFile": "runs/development/phase-a-cleanup/before.json",
+      "rawSha256": "51abecf0dc50a6d671ccddbdc20c97abbc5f970379132e264fc3a82ffe20a735",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/cleanup-before.log"
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_cleanup.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.4233792,
+      "measuredTestWallSeconds": 10.905130513,
+      "measuredReapedChildrenCpuSeconds": 1.384746,
+      "label": "after",
+      "rawFile": "runs/development/phase-a-cleanup/after.json",
+      "rawSha256": "51395ebe05a64a2679501ac8040047f358a22a83db78e13fa1ab4e52d66deab0",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/cleanup-after.log"
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 157,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 33.2231585,
+      "measuredTestWallSeconds": 85.606022163,
+      "measuredReapedChildrenCpuSeconds": 5.0375250000000005,
+      "label": "full-seed0",
+      "rawFile": "runs/development/phase-a-cleanup/full-seed0.json",
+      "rawSha256": "3307ea81c57a48f6fd0525e0ee551e96fcfe15e9dcceae4e1874cc9988a13247",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/cleanup-full-seed0.log"
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 157,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 33.8186957,
+      "measuredTestWallSeconds": 86.050157221,
+      "measuredReapedChildrenCpuSeconds": 5.162051,
+      "label": "full-seed1",
+      "rawFile": "runs/development/phase-a-cleanup/full-seed1.json",
+      "rawSha256": "9bd5d50ca619c5e6a1e538c020b9b28f3efdd890bbae35846a3007be2b425065",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/cleanup-full-seed1.log"
+    },
+    {
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 2,
+      "failures": 0,
+      "errors": 1,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.3523358,
+      "measuredTestWallSeconds": 3.837197775,
+      "measuredReapedChildrenCpuSeconds": 0.010147,
+      "label": "zoo-first",
+      "rawFile": "runs/development/zoo-v1-preflight/strategy-tests.json",
+      "rawSha256": "b8c760e757a6972e49b6eea52e12984a5587c81f73bc0c7c6277a2ec55616412",
+      "logFile": "runs/local-evidence/509f1f8-before-summary-only/logs/cleanup-zoo-first.log"
+    }
+  ],
+  "newAttemptCounts": {
+    "configuration_error": 4,
+    "infra_error": 25,
+    "complete": 88
+  },
+  "replayAudit": {
+    "allVerified": true,
+    "verificationCpuNs": 5176471600,
+    "wallNs": 2318376046,
+    "scope": "Current verifier checks transcript semantics; not timing authenticity or an independent-machine rerun."
+  },
+  "benchmarkAttempts": [
+    {
+      "rawFile": "runs/development/benchmark-tests/063f80bfc8f3453081a5cdc0da2c3e58/8b00255455e247c58f3620d8a1a46b28/result.json",
+      "sha256": "c3d20a7dc35f40b4946d5bf30f24186f50e1ac49f5132a5aa8ef0a9423cc8681",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 0.4181667
+    },
+    {
+      "rawFile": "runs/development/benchmark-tests/346c32cc6d7a4c82823f7d4a809edbbd/e79b7400f05e4544b1d13bf2d5cf40d8/result.json",
+      "sha256": "9be609195011f5a5a24aa3534ffe0962cb06a40864a45e0aea99e5a2f46fa835",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 0.4136336
+    },
+    {
+      "rawFile": "runs/development/benchmark-tests/693c0766658c4b24b2c40bf0fea09cc7/464d64cce2b44f239308b7a6baed680d/result.json",
+      "sha256": "273e676c823b288b69344294e76fe5302649e11bc47c20c80ba9f990f5936c78",
+      "status": "incomplete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 0.0
+    },
+    {
+      "rawFile": "runs/development/benchmark-tests/9efe18333e7d46179ee712e665daeca3/cf2fd029a76d4c0c95ea3e13ed84dc05/result.json",
+      "sha256": "1ea570f2e72c30ab4677fcd38de788cbb9da704e9bc3c2a8f34fd3b8bbb98c17",
+      "status": "incomplete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 0.0
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/0a9b4e3a61d74cae8f69f1ac84ecc93b/changed-map/bench/016fccc371ec48ecb7b738af87c56ccc/result.json",
+      "sha256": "49e4fae4f0f42e78510d698c660b0cdc9ad1b93e561ae6f1202fdc74fea832ec",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2284049
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/1caaa442ffce4894afcc8e41a70d4809/batch/bench/563b4174b94d4bc1bc07831098633d4d/result.json",
+      "sha256": "0caa87ac60f67707e4c9d9f8168a4f766eef26222a0adbb58e819f77d9b1ab92",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2323828
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/20642355ab1e44d49dcfd2540f0b89a7/batch/bench/0471a346b72c40a79b987a10716309fa/result.json",
+      "sha256": "825c5d47092e9ea8ccfbd8469e8f2c997898d8d6dadd170623c3bf1d1b3f1d1a",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2323867
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/20642355ab1e44d49dcfd2540f0b89a7/batch/bench/1bb9cd3e542d4bf3bcad04a3f3a8d2c5/result.json",
+      "sha256": "e923f18cf4ed7b8a5c1c289bd08a08d581ae81eed4b219375b3715dbd74c5a49",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2345979
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/20642355ab1e44d49dcfd2540f0b89a7/batch/bench/36c6a3d25e3d4793af4e763f84ced3b4/result.json",
+      "sha256": "7a9afe35a729755a72e8a95b78c9fa728d4d39fe6aae72b5b192a538298af5e2",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2262725
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/20642355ab1e44d49dcfd2540f0b89a7/batch/bench/a062f93c04964fa7ae7829720c228d41/result.json",
+      "sha256": "e33bbcb64f949e3335c14d04dbed341257ac16a15ae8e80b2ffae3ea592d7704",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2236011
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/20642355ab1e44d49dcfd2540f0b89a7/batch/bench/d16f6410215840e08333a884ee1250c9/result.json",
+      "sha256": "548836e318a4a1a52f9ce63567b27568ab26ef5e21d3e3f0e295c66dcf37fe27",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2268102
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/6b40d3c2b9b3452eae3b4c65e107da09/batch/bench/19a95758e3524e1696cdce4e81560e44/result.json",
+      "sha256": "a9aafaf4de1cc7a9b768a1879a375a522ba1dced842e5b57aa080f85eb15ea4f",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2260958
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/6b40d3c2b9b3452eae3b4c65e107da09/batch/bench/58602eec064749fb875bf1b8ef0a415f/result.json",
+      "sha256": "8b16582a0c96cd300eb0451bb9217206c63fb264c14d95475367a98127d4083d",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2312393
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/99e71d55598c4b2aa730f409f2f4659c/batch/bench/59a2440e5ffd465880004fdbb7241671/result.json",
+      "sha256": "384956a8a319feba61e47e1699a00762f590f9922a3f562c4f14913d92ff4034",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2425074
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/99e71d55598c4b2aa730f409f2f4659c/batch/bench/efe5ab6361f342a6b0f538d870bab4a2/result.json",
+      "sha256": "e257261d7010bd4fe8f979f1be936940dc6a2bcc3a1c1c6948e372a49e603767",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2473012
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/a60b96bce0ad4995a95420938d534389/batch/bench/307501296f714928a724e1dde4997ae8/result.json",
+      "sha256": "bcc2b028a44d529e70518b0b38f099fedec6e5e9011cf728acaa2bc8324ddb31",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2429803
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/b178107c27064092a2864a5360d59516/batch/bench/8d501c68de2140828622823811c95aa2/result.json",
+      "sha256": "355ef8b8200189461f96ff79d4833c5cb74d93ee718df29f58646fb00f509610",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2369932
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/c352904d4e444e1c982788218ef8190c/batch/bench/0d1f348411ba47698e254341f96e041f/result.json",
+      "sha256": "78f35d8342de3d79c4c90fa1192a3856bf4e476798f9171cdfa26c73db3ad421",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2271527
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/c352904d4e444e1c982788218ef8190c/batch/bench/291fe6f19ae1472aaa82b842180511e9/result.json",
+      "sha256": "38d5203c5589fbade100a1986fc09ab257bc332a42ac6db54cd7eae6e409f99a",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2350684
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/c352904d4e444e1c982788218ef8190c/batch/bench/378729cbc7824c309db0a9a0532885b2/result.json",
+      "sha256": "2cea3d2a5a80fb7b3bdf69f34b1d9361ef4668f7b505727b50299969f9dc97f9",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2370816
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/c352904d4e444e1c982788218ef8190c/batch/bench/7ea24eca02ef476c9467111cdd98d3bf/result.json",
+      "sha256": "a861beee897a4eb395f8a28a1228aff1e8eba8102bfdd0ab22eee09dd48ffa02",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2423536
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/c352904d4e444e1c982788218ef8190c/batch/bench/cfc9a490ecc542d988e9faf609772c38/result.json",
+      "sha256": "71b225845503de8707fe7e167de3aa4406859a6e312828c94609f9a700d2725a",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2356412
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/d1116d66b4224231890e20b40192826c/changed-map/bench/458b7fcc898642929a69ae8d36761847/result.json",
+      "sha256": "ecad83a4d635668b8e0875138624680ef9e175743b42882f90b63136aabb7ac0",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2368611
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/dbcefe9adf2e44aca577fe18fdae14fd/batch/bench/18024dfdcfca4be9b73c0942a6b8f712/result.json",
+      "sha256": "1aeba12d28b9f0ea2ef4f5922f78fe2a3e0d7d68dbd5a1fca8c73a71fbbbde94",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2300535
+    },
+    {
+      "rawFile": "runs/development/cleanup-tests/dbcefe9adf2e44aca577fe18fdae14fd/batch/bench/7b55847660164c5f9f16a4d4b2565ba7/result.json",
+      "sha256": "453017b23ae6d031b545aed89a683eefe6b156598a2308dff21106b9721af6de",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2341729
+    },
+    {
+      "rawFile": "runs/development/platform-tests/7cbb947d39ed495fb8cdf95441410431/batch/bench/e5aff40c0e534983888ce9ee0b8680fb/result.json",
+      "sha256": "e73f21f5a114e0fff1b482f9f2fff550603bb1725150ba97138c866fcb6f9b78",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 2.0562212
+    },
+    {
+      "rawFile": "runs/development/platform-tests/7cbb947d39ed495fb8cdf95441410431/batch/bench/eb7ee939cac44919b6390e96325e6287/result.json",
+      "sha256": "362229d490ea1ab131377d313b9fbf90264211e0de5bb73313b94c47b274890d",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 2.0694664
+    },
+    {
+      "rawFile": "runs/development/platform-tests/7cbb947d39ed495fb8cdf95441410431/interrupt/bench/8ca1b856ebf54626a41e1dd24a694a14/result.json",
+      "sha256": "15658a4cdc0565a3d205fb0d1e0639729c3b8ac70d936790abfe69766afc309c",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2296109
+    },
+    {
+      "rawFile": "runs/development/platform-tests/7cbb947d39ed495fb8cdf95441410431/interrupt/bench/a9f71deecabf4b649d754f44a5118509/result.json",
+      "sha256": "a7c1c345b839850ebdbac9a736db567a43b363c2dbc12162e266485e507a642c",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2259452
+    },
+    {
+      "rawFile": "runs/development/platform-tests/7cbb947d39ed495fb8cdf95441410431/outer/dc3b81e2b7ff4778a0f9cdb47e08e3c2/workspace/evidence/batch/bench/dde9ca9e9b1342d3ad9f67c28e0083c5/result.json",
+      "sha256": "48ace576750d07a9a7e04bb17a76c211a26f4321c4a58665047e21e728369e7f",
+      "status": "complete",
+      "sandbox": "plain",
+      "recordedBenchmarkCpuSeconds": 2.0561461
+    },
+    {
+      "rawFile": "runs/development/platform-tests/7cbb947d39ed495fb8cdf95441410431/outer/dc3b81e2b7ff4778a0f9cdb47e08e3c2/workspace/evidence/bench/cc18c593973a4574ae935e7477ca999a/result.json",
+      "sha256": "0e661e1f38ba4b500880d7fdecabcef9cf45813b37867b9c6343274ce2706ffe",
+      "status": "complete",
+      "sandbox": "plain",
+      "recordedBenchmarkCpuSeconds": 0.4135918
+    },
+    {
+      "rawFile": "runs/development/platform-tests/84702b00337348b4bc919f56dc6dc0d6/batch/bench/1dd8c807823c49798a7160b17eb6bd2e/result.json",
+      "sha256": "9dcc1e3c9da04888f85cc039da43d52a9e4b7983572c2841be5e20eed3589fa1",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 2.0682308
+    },
+    {
+      "rawFile": "runs/development/platform-tests/84702b00337348b4bc919f56dc6dc0d6/batch/bench/8c44105d0c534960bd67aa38badc1ad6/result.json",
+      "sha256": "713fd951aecfe799abaeb5d60548b6ddb1decbc4a6cfc1bad3253cd30f9e5c40",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 2.0496484
+    },
+    {
+      "rawFile": "runs/development/platform-tests/84702b00337348b4bc919f56dc6dc0d6/interrupt/bench/078aec1fd4ae4581afcb9a67afe86223/result.json",
+      "sha256": "1c5eba44542e32b4735af27f0e0a822657dd0d88bf21d91adb1355199f2e66d2",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2375732
+    },
+    {
+      "rawFile": "runs/development/platform-tests/84702b00337348b4bc919f56dc6dc0d6/interrupt/bench/7b8c4b8f11ae4dedbf1e10dd9b7a18f2/result.json",
+      "sha256": "186df04e816505be2c6578570e23a058be77d22948673734082dcdc643f683c6",
+      "status": "complete",
+      "sandbox": "bwrap",
+      "recordedBenchmarkCpuSeconds": 1.2311451
+    },
+    {
+      "rawFile": "runs/development/platform-tests/84702b00337348b4bc919f56dc6dc0d6/outer/a4d11a3f0a8140469e21e50375b6d3ec/workspace/evidence/batch/bench/b52a8f1948b240e396e45d661b3a28fd/result.json",
+      "sha256": "f740a219bb430f7e003bed2238fffa1fea59cd3d6abcb212eca2fa5654e87db7",
+      "status": "complete",
+      "sandbox": "plain",
+      "recordedBenchmarkCpuSeconds": 2.0648016
+    },
+    {
+      "rawFile": "runs/development/platform-tests/84702b00337348b4bc919f56dc6dc0d6/outer/a4d11a3f0a8140469e21e50375b6d3ec/workspace/evidence/bench/6a49bef1d57940979444ec76ce4460e4/result.json",
+      "sha256": "e790f4b33e95df326cb3d1c64054cee5468ba37db9aa1cb1c7260de3b90a4d97",
+      "status": "complete",
+      "sandbox": "plain",
+      "recordedBenchmarkCpuSeconds": 0.4121926
+    }
+  ],
+  "benchmarkAttemptCounts": {
+    "complete": 35,
+    "incomplete": 2
+  },
+  "usage": {
+    "measuredTestProcessCpuSeconds": 67.9517192,
+    "replayVerificationCpuNs": 5176471600,
+    "totalCpuHours": null
+  },
+  "remaining": [
+    "full compiler-tree/resource and cleanup stress probes",
+    "D6 public-map matrix",
+    "efficiency acceptance",
+    "phase-A review"
+  ],
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/cleanup-tests.json",
+    "originalSha256": "451f5f495b8d037502013059e9aa1d878fdfde1a7e14d7ad6ac93f88542ea7d5",
+    "omittedLocalSections": {
+      "newAttempts": 117,
+      "unrecordedOriginalWorkerStarts": 1,
+      "replayAudit/replays": 88,
+      "nonMatchFixtureLedgers": 71
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

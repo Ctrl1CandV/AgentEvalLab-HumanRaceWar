@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "scope": "Fixed 16-worker economy candidate plus M v11; decision tests, not balance acceptance",
+  "pattern": "test_zoo_strategy.py",
+  "python": "3.13.15",
+  "system": "Linux",
+  "kernel": "6.18.40.1-microsoft-standard-WSL2",
+  "testsRun": 15,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "measuredTestProcessCpuSeconds": 0.0424075,
+  "measuredTestWallSeconds": 3.571000993,
+  "measuredReapedChildrenCpuSeconds": 0.02831,
+  "zooVersion": 12,
+  "sourceReport": "runs/development/review-balance-2026-11-07/economy16-tests.json",
+  "sourceReportSha256": "73593e592e5f4b27fb72d2698d317fdc0bf70dbd6a2b64b2821bc46f5c6e4807",
+  "log": "runs/local-evidence/509f1f8-before-summary-only/logs/review-balance-economy16-tests.log",
+  "sourceSha256": {
+    "tools/zoo_strategy.hpp": "215c0b8182475ef1917289369d9b98cf370ba7a8e29795aa36eec882d31a4517",
+    "tools/generate_zoo.py": "54e0a40a07873081751d0cf778f43bf05bca137eac0625c4eee93b67b068ae0f",
+    "bots/catalog.json": "eea85df6a9d035776f1a8b3cf05f3bc33e543d18513cbfbf04a5fb00cae63992",
+    "bots/public/Z-eco/main.cpp": "efc8fc034404bf09087c48aec63ac0dc12ee61c4254c4c36cbd92900d097edf9",
+    "tests/test_zoo_strategy.py": "8ea6c45bbd8cd48fcabc659e698ef743379c37554ede8012c34da362ecfa06be"
+  },
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v12-regression.json",
+    "originalSha256": "7311210ca0312b1e68bb30eda52abcfb6f385be26f2ce7f3cd8314d5839c104d",
+    "omittedLocalSections": {},
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

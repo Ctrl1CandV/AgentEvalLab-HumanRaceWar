@@ -1,0 +1,52 @@
+{
+  "scope": "bounded 6 concurrent games/12 bots; threaded timeout and cleanup",
+  "summary": {
+    "schemaVersion": 1,
+    "status": "complete",
+    "tasks": 6,
+    "completed": 6,
+    "remaining": 0,
+    "jobs": 6,
+    "sandbox": "bwrap",
+    "newExecutions": 6,
+    "directory": "runs/development/security-stress-v1/batch",
+    "results": "runs/development/security-stress-v1/batch/results.jsonl",
+    "infraErrorAttempts": 0
+  },
+  "sandboxPidStatesAfterCompletion": {
+    "144113": null,
+    "144116": null,
+    "144119": null,
+    "144122": null,
+    "144124": null,
+    "144128": null,
+    "144151": null,
+    "144162": null,
+    "144165": null,
+    "144196": null,
+    "144197": null,
+    "144230": null
+  },
+  "replayAudit": {
+    "allVerified": true,
+    "verificationCpuNs": 6287300,
+    "wallNs": 214535599,
+    "scope": "Current verifier checks transcript semantics; not timing authenticity or an independent-machine rerun."
+  },
+  "allCorrectTimeouts": true,
+  "allKnownLeadersStopped": true,
+  "limits": "Leader/namespace cleanup plus separate descendant probes; not all kernel attack surfaces or hard aggregate compiler resources.",
+  "totalCpuHours": null,
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/security-stress.json",
+    "originalSha256": "dd74ec195fe7d5a36fb7a006bb8b27ebac8d9dbb92781dd5affa16c7fd54c165",
+    "omittedLocalSections": {
+      "results/<item>": 6,
+      "replayAudit/replays": 6
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

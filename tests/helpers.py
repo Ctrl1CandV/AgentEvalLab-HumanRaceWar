@@ -13,7 +13,8 @@ from arena.games.outpost.orders import decode
 
 
 # Pin historical rule examples independently of balance-tuned defaults.
-# Default setup/parameters and the passing full-matrix replay have separate tests.
+# Default setup and frozen matrix parameters have separate tests.
+# Full real-game replay evidence remains in the local archive, not the repository.
 STARTING_RULES = json.loads((Path(__file__).parent / "fixtures/starting-rules.json").read_text())
 
 

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "scope": "Fixed eighteen-worker economy and earlier M assault; targeted losses retained, full D6 pending",
+  "pattern": "test_zoo_strategy.py",
+  "python": "3.13.15",
+  "system": "Linux",
+  "kernel": "6.18.40.1-microsoft-standard-WSL2",
+  "testsRun": 17,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "measuredTestProcessCpuSeconds": 0.0475766,
+  "measuredTestWallSeconds": 3.856119182,
+  "measuredReapedChildrenCpuSeconds": 0.034072,
+  "zooVersion": 14,
+  "sourceReport": "runs/development/review-balance-2026-11-07/earlier-assault-tests.json",
+  "sourceReportSha256": "dbec4fd1c7c545e892ee8216516fcf4cb0cbe95159fc427a361529676600aaff",
+  "log": "runs/local-evidence/509f1f8-before-summary-only/logs/review-balance-earlier-assault-tests.log",
+  "sourceSha256": {
+    "tools/zoo_strategy.hpp": "384991b29bc4466bcd76dc5b93559e6494cf68cde833b35a8d1cdc4cb9a074dc",
+    "tools/generate_zoo.py": "4633304b922d2117d1dff2ae2c7156e6a606ced4294aba084ac85aa46122a772",
+    "bots/catalog.json": "95154fe904f6740d453be453cf79b0936b7e6bf689b9c5d2d6534e41a54d3ec6",
+    "bots/public/Z-eco/main.cpp": "2e84d17d602168437f40bad8b7f3e2f3a44463917884a952d22b32995f764f34",
+    "bots/public/M-balanced/main.cpp": "4be087f78933329e52782db4788dc2953e5b947c47f26f5f3b2437e35790bc65",
+    "tests/test_zoo_strategy.py": "ad783d3bd2d86d5a06674678a3a026a7f64aa7abbc939974236a048d13ef173f"
+  },
+  "_publication": {
+    "kind": "review-summary",
+    "sourceSnapshot": "509f1f8",
+    "originalLocalPath": "runs/local-evidence/509f1f8-before-summary-only/data/zoo-v14-regression.json",
+    "originalSha256": "a46dae7b5e8b765c72b30394277569c6052ee2c46e8c4149449acfaa8acf08e2",
+    "omittedLocalSections": {
+      "targeted": 2
+    },
+    "originalReferencedReportSha256": {},
+    "note": "Derived packaging only. Aggregate values, failures and historical conclusions are unchanged. Full evidence is preserved locally; this is not a new run."
+  }
+}

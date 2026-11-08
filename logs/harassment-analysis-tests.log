@@ -1,9 +1,0 @@
-test_contact_ratio_is_per_sample_not_ratio_of_medians (tests.test_harassment_analysis.HarassmentAnalysisTests.test_contact_ratio_is_per_sample_not_ratio_of_medians) ... ok
-test_home_walk_uses_terrain_and_counts_first_step (tests.test_harassment_analysis.HarassmentAnalysisTests.test_home_walk_uses_terrain_and_counts_first_step) ... ok
-test_local_counts_are_soldiers_only_and_radius_four (tests.test_harassment_analysis.HarassmentAnalysisTests.test_local_counts_are_soldiers_only_and_radius_four) ... ok
-test_worker_candidate_survives_two_hits_without_reversing_single_duel (tests.test_harassment_analysis.HarassmentAnalysisTests.test_worker_candidate_survives_two_hits_without_reversing_single_duel) ... ok
-
-----------------------------------------------------------------------
-Ran 4 tests in 0.002s
-
-OK

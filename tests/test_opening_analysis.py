@@ -4,7 +4,9 @@ import gzip
 import json
 from pathlib import Path
 import unittest
+from uuid import uuid4
 
+from tests.synthetic_replay import legacy_replay
 from tools.analyze_opening import inspect, summarize
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,13 +28,14 @@ class OpeningAnalysisTests(unittest.TestCase):
         self.assertEqual(contact['focusWorkerKilledBeforeContact'], 1)
         self.assertEqual(contact['globalMedianFocusHarass'], [6, 10])
 
-    def test_existing_public_replay_first_spawn_matches_accepted_transcript(self):
-        path = ROOT/'replays/runtime-smoke.hrw.jsonl.gz'
+    def test_synthetic_replay_first_spawn_matches_accepted_transcript(self):
+        path = legacy_replay(ROOT/'runs/development/synthetic-replay-tests'/uuid4().hex/'legacy.hrw.jsonl.gz')
         with gzip.open(path, 'rt') as stream:
             records = [json.loads(line) for line in stream]
         first = next((r['turn'] for r in records if r['type'] == 'turn'
                       and any(o['op'] == 'SPAWN' and o['kind'] == 'S' for o in r['accepted'][0])), None)
-        result = inspect({'taskId': 'public-smoke-diagnostic', 'mapName': 'smoke.map',
+        self.assertEqual(first, 1)
+        result = inspect({'taskId': 'synthetic-diagnostic', 'mapName': 'smoke.map',
                           'result': records[-1]['result'], 'replay': str(path),
                           'replaySha256': sha256(path.read_bytes()).hexdigest()}, 0)
         self.assertEqual(result['firstFocusSoldier'], first)
