@@ -49,7 +49,7 @@ class MapGeneratorTests(unittest.TestCase):
                     self.assertEqual(sum(n for _, _, n in board.initial_ore), 22800)
                     self.assertEqual(sum(row.count("S") for row in board.rows), 10)
                     state = Outpost().new_match(generated.text, {}, [1, 2])
-                    self.assertEqual(len(state.units), 4)
+                    self.assertEqual(len(state.units), 8)  # standard-1: four workers per player
                     self.assertEqual(generated.text, map_text(board))
                     # Independent flood fill, not the generator's traversal.
                     ground = {(x, y) for y, row in enumerate(board.rows) for x, c in enumerate(row) if c == "."}

@@ -7,14 +7,14 @@ import unittest
 from arena.games.outpost import Outpost
 from arena.games.outpost.engine import event_key
 from arena.games.outpost.model import Tower
-from tests.helpers import fixture_map, fresh, rotate_event, rotate_lines, rotate_state, settle
+from tests.helpers import STARTING_RULES, fixture_map, fresh, rotate_event, rotate_lines, rotate_state, settle
 
 
 class DeterminismTests(unittest.TestCase):
     def test_initial_setup_rotates_with_players_and_seeds(self):
         game = Outpost()
-        a = game.new_match(fixture_map(), {}, [17, 29])
-        b = game.new_match(fixture_map(), {}, [29, 17])
+        a = game.new_match(fixture_map(), STARTING_RULES, [17, 29])
+        b = game.new_match(fixture_map(), STARTING_RULES, [29, 17])
         self.assertEqual(game.snapshot(rotate_state(a)), game.snapshot(b))
         self.assertEqual(game.snapshot(rotate_state(rotate_state(a))), game.snapshot(a))
         # Pinned development format, also checked in separate hash-seed processes.
@@ -22,8 +22,8 @@ class DeterminismTests(unittest.TestCase):
 
     def test_same_fixed_instruction_transcript_has_same_hash_every_turn(self):
         game = Outpost()
-        a = game.new_match(fixture_map(), {}, [17, 29])
-        b = game.new_match(fixture_map(), {}, [17, 29])
+        a = game.new_match(fixture_map(), STARTING_RULES, [17, 29])
+        b = game.new_match(fixture_map(), STARTING_RULES, [17, 29])
         hashes = []
         for turn in range(80):
             direction = ("E", "S", "W", "N")[turn % 4]
@@ -36,6 +36,23 @@ class DeterminismTests(unittest.TestCase):
         self.assertEqual(len(set(hashes)), 80)
         self.assertRegex(hashes[-1], "^[0-9a-f]{16}$")
         self.assertEqual(hashes[-1], "daa49b005ded38f4")
+
+    def test_frozen_defaults_rotate_and_replay_every_turn(self):
+        game = Outpost()
+        a = game.new_match(fixture_map(), {}, [17, 29])
+        duplicate = game.new_match(fixture_map(), {}, [17, 29])
+        mirrored = game.new_match(fixture_map(), {}, [29, 17])
+        for turn in range(80):
+            self.assertEqual(game.state_hash(a), game.state_hash(duplicate))
+            self.assertEqual(game.snapshot(rotate_state(a)), game.snapshot(mirrored))
+            direction = ("E", "S", "W", "N")[turn % 4]
+            left = [f"MOVE 0 {direction}", "MOVE 2 E", "SPAWN W 3 2", "FIRE 4 2"]
+            right = ["MOVE 1 W", "MOVE 3 N", "SPAWN S 20 21", "bad"]
+            settle(game, a, left, right)
+            settle(game, duplicate, left, right)
+            settle(game, mirrored, rotate_lines(right), rotate_lines(left))
+        self.assertEqual(game.state_hash(a), game.state_hash(duplicate))
+        self.assertEqual(game.snapshot(rotate_state(a)), game.snapshot(mirrored))
 
     def test_hash_does_not_depend_on_dictionary_or_event_insertion_order(self):
         game, a = fresh()

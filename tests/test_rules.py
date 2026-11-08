@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from pathlib import Path
+import gzip
+import json
 import re
 import unittest
 from typing import MutableMapping, cast
@@ -35,10 +37,10 @@ class MapAndSetupTests(unittest.TestCase):
         defaults = Rules.from_dict({})
         # Independent contract copied from DESIGN appendix A, not generated from code.
         expected = {
-            "TURNS": 300, "START_ENERGY": 300, "START_WORKERS": 2, "POP_CAP": 40,
-            "BASE_HP": 1000, "BASE_FIRE_DMG": 10, "BASE_FIRE_RANGE": 2, "SPAWN_RANGE": 2,
-            "REGEN_HP": 5, "REGEN_RANGE": 2, "WORKER_COST": 50, "WORKER_HP": 40,
-            "WORKER_DMG": 5, "MINE_RATE": 10, "CARRY_MAX": 60, "SOLDIER_COST": 100,
+            "TURNS": 300, "START_ENERGY": 500, "START_WORKERS": 4, "POP_CAP": 40,
+            "BASE_HP": 600, "BASE_FIRE_DMG": 10, "BASE_FIRE_RANGE": 2, "SPAWN_RANGE": 2,
+            "REGEN_HP": 5, "REGEN_RANGE": 2, "WORKER_COST": 40, "WORKER_HP": 60,
+            "WORKER_DMG": 10, "MINE_RATE": 10, "CARRY_MAX": 60, "SOLDIER_COST": 80,
             "SOLDIER_HP": 100, "SOLDIER_DMG": 20, "TOWER_COST": 150, "TOWER_HP": 300,
             "TOWER_POINTS": 1,
         }
@@ -64,6 +66,17 @@ class MapAndSetupTests(unittest.TestCase):
                 self.assertEqual(value, PARAMETERS[name][0], f"documented {name}")
                 documented[name] = value
         self.assertEqual(documented, dict(Rules.from_dict({}).values))
+
+    def test_frozen_defaults_match_the_actual_full_matrix_configuration(self):
+        root = Path(__file__).resolve().parents[1]
+        params = json.loads((root / "rules/standard-1.json").read_text())
+        with gzip.open(root / "replays/phase-a-v15-maze-loss.hrw.jsonl.gz", "rt") as stream:
+            header = json.loads(next(stream))
+        self.assertEqual(params, header["params"])
+        self.assertEqual(dict(Rules.from_dict({}).values), params)
+        game = Outpost()
+        state = game.new_match(header["map"], {}, header["seeds"])
+        self.assertEqual(game.state_hash(state), header["initialStateHash"])
 
     def test_map_round_trip(self):
         board = parse_map(fixture_map())
@@ -95,13 +108,14 @@ class MapAndSetupTests(unittest.TestCase):
         state = game.new_match(fixture_map(), {}, [17, 29])
         self.assertEqual(state.turn, 0)
         self.assertIsNone(game.result(state))
-        self.assertEqual(len(state.units), 4)
-        self.assertEqual([p.energy for p in state.players], [300, 300])
-        self.assertEqual([p.base_hp for p in state.players], [1000, 1000])
-        self.assertEqual([u.pos for u in state.units.values()], [(2, 1), (1, 2), (21, 22), (22, 21)])
+        self.assertEqual(len(state.units), 8)
+        self.assertEqual([p.energy for p in state.players], [500, 500])
+        self.assertEqual([p.base_hp for p in state.players], [600, 600])
+        self.assertEqual([u.pos for u in state.units.values()],
+                         [(2, 1), (1, 2), (3, 2), (2, 3), (21, 22), (22, 21), (20, 21), (21, 20)])
         for unit in state.units.values():
             self.assertEqual(unit.id % 2, unit.owner)
-            self.assertEqual((unit.kind, unit.hp, unit.carry), ("W", 40, 0))
+            self.assertEqual((unit.kind, unit.hp, unit.carry), ("W", 60, 0))
             self.assertLessEqual(distance(unit.pos, state.players[unit.owner].pos), 2)
 
     def test_start_workers_range_and_seed_validation(self):

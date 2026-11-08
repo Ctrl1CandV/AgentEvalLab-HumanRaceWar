@@ -33,7 +33,7 @@ class HarassmentAnalysisTests(unittest.TestCase):
         self.assertEqual(report['contactLocalHarassToOpponentRatioMedian'], 2)
 
     def test_worker_candidate_survives_two_hits_without_reversing_single_duel(self):
-        for rules, alive_after_two, soldier_hp in (({}, False, 90),
+        for rules, alive_after_two, soldier_hp in (({'WORKER_HP': 40, 'WORKER_DMG': 5}, False, 90),
                 ({'WORKER_HP': 60, 'WORKER_DMG': 10}, True, 70)):
             with self.subTest(rules=rules):
                 game, state = fresh()

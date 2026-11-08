@@ -2,12 +2,19 @@
 from __future__ import annotations
 
 from dataclasses import replace
+import json
+from pathlib import Path
 
 from arena.core.game import Event
 from arena.games.outpost import Outpost
 from arena.games.outpost.engine import event_key
 from arena.games.outpost.model import State
 from arena.games.outpost.orders import decode
+
+
+# Pin historical rule examples independently of balance-tuned defaults.
+# Default setup/parameters and the passing full-matrix replay have separate tests.
+STARTING_RULES = json.loads((Path(__file__).parent / "fixtures/starting-rules.json").read_text())
 
 
 def fixture_map(base=(2, 2), extra=(), size=24) -> str:
@@ -25,7 +32,7 @@ def fixture_map(base=(2, 2), extra=(), size=24) -> str:
 
 def fresh(**kwargs):
     game = Outpost()
-    state = game.new_match(fixture_map(**kwargs), {}, [17, 29])
+    state = game.new_match(fixture_map(**kwargs), STARTING_RULES, [17, 29])
     state.units.clear()
     return game, state
 

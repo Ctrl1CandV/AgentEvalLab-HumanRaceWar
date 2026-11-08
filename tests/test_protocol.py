@@ -6,7 +6,7 @@ from arena.games.outpost import Outpost
 from arena.games.outpost.model import Tower
 from arena.games.outpost.orders import MAX_LINE_BYTES, MAX_TURN_BYTES, MAX_TURN_LINES
 from arena.games.outpost.rules import PARAMETERS
-from tests.helpers import fixture_map, fresh, settle
+from tests.helpers import STARTING_RULES, fixture_map, fresh, settle
 
 
 class ProtocolTests(unittest.TestCase):
@@ -22,7 +22,11 @@ class ProtocolTests(unittest.TestCase):
         lines = self.game.init_message(self.state, 0)
         self.assertEqual(lines[:4], ["HRW 1", "RULESET standard-1", "YOU 0", "SEED 17"])
         params = {line.split()[1]: int(line.split()[2]) for line in lines if line.startswith("PARAM ")}
-        self.assertEqual(params, {key: values[0] for key, values in PARAMETERS.items()})
+        self.assertEqual(params, STARTING_RULES)
+        current = self.game.new_match(fixture_map(), {}, [17, 29])
+        current_params = {line.split()[1]: int(line.split()[2])
+                          for line in self.game.init_message(current, 0) if line.startswith("PARAM ")}
+        self.assertEqual(current_params, {key: values[0] for key, values in PARAMETERS.items()})
         self.assertIn("LIMIT TURN_CPU_MS 100", lines)
         self.assertIn("LIMIT INIT_CPU_MS 2000", lines)
         self.assertIn("LIMIT BANK_MS 3000", lines)

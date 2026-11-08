@@ -1,8 +1,8 @@
-# 前哨：规则与协议（A 阶段开发草稿）
+# 前哨：规则与协议
 
-规则集：`standard-1` 起点；引擎：`0.1.0-dev`；协议：HRW 1。
+规则集：`standard-1`（2026-11-08 A阶段交审配置）；引擎：`0.1.0-dev`；协议：HRW 1。
 
-**当前已有引擎、沙箱运行器、SDK、match、回放与地图生成工具。** 已提供bench/独立时限折算，公开地图v2已通过步行距离检查；尚未完成批量调度、动物园、平衡和效率验收。边界解释已由 2026-11-07 中途审查确认；规则集仍未冻结。
+已提供引擎、沙箱运行器、SDK、match、回放、地图、bench、check与tournament。A阶段交付等待审查；对手阶梯及正式任务包尚未交付。全部规则参数见 `standard-1.json`，实际对局以初始化PARAM为准。
 
 ## 1. 棋盘与目标
 
@@ -22,24 +22,24 @@
 
 | 实体 | 造价 | 生命上限 | 相邻攻击伤害 |
 |---|---:|---:|---:|
-| 工兵 W | 50 | 40 | 5 |
-| 战士 S | 100 | 100 | 20 |
-| 基地 | — | 1000 | 使用 FIRE，伤害 10、射程 2 |
+| 工兵 W | 40 | 60 | 10 |
+| 战士 S | 80 | 100 | 20 |
+| 基地 | — | 600 | 使用 FIRE，伤害 10、射程 2 |
 | 塔 | 150 | 300 | 无攻击 |
 
 工兵每回合最多采 10，最多携带 60；只有工兵能采矿、卸货和建塔。塔建在空塔基上，每回合贡献 1 分，同时是卸货点。塔被摧毁后留下空塔基，不能占领敌塔。
 
-每方开局基地满血、能量 300、2 个满血工兵，初始站位两方对称。工兵和战士合计至多 40。基地每回合最多生产一个单位，生产位置距基地不超过 2；距己方基地不超过 2 的己方单位，每回合回复 5 生命，不超过上限。
+每方开局基地满血、能量 500、4 个满血工兵，初始站位两方对称。工兵和战士合计至多 40。基地每回合最多生产一个单位，生产位置距基地不超过 2；距己方基地不超过 2 的己方单位，每回合回复 5 生命，不超过上限。
 
 协议会发送下列全部参数，bot 应读取而非把数值写死：
 
 ```text
-TURNS 300              START_ENERGY 300       START_WORKERS 2
-POP_CAP 40             BASE_HP 1000           BASE_FIRE_DMG 10
+TURNS 300              START_ENERGY 500       START_WORKERS 4
+POP_CAP 40             BASE_HP 600            BASE_FIRE_DMG 10
 BASE_FIRE_RANGE 2      SPAWN_RANGE 2          REGEN_HP 5
-REGEN_RANGE 2          WORKER_COST 50         WORKER_HP 40
-WORKER_DMG 5           MINE_RATE 10           CARRY_MAX 60
-SOLDIER_COST 100       SOLDIER_HP 100         SOLDIER_DMG 20
+REGEN_RANGE 2          WORKER_COST 40         WORKER_HP 60
+WORKER_DMG 10          MINE_RATE 10           CARRY_MAX 60
+SOLDIER_COST 80        SOLDIER_HP 100         SOLDIER_DMG 20
 TOWER_COST 150         TOWER_HP 300           TOWER_POINTS 1
 ```
 
@@ -70,7 +70,7 @@ TOWER_COST 150         TOWER_HP 300           TOWER_POINTS 1
 8. **回复**：按移动后的坐标回复己方基地附近的存活单位；不会救活已死亡单位，塔不会回复。
 9. **计分**：每座现存己方塔加 1 分，包括本回合新建的塔。然后检查回合上限。
 
-移动受阻、建造争抢或缺钱等不导致判负，通过 INVALID 事件告知本方。上述边界处理已确认；当前诊断计数仍将输入警告与执行失败合并，后续会分列，不改变结算或胜负。
+移动受阻、建造争抢或缺钱等不导致判负，通过 INVALID 事件告知本方。输入警告与执行失败分别统计，不改变结算或胜负。
 
 ## 4. bot 协议
 
@@ -84,7 +84,7 @@ RULESET standard-1
 YOU 0
 SEED 8273645512
 PARAM TURNS 300
-PARAM START_ENERGY 300
+PARAM START_ENERGY 500
 ...其余全部参数，每行 PARAM 名称 数值...
 LIMIT TURN_CPU_MS 100
 LIMIT INIT_CPU_MS 2000
@@ -152,7 +152,7 @@ bot 强制单进程，不能 fork/vfork 或改变绑核；可开线程，沙箱�
 
 运行时地址空间 512 MiB，单文件上限 16 MiB，打开文件至多 64 个，禁用 core dump。**运行时合成根目录 `/`、`/tmp` 和 `/dev` 文件系统只读，不支持写临时文件或共享内存文件；标准输入输出和设备读写不因此禁用。** 这是当前实现选择，不承诺可写 64 MiB 临时空间；本地 plain 工具也须告知相同评分限制。运行时禁止新进程/命名空间、修改绑核、ptrace/跨进程内存访问及内存文件、SysV IPC和POSIX消息队列分配。普通线程、锁和条件变量仍可用。标准错误本地最多保留 64 KiB，评分时丢弃。
 
-所有 bot 和 C++ 编译都在沙箱内，不联网；评分和校准使用 bubblewrap。plain 只供已有外层沙箱的本地工作区使用。C++ 编译要求 GCC 11、`g++ -O2 -std=gnu++20 -I/sdk -o bot *.cpp`、墙钟及CPU均有60秒上限、每进程地址空间2 GiB、任务数上限16、单文件64 MiB；编译串行执行，编译临时文件使用本方磁盘构建目录，不使用无总量限制的 RAM tmpfs。Python 要求 3.13，框架只用标准库。bot 编译失败、无 READY、启动标记后以任何退出码退出或超时判负；双方同回合出错则平局。运行器未收到可信启动标记的沙箱准备失败、机器资源或框架故障不算 bot 输，最多重试三次并保留所有记录；隐藏对手或地图配置错误不能算提交方输。**真实 bwrap 回归、批量折算接线和全局 CPU 租约已有；完整沙箱/效率验收仍在进行，不能用于正式评分。**
+所有 bot 和 C++ 编译都在沙箱内，不联网；评分和校准使用 bubblewrap。plain 只供已有外层沙箱的本地工作区使用。C++ 编译要求 GCC 11、`g++ -O2 -std=gnu++20 -I/sdk -o bot *.cpp`、墙钟及CPU均有60秒上限、每进程地址空间2 GiB、任务数上限16、单文件64 MiB；编译串行执行，编译临时文件使用本方磁盘构建目录，不使用无总量限制的 RAM tmpfs。Python 要求 3.13，框架只用标准库。bot 编译失败、无 READY、启动标记后以任何退出码退出或超时判负；双方同回合出错则平局。运行器未收到可信启动标记的沙箱准备失败、机器资源或框架故障不算 bot 输，最多重试三次并保留所有记录；隐藏对手或地图配置错误不能算提交方输。**真实bwrap回归、批量折算与全局CPU租约已验证；正式评分仍需后续阶段交付和审查。**
 
 评分看对固定阶梯的对局表现，胜负最重要，细节不公开。约 12 级，每级 2–3 个不同风格对手，覆盖进攻、经济、控制：L0–L2 为公开的简单策略；L3–L5 有任务分配和局部估计；L6–L9 会搜索、调整打法和选路线；L10–L11 为长期开发和调参的强对手。模型应尽力赢，不需要知道内部评分细节。
 
@@ -169,6 +169,6 @@ bot 强制单进程，不能 fork/vfork 或改变绑核；可开线程，沙箱�
 .venv/bin/python -m arena replay summary <回放路径>
 ```
 
-`match` 默认把所有尝试、结果和回放留在 `runs/matches/`，可加 `--show-stderr` 查看 stderr。测试地图不是验收地图；不提供校准时仍是未折算开发局，正式评测机参考尚未提供。详细用法和限制见 `docs/RUNTIME.md`。
+`match` 默认把所有尝试、结果和回放留在 `runs/matches/`，可加 `--show-stderr` 查看 stderr。测试地图不是验收地图；不提供校准时仍是未折算开发局；使用评测机参考的折算方法见 `docs/TIMING.md`。详细用法和限制见 `docs/RUNTIME.md`。
 
-现有 `maps/public/` 40 张和 `maps/scrimmage/` 4 张，均通过当前默认布局检查，但尚无平衡验收结论。可用 `.venv/bin/python -m arena mapgen --type corridor --size 32 --seed 7` 生成地图，用 `.venv/bin/python -m arena mapcheck maps/public/corridor-01.map` 检查默认生成配置。种子、摘要和分区口径见 `maps/catalog.json`、`maps/README.md`；布局检查不会对自定义 match 地图新增限制。`check <bot目录>` 和 `tournament --bot <bot目录> --opponents <目录...> --maps <地图目录> --jobs N --out <结果目录>` 已提供，支持 `--resume`；完整用法见 `docs/BATCH.md`。plain 只能显式接入已隔离的本地外层沙箱，不是宿主裸跑开关；8核工作区最多3个并行对局并留runner核，正式评分仍用bwrap。正式任务包尚未交付。
+现有 `maps/public/` 40 张和 `maps/scrimmage/` 4 张，均通过布局检查；平衡检查使用全部40张公开图，不使用练习图补充样本。可用 `.venv/bin/python -m arena mapgen --type corridor --size 32 --seed 7` 生成地图，用 `.venv/bin/python -m arena mapcheck maps/public/corridor-01.map` 检查默认生成配置。种子、摘要和分区口径见 `maps/catalog.json`、`maps/README.md`；布局检查不会对自定义 match 地图新增限制。`check <bot目录>` 和 `tournament --bot <bot目录> --opponents <目录...> --maps <地图目录> --jobs N --out <结果目录>` 已提供，支持 `--resume`；完整用法见 `docs/BATCH.md`。plain 只能显式接入已隔离的本地外层沙箱，不是宿主裸跑开关；8核工作区最多3个并行对局并留runner核，正式评分仍用bwrap。正式任务包尚未交付。

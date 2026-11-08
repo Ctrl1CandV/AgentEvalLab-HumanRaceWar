@@ -7,6 +7,7 @@ Run only after other arena campaigns finish (host/VM background load is external
 import argparse
 from copy import deepcopy
 from hashlib import sha256
+import gzip
 import json
 import math
 import os
@@ -104,21 +105,23 @@ def engine_samples(map_path, out):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, required=True)
+    parser.add_argument('--reference', type=Path, help='operator-supplied idle evaluation-machine benchmark')
     args = parser.parse_args()
     out = args.out.resolve()
     out.mkdir(parents=True, exist_ok=False)
     maps = [p for p in sorted((ROOT / 'maps/public').glob('*.map')) if p.read_text().splitlines()[0] == 'MAP 40 40']
     map_path = next(p for p in maps if p.name.startswith('open-'))
     cpu_model = next(line.split(':', 1)[1].strip() for line in Path('/proc/cpuinfo').read_text().splitlines() if line.startswith('model name'))
-    report = {'schemaVersion': 1, 'scope': 'development-host local efficiency; evaluation-host reference unavailable',
+    report = {'schemaVersion': 1, 'scope': ('development-host efficiency using supplied idle evaluation reference' if args.reference
+              else 'development-host local efficiency; evaluation-host reference unavailable'),
               'framework': fingerprint(), 'python': platform.python_version(), 'kernel': platform.release(),
               'machine': {'cpu': cpu_model, 'availableCpus': sorted(os.sched_getaffinity(0)),
                           'memoryBytes': os.sysconf('SC_PAGE_SIZE')*os.sysconf('SC_PHYS_PAGES')},
               'formalSpeedFactor': None, 'totalCpuHours': None}
     report['engine'] = engine_samples(map_path, out)
     (out / 'engine-report.json').write_text(json.dumps(report, indent=2) + '\n')
-    # Bench saves all raw samples. Its local idle reference is NOT a formal one.
-    bench = run_benchmark(out / 'bench-single', jobs=1)
+    # Bench saves all raw samples and distinguishes local from supplied references.
+    bench = run_benchmark(out / 'bench-single', jobs=1, reference=args.reference)
     calibration = Calibration.load(Path(bench['resultFile']), workload_digest(), jobs=1)
     sources = []
     for name in ('full-budget-a', 'full-budget-b'):
@@ -133,17 +136,27 @@ def main():
     for index in range(3):
         rows.append(play(sources, map_path.read_text(), out / 'single-matches', [17, 29],
                          prepared=[prepared, prepared], calibration=calibration))
-    run_tournament(sources, maps[:3], out / 'six-jobs', jobs=6)
+    run_tournament(sources, maps[:3], out / 'six-jobs', jobs=6, reference=args.reference)
     batch_rows = records(out / 'six-jobs/results.jsonl')
     all_rows = rows + batch_rows
     report['replayAudit'] = audit([r['replay'] for r in all_rows if r['status'] == 'complete'])
     groups = {}
     for name, group in (('jobs1', rows), ('jobs6', batch_rows)):
         overheads = [n for r in group for n in r['turnHarnessCpuNs']]
+        headers = []
+        for row in group:
+            with gzip.open(row['replay'], 'rt') as stream:
+                headers.append(json.loads(next(stream)))
+        turn_ms = [header['limits']['TURN_CPU_MS'] for header in headers]
+        wall_limits = [300 * ms / 1000 + 5 for ms in turn_ms]
         groups[name] = {'games': len(group), 'complete300NoFault': all(r['status'] == 'complete' and
             r['result']['turns'] == 300 and not any(r['result']['faults']) for r in group),
             'wallSeconds': [r['wallNs']/1e9 for r in group],
             'allGamesWithin35Seconds': all(r['wallNs'] <= 35e9 for r in group),
+            'calibratedTurnCpuMs': turn_ms, 'wallLimitSeconds': wall_limits,
+            'allGamesWithinCalibratedLimit': all(r['wallNs']/1e9 <= limit for r, limit in zip(group, wall_limits)),
+            'turnHarnessCpuP95Within3ms': distribution(overheads)['p95'] <= 3_000_000,
+            'ruleParams': headers[0]['params'],
             'turnHarnessCpuNs': distribution(overheads),
             'allTurnHarnessCpuWithin3ms': all(n <= 3_000_000 for n in overheads),
             'botCpuSeconds': [sum(r['botCpuNs'])/1e9 for r in group],

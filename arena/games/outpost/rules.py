@@ -1,4 +1,4 @@
-"""DESIGN appendix A, unchanged starting values for standard-1."""
+"""A-stage standard-1: P7 parameters validated with zoo v15 (2026-11-08)."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -8,21 +8,21 @@ from typing import Mapping
 # name: (default, inclusive lower bound, inclusive upper bound)
 PARAMETERS = MappingProxyType({
     "TURNS": (300, 200, 400),
-    "START_ENERGY": (300, 200, 500),
-    "START_WORKERS": (2, 1, 4),
+    "START_ENERGY": (500, 200, 500),
+    "START_WORKERS": (4, 1, 4),
     "POP_CAP": (40, 30, 60),
-    "BASE_HP": (1000, 600, 2000),
+    "BASE_HP": (600, 600, 2000),
     "BASE_FIRE_DMG": (10, 0, 20),
     "BASE_FIRE_RANGE": (2, 1, 3),
     "SPAWN_RANGE": (2, 1, 2),
     "REGEN_HP": (5, 0, 10),
     "REGEN_RANGE": (2, 1, 3),
-    "WORKER_COST": (50, 40, 80),
-    "WORKER_HP": (40, 30, 60),
-    "WORKER_DMG": (5, 0, 10),
+    "WORKER_COST": (40, 40, 80),
+    "WORKER_HP": (60, 30, 60),
+    "WORKER_DMG": (10, 0, 10),
     "MINE_RATE": (10, 5, 15),
     "CARRY_MAX": (60, 30, 100),
-    "SOLDIER_COST": (100, 80, 150),
+    "SOLDIER_COST": (80, 80, 150),
     "SOLDIER_HP": (100, 80, 150),
     "SOLDIER_DMG": (20, 15, 30),
     "TOWER_COST": (150, 100, 250),
