@@ -39,6 +39,23 @@
       "skipped": 0,
       "system": "Linux",
       "testsRun": 9
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "holdout-tool-tests-PYTHONHASHSEED=1",
+      "measuredReapedChildrenCpuSeconds": 0.0,
+      "measuredTestProcessCpuSeconds": 0.3451205,
+      "measuredTestWallSeconds": 0.347297301,
+      "passed": true,
+      "pattern": "test_phase_b_holdout.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 9
     }
   ]
 }

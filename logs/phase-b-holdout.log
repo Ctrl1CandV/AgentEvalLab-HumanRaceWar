@@ -1,0 +1,44 @@
+2026-11-08 Phase-B prerequisite holdout checkpoint (aggregate review log)
+
+Startup: clean worktree, git pull --ff-only already up to date; preserved local 6b8664d.
+Hooks: .githooks. No push, reset, history rewrite or tool installation.
+Frozen framework/SDK, standard-1, ten v15 source digests and evaluation reference match accepted Phase-A final matrix.
+
+Maps: calibration=24, grading=24; four types x six each. Seed plan persisted before generation.
+48 valid, unique, public/scrimmage-disjoint maps; zero rejected whole-map candidates.
+Exact regeneration passed; independent BFS: 576 home-ore and 480 tower-site checks passed.
+Hidden layouts, generation seeds, metadata and all game artifacts remain private.
+
+tasks=2208; distinct-bot games=2160; M-balanced self games=48; bot seeds=17/29 swapped with seats.
+sandbox=bwrap; jobs=6; speedFactor=0.6012284088900365; reference=evaluation idle benchmark.
+attempts: complete=2208, infra_error=0, configuration_error=0.
+botFaultGames=0; protocolWarnings=0; all 2208 replays verified.
+Independent recount agrees on all 450 aggregate matrix cells. No new games from auditing.
+
+DESIGN 10.2 specified holdout conditions:
+  1 FAIL: Z-eco and Z-harass have no single-style counter below 50%; their mutual results are 24/48 each.
+  2 FAIL: M-balanced vs Z-towers on maze = 6/12 = 50%, below 55%; M minimum overall = 40/48.
+  4 PASS: 0 draws in 1728 non-idle, different-name games.
+  6 PASS: M self base endings = 14/48; turn-limit endings = 34/48.
+  7 PASS: M minimum per-type rate = 50%; no single style wins against M by type.
+Bootstrap unit: map cluster, both swapped seats together; 4000 replicates; no additional independent samples.
+
+STOP: no parameter/bot changes, new map draws, ladder construction, calibration or formal self-tests.
+Proposal only: seek approval for one SOLDIER_DMG 20->22 candidate, complete public+calibration 5888-game round.
+Original standard-1/v15 and both hidden map sets retained unchanged. Phase-B incomplete; Phase-C not started.
+
+Validation: startup full suite=203 passed, 0 failed/errors/skipped.
+New synthetic holdout-tool suite=9 passed under each PYTHONHASHSEED 0/1; no bot execution in these tests.
+Pyright: zero diagnostics in the three new Python files.
+No claim of a new full 212-test run or independent-machine game/timing verification.
+
+CPU: bot=246.6822643s; match harness=441.6794299s; replay verification=138.0234418s.
+Separate map/control/benchmark ranges: data/phase-b/usage.json. Compilation and full total unknown.
+No construction token collection. No RUSAGE_CHILDREN sum used as a full sandbox-tree total.
+
+Report: reports/phase-B-holdout.md. Public data are aggregates only, not per-game ledgers/indexes.
+Full evidence, failures and logs remain on this host; nothing pushed.
+Initial report commit was refused by the enabled hash guard: the public aggregate JSON equalled a private derived aggregate file. No commit was made.
+Kept the private original and registry; public JSON now omits the duplicate aggregate matrix, published once in companion CSV. All shared summary values rechecked. No --no-verify or registry removal.
+Final quiescent private registry: all 68841 files matched HIDDEN.sha256.
+Staged review payloads checked for actual hidden seeds, map contents and task IDs: none found; known-format publication checks passed.

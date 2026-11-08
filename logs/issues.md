@@ -1,9 +1,10 @@
 # 问题与风险
 
-更新：2026-11-08；阶段A，当前交审/停点状态见STATUS。历史失败及原始证据不删除。
+更新：2026-11-08。A已通过审查，B前置留出失败后停止；当前停点见STATUS。下表A阶段的“待审查”等状态保留为历史，不作为新的阻塞；历史失败及原始证据不删除。
 
 | 编号 | 状态 | 内容 / 下一步 |
 |---|---|---|
+| B-HOLDOUT-001 | 未通过，等待调参授权 | 2208局/回放全完成，零故障/协议警告；Z-eco与Z-harass无单一克制者，M对Z-towers在maze仅6/12，失败第1、2项。未调参、重抽或建阶梯。见`reports/phase-B-holdout.md`及`data/phase-b/`；候选只提案未执行。 |
 | ENV-001 | 已解决 | 用户授权后，通过已有 uv 用户级安装 Python 3.13.15；保留系统 Python 3.10.12，创建无第三方包的 `.venv`。86 项测试在 3.13.15 的两个哈希种子进程中通过。见 `data/python313-tests.json`。 |
 | ENV-002 | 已解决 | 整个项目及本地 Git 历史迁入 WSL `~/projects/AgentEvalLab-HumanRaceWar`，不再依赖 D 盘挂载。42 个原有受跟踪文件和本地测试历史已核对，原 Windows 目录留作备份。见 `data/wsl-setup.json`。 |
 | SANDBOX-001 | A要求已检查，等待阶段审查 | 单进程/线程上限、绑核、累计CPU、proc失败关闭、只读路径、全局锁、中断清理及六局线程压力已有证据；编译按二审批准的逐进程/串行契约实施。不宣称穷尽攻击面。见 `data/phase-a-final-tests.json`、`docs/RUNTIME.md`。 |
@@ -25,4 +26,4 @@
 | RUNTIME-003 | 最后回归发现并修复 | stdin先断管时漏读已排队的可信启动标记，误报框架失败；两个真实bwrap反例先报错后通过，只补有界读取，缺标记仍失败关闭。见phase-a-startup-race。 |
 | LSP-001 | 最终检查恢复 | 旧LSP多次超时；排除大量运行产物索引后，13个修改文件零诊断。 |
 
-交审结论见 `reports/phase-A.md`，最后核对、推送及停点以STATUS为准。`phase-A-review-request.md`保留为历史请求；未经阶段审查，不进入B。
+A依据见`reports/phase-A.md`及2026-11-08的inbox通过意见；B留出失败报告为`reports/phase-B-holdout.md`。最后核对、提交及停点以STATUS为准，不自动推送。`phase-A-review-request.md`保留为历史请求；没有继续调参或进入C的授权。

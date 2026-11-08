@@ -14,6 +14,7 @@
 | `data/phase-a/matrices/` | 每个候选及最后复跑的独立聚合矩阵，包含失败版本 |
 | `data/phase-a/regressions/`、`diagnostics/` | 策略反例及骚扰/开局诊断汇总 |
 | `data/phase-a/usage/`、`history/` | 用量快照与早期开发汇总 |
+| `data/phase-b/`、`reports/phase-B-holdout.md` | B前置留出失败汇总、地图集合摘要、CPU、来源及待批准方案；原件只留private |
 | `logs/` | 当前必要的测试诊断；历史完整日志不再上传 |
 | `docs/history/`、`reports/archive/` | 有审查价值的历史说明，不作为当前待办 |
 | `runs/` | 本机原始运行、结果库、完整回放、旧日志与证据归档；不入Git |

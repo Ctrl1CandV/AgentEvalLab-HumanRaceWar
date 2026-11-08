@@ -1,6 +1,6 @@
 # HumanRaceWar 设计文档（CA 竞技场 v1）
 
-- **状态：** A阶段已通过审查，用户已授权进入B（2026-11-08），见 `inbox/2026-11-08-phase-a-accepted.md`。standard-1与动物园v15按交审配置冻结；B须先完成隐藏calibration地图上的留出复核，通过前不建阶梯。B的calibration/grading各24张隐藏地图已生成冻结，2208局前置留出复核进行中；未得出通过结论，不建阶梯，C未启动。2026-11-07已批准的D1–D10及I01–I11继续有效。作者是AgentEvalLab的评测负责人。本文件也含后续阶段目标，设计要求不等于全部已实现。
+- **状态：** A阶段已通过审查，用户已授权进入B（2026-11-08），见 `inbox/2026-11-08-phase-a-accepted.md`。standard-1与动物园v15按交审配置冻结；B须先完成隐藏calibration地图上的留出复核，通过前不建阶梯。B的calibration/grading各24张隐藏地图已生成冻结，2208局前置留出复核已完成但10.2第1、2项失败；已停止等待调参授权，不建阶梯，C未启动。见`reports/phase-B-holdout.md`。2026-11-07已批准的D1–D10及I01–I11继续有效。作者是AgentEvalLab的评测负责人。本文件也含后续阶段目标，设计要求不等于全部已实现。
 - **读者：** 构建者（gpt-6-astra）、用户、评测负责人。
 - **和 AgentEvalLab 的关系：** 这个仓库开发 CA 题族的全部内容：游戏、对局框架、对手阶梯、评分器。做完后迁移到 AgentEvalLab，成为顶层的一个题族，任务包放在 `task-library/frontier/`。整个评测项目的总体设计在 AgentEvalLab 的 `docs/design/PLAN-008-DESIGN.md`。
 - **文件分工：**

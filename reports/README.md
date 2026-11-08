@@ -1,7 +1,7 @@
 # 审查报告
 
 - [`phase-A.md`](phase-A.md)：A阶段交付及逐项检查结果；已获2026-11-08审查通过。
-- B阶段当前是启动交接，见`docs/PHASE_B_HANDOFF.md`；尚无B完成报告。
+- [`phase-B-holdout.md`](phase-B-holdout.md)：B前置留出失败停点，2208局/回放全部完成，但指定第1、2项未达到；等待调参授权，没有阶梯或B完成报告。
 - [`phase-A-balance-rework.md`](phase-A-balance-rework.md)：二审后的诊断、参数与策略试验过程，包含失败版本。
 - [`archive/2026-11-07-phase-A-review-request.md`](archive/2026-11-07-phase-A-review-request.md)：此前资源、效率和平衡的历史审查请求，不作为当前阻塞清单。
 

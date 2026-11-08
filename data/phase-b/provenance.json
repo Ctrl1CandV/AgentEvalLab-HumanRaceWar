@@ -1,0 +1,42 @@
+{
+  "baselineReportSha256": "c5685ec4aa1349400a46089fc1ccec6799dc25bdad7fcf7eb6de5b67ae7f494b",
+  "botSeeds": [
+    17,
+    29
+  ],
+  "commands": [
+    ".venv/bin/python -B -m tools.generate_hidden_maps",
+    ".venv/bin/python -B -m tools.phase_b_holdout plan",
+    ".venv/bin/python -B -m tools.phase_b_holdout run",
+    ".venv/bin/python -B -m tools.phase_b_holdout analyze"
+  ],
+  "executionFramework": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414",
+  "formalExploitAndStandardBudgetTests": "not started; gate failed",
+  "gradingUsedInMatches": false,
+  "independentMatrixRecount": {
+    "allAggregateMatrixCountsIndependentlyMatched": true,
+    "cellsChecked": 450,
+    "noNewGames": true,
+    "schemaVersion": 1,
+    "uncounteredSingles": [
+      "Z-eco",
+      "Z-harass"
+    ]
+  },
+  "launchHead": "6b8664d",
+  "launchNote": "Tools/docs were uncommitted at launch; committed unchanged as 4ba9e0a after launch. Match framework/SDK and bot sources are frozen by byte hashes, identical to the accepted baseline.",
+  "launchWorktreeDirty": true,
+  "oneTrickCheck": "not started; no ladder",
+  "originalMapsRetained": true,
+  "privateAllowlistedSummarySha256": "7bd5fa5ae6ea66bab8ebd08daa152dc9b290d2b45e154b32f461dad86b98bf08",
+  "privateBatchManifestSha256": "89e5a5b136cbc02a1db7f7ca46cc4eb2db995ec2733cd39444b80ce67e5f5ba5",
+  "privateCatalogSha256": "46562a20457b3643c80213a8aa8420325a6fe0396e8bcab70e366950032d27fa",
+  "privateFullAnalysisSha256": "2881fc56c0d91876f082fe1a45d7857004bd344674c88a411c40c707ed3f51b8",
+  "publicAggregateSummarySha256": "65ca70dbb24114326dc5c20718644a0b22db8e92beaa797fd2f90a9c13c91424",
+  "publicationNote": "Private allowlisted JSON remains registered and unchanged. Public JSON omits the duplicate aggregate matrix; full aggregate cells are in companion CSV. Pre-commit remained enabled.",
+  "replayLimitation": "Verified stored transcripts, not an independent-machine game rerun or timing authentication.",
+  "rulesSha256": "2460a1d7e5794d5a5edadb368381982f32fa64bc6075699956291f5b06f1a043",
+  "schemaVersion": 1,
+  "status": "holdout-failed; waiting-for-authorization; Phase-B incomplete",
+  "toolingCheckpoint": "4ba9e0a"
+}

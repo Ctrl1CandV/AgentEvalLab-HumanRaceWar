@@ -1,0 +1,136 @@
+{
+  "_publication": {
+    "matrixCellsInCompanionCsv": 450,
+    "omittedFromJson": "duplicate aggregate matrix; no game records are part of this review copy",
+    "privateAllowlistedSummarySha256": "7bd5fa5ae6ea66bab8ebd08daa152dc9b290d2b45e154b32f461dad86b98bf08",
+    "scope": "aggregate review summary; complete pair/type matrix is published once in holdout-matrix.csv"
+  },
+  "attemptCounts": {
+    "complete": 2208
+  },
+  "balancedSelf": {
+    "baseEndingFraction": 0.2916666666666667,
+    "baseEndingFractionCI95": [
+      0.125,
+      0.5
+    ],
+    "by60Fraction": 0.0,
+    "endReasons": {
+      "base_destroyed": 14,
+      "turn_limit_score": 34
+    },
+    "games": 48,
+    "maps": 24,
+    "medianTurns": 300.0,
+    "turnLimitFraction": 0.7083333333333334,
+    "turnLimitFractionCI95": [
+      0.5,
+      0.875
+    ]
+  },
+  "balancedSelfGames": 48,
+  "baselineReportSha256": "c5685ec4aa1349400a46089fc1ccec6799dc25bdad7fcf7eb6de5b67ae7f494b",
+  "bootstrap": {
+    "interval": "95% percentile, nearest-rank endpoints",
+    "limits": "Conditional on this map collection and these bot seeds. No multiple-testing correction or timing authentication.",
+    "replicates": 4000,
+    "seed": 4219,
+    "unit": "map; both swapped seats retained together"
+  },
+  "botFaultGames": 0,
+  "checks10_2": {
+    "1_eachSingleHasCounter": false,
+    "2_balancedOverall70AndEveryType55": false,
+    "4_drawRateBelow10": true,
+    "6_bothEndings20To80": true,
+    "7_noSingleBeatsBalancedOnAnyType": true
+  },
+  "completedGames": 2208,
+  "counters": {
+    "Z-eco": [],
+    "Z-harass": [],
+    "Z-miner": [
+      "Z-rush",
+      "Z-wrush",
+      "Z-eco",
+      "Z-towers",
+      "Z-harass"
+    ],
+    "Z-rush": [
+      "Z-eco",
+      "Z-harass"
+    ],
+    "Z-towers": [
+      "Z-rush",
+      "Z-wrush",
+      "Z-eco",
+      "Z-harass"
+    ],
+    "Z-turtle": [
+      "Z-miner",
+      "Z-rush",
+      "Z-eco",
+      "Z-towers",
+      "Z-harass"
+    ],
+    "Z-wrush": [
+      "Z-rush",
+      "Z-eco",
+      "Z-turtle",
+      "Z-harass"
+    ]
+  },
+  "decision": "stop",
+  "distinctBotGames": 2160,
+  "drawRateCI95": [
+    0.0,
+    0.0
+  ],
+  "drawRateExcludingIdleAndSameName": 0.0,
+  "executionFramework": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414",
+  "expectedGames": 2208,
+  "integrity": true,
+  "mapSets": {
+    "calibration": {
+      "mapSetSha256": "aa10070ccd05f4e29b0578116ff56b61cf50d9fbd853218acdbde1e3be8b88d0",
+      "maps": 24,
+      "types": {
+        "corridor": 6,
+        "island": 6,
+        "maze": 6,
+        "open": 6
+      }
+    },
+    "grading": {
+      "mapSetSha256": "7362da67fd6d52b097adaa0f909f2762a9af0434c712ae4b7936a6c05d1e8c05",
+      "maps": 24,
+      "types": {
+        "corridor": 6,
+        "island": 6,
+        "maze": 6,
+        "open": 6
+      }
+    }
+  },
+  "primaryRate": "winRate; scoreRate (half draws) reported separately, no thresholds changed",
+  "protocolWarnings": 0,
+  "rateDefinitions": {
+    "scoreRate": "(wins + .5 * draws) / games",
+    "winRate": "wins / games"
+  },
+  "recordedUsage": {
+    "botCpuNs": 246682264300,
+    "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added.",
+    "matchHarnessCpuNs": 441679429900,
+    "replayVerificationCpuNs": 138023441800,
+    "totalCpuHours": null
+  },
+  "replayAudit": {
+    "allVerified": true,
+    "verified": 2208
+  },
+  "rulesSha256": "2460a1d7e5794d5a5edadb368381982f32fa64bc6075699956291f5b06f1a043",
+  "schemaVersion": 1,
+  "scope": "DESIGN 11.5(8), frozen v15 on calibration; not new public D6 evidence",
+  "verificationFramework": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414"
+}

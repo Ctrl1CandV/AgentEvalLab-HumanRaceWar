@@ -1,0 +1,45 @@
+{
+  "benchmarkSamples": 3,
+  "benchmarkWorkloadCpuSeconds": 6.0125143,
+  "botCpuNs": {
+    "cpuHours": 0.06852285119444444,
+    "cpuNs": 246682264300
+  },
+  "compileCpuHours": null,
+  "controlProcessCpuNsByAction": {
+    "analyze": 924335200,
+    "plan": 149687500,
+    "run": 6437354300
+  },
+  "evaluationReferenceSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+  "fullStageCpuHours": null,
+  "jobs": 6,
+  "machine": {
+    "architecture": "x86_64",
+    "bubblewrap": "0.6.1",
+    "cpu": "Intel(R) Core(TM) i5-14600KF",
+    "gxx": "11.4.0",
+    "kernel": "6.18.40.1-microsoft-standard-WSL2",
+    "memoryBytes": 16679251968,
+    "python": "3.13.15",
+    "visibleLogicalCpus": 20
+  },
+  "mapGenerationProcessCpuNs": 1673883500,
+  "mapRegenerationAndIndependentWalkCheckCpuNs": 1849970600,
+  "matchHarnessCpuNs": {
+    "cpuHours": 0.12268873052777778,
+    "cpuNs": 441679429900
+  },
+  "measurementLimits": [
+    "Match harness excludes bots; transcript audit is a separate pass. Control run includes benchmark harness: do not add its separately reported harness CPU again.",
+    "Compilation, process startup/exit, registry hashing, some input validation and other uncaptured work are not fully metered; complete total is unknown. No RUSAGE_CHILDREN total added.",
+    "Preflight tests are separate and reported in tool-validation.json. No build token collection. Formal self-tests have not run."
+  ],
+  "replayVerificationCpuNs": {
+    "cpuHours": 0.038339844944444444,
+    "cpuNs": 138023441800
+  },
+  "schemaVersion": 1,
+  "scope": "one frozen 2208-game holdout, not Phase-B total",
+  "speedFactor": 0.6012284088900365
+}

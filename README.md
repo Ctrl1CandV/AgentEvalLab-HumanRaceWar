@@ -6,7 +6,7 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 **A阶段已通过审查，用户已授权进入B。** 依据见 [inbox/2026-11-08-phase-a-accepted.md](inbox/2026-11-08-phase-a-accepted.md)。standard-1和动物园v15按交审配置冻结；A最终40图3680局条件通过，两个哈希种子全套各198项通过，完整报告见 [reports/phase-A.md](reports/phase-A.md)。
 
-当前是B启动交接，尚未生成隐藏资产或启动B对局。下一项先做24张calibration地图上的留出复核，未过就停下报告，不能直接建阶梯。新会话入口为 [docs/PHASE_B_HANDOFF.md](docs/PHASE_B_HANDOFF.md)，当前状态见 [STATUS.md](STATUS.md)。B完成后仍须停下等审查，不进入C。
+**B前置留出未通过，已停止等待审查/调参授权。** 两套隐藏地图各24张已冻结，calibration上的2208局全部完成并通过回放审计，但单一打法克制关系及M的分类型下限失败。见 [reports/phase-B-holdout.md](reports/phase-B-holdout.md) 和 [STATUS.md](STATUS.md)。没有改参、重抽图或建阶梯；B未完成，C未启动。原启动快照见 [docs/PHASE_B_HANDOFF.md](docs/PHASE_B_HANDOFF.md)。
 
 ## 目录和上传范围
 
