@@ -242,7 +242,8 @@ public:
             }
             if (!adjacentEnemies.empty() && (u.kind=="S" || workerCombat)) {
                 auto priority=[&](const Target* t) {
-                    bool rush=config.mode==Mode::Rush || config.mode==Mode::WorkerRush;
+                    bool rush=config.mode==Mode::Rush || config.mode==Mode::WorkerRush ||
+                        (config.mode==Mode::Balanced && u.kind=="S" && (turn.number>=assault || turn.players.at(other)[2]<=parameter("SOLDIER_DMG")));
                     int kind=rush?(t->kind=='B'?0:1):(t->kind=='B'?2:t->kind=='T'?1:0);
                     int remaining=t->hp;
                     if (config.mode==Mode::Balanced || config.mode==Mode::Turtle) remaining-=plannedDamage[t->pos];
@@ -317,6 +318,15 @@ public:
                     for (const auto& t:targets) if (t.kind=='T') {
                         int d=distance(t.pos)[start]+8;
                         if (d<best || (d==best && rank(t.pos)<rank(goal))) { goal=t.pos; best=d; }
+                    }
+                }
+                if (nearest==inf && turn.number>=assault) {
+                    // Clear a much nearer local blocker instead of funneling
+                    // every soldier through the same defended base entrance.
+                    int best=distance(goal)[start];
+                    for (const auto& t:targets) if (t.kind=='W' || t.kind=='S') {
+                        int d=distance(t.pos)[start];
+                        if (d<=4 && d+2<best) { goal=t.pos; best=d+2; }
                     }
                 }
                 int guards=turn.number<assault?2:1;

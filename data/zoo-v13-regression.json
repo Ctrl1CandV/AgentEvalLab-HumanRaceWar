@@ -1,0 +1,684 @@
+{
+  "schemaVersion": 1,
+  "zooVersion": 13,
+  "change": "Finish adjacent bases and clear substantially nearer local blockers with existing BFS",
+  "tests": [
+    {
+      "sourceReport": "runs/development/review-balance-2026-11-07/breach-before.json",
+      "sha256": "2b0a642219a0174695c6348de4272e2ddf5eb52e475d53015de2d58b02893716",
+      "log": "logs/review-balance-breach-before.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 17,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.0503372,
+      "measuredTestWallSeconds": 3.860755794,
+      "measuredReapedChildrenCpuSeconds": 0.034139
+    },
+    {
+      "sourceReport": "runs/development/review-balance-2026-11-07/breach-after.json",
+      "sha256": "fac6324899cd441b639ff8d14c3575a068ca6917e73baecf4eb33ff8b0326bc6",
+      "log": "logs/review-balance-breach-after.log",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_zoo_strategy.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0491692,
+      "measuredTestWallSeconds": 3.707051235,
+      "measuredReapedChildrenCpuSeconds": 0.033484
+    }
+  ],
+  "targeted": [
+    {
+      "result": {
+        "winner": 1,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          928,
+          1204
+        ],
+        "deposited": [
+          4020,
+          3970
+        ],
+        "base_hp": [
+          600,
+          360
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          3800,
+          400
+        ],
+        "failedOrders": [
+          53,
+          63
+        ],
+        "failedMoves": [
+          53,
+          58
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          3700,
+          400
+        ]
+      },
+      "replay": "runs/development/zoo-v13-breach-targeted/tasks/bcebdb3e40fa8de47930bc8bc7f5e887763607c8be17402f24b0cde030865ecf/5dec3c9d29624e75b1cc038b9c1ccd5c/matches/27b6ad3937ea411ebac0d0af81efcc2e/attempt-0/27b6ad3937ea411ebac0d0af81efcc2e.hrw.jsonl.gz",
+      "replaySha256": "c1daa3d8e96fe5ca16caff8edeacac0500591d454130b0d1e96e1f6bb87f3d95",
+      "verification": {
+        "verified": true,
+        "turns": 300,
+        "result": {
+          "winner": 1,
+          "reason": "turn_limit_score",
+          "turns": 300,
+          "scores": [
+            928,
+            1204
+          ],
+          "deposited": [
+            4020,
+            3970
+          ],
+          "base_hp": [
+            600,
+            360
+          ],
+          "faults": [
+            null,
+            null
+          ],
+          "timeouts": [
+            0,
+            0
+          ],
+          "warnings": [
+            0,
+            0
+          ],
+          "damageDealt": [
+            3800,
+            400
+          ],
+          "failedOrders": [
+            53,
+            63
+          ],
+          "failedMoves": [
+            53,
+            58
+          ],
+          "buildContested": [
+            0,
+            0
+          ],
+          "buildContestedSites": 0,
+          "damageEffective": [
+            3700,
+            400
+          ]
+        },
+        "summary": [
+          {
+            "turn": 25,
+            "players": [
+              {
+                "energy": 190,
+                "score": 22,
+                "units": 11,
+                "towers": 1
+              },
+              {
+                "energy": 10,
+                "score": 10,
+                "units": 14,
+                "towers": 1
+              }
+            ]
+          },
+          {
+            "turn": 50,
+            "players": [
+              {
+                "energy": 190,
+                "score": 85,
+                "units": 11,
+                "towers": 3
+              },
+              {
+                "energy": 10,
+                "score": 44,
+                "units": 14,
+                "towers": 3
+              }
+            ]
+          },
+          {
+            "turn": 75,
+            "players": [
+              {
+                "energy": 190,
+                "score": 160,
+                "units": 14,
+                "towers": 3
+              },
+              {
+                "energy": 250,
+                "score": 143,
+                "units": 14,
+                "towers": 5
+              }
+            ]
+          },
+          {
+            "turn": 100,
+            "players": [
+              {
+                "energy": 170,
+                "score": 235,
+                "units": 18,
+                "towers": 3
+              },
+              {
+                "energy": 1030,
+                "score": 268,
+                "units": 14,
+                "towers": 5
+              }
+            ]
+          },
+          {
+            "turn": 125,
+            "players": [
+              {
+                "energy": 150,
+                "score": 310,
+                "units": 22,
+                "towers": 3
+              },
+              {
+                "energy": 1500,
+                "score": 416,
+                "units": 13,
+                "towers": 6
+              }
+            ]
+          },
+          {
+            "turn": 150,
+            "players": [
+              {
+                "energy": 150,
+                "score": 385,
+                "units": 25,
+                "towers": 3
+              },
+              {
+                "energy": 1780,
+                "score": 541,
+                "units": 14,
+                "towers": 4
+              }
+            ]
+          },
+          {
+            "turn": 175,
+            "players": [
+              {
+                "energy": 150,
+                "score": 460,
+                "units": 28,
+                "towers": 3
+              },
+              {
+                "energy": 1660,
+                "score": 644,
+                "units": 14,
+                "towers": 5
+              }
+            ]
+          },
+          {
+            "turn": 200,
+            "players": [
+              {
+                "energy": 330,
+                "score": 535,
+                "units": 31,
+                "towers": 3
+              },
+              {
+                "energy": 1560,
+                "score": 747,
+                "units": 13,
+                "towers": 4
+              }
+            ]
+          },
+          {
+            "turn": 225,
+            "players": [
+              {
+                "energy": 120,
+                "score": 628,
+                "units": 37,
+                "towers": 4
+              },
+              {
+                "energy": 1430,
+                "score": 847,
+                "units": 14,
+                "towers": 4
+              }
+            ]
+          },
+          {
+            "turn": 250,
+            "players": [
+              {
+                "energy": 420,
+                "score": 728,
+                "units": 40,
+                "towers": 4
+              },
+              {
+                "energy": 1310,
+                "score": 954,
+                "units": 14,
+                "towers": 5
+              }
+            ]
+          },
+          {
+            "turn": 275,
+            "players": [
+              {
+                "energy": 640,
+                "score": 828,
+                "units": 40,
+                "towers": 4
+              },
+              {
+                "energy": 1150,
+                "score": 1079,
+                "units": 14,
+                "towers": 5
+              }
+            ]
+          },
+          {
+            "turn": 300,
+            "players": [
+              {
+                "energy": 880,
+                "score": 928,
+                "units": 40,
+                "towers": 4
+              },
+              {
+                "energy": 1230,
+                "score": 1204,
+                "units": 14,
+                "towers": 5
+              }
+            ]
+          }
+        ],
+        "board": null
+      }
+    },
+    {
+      "result": {
+        "winner": 0,
+        "reason": "turn_limit_score",
+        "turns": 300,
+        "scores": [
+          1204,
+          928
+        ],
+        "deposited": [
+          3970,
+          4020
+        ],
+        "base_hp": [
+          360,
+          600
+        ],
+        "faults": [
+          null,
+          null
+        ],
+        "timeouts": [
+          0,
+          0
+        ],
+        "warnings": [
+          0,
+          0
+        ],
+        "damageDealt": [
+          400,
+          3800
+        ],
+        "failedOrders": [
+          63,
+          53
+        ],
+        "failedMoves": [
+          58,
+          53
+        ],
+        "buildContested": [
+          0,
+          0
+        ],
+        "buildContestedSites": 0,
+        "damageEffective": [
+          400,
+          3700
+        ]
+      },
+      "replay": "runs/development/zoo-v13-breach-targeted/tasks/aa8c2a4ecc6d0f3002384cb48ec17e17cdbadec803fcf3ebb367c4ce872dc30a/a319200c5c1d40188589a60c5b1f112c/matches/20b9a6d98b8a4aad808713cad100d15a/attempt-0/20b9a6d98b8a4aad808713cad100d15a.hrw.jsonl.gz",
+      "replaySha256": "c557ef8d6343c99a81e638f4ca0cf91cd796e307c8e5816fc517c3623a69ef0c",
+      "verification": {
+        "verified": true,
+        "turns": 300,
+        "result": {
+          "winner": 0,
+          "reason": "turn_limit_score",
+          "turns": 300,
+          "scores": [
+            1204,
+            928
+          ],
+          "deposited": [
+            3970,
+            4020
+          ],
+          "base_hp": [
+            360,
+            600
+          ],
+          "faults": [
+            null,
+            null
+          ],
+          "timeouts": [
+            0,
+            0
+          ],
+          "warnings": [
+            0,
+            0
+          ],
+          "damageDealt": [
+            400,
+            3800
+          ],
+          "failedOrders": [
+            63,
+            53
+          ],
+          "failedMoves": [
+            58,
+            53
+          ],
+          "buildContested": [
+            0,
+            0
+          ],
+          "buildContestedSites": 0,
+          "damageEffective": [
+            400,
+            3700
+          ]
+        },
+        "summary": [
+          {
+            "turn": 25,
+            "players": [
+              {
+                "energy": 10,
+                "score": 10,
+                "units": 14,
+                "towers": 1
+              },
+              {
+                "energy": 190,
+                "score": 22,
+                "units": 11,
+                "towers": 1
+              }
+            ]
+          },
+          {
+            "turn": 50,
+            "players": [
+              {
+                "energy": 10,
+                "score": 44,
+                "units": 14,
+                "towers": 3
+              },
+              {
+                "energy": 190,
+                "score": 85,
+                "units": 11,
+                "towers": 3
+              }
+            ]
+          },
+          {
+            "turn": 75,
+            "players": [
+              {
+                "energy": 250,
+                "score": 143,
+                "units": 14,
+                "towers": 5
+              },
+              {
+                "energy": 190,
+                "score": 160,
+                "units": 14,
+                "towers": 3
+              }
+            ]
+          },
+          {
+            "turn": 100,
+            "players": [
+              {
+                "energy": 1030,
+                "score": 268,
+                "units": 14,
+                "towers": 5
+              },
+              {
+                "energy": 170,
+                "score": 235,
+                "units": 18,
+                "towers": 3
+              }
+            ]
+          },
+          {
+            "turn": 125,
+            "players": [
+              {
+                "energy": 1500,
+                "score": 416,
+                "units": 13,
+                "towers": 6
+              },
+              {
+                "energy": 150,
+                "score": 310,
+                "units": 22,
+                "towers": 3
+              }
+            ]
+          },
+          {
+            "turn": 150,
+            "players": [
+              {
+                "energy": 1780,
+                "score": 541,
+                "units": 14,
+                "towers": 4
+              },
+              {
+                "energy": 150,
+                "score": 385,
+                "units": 25,
+                "towers": 3
+              }
+            ]
+          },
+          {
+            "turn": 175,
+            "players": [
+              {
+                "energy": 1660,
+                "score": 644,
+                "units": 14,
+                "towers": 5
+              },
+              {
+                "energy": 150,
+                "score": 460,
+                "units": 28,
+                "towers": 3
+              }
+            ]
+          },
+          {
+            "turn": 200,
+            "players": [
+              {
+                "energy": 1560,
+                "score": 747,
+                "units": 13,
+                "towers": 4
+              },
+              {
+                "energy": 330,
+                "score": 535,
+                "units": 31,
+                "towers": 3
+              }
+            ]
+          },
+          {
+            "turn": 225,
+            "players": [
+              {
+                "energy": 1430,
+                "score": 847,
+                "units": 14,
+                "towers": 4
+              },
+              {
+                "energy": 120,
+                "score": 628,
+                "units": 37,
+                "towers": 4
+              }
+            ]
+          },
+          {
+            "turn": 250,
+            "players": [
+              {
+                "energy": 1310,
+                "score": 954,
+                "units": 14,
+                "towers": 5
+              },
+              {
+                "energy": 420,
+                "score": 728,
+                "units": 40,
+                "towers": 4
+              }
+            ]
+          },
+          {
+            "turn": 275,
+            "players": [
+              {
+                "energy": 1150,
+                "score": 1079,
+                "units": 14,
+                "towers": 5
+              },
+              {
+                "energy": 640,
+                "score": 828,
+                "units": 40,
+                "towers": 4
+              }
+            ]
+          },
+          {
+            "turn": 300,
+            "players": [
+              {
+                "energy": 1230,
+                "score": 1204,
+                "units": 14,
+                "towers": 5
+              },
+              {
+                "energy": 880,
+                "score": 928,
+                "units": 40,
+                "towers": 4
+              }
+            ]
+          }
+        ],
+        "board": null
+      }
+    }
+  ],
+  "targetedConclusion": "two losses retained; base damaged 240 but still alive; not balance acceptance",
+  "sourceSha256": {
+    "tools/zoo_strategy.hpp": "384991b29bc4466bcd76dc5b93559e6494cf68cde833b35a8d1cdc4cb9a074dc",
+    "tools/generate_zoo.py": "5b56fd0196d5ef19f8ef0f0ae34cc7d28e60024686f235889fcb1fae1e5404e7",
+    "bots/catalog.json": "58f62c2618aed1de19754d3002c84ce1db09511c31ef59fa7f281a2eea48caed",
+    "tests/test_zoo_strategy.py": "ad783d3bd2d86d5a06674678a3a026a7f64aa7abbc939974236a048d13ef173f"
+  }
+}

@@ -225,6 +225,25 @@ class ZooStrategyTests(unittest.TestCase):
         self.probe(game, state, "intercept-base-worker")
         self.assertLess(abs(soldier.x - 3) + abs(soldier.y - 2), 5)
 
+    def test_committed_soldier_finishes_base_instead_of_respawning_workers(self):
+        game, state = fresh()
+        state.add_unit(0, "S", (21, 20))
+        state.add_unit(1, "W", (22, 20))
+        state.players[1].base_hp = 20
+        state.players[0].energy = 0
+        state.turn = 150
+        self.probe(game, state, "finish-base-before-worker")
+        self.assertEqual(state.players[1].base_hp, 0)
+
+    def test_nearby_blocker_can_form_a_short_offensive_detour(self):
+        game, state = fresh()
+        soldier = state.add_unit(0, "S", (17, 18))
+        state.add_unit(1, "W", (15, 18))
+        state.players[0].energy = 0
+        state.turn = 150
+        self.probe(game, state, "local-offensive-detour")
+        self.assertLess(abs(soldier.x - 15) + abs(soldier.y - 18), 2)
+
     def test_nearby_army_can_override_tower_reserve(self):
         game, state = self.budget_state(near=True)
         replies = self.probe(game, state, "emergency-budget")
