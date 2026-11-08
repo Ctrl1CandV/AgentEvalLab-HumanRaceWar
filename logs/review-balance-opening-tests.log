@@ -1,0 +1,7 @@
+test_existing_public_replay_first_spawn_matches_accepted_transcript (tests.test_opening_analysis.OpeningAnalysisTests.test_existing_public_replay_first_spawn_matches_accepted_transcript) ... ok
+test_missing_milestones_are_not_silently_new_denominators (tests.test_opening_analysis.OpeningAnalysisTests.test_missing_milestones_are_not_silently_new_denominators) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.033s
+
+OK

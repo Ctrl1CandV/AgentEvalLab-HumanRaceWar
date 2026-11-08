@@ -21,7 +21,12 @@
 | `harassment-v5/`、`harassment-analysis-tests.json` | 旧v5全部720局骚扰对局的工兵死亡位置、交战前兵力和结束方式；逐回合hash核对，4项统计/战斗例子通过 | A（全量成因诊断） |
 | `review-balance-runtime.json` | 第二次审查编译16任务/64MiB文件/串行锁及TMPDIR修复；失败复现、174项全套 | A（审查修复） |
 | `zoo-p1-worker-survival/`、`zoo-p2-slower-mining/`、`zoo-p3-soldier-cost/` | 各3680局独立参数试验及全部回放审计，均未通过平衡；不混池、不覆盖v5 | A（完整D6失败候选） |
-| `zoo-v6-regression.json`、`zoo-v7-regression.json` | M开局军事底线、兵力匹配优先于继续扩张的真实bwrap失败/通过回归，源码版本各自保存 | A（策略修复，不替代矩阵） |
+| `phase-a-balance-trials.json` | 二审后的完整D6批次索引，参数/源码/地图/折算参考/原始用量与结果分版本保存，不混池 | A（未冻结试验） |
+| `zoo-p4-opening/`、`zoo-p5-siege/`、`zoo-p6-worker-cost/`、`zoo-p7-start-workers/` | 后四个完整3680局参数候选，全验证，均未通过 | A（完整D6失败候选） |
+| `zoo-v7-p7-public/`、`zoo-v8-p7-public/`、`zoo-v9-p7-public/`、`zoo-v10-p7-public/`、`zoo-v12-p7-public/` | 固定P7的分版策略完整矩阵，各3680局、全验证，失败保留 | A（完整D6，未通过） |
+| `harassment-opening-p4/` | 全部80局速攻/骚扰及80局经济/骚扰的开局时序、兵力、工兵死亡；缺失里程碑单列分母 | A（回放诊断） |
+| `zoo-v6-regression.json`—`zoo-v13-regression.json` | 各实际存在版本的真实bwrap决策回归、源码摘要；v13另含两局仍失败的迷宫定向回归 | A（策略试验，不替代矩阵） |
+| `review-balance-v7-full-seed0.json`、`review-balance-opening-tests.json` | v7代码182项全套通过；开局统计新增2项单独通过，不冒充最新完整测试 | A（开发回归） |
 | `phase-a-validation.json`、`phase-a-validation-attempts-*.json`、`phase-a-validation-replays-*.json` | 两轮170项、全部5036 complete与30 infra_error索引、最终框架全回放复核；分块文件摘要在主索引中 | A（未冻结验收检查点） |
 | `phase-a-security.json`、`security-stress.json` | 运行时有界资源/清理及6局压力通过；编译树总资源仍无硬约束，明确未完成安全验收 | A（部分通过） |
 | `efficiency-v2.json`、`efficiency-v3.json`、`efficiency-v4.json` | 2/20/50ms看门狗版本；各三组引擎样本、3个单局/6并发满预算局及本地校准。全部原始极值保留，六局整局>35秒 | A（未全部通过） |
