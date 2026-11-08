@@ -1,0 +1,44 @@
+{
+  "cpuLimits": "Test-process and directly reaped-child CPU are separate; neither is a complete sandbox-tree total. Do not add these to match counters.",
+  "lsp": {
+    "diagnostics": 0,
+    "files": 3
+  },
+  "schemaVersion": 1,
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "baseline-tests",
+      "measuredReapedChildrenCpuSeconds": 3.444147,
+      "measuredTestProcessCpuSeconds": 34.1094691,
+      "measuredTestWallSeconds": 93.202432114,
+      "passed": true,
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 203
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "holdout-tool-tests",
+      "measuredReapedChildrenCpuSeconds": 0.0,
+      "measuredTestProcessCpuSeconds": 0.3532893,
+      "measuredTestWallSeconds": 0.3557674,
+      "passed": true,
+      "pattern": "test_phase_b_holdout.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 9
+    }
+  ]
+}

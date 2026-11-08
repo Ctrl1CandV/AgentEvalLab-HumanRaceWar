@@ -1,0 +1,42 @@
+{
+  "allLayoutChecksPassed": true,
+  "generationProcessCpuNs": 1673883500,
+  "generatorVersion": 2,
+  "independentValidation": {
+    "allPassed": true,
+    "byteRegenerationPassed": true,
+    "independentHomeWalkChecks": 576,
+    "independentTowerWalkChecks": 480,
+    "maps": 48,
+    "processCpuNs": 1849970600
+  },
+  "mapSets": {
+    "calibration": {
+      "mapSetSha256": "aa10070ccd05f4e29b0578116ff56b61cf50d9fbd853218acdbde1e3be8b88d0",
+      "maps": 24,
+      "types": {
+        "corridor": 6,
+        "island": 6,
+        "maze": 6,
+        "open": 6
+      }
+    },
+    "grading": {
+      "mapSetSha256": "7362da67fd6d52b097adaa0f909f2762a9af0434c712ae4b7936a6c05d1e8c05",
+      "maps": 24,
+      "types": {
+        "corridor": 6,
+        "island": 6,
+        "maze": 6,
+        "open": 6
+      }
+    }
+  },
+  "privacy": "Layouts, generation seeds and full metadata stay private. grading has no game use in this holdout.",
+  "privateCatalogSha256": "46562a20457b3643c80213a8aa8420325a6fe0396e8bcab70e366950032d27fa",
+  "rejectedCandidates": 0,
+  "schemaVersion": 1,
+  "selection": "Six maps per type per set; sizes 24/28/32/36/40/32 preregistered; OS-entropy seeds saved privately before generation; no outcome-based selection.",
+  "status": "frozen-before-holdout",
+  "uniqueAcrossAllSetsAndDisjointFromPublicScrimmage": true
+}
