@@ -1,43 +1,47 @@
 # 状态
 
-更新：2026-11-08。**A阶段完成，等待审查；未进入B。**
+更新：2026-11-08。**A阶段已通过审查，用户已授权进入B；当前为B启动交接，尚未开展B实验。**
 
-- 审查入口：[`reports/phase-A.md`](reports/phase-A.md)。
-- 工作目录：WSL Ubuntu 22.04，`~/projects/AgentEvalLab-HumanRaceWar`；Windows备份不再同步。
-- 交审配置：`standard-1` / zoo v15；完整参数见 `rules/standard-1.json`。
-- 本轮只按用户要求精简上传内容、整理目录，并提交推送；不改变游戏、计分、验收门槛，不重跑验收对局。
+- 审查依据：[`inbox/2026-11-08-phase-a-accepted.md`](inbox/2026-11-08-phase-a-accepted.md)，已在`139e5bd`入库。
+- 工作目录：WSL `~/projects/AgentEvalLab-HumanRaceWar`；Windows备份不再同步。
+- 冻结配置：`rules/standard-1.json`与动物园v15；不重做引擎，不自行改参数或bot。
+- 新会话入口：[`docs/PHASE_B_HANDOFF.md`](docs/PHASE_B_HANDOFF.md)。本轮按用户要求只落实文档与交接，不生成隐藏资产、不启动对局。
 
-## A阶段已验证结果
+## 2026-11-08审查逐条回复
 
-| 项目 | 结果 | 当前汇总 |
+| 意见 | 本轮处理与依据 | 实施状态 |
 |---|---|---|
-| 最终D6 | 40图、3680局，全部数值条件通过；M总体最低90%，分类型最低60% | `data/phase-a/matrices/zoo-standard-1-final.json` |
-| M自对弈 | 80局：20拆基地、60回合上限；中位300回合 | `data/balance.json` |
-| 配置复核 | 最终框架复跑与v15/P7的全部结果/原始指标一致；不增加独立样本 | `data/phase-a/matrices/trials.json` |
-| 全套回归 | 整理前两个哈希种子各198项通过，13文件LSP零诊断 | `data/phase-a/acceptance/tests.json` |
-| 累计回放 | 截至交审快照61,979次尝试：61,789 complete、186 infra_error、4 configuration_error；完整回放全验证 | `data/phase-a/acceptance/validation.json` |
-| 效率 | 引擎p95≤0.7437ms；单局/六局runner p95=1.0278/1.6236ms，整局在20.9/23秒门槛内 | `data/timing.json` |
+| A通过，可进入B；冻结standard-1/v15 | DESIGN状态、README和AGENTS已同步；A报告及原证据不改写 | 已落实；B获准不等于B完成 |
+| 新增11.5第7条防“一招鲜” | DESIGN写入9个Z及M逐个对L6+各级校准，仅胜负分，每级≤0.1；不得自行放宽，不公开隐藏bot的具体失利对应关系 | 文档已落实；检查待阶梯建成 |
+| 新增11.5第8条留出复核 | DESIGN、BRIEF 5.0明确：24张calibration、冻结v15、种子17/29、换边并含M自对弈；检查10.2第1/2/4/6/7条 | 文档已落实；下一会话先做，未过即停 |
+| DESIGN 17的B验收改为8条 | 已同步前置留出、交付与停点 | 已落实 |
+| 取消构建token记录，CPU照旧 | BRIEF 3.7改为不再采集/汇报构建token、继续记录CPU，同步报告格式和AGENTS；历史快照保留 | 已落实；正式预算自测的预算并未取消 |
+| 隐藏地图、bot及相关对局只能在private；登记摘要 | 交接明确先核查生成/缓存/日志/分析路径，再生成地图并登记HIDDEN.sha256；对外只给允许的汇总 | 尚未创建private/或任何隐藏资产 |
+| M作为L2参照，按校准确认定位 | 接受审查结论；不现在更改M源码或硬定其最终Elo位置 | 留出通过后再校准 |
+| B全部完成后报告并停下 | BRIEF 5.4及AGENTS明确`reports/phase-B.md`、更新清单、等待审查，不进C | 待B实施完成 |
 
-编译与运行资源按二审批准契约落实，不冒称cgroup总量配额或穷尽所有攻击面。各失败候选分版保留，详见阶段报告及 `reports/phase-A-balance-rework.md`。
+## 下一会话顺序
 
-## 本轮发布范围与目录整理
+1. 检查Git状态、`.githooks`与是否有新inbox；完整阅读DESIGN、BRIEF和本文件，再读交接说明。
+2. 在任何隐藏资产落盘前，核查生成器、tournament、编译缓存、分析器和日志的私有输出边界。
+3. 生成并冻结calibration/grading各24张地图，只放private，登记HIDDEN.sha256；不按对局胜负筛图。
+4. 先做11.5第8条留出复核。按现有D6配对结构预计2208局（2160不同名配对+48局M自对弈），开跑前核对实际任务清单。
+5. **未达标：停止，报告汇总并提出调参方案。** 不擅自调参、不重抽图、不继续建阶梯。获准调整后须同时重跑公开与calibration矩阵。
+6. 通过后才按BRIEF第5节开发/校准阶梯，执行两项独立会话自测及第7条，完成B报告后再停下。
 
-用户明确：开发机保留全部对局数据；远端只放审查所需的代码、测试、配置、文档和汇总。
+## 保留的A阶段依据
 
-- **不上传**实际对局回放、逐局CSV/JSON、结果库、逐局尝试/回放审计索引。公开bot的示例回放也不例外。
-- 当前验收汇总、候选矩阵、回归、诊断、用量和历史汇总分别位于 `data/phase-a/` 的分类目录；`data/` 根目录仅保留主要汇总入口。
-- 整理前555份证据文件逐字节保全于 `runs/local-evidence/509f1f8-before-summary-only/`，附本地SHA-256清单。`runs/development/` 中的全部原始运行也保留。撤下文件是归档，不是删除实验或失败记录。
-- `logs/` 只保留当前确定性/健壮性和必要的验收、反例日志；旧完整日志留在本机归档。
-- 测试不再依赖已撤下的真实回放：旧协议兼容与开局分析使用显式合成夹具，冻结参数与完整矩阵汇总核对。合成夹具不算实验数据，不执行bot。
-- `.gitignore`及pre-commit增加发布范围检查；仍保留原凭据、隐藏内容、大小检查，不绕过钩子。
-- 本轮检查结果见 `data/phase-a/acceptance/publication.json`，目录说明见 `docs/REPOSITORY.md`。
+- 审查报告：`reports/phase-A.md`；最终矩阵：`data/phase-a/matrices/zoo-standard-1-final.json`。40图3680局全部条件通过；最终复跑不是新增独立样本。
+- 整理前全套两种哈希种子各198项通过；公开内容整理时两种种子各79项专项测试通过。均为历史验证，本轮未重跑。
+- 累计61,979次尝试：61,789 complete、186 infra_error、4 configuration_error；交审时全部完整回放验证通过。不是独立平衡样本数。
+- CPU：历史已核对bot/宿主分别约2.561/3.579小时，累计回放复核另约1.311小时；缺失环节不补造，完整阶段总量未知。
+- 原始运行留在`runs/development/`；整理前555份原件在`runs/local-evidence/509f1f8-before-summary-only/`。不清理旧失败，不把历史原件重新加入Git。
 
-**历史限制：** `509f1f8`及以前已经上传过明细。本轮用普通提交从最新树撤下，不改写历史、不强推；完整clone仍可能取得旧对象，不能把本轮整理称为远端历史清除。
+## 本轮边界与检查
 
-## 用量与后续停点
+- 已执行`git pull --ff-only`，无上游更新；按项目`/process-review`模板落实文档和逐条回复。
+- 仅更新文档与清单；没有B对局、编译任务、后台作业或需要接管的运行进程。B实验CPU尚无记录，本轮文档操作未计入实验用量。
+- 文档结构检查通过：11.5共8条，留出停点与CPU要求已写明，正式自测预算保留；冻结代码/输入无改动。提交前另核对暂存范围、pre-commit和MANIFEST，不把这些检查称为引擎或B验收测试通过。
+- 本轮做本地交接提交，不自动推送。后续推送须有明确授权，并检查所有待推送提交中没有隐藏内容或逐局数据。
 
-历史三会话文件快照77,321,999 token；11-08两文件快照70,902,675（缓存69,545,728，input+output 1,356,947）。两者重叠且来源不全，不能相加；后续整理调用未计入，完整总量未知。见 `data/phase-a/usage/`。
-
-可核对的累计对局bot/宿主CPU为2.561/3.579小时，交审前累计回放复核另1.311小时；计数器及其他环节不全，阶段CPU总量未知。继续授权有效。
-
-**本轮提交推送后停止，等待评测负责人审查A；不进入B。** 历史过程、旧路径与当时结论移至 [`docs/history/phase-a-progress.md`](docs/history/phase-a-progress.md)。
+目录与发布范围见`docs/REPOSITORY.md`。旧Git历史仍含此前公开过的对局明细，不能声称已清除；B的隐藏内容从创建起就不得进入Git。

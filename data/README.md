@@ -18,4 +18,4 @@ JSON中的`_publication`记录本机完整原件及SHA-256。矩阵、区间、�
 
 `phase-a/history/checkpoint.sha256`保留历史检查点的原字节和原路径，需在对应历史树核对；本轮文件以根`MANIFEST.sha256`为准。
 
-隐藏内容仍只放`private/`。B/C未启动，不创建或填造阶梯、grade和评分结果。
+A已通过审查，`phase-a/`保留的是审查前各次实测及发布记录，不改写为新实验。B已获准但尚处启动交接，隐藏内容只放`private/`；C未启动，不填造阶梯、grade和评分结果。

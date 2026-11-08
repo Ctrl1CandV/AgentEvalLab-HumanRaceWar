@@ -4,7 +4,9 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 ## 现在进行到哪一步
 
-A阶段交付和审查入口见 [reports/phase-A.md](reports/phase-A.md)、[STATUS.md](STATUS.md)。standard-1采用已验证P7参数，动物园v15；最终40图3680局全部条件通过，两个哈希种子全套各198项通过。引擎、SDK、沙箱、bench、check、缓存、调度、结果库和tournament均已交付，见 [docs/BATCH.md](docs/BATCH.md)。按用户授权完成核对后推送，随后等待审查，不进入B；构建检查通过不等于评测负责人已验收。
+**A阶段已通过审查，用户已授权进入B。** 依据见 [inbox/2026-11-08-phase-a-accepted.md](inbox/2026-11-08-phase-a-accepted.md)。standard-1和动物园v15按交审配置冻结；A最终40图3680局条件通过，两个哈希种子全套各198项通过，完整报告见 [reports/phase-A.md](reports/phase-A.md)。
+
+当前是B启动交接，尚未生成隐藏资产或启动B对局。下一项先做24张calibration地图上的留出复核，未过就停下报告，不能直接建阶梯。新会话入口为 [docs/PHASE_B_HANDOFF.md](docs/PHASE_B_HANDOFF.md)，当前状态见 [STATUS.md](STATUS.md)。B完成后仍须停下等审查，不进入C。
 
 ## 目录和上传范围
 

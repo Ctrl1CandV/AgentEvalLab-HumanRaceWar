@@ -8,7 +8,7 @@
 |---|---|
 | `arena/`、`sdk/`、`bots/public/`、`maps/` | 框架、SDK、公开bot与地图；保持原代码布局 |
 | `rules/`、`tests/`、`tools/` | 规则配置、可运行测试与构建/分析工具 |
-| `STATUS.md`、`reports/phase-A.md` | 当前状态与A阶段审查报告 |
+| `STATUS.md`、`docs/PHASE_B_HANDOFF.md` | 当前状态与B阶段启动交接；A结论见`reports/phase-A.md` |
 | `data/balance.json`、`zoo-matrix.csv`、`timing.json` | 当前平衡、聚合胜率矩阵和效率入口 |
 | `data/phase-a/acceptance/` | 最后验收、资源、效率和本轮发布检查汇总 |
 | `data/phase-a/matrices/` | 每个候选及最后复跑的独立聚合矩阵，包含失败版本 |
@@ -17,7 +17,7 @@
 | `logs/` | 当前必要的测试诊断；历史完整日志不再上传 |
 | `docs/history/`、`reports/archive/` | 有审查价值的历史说明，不作为当前待办 |
 | `runs/` | 本机原始运行、结果库、完整回放、旧日志与证据归档；不入Git |
-| `private/` | 后续隐藏资产，仅本机保管；A阶段尚无此目录 |
+| `private/` | B阶段隐藏资产、相关对局及原始分析，仅本机保管；创建进度以STATUS为准 |
 
 ## 哪些内容不上传
 
