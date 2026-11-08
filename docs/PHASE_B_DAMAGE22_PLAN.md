@@ -24,3 +24,5 @@
 5. CPU分bot、宿主、bench、校验、诊断/工具控制记录，不能完整计量的编译等写未知；不采集构建token。此前按三类计数估计一轮约0.61 CPU小时，不是墙钟或完整总量承诺。
 
 命令：`.venv/bin/python -B -m tools.phase_b_damage22 plan`，然后`run`、`analyze`。先提交候选及计划再启动；控制日志只留private。分析工具可在对局运行期间补充，但不触碰冻结执行框架和输入。
+
+补充的`.venv/bin/python -B -m tools.analyze_damage22`只读取两套已审计候选及原基线，核对5888份候选回放的实际PARAM/地图摘要/种子，生成全矩阵配对差值；对预定6组全部基线/候选回放做轨迹诊断，不按胜负选择。两座位随地图簇一起bootstrap；里程碑未发生保留None，固定回合快照标注实际存在局数，不把提前结束的局硬补成300回合。完整报告及逐局轨迹只落`private/phase-b/damage22/paired-analysis/`。

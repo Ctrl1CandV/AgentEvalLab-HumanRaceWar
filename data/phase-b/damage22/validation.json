@@ -79,5 +79,45 @@
       "measuredReapedChildrenCpuSeconds": 0.0
     }
   ],
-  "preflightIssue": "Initial plan refused absolute-manifest vs relative-report paths before any bot. Normalize path presentation only, preserving all hashes/configuration. Failure logs kept private."
+  "preflightIssue": "Initial plan refused absolute-manifest vs relative-report paths before any bot. Normalize path presentation only, preserving all hashes/configuration. Failure logs kept private.",
+  "pairedAnalysisTests": [
+    {
+      "label": "analysis-tests-0",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_damage22_analysis.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0480793,
+      "measuredTestWallSeconds": 0.0527731,
+      "measuredReapedChildrenCpuSeconds": 0.0
+    },
+    {
+      "label": "analysis-tests-1",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_damage22_analysis.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0481651,
+      "measuredTestWallSeconds": 0.0650568,
+      "measuredReapedChildrenCpuSeconds": 0.0
+    }
+  ],
+  "finalLsp": {
+    "files": 4,
+    "diagnostics": 0
+  }
 }
