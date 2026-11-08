@@ -198,6 +198,29 @@ public:
         std::set<int> builders;
         if (int(depots.size())-1<towerGoal)
             for (int i=0;i<builderCount;++i) builders.insert(workers[workers.size()-1-i]->id);
+        std::map<int,Pos> buildGoals;
+        if (config.mode==Mode::Balanced) {
+            // Greedy nearest worker/site pairs, not unit-ID claims that send
+            // a distant worker to a site already beside another builder.
+            std::set<Pos> assigned;
+            int slots=std::min(builderCount,std::max(0,towerGoal-ownTowers));
+            for (int i=0;i<slots;++i) {
+                int selected=-1; Pos site={-1,-1};
+                auto best=std::make_tuple(inf,std::uint64_t(0),0);
+                for (auto worker:workers) if (builders.count(worker->id) && !buildGoals.count(worker->id)) {
+                    if (worker->carry>=parameter("CARRY_MAX") ||
+                            (worker->carry && (returning.count(worker->id) || turn.ore.empty()))) continue;
+                    if (std::any_of(targets.begin(),targets.end(),[&](const auto& t){return hrw::distance(worker->pos(),t.pos)==1;})) continue;
+                    for (auto p:sites) if (!built.count(p) && !assigned.count(p) && featureWalk(home,p)<=featureWalk(enemy,p)+6) {
+                        int route=distance(p)[cell(worker->pos())];
+                        auto key=std::make_tuple(route,rank(p),worker->id/2);
+                        if (route<inf && (selected<0 || key<best)) { selected=worker->id; site=p; best=key; }
+                    }
+                }
+                if (selected<0) break;
+                buildGoals[selected]=site; assigned.insert(site);
+            }
+        }
 
         for (const auto* pointer:own) {
             const auto& u=*pointer; int start=cell(u.pos());
@@ -263,9 +286,11 @@ public:
                 }
                 if (builders.count(u.id)) {
                     Pos site={-1,-1}; int best=inf;
-                    for (auto p:sites) if (!built.count(p) && !claimed.count(p)) {
+                    if (config.mode==Mode::Balanced) {
+                        auto it=buildGoals.find(u.id);
+                        if (it!=buildGoals.end()) { site=it->second; best=distance(site)[start]; }
+                    } else for (auto p:sites) if (!built.count(p) && !claimed.count(p)) {
                         int route=distance(p)[start];
-                        if (config.mode==Mode::Balanced && featureWalk(home,p)>featureWalk(enemy,p)+6) continue;
                         if (site.first<0 || std::make_tuple(route,rank(p))<std::make_tuple(best,rank(site))) { site=p; best=route; }
                     }
                     if (site.first>=0 && best<inf) {
@@ -371,6 +396,7 @@ public:
             }
             int cost=parameter(kind=='W'?"WORKER_COST":"SOLDIER_COST");
             int reserve=(builderCount && int(depots.size())-1<towerGoal)?parameter("TOWER_COST"):0;
+            if (config.mode==Mode::Balanced && buildGoals.empty()) reserve=0;
             // Only an army inside the existing home-defense radius is an
             // emergency. Distant defenders must not starve waiting builders.
             if (config.mode==Mode::Balanced && threateningSoldiers>0 && int(soldiers.size())<threateningSoldiers+1) reserve=0;

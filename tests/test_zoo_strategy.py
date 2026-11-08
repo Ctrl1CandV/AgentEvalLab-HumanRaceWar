@@ -244,6 +244,22 @@ class ZooStrategyTests(unittest.TestCase):
         self.probe(game, state, "local-offensive-detour")
         self.assertLess(abs(soldier.x - 15) + abs(soldier.y - 18), 2)
 
+    def test_far_builder_does_not_claim_sites_from_ready_adjacent_builders(self):
+        game, state = self.budget_state()
+        state.units = {uid: u for uid, u in state.units.items() if u.owner == 0}
+        state.players[0].energy = 300
+        replies = self.probe(game, state, "ready-builders-before-distant-builder")
+        self.assertEqual(sum(line.startswith("BUILD") for line in replies[0]), 2, replies)
+        self.assertEqual(len(state.towers), 2)
+
+    def test_no_free_site_does_not_reserve_money_for_an_impossible_build(self):
+        game, state = self.budget_state()
+        state.units = {uid: u for uid, u in state.units.items() if u.owner == 0}
+        for i, pos in enumerate(((10, 8), (12, 8), (13, 15), (11, 15))):
+            state.towers[pos] = Tower(0 if i == 0 else 1, *pos, 300)
+        replies = self.probe(game, state, "no-impossible-building-reserve")
+        self.assertTrue(any(line.startswith("SPAWN S") for line in replies[0]), replies)
+
     def test_nearby_army_can_override_tower_reserve(self):
         game, state = self.budget_state(near=True)
         replies = self.probe(game, state, "emergency-budget")

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Separate complete D6 candidates, not pooled independent samples; none adopted/frozen",
+  "scope": "Separate complete D6 candidates, not pooled independent samples; v15/P7 meets all numerical conditions, final acceptance pending",
   "trials": [
     {
       "name": "zoo-p1-worker-survival",
@@ -2696,8 +2696,465 @@
           }
         }
       }
+    },
+    {
+      "name": "zoo-v14-p7-public",
+      "report": "data/zoo-v14-p7-public/report.json",
+      "reportSha256": "67ec89ebf916af2d10b6ef75d58b97b120a26a35792d5833e60285a04dd91384",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "219d610a9a70484bbade08572220804d22da9ca2ca1fdd133a4444f631cb4747",
+        "6bbcf3acff7a30713287ec83ae0b8e8e8bbd36f45541db3a38f71da6db2b0ee3",
+        "0b92070c9703914a374e7cb4a68c3e8bd7bcca6e1c51c131f4cefe59eeae2c9a",
+        "3ceb1e798357390108fc81be361578082fbe2ee14a3fe8e768f745c35d72c575",
+        "6fb638938069ac64bc2aa4546da31104dd5603513905f055c6ea0258a8f35b2f",
+        "b1a8d06da68c9dd18c8706cf3b1aedeabbffe93ebb40fdbacd161a7e9c1079be",
+        "636ed23e4e8f3ee399cd40e49af01d9a3cca2a712a6da72ab6b85d3ee75544af",
+        "e10017b23c533427cbc7b2e26a88a47aa17fcd92211d5d536a42bc1054713273",
+        "2a5bb1fdd6bbbb309a99ebb85f61506db5c5f77d660fcdd9249e8ca46d842054",
+        "cb59094b741aa4b90273e464a82687f5292f603dd8b14d0ee97bb2587ae2ccf0"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 459464745700,
+        "matchHarnessCpuNs": 852992401900,
+        "turnHarnessCpuNsP95": 1720900,
+        "turnHarnessCpuNsMax": 5902800,
+        "replayVerificationCpuNs": 254939346100,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": true,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": true,
+          "balancedOverall70": true,
+          "balancedEveryType55": false
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 60,
+          "base_destroyed": 20
+        },
+        "baseEndingFraction": 0.25,
+        "turnLimitFraction": 0.75,
+        "seedWinners": {
+          "17": 48,
+          "29": 32
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-v14-p7-public/timing-selection.json",
+        "sha256": "bbccdeca514b9d3054ca4c50de7f3c269c1962d758577004e6375c66a74a0794",
+        "speedFactor": 0.6056739402599988,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
+    },
+    {
+      "name": "zoo-v15-p7-public",
+      "report": "data/zoo-v15-p7-public/report.json",
+      "reportSha256": "ebff3807d46cd9eedd5bb4f4ce3de9e5e58b9683dfefe9ab9af37c007f007a21",
+      "rulesetOverrides": {
+        "WORKER_HP": 60,
+        "WORKER_DMG": 10,
+        "SOLDIER_COST": 80,
+        "START_ENERGY": 500,
+        "BASE_HP": 600,
+        "WORKER_COST": 40,
+        "START_WORKERS": 4
+      },
+      "sourceHashes": [
+        "273fecd4a9039d73914454bbcce078462afce2071c87b468c7f2d8bf6d731d8a",
+        "e9d7296c5777b86bf85aa55ceb5ae4ec164628b6e6678c62d903198af408ff4e",
+        "9bb4d7effb2568ac78c22dcff20867862e951f15880d23355d5de2d9804d28b3",
+        "f4e7db81e83dafcf60d531da7b505b030751655f5c4d6f6e032de2a786a4db66",
+        "b67d8c1278ef6f68ff3ea9a584c2747a5998332feb57f1e135211941d8ef9b4e",
+        "800b4e4c34b0107a47af9bafd63ef6a1af10035fb251d3a0fd2ebb63e58aaee5",
+        "2d089a189f255bdec967fb4c13f5512afa5d9bc23f6bafd88b7b86c079edcd2e",
+        "3a93ef4f1d84b0e50a811f0622a75235d0d5b15156fd215ad44bbfaa51cecc78",
+        "1d9e34836ef9d265c3f17408b7575b78a6533dc6eee05eb5bee21af42a8e6b61",
+        "535bc499deb1b378c04627c8909ef872f25899c490ee23e7a6cc7975f3e37798"
+      ],
+      "mapHashes": [
+        "b309551f2222720816a4ee4b23de662062cb8e62a3b9630e3f94ce6190aa7523",
+        "782b25190cc67ba522468fda8d7a0d4669af8b0f42016b0a911c27d179add4b9",
+        "680646da3906e12ff62192066015e76c48cbb16a54e499ff5f232aa277a05e82",
+        "afecc05b8ab2b32fa6c5214e3f3da44663bf2ecc857178f0affac5ed571daae3",
+        "2c51178feb54a5347acccde9fc807e3faa24b304726bb9cab62638a728544335",
+        "07a2ab7139b08bd15249fa9c8e205d8e87e909c6e86ccfb738631588017c0e4b",
+        "a14220a8db6f513026c64b5a6e3866ab448ddf2937208efd2dd1a41db82ab024",
+        "478caa19221b5af8ca8bc0c0561db89240e604533fa1a86a67afb9843dd42dfe",
+        "1e0180b605f907b97c9ae98d13ee1c1f9f494e3d6b739d0060a9033a9aa5e9b6",
+        "abef5441cc43b1c5d85c21042de4afad1d2dcaa3c1763e63dd47314483e296aa",
+        "96d62ec200d98f82fc0a7efd2b14558c98ecbb4cda404a0a46f7774e3a33ab0e",
+        "4ee21307721417b18f1821e3ffbb6fef20a036da6722601e37261c3d7fde0326",
+        "d506e57dd29783b3a22d89cbfd870f8aebe4ebe88e7c2fed978fa2491e1756f5",
+        "1d724c22afc348c1684af958bed91225dadd80a77392391f30cada445c1dfe00",
+        "be30a10d68f68686f74b52256cac2b16779700bc96b678b90db15c260ff7a1d6",
+        "2c91682aeabfaa87299873859d5fc1f67e752fc5120fab83a5170024a6286277",
+        "ea826940bee96acfaf8faba4e9e30504b7114efa5149727cff330e2f3ecdc110",
+        "93a181055fb5b04233f4c8a92b70d4941873ed4ba3adcbb41622c0057d3cfd29",
+        "127598ce91b69eac79486d37076fdf227eecec5a4623b09f7d410268912967b2",
+        "5a7e360a4cfe177db6a701d43cecf9eaced5480c8812700d866096336f46d8c0",
+        "c6b240f0cafd1b8514062e60b3ebacb704ff6a089b62533a1f40c85bf3b6eec5",
+        "e6051c00dacb894a4b9498a3531b0b37e58fd95c57233669680ab98bd2721b47",
+        "2a299c516f81e92c41e97e3e920426a42e5180e1b687491ed353630c985cd2a4",
+        "cecbe5435fa55d2ac3073d1aa2aabaa7c55f24c325de4b398bc8cf9b058290dc",
+        "70668a8df20961d07f5d2a4ae3dee23b47bad1e284235061121609427cb49734",
+        "a4faedf6ec1802a16eedfe03bfb7ba9da8a4044e86fc8ecf048fc37b2861e927",
+        "e9a3b23010a39b4d7342fb73db75505536d84fd14ed3dcd584a6256517c81856",
+        "985f9cffe85342fe74fd470b8c7572b31cf3a59ac2c580b978710c401940cf93",
+        "f884b0cf6900c0c194011df6a074c9b2517321d61c08126c82512a4eb0c7b610",
+        "0396690f00fa147615bb7df4a794d7c4c46ffb5545715457248d8ab3e1220efe",
+        "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba",
+        "03dd8001e935dbd51dd90f0fb1c55e3de827930c6468b0f6c261e505af3f4fd7",
+        "1983943d5ffd3145afe3db5203b2523a346afc8648c9bba47a56eb9bb2f67bea",
+        "31c301af6157b82da8370febf10557f28aad975f90ec3a1b0478c58a0231b11d",
+        "6b705343cfa2a4b696285883209a6d6ef9a41738a7e694e3ec000e3586a0fc76",
+        "65e9f4f10957394e16013dc802989307985542cae2806c44de9ffb1c5c1fe464",
+        "b6f9a6ec60ec859f376cefb3cc4b09ee2962bf68a7200974524b790dd998dc30",
+        "5dfe7525c02e7f1ae6aa9f4fc4ecad88772ced5e5436ae5a332edc0347f712c8",
+        "3c5bd9b2a0fcaa71716885cd735b9191bde06e17d371e61edaba8063c7f4955d",
+        "8d9e7dd6d36813883e2540002e19ef62ae8f3263d3d9020acf292b46fbc35ba9"
+      ],
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "recordedUsage": {
+        "botCpuNs": 462803569200,
+        "matchHarnessCpuNs": 862763741200,
+        "turnHarnessCpuNsP95": 1733900,
+        "turnHarnessCpuNsMax": 6835100,
+        "replayVerificationCpuNs": 259894005600,
+        "totalCpuHours": null,
+        "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
+      },
+      "rateChecks": {
+        "winRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": true,
+          "balancedOverall70": true,
+          "balancedEveryType55": true
+        },
+        "scoreRate": {
+          "counters": {
+            "Z-miner": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-rush": [
+              "Z-harass"
+            ],
+            "Z-wrush": [
+              "Z-rush",
+              "Z-eco",
+              "Z-turtle",
+              "Z-harass"
+            ],
+            "Z-eco": [
+              "Z-rush"
+            ],
+            "Z-turtle": [
+              "Z-miner",
+              "Z-rush",
+              "Z-eco",
+              "Z-towers",
+              "Z-harass"
+            ],
+            "Z-towers": [
+              "Z-rush",
+              "Z-wrush",
+              "Z-eco",
+              "Z-harass"
+            ],
+            "Z-harass": [
+              "Z-eco"
+            ]
+          },
+          "eachSingleLosesToAnother": true,
+          "balancedOverall70": true,
+          "balancedEveryType55": true
+        }
+      },
+      "observedChecks": {
+        "fairness": true,
+        "drawRateBelow10": true,
+        "selfMedianAtLeast120": true,
+        "selfBy60Below20": true,
+        "bothEndings20To80": true,
+        "noBotFaultsOrProtocolWarnings": true
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 60,
+          "base_destroyed": 20
+        },
+        "baseEndingFraction": 0.25,
+        "turnLimitFraction": 0.75,
+        "seedWinners": {
+          "17": 50,
+          "29": 30
+        }
+      },
+      "timing": {
+        "path": "runs/development/zoo-v15-p7-public/timing-selection.json",
+        "sha256": "834be40b9abe8935aff572e026cf116a40e8b2845f1e7a96900228722aae0112",
+        "speedFactor": 0.6088408315535807,
+        "reference": {
+          "kind": "operator-supplied-evaluation-idle",
+          "cpuNs": 259181615,
+          "reportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+          "machine": {
+            "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+            "availableCpus": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "kernel": "6.18.54.1-microsoft-standard-WSL2",
+            "architecture": "x86_64",
+            "memoryBytes": 14455549952
+          }
+        }
+      }
     }
   ],
-  "inFlight": "zoo-v14-p7-public",
-  "controlledParameterInputsMatch": true
+  "inFlight": null,
+  "controlledParameterInputsMatch": true,
+  "selectedCandidate": "zoo-v15-p7-public"
 }

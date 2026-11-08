@@ -15,7 +15,7 @@ STYLES={
     'Z-turtle':('Turtle',7,0,0,300),
     'Z-towers':('Towers',14,10,10,300),
     'Z-harass':('Harass',6,0,0,0),
-    'M-balanced':('Balanced',9,2,4,80),
+    'M-balanced':('Balanced',9,3,4,80),
 }
 
 
@@ -35,7 +35,7 @@ def generate(*, replace=False):
             path.write_bytes(data); hashes[file]=sha256(data).hexdigest()
         entries.append({'name':name,'configuration':[mode,workers,builders,towers,attack],
                         'path':str(directory.relative_to(ROOT)),'sourceSha256':hashes})
-    report={'schemaVersion':1,'zooVersion':14,'status':'development, not strength calibrated',
+    report={'schemaVersion':1,'zooVersion':15,'status':'development, not strength calibrated',
             'strategyTemplateSha256':sha256(shared).hexdigest(),'bots':entries,
             'seedPolicy':'FNV-style decimal-seed folding and SplitMix finalizer; balanced worker goal +/-1 and assault turn +/-8; tie-breaking in rotational local coordinates.'}
     path=ROOT/'bots/catalog.json'
