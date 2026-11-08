@@ -1,0 +1,24 @@
+test_fragmented_crlf_and_leftover (tests.test_runtime.FrameTests.test_fragmented_crlf_and_leftover) ... ok
+test_huge_line_discard_is_bounded_and_marker_recovers (tests.test_runtime.FrameTests.test_huge_line_discard_is_bounded_and_marker_recovers) ... ok
+test_invalid_utf8_does_not_expand_transport_byte_budget (tests.test_runtime.FrameTests.test_invalid_utf8_does_not_expand_transport_byte_budget) ... ok
+test_launcher_has_no_host_environment_or_home_bind (tests.test_runtime.FrameTests.test_launcher_has_no_host_environment_or_home_bind) ... ok
+test_long_fake_end_not_a_marker (tests.test_runtime.FrameTests.test_long_fake_end_not_a_marker) ... ok
+test_marker_uses_engine_whitespace_and_rejects_bad_text (tests.test_runtime.FrameTests.test_marker_uses_engine_whitespace_and_rejects_bad_text) ... ok
+test_bank_is_consumed_only_by_excess_and_never_refilled (tests.test_runtime.SandboxMatchTests.test_bank_is_consumed_only_by_excess_and_never_refilled) ... ok
+test_compile_failure_is_bot_loss_and_preserved (tests.test_runtime.SandboxMatchTests.test_compile_failure_is_bot_loss_and_preserved) ... ok
+test_cpu_and_wall_timeouts (tests.test_runtime.SandboxMatchTests.test_cpu_and_wall_timeouts) ... ok
+test_crashes_same_round_draw_and_one_crash_loses (tests.test_runtime.SandboxMatchTests.test_crashes_same_round_draw_and_one_crash_loses) ... ok
+test_idle_loses_to_miner (tests.test_runtime.SandboxMatchTests.test_idle_loses_to_miner) ... ok
+test_init_timeout_and_missing_ready_are_bot_faults (tests.test_runtime.SandboxMatchTests.test_init_timeout_and_missing_ready_are_bot_faults) ... ok
+test_live_isolation_resources_and_cross_namespace_clock (tests.test_runtime.SandboxMatchTests.test_live_isolation_resources_and_cross_namespace_clock) ... ok
+test_malformed_and_flood_output_is_bounded_without_forfeit (tests.test_runtime.SandboxMatchTests.test_malformed_and_flood_output_is_bounded_without_forfeit) ... ok
+test_missing_bwrap_is_infra_and_retries_are_archived (tests.test_runtime.SandboxMatchTests.test_missing_bwrap_is_infra_and_retries_are_archived) ... ok
+test_missing_end_flood_times_out_without_unbounded_storage (tests.test_runtime.SandboxMatchTests.test_missing_end_flood_times_out_without_unbounded_storage) ... ok
+test_python_cpp_examples_full_match_and_replay_tamper (tests.test_runtime.SandboxMatchTests.test_python_cpp_examples_full_match_and_replay_tamper) ... ok
+test_real_sandbox_preparation_error_is_not_a_bot_loss (tests.test_runtime.SandboxMatchTests.test_real_sandbox_preparation_error_is_not_a_bot_loss) ... ok
+test_snapshot_rejects_symlinks (tests.test_runtime.SandboxMatchTests.test_snapshot_rejects_symlinks) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 26.983s
+
+OK

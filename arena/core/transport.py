@@ -132,6 +132,18 @@ def exchange(connections: list[Connection], messages: list[list[str]], cpu_ms: l
 
         def finish(i, fault):
             c = connections[i]
+            # A fast exit can make stdin fail (or a deadline expire) before
+            # select delivers stdout's already-queued trusted startup marker.
+            # Drain one bounded nonblocking chunk before classifying startup.
+            if not c.started:
+                try:
+                    data = c.handshake.feed(os.read(c.stdout.fileno(), 8192))
+                except BlockingIOError:
+                    pass
+                else:
+                    c.started = c.handshake.done
+                    if c.started:
+                        c.pending = frames[i].feed(data)
             total_cpu = c.clock.read_ns()
             cpu = max(0, total_cpu-cpu_start[i])
             wall = time.monotonic_ns()-starts[i]

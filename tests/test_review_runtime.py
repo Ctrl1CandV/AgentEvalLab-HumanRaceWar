@@ -2,6 +2,7 @@
 import json
 import os
 from pathlib import Path
+import selectors
 import time
 import unittest
 from unittest.mock import patch
@@ -43,6 +44,31 @@ class ReviewRuntimeTests(unittest.TestCase):
         self.assertEqual(row["result"]["faults"], ["crash", None])
         self.assertEqual(row["result"]["turns"], 4)
         self.assertEqual(row["result"]["winner"], 1)
+
+    def test_early_exit_keeps_queued_start_marker_when_stdin_breaks_first(self):
+        class WriteFirstSelector(selectors.DefaultSelector):
+            def select(self, timeout=None):
+                return sorted(super().select(timeout), key=lambda item: item[0].data[1] != "in")
+
+        launcher = Bubblewrap()
+        game = Outpost()
+        state = game.new_match(self.map, {}, [17, 29])
+        records = []
+        for code in (2, 125):
+            with self.subTest(exit_code=code):
+                bot = prepare(self.bot(f"early-exit-{code}", f"raise SystemExit({code})\n"),
+                              self.root / f"prepared-{code}", launcher, launcher.cpus[0])
+                conn = Connection(bot, launcher, launcher.cpus[0], 10)
+                try:
+                    conn.process.wait(timeout=5)  # marker is queued; stdin already broken
+                    with patch("arena.core.transport.selectors.DefaultSelector", WriteFirstSelector):
+                        replies = exchange([conn], [game.init_message(state, 0)], [2000], [6000], b"READY")
+                    records.extend(r.record() for r in replies)
+                    self.assertEqual(replies[0].fault, "crash")
+                    self.assertTrue(conn.started)
+                finally:
+                    conn.close()
+                    (self.root / "early-exit-replies.json").write_text(json.dumps(records, indent=2))
 
     def test_cpu_after_end_is_charged_to_next_reply(self):
         code = '''import hrw, threading, time

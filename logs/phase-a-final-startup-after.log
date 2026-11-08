@@ -1,0 +1,16 @@
+test_compile_context_has_two_gib_address_space (tests.test_review_runtime.ReviewRuntimeTests.test_compile_context_has_two_gib_address_space) ... ok
+test_cpp_threads_work_but_are_bounded (tests.test_review_runtime.ReviewRuntimeTests.test_cpp_threads_work_but_are_bounded) ... ok
+test_cpu_after_end_is_charged_to_next_reply (tests.test_review_runtime.ReviewRuntimeTests.test_cpu_after_end_is_charged_to_next_reply) ... ok
+test_early_exit_keeps_queued_start_marker_when_stdin_breaks_first (tests.test_review_runtime.ReviewRuntimeTests.test_early_exit_keeps_queued_start_marker_when_stdin_breaks_first) ... ok
+test_exit_125_on_turn_five_is_one_bot_loss_not_a_retry (tests.test_review_runtime.ReviewRuntimeTests.test_exit_125_on_turn_five_is_one_bot_loss_not_a_retry) ... ok
+test_fork_loop_and_affinity_changes_are_denied (tests.test_review_runtime.ReviewRuntimeTests.test_fork_loop_and_affinity_changes_are_denied) ... ok
+test_live_clock_missing_children_file_fails_closed (tests.test_review_runtime.ReviewRuntimeTests.test_live_clock_missing_children_file_fails_closed) ... ok
+test_malformed_submission_is_compile_loss (tests.test_review_runtime.ReviewRuntimeTests.test_malformed_submission_is_compile_loss) ... ok
+test_python_threads_work_but_are_bounded (tests.test_review_runtime.ReviewRuntimeTests.test_python_threads_work_but_are_bounded) ... ok
+test_readonly_filesystems_and_anonymous_file_bypasses (tests.test_review_runtime.ReviewRuntimeTests.test_readonly_filesystems_and_anonymous_file_bypasses) ... ok
+test_tmp_filling_bot_cannot_consume_unbounded_memory (tests.test_review_runtime.ReviewRuntimeTests.test_tmp_filling_bot_cannot_consume_unbounded_memory) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.173s
+
+OK
