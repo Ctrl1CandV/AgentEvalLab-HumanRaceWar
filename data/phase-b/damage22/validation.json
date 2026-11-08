@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "fullSuiteBeforeRun": {
+    "schemaVersion": 1,
+    "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+    "pattern": "test_*.py",
+    "python": "3.13.15",
+    "system": "Linux",
+    "kernel": "6.18.40.1-microsoft-standard-WSL2",
+    "testsRun": 217,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "measuredTestProcessCpuSeconds": 34.4691127,
+    "measuredTestWallSeconds": 93.909869305,
+    "measuredReapedChildrenCpuSeconds": 3.776568
+  },
+  "lspBeforeRun": {
+    "files": 2,
+    "diagnostics": 0
+  },
+  "privateRegistryBeforeRun": {
+    "filesVerified": 68841,
+    "processCpuSeconds": 2.5097309
+  },
+  "candidateContract": "only SOLDIER_DMG=22; standard-1 stays 20; candidate initialization, damage, determinism and symmetry tested without bots",
+  "measurementLimits": "Test host and reaped child CPU are distinct partial ranges; not full experiment CPU."
+}
