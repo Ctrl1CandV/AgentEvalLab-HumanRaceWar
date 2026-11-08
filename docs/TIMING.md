@@ -48,7 +48,7 @@ i5-14600KF，WSL可见20个逻辑CPU；每种并发度重复3次，完整记录�
 
 2ms轮询时，宿主每回合CPU均值为单局8.54ms、六局11.87ms。定点回归先复现100ms回复需49次CPU树采样；改为管道事件立即唤醒、看门狗最长50ms并按剩余CPU/墙钟预算缩短，最终为5次。短5ms墙钟预算仍受限，不改实际时限或END累计计费。
 
-最新 `data/efficiency-v4.json`：
+当时的 `data/efficiency-v4.json`（历史）：
 
 | 项目 | 结果 | 按第二次审查解释的结论 |
 |---|---|---|
@@ -63,3 +63,17 @@ i5-14600KF，WSL可见20个逻辑CPU；每种并发度重复3次，完整记录�
 ## 正式评测机参考（2026-11-07收到）
 
 用户提供 `inbox/bench-eval-machine-2026-11-07.json`：i7-13650HX、20逻辑CPU，空闲单实例3样本中位 **259,181,615ns**，工作负载摘要与当前bench一致。使用文件中 `singleInstance.medianCpuNs`，不是双实例负载277,246,885ns。原文件自带的 `local-development-idle` 是其在评测机采集时的标签；本地通过 `--reference` 显式引入后标为 `operator-supplied-evaluation-idle` 并保存源文件SHA-256，不修改原文件。后续矩阵在实际jobs/CPU池下重测，不追溯改写旧回放的本地参考系数。
+
+## 2026-11-08 最终框架与standard-1复测
+
+`data/efficiency-v5.json`使用上述正式参考，仍在开发机测量。jobs1/6分别实测系数0.529447/0.593134；实际TURN为53/60ms，整局门槛为20.9/23秒。三局单并行实测16.825–16.831秒，六局实测19.228–19.244秒，均300回合、无故障、回放全部通过。
+
+80单位40×40的三组引擎CPU p95为0.7437/0.7214/0.7203ms；runner单局/六局p95为1.0278/1.6236ms。六局最大3.9046ms照实保存，不作p95门槛；旧最大7.5831ms也保留。九局都使用当前完整参数，不将旧起点测量冒充新配置。
+
+重测须等其他arena活动结束并选新目录，例如：
+
+```sh
+.venv/bin/python -m tools.measure_efficiency --out runs/development/efficiency-recheck --reference inbox/bench-eval-machine-2026-11-07.json
+```
+
+当前结论见 `data/timing.json` 的 `currentEfficiencyAcceptance`；原 `efficiencyAcceptance` 和旧负载曲线明确保留为历史。C阶段完整评分用时及评测机本地复核仍未完成。

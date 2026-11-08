@@ -136,53 +136,53 @@
     "medianTurns": 300.0,
     "by60Fraction": 0.0,
     "endReasons": {
-      "turn_limit_score": 58,
-      "base_destroyed": 22
+      "turn_limit_score": 60,
+      "base_destroyed": 20
     },
-    "baseEndingFraction": 0.275,
-    "turnLimitFraction": 0.725,
+    "baseEndingFraction": 0.25,
+    "turnLimitFraction": 0.75,
     "seedWinners": {
-      "17": 56,
-      "29": 24
+      "17": 50,
+      "29": 30
     }
   },
-  "drawRateExcludingIdleAndSameName": 0.00625,
+  "drawRateExcludingIdleAndSameName": 0.001388888888888889,
   "diagnosticsByMapType": {
     "corridor": {
       "games": 920,
-      "turns": 192872,
-      "failedMoves": 23576,
-      "failedOrders": 24114,
+      "turns": 180580,
+      "failedMoves": 45036,
+      "failedOrders": 45790,
       "buildContested": 0,
       "buildContestedSites": 0,
-      "baseEndings": 570
+      "baseEndings": 582
     },
     "island": {
       "games": 920,
-      "turns": 200642,
-      "failedMoves": 28368,
-      "failedOrders": 29034,
+      "turns": 183002,
+      "failedMoves": 50292,
+      "failedOrders": 51114,
       "buildContested": 0,
       "buildContestedSites": 0,
-      "baseEndings": 520
+      "baseEndings": 550
     },
     "maze": {
       "games": 920,
-      "turns": 224580,
-      "failedMoves": 30854,
-      "failedOrders": 31052,
+      "turns": 217594,
+      "failedMoves": 53176,
+      "failedOrders": 53372,
       "buildContested": 0,
       "buildContestedSites": 0,
-      "baseEndings": 414
+      "baseEndings": 406
     },
     "open": {
       "games": 920,
-      "turns": 181428,
-      "failedMoves": 17814,
-      "failedOrders": 18574,
+      "turns": 163266,
+      "failedMoves": 31822,
+      "failedOrders": 33170,
       "buildContested": 0,
       "buildContestedSites": 0,
-      "baseEndings": 596
+      "baseEndings": 648
     }
   },
   "observedChecks": {
@@ -198,8 +198,8 @@
       "counters": {
         "Z-miner": [
           "Z-rush",
+          "Z-wrush",
           "Z-eco",
-          "Z-turtle",
           "Z-towers",
           "Z-harass"
         ],
@@ -207,16 +207,13 @@
           "Z-harass"
         ],
         "Z-wrush": [
-          "Z-miner",
           "Z-rush",
           "Z-eco",
           "Z-turtle",
-          "Z-towers",
           "Z-harass"
         ],
         "Z-eco": [
-          "Z-rush",
-          "Z-harass"
+          "Z-rush"
         ],
         "Z-turtle": [
           "Z-miner",
@@ -227,21 +224,24 @@
         ],
         "Z-towers": [
           "Z-rush",
+          "Z-wrush",
           "Z-eco",
           "Z-harass"
         ],
-        "Z-harass": []
+        "Z-harass": [
+          "Z-eco"
+        ]
       },
-      "eachSingleLosesToAnother": false,
-      "balancedOverall70": false,
-      "balancedEveryType55": false
+      "eachSingleLosesToAnother": true,
+      "balancedOverall70": true,
+      "balancedEveryType55": true
     },
     "scoreRate": {
       "counters": {
         "Z-miner": [
           "Z-rush",
+          "Z-wrush",
           "Z-eco",
-          "Z-turtle",
           "Z-towers",
           "Z-harass"
         ],
@@ -249,18 +249,16 @@
           "Z-harass"
         ],
         "Z-wrush": [
-          "Z-miner",
           "Z-rush",
           "Z-eco",
           "Z-turtle",
-          "Z-towers",
           "Z-harass"
         ],
         "Z-eco": [
-          "Z-rush",
-          "Z-harass"
+          "Z-rush"
         ],
         "Z-turtle": [
+          "Z-miner",
           "Z-rush",
           "Z-eco",
           "Z-towers",
@@ -268,30 +266,35 @@
         ],
         "Z-towers": [
           "Z-rush",
+          "Z-wrush",
           "Z-eco",
           "Z-harass"
         ],
-        "Z-harass": []
+        "Z-harass": [
+          "Z-eco"
+        ]
       },
-      "eachSingleLosesToAnother": false,
-      "balancedOverall70": false,
-      "balancedEveryType55": false
+      "eachSingleLosesToAnother": true,
+      "balancedOverall70": true,
+      "balancedEveryType55": true
     }
   },
-  "numericalBalanceConditionsMetUnderBothRateConventions": false,
+  "numericalBalanceConditionsMetUnderBothRateConventions": true,
   "recordedUsage": {
-    "botCpuNs": 436852331900,
-    "matchHarnessCpuNs": 839820443900,
-    "turnHarnessCpuNsP95": 1649700,
-    "turnHarnessCpuNsMax": 8403500,
-    "replayVerificationCpuNs": 228040758200,
+    "botCpuNs": 453460392100,
+    "matchHarnessCpuNs": 829144229600,
+    "turnHarnessCpuNsP95": 1649500,
+    "turnHarnessCpuNsMax": 3224500,
+    "replayVerificationCpuNs": 264636009700,
     "totalCpuHours": null,
     "limits": "These counters exclude compilation, controller startup/dispatch and other uncaptured work. No RUSAGE_CHILDREN sums added."
   },
   "schemaVersion": 1,
-  "scope": "v5 only, 40 public maps; no pooling with pilots",
-  "source": "data/zoo-v5-public/report.json",
-  "sourceSha256": "c0f88486a63024c2c4eb4495ccabcbea0eb7bcd192f7112c584bb6aa8ba3e60e",
-  "phaseAComplete": false,
-  "frozen": false
+  "scope": "Final standard-1 / zoo v15 only; 40 public maps, no pooling",
+  "source": "data/zoo-standard-1-final/report.json",
+  "sourceSha256": "c39edd74a7a31902f7643c1e7676f986180889c9ebc7eaaab48ed2b2e39f0ea8",
+  "phaseAComplete": true,
+  "frozen": true,
+  "reviewStatus": "awaiting phase review; no Phase B",
+  "previousBaseline": "data/phase-a-baseline-v5/balance.json"
 }

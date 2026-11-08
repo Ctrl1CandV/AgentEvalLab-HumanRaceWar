@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "scope": "Final default configuration and runtime, all tests including retained first failure",
+  "sourceHashScope": "Archive-time tree. Engine/SDK/test code is unchanged since both full-suite passes. The efficiency tool gained reference/reporting options afterward, then passed a separate nine-game measurement and LSP check. Documentation may subsequently change; MANIFEST records final delivery bytes.",
   "framework": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414",
   "tests": [
     {

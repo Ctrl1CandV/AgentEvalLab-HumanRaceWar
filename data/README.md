@@ -1,5 +1,22 @@
 # data
 
+## 2026-11-08交审入口
+
+| 文件 | 内容 |
+|---|---|
+| `zoo-standard-1-final/`、`zoo-matrix.csv`、`balance.json` | 最终框架/参数/动物园的完整3680局，全部数值条件通过；不与此前候选合并 |
+| `zoo-v14-p7-public/`、`zoo-v15-p7-public/` | v14仍失败、v15首次通过；最后交付复跑与v15的全部结果/游戏指标一致，不增加独立样本 |
+| `phase-a-final-tests.json`、`phase-a-startup-race.json` | 两个哈希种子各198项、13文件LSP零诊断；首轮失败、启动竞态反例与修复全保留 |
+| `phase-a-final-validation/` | 61,979次尝试含186 infra_error/4 configuration_error；61,789份完整回放全验证，分块摘要在report中 |
+| `phase-a-security-final.json`、`efficiency-v5.json` | 二审资源契约的最终检查；正式空闲参考下的新配置效率实测，9局回放通过 |
+| `phase-a-baseline-v5/` | 更新根目录汇总前的原v5 balance与matrix原件 |
+| `csv-canonicalization.json` | 60个生成CSV按Git策略转LF，逐格内容相同；CRLF原字节在runs留存 |
+| `usage-pi-current-subset.json`、`usage-pi-final-subset.json` | 11-08两次可见两会话文件的部分用量；最终快照70,902,675，不能与历史三文件快照相加 |
+
+具体逐条结论见 `reports/phase-A.md`。以下历史条目保留各批当时的结论；B阶段文件只是计划，尚未创建。
+
+## 历史与分类索引
+
 | 文件 | 内容 | 阶段 |
 |---|---|---|
 | `environment.json` | 初次开工的环境探测历史（Python 3.10）；不是性能验收 | A（历史开发检查） |
@@ -21,11 +38,11 @@
 | `harassment-v5/`、`harassment-analysis-tests.json` | 旧v5全部720局骚扰对局的工兵死亡位置、交战前兵力和结束方式；逐回合hash核对，4项统计/战斗例子通过 | A（全量成因诊断） |
 | `review-balance-runtime.json` | 第二次审查编译16任务/64MiB文件/串行锁及TMPDIR修复；失败复现、174项全套 | A（审查修复） |
 | `zoo-p1-worker-survival/`、`zoo-p2-slower-mining/`、`zoo-p3-soldier-cost/` | 各3680局独立参数试验及全部回放审计，均未通过平衡；不混池、不覆盖v5 | A（完整D6失败候选） |
-| `phase-a-balance-trials.json` | 二审后的完整D6批次索引，参数/源码/地图/折算参考/原始用量与结果分版本保存，不混池 | A（未冻结试验） |
+| `phase-a-balance-trials.json` | 二审后的完整D6批次索引，参数/源码/地图/折算参考/原始用量与结果分版本保存，不混池 | A（分版试验档案） |
 | `zoo-p4-opening/`、`zoo-p5-siege/`、`zoo-p6-worker-cost/`、`zoo-p7-start-workers/` | 后四个完整3680局参数候选，全验证，均未通过 | A（完整D6失败候选） |
 | `zoo-v7-p7-public/`、`zoo-v8-p7-public/`、`zoo-v9-p7-public/`、`zoo-v10-p7-public/`、`zoo-v12-p7-public/` | 固定P7的分版策略完整矩阵，各3680局、全验证，失败保留 | A（完整D6，未通过） |
 | `harassment-opening-p4/` | 全部80局速攻/骚扰及80局经济/骚扰的开局时序、兵力、工兵死亡；缺失里程碑单列分母 | A（回放诊断） |
-| `zoo-v6-regression.json`—`zoo-v13-regression.json` | 各实际存在版本的真实bwrap决策回归、源码摘要；v13另含两局仍失败的迷宫定向回归 | A（策略试验，不替代矩阵） |
+| `zoo-v6-regression.json`—`zoo-v15-regression.json` | 各实际存在版本的真实bwrap决策回归、源码摘要；v13另含两局仍失败的迷宫定向回归 | A（策略试验，不替代矩阵） |
 | `review-balance-v7-full-seed0.json`、`review-balance-opening-tests.json` | v7代码182项全套通过；开局统计新增2项单独通过，不冒充最新完整测试 | A（开发回归） |
 | `phase-a-validation.json`、`phase-a-validation-attempts-*.json`、`phase-a-validation-replays-*.json` | 两轮170项、全部5036 complete与30 infra_error索引、最终框架全回放复核；分块文件摘要在主索引中 | A（未冻结验收检查点） |
 | `phase-a-security.json`、`security-stress.json` | 运行时有界资源/清理及6局压力通过；编译树总资源仍无硬约束，明确未完成安全验收 | A（部分通过） |
@@ -33,7 +50,7 @@
 | `usage-pi-local.json` | 仅本项目本地pi会话usage数值的去重汇总；含缓存输入，历史及未报告用量仍缺失，不导出对话或个人配置 | A（不完整用量） |
 | `zoo-matrix.csv` | 动物园各 bot 之间的局数、胜、平、负，分地图类型 | A |
 | `balance.json` | 先后手公平、平局率、对局长度分布、结束方式 | A |
-| `timing.json` | 保留两批负载曲线，新增三版效率测量索引：本机引擎p95通过，六局整局/开销极值未全部通过；正式参考及C阶段整套评分未知 | A（部分通过）、后续C |
+| `timing.json` | `currentEfficiencyAcceptance`为最终v5通过结果；旧曲线、v4测量及裁定前评估保留为历史。C阶段完整评分仍未测 | A、后续C |
 | `ladder-matrix.csv` | 阶梯各 bot 之间的成对对局数、胜、平、负（只写代号） | B |
 | `ladder-ratings.csv` | 各级各 bot 的 Elo、区间、风格、sha256 | B |
 | `standard-budget.json` | 标准预算自测：投入的 token 和时间、主分数、每一级的成绩 | B |

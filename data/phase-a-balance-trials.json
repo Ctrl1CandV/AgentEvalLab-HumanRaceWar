@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Separate complete D6 candidates, not pooled independent samples; v15/P7 meets all numerical conditions, final acceptance pending",
+  "scope": "Fourteen separate complete candidate matrices, not pooled; v15/P7 selected. Final identical D6 rerun verifies the shipping framework, not extra independent samples.",
   "trials": [
     {
       "name": "zoo-p1-worker-survival",
@@ -3156,5 +3156,13 @@
   ],
   "inFlight": null,
   "controlledParameterInputsMatch": true,
-  "selectedCandidate": "zoo-v15-p7-public"
+  "selectedCandidate": "zoo-v15-p7-public",
+  "finalVerification": {
+    "report": "data/zoo-standard-1-final/report.json",
+    "sha256": "c39edd74a7a31902f7643c1e7676f986180889c9ebc7eaaab48ed2b2e39f0ea8",
+    "games": 3680,
+    "sameSourcesAndMaps": true,
+    "sameAllOutcomesAndRawGameMetrics": true,
+    "speedFactor": 0.586292164280248
+  }
 }

@@ -1,6 +1,6 @@
 # A 阶段首局闭环
 
-更新：2026-11-07。按中途审查修正 M1/M2/M3/M5/M6，仍未完成 A 阶段验收。游戏参数、结算和协议未改；计分仍未实现，用户决定和已批准 D1–D10 已纳入 DESIGN/BRIEF。
+更新：2026-11-08。两次审查的运行器要求已落实，最终两个哈希种子各198项通过，A阶段等待审查。默认参数采用已测P7；结算、胜负、协议不变，计分未冻结、B/C未启动。
 
 ## 运行一局
 
@@ -12,7 +12,7 @@
   --map tests/fixtures/smoke.map
 ```
 
-`smoke.map` 只是 24×24 的对称测试地图，不满足 DESIGN 7.2 的完整资源布局要求，不是 public 地图集。现在也可使用 `maps/public/*.map` 和 `maps/scrimmage/*.map`；44 张 v2 地图已通过 D5 步行距离及逐字节再生检查。`mapgen/mapcheck` 用法见 `maps/README.md`，平衡尚未验收。两种示例会采矿、返家卸货、偶尔出兵；未校准强度。
+`smoke.map` 只是 24×24 的对称测试地图，不满足 DESIGN 7.2 的完整资源布局要求，不是 public 地图集。现在也可使用 `maps/public/*.map` 和 `maps/scrimmage/*.map`；44 张 v2 地图已通过 D5 步行距离及逐字节再生检查。`mapgen/mapcheck` 用法见 `maps/README.md`，最终D6数值检查已通过，阶段审查仍待进行。两种示例会采矿、返家卸货、偶尔出兵；未校准强度。
 
 命令输出本局结果和回放路径。`--out` 默认 `runs/matches`，`--seeds` 默认 `17 29`。每次调用产生新的 UUID 目录；其中 `results.jsonl` 追加记录每次尝试，`attempt-N/` 保存双方源码及 SDK 快照、编译输出、最多 64 KiB 的各方 stderr、结果和回放。`--show-stderr` 可显示最后一次尝试的 bot stderr，并转义终端控制字符。不会覆盖以前的对局。
 
@@ -47,7 +47,7 @@
 
 策略v4补齐父死亡窗口：fork前记下父PID，preexec先安装SIGKILL再核对父PID，不能只依赖exec之后的bwrap。运行时seccomp拒绝清除/更改PDEATHSIG；可信worker同样在fork到exec间受保护，再切换到可清理的SIGTERM处理。启动后持久化sandbox-pids sidecar用于诊断；PID属于当时执行命名空间，不应当作任意宿主PID发信号。
 
-跨命名空间进程 CPU 时钟累计全部线程（含已退出线程），只遍历可信启动进程的 leaders/children，不再每 2 ms 遍历全部线程。bot 不得创建子进程；找不到活动进程的 proc 接口或无法定位可计量后代时 fail closed。时钟不可用仍标记回退 `/proc/<pid>/stat`。完整清理/压力矩阵及平台兼容验收仍未完成，不将这些修正夸大为完整恶意提交服务安全认证。
+跨命名空间进程 CPU 时钟累计全部线程（含已退出线程），只遍历可信启动进程的 leaders/children，不再每 2 ms 遍历全部线程。bot 不得创建子进程；找不到活动进程的 proc 接口或无法定位可计量后代时 fail closed。时钟不可用仍标记回退 `/proc/<pid>/stat`。已有父死亡/中断清理、有限编译树及六局线程超时压力检查；跨平台部署仍需复核，不将这些测试夸大为完整恶意提交服务安全认证。
 
 `bench --jobs N` 和独立 `match --timing` 已实现，见 `docs/TIMING.md`、`data/timing.json`。独立match仅接受jobs=1结果；批量调度器在相同CPU池/jobs下测量后接线，backend也须匹配。时限、BANK、墙钟余量和CPU硬上限同时折算，回放记录系数、参考及校准摘要。未提供校准时 `speedFactor` 仍为 `null`，明确使用未折算的开发默认时限，不冒充正式评分。每回合 CPU 为这次 END 与上次 END 的累计读数之差，第一回合基线为 READY；END 后直到下次发消息之间的后台计算也计入下一回合。管道就绪仍立即唤醒；忙等bot的看门狗采样上限改为50ms，并取剩余CPU/墙钟预算的更小值，不放宽短时限。此前2ms轮询的额外proc扫描已用定点反例和整局效率数据验证，见 `docs/TIMING.md`。`BANK` 内部按纳秒扣除超额，不回充，消息显示向下取整的毫秒数。墙钟兜底包括本回合预算、剩余储备和 500 ms；初始化为初始化预算加 500 ms。两方均发送观察后并发收取回复，不把两方思考串行相加。
 
@@ -59,4 +59,4 @@
 
 新补512MiB地址空间/64描述符、已退出线程计费、网络/路径/只读检查、有限编译进程树清理，以及6局/12bot并发线程超时压力；全部已知沙箱leader停止，回放全部验证，见 `data/phase-a-security.json`。旧编译探针显示NPROC继承63593，原证据保留。按第二次审查裁定，已改NPROC=16、单文件64MiB和全局串行锁，真实bwrap及跨进程回归通过；2GiB仍是逐进程限额，不声称整树内存/磁盘硬配额。审查明确无需cgroup，未改宿主设置。
 
-旧3680局正式动物园矩阵的平衡仍未通过。第二次审查将runner门槛明确为p95、整局为300×折算TURN+5秒，因此既有v4效率数据达到；最大值仍报告。评测机参考已提供，后续批次使用该参考。详见 `inbox/2026-11-07-phase-a.md` 与STATUS；旧 `reports/phase-A-review-request.md` 是历史请求，不是A阶段完成报告。不要用平台联调局填报平衡、公平性或动物园验收。涉及隐藏 bot 或地图时，输出也必须放在 `private/`；CLI 会拒绝已知私有输入写往公开路径，本次没有创建隐藏内容。
+旧v5矩阵失败仍保留；最终standard-1/v15完整矩阵已全部通过，见 `reports/phase-A.md`。二审明确runner取p95、整局为300×折算TURN+5秒；最终v5效率复测亦通过，最大值照留。评测机空闲参考已用于新矩阵和效率折算。详见 `inbox/2026-11-07-phase-a.md` 与STATUS；旧 `reports/phase-A-review-request.md` 是历史请求，不是A阶段完成报告。不要用平台联调局填报平衡、公平性或动物园验收。涉及隐藏 bot 或地图时，输出也必须放在 `private/`；CLI 会拒绝已知私有输入写往公开路径，本次没有创建隐藏内容。

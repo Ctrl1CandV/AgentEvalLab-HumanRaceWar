@@ -1,6 +1,6 @@
 # HumanRaceWar 设计文档（CA 竞技场 v1）
 
-- **状态：** A 阶段进行中，未验收、未冻结。2026-11-07 按 `inbox/2026-11-07.md` 中途审查纳入已批准的 D1–D10 和 I01–I11 裁定；D8–D10 来自用户决定。作者是 AgentEvalLab 的评测负责人。规则数值仍按第 10 节调定；设计要求不等于实现已经完成。
+- **状态：** A阶段完成，等待审查（2026-11-08）；standard-1交审快照已固定，B/C尚未启动，见 `reports/phase-A.md`。2026-11-07按 `inbox/2026-11-07.md` 纳入已批准的D1–D10及I01–I11；D8–D10来自用户决定。作者是AgentEvalLab的评测负责人。本文件也含后续阶段目标，设计要求不等于全部已实现。
 - **读者：** 构建者（gpt-6-astra）、用户、评测负责人。
 - **和 AgentEvalLab 的关系：** 这个仓库开发 CA 题族的全部内容：游戏、对局框架、对手阶梯、评分器。做完后迁移到 AgentEvalLab，成为顶层的一个题族，任务包放在 `task-library/frontier/`。整个评测项目的总体设计在 AgentEvalLab 的 `docs/design/PLAN-008-DESIGN.md`。
 - **文件分工：**
