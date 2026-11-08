@@ -8,7 +8,8 @@ from arena.games.outpost import Outpost
 from arena.games.outpost.engine import event_key
 from tests.helpers import fixture_map, rotate_event, rotate_lines, rotate_state, settle
 from tests import test_phase_b_holdout
-from tools.phase_b_damage22 import CANDIDATE, check_candidate, check_plan, summary_checks
+from tools.phase_b_damage22 import CANDIDATE, check_baseline_report, check_candidate, check_plan, summary_checks
+from tools.analyze_zoo import relative
 from tools.phase_b_holdout import BASELINE
 
 
@@ -72,6 +73,18 @@ class Damage22Tests(unittest.TestCase):
         bad = deepcopy(new); bad['tasks'].pop()
         with self.assertRaises(ValueError):
             check_plan(bad, old, candidate)
+
+    def test_baseline_report_normalizes_paths_but_not_input_hashes(self):
+        manifest, _, baseline = test_phase_b_holdout.HoldoutGateTests().manifest()
+        request = relative(manifest['request'])
+        assert isinstance(request, dict)
+        report = {'request': request}
+        check_baseline_report(manifest, report, baseline['bots'])
+        source_hashes = request['sourceHashes']
+        assert isinstance(source_hashes, list)
+        source_hashes[0] = 'changed'
+        with self.assertRaises(ValueError):
+            check_baseline_report(manifest, report, baseline['bots'])
 
     def test_public_and_calibration_gates_keep_their_distinct_scopes(self):
         report = json.loads(BASELINE.read_text())

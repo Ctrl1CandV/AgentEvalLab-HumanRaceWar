@@ -14,7 +14,7 @@ import subprocess
 import time
 
 from arena.tournament import run_tournament
-from tools.analyze_zoo import SINGLES, analyze
+from tools.analyze_zoo import SINGLES, analyze, relative
 from tools.generate_hidden_maps import ROOT, immutable_write, json_bytes, private_path, validate
 from tools.phase_b_holdout import BATCH, REFERENCE, frozen_inputs, validate_plan
 
@@ -54,6 +54,13 @@ def check_plan(manifest, old, candidate):
             raise ValueError('invalid task identity')
 
 
+def check_baseline_report(manifest, report, names):
+    # Existing review reports relativize paths; immutable manifests keep absolute
+    # paths. Normalize only presentation, preserving every hash/configuration.
+    if relative(manifest['request']) != relative(report['request']) or manifest['bots'] != names:
+        raise ValueError('baseline plan/report mismatch')
+
+
 def inputs():
     baseline, sources, frozen = frozen_inputs()
     candidate = check_candidate(json.loads(CANDIDATE.read_text()), frozen)
@@ -72,8 +79,7 @@ def inputs():
             if sha256((path / name).read_bytes()).hexdigest() != report['inputsSha256'][name]:
                 raise ValueError('baseline ledger changed')
         old = json.loads((path / 'manifest.json').read_text())
-        if old['request'] != report['request'] or old['bots'] != baseline['bots']:
-            raise ValueError('baseline plan/report mismatch')
+        check_baseline_report(old, report, baseline['bots'])
         for key in ('jobs', 'pairs', 'seeds', 'sandbox', 'ruleset', 'framework', 'sourceHashes', 'referenceSha256'):
             if old['request'][key] != baseline['request'][key]:
                 raise ValueError('baseline input mismatch: ' + key)

@@ -25,5 +25,59 @@
     "processCpuSeconds": 2.5097309
   },
   "candidateContract": "only SOLDIER_DMG=22; standard-1 stays 20; candidate initialization, damage, determinism and symmetry tested without bots",
-  "measurementLimits": "Test host and reaped child CPU are distinct partial ranges; not full experiment CPU."
+  "measurementLimits": "Test host and reaped child CPU are distinct partial ranges; not full experiment CPU.",
+  "pathNormalizationRegression": [
+    {
+      "label": "path-check-before-fix",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_phase_b_damage22.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 6,
+      "failures": 0,
+      "errors": 1,
+      "skipped": 0,
+      "passed": false,
+      "measuredTestProcessCpuSeconds": 0.2766169,
+      "measuredTestWallSeconds": 0.276617063,
+      "measuredReapedChildrenCpuSeconds": 0.0
+    },
+    {
+      "label": "path-check-after-fix",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_phase_b_damage22.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.2856843,
+      "measuredTestWallSeconds": 0.288537411,
+      "measuredReapedChildrenCpuSeconds": 0.0
+    },
+    {
+      "label": "path-check-final",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_phase_b_damage22.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.2833441,
+      "measuredTestWallSeconds": 0.283351195,
+      "measuredReapedChildrenCpuSeconds": 0.0
+    }
+  ],
+  "preflightIssue": "Initial plan refused absolute-manifest vs relative-report paths before any bot. Normalize path presentation only, preserving all hashes/configuration. Failure logs kept private."
 }
