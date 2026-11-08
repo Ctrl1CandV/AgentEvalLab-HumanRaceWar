@@ -6,7 +6,7 @@ import unittest
 
 from tests.helpers import STARTING_RULES
 from tests.synthetic_replay import legacy_replay
-from tools.analyze_damage22 import (distribution, inspect_trajectory, matched_rows,
+from tools.analyze_damage22 import (cohort_metrics, distribution, inspect_trajectory, matched_rows,
                                     matrix_changes, paired_stats, trajectory_summary)
 
 
@@ -64,6 +64,13 @@ class Damage22AnalysisTests(unittest.TestCase):
             s = trajectory_summary([r])
             self.assertEqual(s['firstBaseHit'][0]['observedGames'], 0)
             self.assertEqual(s['samples']['25']['gamesPresent'], 1)
+            contacted = {**r, 'firstBaseHit': [200, None]}
+            c = cohort_metrics([(r, contacted), (r, r), (contacted, r)])
+            self.assertEqual(c['baseContactGainedGames'], 1)
+            self.assertEqual(c['baseContactLostGames'], 1)
+            self.assertEqual(c['revisions']['candidate']['focusFirstBaseHit']['observedGames'], 1)
+            self.assertEqual(c['revisions']['candidate']['focusFirstBaseHit']['median'], 200)
+            self.assertEqual(c['firstContactSameGames'], 3)
             with self.assertRaisesRegex(ValueError, 'PARAM'):
                 inspect_trajectory({**job, 'rules': {**STARTING_RULES, 'SOLDIER_DMG': 22}})
 

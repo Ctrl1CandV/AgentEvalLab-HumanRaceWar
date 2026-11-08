@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "decision": "reject candidate and stop; no default/bot/map change or ladder work",
+  "scope": "single authorized SOLDIER_DMG 20->22 trial; calibration is now development data, not a fresh holdout",
+  "bootstrap": {
+    "replicates": 4000,
+    "unit": "map, both seats retained together",
+    "limits": "conditional on fixed maps and bot seeds; no multiplicity adjustment; point gates not waived by CI"
+  },
+  "groups": {
+    "public": {
+      "gates": {
+        "complete": true,
+        "integrity": true,
+        "conditions": {
+          "1": false,
+          "2": true,
+          "4": true,
+          "6": false,
+          "7": true,
+          "3": true,
+          "5": true
+        },
+        "passed": false
+      },
+      "completedGames": 3680,
+      "attemptCounts": {
+        "complete": 3680
+      },
+      "replaysVerified": 3680,
+      "botFaultGames": 0,
+      "protocolWarnings": 0,
+      "counters": {
+        "Z-miner": [
+          "Z-rush",
+          "Z-wrush",
+          "Z-eco",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-rush": [
+          "Z-harass"
+        ],
+        "Z-wrush": [
+          "Z-rush",
+          "Z-eco",
+          "Z-turtle",
+          "Z-harass"
+        ],
+        "Z-eco": [
+          "Z-rush"
+        ],
+        "Z-turtle": [
+          "Z-miner",
+          "Z-rush",
+          "Z-eco",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-towers": [
+          "Z-rush",
+          "Z-wrush",
+          "Z-eco",
+          "Z-harass"
+        ],
+        "Z-harass": []
+      },
+      "balancedSelf": {
+        "games": 80,
+        "maps": 40,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 66,
+          "base_destroyed": 14
+        },
+        "baseEndingFraction": 0.175,
+        "turnLimitFraction": 0.825,
+        "baseEndingFractionCI95": [
+          0.075,
+          0.3
+        ],
+        "turnLimitFractionCI95": [
+          0.7,
+          0.925
+        ]
+      },
+      "nonIdleDistinctGames": 2880,
+      "nonIdleDrawGames": 4,
+      "drawRateExcludingIdleAndSameName": 0.001388888888888889,
+      "fairness": [
+        {
+          "bot": "M-balanced",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-eco",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-harass",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-idle",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-miner",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-random",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-rush",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-towers",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-turtle",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-wrush",
+          "maps": 40,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        }
+      ],
+      "pairedGames": 3680,
+      "winnerChangedGames": 34,
+      "endingChangedGames": 54,
+      "independentlyCountedMatrixCells": 450,
+      "replayAuditInputDigestsMatch": true,
+      "pairedMarginalsMatch": true
+    },
+    "calibration": {
+      "gates": {
+        "complete": true,
+        "integrity": true,
+        "conditions": {
+          "1": false,
+          "2": false,
+          "4": true,
+          "6": true,
+          "7": true
+        },
+        "passed": false
+      },
+      "completedGames": 2208,
+      "attemptCounts": {
+        "complete": 2208
+      },
+      "replaysVerified": 2208,
+      "botFaultGames": 0,
+      "protocolWarnings": 0,
+      "counters": {
+        "Z-miner": [
+          "Z-rush",
+          "Z-wrush",
+          "Z-eco",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-rush": [
+          "Z-eco",
+          "Z-harass"
+        ],
+        "Z-wrush": [
+          "Z-rush",
+          "Z-eco",
+          "Z-turtle",
+          "Z-harass"
+        ],
+        "Z-eco": [],
+        "Z-turtle": [
+          "Z-miner",
+          "Z-rush",
+          "Z-eco",
+          "Z-towers",
+          "Z-harass"
+        ],
+        "Z-towers": [
+          "Z-rush",
+          "Z-wrush",
+          "Z-eco",
+          "Z-harass"
+        ],
+        "Z-harass": []
+      },
+      "balancedSelf": {
+        "games": 48,
+        "maps": 24,
+        "medianTurns": 300.0,
+        "by60Fraction": 0.0,
+        "endReasons": {
+          "turn_limit_score": 34,
+          "base_destroyed": 14
+        },
+        "baseEndingFraction": 0.2916666666666667,
+        "turnLimitFraction": 0.7083333333333334,
+        "baseEndingFractionCI95": [
+          0.125,
+          0.5
+        ],
+        "turnLimitFractionCI95": [
+          0.5,
+          0.875
+        ]
+      },
+      "nonIdleDistinctGames": 1728,
+      "nonIdleDrawGames": 0,
+      "drawRateExcludingIdleAndSameName": 0.0,
+      "fairness": [
+        {
+          "bot": "M-balanced",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-eco",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-harass",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-idle",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-miner",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-random",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-rush",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-towers",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-turtle",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        },
+        {
+          "bot": "Z-wrush",
+          "maps": 24,
+          "seatScoreRateDifference": 0.0,
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "within3PointsAndCIContainsZero": true
+        }
+      ],
+      "pairedGames": 2208,
+      "winnerChangedGames": 20,
+      "endingChangedGames": 32,
+      "independentlyCountedMatrixCells": 450,
+      "replayAuditInputDigestsMatch": true,
+      "pairedMarginalsMatch": true
+    }
+  }
+}

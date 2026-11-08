@@ -1,0 +1,28 @@
+2026-11-08 Phase-B single authorized damage-22 trial (aggregate review log)
+Authorization: SOLDIER_DMG 20->22 only; one public+calibration run and analysis.
+Plan: docs/PHASE_B_DAMAGE22_PLAN.md; candidate separate, standard-1 stays 20.
+Initial plan rejected before bot execution: archived relative vs manifest absolute paths.
+Regression reproduced the refusal, then path normalization fixed presentation only.
+Original failure and tests retained; no hash/config validation relaxed.
+Execution HEAD: cc3fc28a2f292892fe8c20667f659ba23a237920; started clean.
+Runtime: bwrap offline; jobs=6; unchanged reference, v15, original maps and bot seeds.
+public: 3680/3680 complete, no infra/config errors, bot faults or protocol warnings.
+calibration: 2208/2208 complete, no infra/config errors, bot faults or protocol warnings.
+All 5888 candidate replays verified; actual PARAM/map digest/seeds checked.
+Independent candidate matrix counts: 900 cells agree; paired marginal counts: 900 agree.
+Planned focus trajectories: 1536 baseline/candidate transcripts, every state hash agrees.
+public failures: condition 1 (harass has no single-style counter); condition 6 (14/80 base endings).
+calibration failures: condition 1 (eco, harass have no counter); condition 2 (M-towers maze 6/12).
+Paired overall outcome changes: public 34/3680; calibration 20/2208 (includes self-play).
+Exploratory cohorts: all six persistent M-towers maze losses never hit enemy base in either version.
+Exploratory public M-self endings: 14 base->base, 6 base->score, 60 score->score; four of six lose all base contact.
+Normal benchmark limits differ: public 59->60ms, calibration 61->60ms TURN_CPU; all 11776 headers checked.
+Frozen v15 does not use LIMIT or clocks; no timeout faults in either revision.
+Tests: before-run full 217; final full 223, failures/errors/skips 0; focused 5 tests pass under two hash seeds.
+LSP: five new Python files, zero diagnostics.
+CPU: bot+match harness+candidate replay verification 0.606457h; trajectory replay 0.032484h separately.
+Other partial counters in usage/runtime/validation summaries; compilation and full stage CPU unknown.
+Decision: reject candidate; no default update, no second candidate, no bot/map changes, no ladder or Phase C.
+Raw public games in runs/; calibration and combined analysis in private/, registry refreshed after stopping.
+Only review code/config/tests/docs and aggregates enter Git. Local commits only; no push.
+Report: reports/phase-B-damage22.md. Waiting for review and new explicit authorization.

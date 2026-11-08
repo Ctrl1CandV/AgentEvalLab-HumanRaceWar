@@ -25,4 +25,6 @@
 
 命令：`.venv/bin/python -B -m tools.phase_b_damage22 plan`，然后`run`、`analyze`。先提交候选及计划再启动；控制日志只留private。分析工具可在对局运行期间补充，但不触碰冻结执行框架和输入。
 
+结果后补充的`--cohorts`只对已存轨迹做完整的终局/胜负转移分组，明确标为探索性；不重跑bot或引擎回放。`tools.publish_damage22`独立复核900格计数及配对边际后，仅导出聚合字段。该轮已完成且失败，见`reports/phase-B-damage22.md`；以下运行入口不构成下一轮授权。
+
 补充的`.venv/bin/python -B -m tools.analyze_damage22`只读取两套已审计候选及原基线，核对5888份候选回放的实际PARAM/地图摘要/种子，生成全矩阵配对差值；对预定6组全部基线/候选回放做轨迹诊断，不按胜负选择。两座位随地图簇一起bootstrap；里程碑未发生保留None，固定回合快照标注实际存在局数，不把提前结束的局硬补成300回合。完整报告及逐局轨迹只落`private/phase-b/damage22/paired-analysis/`。

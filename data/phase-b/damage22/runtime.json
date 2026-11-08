@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "scope": "all baseline/candidate headers, no gameplay rerun",
+  "groups": [
+    {
+      "mapSet": "public",
+      "revision": "baseline",
+      "settings": [
+        {
+          "speedFactor": 0.586292164280248,
+          "limits": {
+            "BANK_MS": 1759,
+            "INIT_CPU_MS": 1173,
+            "TURN_CPU_MS": 59
+          },
+          "games": 3680
+        }
+      ]
+    },
+    {
+      "mapSet": "public",
+      "revision": "candidate",
+      "settings": [
+        {
+          "speedFactor": 0.5985827737048401,
+          "limits": {
+            "BANK_MS": 1796,
+            "INIT_CPU_MS": 1198,
+            "TURN_CPU_MS": 60
+          },
+          "games": 3680
+        }
+      ]
+    },
+    {
+      "mapSet": "calibration",
+      "revision": "baseline",
+      "settings": [
+        {
+          "speedFactor": 0.6012284088900365,
+          "limits": {
+            "BANK_MS": 1804,
+            "INIT_CPU_MS": 1203,
+            "TURN_CPU_MS": 61
+          },
+          "games": 2208
+        }
+      ]
+    },
+    {
+      "mapSet": "calibration",
+      "revision": "candidate",
+      "settings": [
+        {
+          "speedFactor": 0.5952563417740876,
+          "limits": {
+            "BANK_MS": 1786,
+            "INIT_CPU_MS": 1191,
+            "TURN_CPU_MS": 60
+          },
+          "games": 2208
+        }
+      ]
+    }
+  ],
+  "note": "Same reference and jobs=6; normal per-batch benchmark yields different CPU limits, not a second game PARAM change. Frozen v15 does not consult LIMIT or a clock; no bot faults in either revision.",
+  "processCpuNs": 2253148100
+}

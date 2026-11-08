@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "batches": {
+    "public": {
+      "botCpuNs": 407741355600,
+      "matchHarnessCpuNs": 727765526100,
+      "replayVerificationCpuNs": 225368360000,
+      "turnHarnessCpuNsP95": 1394500,
+      "turnHarnessCpuNsMax": 9705600
+    },
+    "calibration": {
+      "botCpuNs": 245801857800,
+      "matchHarnessCpuNs": 439364895800,
+      "replayVerificationCpuNs": 137201782400,
+      "turnHarnessCpuNsP95": 1403400,
+      "turnHarnessCpuNsMax": 5699500
+    }
+  },
+  "totalCpuHours": null,
+  "compilationCpuHours": null,
+  "limits": "partial process counters only; controllers exclude children; no RUSAGE_CHILDREN sums; not wall time",
+  "controllers": [
+    {
+      "action": "plan",
+      "status": "complete",
+      "processCpuNs": 748774500,
+      "scope": "controller process including input checks; excludes children/compilation; run includes benchmark harness"
+    },
+    {
+      "action": "run",
+      "status": "complete",
+      "processCpuNs": 20139294700,
+      "scope": "controller process including input checks; excludes children/compilation; run includes benchmark harness"
+    },
+    {
+      "action": "analyze",
+      "status": "complete",
+      "processCpuNs": 2673077400,
+      "scope": "controller process including input checks; excludes children/compilation; run includes benchmark harness"
+    }
+  ],
+  "trajectoryDiagnostics": {
+    "controllerCpuNs": 1449121100,
+    "limits": "transcript-only passes, no bot CPU; not an experiment total; no RUSAGE_CHILDREN added",
+    "trajectoryReplayCpuNs": 116942460100,
+    "trajectoryReplays": 1536
+  },
+  "cohortSupplementCpuNs": 716249600,
+  "publicationProcessCpuNsBeforeFinalWrite": 861092000
+}

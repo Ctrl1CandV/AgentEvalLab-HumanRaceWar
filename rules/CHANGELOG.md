@@ -8,12 +8,12 @@
 
 只能在 DESIGN 附录 A 的范围内调参数。改规则机制，要先等评测负责人同意（BRIEF 3.3）。
 
-## 2026-11-08：B受控候选D22（用户批准一轮，尚未采纳）
+## 2026-11-08：B受控候选D22（获准一轮已完成，失败不采纳）
 
 - 首次calibration留出2208局失败：Z-eco/Z-harass无单一克制者，M对铺塔maze为6/12；见`reports/phase-B-holdout.md`。用户随后明确批准一轮受控试验及分析。
 - 独立配置`rules/candidates/phase-b-soldier-damage-22.json`，仅SOLDIER_DMG 20→22（范围15–30），其他参数、v15、引擎/SDK及原地图不变；冻结standard-1不覆盖。
 - 假设是缩短集中推进/拆基地窗口，而非认定原因。骚扰可能同样获益，且60HP工兵与100HP战士的无回复整击数不变，须用数据区分。
-- 计划完整public 3680局及原calibration 2208局，17/29、换边、M自对弈、jobs=6、bwrap；全回放审计和配对分析，失败不扩展搜索。详见`docs/PHASE_B_DAMAGE22_PLAN.md`。当前为运行前登记，无结果。
+- 计划完整public 3680局及原calibration 2208局，17/29、换边、M自对弈、jobs=6、bwrap；全回放审计和配对分析，失败不扩展搜索。详见`docs/PHASE_B_DAMAGE22_PLAN.md`。以上计划在运行前登记。结果：5888局全部完成/回放通过，零bot故障/协议警告；calibration仍失败第1、2项，public新增第1、6项失败。骚扰对经济public从36→40/80，M公开自对弈拆基地20→14/80；calibration的M对铺塔maze仍6/12。配对和回放诊断见`reports/phase-B-damage22.md`及`data/phase-b/damage22/`。拒绝候选，默认仍20，保留全部失败；不自动追加塔价或其他试验。
 
 ## 2026-11-08：采用P7为standard-1交审配置
 

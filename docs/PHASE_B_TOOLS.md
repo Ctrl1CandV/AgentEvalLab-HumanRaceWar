@@ -1,6 +1,6 @@
 # B前置留出工具与输出边界
 
-2026-11-08。standard-1、动物园v15及引擎/SDK不变。**本轮2208局留出未通过，已停止等待调参授权；以下命令仅供说明，不是继续运行的授权。** 先读`STATUS.md`和`reports/phase-B-holdout.md`，不重新生成地图或另起基线。
+2026-11-08。standard-1、动物园v15及引擎/SDK不变。**首次2208局留出及随后获准的一轮D22均未通过；授权已用完，以下命令仅供说明，不是继续运行的授权。** 先读`STATUS.md`、`reports/phase-B-damage22.md`和`reports/phase-B-holdout.md`，不重新生成地图或另起基线。
 
 ## 地图
 

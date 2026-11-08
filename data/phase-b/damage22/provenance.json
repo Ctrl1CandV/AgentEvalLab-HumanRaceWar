@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "candidateSha256": "0bab0d4057607a8677e38835cb574043c74ace9da9d24555bac406e59df5b1b5",
+  "baselineRulesSha256": "2460a1d7e5794d5a5edadb368381982f32fa64bc6075699956291f5b06f1a043",
+  "runHead": "cc3fc28a2f292892fe8c20667f659ba23a237920",
+  "runStartedClean": true,
+  "trajectoryAnalysisHead": "5cedf4c5b2d1b57f8c27b91275b95bade10fbcb5",
+  "cohortSupplement": "added after outcome; exploratory, existing trajectories only",
+  "toolsSha256": {
+    "tools/phase_b_damage22.py": "355010403e855b42da81744ed330aba2ae050d1c0b78dcd5822737c6976b7af9",
+    "tools/analyze_damage22.py": "0c7c139a50be8807e2a45afe02d1483ccd3c45f191918391352c2602bf54fc93",
+    "tools/publish_damage22.py": "153398e272a3c90c843c2d2dcc6dd6fe02440f5b8f5799e0c82689dfdee09300"
+  },
+  "groups": {
+    "public": {
+      "inputsSha256": {
+        "manifest.json": "6e0b071079533de3e224cd4dce7b932de3746094056c59c1635811eee647d5bd",
+        "results.jsonl": "8a81ec8f325c309754f895419660cb8d51344a4658c00dded092631ab81efe1e",
+        "attempts.jsonl": "31919210e7af537ac499ca816b3c526d56ad45ca7f6670d9fbd93d961d46c1aa"
+      },
+      "baselineInputsSha256": {
+        "manifest.json": "b8c46d32054ea29d39d9aa5e92165b2ece05de1a042c4bb086aa51a8a92e46f9",
+        "results.jsonl": "8680ac68f66bdc7166776a79242392ad6db14328c947026eb42567eeffad39be",
+        "attempts.jsonl": "710145da6fd09eec262d0223128e42a3f622e12f76a9b4cef6c6f1835013b2a7"
+      },
+      "reportSha256": "98da211bc7e8019bedc02191a32637420c9ef7ebb9ceb7d2a9a76ce6e8f716e6",
+      "executionFramework": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414",
+      "verificationFramework": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414"
+    },
+    "calibration": {
+      "inputsSha256": {
+        "manifest.json": "f5f0c13ff678d36205debe600d86eeaaf74a804dafd216b9625f9ec47de1b663",
+        "results.jsonl": "b6940df33b9c150f586a8e6938b7c9a1284c610327b0785bb00b95cb336af11e",
+        "attempts.jsonl": "07ba2e4e4681494df36d4c15440fd189d5bedd42e78b7f859373e6652947fafd"
+      },
+      "baselineInputsSha256": {
+        "manifest.json": "89e5a5b136cbc02a1db7f7ca46cc4eb2db995ec2733cd39444b80ce67e5f5ba5",
+        "results.jsonl": "a25da3b28ac87601c65e9fb95c52643565bdb3c301e80b2e48bbfb18989f08d5",
+        "attempts.jsonl": "42ea313aa2bfa5102530b7eb0fda9dcc6abecc809a54fbdbb59d974147112405"
+      },
+      "reportSha256": "1381f097b49b55d1bc51720f4b189279f8404ec1d4f50aa00504b45a6c0512b9",
+      "executionFramework": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414",
+      "verificationFramework": "c402c5d9a7fdf8f30fca0ba6c00eba5d3f28001287a197f8b564e3d6dc9df414"
+    }
+  }
+}

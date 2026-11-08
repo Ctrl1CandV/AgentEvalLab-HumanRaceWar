@@ -13,10 +13,11 @@
 - [`phase-a/usage/`](phase-a/usage/)：不完整且相互重叠的用量快照，不可相加。
 - [`phase-a/history/`](phase-a/history/)：早期开发汇总、v5基线和历史检查点。
 - [`phase-a/catalog.json`](phase-a/catalog.json)：整理前后审查文件的位置对照。
+- [`phase-b/damage22/`](phase-b/damage22/)：唯一获准的D22试验5888局聚合；`results.json`为失败判定，两张CSV为完整候选矩阵及全配对差值，`trajectories.json`/`cohorts.json`为重点全队列及探索性转移分组。另有限额普查、来源、CPU及验证汇总，不含逐局数据。
 - [`phase-b/holdout-v15.json`](phase-b/holdout-v15.json)、[`phase-b/holdout-matrix.csv`](phase-b/holdout-matrix.csv)：2208局留出的指定验收、地图簇区间及聚合矩阵；第1、2项失败。`maps.json`、`provenance.json`、`usage.json`和`tool-validation.json`分别记录地图构成/摘要、来源、CPU和工具检查，不含隐藏布局或逐局数据。
 
 JSON中的`_publication`记录本机完整原件及SHA-256。矩阵、区间、失败总数与原件保持一致；只移出了逐局明细。旧引用中尚未迁移的路径按历史快照解释，原件可在本机归档查找。
 
 `phase-a/history/checkpoint.sha256`保留历史检查点的原字节和原路径，需在对应历史树核对；本轮文件以根`MANIFEST.sha256`为准。
 
-A已通过审查，`phase-a/`保留的是审查前各次实测及发布记录，不改写为新实验。B前置留出未通过，已停下等待调参授权；隐藏资产及全部原始对局只放`private/`。未建阶梯，C未启动，不填造Elo、grade或自测结果。
+A已通过审查，`phase-a/`保留的是审查前各次实测及发布记录，不改写为新实验。B前置留出未通过，随后获准的一轮D22也已失败，现停下等待审查和下一步授权。隐藏资产、相关原始对局及合并分析只放`private/`，公开原始对局只留本机`runs/`。未建阶梯，C未启动，不填造Elo、grade或自测结果。

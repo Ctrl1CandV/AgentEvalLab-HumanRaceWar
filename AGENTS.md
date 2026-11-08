@@ -11,7 +11,7 @@
 
 ## 实施边界
 
-- A已通过，用户2026-11-08授权进入B。以STATUS和 `inbox/2026-11-08-phase-a-accepted.md` 为准：standard-1与动物园v15冻结；先生成隐藏地图并做24张calibration上的留出复核，未通过就停下报告，不建阶梯、不自行改参数或重抽地图。首次2208局留出已失败，见 `reports/phase-B-holdout.md`。用户随后授权仅一轮`SOLDIER_DMG 20→22`候选，完整public+calibration共5888局及分析，见`docs/PHASE_B_DAMAGE22_PLAN.md`；不改冻结原件/v15、不生成地图、不重跑基线，不自动追加候选或建阶梯。新会话再读 `docs/PHASE_B_HANDOFF.md`（原启动快照），不重做已验收引擎。
+- A已通过，用户2026-11-08授权进入B。以STATUS和 `inbox/2026-11-08-phase-a-accepted.md` 为准：standard-1与动物园v15冻结；先生成隐藏地图并做24张calibration上的留出复核，未通过就停下报告，不建阶梯、不自行改参数或重抽地图。首次2208局留出已失败，见 `reports/phase-B-holdout.md`。用户随后授权仅一轮`SOLDIER_DMG 20→22`候选，完整public+calibration共5888局及分析，见`docs/PHASE_B_DAMAGE22_PLAN.md`；不改冻结原件/v15、不生成地图、不重跑基线，不自动追加候选或建阶梯。该轮已完成且失败，不采纳D22，见`reports/phase-B-damage22.md`；授权已用完，等待审查和下一步授权。新会话再读 `docs/PHASE_B_HANDOFF.md`（原启动快照），不重做已验收引擎。
 - 框架只用 Python 标准库。所有 bot（包括示例、动物园、测试用故障 bot）及 C++ 编译必须在沙箱中执行。WSL 和 pi 本身不等于 bot 沙箱；在本开发宿主上不能裸用 plain。plain 只用于已经有外层沙箱的情况。
 - 不读取、打印或迁移凭据，不读取 pi 的 `auth.json`，不把认证或个人配置写入仓库；不修改或绕过现有代理、安全设置。启动 bot 沙箱时清理继承环境，只传必要的白名单变量；只挂载所需运行环境，不挂载整个用户 HOME。
 - 用户 2026-11-07 已同意构建时联网查文档和资料；对局和 bot 运行不联网，被测模型写 bot、测试和评价全程离线。框架只用标准库，后续新增开发工具仍先询问。

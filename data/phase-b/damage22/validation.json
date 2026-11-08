@@ -117,7 +117,97 @@
     }
   ],
   "finalLsp": {
-    "files": 4,
-    "diagnostics": 0
+    "files": 5,
+    "diagnostics": 0,
+    "note": "runner, candidate tests, paired analyzer, analysis tests, aggregate exporter"
+  },
+  "fullSuiteAfterAnalysis": {
+    "schemaVersion": 1,
+    "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+    "pattern": "test_*.py",
+    "python": "3.13.15",
+    "system": "Linux",
+    "kernel": "6.18.40.1-microsoft-standard-WSL2",
+    "testsRun": 223,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "measuredTestProcessCpuSeconds": 34.6407345,
+    "measuredTestWallSeconds": 93.684859861,
+    "measuredReapedChildrenCpuSeconds": 3.482469
+  },
+  "cohortTests": [
+    {
+      "label": "analysis-cohort-tests-0",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_damage22_analysis.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0396345,
+      "measuredTestWallSeconds": 0.0459312,
+      "measuredReapedChildrenCpuSeconds": 0.0
+    },
+    {
+      "label": "analysis-cohort-tests-1",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "pattern": "test_damage22_analysis.py",
+      "python": "3.13.15",
+      "system": "Linux",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "testsRun": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true,
+      "measuredTestProcessCpuSeconds": 0.0390028,
+      "measuredTestWallSeconds": 0.0452135,
+      "measuredReapedChildrenCpuSeconds": 0.0
+    }
+  ],
+  "aggregateAudit": {
+    "independentlyCountedCandidateCells": 900,
+    "pairedCellsWithMatchingBaselineCandidateMargins": 900,
+    "actualCandidateReplayHeadersChecked": 5888,
+    "plannedFocusTrajectoriesReplayed": 1536,
+    "allPassed": true
+  },
+  "fullSuiteAfterExport": {
+    "schemaVersion": 1,
+    "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+    "pattern": "test_*.py",
+    "python": "3.13.15",
+    "system": "Linux",
+    "kernel": "6.18.40.1-microsoft-standard-WSL2",
+    "testsRun": 223,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "measuredTestProcessCpuSeconds": 33.9716781,
+    "measuredTestWallSeconds": 94.654636295,
+    "measuredReapedChildrenCpuSeconds": 4.682548
+  },
+  "privateRegistryAtStop": {
+    "previousFilesVerifiedUnchanged": 68841,
+    "filesRegisteredAndVerified": 137638,
+    "registrySha256": "51ea0d70e3261e48e6d9a1d93a4a2306c2561c40f13242d716c8a4b2eafb7cd7",
+    "processCpuNs": 26284275400,
+    "scope": "final frozen-input and old/new registry checks plus registration; no children; incomplete stage usage"
+  },
+  "publicationInvocationNote": "First invocation omitted required --staged and exited 2 before checking; usage error retained locally. Actual staged check and hooks run separately, never bypassed.",
+  "publicationCheck": {
+    "stagedPassed": true,
+    "manualScope": "aggregate matrices/statistics only; no maps, generation seeds, task identities, replay/attempt indexes, results ledgers or per-game rows in new data",
+    "hooksPath": ".githooks",
+    "localOnly": true
   }
 }

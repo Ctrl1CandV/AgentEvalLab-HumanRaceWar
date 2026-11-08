@@ -282,5 +282,72 @@ def main():
                       'usage': result['usage']}, indent=2))
 
 
+def cohort_metrics(pairs):
+    """Exploratory, exhaustive transition cohorts; no selected game is omitted."""
+    result = {'games': len(pairs), 'firstSoldierSameGames': sum(a['firstSoldier'] == b['firstSoldier'] for a, b in pairs),
+              'firstContactSameGames': sum(a['firstSoldierContact'] == b['firstSoldierContact'] for a, b in pairs),
+              'contactArmySameGames': sum(a['soldiersAtContact'] == b['soldiersAtContact'] for a, b in pairs),
+              'baseContactLostGames': sum(any(x is not None for x in a['firstBaseHit']) and
+                                         all(x is None for x in b['firstBaseHit']) for a, b in pairs),
+              'baseContactGainedGames': sum(all(x is None for x in a['firstBaseHit']) and
+                                           any(x is not None for x in b['firstBaseHit']) for a, b in pairs),
+              'revisions': {}}
+    for index, name in enumerate(('baseline', 'candidate')):
+        rows = [p[index] for p in pairs]
+        result['revisions'][name] = {'anyBaseHitGames': sum(any(x is not None for x in r['firstBaseHit']) for r in rows),
+            'focusBaseHitGames': sum(r['firstBaseHit'][0] is not None for r in rows),
+            'focusEnemyBaseFinalHp': distribution([r['final'][1]['baseHp'] for r in rows], len(rows)),
+            'focusTowerScoreMargin': distribution([r['final'][0]['score']-r['final'][1]['score'] for r in rows], len(rows)),
+            'focusSoldierFailedMoves': distribution([r['soldierFailedMoves'][0] for r in rows], len(rows)),
+            'focusSoldierMoves': distribution([r['soldierMoves'][0] for r in rows], len(rows)),
+            'focusFirstBaseHit': distribution([r['firstBaseHit'][0] for r in rows], len(rows)),
+            'turns': distribution([r['turns'] for r in rows], len(rows))}
+    return result
+
+
+def cohort_analysis():
+    """Read stored trajectories only; no extra bot execution or engine replay."""
+    start = time.process_time_ns()
+    target = private_path(OUT / 'cohorts.json')
+    if target.exists():
+        raise ValueError('cohort report already exists')
+    _, _, old_manifests = inputs()
+    baseline = json.loads(BASELINE.read_text())
+    old_paths = {'public': ROOT / baseline['batch'], 'calibration': BATCH}
+    trajectories = json.loads((OUT / 'trajectory-rows.json').read_text())
+    lookup = {(r['group'], r['revision'], r['taskId']): r for r in trajectories}
+    groups = defaultdict(list)
+    for group, path in DESTINATIONS.items():
+        new_manifest = json.loads((path / 'manifest.json').read_text())
+        pairs = matched_rows(records(old_paths[group] / 'results.jsonl'), records(path / 'results.jsonl'),
+                             old_manifests[group], new_manifest)
+        for _, old, new in pairs:
+            a = lookup.get((group, 'baseline', old['taskId']))
+            b = lookup.get((group, 'candidate', new['taskId']))
+            if a is None or b is None:
+                continue
+            for typ in ('all', a['mapType']):
+                groups[group, a['focus'], a['opponent'], typ].append((a, b))
+    output = {'schemaVersion': 1, 'scope': 'post-outcome exploratory transition cohorts; all predeclared focus games retained', 'groups': []}
+    for (group, focus, opponent, typ), pairs in sorted(groups.items()):
+        ending = defaultdict(list); outcomes = defaultdict(list)
+        for a, b in pairs:
+            ending[a['endReason'] + '->' + b['endReason']].append((a, b))
+            outcomes[a['outcome'] + '->' + b['outcome']].append((a, b))
+        output['groups'].append({'mapSet': group, 'focus': focus, 'opponent': opponent, 'mapType': typ,
+            **cohort_metrics(pairs), 'endTransitions': {k: cohort_metrics(v) for k, v in sorted(ending.items())},
+            'outcomeTransitions': {k: cohort_metrics(v) for k, v in sorted(outcomes.items())}})
+    output['processCpuNs'] = time.process_time_ns() - start
+    immutable_write(target, json_bytes(output))
+    return {'cohortGroups': len(output['groups']), 'processCpuNs': output['processCpuNs']}
+
+
 if __name__ == '__main__':
-    main()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--cohorts', action='store_true', help='supplement stored diagnostics without replaying')
+    args = parser.parse_args()
+    if args.cohorts:
+        print(json.dumps(cohort_analysis(), indent=2))
+    else:
+        main()
