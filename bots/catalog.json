@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "zooVersion": 13,
+  "zooVersion": 14,
   "status": "development, not strength calibrated",
   "strategyTemplateSha256": "384991b29bc4466bcd76dc5b93559e6494cf68cde833b35a8d1cdc4cb9a074dc",
   "bots": [
@@ -83,14 +83,14 @@
       "name": "Z-eco",
       "configuration": [
         "Economy",
-        16,
+        18,
         0,
         0,
         95
       ],
       "path": "bots/public/Z-eco",
       "sourceSha256": {
-        "main.cpp": "efc8fc034404bf09087c48aec63ac0dc12ee61c4254c4c36cbd92900d097edf9",
+        "main.cpp": "2e84d17d602168437f40bad8b7f3e2f3a44463917884a952d22b32995f764f34",
         "strategy.hpp": "384991b29bc4466bcd76dc5b93559e6494cf68cde833b35a8d1cdc4cb9a074dc"
       }
     },
@@ -146,11 +146,11 @@
         9,
         2,
         4,
-        115
+        80
       ],
       "path": "bots/public/M-balanced",
       "sourceSha256": {
-        "main.cpp": "7c39e71f91174b2b61b8c0486a8468aca1f7b03a134fbcfc7f06607813634271",
+        "main.cpp": "4be087f78933329e52782db4788dc2953e5b947c47f26f5f3b2437e35790bc65",
         "strategy.hpp": "384991b29bc4466bcd76dc5b93559e6494cf68cde833b35a8d1cdc4cb9a074dc"
       }
     }

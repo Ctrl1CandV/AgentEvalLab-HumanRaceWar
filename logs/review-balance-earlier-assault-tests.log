@@ -1,0 +1,22 @@
+test_committed_soldier_finishes_base_instead_of_respawning_workers (tests.test_zoo_strategy.ZooStrategyTests.test_committed_soldier_finishes_base_instead_of_respawning_workers) ... ok
+test_distant_mining_worker_does_not_recall_the_main_army (tests.test_zoo_strategy.ZooStrategyTests.test_distant_mining_worker_does_not_recall_the_main_army) ... ok
+test_distant_siege_force_is_not_recalled_for_a_home_intruder (tests.test_zoo_strategy.ZooStrategyTests.test_distant_siege_force_is_not_recalled_for_a_home_intruder) ... ok
+test_economy_changes_to_army_at_its_declared_fixed_worker_target (tests.test_zoo_strategy.ZooStrategyTests.test_economy_changes_to_army_at_its_declared_fixed_worker_target) ... ok
+test_midfield_army_answers_a_home_threat_closer_than_enemy_base (tests.test_zoo_strategy.ZooStrategyTests.test_midfield_army_answers_a_home_threat_closer_than_enemy_base) ... ok
+test_military_matching_still_rebuilds_a_minimal_economy (tests.test_zoo_strategy.ZooStrategyTests.test_military_matching_still_rebuilds_a_minimal_economy) ... ok
+test_military_shortfall_precedes_extra_workers_once_economy_exists (tests.test_zoo_strategy.ZooStrategyTests.test_military_shortfall_precedes_extra_workers_once_economy_exists) ... ok
+test_nearby_army_can_override_tower_reserve (tests.test_zoo_strategy.ZooStrategyTests.test_nearby_army_can_override_tower_reserve) ... ok
+test_nearby_blocker_can_form_a_short_offensive_detour (tests.test_zoo_strategy.ZooStrategyTests.test_nearby_blocker_can_form_a_short_offensive_detour) ... ok
+test_nearby_reinforcements_still_intercept_a_home_intruder (tests.test_zoo_strategy.ZooStrategyTests.test_nearby_reinforcements_still_intercept_a_home_intruder) ... ok
+test_occupied_enemy_base_ports_do_not_stop_distant_advance (tests.test_zoo_strategy.ZooStrategyTests.test_occupied_enemy_base_ports_do_not_stop_distant_advance) ... ok
+test_one_forward_depot_is_enough_until_military_parity (tests.test_zoo_strategy.ZooStrategyTests.test_one_forward_depot_is_enough_until_military_parity) ... ok
+test_opening_military_floor_precedes_tower_expansion (tests.test_zoo_strategy.ZooStrategyTests.test_opening_military_floor_precedes_tower_expansion) ... ok
+test_remote_army_does_not_spend_waiting_builders_reserve (tests.test_zoo_strategy.ZooStrategyTests.test_remote_army_does_not_spend_waiting_builders_reserve) ... ok
+test_repeated_contested_moves_eventually_yield_and_engage (tests.test_zoo_strategy.ZooStrategyTests.test_repeated_contested_moves_eventually_yield_and_engage) ... ok
+test_tower_deficit_switches_objective_without_disabling_local_clearing (tests.test_zoo_strategy.ZooStrategyTests.test_tower_deficit_switches_objective_without_disabling_local_clearing) ... ok
+test_worker_at_the_home_base_still_triggers_interception (tests.test_zoo_strategy.ZooStrategyTests.test_worker_at_the_home_base_still_triggers_interception) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 3.856s
+
+OK
