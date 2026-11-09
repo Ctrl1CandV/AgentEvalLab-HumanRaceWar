@@ -36,6 +36,19 @@ class MainlineReviewTests(unittest.TestCase):
         with self.assertRaises(ValueError): review.grouped_scores(rows[:-1], 0, 1)
         with self.assertRaises(ValueError): review.grouped_scores(rows+[rows[0]], 0, 1)
 
+    def test_fixed_pool_filters_saturation_for_each_line_not_the_union(self):
+        names = ['p', 'q', 'r']; zoo = ['M-balanced', *[f'Z-{i}' for i in range(9)]]
+        cells = [{'code': code, 'opponent': opponent,
+                  'scoreRate': .5 if opponent in ('M-balanced', f'Z-{i}') else 1.0}
+                 for i, code in enumerate(names) for opponent in zoo]
+        result = review.select_fixed_pools(cells, names)
+        for i, code in enumerate(names):
+            self.assertEqual(result['pools'][code], ['M-balanced', *[n for n in names if n != code], f'Z-{i}'])
+        self.assertEqual(result['deepseekFirstPool'], ['M-balanced', *names, 'Z-0', 'Z-1', 'Z-2'])
+        with self.assertRaises(ValueError): review.select_fixed_pools(cells[:-1], names)
+        with self.assertRaises(ValueError): review.select_fixed_pools(cells+[cells[0]], names)
+        with self.assertRaises(ValueError): review.select_fixed_pools([{**cells[0], 'scoreRate': True}, *cells[1:]], names)
+
     def test_cpu_census_checks_digest_terminal_and_totals(self):
         with TemporaryDirectory() as d, patch.object(review, 'private_path', side_effect=lambda p: p):
             path = Path(d)/'synthetic.gz'

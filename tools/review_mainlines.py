@@ -122,6 +122,25 @@ def seed_swaps(manifest, rows, player):
             'limits': 'both seeds exchanged, compared at the same physical seat; not one-sided seed intervention or extra independent maps'}
 
 
+def select_fixed_pools(cells, retained):
+    """S1 is per pairing: a loss by another line cannot unsaturate this one."""
+    if len(retained) != 3 or len(set(retained)) != 3: raise ValueError('three distinct retained lines required')
+    by_line = {code: {} for code in retained}
+    for cell in cells:
+        code, opponent, rate = cell['code'], cell['opponent'], cell['scoreRate']
+        if (code not in by_line or opponent in by_line[code] or type(rate) not in (int, float)
+                or not math.isfinite(rate) or not 0 <= rate <= 1): raise ValueError('invalid/duplicate pool evidence')
+        by_line[code][opponent] = rate
+    opponents = set(by_line[retained[0]])
+    if (len(opponents) != 10 or 'M-balanced' not in opponents or opponents & set(retained)
+            or any(set(v) != opponents for v in by_line.values())): raise ValueError('incomplete zoo evidence')
+    eligible = {code: sorted(opponent for opponent, rate in row.items() if opponent != 'M-balanced' and 0 < rate < 1)
+                for code, row in by_line.items()}
+    return {'schemaVersion': 2, 'selection': 'each line uses its OWN nonsaturated zoo cells; mandatory M and other retained lines',
+            'pools': {code: ['M-balanced', *[n for n in retained if n != code], *eligible[code]] for code in retained},
+            'deepseekFirstPool': ['M-balanced', *retained, *sorted(set().union(*map(set, eligible.values())))]}
+
+
 def main():
     start = time.process_time_ns(); out = private_path(OUT)
     if (out/'analysis.json').exists(): raise ValueError('analysis already exists; preserve original result')
@@ -150,10 +169,7 @@ def main():
           'cellsWithDrawMap': sum(c['mapsWithDraw'] > 0 for c in cells),
           'nonsaturatedCells': sum(0 < c['scoreRate'] < 1 for c in cells),
           'publication': 'counts only; no hidden-line/opponent associations'}
-    eligible = sorted({c['opponent'] for c in cells if 0 < c['scoreRate'] < 1}-{'M-balanced'})
-    immutable_write(out/'fixed-pools.json', json_bytes({'selection': 'union of nonzero/nonperfect r02 zoo cells; M mandatory; other retained lines mandatory',
-        'pools': {names[i]: ['M-balanced', *[n for n in names[:3] if n != names[i]], *eligible] for i in range(3)},
-        'deepseekFirstPool': ['M-balanced', *names[:3], *eligible]}))
+    immutable_write(out/'fixed-pools-v2.json', json_bytes(select_fixed_pools(cells, names[:3])))
     cpu = [[] for _ in range(3)]; appearances = Counter()
     for row in rows:
         values = inspect_replay(manifest, row, collect=True)

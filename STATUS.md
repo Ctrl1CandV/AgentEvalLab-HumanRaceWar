@@ -1,41 +1,41 @@
 # 状态
 
-更新：2026-11-09。**已快进到中期审查`cdb4d62`，按用户要求执行第0步，不打新对局、不推送。M1机器绑定修复和L1–L6既有档案分析已完成；80张dev图的工具/测试、公开材料导出和作者规范已准备，实际生成、工作区与dev05计划仍在完成中。保留dev02，dev03/dev04不采纳，历史7344局不变。今后public调参、dev取舍/临时BT、calibration仅正式校准；grading/holdout均未用。用户已批准提前试探和DeepSeek独立控制主线，由用户启动新会话。第0步完成先报告两个目录并停下。B未完成，C未启动。**
+更新：2026-11-09。**第0步已完成，按约在目录报告停点停止；本次新对局、bot/编译/测速均为0，不推送，由用户推送。M1机器绑定、L1–L6旧档案分析、80张dev图及独立检查、两个公开工作区、AUTHORS和dev05有限计划已完成；35项纯检查双hashseed通过，13文件LSP零诊断。试探目录`~/projects/HRW-pilot/`，DeepSeek目录`~/projects/HRW-deepseek/`；尚未启动作者/试探会话、收到交付或执行dev05。保留dev02及全部7344局历史，public调参、dev取舍/临时BT、calibration仅正式校准，grading/holdout未用。既有B开发授权保留，下一批按已记dev05计划，不重做前置；B未完成，C未启动。**
 
 最新开发记录：[`reports/phase-B-mainlines-dev04.md`](reports/phase-B-mainlines-dev04.md)；L0决定：[`docs/PHASE_B_L0_DECISION.md`](docs/PHASE_B_L0_DECISION.md)；历史停点：[`reports/phase-B-ladder-preflight.md`](reports/phase-B-ladder-preflight.md)；N1/N2/N3：[`reports/phase-B-review-analysis.md`](reports/phase-B-review-analysis.md)；D22报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。D22的一轮授权已用完，standard-1仍为伤害20。当前后续权限以`inbox/2026-11-09-phase-b-mid-review.md`第六/七节及用户本次指令为准。旧N1/N2/N3、holdout布局和L0裁定均已处理，不重做；不改游戏参数或提前使用holdout。
 
-- A已获审查通过：[`inbox/2026-11-08-phase-a-accepted.md`](inbox/2026-11-08-phase-a-accepted.md)。standard-1、游戏引擎/SDK和动物园v15未改；运行器先按R1修改预算复用，本次又新增显式配对接口，框架指纹会变化，不能再宣称整个arena字节未变。
+- A已获审查通过：[`inbox/2026-11-08-phase-a-accepted.md`](inbox/2026-11-08-phase-a-accepted.md)。standard-1、游戏引擎/SDK和动物园v15未改；运行器先按R1修改预算复用，随后新增显式配对，本次修M1机器绑定；框架指纹会变化，不能宣称整个arena字节未变。
 - 首次留出报告：[`reports/phase-B-holdout.md`](reports/phase-B-holdout.md)；原始结论和数据保留。D22数据在[`data/phase-b/damage22/`](data/phase-b/damage22/)。两份都是失败停点报告，不是B完成报告。
-- 工作目录仍为WSL `~/projects/AgentEvalLab-HumanRaceWar`，hooks为`.githooks`；不改写历史。此前留出/D22的7个提交已按用户授权推送至`42f6294`，后续以审查提交`13360d7`为起点做小步本地提交；用户2026-11-09已授权将当前检查点及必要前置提交推送供中期审查。
+- 工作目录仍为WSL `~/projects/AgentEvalLab-HumanRaceWar`，hooks为`.githooks`；不改写历史。此前留出/D22的7个提交已推送至`42f6294`，后来`13360d7..37f04a4`的11个提交已按授权推送供中期审查。本轮已拉取新审查`cdb4d62`，只做小步本地提交，明确不推送，由用户推送。
 
-## 2026-11-09中期审查逐条回复（第0步进行中）
+## 2026-11-09中期审查逐条回复（第0步完成，报告目录后停止）
 
-已再次执行`git pull --ff-only`，收到`cdb4d62`的两份新文件；`/process-review`按仓库模板执行，原意见与DeepSeek任务书保留。以下为当前状态，后面的“推送/继续开发/未推送”均是历史检查点，不覆盖本轮不推送及第0步停点。
+已再次执行`git pull --ff-only`，收到`cdb4d62`的两份新文件；`/process-review`按仓库模板执行，原意见与DeepSeek任务书保留。完成报告见`reports/phase-B-mid-review-step0.md`，下一批事前计划见`docs/PHASE_B_DEV05_PLAN.md`。以下为当前状态，后面的“推送/继续开发/未推送”均是历史检查点，不覆盖本轮不推送及第0步停点。
 
 | 条目 | 处理、文件与证据 | 状态/边界 |
 |---|---|---|
 | M1 固定锁绑定机器 | `arena/core/machine.py`、`timing.py`、`benchmark.py`；先复现外机同CPU池锁被接受，新增8项无bot测试通过（其中复用4项旧纯回归），13个当前Python文件LSP零诊断 | 已修复；schema2检查CPU/架构/总逻辑核数/内存档位，原锁另存证据绑定封装，预算/原测速字节不变；不测速 |
 | M2 停止calibration开发 | DESIGN 7.3/11.4、BRIEF 5.1.1明确地图职责 | 已落实政策；旧7344局的暴露历史不消失，不把calibration重新称独立留出 |
-| S1 按主线和不饱和池比较 | L1分析后冻结各主线7个对手的池；身份/配对仅在`private/phase-b/mid-review-step0/fixed-pools.json` | dev05计划使用直接对战+固定池；不再三风格捆绑，饱和动物园留里程碑回归 |
-| S2 参数化或算力组件 | 按L6在进攻/经济中选择E-r02，dev05只做参数化加有限自动搜索，public调参 | 事前计划待落盘；本轮不叠加算力组件，不宣称已有算力强度曲线 |
+| S1 按主线和不饱和池比较 | 按每条线自身L1格筛选，生效`private/phase-b/mid-review-step0/fixed-pools-v2.json`；初始并集草案误含本线饱和格，已在任何新局前纠正并保留草案 | dev05池6个对手，比较直接对战+固定池；不再三风格捆绑，饱和配对只留里程碑回归 |
+| S2 参数化或算力组件 | 按L6在进攻/经济中选择E-r02，dev05只做参数化加有限自动搜索，public调参 | 计划/输入已冻结，见`docs/PHASE_B_DEV05_PLAN.md`及私有PLAN/inputs；最多public6720+dev2080局，尚未执行，不叠加算力组件 |
 | S3 临时Elo定位 | `tools/provisional_bt.py`及`data/phase-b/mid-review.json` L6：A/E/C相对M约+185.66/+251.14/+264.95 | 开发定位而非等级；E距约600的路线目标仍约349 Elo，目标不是新增验收门槛 |
 | S4 临时阶梯骨架 | 先用L6定位空档，按第六节路线在强主线里程碑后做强度档和dev临时骨架 | 第0步没有弱档版本或新矩阵；不将失败增强版改称预定弱档 |
-| S5 结束方式 | 里程碑继续报告拆基地/比分数比例；强版稳定低于20%作为设计问题上报 | 不为凑比例改bot，不把当前自对弈当正式强bot结束验收 |
+| S5 结束方式 | 既有r02自对弈22/144拆基地（15.28%）；里程碑继续报告，强版稳定低于20%交用户裁定 | 不为凑比例改bot，不把当前自对弈当正式强bot结束验收 |
 | L1 动物园饱和度 | 完整30格×24图双座：18格全胜、0格全负、0格含同图分胜负；其余12格未饱和 | 完成；公开只有计数，不公开主线-对手对应 |
 | L2 真实回合CPU | A/E/C的p50为0.3781/0.5641/0.5084ms，p95为0.6154/0.8828/0.7941ms，最大2.1403/3.0324/2.3929ms | 完成；全部dev02真实turn回复，不含READY，每主线720个bot-局份数含自对弈双方；不是普遍CPU上界 |
 | L3 SEED和种子变化 | 三r02及M都使用SEED；每个已有24对自对弈联合换种子比较，固定物理座位胜者24/24对变化 | 可用证据已核；两方种子同时互换，不是仅改单方种子的干预。单侧反事实未知，不补新局、不伪报0 |
 | L4 直接新旧敏感性 | dev03 A/E/C双胜/双负为7/17、8/16、11/13；dev04为10/14、10/14、11/13。到50%分别需5/4/1及2/2/1图 | 完成；分胜负/含平局均0，区间见聚合。差1–2图不是噪声证明，不把未显著当等价 |
 | L5 机器对照 | 源锁/当前CPU、架构、内存16679239680字节一致；原池18核并非总数，历史dev01报告已记20逻辑核 | 完成；证据封装`timing-lock-machine-bound.json`摘要`b106c1bf…418b48`，原锁`f22f35a7…bdbb6f`不变 |
 | L6 临时BT | 仅dev02内1584局不同名现有对局；13节点中M所在强连通分量8个，完整有限MLE不存在。4000次地图簇bootstrap保留全部分离抽样 | 完成；三主线区间分别[77.33,322.29]、[135.53,388.22]、[147.64,420.94]；不加伪计数/先验或硬截断，不补动物园基线 |
-| D1 新dev80图 | `tools/prepare_dev_maps.py`先plan登记再build，7项纯测试通过；四类各20、每尺寸各4，首段40图均衡 | 工具就绪，实际生成/独立复核待执行；不会在其他集合补开发局 |
-| D2 提前试探 | 白名单`package/public-files.json`及`PILOT.md`模板；两次新会话、真实预算记录、12局tournament替代练习赛 | 导出工具/测试就绪，目标`~/projects/HRW-pilot/`待创建；用户启动，不能抵扣正式自测，不读源码/当调参对手 |
-| D3 DeepSeek控制主线 | `docs/AUTHORS.md`及原任务书；公共底稿相同、角色说明分开，C-r02保留 | 目标`~/projects/HRW-deepseek/`待创建；没有启动作者会话或收到交付 |
+| D1 新dev80图 | `tools/prepare_dev_maps.py`先plan登记再build，7项纯测试通过；四类各20、每尺寸各4，首段40图均衡 | 80图已冻结，0拒绝候选；960条矿/800条塔基独立检查、再生均过，原116图不变，196图互异；新图无对局 |
+| D2 提前试探 | 白名单`package/public-files.json`及`PILOT.md`模板；两次新会话、真实预算记录、12局tournament替代练习赛 | `~/projects/HRW-pilot/`已准备，入口PILOT.md；用户启动新会话并核上下文，未做试探，不抵扣正式自测，不读源码/当调参对手 |
+| D3 DeepSeek控制主线 | `docs/AUTHORS.md`及原任务书；公共底稿相同、角色说明分开，C-r02保留 | `~/projects/HRW-deepseek/`已准备，含原任务书、README、handoff/in/out，无Git；没有启动作者会话或收到交付 |
 | 第七节7.1 分工 | astra负责框架/进攻/经济/评测，DeepSeek从零控制；不改对方bot | AUTHORS已写明；双方不推送，用户推送 |
-| 第七节7.2 分区/接收/反馈 | 无Git独立目录、handoff/in/out；未来原样接收到private，核sha，check后统一评测；反馈仅允许聚合 | 目录待创建；接收与反馈待真实交付，不预填完成 |
-| 第七节7.3 节奏 | 每轮由用户另开DeepSeek会话；交付后停止，反馈后再开下一轮 | 未启动；第0步结束先向用户报告两个目录并停止 |
+| 第七节7.2 分区/接收/反馈 | 无Git独立目录、handoff/in/out；未来原样接收到private，核sha，check后统一评测；反馈仅允许聚合 | 两个目录各107文件、无Git/链接，初始bot与handoff空；导入/CLI/公开地图检查过。接收与反馈待真实交付 |
+| 第七节7.3 节奏 | 每轮由用户另开DeepSeek会话；交付后停止，反馈后再开下一轮 | 未启动；第0步已到报告停点，先交两个目录，不连跑dev05/DeepSeek/试探 |
 | 第七节7.4 公平/记录 | 同一机器绑定预算和dev图；private笔记如实登记作者、会话、自测/评测局数，公开ladder不写作者 | 已定规范；实际作者记录等交付，不把构建者修订计成独立会话 |
 
-L1–L6仅对已有档案作只读分析：1872份dev02回放及288份直接新旧回放核摘要/终局/CPU，另检查既有自对弈；没有运行bot、重放引擎或新增对局。宿主分析CPU为15.3352798秒，bot CPU为0，完整阶段总量未知。原件和完整配对/BT抽样在private，公开只给`data/phase-b/mid-review.json`。第0步34项不会启动对局的受影响测试在hashseed=0/1均通过，没有重跑完整公开套件。
+L1–L6仅对已有档案作只读分析：1872份dev02回放及288份直接新旧回放核摘要/终局/CPU，另检查既有自对弈；没有运行bot、重放引擎或新增对局。宿主分析CPU为15.3352798秒，bot CPU为0，完整阶段总量未知。原件和完整配对/BT抽样在private，公开只给`data/phase-b/mid-review.json`。第0步最终35项不会启动对局的受影响测试在hashseed=0/1均通过，没有重跑完整公开套件。地图生成/双检查/再生宿主CPU6.2876895秒，不含plan/登记；阶段完整CPU未知。原私有374571条目最终再核：374570文件原字节不变，笔记只追加并保留原字节备份；最终登记374676文件并逐项摘要通过，登记SHA256为`20292d47b5e2b3bd28e996574a7096bae105f60fdf0d4bdd124aa798b472f30e`，见`data/phase-b/mid-review-validation.json`。
 
 ## 中期审查交接（2026-11-09历史）
 

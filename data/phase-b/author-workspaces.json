@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "scope": "B mid-review step-0 public material export; not a model session or acceptance test",
+  "sourceCommit": "2c5e8176a9df1267303602b11efd6981c4bf8363",
+  "allowlist": "package/public-files.json",
+  "commonMaterialSha256": "60270ecde125f001ba88c2183232843ddd231f2df459c13476e7055dbe656e47",
+  "workspaces": {
+    "pilot": {
+      "path": "~/projects/HRW-pilot/",
+      "entry": "PILOT.md",
+      "materialManifestSha256": "33b9604d3371f52b26097dee4ce04a8e107eba5b77b61f4fe13de8776a054ade"
+    },
+    "deepseek": {
+      "path": "~/projects/HRW-deepseek/",
+      "entry": "docs/BRIEF-DEEPSEEK.md",
+      "materialManifestSha256": "eff267f2cccf838094b4071f80b36ee6a2e94d767c537fdc563bf1f623a6b4a0"
+    }
+  },
+  "checksPerWorkspace": {
+    "filesIncludingManifest": 107,
+    "manifestEntries": 106,
+    "onlyDeclaredPublicMaterials": true,
+    "noGitRepositoryOrRemote": true,
+    "noSymlinks": true,
+    "emptyBotAndHandoffAtExport": true,
+    "importCliMapChecks": 3
+  },
+  "botExecutions": 0,
+  "compileExecutions": 0,
+  "benchmarkExecutions": 0,
+  "modelSessionsStarted": 0,
+  "newGames": 0,
+  "limits": "This verifies initial files and public CLI availability only, not OS isolation, cleared model memory, a fresh session, or successful bot execution. User must check session context and tool scope at launch."
+}

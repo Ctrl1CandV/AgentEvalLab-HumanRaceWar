@@ -6,6 +6,8 @@
 
 B阶段原calibration/grading各24张仍在`private/maps/`，全新holdout24张另放`private/holdout-maps/`，旧资产和catalog不改。新holdout已先登记计划、后生成，全部布局及独立复核通过；五集合对照见`data/phase-b/final-holdout-maps.json`和`reports/phase-B-ladder-preflight.md`。holdout目前对局数0，B末之前不得用于对局或调参。
 
+2026-11-09按中期审查D1新增`private/dev-maps/`80图：四类各20，每类24/28/32/36/40各4，尺寸比例同public；首段40图事前按类型/尺寸均衡划定。生成器v2未改，计划先登记，拒绝候选0；80图布局、960条家门矿/800条塔基独立检查及再生一致，原116图不变，六套196图互不重复。公开仅`data/phase-b/dev-maps.json`汇总，新图尚无对局。以后public调参/日常开发、dev取舍/临时BT、calibration仅正式校准、holdout仅B末、grading仅正式评分；旧calibration开发历史不消除。
+
 ## 使用
 
 ```sh

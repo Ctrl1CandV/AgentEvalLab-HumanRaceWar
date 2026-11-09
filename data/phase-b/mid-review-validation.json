@@ -14,20 +14,27 @@
   },
   "tests": {
     "hashSeeds": [0, 1],
-    "methodsPerHashSeed": 34,
+    "methodsPerHashSeed": 35,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
     "suites": {
       "test_machine_timing.py": 8,
       "test_provisional_bt.py": 9,
-      "test_mainline_review.py": 4,
+      "test_mainline_review.py": 5,
       "test_dev_maps.py": 7,
       "test_author_workspace.py": 6
     },
     "legacyPureFixedTimingMethodsAdditionallyCalledInsideMachineSuite": 4,
     "fullSuiteRerun": false,
     "reason": "The full suite starts bots/games; step 0 explicitly forbids new games. Workspace smoke checks import Python, list CLI commands and inspect an existing public map only."
+  },
+  "poolPreflightCorrection": {
+    "draftUnionWouldIncludeSaturatedPairings": 3,
+    "correctedToPerLineNonsaturatedCells": true,
+    "draftAndCorrectionEvidenceRetained": true,
+    "newGamesBeforeCorrection": 0,
+    "regressionTestAdded": true
   },
   "lsp": {
     "server": "pyright",
@@ -40,6 +47,16 @@
     "mismatches": 0,
     "processCpuNs": 19569937900,
     "scope": "Read-only verification of previous checkpoint before registering step-0 artifacts; no bots"
+  },
+  "finalPrivateCheckpoint": {
+    "registeredFiles": 374676,
+    "registrySha256": "20292d47b5e2b3bd28e996574a7096bae105f60fdf0d4bdd124aa798b472f30e",
+    "allRegisteredBytesVerified": true,
+    "oldEntriesChecked": 374571,
+    "byteIdenticalOldFiles": 374570,
+    "oldNotesPreservedAsPrefixAndBackup": true,
+    "preservationAndMaterialCheckProcessCpuNs": 17103927600,
+    "scope": "Old-file preservation and material/input identity check process only; excludes Git child CPU and registry passes"
   },
   "fullPhaseCpuHours": null,
   "publication": "Aggregate validation only; failure logs, fixture outputs and checkpoint file index stay local"
