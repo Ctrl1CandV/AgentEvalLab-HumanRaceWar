@@ -15,6 +15,7 @@
 - [`phase-a/catalog.json`](phase-a/catalog.json)：整理前后审查文件的位置对照。
 - [`phase-b/final-holdout-maps.json`](phase-b/final-holdout-maps.json)：新24图holdout的布局/独立检查及五集合代表性汇总，不含逐图数据。`ladder-anchor-preflight.json`仅为原v15 L0两bot诊断，非完整阶梯Elo；原构成停点已由用户2026-11-09澄清。`preflight-validation.json`含最终249项测试等验证。
 - [`phase-b/l0-resolution.json`](phase-b/l0-resolution.json)：既有128局终局核查，支持保留原版L0基础组，不强求内部等强；`l0-common-opponents.json`补查全部7个共同对手，不能据此声称两者同强。不是新实验或全阶梯校准。
+- [`phase-b/mainlines-dev04.json`](phase-b/mainlines-dev04.json)：新1872局完整比较及144局被动诊断汇总、105项最终合成检查；初稿失败与负结果保留，未采纳，仍以dev02为基线。
 - [`phase-b/mainlines-dev03.json`](phase-b/mainlines-dev03.json)：算法候选1872局、96项合成检查和完整配对变化；如实保留退步，未提升为开发基线，非正式验收。
 - [`phase-b/mainlines-dev02.json`](phase-b/mainlines-dev02.json)：修订版1872局、配对变化、57项合成检查和固定预算核查；公开仅跨主线范围及汇总，不披露具体弱点关系。
 - [`phase-b/mainlines-dev01.json`](phase-b/mainlines-dev01.json)：三条私有主线原型首批1728局的运行、验证、预算及准备状态汇总；没有公开具体弱点对应关系。原型仍需增强，非正式阶梯验收。`development-start-validation.json`记录完整257项测试及39项合成探针。

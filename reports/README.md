@@ -1,6 +1,7 @@
 # 审查报告
 
 - [`phase-A.md`](phase-A.md)：A阶段交付及逐项检查结果；已获2026-11-08审查通过。
+- [`phase-B-mainlines-dev04.md`](phase-B-mainlines-dev04.md)：144局被动诊断、105项最终合成检查和新1872局；反例修复未转化为强度提升，不采纳，仍保留dev02。
 - [`phase-B-mainlines-dev03.md`](phase-B-mainlines-dev03.md)：算法候选1872局及96项合成检查；结束方式改善但强度未提高，不采纳，保留dev02继续开发。
 - [`phase-B-mainlines-dev02.md`](phase-B-mainlines-dev02.md)：修订版1872局、固定预算配对及57项合成检查；有改善但尚需算法增强，继续开发，不是交审停点。
 - [`phase-B-mainlines-dev01.md`](phase-B-mainlines-dev01.md)：L0决定后的第一批三主线原型开发，1728局完整验证，原型仍需增强，非正式阶梯验收或B完成报告。

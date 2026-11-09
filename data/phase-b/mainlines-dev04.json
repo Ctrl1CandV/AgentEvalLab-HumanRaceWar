@@ -1,0 +1,167 @@
+{
+  "actualSourceSdkBackendHeadersChecked": 1872,
+  "allReplaysVerified": true,
+  "attemptCounts": {
+    "complete": 1872
+  },
+  "authorModel": "gpt-6-astra",
+  "botFaultGames": 0,
+  "commonZooPairedComparison": {
+    "baseline": "dev02",
+    "bootstrap": {
+      "multiplicityCorrection": false,
+      "samples": 4000,
+      "seed": 4219,
+      "unit": "map; both seats and all opponents in pooled cells sampled together"
+    },
+    "gamesPerRevision": 1440,
+    "improvedGames": 18,
+    "limits": "all10 zoo opponents and all outcomes retained; development-map comparison, no multiplicity correction or population superiority claim",
+    "mapClusters": 24,
+    "scoreRateDeltaRange": [
+      -0.008333333333333333,
+      -0.004166666666666667
+    ],
+    "stylesWithCI95IncludingZero": 3,
+    "worsenedGames": 26
+  },
+  "decision": {
+    "artifacts": "all source/results/preflight failures retained; no automatic extra matrix",
+    "formalAcceptance": false,
+    "promotedAsDevelopmentBase": false,
+    "retainedDevelopmentBase": "dev02",
+    "selectionRule": "preregistered: all three pooled zoo point differences >=0, all three direct-r02 point score rates >0.5, no runtime regression"
+  },
+  "developmentSessionsThisRevision": 1,
+  "directRetainedBaselineScoreRateRange": [
+    0.4166666666666667,
+    0.4583333333333333
+  ],
+  "executionGitHead": "947fbf688170033739682825e2840bf017ee58f5",
+  "finalHoldoutGames": 0,
+  "fixedBudget": {
+    "baseLimits": {
+      "BANK_MS": 3000,
+      "INIT_CPU_MS": 2000,
+      "TURN_CPU_MS": 100
+    },
+    "cpuHardLimitSeconds": 24,
+    "limits": {
+      "BANK_MS": 1800,
+      "INIT_CPU_MS": 1200,
+      "TURN_CPU_MS": 60
+    },
+    "lockSha256": "f22f35a73ac4d9abdac539c11806cfb08e58300617ec106d155742a5f8bdbb6f",
+    "speedFactor": 0.5998025747312362,
+    "turns": 300,
+    "wallMarginMs": 300
+  },
+  "formalLadderFitPerformed": false,
+  "formalLevelsAssigned": false,
+  "formalStrongerBotEndingGateEvaluated": false,
+  "games": 1872,
+  "gamesByType": {
+    "corridor": {
+      "games": 468
+    },
+    "island": {
+      "games": 468
+    },
+    "maze": {
+      "games": 468
+    },
+    "open": {
+      "games": 468
+    }
+  },
+  "gradingGames": 0,
+  "independentMatrixCellsChecked": 360,
+  "independentTopDevelopmentRequirementSatisfied": false,
+  "mapSet": "calibration",
+  "maps": 24,
+  "noZooOnlyBaselinePairs": true,
+  "privateEvidenceSha256": {
+    "analysis": "54b031c82661f868383c0bb32ec47d18ed6af91e895b7e58087d846a8b7edf9b",
+    "denseChecks": "d09272a82e2f212dc45ea484f31bb2cdac0ac65baaa694c6c73ce47849c222cb",
+    "diagnosis": "34fdd353a09524a22bf5359bf5c49b5a01dfc4bc9f40411e56c776f4b5547030",
+    "independentCheck": "2c927f94efd4a7c1b977de709beaf10d883eea1e8c6e1ea28c63d8a0a38b9c8b",
+    "pairedCheck": "738776d7d5356d1bc4d90d600dee696be3588c3dec04ea8986902aaf62ee71cb",
+    "plan": "d6fafa79ec3ca16b30fd591caf9867840ff41c5b9f566c6a0f4bb89d2862311b",
+    "progressionChecks": "91e796fd8e35c8ca756468a87e4cb8795bdef46a6c54cabb73db42dabc128e77"
+  },
+  "protocolWarnings": 0,
+  "prototypeCatalog": [
+    {
+      "code": "A-r04",
+      "sha256": "5f22579ed96a6078c017985d69b63c90bf22dfe6bf10bb2aa37e2dff2ca56c42",
+      "style": "attack"
+    },
+    {
+      "code": "E-r04",
+      "sha256": "fae670affd1db09f2e1ba703e97f08aacf8b0b2b8e1357e3c35b4f2bea6a7d8a",
+      "style": "economy"
+    },
+    {
+      "code": "C-r04",
+      "sha256": "e4329fb74b8dfd68c2e30e391abe8c6756f16555983ef7cbd2ad9a921ca04bca",
+      "style": "control"
+    }
+  ],
+  "prototypeReferenceScoreRateRange": [
+    0.5416666666666666,
+    0.875
+  ],
+  "prototypeSelfPlay": {
+    "baseEndingFraction": 0.1388888888888889,
+    "endReasons": {
+      "base_destroyed": 20,
+      "turn_limit_deposit": 10,
+      "turn_limit_score": 114
+    },
+    "games": 144
+  },
+  "reference": "M-balanced; descriptive range, not linked to individual hidden identities",
+  "replaysVerified": 1872,
+  "schemaVersion": 1,
+  "scope": "Fourth finite private-main-line development candidate; not formal ladder acceptance",
+  "timingRemeasured": false,
+  "usage": {
+    "analysisProcessCpuNs": 892283100,
+    "botCpuNs": 627414602200,
+    "fullPhaseCpuHours": null,
+    "independentCheckProcessCpuNs": 349594400,
+    "matchHarnessCpuNs": 570849583900,
+    "pairedAnalysisProcessCpuNs": 995103600,
+    "passiveDiagnostic": {
+      "botCpuNs": 34704591600,
+      "compilationCpuHours": null,
+      "fullCpuHours": null,
+      "hostCpuNs": 31844881800
+    },
+    "preliminarySyntheticBotCpuNs": 54030600,
+    "replayVerificationCpuNs": 208472597400,
+    "scope": "distinct bot/match-harness/verifier/analysis-process counters; compilation, dispatch, startup and full tree total unknown",
+    "successfulSyntheticBotCpuNs": 1875268200,
+    "syntheticScope": "recorded initialization/replies, including preliminary failures separately; compilation and full tree unknown"
+  },
+  "validation": {
+    "candidateDecisionArithmeticChecks": 8,
+    "combatProjectionChecks": 32,
+    "denseTurnReplies": 384,
+    "initialCandidateSyntheticFailuresRetained": 2,
+    "limits": "synthetic checks and aligned passive transcripts do not establish strategy strength or one cause of all prior losses; prior full257 remains historical",
+    "logicalChecksTotal": 105,
+    "maxDenseTurnCpuNs": 4322800,
+    "meanDenseTurnCpuNs": 1945819.2708333333,
+    "negativeDiagnosticCasesRetained": 2,
+    "newBehaviorRegressionChecks": 2,
+    "originalAndMovementSyntheticChecks": 57,
+    "pairedArithmeticChecks": 3,
+    "pairedDenseRotationChecks": 6,
+    "passiveAddedBalanceGames": 0,
+    "passiveAlignedTurns": 41752,
+    "passiveArchivedTranscripts": 144,
+    "privateCurrentPythonFilesLspClean": 10,
+    "publicFullSuiteRerunThisRevision": false
+  }
+}
