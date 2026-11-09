@@ -1,0 +1,142 @@
+{
+  "actualSourceSdkBackendHeadersChecked": 1872,
+  "allReplaysVerified": true,
+  "attemptCounts": {
+    "complete": 1872
+  },
+  "authorModel": "gpt-6-astra",
+  "botFaultGames": 0,
+  "commonZooPairedComparison": {
+    "allStylePooledCI95LowerBoundsPositive": true,
+    "bootstrap": {
+      "multiplicityCorrection": false,
+      "samples": 4000,
+      "seed": 4219,
+      "unit": "map; both seats and all opponents in pooled cells sampled together"
+    },
+    "gamesPerRevision": 1440,
+    "improvedGames": 60,
+    "limits": "all10 zoo opponents; no multiplicity correction; not new independent maps or proof of formal gates",
+    "mapClusters": 24,
+    "scoreRateDeltaRange": [
+      0.03125,
+      0.052083333333333336
+    ],
+    "worsenedGames": 3
+  },
+  "developmentSessionsThisRevision": 1,
+  "directPredecessorScoreRateRange": [
+    0.5625,
+    0.6458333333333334
+  ],
+  "executionGitHead": "b40e502a5bdb59d7e0ad0e59bd0989b5e8a7d448",
+  "finalHoldoutGames": 0,
+  "fixedBudget": {
+    "baseLimits": {
+      "BANK_MS": 3000,
+      "INIT_CPU_MS": 2000,
+      "TURN_CPU_MS": 100
+    },
+    "cpuHardLimitSeconds": 24,
+    "limits": {
+      "BANK_MS": 1800,
+      "INIT_CPU_MS": 1200,
+      "TURN_CPU_MS": 60
+    },
+    "lockSha256": "f22f35a73ac4d9abdac539c11806cfb08e58300617ec106d155742a5f8bdbb6f",
+    "speedFactor": 0.5998025747312362,
+    "turns": 300,
+    "wallMarginMs": 300
+  },
+  "formalLadderFitPerformed": false,
+  "formalLevelsAssigned": false,
+  "games": 1872,
+  "gamesByType": {
+    "corridor": {
+      "games": 468
+    },
+    "island": {
+      "games": 468
+    },
+    "maze": {
+      "games": 468
+    },
+    "open": {
+      "games": 468
+    }
+  },
+  "gradingGames": 0,
+  "independentMatrixCellsChecked": 360,
+  "independentTopDevelopmentRequirementSatisfied": false,
+  "mapSet": "calibration",
+  "maps": 24,
+  "noZooOnlyBaselinePairs": true,
+  "privateEvidenceSha256": {
+    "analysis": "0fa421f02b46b925f35b05d7dbd994d77c65fc1bd54bd7924f1dd00938d38149",
+    "independentCheck": "188c70e43c926b832da52b1b174727d0b56fb8dc2c35b7059ebc5aceece31312",
+    "pairedCheck": "4c61e82f968f128f55efa8cb5e8fa99c23fb045d12855a161b9e0d95ec266085",
+    "plan": "de85d513ef645a2b06b6454621916cd98274e1e3eb4eaaba6832c897492c8e15",
+    "trajectories": "f8b475583ceefc38527e0d348dbe86ef0914a98a8ced7a4a92c75105cd4b49b7"
+  },
+  "protocolWarnings": 0,
+  "prototypeCatalog": [
+    {
+      "code": "A-r02",
+      "sha256": "24b73f2aa9c67b300253437e89c0eac910602263ecf826a83cf2f1f43f749680",
+      "style": "attack"
+    },
+    {
+      "code": "E-r02",
+      "sha256": "30f80b77fe68b0f9c5f69fd3d57e44358d7180a263ef5fad145a4c4ab2b9a69a",
+      "style": "economy"
+    },
+    {
+      "code": "C-r02",
+      "sha256": "54e9d52db706a8993964ae63f07bb8149142f2eb6d1c078d9f6e93356a64e966",
+      "style": "control"
+    }
+  ],
+  "prototypeReferenceScoreRateRange": [
+    0.625,
+    0.9166666666666666
+  ],
+  "prototypeSelfPlay": {
+    "baseEndingFraction": 0.1527777777777778,
+    "endReasons": {
+      "base_destroyed": 22,
+      "turn_limit_deposit": 6,
+      "turn_limit_score": 116
+    },
+    "games": 144
+  },
+  "readiness": "Improved development revision; still not a frozen strong ladder. Ending mix and reference margins need further algorithmic work.",
+  "reference": "M-balanced; aggregate range, not linked to individual hidden identities; descriptive only",
+  "replaysVerified": 1872,
+  "schemaVersion": 1,
+  "scope": "Second finite private-main-line development revision; not formal ladder acceptance",
+  "timingRemeasured": false,
+  "usage": {
+    "additionalTrajectoryVerificationCpuNs": 33118292000,
+    "analysisProcessCpuNs": 925402300,
+    "botCpuNs": 395656538500,
+    "fullPhaseCpuHours": null,
+    "independentCheckProcessCpuNs": 353447200,
+    "matchHarnessCpuNs": 551870680300,
+    "pairedAnalysisProcessCpuNs": 998211900,
+    "replayVerificationCpuNs": 209236795600,
+    "scope": "distinct bot/match-harness/verifier/analysis-process counters; compilation, dispatch, startup and full tree total unknown",
+    "trajectoryControllerCpuNs": 139272900
+  },
+  "validation": {
+    "additionalTrajectoryReplays": 288,
+    "initialProbeHarnessErrorRetained": true,
+    "limits": "public engine/SDK/runner unchanged; prior full257 remains historical; all bot/compile executions use bwrap",
+    "newChecksPassAfterFix": 18,
+    "newChecksPassBeforeFix": 9,
+    "newSyntheticRegressionChecks": 18,
+    "originalSyntheticProbes": 39,
+    "pairedArithmeticChecks": 3,
+    "privateCurrentPythonFilesLspClean": 7,
+    "publicFullSuiteRerunThisRevision": false
+  }
+}

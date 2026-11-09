@@ -14,3 +14,13 @@
 - Recorded CPU ns: bots351985462400; match harness476860532600; full replay verification171841275600; analysis process849642900; final independent check490547700. Compilation, startup/dispatch, earlier failed check and full-phase total unknown; no RUSAGE_CHILDREN aggregate.
 - Current machine: i5-14600KF,20 logical CPUs, about15GiB visible memory, WSL Ubuntu22.04, Python3.13.15/GCC11/bwrap, jobs6. Prior13GiB is historical, not rewritten.
 - All controllers/workers finished. grading and final holdout remain unused. Next normal B work: improve the main lines under a separately saved finite plan and the existing timing lock; no new L0 approval needed. No push.
+
+2026-11-09 Main-line development02
+- Separate finite plan and new source revisions; no overwrite of dev01.18 new synthetic checks:9 pass before the fix,18 after; original39 also pass. Initial probe-only mappingproxy deepcopy error retained and corrected before the completed regression run. All compilation/bot execution remains offline bwrap.
+- Clean b40e502 plan/run:39 pairs*24 calibration maps*2 seats=1872. All attempts complete, no infra/config errors, bot faults or protocol warnings.1872 full replays,360 independent cells and1872 source+SDK/backend/budget headers verified.
+- Import dev01 timing lock byte-for-byte; no benchmark. Engine/SDK/public runner/zoo/rules/maps unchanged. No grading/final holdout games or zoo-only baseline reruns.
+- Paired common-zoo comparison covers1440 games per revision;60 outcomes improve,3 worsen. Three pooled score-rate changes range3.125%-5.2083%; map-cluster bootstrap4000/seed4219, no multiplicity correction. Direct predecessor score range56.25%-64.5833%; M-reference range62.5%-91.6667%.
+-144 self-play:22 base endings,116 tower-score endings,6 deposit endings. Still not ready for strong-ladder acceptance.288 M-reference/self trajectories additionally replayed in full as post-outcome exploration; all per-turn hashes match. Not new balance games or causal proof.
+-57 current synthetic checks pass;7 current private Python files LSP clean. Public full257 suite not rerun in this revision; prior evidence remains historical.
+- CPU ns: bot395656538500; match551870680300; full replay209236795600; extra trajectory33118292000; analysis925402300; independent353447200; paired998211900; trajectory controller139272900. Compilation/startup/dispatch/early probe error/full-phase total unknown.
+- B remains in development; no new approval needed. This finite batch and analyses finished; next algorithm revision requires a separate finite plan and the same lock. No formal levels/BT fit, no C work, no push.
