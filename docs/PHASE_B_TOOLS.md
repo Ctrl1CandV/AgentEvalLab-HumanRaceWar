@@ -1,6 +1,6 @@
 # B前置留出工具与输出边界
 
-2026-11-08。standard-1、动物园v15及引擎/SDK不变。**首次2208局留出及随后获准的一轮D22均未通过；授权已用完，以下命令仅供说明，不是继续运行的授权。** 先读`STATUS.md`、`reports/phase-B-damage22.md`和`reports/phase-B-holdout.md`，不重新生成地图或另起基线。
+2026-11-08。standard-1、动物园v15及引擎/SDK不变。首次留出及D22按旧标准失败；第二份审查的N1已完成，新留出标准生效、v15前置通过；N2有反例，不改M。R1改变了运行器预算复用。当前权限见`STATUS.md`和`reports/phase-B-review-analysis.md`，不重做旧地图/基线，不重跑D22。下面前两节是历史工具说明，新的holdout工具见后文。
 
 ## 地图
 
@@ -28,6 +28,21 @@
 - 不完整任务集不发布部分矩阵；输入不一致、回放验证失败或bot故障也不会放行。任何指标未达标就报告并停止，不调参、不重抽、不建阶梯。
 
 `private/HIDDEN.sha256`在静止检查点登记私有文件，包括元数据及运行原件。控制日志在程序退出时才最终定稿，退出后需再登记并完整核对；不要在仍写入的日志上声称摘要已最终一致。生成、controller、match、bench、重放校验分别记录CPU；编译及其他未捕获环节写未知，不叠加RUSAGE_CHILDREN冒充总量。
+
+## 新holdout：先登记、后生成
+
+```sh
+.venv/bin/python -B -m tools.prepare_final_holdout plan
+.venv/bin/python -B -m tools.prepare_final_holdout build
+```
+
+- 这两个命令不执行bot。先检查N1生效、原v15前置按新标准通过，以及N2诊断完整、原10个bot和standard-1不变。
+- `plan`一次抽取24个全新64位种子，写`private/holdout-maps/generation-plan.json`并登记HIDDEN.sha256，之后才允许`build`。四类各6张，尺寸24/28/32/36/40/32；种子碰撞即停，不再抽取替代。
+- 新目录与`private/maps/`分开，原calibration/grading及catalog原样保留；旧工具的完整48图检查不用放宽。
+- `build`核对计划的已登记字节和前置输入，用不变v2生成器生成。重复、耗尽或校验失败即停；不覆盖不同资产。完成后拒绝再次build。中断发生在catalog写成前时只能续同一计划和相同字节。
+- 全部五套图重新检查布局；另一个不调用生成器几何辅助函数的实现复核连通、旋转/矿量对称、资源分区、路径、出兵及近矿要求。单格咽喉用空地图的割点数表示，另列真正阻断两基地全部路径的割点数；低链DFS已与3×3全部子图逐点移除的穷举结果对照。
+- 新24图逐字节再生核对，布局与逐图指标只在private。公开`data/phase-b/final-holdout-maps.json`只给各集合/类型/尺寸的计数和分布，不给种子或逐图记录。布局相近不证明战略难度相等。
+- **B末之前不在新holdout打任何对局。** 后续阶梯/调参仅用calibration等指定开发集；完成其他B要求后才做一次最终2208局复核。
 
 ## 回归与限制
 

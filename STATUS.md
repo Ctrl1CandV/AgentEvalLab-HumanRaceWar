@@ -21,7 +21,7 @@
 | 必须分析 N3 经济/骚扰的类型克制 | `data/phase-b/type-counters.json`按类型给原v15双胜/双负计数 | 两套均open/corridor偏经济、maze偏骚扰；island跨集反转。总体24/48是优势抵消 | 已完成；不把小样本类型标签当普遍规律 |
 | 已批准的条件式留出标准 | DESIGN 11.5、BRIEF 5.0按审查第三节写入；N1完成后启用 | 原v15 calibration按新标准全部通过；public 10.2不改，D22仍拒绝，第4/6/7项仍点估计 | 已生效；不改写旧判定 |
 | 可选建议 M v16 | 按N2结果保留v15及全部10个bot，不开展可选试验 | 冻结源码不变，没有新增5888局 | 已跳过；不是漏做必需矩阵 |
-| 必须项 新holdout与后续B | DESIGN 7.3/17、BRIEF规定24图、先登记新种子计划、全部布局/独立复核与代表性；B末才用一次 | 尚未生成/打对局 | N1及前置满足后执行；B末报告后等审查，C未授权 |
+| 必须项 新holdout与后续B | DESIGN 7.3/17、BRIEF规定24图；`tools/prepare_final_holdout.py`分plan/build，先登记再生成，独立复核与五集合汇总；B末才用一次 | 工具8项专项通过、2文件LSP零诊断；尚未生成/打对局 | 前置已满足，下一步登记/生成；B末报告后等审查，C未授权 |
 
 新增分析验证：完整237项在hashseed=0通过，零失败/错误/跳过；包含新增9项的27项`test_review_*.py`在hashseed=1通过，4文件LSP零诊断。见`data/phase-b/analysis-validation.json`。原始证据只留private；N1/N3约0.000106宿主CPU小时，N2约0.001718宿主和0.000909诊断bot CPU小时，编译及完整总量未知。没有新平衡对局，也没有重测速度系数。
 
