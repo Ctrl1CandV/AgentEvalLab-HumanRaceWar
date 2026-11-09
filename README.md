@@ -6,7 +6,7 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 **A阶段已通过审查，用户已授权进入B。** 依据见 [inbox/2026-11-08-phase-a-accepted.md](inbox/2026-11-08-phase-a-accepted.md)。standard-1和动物园v15按交审配置冻结；A最终40图3680局条件通过，两个哈希种子全套各198项通过，完整报告见 [reports/phase-A.md](reports/phase-A.md)。
 
-**B正在按第二份审查继续。** 原2208局留出和获准的D22试验按旧标准失败，D22仍拒绝，不再调游戏参数。R1已固定配对/校准预算；N1确认全部失败项仅差1图，用户批准的新留出标准生效，v15前置复核通过。N2有反例，不改M、不运行v16；N3显示经济/骚扰按类型互相克制。新holdout24图已冻结并通过布局/独立检查，B末前不打对局。准备阶梯时发现L0指定两bot强度明显不接近，现等待构成裁定，不擅自换bot或豁免80 Elo要求；两bot诊断不是完整阶梯校准。详见 [当前停点](reports/phase-B-ladder-preflight.md)、[分析报告](reports/phase-B-review-analysis.md) 和 [STATUS.md](STATUS.md)。当前没有完整阶梯，B未完成、C未启动。原启动快照见 [docs/PHASE_B_HANDOFF.md](docs/PHASE_B_HANDOFF.md)。
+**B正在按第二份审查继续。** 原2208局留出和获准的D22试验按旧标准失败，D22仍拒绝，不再调游戏参数。R1已固定配对/校准预算；N1确认全部失败项仅差1图，用户批准的新留出标准生效，v15前置复核通过。N2有反例，不改M、不运行v16；N3显示经济/骚扰按类型互相克制。新holdout24图已冻结并通过布局/独立检查，B末前不打对局。用户2026-11-09澄清L0是异质基础组，不强求内部等强；128局终局核查支持其解释，保留原版两bot，继续阶梯开发。此解释只限L0，其他要求不变。详见 [L0决定](docs/PHASE_B_L0_DECISION.md)、[分析报告](reports/phase-B-review-analysis.md) 和 [STATUS.md](STATUS.md)。当前没有完整阶梯，B未完成、C未启动。原启动快照见 [docs/PHASE_B_HANDOFF.md](docs/PHASE_B_HANDOFF.md)。
 
 ## 目录和上传范围
 

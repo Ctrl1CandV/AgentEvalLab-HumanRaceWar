@@ -1,7 +1,7 @@
 # 审查报告
 
 - [`phase-A.md`](phase-A.md)：A阶段交付及逐项检查结果；已获2026-11-08审查通过。
-- [`phase-B-ladder-preflight.md`](phase-B-ladder-preflight.md)：新holdout24图布局及代表性汇总、L0构成问题B-L0-001停点；不把两bot诊断当完整阶梯校准，也不是B完成报告。
+- [`phase-B-ladder-preflight.md`](phase-B-ladder-preflight.md)：新holdout24图布局及代表性汇总、原L0构成问题B-L0-001停点（已关闭，见[`L0决定`](../docs/PHASE_B_L0_DECISION.md)）；不把两bot诊断当完整阶梯校准，也不是B完成报告。
 - [`phase-B-review-analysis.md`](phase-B-review-analysis.md)：第二份审查N1/N2/N3；N1满足条件，新标准生效、v15前置通过；N2有反例，不改M；N3显示分类型克制。不是B完成报告。
 - [`phase-B-damage22.md`](phase-B-damage22.md)：获准的一轮D22共5888局失败报告，包含完整配对比较、回放诊断和处理决定；拒绝决定已获第二份审查认可，原证据保留。
 - [`phase-B-holdout.md`](phase-B-holdout.md)：首次B前置留出失败停点，2208局/回放全部完成，但指定第1、2项未达到；原结论保留，没有阶梯或B完成报告。

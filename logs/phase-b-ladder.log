@@ -1,0 +1,7 @@
+2026-11-09 L0 clarification and B development continuation
+- User authorizes retaining original L0 bots when the functional-floor explanation is supported; do not force them to equal strength from their internal matchup.
+- Existing v15 outcomes checked: public80/calibration48, all300 turns, no destroyed base. All112 miner wins use deposit tiebreak after zero-zero tower scores; all16 random wins use positive tower score against zero.
+- Keep original v15, parameters and maps. Close B-L0-001. Only L0 internal equality is diagnostic; other gates and the full-ladder fit/data remain.
+- tools/analyze_l0_endings.py: 4 synthetic tests under hashseed0/1; 2 Python files LSP zero diagnostics. No new games, compilation or timing calibration.
+- Analysis host process CPU363731800ns; full-phase total unknown. Raw aggregate with provenance and stdout/stderr remain private/phase-b/l0-resolution/; public output contains group summaries only.
+- No push authorized. B remains in development; final holdout still unused; C not started.

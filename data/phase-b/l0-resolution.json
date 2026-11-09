@@ -1,0 +1,59 @@
+{
+  "datasets": [
+    {
+      "baseDestroyedGames": 0,
+      "bothBasesSurvivedGames": 80,
+      "endReasons": {
+        "turn_limit_deposit": 70,
+        "turn_limit_score": 10
+      },
+      "games": 80,
+      "mapSet": "public",
+      "minerWinsOnDepositsWithBothTowerScoresZero": 70,
+      "randomWinsOnPositiveTowerScore": 10,
+      "turnLimitGames": 80,
+      "turns": {
+        "max": 300,
+        "median": 300.0,
+        "min": 300
+      },
+      "winnerCounts": {
+        "Z-miner": 70,
+        "Z-random": 10
+      }
+    },
+    {
+      "baseDestroyedGames": 0,
+      "bothBasesSurvivedGames": 48,
+      "endReasons": {
+        "turn_limit_deposit": 42,
+        "turn_limit_score": 6
+      },
+      "games": 48,
+      "mapSet": "calibration",
+      "minerWinsOnDepositsWithBothTowerScoresZero": 42,
+      "randomWinsOnPositiveTowerScore": 6,
+      "turnLimitGames": 48,
+      "turns": {
+        "max": 300,
+        "median": 300.0,
+        "min": 300
+      },
+      "winnerCounts": {
+        "Z-miner": 42,
+        "Z-random": 6
+      }
+    }
+  ],
+  "decision": "retain original v15 L0 bots; internal L0 wins/Elo are diagnostic, not an equal-strength gate, as clarified by the user",
+  "limits": "No claim of equal overall strength. Keep all outcomes and include L0 in whole-ladder diagnostics; no exemption inferred for other levels or other requirements.",
+  "newGames": 0,
+  "schemaVersion": 1,
+  "scope": "Verify the user's L0 explanation from existing v15 outcomes, not new games.\n\nThe old pairwise preflight is retained as historical evidence. This analysis\nchecks the actual terminal tiebreakers; it does not calibrate a complete ladder.\n",
+  "usage": {
+    "botCpuNs": 0,
+    "fullPhaseCpuHours": null,
+    "processCpuNs": 363731800,
+    "scope": "archive/digest and terminal-result aggregation only; no bots, benchmarks, or engine replay"
+  }
+}
