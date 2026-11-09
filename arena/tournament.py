@@ -17,7 +17,9 @@ from arena.core.cache import CompileCache
 from arena.core.journal import append, atomic_json, records
 from arena.core.resources import CpuLease
 from arena.core.sandbox import ROOT, Bot, Bubblewrap, InfrastructureError, parent_death_guard, prepare, snapshot
-from arena.core.timing import Calibration
+from arena.core.timing import Calibration, freeze_calibration
+from arena.games.outpost import Outpost
+from arena.games.outpost.rules import Rules
 from arena.games.outpost.maps import parse_map
 from arena.games.outpost.replay import verify
 
@@ -40,14 +42,27 @@ def map_files(paths):
 
 
 def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self=(), seeds=(17,29),
-                   reference=None, sandbox='bwrap', resume=False, max_tasks=None, ruleset=None):
+                   reference=None, sandbox='bwrap', resume=False, max_tasks=None, ruleset=None,
+                   freeze_timing=False, fixed_timing=None):
     if sandbox not in ('bwrap','plain'): raise ValueError('unknown backend')
+    if freeze_timing and fixed_timing is not None: raise ValueError('choose a new timing freeze OR an existing lock')
+    turns = Rules.from_dict(ruleset or {})['TURNS']
+    fixed_raw = fixed_timing.read_bytes() if fixed_timing is not None else None
+    fixed_cal = Calibration.from_bytes(fixed_raw, workload_digest(), jobs=jobs) if fixed_raw is not None else None
+    if fixed_cal is not None:
+        if (fixed_cal.locked_budget is None or fixed_cal.sandbox != sandbox
+                or fixed_cal.locked_budget['turns'] != turns):
+            raise ValueError('fixed timing requires matching locked budgets/backend/turns')
+        if reference and fixed_cal.reference.get('reportSha256') != sha256(reference.read_bytes()).hexdigest():
+            raise ValueError('fixed timing reference changed')
+    fixed_policy = freeze_timing or fixed_timing is not None
     if type(jobs) is not int or jobs<1 or 2*jobs>=len(os.sched_getaffinity(0)):
         raise ValueError('need 2*jobs bot CPUs and at least one separate runner CPU')
     if sandbox=='plain' and (2*jobs+1>8): raise ValueError('outer workspace tools use at most 8 CPUs; maximum 3 jobs')
     if len(seeds)!=2 or any(type(s) is not int or s<0 for s in seeds): raise ValueError('two nonnegative seeds required')
     sources=[p.absolute() for p in sources]; maps=map_files(maps); out=out.resolve()
-    if any(p.resolve().is_relative_to(ROOT/'private') for p in [*sources,*maps]) and not out.is_relative_to(ROOT/'private'):
+    private_inputs = [*sources, *maps, *([fixed_timing] if fixed_timing is not None else [])]
+    if any(p.resolve().is_relative_to(ROOT/'private') for p in private_inputs) and not out.is_relative_to(ROOT/'private'):
         raise ValueError('hidden batch inputs and artifacts must stay private')
     names=[p.name for p in sources]
     counts=Counter(names)
@@ -68,6 +83,9 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
         request={'sources':[str(p) for p in sources],'maps':[str(p.absolute()) for p in maps],
                  'jobs':jobs,'pairs':pairs,'seeds':list(seeds),'sandbox':sandbox,'ruleset':ruleset or {},'framework':fingerprint(),
                  'referenceSha256':sha256(reference.read_bytes()).hexdigest() if reference else None}
+        if fixed_policy:
+            request['fixedTiming'] = {'mode': 'import' if fixed_raw is not None else 'freeze-once',
+                                      'sourceSha256': sha256(fixed_raw).hexdigest() if fixed_raw is not None else None}
         # Validate source snapshots on every invocation; a resume must not mix
         # source revisions. Validation failures remain submissions, not infra wins.
         validation=out/'validation'/uuid4().hex; validation.mkdir(parents=True)
@@ -101,6 +119,13 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
             snapshot(ROOT/'sdk',out/'runtime/sdk')
             for i,text in enumerate(map_texts):
                 (out/'runtime'/f'map-{i}.map').write_text(text)
+        lock_path = out/'timing-lock.json'
+        if fixed_raw is not None:
+            if lock_path.exists() and lock_path.read_bytes() != fixed_raw:
+                raise ValueError('fixed timing snapshot changed')
+            if not lock_path.exists():
+                with lock_path.open('xb') as stream:
+                    stream.write(fixed_raw); stream.flush(); os.fsync(stream.fileno())
         finished={r['taskId']:r for r in records(out/'results.jsonl')}
         for row in finished.values():
             if sha256(Path(row['replay']).read_bytes()).hexdigest()!=row['replaySha256']:
@@ -176,6 +201,17 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
             timing_path=out/'timing-selection.json'
             old_timing=json.loads(timing_path.read_text()) if timing_path.exists() else None
             prior_cal=Calibration.load(Path(old_timing['resultFile']),workload_digest(),jobs=jobs) if old_timing else None
+            if fixed_policy:
+                if old_timing and (Path(old_timing['resultFile']) != lock_path or not lock_path.exists()):
+                    raise ValueError('fixed timing selection changed')
+                if lock_path.exists():
+                    prior_cal = Calibration.load(lock_path, workload_digest(), jobs=jobs)
+                    if (prior_cal.locked_budget is None or prior_cal.sandbox != sandbox
+                            or prior_cal.locked_budget['turns'] != turns
+                            or (old_timing and prior_cal.lock_sha256 != old_timing.get('lockSha256'))):
+                        raise ValueError('fixed timing budget/identity changed')
+                elif old_timing:
+                    raise ValueError('fixed timing snapshot missing')
             capacity=min(8,len(os.sched_getaffinity(0))) if sandbox=='plain' else len(os.sched_getaffinity(0))
             runner_count=min(jobs,capacity-2*jobs)
             with CpuLease(2*jobs,exact=prior_cal.cpus if prior_cal else None,runner_count=runner_count) as lease:
@@ -209,12 +245,20 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
                     bot.code=names[i]; prepared.append(bot)
                     if bot.compile_fault and source.resolve().is_relative_to(ROOT/'private'):
                         raise ValueError('hidden bot preparation failed; see private artifacts')
-                report=run_benchmark(out/'bench',jobs=jobs,reference=reference,sandbox=sandbox,_cpu_pool=lease.pool)
-                if report['status']!='complete': raise InfrastructureError('batch benchmark failed; attempts retained')
-                if old_timing:
-                    # Resumption recalibrates the same CPU pool/concurrency;
-                    # record both reports and the epoch on every new replay.
-                    append(out/'timing-history.jsonl',old_timing)
+                if fixed_policy and prior_cal is not None:
+                    report = {'resultFile': str(lock_path), 'policy': 'fixed', 'lockSha256': prior_cal.lock_sha256}
+                else:
+                    report=run_benchmark(out/'bench',jobs=jobs,reference=reference,sandbox=sandbox,_cpu_pool=lease.pool)
+                    if report['status']!='complete': raise InfrastructureError('batch benchmark failed; attempts retained')
+                    if fixed_policy:
+                        atomic_json(lock_path, freeze_calibration(Path(report['resultFile']), workload_digest(),
+                                    jobs=jobs, base_limits=Outpost().limits, turns=turns))
+                        locked = Calibration.load(lock_path, workload_digest(), jobs=jobs)
+                        report = {'resultFile': str(lock_path), 'policy': 'fixed', 'lockSha256': locked.lock_sha256}
+                    elif old_timing:
+                        # Fresh development/scoring policy is unchanged. Paired
+                        # studies and ladder calibration explicitly use locks.
+                        append(out/'timing-history.jsonl',old_timing)
                 atomic_json(timing_path,report)
                 timing=report['resultFile']
                 queue=list(pending); active={}; idle=list(range(jobs))

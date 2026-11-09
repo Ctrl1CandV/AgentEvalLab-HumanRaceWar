@@ -1,14 +1,29 @@
 # 状态
 
-更新：2026-11-08。**获准的一轮D22试验已完成：5888局全部完成/回放通过，但未达标，候选不采纳。等待审查和下一步授权；没有运行中任务，没有阶梯，B未完成，C未启动。**
+更新：2026-11-08。**正在处理第二份B审查（本机HEAD `13360d7`）。D22拒绝，不再调游戏参数；先落实R1/R2及条件式标准，再做N1/N2/N3。新留出判定尚未因未做的分析自动生效，没有阶梯，B未完成，C未启动。**
 
-最新报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。一轮授权已经用完，不自动追加参数/改bot/重跑基线/建阶梯；standard-1仍为伤害20，v15与原地图保持冻结。
+最新报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。D22的一轮授权已用完，standard-1仍为伤害20。后续权限以新审查第六节及用户明确授权为准：N1过关才启用新标准；N2成立才可选另存v16小修M；前置/新holdout布局检查满足后可继续B，不自动改游戏参数或提前使用holdout。
 
-- A已获审查通过：[`inbox/2026-11-08-phase-a-accepted.md`](inbox/2026-11-08-phase-a-accepted.md)。standard-1、引擎/SDK和动物园v15保持冻结，字节摘要与交审配置一致。
+- A已获审查通过：[`inbox/2026-11-08-phase-a-accepted.md`](inbox/2026-11-08-phase-a-accepted.md)。standard-1、游戏引擎/SDK和动物园v15未改；本轮只按R1修改运行器的预算复用，框架指纹会变化，不能再宣称整个arena字节未变。
 - 首次留出报告：[`reports/phase-B-holdout.md`](reports/phase-B-holdout.md)；原始结论和数据保留。D22数据在[`data/phase-b/damage22/`](data/phase-b/damage22/)。两份都是失败停点报告，不是B完成报告。
-- 工作目录仍为WSL `~/projects/AgentEvalLab-HumanRaceWar`。开工工作区干净，`git pull --ff-only`成功且无上游更新；保留`6b8664d`，hooks为`.githooks`。本轮只有本地提交，没有推送或改写历史。
+- 工作目录仍为WSL `~/projects/AgentEvalLab-HumanRaceWar`，hooks为`.githooks`；不改写历史。此前留出/D22的7个提交已按用户授权推送至`42f6294`，本机当前又有审查提交`13360d7`；本次修改只做小步本地提交。
 
-## 2026-11-08审查逐条回复
+## 第二份B审查逐条回复（`inbox/2026-11-08-phase-b-holdout-review.md`）
+
+本机已有审查提交`13360d7`，与本地origin/main一致，工作区起初干净，hooks为`.githooks`。前两次`git pull --ff-only`在现有SSH代理连接处超时；没有改认证/代理，也不宣称再次联网同步成功。用户随后要求按本机审查处理。审查原件保留；先前`42f6294`已按用户要求推送，本轮只获准本地提交。
+
+| 分类/条目 | 处理方式与相关文件 | 验证/证据 | 未解决项与状态 |
+|---|---|---|---|
+| 必须改 R1 固定配对/校准限额 | `arena/core/timing.py`、`arena/tournament.py`、`arena/match.py`、CLI新增固定预算；`tools/freeze_batch_timing.py`从完整基线核对全部回放头后封存；DESIGN 6.2、BATCH同步 | 先复现缺失接口4个错误；新增5项及完整228项通过，含真实bwrap首次冻结、续跑/配对禁止重测；数值/摘要/后端/并发/回合变动拒绝；最后5项在hashseed=0/1通过，6文件LSP零诊断，`data/phase-b/review-validation.json`保留修前失败 | 正式评分D4不变；后续校准入口须使用固定模式 |
+| 必须改 R2 接战前相同不算机制发现 | `reports/phase-B-damage22.md`4.1改为确定性/配对一致性检查，限定里程碑而非全部轨迹 | 原数值不变；注明第一次战士接战不一定是第一次造成伤害 | 已改 |
+| 必须分析 N1 距门槛地图数 | 将用原public/calibration及D22档案，按地图成对计数与类型/尺寸分组 | 待执行；输出`data/phase-b/margins.json` | 超过1图即停止；未先宣布新标准生效 |
+| 必须分析 N2 M目标选择假设 | 只检查原基线public 20局/calibration 12局maze回放 | 待执行；目标意图若不能从回放直接识别，须明确证据来源与边界 | 不成立就不改M；不得猜测为真 |
+| 必须分析 N3 经济/骚扰的类型克制 | 原基线分类型双胜/双负地图计数，不新增对局 | 待执行 | 未得结论 |
+| 已批准的条件式留出标准 | DESIGN 11.5、BRIEF 5.0按审查第三节写入，生效仍依N1；public 10.2不改 | 文档更新；不得追认D22通过 | 待N1；第4/6/7项仍点估计 |
+| 可选建议 M v16 | 仅N2成立可修指定一条通用规则，原v15及其他9个bot保留；标准参数、固定限额两套完整矩阵 | 尚未修改或运行 | 取决于N2，失败不追加改动 |
+| 必须项 新holdout与后续B | DESIGN 7.3/17、BRIEF规定24图、先登记新种子计划、全部布局/独立复核与代表性；B末才用一次 | 尚未生成/打对局 | N1及前置满足后执行；B末报告后等审查，C未授权 |
+
+## 首份2026-11-08审查逐条回复（历史）
 
 | 意见 | 本轮处理、证据与未解决项 | 实施状态 |
 |---|---|---|

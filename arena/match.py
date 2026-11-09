@@ -49,9 +49,21 @@ def _play(sources, map_text, out, seeds, *, limits, retries, calibration, sandbo
         if (calibration.jobs != allocation['jobs'] or tuple(allocation['pool']) != calibration.cpus
                 or calibration.sandbox != sandbox):
             raise ValueError('calibration does not match batch allocation/concurrency')
-        game = Outpost(scale_limits(game.limits, factor))
+        if calibration.locked_budget is not None:
+            if limits is not None and limits != calibration.locked_budget['baseLimits']:
+                raise ValueError('cannot override a fixed timing budget')
+            game = Outpost(calibration.locked_budget['limits'])
+        else:
+            game = Outpost(scale_limits(game.limits, factor))
     wall_margin_ms = math.ceil(500*factor)
     initial = game.new_match(map_text, ruleset or {}, seeds)
+    hard_limit = cpu_hard_limit(game.limits, initial.rules['TURNS'], factor)
+    if calibration is not None and calibration.locked_budget is not None:
+        budget = calibration.locked_budget
+        if initial.rules['TURNS'] != budget['turns']:
+            raise ValueError('fixed timing turn count changed')
+        wall_margin_ms = budget['wallMarginMs']
+        hard_limit = budget['cpuHardLimitSeconds']
     if prepared is not None and len(prepared) != len(sources): raise ValueError('prepared bot count mismatch')
     if len(sources) != len(initial.players) or len(allocation['bots']) != len(sources):
         raise ValueError('one bot and exclusive CPU per player required')
@@ -93,7 +105,7 @@ def _play(sources, map_text, out, seeds, *, limits, retries, calibration, sandbo
                 'bots':[{'code':b.code,'sha256':b.digest,'language':b.language,'validationError':b.validation_error} for b in bots],
                 'seeds':seeds,'limits':game.limits,'speedFactor':factor if calibration else None,
                 'timingCalibration':calibration.header() if calibration else 'unscaled development limits; no calibration supplied',
-                'wallMarginMs':wall_margin_ms,'cpuHardLimitSeconds':cpu_hard_limit(game.limits,state.rules['TURNS'],factor),
+                'wallMarginMs':wall_margin_ms,'cpuHardLimitSeconds':hard_limit,
                 'startedAt':datetime.now(timezone.utc).isoformat(),'sandbox':sandbox,
                 'runtimePolicy':{'version':4,'parentDeath':'SIGKILL; cannot clear','singleProcess':True,'maxThreads':16,
                     'rootTmpDev':'read-only' if sandbox=='bwrap' else 'outer-sandbox policy; no inner filesystem isolation',
@@ -118,7 +130,7 @@ def _play(sources, map_text, out, seeds, *, limits, retries, calibration, sandbo
 
             if faults is None:
                 for p,bot in enumerate(bots):
-                    connections.append(Connection(bot,launcher,allocation['bots'][p],cpu_hard_limit(game.limits,state.rules['TURNS'],factor)))
+                    connections.append(Connection(bot,launcher,allocation['bots'][p],hard_limit))
                     row['sandboxPids'] = [c.process.pid for c in connections]
                     atomic_json(work/'sandbox-pids.json',{'pids':row['sandboxPids']})
                 failed = run(game,state,connections,game.limits,record,wall_margin_ms=wall_margin_ms,

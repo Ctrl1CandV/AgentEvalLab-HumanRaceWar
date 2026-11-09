@@ -43,6 +43,9 @@ def main() -> int:
     tournament.add_argument("--jobs", type=int, default=6)
     tournament.add_argument("--seeds", nargs=2, type=int, default=[17,29])
     tournament.add_argument("--reference", type=Path)
+    timing_group = tournament.add_mutually_exclusive_group()
+    timing_group.add_argument("--freeze-timing", action="store_true", help="benchmark once, then lock this calibration campaign's budgets")
+    timing_group.add_argument("--fixed-timing", type=Path, help="reuse a baseline timing-lock.json; never benchmark again")
     tournament.add_argument("--resume", action="store_true")
     tournament.add_argument("--max-tasks", type=int, help="checkpoint after this many new tasks; retains incomplete status")
     tournament.add_argument("--sandbox", choices=("bwrap", "plain"), default="bwrap")
@@ -77,7 +80,8 @@ def main() -> int:
             sources = args.bots or [args.bot,*args.opponents]
             result = run_tournament(sources,args.maps,args.out,jobs=args.jobs,
                 focus=None if args.bots else 0,include_self=args.include_self,seeds=args.seeds,
-                reference=args.reference,sandbox=args.sandbox,resume=args.resume,max_tasks=args.max_tasks)
+                reference=args.reference,sandbox=args.sandbox,resume=args.resume,max_tasks=args.max_tasks,
+                freeze_timing=args.freeze_timing,fixed_timing=args.fixed_timing)
             print(json.dumps(result,indent=2))
             return 0 if result["status"]=="complete" else 2
         if args.command == "bench":

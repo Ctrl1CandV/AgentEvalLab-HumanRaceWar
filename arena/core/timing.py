@@ -1,5 +1,5 @@
 """Load-bound timing calibration metadata and consistently scaled budgets."""
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from hashlib import sha256
 import json
 import math
@@ -21,16 +21,41 @@ class Calibration:
     reference: dict
     workload_sha256: str
     sandbox: str = 'bwrap'
+    locked_budget: dict | None = None
+    lock_sha256: str | None = None
 
     def header(self) -> dict:
-        return {"jobs": self.jobs, "cpus": self.cpus, "speedFactor": self.factor,
-                "reportSha256": self.report_sha256, "reference": self.reference,
-                "workloadSha256": self.workload_sha256, "sandbox": self.sandbox}
+        result = {"jobs": self.jobs, "cpus": self.cpus, "speedFactor": self.factor,
+                  "reportSha256": self.report_sha256, "reference": self.reference,
+                  "workloadSha256": self.workload_sha256, "sandbox": self.sandbox}
+        if self.locked_budget is not None:
+            result['fixedRuntime'] = {'lockSha256': self.lock_sha256, **self.locked_budget}
+        return result
 
     @classmethod
     def load(cls, path: Path, workload_sha256: str, *, jobs: int) -> "Calibration":
-        raw = path.read_bytes()
+        return cls.from_bytes(path.read_bytes(), workload_sha256, jobs=jobs)
+
+    @classmethod
+    def from_bytes(cls, raw: bytes, workload_sha256: str, *, jobs: int) -> "Calibration":
         r = json.loads(raw)
+        if isinstance(r, dict) and r.get('kind') == 'fixed-runtime-budget':
+            if r.get('schemaVersion') != 1 or not isinstance(r.get('benchmarkJson'), str):
+                raise ValueError('invalid fixed timing record')
+            benchmark = r['benchmarkJson'].encode()
+            original = json.loads(benchmark)
+            if (not isinstance(original, dict) or 'kind' in original
+                    or sha256(benchmark).hexdigest() != r.get('benchmarkSha256')):
+                raise ValueError('fixed timing benchmark changed or nested')
+            calibration = cls.from_bytes(benchmark, workload_sha256, jobs=jobs)
+            budget = r.get('budget')
+            if not isinstance(budget, dict):
+                raise ValueError('missing fixed timing budgets')
+            expected = runtime_budget(budget.get('baseLimits'), calibration.factor, budget.get('turns'))
+            if (budget != expected or any(type(budget[k]) is not int for k in ('wallMarginMs', 'cpuHardLimitSeconds'))
+                    or any(type(n) is not int for n in budget['limits'].values())):
+                raise ValueError('fixed timing budgets do not match recorded calibration')
+            return replace(calibration, locked_budget=expected, lock_sha256=sha256(raw).hexdigest())
         required = {"cpus", "reference", "loadedMedianCpuNs", "speedFactor"}
         if (type(jobs) is not int or jobs < 1 or not isinstance(r, dict)
                 or r.get("status") != "complete" or r.get("schemaVersion") != 1 or not required <= r.keys()):
@@ -54,3 +79,25 @@ class Calibration:
         sandbox = r.get('sandbox', 'bwrap')
         if sandbox not in ('bwrap', 'plain'): raise ValueError('unknown calibration backend')
         return cls(jobs, tuple(cpus), factor, sha256(raw).hexdigest(), reference, workload_sha256, sandbox)
+
+
+def runtime_budget(base_limits, factor, turns):
+    from arena.core.runner import cpu_hard_limit
+    if (not isinstance(base_limits, dict) or set(base_limits) != {'TURN_CPU_MS', 'INIT_CPU_MS', 'BANK_MS'}
+            or any(type(n) is not int or n <= 0 for n in base_limits.values())
+            or type(turns) is not int or turns <= 0):
+        raise ValueError('invalid base limits or turn count for fixed timing')
+    limits = scale_limits(base_limits, factor)
+    return {'baseLimits': dict(base_limits), 'turns': turns, 'limits': limits,
+            'wallMarginMs': math.ceil(500*factor),
+            'cpuHardLimitSeconds': cpu_hard_limit(limits, turns, factor)}
+
+
+def freeze_calibration(path: Path, workload_sha256: str, *, jobs: int, base_limits: dict, turns: int) -> dict:
+    raw = path.read_bytes()
+    calibration = Calibration.from_bytes(raw, workload_sha256, jobs=jobs)
+    if calibration.locked_budget is not None:
+        raise ValueError('already fixed; reuse the existing lock bytes')
+    return {'schemaVersion': 1, 'kind': 'fixed-runtime-budget', 'benchmarkJson': raw.decode(),
+            'benchmarkSha256': calibration.report_sha256,
+            'budget': runtime_budget(base_limits, calibration.factor, turns)}
