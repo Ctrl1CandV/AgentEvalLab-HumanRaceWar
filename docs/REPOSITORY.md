@@ -14,7 +14,7 @@
 | `data/phase-a/matrices/` | 每个候选及最后复跑的独立聚合矩阵，包含失败版本 |
 | `data/phase-a/regressions/`、`diagnostics/` | 策略反例及骚扰/开局诊断汇总 |
 | `data/phase-a/usage/`、`history/` | 用量快照与早期开发汇总 |
-| `data/phase-b/`、`reports/phase-B-holdout.md`、`phase-B-damage22.md` | 首次留出/D22历史失败、第二份审查分析、新holdout布局及L0构成停点、CPU与来源；隐藏/合并原件只留private，公开对局原件只留runs |
+| `data/phase-b/`、`reports/phase-B-holdout.md`、`phase-B-damage22.md` | 首次留出/D22历史失败、第二份审查分析、新holdout布局、已关闭的L0问题、dev01–dev03主线开发、CPU与来源；隐藏/合并原件只留private，公开对局原件只留runs |
 | `logs/` | 当前必要的测试诊断；历史完整日志不再上传 |
 | `docs/history/`、`reports/archive/` | 有审查价值的历史说明，不作为当前待办 |
 | `runs/` | 本机原始运行、结果库、完整回放、旧日志与证据归档；不入Git |

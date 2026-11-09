@@ -24,3 +24,14 @@
 -57 current synthetic checks pass;7 current private Python files LSP clean. Public full257 suite not rerun in this revision; prior evidence remains historical.
 - CPU ns: bot395656538500; match551870680300; full replay209236795600; extra trajectory33118292000; analysis925402300; independent353447200; paired998211900; trajectory controller139272900. Compilation/startup/dispatch/early probe error/full-phase total unknown.
 - B remains in development; no new approval needed. This finite batch and analyses finished; next algorithm revision requires a separate finite plan and the same lock. No formal levels/BT fit, no C work, no push.
+
+2026-11-09 Main-line development03, candidate not promoted
+- Separate prospective finite plan; clean cc422f6 source/config/task registration, then1872 games with the same pair structure against the preceding revision. No zoo-only baseline rerun, no grading/holdout, no rebenchmark. All original inputs and prior versions preserved.
+- All1872 attempts complete; zero infra/config errors, bot faults and protocol warnings. All1872 replay/source+SDK/runtime checks and360 independent matrix cells pass.
+-96 synthetic checks:57 prior regressions,32 combat-projection comparisons including rotation,6 paired dense/position rotation checks,1 check of an already recorded synthetic reply. Dense384 replies max2793600ns, mean1217386.9791666667ns; actual60ms per reply. All compilation/bots use offline bwrap. No universal CPU or complete-game-model claim.
+-9 current private Python files LSP clean;3 paired-arithmetic invariants pass. Public full257 suite remains historical, not rerun in this private revision.
+- Common-zoo pairs:14 improved,34 worsened; pooled per-style point deltas-1.25% to-1.6667%, all95% paired map-cluster intervals include0. Direct predecessor scores29.1667%-45.8333%; M-reference range45.8333%-87.5%. No statistical-population inferiority claim.
+-144 self-play:34 base endings,104 tower-score endings,6 deposit endings. Ending mix improves but does not replace strength criteria. No formal gate evaluated or declared passed.
+- Do not promote dev03; retain dev02 as the development base. Preserve candidate source and every outcome. Root cause is not yet isolated; no automatic follow-up matrix. A fresh finite plan is required for the next diagnostic/development iteration, not new user authorization to continue B.
+- CPU ns: bots537386444500; match551816339300; replay201709526000; analysis896078400; independent350384900; paired968893300; successful synthetic bot initialization/replies1577599400. Compilation, dispatch/startup and whole-stage total unknown.
+- This continuation added3744 games in two separately planned revisions. All controllers/workers finished. Still B development, not waiting for review; no formal levels/joint BT, no top-end independent-session claim, no C work or push.

@@ -1,0 +1,151 @@
+{
+  "actualSourceSdkBackendHeadersChecked": 1872,
+  "allReplaysVerified": true,
+  "attemptCounts": {
+    "complete": 1872
+  },
+  "authorModel": "gpt-6-astra",
+  "botFaultGames": 0,
+  "commonZooPairedComparison": {
+    "allStylePooledCI95IncludeZero": true,
+    "bootstrap": {
+      "multiplicityCorrection": false,
+      "samples": 4000,
+      "seed": 4219,
+      "unit": "map; both seats and all opponents in pooled cells sampled together"
+    },
+    "gamesPerRevision": 1440,
+    "improvedGames": 14,
+    "limits": "all10 zoo opponents, all outcomes retained; point regressions, not proof of population inferiority; no multiplicity correction",
+    "mapClusters": 24,
+    "scoreRateDeltaRange": [
+      -0.016666666666666666,
+      -0.012500000000000002
+    ],
+    "worsenedGames": 34
+  },
+  "decision": {
+    "artifacts": "all candidate source/results/failures retained privately; no automatic additional candidate matrix",
+    "promotedAsDevelopmentBase": false,
+    "reason": "no pooled score gain and all direct-predecessor point estimates below0.5; improved ending mix does not outweigh strength regressions",
+    "retainedDevelopmentBase": "dev02"
+  },
+  "developmentSessionsThisRevision": 1,
+  "directPredecessorScoreRateRange": [
+    0.2916666666666667,
+    0.4583333333333333
+  ],
+  "executionGitHead": "cc422f6c46129c3588bce350ed2598378dcff0e8",
+  "finalHoldoutGames": 0,
+  "fixedBudget": {
+    "baseLimits": {
+      "BANK_MS": 3000,
+      "INIT_CPU_MS": 2000,
+      "TURN_CPU_MS": 100
+    },
+    "cpuHardLimitSeconds": 24,
+    "limits": {
+      "BANK_MS": 1800,
+      "INIT_CPU_MS": 1200,
+      "TURN_CPU_MS": 60
+    },
+    "lockSha256": "f22f35a73ac4d9abdac539c11806cfb08e58300617ec106d155742a5f8bdbb6f",
+    "speedFactor": 0.5998025747312362,
+    "turns": 300,
+    "wallMarginMs": 300
+  },
+  "formalLadderFitPerformed": false,
+  "formalLevelsAssigned": false,
+  "formalStrongerBotEndingGateEvaluated": false,
+  "games": 1872,
+  "gamesByType": {
+    "corridor": {
+      "games": 468
+    },
+    "island": {
+      "games": 468
+    },
+    "maze": {
+      "games": 468
+    },
+    "open": {
+      "games": 468
+    }
+  },
+  "gradingGames": 0,
+  "independentMatrixCellsChecked": 360,
+  "independentTopDevelopmentRequirementSatisfied": false,
+  "mapSet": "calibration",
+  "maps": 24,
+  "noZooOnlyBaselinePairs": true,
+  "privateEvidenceSha256": {
+    "analysis": "7824046b03e4936abeedb9452dd2befd2464062a03a1567ae3327fb85ccf7b56",
+    "denseChecks": "8bffe50049f4945d6d28996b7f0890592dd2aebb40d7ff9506fac4dfdf7e0913",
+    "independentCheck": "863cdb2734a1ea46a9649d69cb117305e82aa7c75363d460be533d061008e597",
+    "pairedCheck": "0d385419a5191b232f969ceb839fb51c58b95359c63b0f1d7d3d9d67be7f2e26",
+    "plan": "d37ef4ae3f5f9752a4654439ef0e8988aa6f3763c330b956c6ec659eeb23d75b",
+    "postureCheck": "3afe3dbe0970e034d5a0e691f1cd478d1e99ead9c008db08988ef25ada28eadb"
+  },
+  "protocolWarnings": 0,
+  "prototypeCatalog": [
+    {
+      "code": "A-r03",
+      "sha256": "14e96c608b7a19c8568d1b7517b57b158f3a16cf08c6756e6a1981bfd6b0304d",
+      "style": "attack"
+    },
+    {
+      "code": "E-r03",
+      "sha256": "6238e048966303f913a43280ad030a25e3b17e6d894f1fa16eca501aa9545212",
+      "style": "economy"
+    },
+    {
+      "code": "C-r03",
+      "sha256": "0616e0a204c32424ec8ffe2259abfb48d9d5e7424586e58c329affd373683c0b",
+      "style": "control"
+    }
+  ],
+  "prototypeReferenceScoreRateRange": [
+    0.4583333333333333,
+    0.875
+  ],
+  "prototypeSelfPlay": {
+    "baseEndingFraction": 0.2361111111111111,
+    "endReasons": {
+      "base_destroyed": 34,
+      "turn_limit_deposit": 6,
+      "turn_limit_score": 104
+    },
+    "games": 144
+  },
+  "reference": "M-balanced; range not linked to individual hidden identities; descriptive only",
+  "replaysVerified": 1872,
+  "schemaVersion": 1,
+  "scope": "Third finite private-main-line development candidate; not formal ladder acceptance",
+  "timingRemeasured": false,
+  "usage": {
+    "analysisProcessCpuNs": 896078400,
+    "botCpuNs": 537386444500,
+    "fullPhaseCpuHours": null,
+    "independentCheckProcessCpuNs": 350384900,
+    "matchHarnessCpuNs": 551816339300,
+    "pairedAnalysisProcessCpuNs": 968893300,
+    "replayVerificationCpuNs": 201709526000,
+    "scope": "distinct bot/match-harness/verifier/analysis-process counters; compilation, dispatch, startup and full tree total unknown",
+    "syntheticBotCpuNs": 1577599400,
+    "syntheticScope": "initialization/replies from all successful private probe records; compilation and full tree unknown"
+  },
+  "validation": {
+    "combatProjectionChecks": 32,
+    "denseTurnReplies": 384,
+    "limits": "projection checks exclude economics/building/future spawn planning; synthetic workload not a universal CPU bound; prior full257 remains historical",
+    "logicalChecksTotal": 96,
+    "maxDenseTurnCpuNs": 2793600,
+    "meanDenseTurnCpuNs": 1217386.9791666667,
+    "originalAndMovementSyntheticChecks": 57,
+    "pairedArithmeticChecks": 3,
+    "pairedDenseRotationChecks": 6,
+    "privateCurrentPythonFilesLspClean": 9,
+    "publicFullSuiteRerunThisRevision": false,
+    "recordedSyntheticPostureChecks": 1
+  }
+}
