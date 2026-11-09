@@ -5,3 +5,6 @@
 - tools/analyze_l0_endings.py: 4 synthetic tests under hashseed0/1; 2 Python files LSP zero diagnostics. No new games, compilation or timing calibration.
 - Analysis host process CPU363731800ns; full-phase total unknown. Raw aggregate with provenance and stdout/stderr remain private/phase-b/l0-resolution/; public output contains group summaries only.
 - No push authorized. B remains in development; final holdout still unused; C not started.
+- Three private main-line prototypes implemented; initial synthetic run retained one decision failure. Narrow prototype fix and four probe type errors corrected; all39 bwrap probes then pass. This is development, not a balance sample or a claim of strong ladder bots.
+- Add explicit-pair batch API to avoid replaying zoo-only baselines; immutable request.pairs and ordinary behavior preserved. Four new tests pass at hashseed0/1; complete257 tests pass at hashseed0, zero failures/errors/skips. Game engine/SDK unchanged.
+- Save finite development plan for1728 calibration games involving the prototypes only (including their self-play), before any balance execution. New runtime lock to be frozen once and reused. No grading/holdout games.

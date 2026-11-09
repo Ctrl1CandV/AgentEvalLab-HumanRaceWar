@@ -41,9 +41,23 @@ def map_files(paths):
     return result
 
 
+def selected_pairings(count, pairings):
+    """Explicit unordered pair plan, without silently duplicating any games."""
+    if not isinstance(pairings, (list, tuple)) or not pairings:
+        raise ValueError('nonempty explicit pairings required')
+    result = []
+    for pair in pairings:
+        if (not isinstance(pair, (list, tuple)) or len(pair) != 2
+                or any(type(i) is not int or not 0 <= i < count for i in pair)):
+            raise ValueError('invalid explicit pairing')
+        result.append(tuple(sorted(pair)))
+    if len(set(result)) != len(result): raise ValueError('duplicate explicit pairing')
+    return sorted(result)
+
+
 def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self=(), seeds=(17,29),
                    reference=None, sandbox='bwrap', resume=False, max_tasks=None, ruleset=None,
-                   freeze_timing=False, fixed_timing=None):
+                   freeze_timing=False, fixed_timing=None, pairings=None):
     if sandbox not in ('bwrap','plain'): raise ValueError('unknown backend')
     if freeze_timing and fixed_timing is not None: raise ValueError('choose a new timing freeze OR an existing lock')
     turns = Rules.from_dict(ruleset or {})['TURNS']
@@ -69,9 +83,15 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
     names=[name if counts[name]==1 else f'{name}#{i}' for i,name in enumerate(names)]
     if not set(include_self)<=set(names): raise ValueError('unknown self-play bot')
     if include_self and seeds[0]==seeds[1]: raise ValueError('self-play requires different seeds')
-    pairs=list(combinations(range(len(sources)),2))
-    if focus is not None: pairs=[p for p in pairs if focus in p]
-    pairs += [(i,i) for i,name in enumerate(names) if name in include_self]
+    if pairings is not None:
+        if focus is not None or include_self: raise ValueError('explicit pairings cannot mix with focus/include_self')
+        pairs = selected_pairings(len(sources), pairings)
+        if seeds[0] == seeds[1] and any(a == b for a,b in pairs):
+            raise ValueError('self-play requires different seeds')
+    else:
+        pairs=list(combinations(range(len(sources)),2))
+        if focus is not None: pairs=[p for p in pairs if focus in p]
+        pairs += [(i,i) for i,name in enumerate(names) if name in include_self]
     if not pairs: raise ValueError('no bot pairings')
     out.mkdir(parents=True,exist_ok=True)
     with (out/'controller.lock').open('a+b') as controller:

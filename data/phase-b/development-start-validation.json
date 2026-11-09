@@ -1,0 +1,39 @@
+{
+  "balanceGamesAtCheckpoint": 0,
+  "fullPhaseCpuHours": null,
+  "gameEngineAndSDKChanged": false,
+  "publicPythonLspDiagnostics": 0,
+  "publicTests": {
+    "full-257": {
+      "errors": 0,
+      "failures": 0,
+      "passed": true,
+      "sha256": "d509fcf924210b81f142b11fbf0d0c2e346ae03e0afc812706668ddf1aa59642",
+      "testsRun": 257
+    },
+    "pairings-tests": {
+      "errors": 0,
+      "failures": 0,
+      "passed": true,
+      "sha256": "8ca2a64da4a63ade11d02a2398de9da4ff4a92a4b3103365b71f95f97d6cf08a",
+      "testsRun": 4
+    },
+    "pairings-tests-hashseed1": {
+      "errors": 0,
+      "failures": 0,
+      "passed": true,
+      "sha256": "1cb9462cedd9899d589f0f125e21877b4141890a8f2a3f2efd3910bad9171ec9",
+      "testsRun": 4
+    }
+  },
+  "schemaVersion": 1,
+  "scope": "B development-start tooling and synthetic probes, not ladder acceptance",
+  "syntheticProbes": {
+    "afterFixPassed": 39,
+    "currentProbeTypeDiagnostics": 0,
+    "initialFailureCount": 1,
+    "initialProbeTypeDiagnostics": 4,
+    "recordedBotCpuNs": 514542800,
+    "scope": "all recorded init/turn replies in the initial failed and final synthetic probes; compilation and full tree CPU excluded"
+  }
+}
