@@ -1,5 +1,7 @@
 # 审查报告
 
+- [`phase-B-mid-review-request.md`](phase-B-mid-review-request.md)：用户2026-11-09要求的中期审查入口、重点和远端验证边界；不是B阶段验收。
+
 - [`phase-A.md`](phase-A.md)：A阶段交付及逐项检查结果；已获2026-11-08审查通过。
 - [`phase-B-mainlines-dev04.md`](phase-B-mainlines-dev04.md)：144局被动诊断、105项最终合成检查和新1872局；反例修复未转化为强度提升，不采纳，仍保留dev02。
 - [`phase-B-mainlines-dev03.md`](phase-B-mainlines-dev03.md)：算法候选1872局及96项合成检查；结束方式改善但强度未提高，不采纳，保留dev02继续开发。
