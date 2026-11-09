@@ -1,0 +1,80 @@
+{
+  "cpuBoundary": "test process and reaped children are separate diagnostics, not complete phase totals",
+  "fullCpuHours": null,
+  "lsp": {
+    "diagnostics": 0,
+    "files": 4
+  },
+  "schemaVersion": 1,
+  "scope": "N1/N2/N3 tooling; synthetic tests are not new balance games",
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "n1-tests",
+      "measuredReapedChildrenCpuSeconds": 0.0,
+      "measuredTestProcessCpuSeconds": 0.0124771,
+      "measuredTestWallSeconds": 0.0148312,
+      "passed": true,
+      "pattern": "test_review_holdout.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 5
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "n2-tests",
+      "measuredReapedChildrenCpuSeconds": 0.006877,
+      "measuredTestProcessCpuSeconds": 0.0114283,
+      "measuredTestWallSeconds": 3.613059364,
+      "passed": true,
+      "pattern": "test_review_maze.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 4
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "post-analysis-full",
+      "measuredReapedChildrenCpuSeconds": 4.15183,
+      "measuredTestProcessCpuSeconds": 34.5707494,
+      "measuredTestWallSeconds": 99.338241506,
+      "passed": true,
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 237
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "analysis-hashseed1",
+      "measuredReapedChildrenCpuSeconds": 0.084854,
+      "measuredTestProcessCpuSeconds": 0.7312492,
+      "measuredTestWallSeconds": 6.804004684,
+      "passed": true,
+      "pattern": "test_review_*.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 27
+    }
+  ]
+}

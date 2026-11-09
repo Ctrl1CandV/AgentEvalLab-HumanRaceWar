@@ -1,0 +1,621 @@
+{
+  "definitions": {
+    "baseTargetTurnFraction": "at least one soldier attacking enemy base or invoking movement with final strategic goal=enemy base; excludes rally/guards and local target diversions",
+    "enemyTowersDestroyed": "enemy-owned tower DEATH events across whole transcript; post80 count also reported",
+    "limits": "stdout exactly matches each archived reply and engine hashes; intent measures chosen goals, not successful movement; two seats are not independent maps",
+    "post80": "turns 81 through recorded terminal turn, counts before actions",
+    "soldierWeightedFraction": "base-target soldier turns / all live M soldier turns after 80"
+  },
+  "groups": [
+    {
+      "baseHitTurns": {
+        "games": 6,
+        "max": 0,
+        "median": 0.0,
+        "min": 0,
+        "observedGames": 6,
+        "p25": 0,
+        "p75": 0
+      },
+      "baseTargetSoldierFractionAfter80": {
+        "games": 6,
+        "max": 0.7216551221290558,
+        "median": 0.6730919510289137,
+        "min": 0.6640539555231498,
+        "observedGames": 6,
+        "p25": 0.6640539555231498,
+        "p75": 0.7216551221290558
+      },
+      "baseTargetTurnFractionAfter80": {
+        "games": 6,
+        "max": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "observedGames": 6,
+        "p25": 1.0,
+        "p75": 1.0
+      },
+      "destroyedAtLeastOneTowerGames": 4,
+      "enemyTowersDestroyed": {
+        "games": 6,
+        "max": 1,
+        "median": 1.0,
+        "min": 0,
+        "observedGames": 6,
+        "p25": 0,
+        "p75": 1
+      },
+      "enemyTowersDestroyedAfter80": {
+        "games": 6,
+        "max": 1,
+        "median": 1.0,
+        "min": 0,
+        "observedGames": 6,
+        "p25": 0,
+        "p75": 1
+      },
+      "games": 6,
+      "mapSet": "calibration",
+      "outcome": "L",
+      "peakTowers": [
+        {
+          "games": 6,
+          "max": 4,
+          "median": 4.0,
+          "min": 4,
+          "observedGames": 6,
+          "p25": 4,
+          "p75": 4
+        },
+        {
+          "games": 6,
+          "max": 6,
+          "median": 5.0,
+          "min": 5,
+          "observedGames": 6,
+          "p25": 5,
+          "p75": 6
+        }
+      ],
+      "towerDeficitFractionAfter80": {
+        "games": 6,
+        "max": 1.0,
+        "median": 1.0,
+        "min": 0.09545454545454546,
+        "observedGames": 6,
+        "p25": 0.09545454545454546,
+        "p75": 1.0
+      },
+      "towerDeficitOverHalfOfPost80Games": 4,
+      "towerTargetTurnFractionAfter80": {
+        "games": 6,
+        "max": 0.045454545454545456,
+        "median": 0.04090909090909091,
+        "min": 0.0,
+        "observedGames": 6,
+        "p25": 0.0,
+        "p75": 0.045454545454545456
+      },
+      "turns": {
+        "games": 6,
+        "max": 300,
+        "median": 300.0,
+        "min": 300,
+        "observedGames": 6,
+        "p25": 300,
+        "p75": 300
+      }
+    },
+    {
+      "baseHitTurns": {
+        "games": 6,
+        "max": 15,
+        "median": 15.0,
+        "min": 0,
+        "observedGames": 6,
+        "p25": 0,
+        "p75": 15
+      },
+      "baseTargetSoldierFractionAfter80": {
+        "games": 6,
+        "max": 0.8273809523809523,
+        "median": 0.7208538587848933,
+        "min": 0.522602989427634,
+        "observedGames": 6,
+        "p25": 0.522602989427634,
+        "p75": 0.8273809523809523
+      },
+      "baseTargetTurnFractionAfter80": {
+        "games": 6,
+        "max": 1.0,
+        "median": 0.6454545454545455,
+        "min": 0.6045454545454545,
+        "observedGames": 6,
+        "p25": 0.6045454545454545,
+        "p75": 1.0
+      },
+      "destroyedAtLeastOneTowerGames": 6,
+      "enemyTowersDestroyed": {
+        "games": 6,
+        "max": 4,
+        "median": 2.0,
+        "min": 1,
+        "observedGames": 6,
+        "p25": 1,
+        "p75": 4
+      },
+      "enemyTowersDestroyedAfter80": {
+        "games": 6,
+        "max": 4,
+        "median": 2.0,
+        "min": 1,
+        "observedGames": 6,
+        "p25": 1,
+        "p75": 4
+      },
+      "games": 6,
+      "mapSet": "calibration",
+      "outcome": "W",
+      "peakTowers": [
+        {
+          "games": 6,
+          "max": 4,
+          "median": 4.0,
+          "min": 3,
+          "observedGames": 6,
+          "p25": 3,
+          "p75": 4
+        },
+        {
+          "games": 6,
+          "max": 5,
+          "median": 5.0,
+          "min": 4,
+          "observedGames": 6,
+          "p25": 4,
+          "p75": 5
+        }
+      ],
+      "towerDeficitFractionAfter80": {
+        "games": 6,
+        "max": 1.0,
+        "median": 0.1318181818181818,
+        "min": 0.0,
+        "observedGames": 6,
+        "p25": 0.0,
+        "p75": 1.0
+      },
+      "towerDeficitOverHalfOfPost80Games": 2,
+      "towerTargetTurnFractionAfter80": {
+        "games": 6,
+        "max": 0.4636363636363636,
+        "median": 0.35454545454545455,
+        "min": 0.07575757575757576,
+        "observedGames": 6,
+        "p25": 0.07575757575757576,
+        "p75": 0.4636363636363636
+      },
+      "turns": {
+        "games": 6,
+        "max": 300,
+        "median": 300.0,
+        "min": 278,
+        "observedGames": 6,
+        "p25": 278,
+        "p75": 300
+      }
+    },
+    {
+      "baseHitTurns": {
+        "games": 12,
+        "max": 15,
+        "median": 0.0,
+        "min": 0,
+        "observedGames": 12,
+        "p25": 0,
+        "p75": 15
+      },
+      "baseTargetSoldierFractionAfter80": {
+        "games": 12,
+        "max": 0.8273809523809523,
+        "median": 0.6969729049069036,
+        "min": 0.522602989427634,
+        "observedGames": 12,
+        "p25": 0.6640539555231498,
+        "p75": 0.7216551221290558
+      },
+      "baseTargetTurnFractionAfter80": {
+        "games": 12,
+        "max": 1.0,
+        "median": 1.0,
+        "min": 0.6045454545454545,
+        "observedGames": 12,
+        "p25": 0.6454545454545455,
+        "p75": 1.0
+      },
+      "destroyedAtLeastOneTowerGames": 10,
+      "enemyTowersDestroyed": {
+        "games": 12,
+        "max": 4,
+        "median": 1.0,
+        "min": 0,
+        "observedGames": 12,
+        "p25": 1,
+        "p75": 2
+      },
+      "enemyTowersDestroyedAfter80": {
+        "games": 12,
+        "max": 4,
+        "median": 1.0,
+        "min": 0,
+        "observedGames": 12,
+        "p25": 1,
+        "p75": 2
+      },
+      "games": 12,
+      "mapSet": "calibration",
+      "outcome": "all",
+      "peakTowers": [
+        {
+          "games": 12,
+          "max": 4,
+          "median": 4.0,
+          "min": 3,
+          "observedGames": 12,
+          "p25": 4,
+          "p75": 4
+        },
+        {
+          "games": 12,
+          "max": 6,
+          "median": 5.0,
+          "min": 4,
+          "observedGames": 12,
+          "p25": 5,
+          "p75": 5
+        }
+      ],
+      "towerDeficitFractionAfter80": {
+        "games": 12,
+        "max": 1.0,
+        "median": 0.5659090909090909,
+        "min": 0.0,
+        "observedGames": 12,
+        "p25": 0.09545454545454546,
+        "p75": 1.0
+      },
+      "towerDeficitOverHalfOfPost80Games": 6,
+      "towerTargetTurnFractionAfter80": {
+        "games": 12,
+        "max": 0.4636363636363636,
+        "median": 0.06060606060606061,
+        "min": 0.0,
+        "observedGames": 12,
+        "p25": 0.04090909090909091,
+        "p75": 0.35454545454545455
+      },
+      "turns": {
+        "games": 12,
+        "max": 300,
+        "median": 300.0,
+        "min": 278,
+        "observedGames": 12,
+        "p25": 300,
+        "p75": 300
+      }
+    },
+    {
+      "baseHitTurns": {
+        "games": 8,
+        "max": 9,
+        "median": 0.0,
+        "min": 0,
+        "observedGames": 8,
+        "p25": 0,
+        "p75": 0
+      },
+      "baseTargetSoldierFractionAfter80": {
+        "games": 8,
+        "max": 0.9400037264766163,
+        "median": 0.6489245351804593,
+        "min": 0.13415967918337587,
+        "observedGames": 8,
+        "p25": 0.13415967918337587,
+        "p75": 0.6726212176449143
+      },
+      "baseTargetTurnFractionAfter80": {
+        "games": 8,
+        "max": 1.0,
+        "median": 0.8886363636363637,
+        "min": 0.2863636363636364,
+        "observedGames": 8,
+        "p25": 0.2863636363636364,
+        "p75": 1.0
+      },
+      "destroyedAtLeastOneTowerGames": 4,
+      "enemyTowersDestroyed": {
+        "games": 8,
+        "max": 3,
+        "median": 0.5,
+        "min": 0,
+        "observedGames": 8,
+        "p25": 0,
+        "p75": 1
+      },
+      "enemyTowersDestroyedAfter80": {
+        "games": 8,
+        "max": 3,
+        "median": 0.5,
+        "min": 0,
+        "observedGames": 8,
+        "p25": 0,
+        "p75": 1
+      },
+      "games": 8,
+      "mapSet": "public",
+      "outcome": "L",
+      "peakTowers": [
+        {
+          "games": 8,
+          "max": 4,
+          "median": 4.0,
+          "min": 4,
+          "observedGames": 8,
+          "p25": 4,
+          "p75": 4
+        },
+        {
+          "games": 8,
+          "max": 5,
+          "median": 5.0,
+          "min": 5,
+          "observedGames": 8,
+          "p25": 5,
+          "p75": 5
+        }
+      ],
+      "towerDeficitFractionAfter80": {
+        "games": 8,
+        "max": 1.0,
+        "median": 0.5318181818181817,
+        "min": 0.17272727272727273,
+        "observedGames": 8,
+        "p25": 0.17272727272727273,
+        "p75": 0.7772727272727272
+      },
+      "towerDeficitOverHalfOfPost80Games": 4,
+      "towerTargetTurnFractionAfter80": {
+        "games": 8,
+        "max": 0.7818181818181819,
+        "median": 0.17727272727272725,
+        "min": 0.0,
+        "observedGames": 8,
+        "p25": 0.0,
+        "p75": 0.22272727272727272
+      },
+      "turns": {
+        "games": 8,
+        "max": 300,
+        "median": 300.0,
+        "min": 300,
+        "observedGames": 8,
+        "p25": 300,
+        "p75": 300
+      }
+    },
+    {
+      "baseHitTurns": {
+        "games": 12,
+        "max": 13,
+        "median": 0.0,
+        "min": 0,
+        "observedGames": 12,
+        "p25": 0,
+        "p75": 0
+      },
+      "baseTargetSoldierFractionAfter80": {
+        "games": 12,
+        "max": 0.8356132622304661,
+        "median": 0.6329748450601531,
+        "min": 0.541924899744805,
+        "observedGames": 12,
+        "p25": 0.5710900473933649,
+        "p75": 0.6549503128450497
+      },
+      "baseTargetTurnFractionAfter80": {
+        "games": 12,
+        "max": 1.0,
+        "median": 0.915909090909091,
+        "min": 0.6909090909090909,
+        "observedGames": 12,
+        "p25": 0.7318181818181818,
+        "p75": 0.9818181818181818
+      },
+      "destroyedAtLeastOneTowerGames": 12,
+      "enemyTowersDestroyed": {
+        "games": 12,
+        "max": 9,
+        "median": 4.0,
+        "min": 3,
+        "observedGames": 12,
+        "p25": 3,
+        "p75": 5
+      },
+      "enemyTowersDestroyedAfter80": {
+        "games": 12,
+        "max": 7,
+        "median": 4.0,
+        "min": 3,
+        "observedGames": 12,
+        "p25": 3,
+        "p75": 5
+      },
+      "games": 12,
+      "mapSet": "public",
+      "outcome": "W",
+      "peakTowers": [
+        {
+          "games": 12,
+          "max": 4,
+          "median": 4.0,
+          "min": 2,
+          "observedGames": 12,
+          "p25": 4,
+          "p75": 4
+        },
+        {
+          "games": 12,
+          "max": 7,
+          "median": 5.0,
+          "min": 4,
+          "observedGames": 12,
+          "p25": 5,
+          "p75": 6
+        }
+      ],
+      "towerDeficitFractionAfter80": {
+        "games": 12,
+        "max": 1.0,
+        "median": 0.21136363636363636,
+        "min": 0.0,
+        "observedGames": 12,
+        "p25": 0.15454545454545454,
+        "p75": 0.32272727272727275
+      },
+      "towerDeficitOverHalfOfPost80Games": 2,
+      "towerTargetTurnFractionAfter80": {
+        "games": 12,
+        "max": 0.4636363636363636,
+        "median": 0.29772727272727273,
+        "min": 0.11374407582938388,
+        "observedGames": 12,
+        "p25": 0.1409090909090909,
+        "p75": 0.36363636363636365
+      },
+      "turns": {
+        "games": 12,
+        "max": 300,
+        "median": 300.0,
+        "min": 291,
+        "observedGames": 12,
+        "p25": 300,
+        "p75": 300
+      }
+    },
+    {
+      "baseHitTurns": {
+        "games": 20,
+        "max": 13,
+        "median": 0.0,
+        "min": 0,
+        "observedGames": 20,
+        "p25": 0,
+        "p75": 0
+      },
+      "baseTargetSoldierFractionAfter80": {
+        "games": 20,
+        "max": 0.9400037264766163,
+        "median": 0.6386255924170616,
+        "min": 0.13415967918337587,
+        "observedGames": 20,
+        "p25": 0.5710900473933649,
+        "p75": 0.6726212176449143
+      },
+      "baseTargetTurnFractionAfter80": {
+        "games": 20,
+        "max": 1.0,
+        "median": 0.915909090909091,
+        "min": 0.2863636363636364,
+        "observedGames": 20,
+        "p25": 0.7318181818181818,
+        "p75": 1.0
+      },
+      "destroyedAtLeastOneTowerGames": 16,
+      "enemyTowersDestroyed": {
+        "games": 20,
+        "max": 9,
+        "median": 3.0,
+        "min": 0,
+        "observedGames": 20,
+        "p25": 1,
+        "p75": 4
+      },
+      "enemyTowersDestroyedAfter80": {
+        "games": 20,
+        "max": 7,
+        "median": 3.0,
+        "min": 0,
+        "observedGames": 20,
+        "p25": 1,
+        "p75": 4
+      },
+      "games": 20,
+      "mapSet": "public",
+      "outcome": "all",
+      "peakTowers": [
+        {
+          "games": 20,
+          "max": 4,
+          "median": 4.0,
+          "min": 2,
+          "observedGames": 20,
+          "p25": 4,
+          "p75": 4
+        },
+        {
+          "games": 20,
+          "max": 7,
+          "median": 5.0,
+          "min": 4,
+          "observedGames": 20,
+          "p25": 5,
+          "p75": 5
+        }
+      ],
+      "towerDeficitFractionAfter80": {
+        "games": 20,
+        "max": 1.0,
+        "median": 0.2681818181818182,
+        "min": 0.0,
+        "observedGames": 20,
+        "p25": 0.17272727272727273,
+        "p75": 0.7772727272727272
+      },
+      "towerDeficitOverHalfOfPost80Games": 6,
+      "towerTargetTurnFractionAfter80": {
+        "games": 20,
+        "max": 0.7818181818181819,
+        "median": 0.2545454545454545,
+        "min": 0.0,
+        "observedGames": 20,
+        "p25": 0.1318181818181818,
+        "p75": 0.36363636363636365
+      },
+      "turns": {
+        "games": 20,
+        "max": 300,
+        "median": 300.0,
+        "min": 291,
+        "observedGames": 20,
+        "p25": 300,
+        "p75": 300
+      }
+    }
+  ],
+  "publication": "aggregate-only diagnostic evidence",
+  "schemaVersion": 1,
+  "scope": "N2 baseline-only passive replay probes; no newly played games or candidate bot",
+  "usage": {
+    "compilationCpuHours": null,
+    "diagnosticBotCpuNs": 3271505100,
+    "fullCpuHours": null,
+    "processCpuNs": 6184466400,
+    "scope": "passive diagnostic only, not new games; host excludes children"
+  },
+  "validation": {
+    "allStdoutAndStateHashesMatch": true,
+    "frozenMChanged": false,
+    "matchedStdoutTurns": 9538,
+    "transcripts": 32
+  }
+}

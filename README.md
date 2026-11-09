@@ -6,7 +6,7 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 **A阶段已通过审查，用户已授权进入B。** 依据见 [inbox/2026-11-08-phase-a-accepted.md](inbox/2026-11-08-phase-a-accepted.md)。standard-1和动物园v15按交审配置冻结；A最终40图3680局条件通过，两个哈希种子全套各198项通过，完整报告见 [reports/phase-A.md](reports/phase-A.md)。
 
-**B前置留出及随后获准的D22试验均未通过，现已停止。** 原2208局留出失败后，用户批准仅战士伤害20→22的一轮试验；public+calibration新增5888局全部完成/回放通过，但原失败未修复，公开集还新增退化。候选不采纳，standard-1/v15及地图不变。详见 [reports/phase-B-damage22.md](reports/phase-B-damage22.md)、[首次留出报告](reports/phase-B-holdout.md) 和 [STATUS.md](STATUS.md)。等待审查及下一步授权，没有重抽图或建阶梯，B未完成、C未启动。原启动快照见 [docs/PHASE_B_HANDOFF.md](docs/PHASE_B_HANDOFF.md)。
+**B正在按第二份审查继续。** 原2208局留出和获准的D22试验按旧标准失败，D22仍拒绝，不再调游戏参数。R1已固定配对/校准预算；N1确认全部失败项仅差1图，用户批准的新留出标准生效，v15前置复核通过。N2有反例，不改M、不运行v16；N3显示经济/骚扰按类型互相克制。下一步先生成并检查全新holdout，B末前不打对局。详见 [分析报告](reports/phase-B-review-analysis.md)、[D22失败报告](reports/phase-B-damage22.md) 和 [STATUS.md](STATUS.md)。当前没有阶梯，B未完成、C未启动。原启动快照见 [docs/PHASE_B_HANDOFF.md](docs/PHASE_B_HANDOFF.md)。
 
 ## 目录和上传范围
 

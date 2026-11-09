@@ -1,0 +1,152 @@
+{
+  "datasets": [
+    {
+      "counts": [
+        {
+          "mapType": "all",
+          "maps": 40,
+          "margin": {
+            "games": 80,
+            "maps": 40,
+            "minimumMapsToFail": 0,
+            "minimumMapsToPass": 3,
+            "passed": false,
+            "threshold": {
+              "comparison": "<",
+              "denominator": 2,
+              "numerator": 1
+            },
+            "wins": 44
+          },
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 18,
+          "twoWins": 22
+        },
+        {
+          "mapType": "corridor",
+          "maps": 10,
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 2,
+          "twoWins": 8
+        },
+        {
+          "mapType": "island",
+          "maps": 10,
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 3,
+          "twoWins": 7
+        },
+        {
+          "mapType": "maze",
+          "maps": 10,
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 9,
+          "twoWins": 1
+        },
+        {
+          "mapType": "open",
+          "maps": 10,
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 4,
+          "twoWins": 6
+        }
+      ],
+      "mapSet": "public"
+    },
+    {
+      "counts": [
+        {
+          "mapType": "all",
+          "maps": 24,
+          "margin": {
+            "games": 48,
+            "maps": 24,
+            "minimumMapsToFail": 0,
+            "minimumMapsToPass": 1,
+            "passed": false,
+            "threshold": {
+              "comparison": "<",
+              "denominator": 2,
+              "numerator": 1
+            },
+            "wins": 24
+          },
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 12,
+          "twoWins": 12
+        },
+        {
+          "mapType": "corridor",
+          "maps": 6,
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 0,
+          "twoWins": 6
+        },
+        {
+          "mapType": "island",
+          "maps": 6,
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 5,
+          "twoWins": 1
+        },
+        {
+          "mapType": "maze",
+          "maps": 6,
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 5,
+          "twoWins": 1
+        },
+        {
+          "mapType": "open",
+          "maps": 6,
+          "oneLossOneDraw": 0,
+          "oneWinOneDraw": 0,
+          "size": "all",
+          "splitWins": 0,
+          "twoDraws": 0,
+          "twoLosses": 2,
+          "twoWins": 4
+        }
+      ],
+      "mapSet": "calibration"
+    }
+  ],
+  "schemaVersion": 1,
+  "scope": "N3 baseline v15 only; focus=Z-eco vs Z-harass; all maps retained"
+}
