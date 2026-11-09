@@ -1,10 +1,10 @@
 # 状态
 
-更新：2026-11-09。**用户已澄清L0为异质基础组；128局终局核查支持其解释，保留原版Z-random/Z-miner，不强求内部等强，B-L0-001关闭，继续B阶段主线bot开发。第二份B审查的R1/R2及N1/N2/N3已完成。N1全部失败项仅差1图，新留出判定生效，v15前置复核按新标准通过；N2有反例，不改M、不运行v16。全新holdout 24图已冻结、布局及独立复核通过，未打对局。原L0预检查与停点报告保留为历史，不再作为阻塞。D22仍拒绝，没有完整阶梯，B未完成，C未启动。**
+更新：2026-11-09。**用户已澄清L0为异质基础组；128局终局核查支持其解释，保留原版Z-random/Z-miner，不强求内部等强，B-L0-001关闭。已继续B并完成三条私有主线原型的首批1728局开发矩阵及全部回放验证；原型尚需增强，未做正式全阶梯验收。第二份B审查的R1/R2及N1/N2/N3已完成。N1全部失败项仅差1图，新留出判定生效，v15前置复核按新标准通过；N2有反例，不改M、不运行v16。全新holdout 24图已冻结、布局及独立复核通过，未打对局。原L0预检查与停点报告保留为历史，不再作为阻塞。D22仍拒绝，没有完整阶梯，B未完成，C未启动。**
 
-最新决定：[`docs/PHASE_B_L0_DECISION.md`](docs/PHASE_B_L0_DECISION.md)；历史停点：[`reports/phase-B-ladder-preflight.md`](reports/phase-B-ladder-preflight.md)；N1/N2/N3：[`reports/phase-B-review-analysis.md`](reports/phase-B-review-analysis.md)；D22报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。D22的一轮授权已用完，standard-1仍为伤害20。后续权限以新审查第六节及用户明确授权为准：N1过关才启用新标准；N2成立才可选另存v16小修M；前置/新holdout布局检查满足后可继续B，不自动改游戏参数或提前使用holdout。
+最新开发记录：[`reports/phase-B-mainlines-dev01.md`](reports/phase-B-mainlines-dev01.md)；L0决定：[`docs/PHASE_B_L0_DECISION.md`](docs/PHASE_B_L0_DECISION.md)；历史停点：[`reports/phase-B-ladder-preflight.md`](reports/phase-B-ladder-preflight.md)；N1/N2/N3：[`reports/phase-B-review-analysis.md`](reports/phase-B-review-analysis.md)；D22报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。D22的一轮授权已用完，standard-1仍为伤害20。后续权限以新审查第六节及用户明确授权为准：N1过关才启用新标准；N2成立才可选另存v16小修M；前置/新holdout布局检查满足后可继续B，不自动改游戏参数或提前使用holdout。
 
-- A已获审查通过：[`inbox/2026-11-08-phase-a-accepted.md`](inbox/2026-11-08-phase-a-accepted.md)。standard-1、游戏引擎/SDK和动物园v15未改；本轮只按R1修改运行器的预算复用，框架指纹会变化，不能再宣称整个arena字节未变。
+- A已获审查通过：[`inbox/2026-11-08-phase-a-accepted.md`](inbox/2026-11-08-phase-a-accepted.md)。standard-1、游戏引擎/SDK和动物园v15未改；运行器先按R1修改预算复用，本次又新增显式配对接口，框架指纹会变化，不能再宣称整个arena字节未变。
 - 首次留出报告：[`reports/phase-B-holdout.md`](reports/phase-B-holdout.md)；原始结论和数据保留。D22数据在[`data/phase-b/damage22/`](data/phase-b/damage22/)。两份都是失败停点报告，不是B完成报告。
 - 工作目录仍为WSL `~/projects/AgentEvalLab-HumanRaceWar`，hooks为`.githooks`；不改写历史。此前留出/D22的7个提交已按用户授权推送至`42f6294`，本机当前又有审查提交`13360d7`；本次修改只做小步本地提交。
 
@@ -24,17 +24,19 @@
 | 必须项 新holdout与后续B | `tools/prepare_final_holdout.py`分plan/build；从干净`6da1630`先登记新种子，再生成24图；原48张隐藏图和catalog不变 | 五集合116图互异，独立检查1392条家门矿/1160个塔基，新24图再生一致；`data/phase-b/final-holdout-maps.json`只含汇总，holdout对局0 | 布局前置已完成，L0阻塞已解除，继续阶梯开发；未做最终复核，C未授权 |
 | 新问题 B-L0-001（BRIEF 3.3） | L0指定Z-random/Z-miner与同级≤80 Elo的目标存在明显不一致；`tools/check_ladder_anchors.py`只读已有资料 | 两套基线Z-miner均胜87.5%；两bot BT差338.04 Elo；不是全阶梯联合拟合或正式校准失败。证据`data/phase-b/ladder-anchor-preflight.json` | 用户2026-11-09决定L0不强求内部等强；128局终局验证完成，保留原版两bot，问题关闭；不豁免L1+或其他指标 |
 
-新增分析验证：完整237项在hashseed=0通过，零失败/错误/跳过；包含新增9项的27项`test_review_*.py`在hashseed=1通过，4文件LSP零诊断。见`data/phase-b/analysis-validation.json`。原始证据只留private；N1/N3约0.000106宿主CPU小时，N2约0.001718宿主和0.000909诊断bot CPU小时，编译及完整总量未知。没有新平衡对局，也没有重测速度系数。
+新增分析验证：完整237项在hashseed=0通过，零失败/错误/跳过；包含新增9项的27项`test_review_*.py`在hashseed=1通过，4文件LSP零诊断。见`data/phase-b/analysis-validation.json`。原始证据只留private；N1/N3约0.000106宿主CPU小时，N2约0.001718宿主和0.000909诊断bot CPU小时，编译及完整总量未知。该N1/N2/N3分析批没有新平衡对局，也没有重测速度系数。
 
 ## L0裁定与当前工作
 
 **B-L0-001已关闭。** 用户认为L0用于覆盖随机/单一等明显有缺陷的策略，不应用彼此胜率要求等强，允许原版继续。只读核查全部128局：全到300回合、无拆基地；Z-miner赢的112局双方塔分均0，按卸货量判胜；Z-random赢的16局靠正塔分。支持用户的解释，因此不改两bot，DESIGN 11.1/11.5(2)明确仅L0内部差距作为诊断，L1+80 Elo和其余要求保持。原暂停过于机械，旧报告与数据原样保留。工具`tools/analyze_l0_endings.py`、聚合`data/phase-b/l0-resolution.json`；4项专项通过、2文件LSP零诊断，分析进程约0.364 CPU秒，无新对局或测速。
 
-已继续BRIEF 5.1：进攻/经济/控制三条主线原型已写入private并通过39项真实bwrap合成探针；初次1项原型问题及探针类型错误均保留，修正后通过。为避免重跑动物园基线，批运行器新增显式配对接口（不改默认日程、引擎或SDK），4项新测试两种哈希种子通过；完整257项hashseed=0通过。下一步为已保存计划的首批1728局calibration开发对局，只含新主线参与的配对及新主线自对弈，不是正式全阶梯验收。
+已继续BRIEF 5.1：进攻/经济/控制三条主线原型已写入private并通过39项真实bwrap合成探针；初次1项原型问题及探针类型错误均保留，修正后通过。为避免重跑动物园基线，批运行器新增显式配对接口（不改默认日程、引擎或SDK），4项新测试两种哈希种子通过；完整257项hashseed=0通过。从干净`0ecbcc8`先保存计划，再完成1728局calibration开发对局；只含新主线参与的配对及新主线自对弈，不重跑动物园内部基线。零框架/配置错误、bot故障和协议警告；1728份回放、330格独立计数和1728头实际身份/限额普查全部通过。补充校验器曾混比源码摘要与源码+SDK身份，失败原件保留，修正校验器后通过，未改游戏或重跑。
 
-隐藏实现、测试原件和相关批次仅写private；固定运行预算，不使用grading或新holdout。当前无新的待裁定事项；原型尚未证明为强bot，未分配正式层级或Elo，正式校准和两项独立会话自测尚未完成。
+本批原型对M的得分率点估计范围43.75%–77.08%；144局自对弈拆基地20局（13.89%）、回合上限124局（86.11%），尚未达到后续强bot复核的结束分布目标。原型不直接冻结为强阶梯或标成正式验收通过。当前无新的待裁定事项；接下来仍按既有授权继续BRIEF5.1主线增强，下一版先记有限计划，不放宽门槛。完整阶梯、联合BT、独立会话测试及防“一招鲜”尚未完成。
 
-最终验证：完整249项（hashseed=0）通过，零失败/错误/跳过；地图8项及锚点4项另在hashseed=1通过，8个分析/地图/锚点Python文件LSP零诊断。`data/phase-b/preflight-validation.json`保留测试及计量汇总。地图生成/复核/再生约0.000947 CPU小时，锚点只读分析约0.000108小时；登记和完整阶段总量未知。新登记后138,043个私有文件摘要全过；原始文件与失败证据全部保留，只本地提交、未推送。
+固定预算已封存于`private/phase-b/ladder-dev01/batch/timing-lock.json`：系数0.5998025747312362，TURN/INIT/BANK为60/1200/1800ms，墙钟余量300ms、CPU硬上限24秒。后续配对/校准必须复用此锁，不能再测速。bot/match/回放校验CPU小时分别0.097774/0.132461/0.047734，编译及完整总量未知；分析和补充验证单列。隐藏实现和原始输出仅在private，grading与新holdout对局仍为0；本批全部结束，无运行中任务。证据`data/phase-b/mainlines-dev01.json`，本机原件`private/phase-b/ladder-dev01/`和`private/ladder-notes.md`。本轮收束192,120个私有文件摘要全过；公开341项清单及发布检查通过，只本地提交、未推送。
+
+2026-11-08检查点：完整249项（hashseed=0）通过，零失败/错误/跳过；地图8项及锚点4项另在hashseed=1通过，8个分析/地图/锚点Python文件LSP零诊断。`data/phase-b/preflight-validation.json`保留测试及计量汇总。地图生成/复核/再生约0.000947 CPU小时，锚点只读分析约0.000108小时；登记和完整阶段总量未知。新登记后138,043个私有文件摘要全过；原始文件与失败证据全部保留，只本地提交、未推送。
 
 ## 首份2026-11-08审查逐条回复（历史）
 
@@ -86,4 +88,4 @@
 - 历史bot/宿主CPU约2.561/3.579小时，回放复核另约1.311小时；完整历史总量未知，不与本轮混算。
 - 原始运行在`runs/development/`，整理前555份原件在`runs/local-evidence/509f1f8-before-summary-only/`，没有删除或重新加入Git。
 
-新会话先读本文件、`reports/phase-B-damage22.md`、首次留出报告及inbox，不把`docs/PHASE_B_HANDOFF.md`的原始启动快照当作“尚未运行”。目录与发布范围见`docs/REPOSITORY.md`；旧历史仍有A阶段曾公开的明细，不声称已清除，更不以此作为上传B隐藏内容的许可。
+新会话先读本文件、`reports/phase-B-mainlines-dev01.md`、`docs/PHASE_B_L0_DECISION.md`及inbox，再按需查历史失败报告，不把`docs/PHASE_B_HANDOFF.md`的原始启动快照当作“尚未运行”。目录与发布范围见`docs/REPOSITORY.md`；旧历史仍有A阶段曾公开的明细，不声称已清除，更不以此作为上传B隐藏内容的许可。

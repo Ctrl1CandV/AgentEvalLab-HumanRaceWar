@@ -1,0 +1,244 @@
+{
+  "datasets": [
+    {
+      "mapSet": "public",
+      "matrix": [
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 80,
+          "losses": 80,
+          "opponent": "M-balanced",
+          "wins": 0
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 80,
+          "losses": 74,
+          "opponent": "Z-eco",
+          "wins": 6
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 80,
+          "losses": 80,
+          "opponent": "Z-harass",
+          "wins": 0
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 80,
+          "losses": 80,
+          "opponent": "Z-rush",
+          "wins": 0
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 80,
+          "losses": 80,
+          "opponent": "Z-towers",
+          "wins": 0
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 80,
+          "losses": 0,
+          "opponent": "Z-turtle",
+          "wins": 80
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 80,
+          "losses": 76,
+          "opponent": "Z-wrush",
+          "wins": 4
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 80,
+          "losses": 80,
+          "opponent": "M-balanced",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 80,
+          "losses": 78,
+          "opponent": "Z-eco",
+          "wins": 2
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 80,
+          "losses": 80,
+          "opponent": "Z-harass",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 80,
+          "losses": 80,
+          "opponent": "Z-rush",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 80,
+          "losses": 80,
+          "opponent": "Z-towers",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 80,
+          "losses": 64,
+          "opponent": "Z-turtle",
+          "wins": 16
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 80,
+          "losses": 74,
+          "opponent": "Z-wrush",
+          "wins": 6
+        }
+      ]
+    },
+    {
+      "mapSet": "calibration",
+      "matrix": [
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "M-balanced",
+          "wins": 0
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 48,
+          "losses": 46,
+          "opponent": "Z-eco",
+          "wins": 2
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "Z-harass",
+          "wins": 0
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "Z-rush",
+          "wins": 0
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "Z-towers",
+          "wins": 0
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 48,
+          "losses": 0,
+          "opponent": "Z-turtle",
+          "wins": 48
+        },
+        {
+          "bot": "Z-miner",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "Z-wrush",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "M-balanced",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "Z-eco",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "Z-harass",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "Z-rush",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 48,
+          "losses": 48,
+          "opponent": "Z-towers",
+          "wins": 0
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 48,
+          "losses": 44,
+          "opponent": "Z-turtle",
+          "wins": 4
+        },
+        {
+          "bot": "Z-random",
+          "draws": 0,
+          "games": 48,
+          "losses": 46,
+          "opponent": "Z-wrush",
+          "wins": 2
+        }
+      ]
+    }
+  ],
+  "inputsSha256": {
+    "data/phase-a/matrices/zoo-standard-1-final.json": "c5685ec4aa1349400a46089fc1ccec6799dc25bdad7fcf7eb6de5b67ae7f494b",
+    "data/phase-b/holdout-matrix.csv": "e33b11fdfb96d15201660956a91a8144c8e59d1d010fc1fb77576120edffea0e"
+  },
+  "processCpuNs": 2336300,
+  "scope": "Supplementary lookup of all seven common non-idle opponents in the already-published v15 aggregate matrices; no new games or equal-strength claim"
+}

@@ -1,0 +1,99 @@
+{
+  "actualSourceSdkBackendHeadersChecked": 1728,
+  "allReplaysVerified": true,
+  "attemptCounts": {
+    "complete": 1728
+  },
+  "authorModel": "gpt-6-astra",
+  "botFaultGames": 0,
+  "developmentSessions": 1,
+  "executionGitHead": "0ecbcc8be440b95598af5ea0279fbc60feb4967c",
+  "finalHoldoutGames": 0,
+  "fixedBudget": {
+    "baseLimits": {
+      "BANK_MS": 3000,
+      "INIT_CPU_MS": 2000,
+      "TURN_CPU_MS": 100
+    },
+    "cpuHardLimitSeconds": 24,
+    "limits": {
+      "BANK_MS": 1800,
+      "INIT_CPU_MS": 1200,
+      "TURN_CPU_MS": 60
+    },
+    "lockSha256": "f22f35a73ac4d9abdac539c11806cfb08e58300617ec106d155742a5f8bdbb6f",
+    "speedFactor": 0.5998025747312362,
+    "turns": 300,
+    "wallMarginMs": 300
+  },
+  "formalLadderFitPerformed": false,
+  "formalLevelsAssigned": false,
+  "games": 1728,
+  "gamesByType": {
+    "corridor": {
+      "games": 432
+    },
+    "island": {
+      "games": 432
+    },
+    "maze": {
+      "games": 432
+    },
+    "open": {
+      "games": 432
+    }
+  },
+  "gradingGames": 0,
+  "independentMatrixCellsChecked": 330,
+  "machine": {
+    "cpu": "Intel Core i5-14600KF",
+    "logicalCpus": 20,
+    "visibleMemoryApproxGiB": 15,
+    "environment": "WSL Ubuntu 22.04",
+    "python": "3.13.15",
+    "jobs": 6
+  },
+  "mapSet": "calibration",
+  "maps": 24,
+  "noZooOnlyBaselinePairs": true,
+  "privateEvidenceSha256": {
+    "analysis": "a306e5b3332dc1db7c9b403ef8ef0b05911ad212448b6afaf04ff399a0b03a2b",
+    "independentCheck": "d14738342e2402c96bc53277a70a88a45310bd40fb2676e8119ce7986a39c6a3",
+    "plan": "f056fa4c6b24942d6a8879567922d2d7442d49bd85e6dc149f6cb90ede389226"
+  },
+  "protocolWarnings": 0,
+  "prototypeCount": 3,
+  "prototypeReferenceScoreRateRange": [
+    0.4375,
+    0.7708333333333334
+  ],
+  "prototypeSelfPlay": {
+    "baseEndingFraction": 0.1388888888888889,
+    "endReasons": {
+      "base_destroyed": 20,
+      "turn_limit_deposit": 10,
+      "turn_limit_score": 114
+    },
+    "games": 144
+  },
+  "readiness": "Prototypes need further development; not every point estimate exceeds M. Self-play ending proportions are not ready for the later stronger-bot acceptance check. No gate is declared passed.",
+  "reference": "M-balanced; range across prototypes, not linked to individual hidden bot identities; descriptive, not a new acceptance gate",
+  "replaysVerified": 1728,
+  "schemaVersion": 1,
+  "scope": "First finite B main-line prototype development batch; NOT a frozen ladder, full-ladder calibration or formal acceptance",
+  "styles": [
+    "attack",
+    "economy",
+    "control"
+  ],
+  "usage": {
+    "additionalValidationProcessCpuNs": 490547700,
+    "analysisProcessCpuNs": 849642900,
+    "botCpuNs": 351985462400,
+    "fullPhaseCpuHours": null,
+    "matchHarnessCpuNs": 476860532600,
+    "replayVerificationCpuNs": 171841275600,
+    "scope": "distinct bot/match-harness/verifier/analysis-process counters; compilation, dispatch, startup and full tree total unknown"
+  },
+  "validationLimits": "Full257 public tests hashseed0; 4 new scheduling tests hashseed1; 39 final private synthetic probes. Initial prototype/probe failures retained. An independent census initially confused raw-source with source+SDK identity; corrected checker passes without changing bots, games or archive."
+}
