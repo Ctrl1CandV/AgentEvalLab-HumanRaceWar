@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "status": "complete",
+  "scope": "Public idle CPU reference, extracted from the existing measurement without remeasurement or per-attempt records",
+  "sourceReportSha256": "9c397ff3b97539d3d7a2b39550ebaea048a056122e7fc896ef70d2efe29247fc",
+  "workloadSha256": "6ad783455d6c625c0675f8b29d8e6af843f463e993ee4490a2b9baee20076348",
+  "singleInstance": {
+    "medianCpuNs": 259181615
+  },
+  "machine": {
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13650HX",
+    "architecture": "x86_64",
+    "memoryBytes": 14455549952
+  }
+}

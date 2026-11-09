@@ -6,7 +6,6 @@ import json
 import math
 import os
 from pathlib import Path
-import platform
 import statistics
 import time
 import traceback
@@ -14,6 +13,7 @@ from uuid import uuid4
 
 from .sandbox import Bubblewrap, InfrastructureError, ROOT, prepare
 from .resources import CpuLease
+from .machine import machine_info
 from .transport import Connection, exchange
 
 SOURCE = ROOT / "arena/bench"
@@ -62,14 +62,10 @@ def _run_benchmark(out, jobs, samples, reference, sweep, pool, sandbox):
                           "reportSha256": sha256(raw_reference).hexdigest(), "machine": r["machine"]}
     directory = out.resolve() / uuid4().hex
     directory.mkdir(parents=True)
-    model = next((line.split(":", 1)[1].strip() for line in Path("/proc/cpuinfo").read_text().splitlines()
-                  if line.startswith("model name")), "unknown")
     report = {"schemaVersion": 1, "status": "incomplete", "sandbox": sandbox, "scope": "CPU load calibration, not full efficiency acceptance",
               "workloadSha256": workload_digest(), "jobs": jobs, "samples": samples,
               "cpus": available[:2*jobs], "startedAt": datetime.now(timezone.utc).isoformat(),
-              "directory": str(directory), "machine": {"cpu": model, "availableCpus": available,
-                  "kernel": platform.release(), "architecture": platform.machine(),
-                  "memoryBytes": os.sysconf("SC_PHYS_PAGES")*os.sysconf("SC_PAGE_SIZE")},
+              "directory": str(directory), "machine": {**machine_info(), "availableCpus": available},
               "runs": [], "curve": []}
     start_cpu = time.process_time_ns()
     mask = os.sched_getaffinity(0)

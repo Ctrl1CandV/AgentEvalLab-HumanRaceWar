@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "identity": [
+    "arena/__init__.py", "arena/__main__.py", "arena/bench/main.cpp", "arena/check.py",
+    "arena/core/__init__.py", "arena/core/benchmark.py", "arena/core/cache.py", "arena/core/game.py",
+    "arena/core/journal.py", "arena/core/machine.py", "arena/core/plain.py", "arena/core/replay.py",
+    "arena/core/resources.py", "arena/core/runner.py", "arena/core/sandbox.py", "arena/core/sandbox_exec.py",
+    "arena/core/seccomp.py", "arena/core/timing.py", "arena/core/transport.py",
+    "arena/games/__init__.py", "arena/games/outpost/__init__.py", "arena/games/outpost/engine.py",
+    "arena/games/outpost/mapgen.py", "arena/games/outpost/maps.py", "arena/games/outpost/metrics.py",
+    "arena/games/outpost/model.py", "arena/games/outpost/orders.py", "arena/games/outpost/replay.py",
+    "arena/games/outpost/rules.py", "arena/match.py", "arena/tournament.py", "arena/worker.py",
+    "sdk/README.md", "sdk/cpp/example/main.cpp", "sdk/cpp/hrw.hpp",
+    "sdk/python/example/main.py", "sdk/python/hrw.py"
+  ],
+  "renamed": {
+    "rules.md": "rules/rules.md",
+    "standard-1.json": "rules/standard-1.json",
+    "README.md": "package/workspace-README.md",
+    "benchmark-reference.json": "package/benchmark-reference.json"
+  },
+  "publicBotCodes": ["M-balanced", "Z-eco", "Z-harass", "Z-idle", "Z-miner", "Z-random", "Z-rush", "Z-towers", "Z-turtle", "Z-wrush"],
+  "publicMapTypes": ["open", "corridor", "island", "maze"],
+  "publicMapsPerType": 10,
+  "scrimmageMaps": ["open-01.map", "corridor-01.map", "island-01.map", "maze-01.map"],
+  "roles": {
+    "pilot": {"PILOT.md": "package/pilot-instructions.md"},
+    "deepseek": {"docs/BRIEF-DEEPSEEK.md": "docs/BRIEF-DEEPSEEK.md"}
+  }
+}

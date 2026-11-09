@@ -11,6 +11,7 @@ from uuid import uuid4
 
 from arena.core import timing
 from arena.core.benchmark import workload_digest
+from arena.core.machine import machine_info
 from arena.core.journal import append, records
 from arena.core.sandbox import ROOT
 from arena.games.outpost import Outpost
@@ -25,7 +26,7 @@ class FixedTimingTests(unittest.TestCase):
         self.bench = self.root / 'bench.json'
         self.bench.write_text(json.dumps({'schemaVersion': 1, 'status': 'complete', 'jobs': 1,
             'cpus': sorted(os.sched_getaffinity(0))[:2], 'sandbox': 'bwrap', 'workloadSha256': workload_digest(),
-            'reference': {'cpuNs': 100}, 'loadedMedianCpuNs': 150, 'speedFactor': 1.5}))
+            'reference': {'cpuNs': 100}, 'loadedMedianCpuNs': 150, 'speedFactor': 1.5, 'machine': machine_info()}))
 
     def lock(self):
         value = timing.freeze_calibration(self.bench, workload_digest(), jobs=1,

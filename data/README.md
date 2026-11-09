@@ -4,6 +4,8 @@
 
 ## 当前入口
 
+- [`phase-b/mid-review.json`](phase-b/mid-review.json)：2026-11-09中期审查L1–L6既有档案聚合：饱和度计数、实际CPU、SEED证据边界、直接比较敏感性、机器绑定及临时BT（含分离/不可识别）；没有新对局，不是正式等级。`mid-review-validation.json`记录M1修前失败、修后34项双hashseed纯检查及验证边界。
+
 - [`balance.json`](balance.json)：最终平衡条件、公平性、结束方式。
 - [`zoo-matrix.csv`](zoo-matrix.csv)：按bot配对/地图类型聚合的局数和胜平负，不是逐局表。
 - [`timing.json`](timing.json)：当前效率汇总；历史评估明确标注。

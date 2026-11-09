@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "scope": "Mid-review step 0 affected checks only; no bots, compilers, benchmarks or new games; not full-suite or phase acceptance",
+  "newGames": 0,
+  "botExecutions": 0,
+  "compileExecutions": 0,
+  "benchmarkExecutions": 0,
+  "m1BeforeFix": {
+    "testsRun": 1,
+    "failures": 1,
+    "errors": 0,
+    "foreignMachineLockIncorrectlyAccepted": true,
+    "failureRetainedLocally": true
+  },
+  "tests": {
+    "hashSeeds": [0, 1],
+    "methodsPerHashSeed": 34,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": {
+      "test_machine_timing.py": 8,
+      "test_provisional_bt.py": 9,
+      "test_mainline_review.py": 4,
+      "test_dev_maps.py": 7,
+      "test_author_workspace.py": 6
+    },
+    "legacyPureFixedTimingMethodsAdditionallyCalledInsideMachineSuite": 4,
+    "fullSuiteRerun": false,
+    "reason": "The full suite starts bots/games; step 0 explicitly forbids new games. Workspace smoke checks import Python, list CLI commands and inspect an existing public map only."
+  },
+  "lsp": {
+    "server": "pyright",
+    "files": 13,
+    "diagnostics": 0
+  },
+  "priorPrivateCheckpoint": {
+    "registrySha256": "86a7383749b10797070138fab8af023c8e79d4d2f55afcc73ef12e22b7571042",
+    "filesChecked": 374571,
+    "mismatches": 0,
+    "processCpuNs": 19569937900,
+    "scope": "Read-only verification of previous checkpoint before registering step-0 artifacts; no bots"
+  },
+  "fullPhaseCpuHours": null,
+  "publication": "Aggregate validation only; failure logs, fixture outputs and checkpoint file index stay local"
+}

@@ -24,6 +24,8 @@
 - 同一宿主UID的arena命令使用 `${TMPDIR:-/tmp}/hrw-cpu-locks-<uid>/` 内核文件锁（S8；部署时所有命令共用同一TMPDIR），match/bench/batch互斥占用CPU，worker继承锁但bot不继承。它不能排除其他用户程序或宿主/虚拟机负载。
 - 普通开发批次默认仍测速，续跑在同CPU池/jobs下重测并保留历史。**配对试验与阶梯校准不能使用这个默认策略**：新校准的首批用`--freeze-timing`，只测一次；同批续跑继续带该选项，后续批次/候选用`--fixed-timing <首批/timing-lock.json>`。锁定原测速字节、来源摘要、系数、参考、jobs/CPU池，以及实际初始化/每回合/储备限额、墙钟余量和CPU硬上限，不重测、不二次折算。输入预算、backend、回合上限或记录不匹配时拒绝运行。
 - 已有基线用`.venv/bin/python -B -m tools.freeze_batch_timing --batch <原批次> --out <本机目录/timing-lock.json>`提取。工具检查全部已完成任务的回放摘要和实际限额，拒绝不完整或混合测速时期的基线；不会执行bot或测速。隐藏来源仍只写private，公开来源的原始锁也只留runs/private。
+- 2026-11-09起固定锁为schemaVersion=2，校验CPU型号、架构、机器总逻辑核数和可见物理内存向上取整GiB档位；不把租用CPU池长度当总核数。内核版本保留作诊断，不作为硬件身份。硬件指纹不匹配在规划/写批次前拒绝，提示在新机器测速并重新冻结；不收集hostname、machine-id或凭据，也不声称该硬件组合是密码学唯一主机身份。
+- 旧v1锁缺机器绑定，不能静默继续运行。若有已归档、绑定原锁摘要的机器总核数证据，`arena.core.timing.bind_legacy_calibration`可另存v2封装：原锁和原benchmark字节、预算、系数全部保留，嵌入证据及摘要，并核对当前硬件。没有证据就拒绝，不能从当前机器或租用池猜原核数。本次dev01旧锁由`tools/review_mainlines.py`结合`data/phase-b/mainlines-dev01.json`补绑定，新封装在`private/phase-b/mid-review-step0/timing-lock-machine-bound.json`；旧锁不改，不测速。以后的同机开发用此封装，历史四轮原件仍可读，不重跑。
 - 固定记录不修改正式评分D4：正式评分每次开始仍按实际并发测速，不跨评分沿用旧记录。固定限额用于配对/校准的可比性，不意味着免受宿主负载或硬件变化影响；跨机器不能拿旧CPU编号/记录替代评测机校准。
 - 运行中的槽数在开头/队尾和任务交接时会少于上限，不宣称所有时刻恰有2N个满负荷bot。
 - `--max-tasks` 是有意留检查点的开发选项，未完成的清单仍标incomplete。已完成任务校验回放摘要后跳过；worker已写完整结果而controller来不及收取时，先重放验证再接纳，避免重复对局。

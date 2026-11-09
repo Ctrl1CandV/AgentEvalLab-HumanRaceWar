@@ -1,0 +1,417 @@
+{
+  "L1": {
+    "bothSeatsAllLoseCells": 0,
+    "bothSeatsAllWinCells": 18,
+    "cellsWithDrawMap": 0,
+    "cellsWithSplitWinLossMap": 0,
+    "mapsPerCell": 24,
+    "nonsaturatedCells": 12,
+    "pairCells": 30,
+    "publication": "counts only; no hidden-line/opponent associations"
+  },
+  "L2": [
+    {
+      "botGameAppearances": 720,
+      "code": "A-r02",
+      "maxCpuMs": 2.1403,
+      "p50CpuMs": 0.3781,
+      "p95CpuMs": 0.6154,
+      "turnReplies": 160199
+    },
+    {
+      "botGameAppearances": 720,
+      "code": "E-r02",
+      "maxCpuMs": 3.0324,
+      "p50CpuMs": 0.5641,
+      "p95CpuMs": 0.8828,
+      "turnReplies": 171048
+    },
+    {
+      "botGameAppearances": 720,
+      "code": "C-r02",
+      "maxCpuMs": 2.3929,
+      "p50CpuMs": 0.5084,
+      "p95CpuMs": 0.7941,
+      "turnReplies": 196330
+    }
+  ],
+  "L3": [
+    {
+      "archivedGames": 48,
+      "changedPhysicalSeatWinnerPairs": 24,
+      "code": "A-r02",
+      "gamesInChangedPairs": 48,
+      "jointSeedSwapMapPairs": 24,
+      "limits": "both seeds exchanged, compared at the same physical seat; not one-sided seed intervention or extra independent maps",
+      "singleSideSeedChangeOnlyResult": null,
+      "usesSeed": true
+    },
+    {
+      "archivedGames": 48,
+      "changedPhysicalSeatWinnerPairs": 24,
+      "code": "E-r02",
+      "gamesInChangedPairs": 48,
+      "jointSeedSwapMapPairs": 24,
+      "limits": "both seeds exchanged, compared at the same physical seat; not one-sided seed intervention or extra independent maps",
+      "singleSideSeedChangeOnlyResult": null,
+      "usesSeed": true
+    },
+    {
+      "archivedGames": 48,
+      "changedPhysicalSeatWinnerPairs": 24,
+      "code": "C-r02",
+      "gamesInChangedPairs": 48,
+      "jointSeedSwapMapPairs": 24,
+      "limits": "both seeds exchanged, compared at the same physical seat; not one-sided seed intervention or extra independent maps",
+      "singleSideSeedChangeOnlyResult": null,
+      "usesSeed": true
+    },
+    {
+      "archivedGames": 48,
+      "changedPhysicalSeatWinnerPairs": 24,
+      "code": "M-balanced",
+      "gamesInChangedPairs": 48,
+      "jointSeedSwapMapPairs": 24,
+      "limits": "both seeds exchanged, compared at the same physical seat; not one-sided seed intervention or extra independent maps",
+      "singleSideSeedChangeOnlyResult": null,
+      "usesSeed": true
+    }
+  ],
+  "L4": [
+    {
+      "bothLose": 17,
+      "bothWin": 7,
+      "code": "A-r03",
+      "maps": 24,
+      "mapsWithDraw": 0,
+      "minimumMapChangesAbove50Percent": 6,
+      "minimumMapChangesTo50Percent": 5,
+      "retained": "A-r02",
+      "scoreRate": 0.2916666666666667,
+      "scoreRateInterval95": [
+        0.125,
+        0.4583333333333333
+      ],
+      "splitWinLoss": 0
+    },
+    {
+      "bothLose": 16,
+      "bothWin": 8,
+      "code": "E-r03",
+      "maps": 24,
+      "mapsWithDraw": 0,
+      "minimumMapChangesAbove50Percent": 5,
+      "minimumMapChangesTo50Percent": 4,
+      "retained": "E-r02",
+      "scoreRate": 0.3333333333333333,
+      "scoreRateInterval95": [
+        0.16666666666666666,
+        0.5416666666666666
+      ],
+      "splitWinLoss": 0
+    },
+    {
+      "bothLose": 13,
+      "bothWin": 11,
+      "code": "C-r03",
+      "maps": 24,
+      "mapsWithDraw": 0,
+      "minimumMapChangesAbove50Percent": 2,
+      "minimumMapChangesTo50Percent": 1,
+      "retained": "C-r02",
+      "scoreRate": 0.4583333333333333,
+      "scoreRateInterval95": [
+        0.25,
+        0.6666666666666666
+      ],
+      "splitWinLoss": 0
+    },
+    {
+      "bothLose": 14,
+      "bothWin": 10,
+      "code": "A-r04",
+      "maps": 24,
+      "mapsWithDraw": 0,
+      "minimumMapChangesAbove50Percent": 3,
+      "minimumMapChangesTo50Percent": 2,
+      "retained": "A-r02",
+      "scoreRate": 0.4166666666666667,
+      "scoreRateInterval95": [
+        0.25,
+        0.625
+      ],
+      "splitWinLoss": 0
+    },
+    {
+      "bothLose": 14,
+      "bothWin": 10,
+      "code": "E-r04",
+      "maps": 24,
+      "mapsWithDraw": 0,
+      "minimumMapChangesAbove50Percent": 3,
+      "minimumMapChangesTo50Percent": 2,
+      "retained": "E-r02",
+      "scoreRate": 0.4166666666666667,
+      "scoreRateInterval95": [
+        0.20833333333333334,
+        0.625
+      ],
+      "splitWinLoss": 0
+    },
+    {
+      "bothLose": 13,
+      "bothWin": 11,
+      "code": "C-r04",
+      "maps": 24,
+      "mapsWithDraw": 0,
+      "minimumMapChangesAbove50Percent": 2,
+      "minimumMapChangesTo50Percent": 1,
+      "retained": "C-r02",
+      "scoreRate": 0.4583333333333333,
+      "scoreRateInterval95": [
+        0.25,
+        0.6666666666666666
+      ],
+      "splitWinLoss": 0
+    }
+  ],
+  "L5": {
+    "allBudgetsUnchanged": true,
+    "boundLockSha256": "b106c1bf2c5d5b6b1751b180bf6c9e8aa091d964ed93f3ba4b38f3b1ed418b48",
+    "current": {
+      "architecture": "x86_64",
+      "cpu": "Intel(R) Core(TM) i5-14600KF",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "logicalCpus": 20,
+      "memoryBytes": 16679239680
+    },
+    "fingerprint": {
+      "architecture": "x86_64",
+      "cpu": "Intel(R) Core(TM) i5-14600KF",
+      "logicalCpus": 20,
+      "visibleMemoryGiB": 16
+    },
+    "legacyLockSha256": "f22f35a73ac4d9abdac539c11806cfb08e58300617ec106d155742a5f8bdbb6f",
+    "legacyLogicalCpusEvidence": {
+      "file": "data/phase-b/mainlines-dev01.json",
+      "logicalCpus": 20,
+      "sha256": "a9094826d841a87af1a28663730ebcce349a18c3d4fb20900f6b5b7cf52deb1e"
+    },
+    "origin": {
+      "architecture": "x86_64",
+      "availableCpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "cpu": "Intel(R) Core(TM) i5-14600KF",
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "memoryBytes": 16679239680
+    },
+    "originBenchmarkBytesUnchanged": true,
+    "originLeasedCpuCountIsNotHostCount": 18,
+    "timingRemeasured": false
+  },
+  "L6": {
+    "anchorComponentSize": 8,
+    "finiteFullMLE": false,
+    "finiteFullMLEReplicates": 0,
+    "formalCalibration": false,
+    "games": 1584,
+    "limits": "existing development-selected maps; no zoo-only edges; separation explicitly retained; not formal levels or independent validation",
+    "maps": 24,
+    "maxScoreResidual": 5.594316121459997e-10,
+    "method": "all opponents and both seats in each map jointly resampled; nearest-rank 2.5/97.5 percentiles; no rejected bootstrap draws, pseudocounts, clipping or multiplicity correction",
+    "ratings": [
+      {
+        "code": "A-r02",
+        "eloRelativeToM": 185.66421989564614,
+        "interval95": [
+          77.33045053179472,
+          322.294324779615
+        ],
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "E-r02",
+        "eloRelativeToM": 251.14196169216098,
+        "interval95": [
+          135.52792075282815,
+          388.2240723395012
+        ],
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "C-r02",
+        "eloRelativeToM": 264.9545689676059,
+        "interval95": [
+          147.64060278510684,
+          420.9362945614047
+        ],
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "M-balanced",
+        "eloRelativeToM": 0.0,
+        "interval95": [
+          0.0,
+          0.0
+        ],
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "Z-eco",
+        "eloRelativeToM": -510.04361209202426,
+        "interval95": [
+          "-infinity",
+          -283.1023239868823
+        ],
+        "negativeInfiniteSamples": 1481,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "Z-harass",
+        "eloRelativeToM": -219.96205645536142,
+        "interval95": [
+          "-infinity",
+          -81.98496037363132
+        ],
+        "negativeInfiniteSamples": 504,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "Z-idle",
+        "eloRelativeToM": "-infinity",
+        "interval95": [
+          "-infinity",
+          "-infinity"
+        ],
+        "negativeInfiniteSamples": 4000,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "Z-miner",
+        "eloRelativeToM": "-infinity",
+        "interval95": [
+          "-infinity",
+          "-infinity"
+        ],
+        "negativeInfiniteSamples": 4000,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "Z-random",
+        "eloRelativeToM": "-infinity",
+        "interval95": [
+          "-infinity",
+          "-infinity"
+        ],
+        "negativeInfiniteSamples": 4000,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "Z-rush",
+        "eloRelativeToM": -387.0621261898372,
+        "interval95": [
+          "-infinity",
+          -229.81897440045734
+        ],
+        "negativeInfiniteSamples": 1475,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "Z-towers",
+        "eloRelativeToM": -185.57274314269762,
+        "interval95": [
+          -404.7176292439102,
+          -63.81573222301129
+        ],
+        "negativeInfiniteSamples": 11,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "Z-turtle",
+        "eloRelativeToM": "-infinity",
+        "interval95": [
+          "-infinity",
+          "-infinity"
+        ],
+        "negativeInfiniteSamples": 4000,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      },
+      {
+        "code": "Z-wrush",
+        "eloRelativeToM": "-infinity",
+        "interval95": [
+          "-infinity",
+          "-infinity"
+        ],
+        "negativeInfiniteSamples": 4000,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "unidentifiedSamples": 0
+      }
+    ],
+    "reference": "M-balanced=0",
+    "samples": 4000,
+    "seed": 4219
+  },
+  "newGames": 0,
+  "schemaVersion": 1,
+  "scope": "2026-11-09 mid-review step0 L1-L6, existing archives only",
+  "usage": {
+    "analysisProcessCpuNs": 15335279800,
+    "botCpuNsThisAnalysis": 0,
+    "fullPhaseCpuHours": null
+  },
+  "validation": {
+    "botExecutions": 0,
+    "dev02ReplaysReadAndDigestChecked": 1872,
+    "directRevisionReplaysChecked": 288,
+    "engineReexecutions": 0,
+    "seedUse": "source inspection, tied to unchanged archived source digests; joint seed-swap result check only"
+  }
+}
