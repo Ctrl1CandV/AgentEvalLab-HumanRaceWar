@@ -1,0 +1,4038 @@
+{
+  "definitions": {
+    "baseRouteBottlenecks": "articulation cells whose removal blocks all paths between any ground neighbors of the two bases",
+    "representation": "same v2 profile; structural comparison only, not evidence of equal strategic difficulty",
+    "singleCellBottlenecks": "ground-graph articulation cells; removal disconnects some ground, including side branches",
+    "walk": "between feature-adjacent ground cells; basePath adds the two base endpoints"
+  },
+  "maps": 116,
+  "publication": "set/type/size aggregates only; not per-map records",
+  "schemaVersion": 1,
+  "scope": "final holdout preparation; no games played",
+  "sets": [
+    {
+      "bySize": {
+        "24": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 8,
+            "max": 70,
+            "median": 38.0,
+            "min": 38,
+            "observed": 8,
+            "p25": 38,
+            "p75": 40
+          },
+          "baseRouteBottlenecks": {
+            "count": 8,
+            "max": 46,
+            "median": 6.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 0,
+            "p75": 12
+          },
+          "groundCells": {
+            "count": 8,
+            "max": 494,
+            "median": 460.0,
+            "min": 372,
+            "observed": 8,
+            "p25": 372,
+            "p75": 478
+          },
+          "homeOreWalks": {
+            "count": 96,
+            "max": 12,
+            "median": 4.0,
+            "min": 2,
+            "observed": 96,
+            "p25": 2,
+            "p75": 6
+          },
+          "maps": 8,
+          "normalizedBasePath": {
+            "count": 8,
+            "max": 2.9166666666666665,
+            "median": 1.5833333333333333,
+            "min": 1.5833333333333333,
+            "observed": 8,
+            "p25": 1.5833333333333333,
+            "p75": 1.6666666666666667
+          },
+          "singleCellBottlenecks": {
+            "count": 8,
+            "max": 112,
+            "median": 11.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 4,
+            "p75": 38
+          },
+          "spawnGround": {
+            "count": 16,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 16,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 80,
+            "max": 5,
+            "median": 1.0,
+            "min": 1,
+            "observed": 80,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 8,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 8,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "28": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 8,
+            "max": 72,
+            "median": 55.0,
+            "min": 46,
+            "observed": 8,
+            "p25": 46,
+            "p75": 60
+          },
+          "baseRouteBottlenecks": {
+            "count": 8,
+            "max": 42,
+            "median": 0.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 0,
+            "p75": 12
+          },
+          "groundCells": {
+            "count": 8,
+            "max": 690,
+            "median": 656.0,
+            "min": 546,
+            "observed": 8,
+            "p25": 546,
+            "p75": 678
+          },
+          "homeOreWalks": {
+            "count": 96,
+            "max": 12,
+            "median": 5.0,
+            "min": 2,
+            "observed": 96,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 8,
+          "normalizedBasePath": {
+            "count": 8,
+            "max": 2.5714285714285716,
+            "median": 1.9642857142857144,
+            "min": 1.6428571428571428,
+            "observed": 8,
+            "p25": 1.6428571428571428,
+            "p75": 2.142857142857143
+          },
+          "singleCellBottlenecks": {
+            "count": 8,
+            "max": 100,
+            "median": 6.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 2,
+            "p75": 32
+          },
+          "spawnGround": {
+            "count": 16,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 16,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 80,
+            "max": 5,
+            "median": 1.0,
+            "min": 1,
+            "observed": 80,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 8,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 8,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "32": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 8,
+            "max": 72,
+            "median": 56.0,
+            "min": 54,
+            "observed": 8,
+            "p25": 54,
+            "p75": 66
+          },
+          "baseRouteBottlenecks": {
+            "count": 8,
+            "max": 26,
+            "median": 0.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 0,
+            "p75": 6
+          },
+          "groundCells": {
+            "count": 8,
+            "max": 918,
+            "median": 884.0,
+            "min": 754,
+            "observed": 8,
+            "p25": 756,
+            "p75": 910
+          },
+          "homeOreWalks": {
+            "count": 96,
+            "max": 12,
+            "median": 5.0,
+            "min": 2,
+            "observed": 96,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 8,
+          "normalizedBasePath": {
+            "count": 8,
+            "max": 2.25,
+            "median": 1.75,
+            "min": 1.6875,
+            "observed": 8,
+            "p25": 1.6875,
+            "p75": 2.0625
+          },
+          "singleCellBottlenecks": {
+            "count": 8,
+            "max": 96,
+            "median": 11.0,
+            "min": 4,
+            "observed": 8,
+            "p25": 6,
+            "p75": 18
+          },
+          "spawnGround": {
+            "count": 16,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 16,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 80,
+            "max": 3,
+            "median": 1.5,
+            "min": 1,
+            "observed": 80,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 8,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 8,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "36": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 8,
+            "max": 92,
+            "median": 62.0,
+            "min": 62,
+            "observed": 8,
+            "p25": 62,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 8,
+            "max": 36,
+            "median": 0.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 8,
+            "max": 1178,
+            "median": 1144.0,
+            "min": 994,
+            "observed": 8,
+            "p25": 994,
+            "p75": 1174
+          },
+          "homeOreWalks": {
+            "count": 96,
+            "max": 11,
+            "median": 4.0,
+            "min": 2,
+            "observed": 96,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 8,
+          "normalizedBasePath": {
+            "count": 8,
+            "max": 2.5555555555555554,
+            "median": 1.7222222222222223,
+            "min": 1.7222222222222223,
+            "observed": 8,
+            "p25": 1.7222222222222223,
+            "p75": 1.7222222222222223
+          },
+          "singleCellBottlenecks": {
+            "count": 8,
+            "max": 88,
+            "median": 4.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 4,
+            "p75": 10
+          },
+          "spawnGround": {
+            "count": 16,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 16,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 80,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 80,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 8,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 8,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "40": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 8,
+            "max": 132,
+            "median": 72.0,
+            "min": 70,
+            "observed": 8,
+            "p25": 70,
+            "p75": 84
+          },
+          "baseRouteBottlenecks": {
+            "count": 8,
+            "max": 36,
+            "median": 0.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 8,
+            "max": 1470,
+            "median": 1434.0,
+            "min": 1266,
+            "observed": 8,
+            "p25": 1266,
+            "p75": 1466
+          },
+          "homeOreWalks": {
+            "count": 96,
+            "max": 7,
+            "median": 4.0,
+            "min": 2,
+            "observed": 96,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 8,
+          "normalizedBasePath": {
+            "count": 8,
+            "max": 3.3,
+            "median": 1.8,
+            "min": 1.75,
+            "observed": 8,
+            "p25": 1.75,
+            "p75": 2.1
+          },
+          "singleCellBottlenecks": {
+            "count": 8,
+            "max": 82,
+            "median": 5.0,
+            "min": 2,
+            "observed": 8,
+            "p25": 2,
+            "p75": 8
+          },
+          "spawnGround": {
+            "count": 16,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 16,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 80,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 80,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 8,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 8,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "byType": {
+        "corridor": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 10,
+            "max": 132,
+            "median": 61.0,
+            "min": 38,
+            "observed": 10,
+            "p25": 48,
+            "p75": 72
+          },
+          "baseRouteBottlenecks": {
+            "count": 10,
+            "max": 6,
+            "median": 0.0,
+            "min": 0,
+            "observed": 10,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 10,
+            "max": 1470,
+            "median": 910.0,
+            "min": 478,
+            "observed": 10,
+            "p25": 678,
+            "p75": 1174
+          },
+          "homeOreWalks": {
+            "count": 120,
+            "max": 8,
+            "median": 4.0,
+            "min": 2,
+            "observed": 120,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 10,
+          "normalizedBasePath": {
+            "count": 10,
+            "max": 3.3,
+            "median": 1.7361111111111112,
+            "min": 1.5833333333333333,
+            "observed": 10,
+            "p25": 1.6875,
+            "p75": 2.142857142857143
+          },
+          "singleCellBottlenecks": {
+            "count": 10,
+            "max": 8,
+            "median": 3.0,
+            "min": 0,
+            "observed": 10,
+            "p25": 2,
+            "p75": 6
+          },
+          "spawnGround": {
+            "count": 20,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 20,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 100,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 100,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 10,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 10,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "island": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 10,
+            "max": 74,
+            "median": 59.0,
+            "min": 38,
+            "observed": 10,
+            "p25": 54,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 10,
+            "max": 12,
+            "median": 0.0,
+            "min": 0,
+            "observed": 10,
+            "p25": 0,
+            "p75": 8
+          },
+          "groundCells": {
+            "count": 10,
+            "max": 1402,
+            "median": 858.0,
+            "min": 442,
+            "observed": 10,
+            "p25": 634,
+            "p75": 1114
+          },
+          "homeOreWalks": {
+            "count": 120,
+            "max": 12,
+            "median": 4.0,
+            "min": 2,
+            "observed": 120,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 10,
+          "normalizedBasePath": {
+            "count": 10,
+            "max": 2.142857142857143,
+            "median": 1.75,
+            "min": 1.5833333333333333,
+            "observed": 10,
+            "p25": 1.7222222222222223,
+            "p75": 1.85
+          },
+          "singleCellBottlenecks": {
+            "count": 10,
+            "max": 38,
+            "median": 8.0,
+            "min": 4,
+            "observed": 10,
+            "p25": 4,
+            "p75": 18
+          },
+          "spawnGround": {
+            "count": 20,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 20,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 100,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 100,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 10,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 10,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "maze": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 10,
+            "max": 116,
+            "median": 70.0,
+            "min": 38,
+            "observed": 10,
+            "p25": 62,
+            "p75": 84
+          },
+          "baseRouteBottlenecks": {
+            "count": 10,
+            "max": 46,
+            "median": 30.0,
+            "min": 6,
+            "observed": 10,
+            "p25": 24,
+            "p75": 36
+          },
+          "groundCells": {
+            "count": 10,
+            "max": 1266,
+            "median": 755.0,
+            "min": 372,
+            "observed": 10,
+            "p25": 546,
+            "p75": 994
+          },
+          "homeOreWalks": {
+            "count": 120,
+            "max": 12,
+            "median": 4.5,
+            "min": 2,
+            "observed": 120,
+            "p25": 3,
+            "p75": 7
+          },
+          "maps": 10,
+          "normalizedBasePath": {
+            "count": 10,
+            "max": 2.9166666666666665,
+            "median": 2.14375,
+            "min": 1.5833333333333333,
+            "observed": 10,
+            "p25": 2.0,
+            "p75": 2.5714285714285716
+          },
+          "singleCellBottlenecks": {
+            "count": 10,
+            "max": 112,
+            "median": 92.0,
+            "min": 42,
+            "observed": 10,
+            "p25": 82,
+            "p75": 100
+          },
+          "spawnGround": {
+            "count": 20,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 20,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 100,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 100,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 10,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 10,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "open": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 10,
+            "max": 70,
+            "median": 54.0,
+            "min": 38,
+            "observed": 10,
+            "p25": 46,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 10,
+            "max": 0,
+            "median": 0.0,
+            "min": 0,
+            "observed": 10,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 10,
+            "max": 1466,
+            "median": 918.0,
+            "min": 494,
+            "observed": 10,
+            "p25": 690,
+            "p75": 1178
+          },
+          "homeOreWalks": {
+            "count": 120,
+            "max": 8,
+            "median": 4.5,
+            "min": 2,
+            "observed": 120,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 10,
+          "normalizedBasePath": {
+            "count": 10,
+            "max": 1.75,
+            "median": 1.6875,
+            "min": 1.5833333333333333,
+            "observed": 10,
+            "p25": 1.6428571428571428,
+            "p75": 1.7222222222222223
+          },
+          "singleCellBottlenecks": {
+            "count": 10,
+            "max": 12,
+            "median": 6.0,
+            "min": 0,
+            "observed": 10,
+            "p25": 4,
+            "p75": 8
+          },
+          "spawnGround": {
+            "count": 20,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 20,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 100,
+            "max": 3,
+            "median": 1.5,
+            "min": 1,
+            "observed": 100,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 10,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 10,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "mapSet": "public",
+      "mapSetSha256": "e66849da81bceb5c725fee5ba6f1a96bcc8672b5e5c61d19d86f3281c117ae90",
+      "overall": {
+        "allLayoutsPassed": true,
+        "basePath": {
+          "count": 40,
+          "max": 132,
+          "median": 62.0,
+          "min": 38,
+          "observed": 40,
+          "p25": 48,
+          "p75": 70
+        },
+        "baseRouteBottlenecks": {
+          "count": 40,
+          "max": 46,
+          "median": 0.0,
+          "min": 0,
+          "observed": 40,
+          "p25": 0,
+          "p75": 12
+        },
+        "groundCells": {
+          "count": 40,
+          "max": 1470,
+          "median": 884.0,
+          "min": 372,
+          "observed": 40,
+          "p25": 546,
+          "p75": 1174
+        },
+        "homeOreWalks": {
+          "count": 480,
+          "max": 12,
+          "median": 4.0,
+          "min": 2,
+          "observed": 480,
+          "p25": 3,
+          "p75": 6
+        },
+        "maps": 40,
+        "normalizedBasePath": {
+          "count": 40,
+          "max": 3.3,
+          "median": 1.75,
+          "min": 1.5833333333333333,
+          "observed": 40,
+          "p25": 1.6875,
+          "p75": 2.1
+        },
+        "singleCellBottlenecks": {
+          "count": 40,
+          "max": 112,
+          "median": 8.0,
+          "min": 0,
+          "observed": 40,
+          "p25": 4,
+          "p75": 38
+        },
+        "spawnGround": {
+          "count": 80,
+          "max": 12,
+          "median": 12.0,
+          "min": 12,
+          "observed": 80,
+          "p25": 12,
+          "p75": 12
+        },
+        "towerOreWalks": {
+          "count": 400,
+          "max": 5,
+          "median": 2.0,
+          "min": 1,
+          "observed": 400,
+          "p25": 1,
+          "p75": 2
+        },
+        "towerSites": {
+          "count": 40,
+          "max": 10,
+          "median": 10.0,
+          "min": 10,
+          "observed": 40,
+          "p25": 10,
+          "p75": 10
+        }
+      },
+      "sizes": {
+        "24": 8,
+        "28": 8,
+        "32": 8,
+        "36": 8,
+        "40": 8
+      },
+      "types": {
+        "corridor": 10,
+        "island": 10,
+        "maze": 10,
+        "open": 10
+      }
+    },
+    {
+      "bySize": {
+        "32": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 72,
+            "median": 54.0,
+            "min": 54,
+            "observed": 4,
+            "p25": 54,
+            "p75": 54
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 36,
+            "median": 2.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 4
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 918,
+            "median": 884.0,
+            "min": 754,
+            "observed": 4,
+            "p25": 754,
+            "p75": 910
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 8,
+            "median": 5.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 2,
+            "p75": 6
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 2.25,
+            "median": 1.6875,
+            "min": 1.6875,
+            "observed": 4,
+            "p25": 1.6875,
+            "p75": 1.6875
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 90,
+            "median": 12.0,
+            "min": 4,
+            "observed": 4,
+            "p25": 4,
+            "p75": 16
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "byType": {
+        "corridor": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 1,
+            "max": 54,
+            "median": 54,
+            "min": 54,
+            "observed": 1,
+            "p25": 54,
+            "p75": 54
+          },
+          "baseRouteBottlenecks": {
+            "count": 1,
+            "max": 4,
+            "median": 4,
+            "min": 4,
+            "observed": 1,
+            "p25": 4,
+            "p75": 4
+          },
+          "groundCells": {
+            "count": 1,
+            "max": 910,
+            "median": 910,
+            "min": 910,
+            "observed": 1,
+            "p25": 910,
+            "p75": 910
+          },
+          "homeOreWalks": {
+            "count": 12,
+            "max": 5,
+            "median": 2.0,
+            "min": 2,
+            "observed": 12,
+            "p25": 2,
+            "p75": 5
+          },
+          "maps": 1,
+          "normalizedBasePath": {
+            "count": 1,
+            "max": 1.6875,
+            "median": 1.6875,
+            "min": 1.6875,
+            "observed": 1,
+            "p25": 1.6875,
+            "p75": 1.6875
+          },
+          "singleCellBottlenecks": {
+            "count": 1,
+            "max": 8,
+            "median": 8,
+            "min": 8,
+            "observed": 1,
+            "p25": 8,
+            "p75": 8
+          },
+          "spawnGround": {
+            "count": 2,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 2,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 10,
+            "max": 2,
+            "median": 2.0,
+            "min": 1,
+            "observed": 10,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 1,
+            "max": 10,
+            "median": 10,
+            "min": 10,
+            "observed": 1,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "island": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 1,
+            "max": 54,
+            "median": 54,
+            "min": 54,
+            "observed": 1,
+            "p25": 54,
+            "p75": 54
+          },
+          "baseRouteBottlenecks": {
+            "count": 1,
+            "max": 0,
+            "median": 0,
+            "min": 0,
+            "observed": 1,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 1,
+            "max": 858,
+            "median": 858,
+            "min": 858,
+            "observed": 1,
+            "p25": 858,
+            "p75": 858
+          },
+          "homeOreWalks": {
+            "count": 12,
+            "max": 6,
+            "median": 3.5,
+            "min": 2,
+            "observed": 12,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 1,
+          "normalizedBasePath": {
+            "count": 1,
+            "max": 1.6875,
+            "median": 1.6875,
+            "min": 1.6875,
+            "observed": 1,
+            "p25": 1.6875,
+            "p75": 1.6875
+          },
+          "singleCellBottlenecks": {
+            "count": 1,
+            "max": 16,
+            "median": 16,
+            "min": 16,
+            "observed": 1,
+            "p25": 16,
+            "p75": 16
+          },
+          "spawnGround": {
+            "count": 2,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 2,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 10,
+            "max": 4,
+            "median": 3.0,
+            "min": 1,
+            "observed": 10,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 1,
+            "max": 10,
+            "median": 10,
+            "min": 10,
+            "observed": 1,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "maze": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 1,
+            "max": 72,
+            "median": 72,
+            "min": 72,
+            "observed": 1,
+            "p25": 72,
+            "p75": 72
+          },
+          "baseRouteBottlenecks": {
+            "count": 1,
+            "max": 36,
+            "median": 36,
+            "min": 36,
+            "observed": 1,
+            "p25": 36,
+            "p75": 36
+          },
+          "groundCells": {
+            "count": 1,
+            "max": 754,
+            "median": 754,
+            "min": 754,
+            "observed": 1,
+            "p25": 754,
+            "p75": 754
+          },
+          "homeOreWalks": {
+            "count": 12,
+            "max": 8,
+            "median": 6.0,
+            "min": 4,
+            "observed": 12,
+            "p25": 5,
+            "p75": 7
+          },
+          "maps": 1,
+          "normalizedBasePath": {
+            "count": 1,
+            "max": 2.25,
+            "median": 2.25,
+            "min": 2.25,
+            "observed": 1,
+            "p25": 2.25,
+            "p75": 2.25
+          },
+          "singleCellBottlenecks": {
+            "count": 1,
+            "max": 90,
+            "median": 90,
+            "min": 90,
+            "observed": 1,
+            "p25": 90,
+            "p75": 90
+          },
+          "spawnGround": {
+            "count": 2,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 2,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 10,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 10,
+            "p25": 2,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 1,
+            "max": 10,
+            "median": 10,
+            "min": 10,
+            "observed": 1,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "open": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 1,
+            "max": 54,
+            "median": 54,
+            "min": 54,
+            "observed": 1,
+            "p25": 54,
+            "p75": 54
+          },
+          "baseRouteBottlenecks": {
+            "count": 1,
+            "max": 0,
+            "median": 0,
+            "min": 0,
+            "observed": 1,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 1,
+            "max": 918,
+            "median": 918,
+            "min": 918,
+            "observed": 1,
+            "p25": 918,
+            "p75": 918
+          },
+          "homeOreWalks": {
+            "count": 12,
+            "max": 6,
+            "median": 5.0,
+            "min": 2,
+            "observed": 12,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 1,
+          "normalizedBasePath": {
+            "count": 1,
+            "max": 1.6875,
+            "median": 1.6875,
+            "min": 1.6875,
+            "observed": 1,
+            "p25": 1.6875,
+            "p75": 1.6875
+          },
+          "singleCellBottlenecks": {
+            "count": 1,
+            "max": 4,
+            "median": 4,
+            "min": 4,
+            "observed": 1,
+            "p25": 4,
+            "p75": 4
+          },
+          "spawnGround": {
+            "count": 2,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 2,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 10,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 10,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 1,
+            "max": 10,
+            "median": 10,
+            "min": 10,
+            "observed": 1,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "mapSet": "scrimmage",
+      "mapSetSha256": "013ea2ac81338efce91927d714645e8614c2f4964dd78a2d6280e50a968c6f82",
+      "overall": {
+        "allLayoutsPassed": true,
+        "basePath": {
+          "count": 4,
+          "max": 72,
+          "median": 54.0,
+          "min": 54,
+          "observed": 4,
+          "p25": 54,
+          "p75": 54
+        },
+        "baseRouteBottlenecks": {
+          "count": 4,
+          "max": 36,
+          "median": 2.0,
+          "min": 0,
+          "observed": 4,
+          "p25": 0,
+          "p75": 4
+        },
+        "groundCells": {
+          "count": 4,
+          "max": 918,
+          "median": 884.0,
+          "min": 754,
+          "observed": 4,
+          "p25": 754,
+          "p75": 910
+        },
+        "homeOreWalks": {
+          "count": 48,
+          "max": 8,
+          "median": 5.0,
+          "min": 2,
+          "observed": 48,
+          "p25": 2,
+          "p75": 6
+        },
+        "maps": 4,
+        "normalizedBasePath": {
+          "count": 4,
+          "max": 2.25,
+          "median": 1.6875,
+          "min": 1.6875,
+          "observed": 4,
+          "p25": 1.6875,
+          "p75": 1.6875
+        },
+        "singleCellBottlenecks": {
+          "count": 4,
+          "max": 90,
+          "median": 12.0,
+          "min": 4,
+          "observed": 4,
+          "p25": 4,
+          "p75": 16
+        },
+        "spawnGround": {
+          "count": 8,
+          "max": 12,
+          "median": 12.0,
+          "min": 12,
+          "observed": 8,
+          "p25": 12,
+          "p75": 12
+        },
+        "towerOreWalks": {
+          "count": 40,
+          "max": 5,
+          "median": 2.0,
+          "min": 1,
+          "observed": 40,
+          "p25": 1,
+          "p75": 2
+        },
+        "towerSites": {
+          "count": 4,
+          "max": 10,
+          "median": 10.0,
+          "min": 10,
+          "observed": 4,
+          "p25": 10,
+          "p75": 10
+        }
+      },
+      "sizes": {
+        "32": 4
+      },
+      "types": {
+        "corridor": 1,
+        "island": 1,
+        "maze": 1,
+        "open": 1
+      }
+    },
+    {
+      "bySize": {
+        "24": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 88,
+            "median": 44.0,
+            "min": 38,
+            "observed": 4,
+            "p25": 38,
+            "p75": 46
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 52,
+            "median": 7.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 8
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 494,
+            "median": 460.0,
+            "min": 372,
+            "observed": 4,
+            "p25": 372,
+            "p75": 478
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 9,
+            "median": 4.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 2,
+            "p75": 5
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 3.6666666666666665,
+            "median": 1.8333333333333335,
+            "min": 1.5833333333333333,
+            "observed": 4,
+            "p25": 1.5833333333333333,
+            "p75": 1.9166666666666667
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 122,
+            "median": 16.0,
+            "min": 6,
+            "observed": 4,
+            "p25": 6,
+            "p75": 24
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 3,
+            "median": 1.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "28": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 80,
+            "median": 55.0,
+            "min": 46,
+            "observed": 4,
+            "p25": 46,
+            "p75": 64
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 32,
+            "median": 0.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 690,
+            "median": 656.0,
+            "min": 546,
+            "observed": 4,
+            "p25": 546,
+            "p75": 678
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 8,
+            "median": 4.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 2.857142857142857,
+            "median": 1.9642857142857142,
+            "min": 1.6428571428571428,
+            "observed": 4,
+            "p25": 1.6428571428571428,
+            "p75": 2.2857142857142856
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 96,
+            "median": 8.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 10
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "32": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 8,
+            "max": 64,
+            "median": 54.0,
+            "min": 54,
+            "observed": 8,
+            "p25": 54,
+            "p75": 58
+          },
+          "baseRouteBottlenecks": {
+            "count": 8,
+            "max": 28,
+            "median": 0.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 8,
+            "max": 918,
+            "median": 884.0,
+            "min": 754,
+            "observed": 8,
+            "p25": 756,
+            "p75": 910
+          },
+          "homeOreWalks": {
+            "count": 96,
+            "max": 8,
+            "median": 5.0,
+            "min": 2,
+            "observed": 96,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 8,
+          "normalizedBasePath": {
+            "count": 8,
+            "max": 2.0,
+            "median": 1.6875,
+            "min": 1.6875,
+            "observed": 8,
+            "p25": 1.6875,
+            "p75": 1.8125
+          },
+          "singleCellBottlenecks": {
+            "count": 8,
+            "max": 90,
+            "median": 3.0,
+            "min": 2,
+            "observed": 8,
+            "p25": 2,
+            "p75": 14
+          },
+          "spawnGround": {
+            "count": 16,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 16,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 80,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 80,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 8,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 8,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "36": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 92,
+            "median": 67.0,
+            "min": 62,
+            "observed": 4,
+            "p25": 62,
+            "p75": 72
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 26,
+            "median": 12.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 24
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 1178,
+            "median": 1144.0,
+            "min": 994,
+            "observed": 4,
+            "p25": 994,
+            "p75": 1174
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 10,
+            "median": 4.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 2,
+            "p75": 6
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 2.5555555555555554,
+            "median": 1.8611111111111112,
+            "min": 1.7222222222222223,
+            "observed": 4,
+            "p25": 1.7222222222222223,
+            "p75": 2.0
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 76,
+            "median": 17.0,
+            "min": 4,
+            "observed": 4,
+            "p25": 4,
+            "p75": 28
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 4,
+            "median": 2.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "40": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 108,
+            "median": 72.0,
+            "min": 70,
+            "observed": 4,
+            "p25": 70,
+            "p75": 74
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 24,
+            "median": 0.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 1470,
+            "median": 1434.0,
+            "min": 1266,
+            "observed": 4,
+            "p25": 1266,
+            "p75": 1466
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 6,
+            "median": 5.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 2.7,
+            "median": 1.8,
+            "min": 1.75,
+            "observed": 4,
+            "p25": 1.75,
+            "p75": 1.85
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 82,
+            "median": 5.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 8
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "byType": {
+        "corridor": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 108,
+            "median": 61.0,
+            "min": 42,
+            "observed": 6,
+            "p25": 54,
+            "p75": 80
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 6,
+            "median": 0.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1470,
+            "median": 910.0,
+            "min": 478,
+            "observed": 6,
+            "p25": 678,
+            "p75": 1174
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 7,
+            "median": 3.5,
+            "min": 2,
+            "observed": 72,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 2.857142857142857,
+            "median": 1.8125,
+            "min": 1.6875,
+            "observed": 6,
+            "p25": 1.7222222222222223,
+            "p75": 2.7
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 8,
+            "median": 2.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 2,
+            "p75": 4
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 4,
+            "median": 2.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "island": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 92,
+            "median": 54.0,
+            "min": 46,
+            "observed": 6,
+            "p25": 46,
+            "p75": 74
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 24,
+            "median": 0.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 0,
+            "p75": 8
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1402,
+            "median": 858.0,
+            "min": 442,
+            "observed": 6,
+            "p25": 634,
+            "p75": 1114
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 6,
+            "median": 4.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 2.5555555555555554,
+            "median": 1.76875,
+            "min": 1.6428571428571428,
+            "observed": 6,
+            "p25": 1.6875,
+            "p75": 1.9166666666666667
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 28,
+            "median": 5.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 2,
+            "p75": 24
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "maze": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 88,
+            "median": 67.0,
+            "min": 58,
+            "observed": 6,
+            "p25": 64,
+            "p75": 72
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 52,
+            "median": 27.0,
+            "min": 22,
+            "observed": 6,
+            "p25": 24,
+            "p75": 32
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1266,
+            "median": 755.0,
+            "min": 372,
+            "observed": 6,
+            "p25": 546,
+            "p75": 994
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 10,
+            "median": 4.5,
+            "min": 2,
+            "observed": 72,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 3.6666666666666665,
+            "median": 2.0,
+            "min": 1.75,
+            "observed": 6,
+            "p25": 1.8125,
+            "p75": 2.2857142857142856
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 122,
+            "median": 88.0,
+            "min": 76,
+            "observed": 6,
+            "p25": 82,
+            "p75": 96
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "open": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 70,
+            "median": 54.0,
+            "min": 38,
+            "observed": 6,
+            "p25": 46,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 0,
+            "median": 0.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1466,
+            "median": 918.0,
+            "min": 494,
+            "observed": 6,
+            "p25": 690,
+            "p75": 1178
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 6,
+            "median": 5.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 1.75,
+            "median": 1.6875,
+            "min": 1.5833333333333333,
+            "observed": 6,
+            "p25": 1.6428571428571428,
+            "p75": 1.7222222222222223
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 14,
+            "median": 7.0,
+            "min": 2,
+            "observed": 6,
+            "p25": 6,
+            "p75": 10
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "mapSet": "calibration",
+      "mapSetSha256": "aa10070ccd05f4e29b0578116ff56b61cf50d9fbd853218acdbde1e3be8b88d0",
+      "overall": {
+        "allLayoutsPassed": true,
+        "basePath": {
+          "count": 24,
+          "max": 108,
+          "median": 61.0,
+          "min": 38,
+          "observed": 24,
+          "p25": 54,
+          "p75": 70
+        },
+        "baseRouteBottlenecks": {
+          "count": 24,
+          "max": 52,
+          "median": 0.0,
+          "min": 0,
+          "observed": 24,
+          "p25": 0,
+          "p75": 22
+        },
+        "groundCells": {
+          "count": 24,
+          "max": 1470,
+          "median": 884.0,
+          "min": 372,
+          "observed": 24,
+          "p25": 634,
+          "p75": 1114
+        },
+        "homeOreWalks": {
+          "count": 288,
+          "max": 10,
+          "median": 4.0,
+          "min": 2,
+          "observed": 288,
+          "p25": 3,
+          "p75": 6
+        },
+        "maps": 24,
+        "normalizedBasePath": {
+          "count": 24,
+          "max": 3.6666666666666665,
+          "median": 1.75,
+          "min": 1.5833333333333333,
+          "observed": 24,
+          "p25": 1.6875,
+          "p75": 2.0
+        },
+        "singleCellBottlenecks": {
+          "count": 24,
+          "max": 122,
+          "median": 7.0,
+          "min": 0,
+          "observed": 24,
+          "p25": 2,
+          "p75": 28
+        },
+        "spawnGround": {
+          "count": 48,
+          "max": 12,
+          "median": 12.0,
+          "min": 12,
+          "observed": 48,
+          "p25": 12,
+          "p75": 12
+        },
+        "towerOreWalks": {
+          "count": 240,
+          "max": 5,
+          "median": 2.0,
+          "min": 1,
+          "observed": 240,
+          "p25": 1,
+          "p75": 3
+        },
+        "towerSites": {
+          "count": 24,
+          "max": 10,
+          "median": 10.0,
+          "min": 10,
+          "observed": 24,
+          "p25": 10,
+          "p75": 10
+        }
+      },
+      "sizes": {
+        "24": 4,
+        "28": 4,
+        "32": 8,
+        "36": 4,
+        "40": 4
+      },
+      "types": {
+        "corridor": 6,
+        "island": 6,
+        "maze": 6,
+        "open": 6
+      }
+    },
+    {
+      "bySize": {
+        "24": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 38,
+            "median": 38.0,
+            "min": 38,
+            "observed": 4,
+            "p25": 38,
+            "p75": 38
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 20,
+            "median": 3.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 6
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 494,
+            "median": 460.0,
+            "min": 374,
+            "observed": 4,
+            "p25": 374,
+            "p75": 478
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 8,
+            "median": 4.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 2,
+            "p75": 5
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 1.5833333333333333,
+            "median": 1.5833333333333333,
+            "min": 1.5833333333333333,
+            "observed": 4,
+            "p25": 1.5833333333333333,
+            "p75": 1.5833333333333333
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 88,
+            "median": 17.0,
+            "min": 8,
+            "observed": 4,
+            "p25": 8,
+            "p75": 24
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "28": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 54,
+            "median": 48.0,
+            "min": 46,
+            "observed": 4,
+            "p25": 46,
+            "p75": 50
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 30,
+            "median": 11.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 16
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 690,
+            "median": 656.0,
+            "min": 546,
+            "observed": 4,
+            "p25": 546,
+            "p75": 678
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 7,
+            "median": 4.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 1.9285714285714286,
+            "median": 1.7142857142857144,
+            "min": 1.6428571428571428,
+            "observed": 4,
+            "p25": 1.6428571428571428,
+            "p75": 1.7857142857142858
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 114,
+            "median": 24.0,
+            "min": 4,
+            "observed": 4,
+            "p25": 4,
+            "p75": 38
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 3,
+            "median": 1.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "32": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 8,
+            "max": 112,
+            "median": 56.0,
+            "min": 54,
+            "observed": 8,
+            "p25": 54,
+            "p75": 76
+          },
+          "baseRouteBottlenecks": {
+            "count": 8,
+            "max": 48,
+            "median": 0.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 0,
+            "p75": 6
+          },
+          "groundCells": {
+            "count": 8,
+            "max": 918,
+            "median": 884.0,
+            "min": 754,
+            "observed": 8,
+            "p25": 756,
+            "p75": 910
+          },
+          "homeOreWalks": {
+            "count": 96,
+            "max": 12,
+            "median": 5.0,
+            "min": 2,
+            "observed": 96,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 8,
+          "normalizedBasePath": {
+            "count": 8,
+            "max": 3.5,
+            "median": 1.75,
+            "min": 1.6875,
+            "observed": 8,
+            "p25": 1.6875,
+            "p75": 2.375
+          },
+          "singleCellBottlenecks": {
+            "count": 8,
+            "max": 90,
+            "median": 10.0,
+            "min": 2,
+            "observed": 8,
+            "p25": 2,
+            "p75": 14
+          },
+          "spawnGround": {
+            "count": 16,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 16,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 80,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 80,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 8,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 8,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "36": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 62,
+            "median": 62.0,
+            "min": 62,
+            "observed": 4,
+            "p25": 62,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 24,
+            "median": 0.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 1178,
+            "median": 1144.0,
+            "min": 994,
+            "observed": 4,
+            "p25": 994,
+            "p75": 1174
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 12,
+            "median": 4.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 1.7222222222222223,
+            "median": 1.7222222222222223,
+            "min": 1.7222222222222223,
+            "observed": 4,
+            "p25": 1.7222222222222223,
+            "p75": 1.7222222222222223
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 86,
+            "median": 7.0,
+            "min": 4,
+            "observed": 4,
+            "p25": 4,
+            "p75": 10
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "40": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 80,
+            "median": 71.0,
+            "min": 70,
+            "observed": 4,
+            "p25": 70,
+            "p75": 72
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 26,
+            "median": 0.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 1470,
+            "median": 1434.0,
+            "min": 1266,
+            "observed": 4,
+            "p25": 1266,
+            "p75": 1466
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 9,
+            "median": 4.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 2,
+            "p75": 5
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 2.0,
+            "median": 1.775,
+            "min": 1.75,
+            "observed": 4,
+            "p25": 1.75,
+            "p75": 1.8
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 86,
+            "median": 4.0,
+            "min": 2,
+            "observed": 4,
+            "p25": 2,
+            "p75": 6
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "byType": {
+        "corridor": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 104,
+            "median": 58.0,
+            "min": 38,
+            "observed": 6,
+            "p25": 46,
+            "p75": 80
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 6,
+            "median": 3.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 0,
+            "p75": 6
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1470,
+            "median": 910.0,
+            "min": 478,
+            "observed": 6,
+            "p25": 678,
+            "p75": 1174
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 9,
+            "median": 4.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 3.25,
+            "median": 1.7048611111111112,
+            "min": 1.5833333333333333,
+            "observed": 6,
+            "p25": 1.6428571428571428,
+            "p75": 2.0
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 10,
+            "median": 6.0,
+            "min": 2,
+            "observed": 6,
+            "p25": 2,
+            "p75": 10
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 5,
+            "median": 1.5,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "island": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 70,
+            "median": 56.0,
+            "min": 38,
+            "observed": 6,
+            "p25": 50,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 16,
+            "median": 0.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1402,
+            "median": 858.0,
+            "min": 442,
+            "observed": 6,
+            "p25": 634,
+            "p75": 1114
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 8,
+            "median": 4.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 1.8125,
+            "median": 1.7361111111111112,
+            "min": 1.5833333333333333,
+            "observed": 6,
+            "p25": 1.6875,
+            "p75": 1.7857142857142858
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 38,
+            "median": 13.0,
+            "min": 2,
+            "observed": 6,
+            "p25": 10,
+            "p75": 24
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "maze": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 112,
+            "median": 67.0,
+            "min": 38,
+            "observed": 6,
+            "p25": 54,
+            "p75": 76
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 48,
+            "median": 28.0,
+            "min": 20,
+            "observed": 6,
+            "p25": 24,
+            "p75": 40
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1266,
+            "median": 755.0,
+            "min": 374,
+            "observed": 6,
+            "p25": 546,
+            "p75": 994
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 12,
+            "median": 4.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 2,
+            "p75": 6
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 3.5,
+            "median": 1.8642857142857143,
+            "min": 1.5833333333333333,
+            "observed": 6,
+            "p25": 1.7222222222222223,
+            "p75": 2.375
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 114,
+            "median": 87.0,
+            "min": 82,
+            "observed": 6,
+            "p25": 86,
+            "p75": 90
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 5,
+            "median": 1.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "open": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 70,
+            "median": 54.0,
+            "min": 38,
+            "observed": 6,
+            "p25": 46,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 0,
+            "median": 0.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1466,
+            "median": 918.0,
+            "min": 494,
+            "observed": 6,
+            "p25": 690,
+            "p75": 1178
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 6,
+            "median": 5.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 2,
+            "p75": 6
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 1.75,
+            "median": 1.6875,
+            "min": 1.5833333333333333,
+            "observed": 6,
+            "p25": 1.6428571428571428,
+            "p75": 1.7222222222222223
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 8,
+            "median": 5.0,
+            "min": 2,
+            "observed": 6,
+            "p25": 4,
+            "p75": 8
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "mapSet": "grading",
+      "mapSetSha256": "7362da67fd6d52b097adaa0f909f2762a9af0434c712ae4b7936a6c05d1e8c05",
+      "overall": {
+        "allLayoutsPassed": true,
+        "basePath": {
+          "count": 24,
+          "max": 112,
+          "median": 56.0,
+          "min": 38,
+          "observed": 24,
+          "p25": 46,
+          "p75": 70
+        },
+        "baseRouteBottlenecks": {
+          "count": 24,
+          "max": 48,
+          "median": 0.0,
+          "min": 0,
+          "observed": 24,
+          "p25": 0,
+          "p75": 16
+        },
+        "groundCells": {
+          "count": 24,
+          "max": 1470,
+          "median": 884.0,
+          "min": 374,
+          "observed": 24,
+          "p25": 634,
+          "p75": 1114
+        },
+        "homeOreWalks": {
+          "count": 288,
+          "max": 12,
+          "median": 4.0,
+          "min": 2,
+          "observed": 288,
+          "p25": 3,
+          "p75": 6
+        },
+        "maps": 24,
+        "normalizedBasePath": {
+          "count": 24,
+          "max": 3.5,
+          "median": 1.7222222222222223,
+          "min": 1.5833333333333333,
+          "observed": 24,
+          "p25": 1.6428571428571428,
+          "p75": 1.8
+        },
+        "singleCellBottlenecks": {
+          "count": 24,
+          "max": 114,
+          "median": 10.0,
+          "min": 2,
+          "observed": 24,
+          "p25": 4,
+          "p75": 38
+        },
+        "spawnGround": {
+          "count": 48,
+          "max": 12,
+          "median": 12.0,
+          "min": 12,
+          "observed": 48,
+          "p25": 12,
+          "p75": 12
+        },
+        "towerOreWalks": {
+          "count": 240,
+          "max": 5,
+          "median": 2.0,
+          "min": 1,
+          "observed": 240,
+          "p25": 1,
+          "p75": 2
+        },
+        "towerSites": {
+          "count": 24,
+          "max": 10,
+          "median": 10.0,
+          "min": 10,
+          "observed": 24,
+          "p25": 10,
+          "p75": 10
+        }
+      },
+      "sizes": {
+        "24": 4,
+        "28": 4,
+        "32": 8,
+        "36": 4,
+        "40": 4
+      },
+      "types": {
+        "corridor": 6,
+        "island": 6,
+        "maze": 6,
+        "open": 6
+      }
+    },
+    {
+      "bySize": {
+        "24": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 46,
+            "median": 39.0,
+            "min": 38,
+            "observed": 4,
+            "p25": 38,
+            "p75": 40
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 24,
+            "median": 0.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 494,
+            "median": 460.0,
+            "min": 374,
+            "observed": 4,
+            "p25": 374,
+            "p75": 478
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 10,
+            "median": 4.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 2,
+            "p75": 5
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 1.9166666666666667,
+            "median": 1.625,
+            "min": 1.5833333333333333,
+            "observed": 4,
+            "p25": 1.5833333333333333,
+            "p75": 1.6666666666666667
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 104,
+            "median": 12.0,
+            "min": 4,
+            "observed": 4,
+            "p25": 4,
+            "p75": 16
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 6,
+            "median": 1.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "28": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 110,
+            "median": 48.0,
+            "min": 46,
+            "observed": 4,
+            "p25": 46,
+            "p75": 50
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 30,
+            "median": 12.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 24
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 690,
+            "median": 656.0,
+            "min": 546,
+            "observed": 4,
+            "p25": 546,
+            "p75": 678
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 8,
+            "median": 5.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 3.9285714285714284,
+            "median": 1.7142857142857144,
+            "min": 1.6428571428571428,
+            "observed": 4,
+            "p25": 1.6428571428571428,
+            "p75": 1.7857142857142858
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 110,
+            "median": 25.0,
+            "min": 4,
+            "observed": 4,
+            "p25": 4,
+            "p75": 44
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 3,
+            "median": 1.5,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "32": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 8,
+            "max": 102,
+            "median": 54.0,
+            "min": 54,
+            "observed": 8,
+            "p25": 54,
+            "p75": 54
+          },
+          "baseRouteBottlenecks": {
+            "count": 8,
+            "max": 40,
+            "median": 0.0,
+            "min": 0,
+            "observed": 8,
+            "p25": 0,
+            "p75": 6
+          },
+          "groundCells": {
+            "count": 8,
+            "max": 918,
+            "median": 884.0,
+            "min": 754,
+            "observed": 8,
+            "p25": 754,
+            "p75": 910
+          },
+          "homeOreWalks": {
+            "count": 96,
+            "max": 12,
+            "median": 4.0,
+            "min": 2,
+            "observed": 96,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 8,
+          "normalizedBasePath": {
+            "count": 8,
+            "max": 3.1875,
+            "median": 1.6875,
+            "min": 1.6875,
+            "observed": 8,
+            "p25": 1.6875,
+            "p75": 1.6875
+          },
+          "singleCellBottlenecks": {
+            "count": 8,
+            "max": 92,
+            "median": 12.0,
+            "min": 4,
+            "observed": 8,
+            "p25": 4,
+            "p75": 18
+          },
+          "spawnGround": {
+            "count": 16,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 16,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 80,
+            "max": 5,
+            "median": 2.0,
+            "min": 1,
+            "observed": 80,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 8,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 8,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "36": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 92,
+            "median": 62.0,
+            "min": 62,
+            "observed": 4,
+            "p25": 62,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 28,
+            "median": 0.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 1178,
+            "median": 1144.0,
+            "min": 994,
+            "observed": 4,
+            "p25": 994,
+            "p75": 1174
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 11,
+            "median": 3.5,
+            "min": 2,
+            "observed": 48,
+            "p25": 2,
+            "p75": 5
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 2.5555555555555554,
+            "median": 1.7222222222222223,
+            "min": 1.7222222222222223,
+            "observed": 4,
+            "p25": 1.7222222222222223,
+            "p75": 1.7222222222222223
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 94,
+            "median": 7.0,
+            "min": 2,
+            "observed": 4,
+            "p25": 2,
+            "p75": 10
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 3,
+            "median": 1.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "40": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 4,
+            "max": 136,
+            "median": 75.0,
+            "min": 70,
+            "observed": 4,
+            "p25": 70,
+            "p75": 80
+          },
+          "baseRouteBottlenecks": {
+            "count": 4,
+            "max": 24,
+            "median": 0.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 4,
+            "max": 1470,
+            "median": 1434.0,
+            "min": 1266,
+            "observed": 4,
+            "p25": 1266,
+            "p75": 1466
+          },
+          "homeOreWalks": {
+            "count": 48,
+            "max": 7,
+            "median": 4.0,
+            "min": 2,
+            "observed": 48,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 4,
+          "normalizedBasePath": {
+            "count": 4,
+            "max": 3.4,
+            "median": 1.875,
+            "min": 1.75,
+            "observed": 4,
+            "p25": 1.75,
+            "p75": 2.0
+          },
+          "singleCellBottlenecks": {
+            "count": 4,
+            "max": 86,
+            "median": 2.0,
+            "min": 0,
+            "observed": 4,
+            "p25": 0,
+            "p75": 4
+          },
+          "spawnGround": {
+            "count": 8,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 8,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 40,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 40,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 4,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 4,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "byType": {
+        "corridor": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 136,
+            "median": 56.0,
+            "min": 46,
+            "observed": 6,
+            "p25": 46,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 6,
+            "median": 0.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1470,
+            "median": 910.0,
+            "min": 478,
+            "observed": 6,
+            "p25": 678,
+            "p75": 1174
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 7,
+            "median": 4.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 3.4,
+            "median": 1.7673611111111112,
+            "min": 1.6428571428571428,
+            "observed": 6,
+            "p25": 1.6875,
+            "p75": 1.9166666666666667
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 8,
+            "median": 4.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 4,
+            "p75": 8
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "island": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 110,
+            "median": 58.0,
+            "min": 40,
+            "observed": 6,
+            "p25": 54,
+            "p75": 70
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 30,
+            "median": 0.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1402,
+            "median": 858.0,
+            "min": 442,
+            "observed": 6,
+            "p25": 634,
+            "p75": 1114
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 8,
+            "median": 4.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 3,
+            "p75": 6
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 3.9285714285714284,
+            "median": 1.7048611111111112,
+            "min": 1.6666666666666667,
+            "observed": 6,
+            "p25": 1.6875,
+            "p75": 1.75
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 44,
+            "median": 15.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 2,
+            "p75": 18
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 5,
+            "median": 1.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "maze": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 102,
+            "median": 67.0,
+            "min": 38,
+            "observed": 6,
+            "p25": 50,
+            "p75": 92
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 40,
+            "median": 24.0,
+            "min": 22,
+            "observed": 6,
+            "p25": 24,
+            "p75": 28
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1266,
+            "median": 754.0,
+            "min": 374,
+            "observed": 6,
+            "p25": 546,
+            "p75": 994
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 12,
+            "median": 3.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 2,
+            "p75": 5
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 3.1875,
+            "median": 1.8928571428571428,
+            "min": 1.5833333333333333,
+            "observed": 6,
+            "p25": 1.6875,
+            "p75": 2.5555555555555554
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 110,
+            "median": 93.0,
+            "min": 74,
+            "observed": 6,
+            "p25": 86,
+            "p75": 104
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 6,
+            "median": 2.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 2
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        },
+        "open": {
+          "allLayoutsPassed": true,
+          "basePath": {
+            "count": 6,
+            "max": 70,
+            "median": 54.0,
+            "min": 38,
+            "observed": 6,
+            "p25": 46,
+            "p75": 62
+          },
+          "baseRouteBottlenecks": {
+            "count": 6,
+            "max": 0,
+            "median": 0.0,
+            "min": 0,
+            "observed": 6,
+            "p25": 0,
+            "p75": 0
+          },
+          "groundCells": {
+            "count": 6,
+            "max": 1466,
+            "median": 918.0,
+            "min": 494,
+            "observed": 6,
+            "p25": 690,
+            "p75": 1178
+          },
+          "homeOreWalks": {
+            "count": 72,
+            "max": 8,
+            "median": 5.0,
+            "min": 2,
+            "observed": 72,
+            "p25": 3,
+            "p75": 5
+          },
+          "maps": 6,
+          "normalizedBasePath": {
+            "count": 6,
+            "max": 1.75,
+            "median": 1.6875,
+            "min": 1.5833333333333333,
+            "observed": 6,
+            "p25": 1.6428571428571428,
+            "p75": 1.7222222222222223
+          },
+          "singleCellBottlenecks": {
+            "count": 6,
+            "max": 10,
+            "median": 5.0,
+            "min": 4,
+            "observed": 6,
+            "p25": 4,
+            "p75": 10
+          },
+          "spawnGround": {
+            "count": 12,
+            "max": 12,
+            "median": 12.0,
+            "min": 12,
+            "observed": 12,
+            "p25": 12,
+            "p75": 12
+          },
+          "towerOreWalks": {
+            "count": 60,
+            "max": 3,
+            "median": 2.0,
+            "min": 1,
+            "observed": 60,
+            "p25": 1,
+            "p75": 3
+          },
+          "towerSites": {
+            "count": 6,
+            "max": 10,
+            "median": 10.0,
+            "min": 10,
+            "observed": 6,
+            "p25": 10,
+            "p75": 10
+          }
+        }
+      },
+      "mapSet": "holdout",
+      "mapSetSha256": "d4f137feb73f4593021e1116f78a6ad84e155e848e620c794be3cf21d3a0a733",
+      "overall": {
+        "allLayoutsPassed": true,
+        "basePath": {
+          "count": 24,
+          "max": 136,
+          "median": 54.0,
+          "min": 38,
+          "observed": 24,
+          "p25": 46,
+          "p75": 70
+        },
+        "baseRouteBottlenecks": {
+          "count": 24,
+          "max": 40,
+          "median": 0.0,
+          "min": 0,
+          "observed": 24,
+          "p25": 0,
+          "p75": 22
+        },
+        "groundCells": {
+          "count": 24,
+          "max": 1470,
+          "median": 884.0,
+          "min": 374,
+          "observed": 24,
+          "p25": 634,
+          "p75": 1114
+        },
+        "homeOreWalks": {
+          "count": 288,
+          "max": 12,
+          "median": 4.0,
+          "min": 2,
+          "observed": 288,
+          "p25": 3,
+          "p75": 6
+        },
+        "maps": 24,
+        "normalizedBasePath": {
+          "count": 24,
+          "max": 3.9285714285714284,
+          "median": 1.7222222222222223,
+          "min": 1.5833333333333333,
+          "observed": 24,
+          "p25": 1.6875,
+          "p75": 1.8125
+        },
+        "singleCellBottlenecks": {
+          "count": 24,
+          "max": 110,
+          "median": 9.0,
+          "min": 0,
+          "observed": 24,
+          "p25": 4,
+          "p75": 44
+        },
+        "spawnGround": {
+          "count": 48,
+          "max": 12,
+          "median": 12.0,
+          "min": 12,
+          "observed": 48,
+          "p25": 12,
+          "p75": 12
+        },
+        "towerOreWalks": {
+          "count": 240,
+          "max": 6,
+          "median": 2.0,
+          "min": 1,
+          "observed": 240,
+          "p25": 1,
+          "p75": 2
+        },
+        "towerSites": {
+          "count": 24,
+          "max": 10,
+          "median": 10.0,
+          "min": 10,
+          "observed": 24,
+          "p25": 10,
+          "p75": 10
+        }
+      },
+      "sizes": {
+        "24": 4,
+        "28": 4,
+        "32": 8,
+        "36": 4,
+        "40": 4
+      },
+      "types": {
+        "corridor": 6,
+        "island": 6,
+        "maze": 6,
+        "open": 6
+      }
+    }
+  ],
+  "usage": {
+    "fullPhaseCpuHours": null,
+    "processCpuNs": 3408580800,
+    "scope": "generation, two layout checkers, five-set summaries and holdout regeneration; no bots"
+  },
+  "validation": {
+    "allFiveSetsDisjoint": true,
+    "holdoutMaps": 24,
+    "holdoutRegenerationIdentical": true,
+    "independentHomeWalkChecks": 1392,
+    "independentTowerWalkChecks": 1160,
+    "preregistered": true
+  }
+}

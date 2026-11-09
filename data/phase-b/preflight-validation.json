@@ -1,0 +1,133 @@
+{
+  "cpuBoundary": "test host and reaped child counters are separate diagnostics, not complete phase totals",
+  "fullCpuHours": null,
+  "finalPrivateRegistry": {
+    "allExistingDigestsVerified": true,
+    "registeredFiles": 138043,
+    "sha256": "9f8e41f6ba509f84ff91c49de9fc29fbd684c6d28c2464e53d71fac1359cc368"
+  },
+  "holdout": {
+    "executionHead": "6da1630",
+    "gamesPlayed": 0,
+    "maps": 24,
+    "registryCheckedBeforeGeneration": true,
+    "rejectedLayoutCandidates": 0,
+    "toolsCommittedBeforePlanAndBuild": true
+  },
+  "lsp": {
+    "diagnostics": 0,
+    "files": 8
+  },
+  "priorPrivateRegistry": {
+    "allExistingDigestsVerified": true,
+    "registeredFiles": 138039,
+    "scope": "checkpoint before adding anchor/provenance artifacts; not a final registry digest",
+    "sha256": "1509c49e0ec8e589fd38c7943907c25f05376e57c625bf7dfaa2f62cb3abbe56"
+  },
+  "schemaVersion": 1,
+  "scope": "Final holdout tooling and read-only L0 setup diagnostic; synthetic tests are not B experiment games",
+  "tests": [
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "final-map-tools",
+      "measuredReapedChildrenCpuSeconds": 0.0,
+      "measuredTestProcessCpuSeconds": 0.840242,
+      "measuredTestWallSeconds": 0.849860472,
+      "passed": true,
+      "pattern": "test_final_holdout_maps.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 8
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "post-maps-full",
+      "measuredReapedChildrenCpuSeconds": 4.922788,
+      "measuredTestProcessCpuSeconds": 35.2310279,
+      "measuredTestWallSeconds": 100.363106185,
+      "passed": true,
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 245
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "anchor-tests",
+      "measuredReapedChildrenCpuSeconds": 0.0,
+      "measuredTestProcessCpuSeconds": 0.0002406,
+      "measuredTestWallSeconds": 0.0002405,
+      "passed": true,
+      "pattern": "test_ladder_anchors.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 4
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "final-full",
+      "measuredReapedChildrenCpuSeconds": 4.157233,
+      "measuredTestProcessCpuSeconds": 35.3467869,
+      "measuredTestWallSeconds": 100.028408067,
+      "passed": true,
+      "pattern": "test_*.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 249
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "final_holdout_maps-hashseed1",
+      "measuredReapedChildrenCpuSeconds": 0.0,
+      "measuredTestProcessCpuSeconds": 0.7398597,
+      "measuredTestWallSeconds": 0.740019425,
+      "passed": true,
+      "pattern": "test_final_holdout_maps.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 8
+    },
+    {
+      "errors": 0,
+      "failures": 0,
+      "kernel": "6.18.40.1-microsoft-standard-WSL2",
+      "label": "ladder_anchors-hashseed1",
+      "measuredReapedChildrenCpuSeconds": 0.0,
+      "measuredTestProcessCpuSeconds": 0.0002111,
+      "measuredTestWallSeconds": 0.0002109,
+      "passed": true,
+      "pattern": "test_ladder_anchors.py",
+      "python": "3.13.15",
+      "schemaVersion": 1,
+      "scope": "trusted tests; bots/compilers execute in bwrap or plain inside an explicit outer bwrap; not phase-A acceptance",
+      "skipped": 0,
+      "system": "Linux",
+      "testsRun": 4
+    }
+  ]
+}

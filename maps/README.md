@@ -2,7 +2,9 @@
 
 当前包含 public 40 张（open/corridor/island/maze 各 10 张）和 scrimmage 4 张（每类 1 张）。public 每类的边长为 24、28、32、36、40，各两张；scrimmage 为 32。全部中心旋转对称，地图文件直接复用 MAP/ORE/END 格式。
 
-2026-11-07已升级为生成器v2，并按D5步行距离要求重新生成、独立BFS检查及逐字节再生验证。**布局检查本身不代表平衡验收**：其后standard-1/zoo v15已用全部40张public图通过D6数值条件与公平检查，见 `reports/phase-A.md`；等待阶段审查，不作为留出地图保证。原 `tests/fixtures/smoke.map` 仍只是规则/管道测试图，不混入正式数量。
+2026-11-07已升级为生成器v2，并按D5步行距离要求重新生成、独立BFS检查及逐字节再生验证。**布局检查本身不代表平衡验收**：其后standard-1/zoo v15已用全部40张public图通过D6数值条件与公平检查，见 `reports/phase-A.md`，A已获审查通过；不作为留出地图保证。原 `tests/fixtures/smoke.map` 仍只是规则/管道测试图，不混入正式数量。
+
+B阶段原calibration/grading各24张仍在`private/maps/`，全新holdout24张另放`private/holdout-maps/`，旧资产和catalog不改。新holdout已先登记计划、后生成，全部布局及独立复核通过；五集合对照见`data/phase-b/final-holdout-maps.json`和`reports/phase-B-ladder-preflight.md`。holdout目前对局数0，B末之前不得用于对局或调参。
 
 ## 使用
 

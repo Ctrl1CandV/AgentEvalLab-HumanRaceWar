@@ -1,0 +1,89 @@
+{
+  "datasets": [
+    {
+      "draws": 0,
+      "games": 80,
+      "losses": 10,
+      "mapClusterCI95": [
+        0.775,
+        0.975
+      ],
+      "mapSet": "public",
+      "maps": 40,
+      "oneLossOneDraw": 0,
+      "oneWinOneDraw": 0,
+      "scoreRate": 0.875,
+      "splitWins": 0,
+      "transformedCI95": [
+        {
+          "unbounded": null,
+          "value": 214.84767375797915
+        },
+        {
+          "unbounded": null,
+          "value": 636.4258428105995
+        }
+      ],
+      "twoBotEloDifference": {
+        "unbounded": null,
+        "value": 338.0392160057027
+      },
+      "twoDraws": 0,
+      "twoLosses": 5,
+      "twoWins": 35,
+      "wins": 70
+    },
+    {
+      "draws": 0,
+      "games": 48,
+      "losses": 6,
+      "mapClusterCI95": [
+        0.7083333333333334,
+        1.0
+      ],
+      "mapSet": "calibration",
+      "maps": 24,
+      "oneLossOneDraw": 0,
+      "oneWinOneDraw": 0,
+      "scoreRate": 0.875,
+      "splitWins": 0,
+      "transformedCI95": [
+        {
+          "unbounded": null,
+          "value": 154.14035254560685
+        },
+        {
+          "unbounded": "positive",
+          "value": null
+        }
+      ],
+      "twoBotEloDifference": {
+        "unbounded": null,
+        "value": 338.0392160057027
+      },
+      "twoDraws": 0,
+      "twoLosses": 3,
+      "twoWins": 21,
+      "wins": 42
+    }
+  ],
+  "decision": "needs composition review before ladder construction; do not relabel pairwise diagnostics as a full ladder gate failure",
+  "design": {
+    "namedL0": [
+      "Z-random",
+      "Z-miner"
+    ],
+    "twoBotExpectedScoreAt80": 0.6131368201531431,
+    "withinLevelMaximumEloDifference": 80
+  },
+  "focus": "Z-miner vs Z-random, frozen v15; no new games",
+  "fullLadderCalibrationPerformed": false,
+  "requestedDecision": "whether L0 membership may change while preserving frozen v15 zoo and the existing 80 Elo target; no exception applied",
+  "schemaVersion": 1,
+  "scope": "Read-only B setup check for the two named, frozen L0 anchors.\n\nA two-bot Bradley-Terry estimate is a diagnostic, NOT a substitute for the full\nladder fit. A large conflict between named anchors and the within-level target\nrequires a composition decision; this tool never changes membership or gates.\n",
+  "usage": {
+    "fullPhaseCpuHours": null,
+    "processCpuNs": 388336500,
+    "scope": "archive validation and pairwise/map-cluster diagnostic only; no bots"
+  }
+}

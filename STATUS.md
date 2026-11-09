@@ -1,8 +1,8 @@
 # 状态
 
-更新：2026-11-08。**第二份B审查的R1/R2及N1/N2/N3已完成。N1全部失败项仅差1图，新留出判定生效，v15前置复核按新标准通过；N2有反例，不改M、不运行v16。下一步生成/检查全新holdout，不打对局。D22仍拒绝，没有阶梯，B未完成，C未启动。**
+更新：2026-11-08。**第二份B审查的R1/R2及N1/N2/N3已完成。N1全部失败项仅差1图，新留出判定生效，v15前置复核按新标准通过；N2有反例，不改M、不运行v16。全新holdout 24图已冻结、布局及独立复核通过，未打对局。准备阶梯时发现L0指定两bot不接近，现按BRIEF 3.3停下等待B-L0-001构成裁定。D22仍拒绝，没有完整阶梯，B未完成，C未启动。**
 
-最新分析：[`reports/phase-B-review-analysis.md`](reports/phase-B-review-analysis.md)；D22报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。D22的一轮授权已用完，standard-1仍为伤害20。后续权限以新审查第六节及用户明确授权为准：N1过关才启用新标准；N2成立才可选另存v16小修M；前置/新holdout布局检查满足后可继续B，不自动改游戏参数或提前使用holdout。
+最新停点：[`reports/phase-B-ladder-preflight.md`](reports/phase-B-ladder-preflight.md)；N1/N2/N3：[`reports/phase-B-review-analysis.md`](reports/phase-B-review-analysis.md)；D22报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。D22的一轮授权已用完，standard-1仍为伤害20。后续权限以新审查第六节及用户明确授权为准：N1过关才启用新标准；N2成立才可选另存v16小修M；前置/新holdout布局检查满足后可继续B，不自动改游戏参数或提前使用holdout。
 
 - A已获审查通过：[`inbox/2026-11-08-phase-a-accepted.md`](inbox/2026-11-08-phase-a-accepted.md)。standard-1、游戏引擎/SDK和动物园v15未改；本轮只按R1修改运行器的预算复用，框架指纹会变化，不能再宣称整个arena字节未变。
 - 首次留出报告：[`reports/phase-B-holdout.md`](reports/phase-B-holdout.md)；原始结论和数据保留。D22数据在[`data/phase-b/damage22/`](data/phase-b/damage22/)。两份都是失败停点报告，不是B完成报告。
@@ -21,9 +21,16 @@
 | 必须分析 N3 经济/骚扰的类型克制 | `data/phase-b/type-counters.json`按类型给原v15双胜/双负计数 | 两套均open/corridor偏经济、maze偏骚扰；island跨集反转。总体24/48是优势抵消 | 已完成；不把小样本类型标签当普遍规律 |
 | 已批准的条件式留出标准 | DESIGN 11.5、BRIEF 5.0按审查第三节写入；N1完成后启用 | 原v15 calibration按新标准全部通过；public 10.2不改，D22仍拒绝，第4/6/7项仍点估计 | 已生效；不改写旧判定 |
 | 可选建议 M v16 | 按N2结果保留v15及全部10个bot，不开展可选试验 | 冻结源码不变，没有新增5888局 | 已跳过；不是漏做必需矩阵 |
-| 必须项 新holdout与后续B | DESIGN 7.3/17、BRIEF规定24图；`tools/prepare_final_holdout.py`分plan/build，先登记再生成，独立复核与五集合汇总；B末才用一次 | 工具8项专项通过、2文件LSP零诊断；尚未生成/打对局 | 前置已满足，下一步登记/生成；B末报告后等审查，C未授权 |
+| 必须项 新holdout与后续B | `tools/prepare_final_holdout.py`分plan/build；从干净`6da1630`先登记新种子，再生成24图；原48张隐藏图和catalog不变 | 五集合116图互异，独立检查1392条家门矿/1160个塔基，新24图再生一致；`data/phase-b/final-holdout-maps.json`只含汇总，holdout对局0 | 布局前置已完成；后续阶梯因新问题B-L0-001暂停，未做最终复核，C未授权 |
+| 新问题 B-L0-001（BRIEF 3.3） | L0指定Z-random/Z-miner与同级≤80 Elo的目标存在明显不一致；`tools/check_ladder_anchors.py`只读已有资料 | 两套基线Z-miner均胜87.5%；两bot BT差338.04 Elo；不是全阶梯联合拟合或正式校准失败。证据`data/phase-b/ladder-anchor-preflight.json` | 不擅改构成/豁免门槛；等待是否允许另选/另做L0基线的裁定 |
 
 新增分析验证：完整237项在hashseed=0通过，零失败/错误/跳过；包含新增9项的27项`test_review_*.py`在hashseed=1通过，4文件LSP零诊断。见`data/phase-b/analysis-validation.json`。原始证据只留private；N1/N3约0.000106宿主CPU小时，N2约0.001718宿主和0.000909诊断bot CPU小时，编译及完整总量未知。没有新平衡对局，也没有重测速度系数。
+
+## 需要决定的事
+
+**B-L0-001：DESIGN 11.1的L0名字是否必须固定？** 已有public/calibration中Z-miner对Z-random分别70/80、42/48，两bot BT差约338 Elo，明显不像同级接近。尚无完整阶梯，不能把两bot诊断冒充联合校准失败；但也不能无说明地更换指定bot。建议允许保留冻结v15动物园，为L0另选/另做强度接近且风格不同的基线，仍按完整校准执行原80 Elo门槛。未获得该裁定前停在这里，不重新申请已经获准的N1/holdout中间审查，也不自行改阈值。
+
+最终验证：完整249项（hashseed=0）通过，零失败/错误/跳过；地图8项及锚点4项另在hashseed=1通过，8个分析/地图/锚点Python文件LSP零诊断。`data/phase-b/preflight-validation.json`保留测试及计量汇总。地图生成/复核/再生约0.000947 CPU小时，锚点只读分析约0.000108小时；登记和完整阶段总量未知。新登记后138,043个私有文件摘要全过；原始文件与失败证据全部保留，只本地提交、未推送。
 
 ## 首份2026-11-08审查逐条回复（历史）
 
