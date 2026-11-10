@@ -1,0 +1,124 @@
+{
+  "games": 1280,
+  "halfPoints": 712,
+  "outcomes": {
+    "L": 924,
+    "W": 356
+  },
+  "scoreRate": 0.278125,
+  "allReplaysVerified": true,
+  "botFaultGames": 0,
+  "protocolWarnings": 0,
+  "sourceSha256": "7de22bd0374027dd8cb952d820f68f97352adca9e406969e43e73a90bc151e9f",
+  "eloRelativeToM": -636.4258428105996,
+  "eloInterval95": [
+    "-infinity",
+    -489.8937751415378
+  ],
+  "finiteFullMLE": true,
+  "byPublicBot": {
+    "M-balanced": {
+      "L": 156,
+      "W": 4
+    },
+    "Z-eco": {
+      "L": 76,
+      "W": 84
+    },
+    "Z-harass": {
+      "L": 70,
+      "W": 90
+    },
+    "Z-rush": {
+      "L": 109,
+      "W": 51
+    },
+    "Z-towers": {
+      "L": 37,
+      "W": 123
+    }
+  },
+  "retainedAsFirstAuthorComparisonBaseline": true,
+  "strongMainlineGoalPassed": false,
+  "replacesAstraControl": false,
+  "previousSameAuthorVersion": null,
+  "formalLadderAcceptance": false,
+  "usage": {
+    "analysisProcessCpuNs": 609929300,
+    "botCpuNs": 667610728700,
+    "fullPhaseCpuHours": null,
+    "matchHarnessCpuNs": 413009166500,
+    "replayVerificationCpuNs": 137630655000
+  },
+  "schemaVersion": 1,
+  "scope": "D-c01 first author dev evaluation, not final strength acceptance",
+  "code": "D-c01",
+  "style": "control",
+  "maps": 80,
+  "opponents": 8,
+  "sourceModified": false,
+  "timing": {
+    "TURN_CPU_MS": 60,
+    "INIT_CPU_MS": 1200,
+    "BANK_MS": 1800,
+    "jobs": 6,
+    "wallMarginMs": 300,
+    "cpuHardLimitSeconds": 24,
+    "sandbox": "bwrap",
+    "newBenchmarks": 0
+  },
+  "check": {
+    "passed": true,
+    "turns": 5,
+    "botCpuNs": 27917600,
+    "processCpuNs": 5272100,
+    "scope": "ordinary arena check uses base tool limits, not paired-match calibration; compilation/full tree unknown"
+  },
+  "bootstrap": {
+    "samples": 4000,
+    "seed": 4219,
+    "mapClusters": 80,
+    "starGraphOnly": true,
+    "opponentOpponentGames": 0,
+    "mixedOldCalibrationOrPublicGames": false,
+    "interval95": [
+      "-infinity",
+      -489.8937751415378
+    ],
+    "negativeInfiniteSamples": 201,
+    "positiveInfiniteSamples": 0,
+    "unidentifiedSamples": 0,
+    "finiteFullMLEReplicates": 1548,
+    "processCpuNs": 1263689000,
+    "independentClosedFormCheck": {
+      "all4000ReplicatesMatchIndependentStarClosedForm": true,
+      "maximumAbsoluteFiniteEloError": 2.2957874534768052e-07,
+      "negativeInfiniteSamples": 201,
+      "processCpuNs": 89629800,
+      "replicates": 4000
+    },
+    "multipleTestingCorrection": false
+  },
+  "provenance": {
+    "gitHeadAtRegistration": "19a4fd35192d297296f3365dd6839e2e29343868",
+    "planSha256": "24726e197cd5ff956cb86df9987d270e09cad26b527f65eeae2a85983a1539e7",
+    "timingLockSha256": "b106c1bf2c5d5b6b1751b180bf6c9e8aa091d964ed93f3ba4b38f3b1ed418b48",
+    "originalDeliveryPreserved": true
+  },
+  "modelVersion": null,
+  "actualAuthorSessions": null,
+  "authorshipOrSessionIndependenceVerified": false,
+  "feedbackIssued": true,
+  "nextAuthorTask": "record addendum and read-only r02 plan; no bot edit or execution until user instruction",
+  "calibrationGames": 0,
+  "finalHoldoutGames": 0,
+  "gradingGames": 0,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "limitations": [
+    "Star-graph provisional BT lacks opponent-opponent constraints and is not the existing joint ladder estimate.",
+    "Original data have a finite MLE; separated bootstrap samples are retained, never clipped or discarded.",
+    "Author self-tests are a separate 2616-game historical record, not new builder games or equivalent-budget paired tests.",
+    "Preservation and technical validity do not establish strong-mainline status, model identity or independent session provenance."
+  ]
+}

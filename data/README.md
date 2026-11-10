@@ -4,6 +4,8 @@
 
 ## 当前入口
 
+- [`phase-b/author-intake-D-c01.json`](phase-b/author-intake-D-c01.json)、[`phase-b/author-evaluation-D-c01.json`](phase-b/author-evaluation-D-c01.json)：首份作者交付/旧2616局普查及随后统一1280局评测，原件不改、所有回放核验通过；流程缺项与强度不足如实记录，仅保留同作者首版比较基线，不替换现有控制线，独立会话尚未核实。
+
 - [`phase-b/dev05-checkpoint.json`](phase-b/dev05-checkpoint.json)：dev05完成1440局public和默认逐回合等价核验，下一批启动前因CPU资源暂停；搜索/取舍未完成，不是第三轮拒绝。实现前纯检查见[`phase-b/dev05-preflight.json`](phase-b/dev05-preflight.json)。
 
 - [`phase-b/dev-maps.json`](phase-b/dev-maps.json)：新增80张dev图的布局/再生和六集合不重复检查聚合，无新对局，不含逐图记录。

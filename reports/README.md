@@ -1,5 +1,7 @@
 # 审查报告
 
+- [`phase-B-author-D-c01.md`](phase-B-author-D-c01.md)：首份作者交付原样接收，旧2616局记录普查有流程缺项；统一1280局356/0/924且全核验，仅保留同作者首版基线，强主线目标未达。已发反馈及只读r02计划任务，astra恢复原dev05，不推送。
+
 - [`phase-B-mainlines-dev05-checkpoint.md`](phase-B-mainlines-dev05-checkpoint.md)：dev05完成1440局public及默认逐回合等价核验，第4批在启动前因共享CPU资源暂停；搜索/取舍未完成，非第三轮拒绝，等待错峰协调，不推送。
 
 - [`phase-B-mid-review-step0.md`](phase-B-mid-review-step0.md)：中期审查第0步完成；M1、L1–L6、dev80、两公开工作区及dev05计划就绪，无新对局，先报告目录并停下，不推送。不是B验收。
