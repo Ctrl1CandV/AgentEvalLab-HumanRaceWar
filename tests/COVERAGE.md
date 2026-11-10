@@ -2,6 +2,11 @@
 
 测试入口：`.venv/bin/python tools/run_tests.py`。运行bot和C++编译的测试仍使用bwrap；本宿主不可裸用plain。
 
+## 作者交付接收检查（2026-11-10）
+
+- `tests/test_author_delivery.py`新增6项纯测试，hashseed=0/1均通过：原字节归档/禁止覆盖、摘要缺失/错配/重复/漏文件、链接/特殊文件/额外元数据拒绝、入口格式/体积限制、路径规范化、源码不导入或执行。5个接收/档案检查Python文件LSP零诊断。
+- 这些是接收工具检查，不证明作者独立性、bot运行或强度。实际首份交付及自测核验见`data/phase-b/author-intake-D-c01.json`；原始材料/回放只留private。完整公开套件未重跑。
+
 ## dev05有限搜索实现检查（2026-11-10）
 
 - `tests/test_bounded_search.py`新增8项纯测试：同一进入incumbent的两邻居、一次坐标扫描、严格改善/等分保留/字典序、范围和去重、无效输入在评测前拒绝、异常传播、45%/55%/2pp整数边界及功能门。工具不执行bot或模型调用。
