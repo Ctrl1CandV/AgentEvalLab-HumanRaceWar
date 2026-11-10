@@ -1,6 +1,6 @@
 # B阶段启动交接
 
-原始交接日期2026-11-08；入口说明更新于2026-11-10。**当前dev05已执行1440局public且全部回放/默认等价核验通过，第4批因CPU锁占用在启动前停止；搜索和dev取舍未完成，待用户协调错峰，保留dev02，不自动重跑或删除失败标记。** 先读`STATUS.md`及`reports/phase-B-mainlines-dev05-checkpoint.md`。本页以下第0步停点与`6b8664d`启动快照均为历史，不是当前待办或B完成报告。**2026-11-09中期审查第0步已完成，保留dev02且无新对局：机器锁、L1–L6、dev80、两工作区和dev05计划均就绪；已到先报告目录并停止的约定停点，不推送，由用户推送。** 先读`STATUS.md`、`inbox/2026-11-09-phase-b-mid-review.md`、`reports/phase-B-mid-review-step0.md`及`docs/AUTHORS.md`；第0步当时未启动dev05；用户后来要求继续，执行与资源暂停见上述最新入口，范围仍按`docs/PHASE_B_DEV05_PLAN.md`。下文的“尚无private”“先跑留出”“不得继续建阶梯”以及末尾启动提示均属历史快照，不得据此重做已完成工作或覆盖新授权。D22仍拒绝；后续同机预算改用M1另存的机器绑定封装，保留dev01原锁与全部数值，不重新测速；移机必须重新测量/冻结。public调参、dev取舍/临时BT、calibration仅正式校准，不改参数、不提前使用holdout。工具见`docs/PHASE_B_TOOLS.md`。
+原始交接日期2026-11-08；入口说明更新于2026-11-10。**当前dev05已恢复完成6720public＋80dev，首段37.5%未通过45%门槛，连续三轮未采纳止损；保留dev02，等待用户审查/指示，不追加dev06，不重跑已完成局。D-c01另完成1280局，仅作同作者首版基线，r02仍只在计划阶段。** 先读`STATUS.md`、`reports/phase-B-mainlines-dev05.md`和`reports/phase-B-author-D-c01.md`；原资源停点及失败仍保留，当前没有待自动续跑的批次。本页以下第0步停点与`6b8664d`启动快照均为历史，不是当前待办或B完成报告。**2026-11-09中期审查第0步已完成，保留dev02且无新对局：机器锁、L1–L6、dev80、两工作区和dev05计划均就绪；已到先报告目录并停止的约定停点，不推送，由用户推送。** 先读`STATUS.md`、`inbox/2026-11-09-phase-b-mid-review.md`、`reports/phase-B-mid-review-step0.md`及`docs/AUTHORS.md`；第0步当时未启动dev05；用户后来要求继续，完整执行与三轮止损见上述最新入口，范围仍按`docs/PHASE_B_DEV05_PLAN.md`。下文的“尚无private”“先跑留出”“不得继续建阶梯”以及末尾启动提示均属历史快照，不得据此重做已完成工作或覆盖新授权。D22仍拒绝；后续同机预算改用M1另存的机器绑定封装，保留dev01原锁与全部数值，不重新测速；移机必须重新测量/冻结。public调参、dev取舍/临时BT、calibration仅正式校准，不改参数、不提前使用holdout。工具见`docs/PHASE_B_TOOLS.md`。
 
 ## 1. 当前事实
 

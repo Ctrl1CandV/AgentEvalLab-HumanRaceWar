@@ -1,0 +1,59 @@
+{
+  "standaloneMatchRecords": 198,
+  "authorDebugSelfTests": 171,
+  "publicReferenceMatches": 27,
+  "authorSelfTestOutcomes": {
+    "L": 137,
+    "W": 34
+  },
+  "debugPublic": 129,
+  "debugScrimmage": 42,
+  "referencePublic": 10,
+  "referenceScrimmage": 17,
+  "authorReportedDebugSelfTests": 173,
+  "authorReportedReferenceMatches": 25,
+  "authorRoleCountsMatch": false,
+  "faults": {
+    "compile_failed": 4,
+    "crash": 2
+  },
+  "zeroTurnValidationFaultResults": 4,
+  "protocolWarnings": 0,
+  "additionalValidAuthorSourceSnapshots": 68,
+  "fullKnownAuthorWorkspaceMatchRecords": 2814,
+  "fullKnownAuthorSelfTestRecords": 2787,
+  "allKnownPublicRecords": 2163,
+  "allKnownScrimmageRecords": 651,
+  "deliveredWorkspaceSourceUnchanged": true,
+  "newGames": 0,
+  "engineReruns": 0,
+  "historicalDevelopmentModelOrSessionsStillUnknown": true,
+  "processCpuNs": 1790657400,
+  "botCpuNsFromStandaloneRecords": 35453189600,
+  "fullAuthorCpuHours": null,
+  "schemaVersion": 1,
+  "code": "D-c01",
+  "scope": "additional existing author records, not new builder games or changed delivery",
+  "receivedSupplementSha256": "bf713fbc6bdfa7b32ac9acc84c007959f675bf612b975b2efce5ba15635509c9",
+  "all198StandaloneRecordDigestsHeadersResultsChecked": true,
+  "sourceSnapshotScope": "68 unique valid source snapshots from these standalone records; may overlap versions in the earlier tournament census",
+  "roleCorrection": "two actual public M-v-public-opponent matches were mislabeled as author tests; classify by actual source+SDK identity",
+  "failedFirstCountExpectationPreserved": true,
+  "supplementSessionSelfReportReceived": true,
+  "supplementSessionIndependentlyVerified": false,
+  "historicalDevelopmentAuthorshipStillUnverified": true,
+  "authorNextPlanReceived": true,
+  "authorNextExecutionAuthorized": false,
+  "planClarifications": [
+    "candidate sequence and number of full matrices disagree across plan sections; total cap needs reconciliation",
+    "pre-full-run selection cannot require a not-yet-generated full trajectory sample",
+    "conditional win/loss re-selection of different trajectories is not a matched causal comparison",
+    "improvement confined to one sampled map type alone does not prove map-ID overfitting"
+  ],
+  "limitations": [
+    "Includes four invalid-source zero-turn match results, not 2814 proven bot starts.",
+    "Six historical debug faults do not change the zero-fault count for the 19 tournament matrices or the builder 1280-game evaluation.",
+    "Historical model/session identity remains unknown; current supplement-session self-report is not retroactive proof.",
+    "All discovered prior evidence is retained; this cannot establish whether unrecorded or deleted work ever existed."
+  ]
+}

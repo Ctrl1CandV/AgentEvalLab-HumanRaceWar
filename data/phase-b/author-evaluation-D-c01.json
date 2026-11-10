@@ -118,7 +118,7 @@
   "limitations": [
     "Star-graph provisional BT lacks opponent-opponent constraints and is not the existing joint ladder estimate.",
     "Original data have a finite MLE; separated bootstrap samples are retained, never clipped or discarded.",
-    "Author self-tests are a separate 2616-game historical record, not new builder games or equivalent-budget paired tests.",
+    "The first author census covered 2616 tournament games; the later addendum expands known historical records to 2814 including six standalone debug faults. They are not new builder games or equivalent-budget paired tests; see author-addendum-D-c01.json.",
     "Preservation and technical validity do not establish strong-mainline status, model identity or independent session provenance."
   ]
 }

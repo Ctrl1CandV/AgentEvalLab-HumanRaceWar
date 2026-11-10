@@ -1,0 +1,324 @@
+{
+  "bootstrap": {
+    "directScoreCI95": [
+      0.225,
+      0.525
+    ],
+    "maps": 40,
+    "multipleTestingCorrection": false,
+    "poolDifferencePpCI95": null,
+    "samples": 4000,
+    "seed": 4219,
+    "unit": "common map cluster, all seats and opponents together",
+    "usedForSelection": false
+  },
+  "builderMainlineAndAuthorGames": 15424,
+  "calibrationGamesThisAttempt": 0,
+  "candidateSourceSha256": "9381081239486a7e65e573de7b6821da7536ec1b8037eaf3e95da2d404e5615b",
+  "checks": {
+    "fullPublicSuiteRerun": false,
+    "functionality": [
+      {
+        "botCpuNs": 229030500,
+        "passed": 19,
+        "phase": "default",
+        "processCpuNs": 72313700
+      },
+      {
+        "botCpuNs": 258574000,
+        "passed": 19,
+        "phase": "selected",
+        "processCpuNs": 90563200
+      }
+    ],
+    "hashseeds": [
+      0,
+      1
+    ],
+    "independentArithmeticPassed": true,
+    "privateDriverTests": 6,
+    "publicSearchTests": 8,
+    "pureTestsPerHashseed": 14
+  },
+  "cumulativeMainlineDevelopmentGames": 14144,
+  "cumulativeMainlineScope": "astra A/E/C revisions only; first author evaluation listed separately",
+  "decision": {
+    "accepted": false,
+    "consecutiveNotAdopted": 3,
+    "reason": "early-direct-below-45-percent"
+  },
+  "deepseekDeliveriesReceivedAtCheckpoint": 1,
+  "defaultEquivalence": {
+    "allCommandsStatesResultsEqual": true,
+    "ignoredOnly": [
+      "header provenance",
+      "cpu_ns",
+      "wall_ns",
+      "clock",
+      "bankNs"
+    ],
+    "pairedGames": 480,
+    "turnsCompared": 126864
+  },
+  "devMapsActuallyUsed": 40,
+  "devSelectionGames": 80,
+  "directComparison": {
+    "games": 80,
+    "halfPoints": 60,
+    "scoreRate": 0.375
+  },
+  "finalHoldoutGames": 0,
+  "firstAuthorEvaluationGames": 1280,
+  "fixedPoolComparison": null,
+  "formalLadderAcceptance": false,
+  "frozenDevMaps": 80,
+  "games": 6800,
+  "gradingGames": 0,
+  "limitations": [
+    "One pre-start shared-CPU resource failure is retained; zero match-attempt errors is not zero infrastructure errors.",
+    "The original 1440 games were reused, not repeated; recovery only changes the authorized entry guard/provenance.",
+    "Public search is training, not independent validation.",
+    "Dev selection is not the final holdout; this one candidate follows the registered branch.",
+    "Finite search is not globally optimal; a combined gain is not single-parameter causality.",
+    "Intervals keep map clusters, have no multiplicity correction, and do not alter the decision gates.",
+    "Private raw evidence is retained locally; remote hashes do not independently prove execution."
+  ],
+  "newBuilderGamesThisTurn": 6640,
+  "parameterizedVectors": 13,
+  "parentDevelopmentBase": "dev02",
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "pilotSessionsStartedByBuilder": 0,
+  "poolOpponentCount": 6,
+  "priorMainlineGames": 7344,
+  "provenance": {
+    "executionPlanSha256": "e0399241de1fd7ec632e46d43470c6c79a3f5825e6a0dabb573a42d9b6745054",
+    "independentCheckSha256": "9030ddc0961a1d78ebcedd46a030ed6f5f0418c23e6cdbf4f4a47c917e5be39f",
+    "privateInputSha256": "2938c5c55562a05d542ce0a87bfdef58a75001847a3d1cc24179a2ca8d90a369",
+    "privatePlanSha256": "bfc125dc894e3ff08b7ed78f2bdc4730118263d21d5635cb5f0b1f6af52fe742",
+    "publicGitHeadAtRegistration": "ebc8216c24fe5a281e6faabf862c986a60fb9b71",
+    "recoveryCompletionSha256": "2dcb7882d86aa5c61bbec8db6a1e4cfe0fd92fc11c6f9768a46de014978f49a8",
+    "recoveryGitHead": "f75c2e2688a83cd1043c2eba648fb4890fd2970a",
+    "recoveryPlanSha256": "5a57831e80da9e9b1f7c366dd4add84677e9a6f603dac95c846f004abf28cf1c",
+    "searchResultSha256": "e45de8a4d7296e05591c3d205d311b1709e0f2742faafec0e0a9c94eeba8b539",
+    "timingLockSha256": "b106c1bf2c5d5b6b1751b180bf6c9e8aa091d964ed93f3ba4b38f3b1ed418b48"
+  },
+  "publicMaps": 40,
+  "recovery": {
+    "additionalGames": 5360,
+    "hashseeds": [
+      0,
+      1
+    ],
+    "oldCompletedRecordsUnchanged": true,
+    "originalDriverPlanFailureLogsUnchanged": true,
+    "pendingPlanningSummaryAdvancedOnResume": true,
+    "preRunPlanningSummaryBackupExisted": false,
+    "previouslyCompletedGamesReused": 1440,
+    "priorPlanningSummaryBytesRecoveredAfterRun": true,
+    "resumeControlTestsPerHashseed": 6
+  },
+  "retainedDevelopmentBase": {
+    "A": "A-r02",
+    "C": "C-r02",
+    "E": "E-r02"
+  },
+  "revision": "dev05",
+  "runtime": {
+    "allReplaysVerified": true,
+    "attemptsComplete": 6800,
+    "botFaultGames": 0,
+    "configurationErrors": 0,
+    "cpuHardLimitSeconds": 24,
+    "infraErrors": 1,
+    "jobs": 6,
+    "limits": {
+      "BANK_MS": 1800,
+      "INIT_CPU_MS": 1200,
+      "TURN_CPU_MS": 60
+    },
+    "matchAttemptInfraErrors": 0,
+    "newBenchmarks": 0,
+    "protocolWarnings": 0,
+    "sandbox": "bwrap",
+    "schedulerResourceStopsBeforeBotStart": 1,
+    "sourceSdkBudgetHeadersChecked": 6800,
+    "speedFactor": 0.5998025747312362,
+    "wallMarginMs": 300
+  },
+  "schemaVersion": 1,
+  "scope": "one finite E-line development attempt, not formal ladder calibration or acceptance",
+  "selectedLine": "E",
+  "training": {
+    "baselineScoreRate": 0.7625,
+    "improvementPp": 2.9166666666666665,
+    "selectedScoreRate": 0.7916666666666666
+  },
+  "trainingConditions": [
+    {
+      "condition": "T00",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 732,
+      "losses": 114,
+      "role": "original",
+      "scoreRate": 0.7625,
+      "selectedForDev": false,
+      "wins": 366
+    },
+    {
+      "condition": "T01",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 732,
+      "losses": 114,
+      "role": "parameterized-default",
+      "scoreRate": 0.7625,
+      "selectedForDev": false,
+      "wins": 366
+    },
+    {
+      "condition": "T02",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 740,
+      "losses": 110,
+      "role": "searched-vector",
+      "scoreRate": 0.7708333333333334,
+      "selectedForDev": false,
+      "wins": 370
+    },
+    {
+      "condition": "T03",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 712,
+      "losses": 124,
+      "role": "searched-vector",
+      "scoreRate": 0.7416666666666667,
+      "selectedForDev": false,
+      "wins": 356
+    },
+    {
+      "condition": "T04",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 752,
+      "losses": 104,
+      "role": "searched-vector",
+      "scoreRate": 0.7833333333333333,
+      "selectedForDev": false,
+      "wins": 376
+    },
+    {
+      "condition": "T05",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 720,
+      "losses": 120,
+      "role": "searched-vector",
+      "scoreRate": 0.75,
+      "selectedForDev": false,
+      "wins": 360
+    },
+    {
+      "condition": "T06",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 736,
+      "losses": 112,
+      "role": "searched-vector",
+      "scoreRate": 0.7666666666666667,
+      "selectedForDev": false,
+      "wins": 368
+    },
+    {
+      "condition": "T07",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 760,
+      "losses": 100,
+      "role": "searched-vector",
+      "scoreRate": 0.7916666666666666,
+      "selectedForDev": true,
+      "wins": 380
+    },
+    {
+      "condition": "T08",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 756,
+      "losses": 102,
+      "role": "searched-vector",
+      "scoreRate": 0.7875,
+      "selectedForDev": false,
+      "wins": 378
+    },
+    {
+      "condition": "T09",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 756,
+      "losses": 102,
+      "role": "searched-vector",
+      "scoreRate": 0.7875,
+      "selectedForDev": false,
+      "wins": 378
+    },
+    {
+      "condition": "T10",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 760,
+      "losses": 100,
+      "role": "searched-vector",
+      "scoreRate": 0.7916666666666666,
+      "selectedForDev": false,
+      "wins": 380
+    },
+    {
+      "condition": "T11",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 760,
+      "losses": 100,
+      "role": "searched-vector",
+      "scoreRate": 0.7916666666666666,
+      "selectedForDev": false,
+      "wins": 380
+    },
+    {
+      "condition": "T12",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 760,
+      "losses": 100,
+      "role": "searched-vector",
+      "scoreRate": 0.7916666666666666,
+      "selectedForDev": false,
+      "wins": 380
+    },
+    {
+      "condition": "T13",
+      "draws": 0,
+      "games": 480,
+      "halfPoints": 760,
+      "losses": 100,
+      "role": "searched-vector",
+      "scoreRate": 0.7916666666666666,
+      "selectedForDev": false,
+      "wins": 380
+    }
+  ],
+  "trainingGames": 6720,
+  "usage": {
+    "analysisProcessCpuNs": 3326360700,
+    "botCpuNs": 1642123478900,
+    "fullPhaseCpuHours": null,
+    "independentAnalysisCpuNs": 179831500,
+    "matchHarnessCpuNs": 2218146238900,
+    "replayVerificationCpuNs": 816794056300,
+    "scope": "distinct bot/match-harness/replay-verifier/analysis counters; probes separate; compilation/dispatch/full tree unknown"
+  },
+  "verifiedIndependentAuthorSessionsAdded": 0
+}

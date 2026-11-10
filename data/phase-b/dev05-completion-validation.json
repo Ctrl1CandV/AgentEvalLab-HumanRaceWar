@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "scope": "dev05 completion plus first-author intake/evaluation and archival validation; not B acceptance",
+  "intakePureTestsPerHashseed": 6,
+  "recoveryPureTestsPerHashseed": 6,
+  "hashseeds": [
+    0,
+    1
+  ],
+  "currentPythonLspFiles": 12,
+  "currentLspDiagnostics": 0,
+  "fullPublicSuiteRerun": false,
+  "dev05OriginalPureTestsPerHashseed": 14,
+  "originalPureEvidenceReused": true,
+  "defaultFunctionalityChecks": 19,
+  "defaultProbeReusedWithoutExecution": true,
+  "selectedFunctionalityChecks": 19,
+  "firstAuthorCheckTurns": 5,
+  "firstAuthorCheckUsesBaseToolLimitsNotPairedBudget": true,
+  "dev05CompleteGames": 6800,
+  "dev05PriorGamesReused": 1440,
+  "dev05AdditionalGames": 5360,
+  "firstAuthorNewEvaluationGames": 1280,
+  "newBuilderGamesThisRequest": 6640,
+  "allCurrentEvaluationReplaysVerified": 8080,
+  "dev05IndependentSearchAndSelectionPassed": true,
+  "firstAuthorIndependentAggregateCells": 8,
+  "firstAuthorClosedFormBootstrapReplicatesChecked": 4000,
+  "laterExistingAuthorStandaloneRecordsVerified": 198,
+  "newGamesFromHistoricalCensus": 0,
+  "originalPreservation": {
+    "batchesNewlyExecuted": 12,
+    "completedBatchesReused": 3,
+    "newGames": 0,
+    "notesAppendOnlyWithExactBackup": true,
+    "oldFailureAndLogsPreserved": true,
+    "oldProtectedRecoveryFiles": 32,
+    "originalDerivedSummaryBytesRecoveredAfterRunWithPriorHashMatch": true,
+    "passed": true,
+    "pendingDerivedSummaryAdvanced": true,
+    "preRunCopyOfDerivedSummaryExisted": false,
+    "priorRegisteredFiles": 421158,
+    "processCpuNs": 43828987100,
+    "replayDigestsRechecked": 8080,
+    "unchangedFiles": 421156
+  },
+  "finalPrivateRegistry": {
+    "allFileDigestsVerified": true,
+    "botExecutions": 0,
+    "maintenanceProcessCpuNs": 141586263800,
+    "newGames": 0,
+    "passed": true,
+    "registeredFiles": 632178,
+    "registrySha256": "acf46ce20960a61927353c991f9634ca551f4fa737daebd583dcd34b00d8325a",
+    "scope": "file preservation/register/hash scans only; not phase-wide CPU or new engine validation"
+  },
+  "publicSummaryReproduction": {
+    "newGames": 0,
+    "passed": true,
+    "scriptRenderingMatchesPublishedBytes": true,
+    "sha256": "45b58b36d4cc55ab4b142e358ed99a13881c932430003d0a358d9efa0b2f2e79",
+    "writesPerformed": 0
+  },
+  "negativeEvidencePreserved": [
+    "original pre-start CPU resource error",
+    "missing earlier checks in author records",
+    "six historical author debug faults, including four zero-turn invalid-source results",
+    "initial author-role count assertion and corrected actual-identity census",
+    "two initial recovery LSP dynamic-attribute diagnostics and source before correction",
+    "initial whole-registry preservation assertion on naturally advanced pending summary, exact old bytes recovered after run and matched to prior hash"
+  ],
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "pushPerformed": false,
+  "limits": [
+    "Record/hash and targeted tests do not establish model identity, session independence or formal strength.",
+    "Prior default equivalence covers480 paired games, not a formal proof for every possible state.",
+    "Maintenance CPU counters are bounded process measurements, not whole-phase usage."
+  ]
+}
