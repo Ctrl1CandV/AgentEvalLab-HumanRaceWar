@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "scope": "author r02 public development result audit; not a new delivery, unified dev evaluation, or B acceptance",
+  "decision": "retain-r01; no-r03-execution; read-only-diagnostic-correction",
+  "conditions": [
+    {
+      "condition": "r01-control",
+      "games": 80,
+      "wins": 51,
+      "draws": 0,
+      "losses": 29,
+      "sourceSha256": "7de22bd0374027dd8cb952d820f68f97352adca9e406969e43e73a90bc151e9f",
+      "botCpuNs": 18073710000,
+      "harnessCpuNs": 15192206500
+    },
+    {
+      "condition": "r02-candidate",
+      "games": 80,
+      "wins": 51,
+      "draws": 0,
+      "losses": 29,
+      "sourceSha256": "a73edb287424cf5d454be24d5294ea802e96cf7681b94138ff60b08ddee810ad",
+      "botCpuNs": 18183090200,
+      "harnessCpuNs": 15256568600
+    }
+  ],
+  "authorCompletedGamesThisRound": 160,
+  "authorScoredBatches": 2,
+  "authorCheckCount": 1,
+  "authorCheckTurns": 5,
+  "authorDeclaredMaximumScoredGames": 1120,
+  "authorDeclaredMaximumScoredBatches": 5,
+  "authorDeclaredMaximumChecks": 4,
+  "fullMatrixOrDirectPreviousVersionGames": 0,
+  "candidateScreenPassed": false,
+  "newCandidateDelivered": false,
+  "candidatePromotedToRetainedBaseline": false,
+  "outcomeChanges": {
+    "improved": 2,
+    "regressed": 2,
+    "unchanged": 76
+  },
+  "runtime": {
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "protocolWarnings": 0,
+    "infraErrorAttempts": 0,
+    "sandbox": "bwrap",
+    "jobs": 1,
+    "turnCpuMs": 53,
+    "initCpuMs": 1050,
+    "bankMs": 1575,
+    "fixedLockSha256": "f839c9d044e605a2c182a323c1c8f898c4ce1177b5dc27ac72adfb8e6e5a8e7d",
+    "newBenchmarkPerformed": false
+  },
+  "verification": {
+    "fullEngineReplays": 160,
+    "actualIdentityAndBudgetChecks": 160,
+    "historicalCommandStateResultPairsMatched": 80,
+    "reconstructedTasks": 160,
+    "attemptResultPairsEqual": 160,
+    "fourMapDescriptiveResamples": 256,
+    "descriptiveTotalScoreChangeRange": [
+      -6,
+      6
+    ],
+    "candidateCheckPrecedesGames": true,
+    "publicMaterialFilesUnchanged": 106,
+    "r01HandoffAndAddendumUnchanged": true,
+    "restoredBotMatchesR01": true,
+    "sourceModificationByBuilder": false
+  },
+  "provenance": {
+    "receivedPlanV2Sha256": "858324bb394bec9d028a8a0c95aac2f142806a7cdba26c94357b19643f646654",
+    "planPreregistrationIndependentlyProven": false,
+    "sessionIdentityIndependentlyVerified": false,
+    "authorFullCpuHours": null
+  },
+  "validation": {
+    "auditLspFiles": 3,
+    "failedDraftsAndLogsPreserved": true,
+    "fullPublicSuiteRerun": false,
+    "hashseeds": [
+      0,
+      1
+    ],
+    "initialAuditSchemaAssertions": 2,
+    "initialReadOnlyProbeErrors": 1,
+    "lspDiagnostics": 0,
+    "maintenanceLspFiles": 1,
+    "newBotOrGameAuthorization": false,
+    "nextTask": "r02 diagnostic correction only; no r03 execution",
+    "tests": [
+      {
+        "botExecutions": 0,
+        "errors": 0,
+        "failures": 0,
+        "newGames": 0,
+        "processCpuNs": 920800,
+        "tests": 3
+      },
+      {
+        "botExecutions": 0,
+        "errors": 0,
+        "failures": 0,
+        "newGames": 0,
+        "processCpuNs": 873900,
+        "tests": 3
+      }
+    ]
+  },
+  "maintenance": {
+    "preservation": {
+      "authorArchivedFilesRechecked": 4488,
+      "botExecutions": 0,
+      "newGames": 0,
+      "notesAppendOnlyWithExactPriorBackup": true,
+      "passed": true,
+      "priorFiles": 632178,
+      "processCpuNs": 29517556200,
+      "unchangedFiles": 632177
+    },
+    "registry": {
+      "allRegisteredDigestsVerified": true,
+      "botExecutions": 0,
+      "newGames": 0,
+      "passed": true,
+      "processCpuNs": 102457698800,
+      "registeredFiles": 636698,
+      "sha256": "9d545755a203c6707313ed159901d0ed12cb851e783973e484803eeceff67901"
+    }
+  },
+  "archive": {
+    "files": 4488,
+    "bytes": 46390729,
+    "originalBytesPreserved": true,
+    "rawEvidencePublished": false
+  },
+  "cpu": {
+    "authorCheckBotNs": 28762800,
+    "builderSuccessfulAuditProcessNs": 21706917400,
+    "replayVerificationSubsetNs": 10570451600,
+    "additionalTrajectorySubsetNs": 7590902700,
+    "scheduleAndArithmeticSeparateNs": 49867800,
+    "earlierFailedProbeAndAuditCpuNs": null,
+    "limits": "Replay and trajectory are subsets of successful audit CPU; compiler/full author tree/whole phase unknown."
+  },
+  "knownAuthorRecords": {
+    "total": 2974,
+    "authorTests": 2947,
+    "publicReferences": 27,
+    "publicMapRecords": 2323,
+    "scrimmageMapRecords": 651,
+    "historicalInvalidSourceZeroTurnRecords": 4,
+    "historicalCrashRecords": 2
+  },
+  "builderNewGames": 0,
+  "builderBotExecutions": 0,
+  "builderCompileExecutions": 0,
+  "builderBenchmarkExecutions": 0,
+  "builderMainlineCumulativeGames": 14144,
+  "builderMainlinesPlusAuthorEvaluationGames": 15424,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "pushPerformed": false,
+  "limits": [
+    "Repeated public-map results are not independent holdout evidence.",
+    "Lower surviving counts do not establish lower cumulative production or a causal mechanism.",
+    "Current archives and aggregate summaries cannot independently establish unlogged activity, author identity or preregistration time."
+  ]
+}

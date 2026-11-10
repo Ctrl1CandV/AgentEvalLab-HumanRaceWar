@@ -4,8 +4,10 @@
 
 ## 当前入口
 
+- [`phase-b/author-r02-review.json`](phase-b/author-r02-review.json)：作者r02的160局及1次check核验、阴性停止与原样保全；主仓库零新局，下一步仅诊断补正，不批准r03。
+
 - [`phase-b/mainlines-dev05.json`](phase-b/mainlines-dev05.json)：完整6720public搜索＋80dev首段；候选37.5%低于45%早停线，不采纳。复用1440局、追加5360，保留一次启动前资源错误；连续三轮止损，不追加下一候选。收束检查见[`phase-b/dev05-completion-validation.json`](phase-b/dev05-completion-validation.json)：专项检查、8080份当前评测回放摘要复核、旧证据两项明确生命周期例外及最终632178文件登记。
-- [`phase-b/author-addendum-D-c01.json`](phase-b/author-addendum-D-c01.json)：补充198份既有作者/公开参考对局，纠正2份误归，合计2814份记录及6份历史调试故障；补充会话自述不证明原开发身份，r02计划未获执行通知。
+- [`phase-b/author-addendum-D-c01.json`](phase-b/author-addendum-D-c01.json)：补充198份既有作者/公开参考对局，纠正2份误归，合计2814份记录及6份历史调试故障；补充会话自述不证明原开发身份；这是r02执行前的历史快照，后续见上列r02复核。
 
 - [`phase-b/author-intake-D-c01.json`](phase-b/author-intake-D-c01.json)、[`phase-b/author-evaluation-D-c01.json`](phase-b/author-evaluation-D-c01.json)：首份作者交付/旧2616局普查及随后统一1280局评测，原件不改、所有回放核验通过；流程缺项与强度不足如实记录，仅保留同作者首版比较基线，不替换现有控制线，独立会话尚未核实。
 
