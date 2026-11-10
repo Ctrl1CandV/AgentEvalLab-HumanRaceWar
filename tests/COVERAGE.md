@@ -2,6 +2,12 @@
 
 测试入口：`.venv/bin/python tools/run_tests.py`。运行bot和C++编译的测试仍使用bwrap；本宿主不可裸用plain。
 
+## dev05有限搜索实现检查（2026-11-10）
+
+- `tests/test_bounded_search.py`新增8项纯测试：同一进入incumbent的两邻居、一次坐标扫描、严格改善/等分保留/字典序、范围和去重、无效输入在评测前拒绝、异常传播、45%/55%/2pp整数边界及功能门。工具不执行bot或模型调用。
+- 私有驱动另6项纯检查：仅六处计划表达式变更、默认常量/生成确定性、冻结输入与均衡拆分/机器身份、语义比较不忽略命令/状态、共同地图簇bootstrap算术。两组共14项在hashseed=0/1通过，7个Python文件LSP零诊断；汇总见`data/phase-b/dev05-preflight.json`。
+- 首次14项中1项失败来自Python tuple与JSON list表示差异；修前驱动和日志保留，只作JSON规范化后全字段比较，预算/源码/地图不变。尚无bot/编译/新局；默认及最终候选预定各19项沙箱功能检查随后执行，不能预填通过。完整公开套件未重跑。
+
 ## 当前记录
 
 - A阶段交审前：`PYTHONHASHSEED=0/1`各198项通过，零失败/错误/跳过；13文件Pyright零诊断。汇总：`data/phase-a/acceptance/tests.json`。

@@ -1,6 +1,8 @@
 # 状态
 
-更新：2026-11-09。**第0步已完成，按约在目录报告停点停止；本次新对局、bot/编译/测速均为0，不推送，由用户推送。M1机器绑定、L1–L6旧档案分析、80张dev图及独立检查、两个公开工作区、AUTHORS和dev05有限计划已完成；35项纯检查双hashseed通过，13文件LSP零诊断。试探目录`~/projects/HRW-pilot/`，DeepSeek目录`~/projects/HRW-deepseek/`；尚未启动作者/试探会话、收到交付或执行dev05。保留dev02及全部7344局历史，public调参、dev取舍/临时BT、calibration仅正式校准，grading/holdout未用。既有B开发授权保留，下一批按已记dev05计划，不重做前置；B未完成，C未启动。**
+更新：2026-11-10，用户在收到两个目录后要求继续astra任务，**现进入已登记的dev05执行批**。经济参数化模板、有限CPU搜索驱动和独立算术检查器已实现；14项纯检查在hashseed=0/1通过，7个Python文件LSP零诊断。首个检查器tuple/list比较失败及修前版本保留，未改预算。此实现检查点尚无新增对局/编译/bot；提交后从干净HEAD登记执行身份，再做默认等价验证、public有限搜索和条件式dev取舍。`docs/PHASE_B_DEV05_PLAN.md`的6720+2080局上限、三轮未采纳停点不变。**不推送**，不代开DeepSeek/试探会话，不碰calibration/grading/holdout。B未完成，C未启动。
+
+第0步交付时的历史记录（不覆盖上面的继续指令）：**第0步已完成，按约在目录报告停点停止；本次新对局、bot/编译/测速均为0，不推送，由用户推送。M1机器绑定、L1–L6旧档案分析、80张dev图及独立检查、两个公开工作区、AUTHORS和dev05有限计划已完成；35项纯检查双hashseed通过，13文件LSP零诊断。试探目录`~/projects/HRW-pilot/`，DeepSeek目录`~/projects/HRW-deepseek/`；尚未启动作者/试探会话、收到交付或执行dev05。保留dev02及全部7344局历史，public调参、dev取舍/临时BT、calibration仅正式校准，grading/holdout未用。既有B开发授权保留，下一批按已记dev05计划，不重做前置；B未完成，C未启动。**
 
 最新开发记录：[`reports/phase-B-mainlines-dev04.md`](reports/phase-B-mainlines-dev04.md)；L0决定：[`docs/PHASE_B_L0_DECISION.md`](docs/PHASE_B_L0_DECISION.md)；历史停点：[`reports/phase-B-ladder-preflight.md`](reports/phase-B-ladder-preflight.md)；N1/N2/N3：[`reports/phase-B-review-analysis.md`](reports/phase-B-review-analysis.md)；D22报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。D22的一轮授权已用完，standard-1仍为伤害20。当前后续权限以`inbox/2026-11-09-phase-b-mid-review.md`第六/七节及用户本次指令为准。旧N1/N2/N3、holdout布局和L0裁定均已处理，不重做；不改游戏参数或提前使用holdout。
 

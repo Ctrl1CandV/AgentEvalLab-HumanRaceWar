@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "scope": "dev05 implementation checkpoint before bot execution; not ladder acceptance",
+  "selectedLine": "E-r02",
+  "candidateImplementationStarted": true,
+  "newGames": 0,
+  "botExecutions": 0,
+  "compilations": 0,
+  "benchmarks": 0,
+  "genericSearchTests": 8,
+  "privateDriverTests": 6,
+  "pureTests": [
+    {"hashseed": 0, "testsRun": 14, "failures": 0, "errors": 0, "skipped": 0},
+    {"hashseed": 1, "testsRun": 14, "failures": 0, "errors": 0, "skipped": 0}
+  ],
+  "preservedFirstTestRun": {"testsRun": 14, "failures": 1, "errors": 0, "cause": "tuple CPU pool versus JSON list; fixed by JSON normalization before full-field equality"},
+  "lsp": {"pythonFiles": 7, "diagnostics": 0},
+  "plannedFunctionalityChecksPerVersion": 19,
+  "plannedFunctionalityVersionsMaximum": 2,
+  "caps": {"publicTrainingGames": 6720, "devSelectionGames": 2080, "totalGames": 8800},
+  "timingLockSha256": "b106c1bf2c5d5b6b1751b180bf6c9e8aa091d964ed93f3ba4b38f3b1ed418b48",
+  "privatePreservation": {
+    "filesVerifiedUnchanged": 374676,
+    "measuredPreservationProcessCpuNs": 16540583600,
+    "registryFiles": 374695,
+    "registrySha256": "89e55bc9aedd855fcace0ffae55fb41b442ba7f59eec14d0506cae500da9cae9",
+    "registryScanProcessCpuNs": 51764816200,
+    "interruption": "first combined maintenance command hit a 120s tool wall timeout after preservation finished; registry-only scan subsequently completed; no bots or games"
+  },
+  "fullSuiteRerun": false,
+  "fullPhaseCpuHours": null,
+  "finalHoldoutGames": 0,
+  "gradingGames": 0,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "pushed": false
+}
