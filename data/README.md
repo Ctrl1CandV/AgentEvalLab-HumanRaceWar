@@ -4,6 +4,8 @@
 
 ## 当前入口
 
+- [`phase-b/dev05-checkpoint.json`](phase-b/dev05-checkpoint.json)：dev05完成1440局public和默认逐回合等价核验，下一批启动前因CPU资源暂停；搜索/取舍未完成，不是第三轮拒绝。实现前纯检查见[`phase-b/dev05-preflight.json`](phase-b/dev05-preflight.json)。
+
 - [`phase-b/dev-maps.json`](phase-b/dev-maps.json)：新增80张dev图的布局/再生和六集合不重复检查聚合，无新对局，不含逐图记录。
 - [`phase-b/author-workspaces.json`](phase-b/author-workspaces.json)：试探/DeepSeek两份公开材料目录的清单与检查；不等于模型会话、记忆隔离或bot运行已验收。
 - [`phase-b/mid-review.json`](phase-b/mid-review.json)：2026-11-09中期审查L1–L6既有档案聚合：饱和度计数、实际CPU、SEED证据边界、直接比较敏感性、机器绑定及临时BT（含分离/不可识别）；没有新对局，不是正式等级。`mid-review-validation.json`记录M1修前失败、最终35项双hashseed纯检查、逐线对手池纠正及验证边界。
