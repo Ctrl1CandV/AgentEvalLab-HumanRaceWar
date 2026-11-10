@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "scope": "astra stop-point review; post-selection description, not new development or B acceptance",
+  "sourcePublicHead": "9bd3bc0235005abb6855977aa2476e261fccae18",
+  "stopStillActive": true,
+  "retainedRevision": "dev02",
+  "rejectedRevisions": [
+    "dev03",
+    "dev04",
+    "dev05"
+  ],
+  "publicConditionsRecounted": 14,
+  "archivedResultsRead": 6720,
+  "mapsPerCondition": 40,
+  "pairedGamesPerCondition": 480,
+  "selectedTrainingContrast": {
+    "condition": "T07",
+    "differencePp": 2.9166666666666665,
+    "differenceScore": 14.0,
+    "games": 480,
+    "mapNetHalfPointHistogram": [
+      {
+        "halfPoints": -8,
+        "maps": 4
+      },
+      {
+        "halfPoints": -4,
+        "maps": 10
+      },
+      {
+        "halfPoints": 0,
+        "maps": 9
+      },
+      {
+        "halfPoints": 4,
+        "maps": 10
+      },
+      {
+        "halfPoints": 8,
+        "maps": 6
+      },
+      {
+        "halfPoints": 12,
+        "maps": 1
+      }
+    ],
+    "mapNetImproved": 17,
+    "mapNetRegressed": 14,
+    "mapNetTied": 9,
+    "maps": 40,
+    "mapsWithAnyChangedCell": 32,
+    "newHalfPoints": 760,
+    "oldHalfPoints": 732,
+    "outcomeChanges": {
+      "improved": 56,
+      "regressed": 42,
+      "unchanged": 382
+    }
+  },
+  "topTrainingScoreConditionCount": 5,
+  "topTrainingScoreIdenticalOutcomePairComparisons": 10,
+  "topTrainingScoreCommandsOrStatesComparedThisReview": false,
+  "prospectiveTrial": {
+    "status": "proposed-not-authorized",
+    "line": "E",
+    "newComponentFamilies": 1,
+    "cpuFractions": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "candidateChosenBeforeScoring": "100-percent",
+    "budget": {
+      "devBothPoolVersions": 1920,
+      "devDirectTotal": 160,
+      "devFirstStage": 80,
+      "devMaximum": 2080,
+      "newScoredMaximum": 4400,
+      "publicCurveNew": 2240,
+      "publicNewBaselineSelf": 80,
+      "publicNewMaximum": 2320,
+      "publicReusedPoolBaseline": 480
+    },
+    "baselinePoolReuseConditionalOnIdentity": true,
+    "maxPreScoringImplementationSnapshots": 2,
+    "maxSandboxCompileExecutions": 12,
+    "maxBotOrProbeStarts": 256,
+    "maxProbeRepliesOrTransitions": 12000,
+    "maxChecks": 2,
+    "originalDevSelectionGatesUnchanged": true,
+    "newPublicEngineeringScreenRequiresApproval": true
+  },
+  "validation": {
+    "pureTestsPerHashseed": 7,
+    "hashseeds": [
+      0,
+      1
+    ],
+    "results": [
+      {
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "botExecutions": 0,
+        "newGames": 0,
+        "processCpuNs": 1068800
+      },
+      {
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "botExecutions": 0,
+        "newGames": 0,
+        "processCpuNs": 1020700
+      }
+    ],
+    "currentPythonLspFiles": 2,
+    "currentLspDiagnostics": 0,
+    "initialLspDiagnosticOnIntentionalInvalidArgument": 1,
+    "originalTestAndFrozenInputsRetained": true,
+    "fullPublicSuiteRerun": false,
+    "historicalFullReplayValidationReused": true
+  },
+  "usage": {
+    "ledgerAnalysisProcessCpuNs": 176626700,
+    "preservationProcessCpuNs": 30352951800,
+    "registryAndFullVerificationProcessCpuNs": 118340902000,
+    "fullSessionCpuHours": null
+  },
+  "preservation": {
+    "priorFiles": 636698,
+    "priorFilesByteIdentical": 636698,
+    "oldAssetExceptions": 0,
+    "frozenAnalysisInputsUnchanged": 52,
+    "registeredFiles": 636723,
+    "allRegisteredDigestsVerified": true,
+    "registrySha256": "bb55d91e5386bfd30b5d2d71f6a90f5fb67bf1a88e5298b3c83ba64054a16ff4"
+  },
+  "provenance": {
+    "analysisSha256": "17d5e7ed6ac0aa21d110410dbb290935f29162d79f53d0fa21a529bedadd8484",
+    "readOnlyInputsSha256": "612664856fc1a4197c7cfea97eeb29eb68927edc71aa4ac99c2ab077594fba5d",
+    "privateProposalSha256": "d505ea95c40ffc017abeb8602ea72e5f265b76b40e4de9d6eb5a077e0289971e"
+  },
+  "newGames": 0,
+  "botExecutions": 0,
+  "compilerExecutions": 0,
+  "benchmarkExecutions": 0,
+  "engineReplaysThisReview": 0,
+  "devRawRecordsReadForTuning": 0,
+  "builderMainlineGames": 14144,
+  "builderMainlinePlusAuthorEvaluationGames": 15424,
+  "authorWorkspaceAccessedDuringThisTask": false,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "pushed": false,
+  "limitations": [
+    "Training-selected contrasts retain selection bias; not independent validation.",
+    "Identical outcomes do not prove identical commands or state trajectories.",
+    "Map and opponent changes confound the difference between public training and dev direct comparison.",
+    "Rule-model correctness, search work and playing strength are separate questions.",
+    "The proposal is neither an implemented candidate nor execution authorization."
+  ]
+}

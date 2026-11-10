@@ -1,6 +1,8 @@
 # 审查报告
 
-- [`phase-B-author-r02.md`](phase-B-author-r02.md)：作者160局筛选阴性停止，未交付新版本；原样归档及完整回放核验，原诊断解释需修正，下一步仅零新局补正，不自动r03。
+- [`phase-B-astra-stop-review.md`](phase-B-astra-stop-review.md)：astra三轮止损后的只读复盘；重计旧6720public结果，提出一条主线的条件式算力试验，最大4400新局只是待批准额度。本次零bot/新局，止损仍有效。
+
+- [`phase-B-author-r02.md`](phase-B-author-r02.md)：作者160局筛选阴性停止，未交付新版本；原样归档及完整回放核验，原诊断解释需修正；其后补正已收到，用户已转交下一只读前置任务，不自动r03。
 
 - [`phase-B-mainlines-dev05.md`](phase-B-mainlines-dev05.md)：恢复后完成6720public＋80dev，训练收益未通过首段直接对照（37.5%<45%），不采纳；连续三轮止损，保留dev02等用户审查/指示，不追加候选、不推送。
 

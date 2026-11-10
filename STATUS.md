@@ -1,10 +1,11 @@
 # 状态
 
-更新：2026-11-10。**dev05未采纳，已触发连续三轮止损，等待用户审查/指示；不追加dev06，不推送。B未完成、C未启动。**
+更新：2026-11-10。**dev05未采纳，三轮止损仍有效。astra复盘和下一有限方案已完成，等待用户明确批准；不追加dev06、不推送。B未完成、C未启动。**
 
+- astra止损复盘已完成：只读重计dev05全部6720条public结果，终选对原版56改善/42退步/382不变，40图净改善17/退步14/持平9；五个训练最高分条件逐格胜负相同，不等于命令相同。新提案从E-r02出发，只做一个算力组件，先P0功能/模型检查，再四档public2320新局、条件式dev最多2080，总上限4400；此额度和新的public前置条件均未批准，当前连P0也不运行。报告`reports/phase-B-astra-stop-review.md`，计划`docs/PHASE_B_NEXT_TRIAL_PLAN.md`。7项纯回归双hashseed通过、最终2文件LSP零诊断，初稿负例类型诊断保留。本次bot/编译/测速/新局/引擎重放均0，未访问作者工作区，不抢共享CPU。
 - dev05完成6720局public搜索和80局dev首段，共6800局；复用原1440局，新增5360局，没有改旧驱动/计划/失败/预算。训练最优由76.25%提高至79.1667%，但首段对E-r02仅30/0/50（37.5%），低于45%早停线，后段及固定池不执行。默认/选中各19功能检查通过，6800全回放/来源/预算及独立搜索/判定核验通过；零对局故障/警告，但保留原一次启动前资源错误。A/E/C-r02继续保留。入口：`reports/phase-B-mainlines-dev05.md`、`data/phase-b/mainlines-dev05.json`。
 - D-c01原样接收并通过check/1280局统一dev评测：356/0/924，仅保留同作者首版比较基线，强主线目标未达、不替C-r02。反馈在作者工作区handoff/in。补充记录现核到2814份旧对局记录：作者2787＋公开参考27，含4份入口无效0回合结果和2次crash；已纠正作者自述中的2份角色误归，完整保留。原开发模型/独立会话仍未知，补充会话自述不作追溯证明。入口：`reports/phase-B-author-D-c01.md`、`data/phase-b/author-addendum-D-c01.json`。
-- 用户随后转交r02执行授权；作者现已完成160局public（对照/候选各80）及1次check，两版均51/0/29，但候选未通过预设筛选门槛，按计划阴性停止，未生成新交付。160局完整回放/身份/限额、80组历史命令状态一致性均核验通过。已原样归档，作者已知记录增至2974（自测2947、公开参考27）；主仓库15424局计数不变。本机复核发现原诊断把存量下降直接解释成生产减少，证据不支持这一解释；现在只交`feedback-r02.md`和`task-r02-diagnosis-only.md`，零新局补正诊断，暂不批准r03。见`reports/phase-B-author-r02.md`。astra不代改或借用作者实现，不给隐藏逐局或astra逐对表现。r02收束已核旧632178条（632177不变、笔记只追加且备份），新636698文件登记及全摘要通过；本机零新局，3项纯回归双hashseed通过。
+- 用户随后转交r02执行授权；作者现已完成160局public（对照/候选各80）及1次check，两版均51/0/29，但候选未通过预设筛选门槛，按计划阴性停止，未生成新交付。160局完整回放/身份/限额、80组历史命令状态一致性均核验通过。已原样归档，作者已知记录增至2974（自测2947、公开参考27）；主仓库15424局计数不变。本机复核发现原诊断把存量下降直接解释成生产减少，证据不支持这一解释；已交`feedback-r02.md`和`task-r02-diagnosis-only.md`；作者补正已收到并做只读核对，用户现已转交下一项零新局前置定位，暂不批准r03。见`reports/phase-B-author-r02.md`。astra不代改或借用作者实现，不给隐藏逐局或astra逐对表现。r02收束已核旧632178条（632177不变、笔记只追加且备份），新636698文件登记及全摘要通过；本机零新局，3项纯回归双hashseed通过。
 - 本次新增6640局＝5360＋1280；astra累计14144局，含作者统一评测共15424。作者旧记录另列，不重复计入新增。最终holdout/grading仍0局，本轮calibration0；正式阶梯和独立测试尚未完成。
 - 收束核验：旧421158条中421156文件原字节不变；笔记只追加并保留精确旧版，pending派生摘要正常更新后，已事后重建并匹配旧登记SHA另存原字节（不是提前备份）。最终private登记632178文件全部摘要通过，再核8080份当前评测回放摘要；12相关Python文件LSP零诊断、专项回归通过，未重跑完整公开套件。见`data/phase-b/dev05-completion-validation.json`。
 
@@ -16,7 +17,7 @@ dev05收束：原374676条私有登记中374675文件原字节不变，`private/
 
 第0步交付时的历史记录（不覆盖上面的继续指令）：**第0步已完成，按约在目录报告停点停止；本次新对局、bot/编译/测速均为0，不推送，由用户推送。M1机器绑定、L1–L6旧档案分析、80张dev图及独立检查、两个公开工作区、AUTHORS和dev05有限计划已完成；35项纯检查双hashseed通过，13文件LSP零诊断。试探目录`~/projects/HRW-pilot/`，DeepSeek目录`~/projects/HRW-deepseek/`；尚未启动作者/试探会话、收到交付或执行dev05。保留dev02及全部7344局历史，public调参、dev取舍/临时BT、calibration仅正式校准，grading/holdout未用。既有B开发授权保留，下一批按已记dev05计划，不重做前置；B未完成，C未启动。**
 
-最新开发记录：[`reports/phase-B-mainlines-dev05-checkpoint.md`](reports/phase-B-mainlines-dev05-checkpoint.md)；完整上一轮：[`reports/phase-B-mainlines-dev04.md`](reports/phase-B-mainlines-dev04.md)；L0决定：[`docs/PHASE_B_L0_DECISION.md`](docs/PHASE_B_L0_DECISION.md)；历史停点：[`reports/phase-B-ladder-preflight.md`](reports/phase-B-ladder-preflight.md)；N1/N2/N3：[`reports/phase-B-review-analysis.md`](reports/phase-B-review-analysis.md)；D22报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。D22的一轮授权已用完，standard-1仍为伤害20。当前后续权限以`inbox/2026-11-09-phase-b-mid-review.md`第六/七节及用户本次指令为准。旧N1/N2/N3、holdout布局和L0裁定均已处理，不重做；不改游戏参数或提前使用holdout。
+最新止损复盘：[`reports/phase-B-astra-stop-review.md`](reports/phase-B-astra-stop-review.md)；完整dev05：[`reports/phase-B-mainlines-dev05.md`](reports/phase-B-mainlines-dev05.md)；原资源停点：[`reports/phase-B-mainlines-dev05-checkpoint.md`](reports/phase-B-mainlines-dev05-checkpoint.md)；完整上一轮：[`reports/phase-B-mainlines-dev04.md`](reports/phase-B-mainlines-dev04.md)；L0决定：[`docs/PHASE_B_L0_DECISION.md`](docs/PHASE_B_L0_DECISION.md)；历史停点：[`reports/phase-B-ladder-preflight.md`](reports/phase-B-ladder-preflight.md)；N1/N2/N3：[`reports/phase-B-review-analysis.md`](reports/phase-B-review-analysis.md)；D22报告：[`reports/phase-B-damage22.md`](reports/phase-B-damage22.md)；原计划：`docs/PHASE_B_DAMAGE22_PLAN.md`。D22的一轮授权已用完，standard-1仍为伤害20。当前后续权限以`inbox/2026-11-09-phase-b-mid-review.md`第六/七节及用户本次指令为准。旧N1/N2/N3、holdout布局和L0裁定均已处理，不重做；不改游戏参数或提前使用holdout。
 
 - A已获审查通过：[`inbox/2026-11-08-phase-a-accepted.md`](inbox/2026-11-08-phase-a-accepted.md)。standard-1、游戏引擎/SDK和动物园v15未改；运行器先按R1修改预算复用，随后新增显式配对，本次修M1机器绑定；框架指纹会变化，不能宣称整个arena字节未变。
 - 首次留出报告：[`reports/phase-B-holdout.md`](reports/phase-B-holdout.md)；原始结论和数据保留。D22数据在[`data/phase-b/damage22/`](data/phase-b/damage22/)。两份都是失败停点报告，不是B完成报告。
