@@ -4,7 +4,9 @@
 
 ## 当前入口
 
-- [`phase-b/next-preparation.json`](phase-b/next-preparation.json)：7份作者材料归档与静态来源/配对核对、18项双hashseed纯测试及保全用量；用户已转交作者有限修复任务、完成情况待核。astra仍待试验批准，零bot/新局，未实现候选。
+- [`phase-b/author-r03-review.json`](phase-b/author-r03-review.json)：r03功能失败、未计分；35次启动/2199回复、实际源码超限与判据问题，300文件接收和34份轨迹重步聚合。下一任务仅零运行补正，不采纳或扩大修复。
+
+- [`phase-b/next-preparation.json`](phase-b/next-preparation.json)：7份作者材料归档与静态来源/配对核对、18项双hashseed纯测试及保全用量；记录当时用户已转交有限修复、尚待反馈的时点。astra仍待试验批准，零bot/新局，未实现候选。
 
 - [`phase-b/astra-stop-review.json`](phase-b/astra-stop-review.json)：旧6720public账本配对复核，终选56改善/42退步，训练五个最高分条件逐格胜负相同；新方案预算算术与纯测试。当前未授权实施、零新局，不是新强度结果。
 

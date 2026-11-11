@@ -1,6 +1,8 @@
 # 审查报告
 
-- [`phase-B-next-preparation.md`](phase-B-next-preparation.md)：7份作者补正/前置材料已归档，用户已转交有限修复任务、待反馈；astra完成剩余路线、静态规格和18项双hashseed纯检查，零bot/新局。4400局试验仍待明确批准。
+- [`phase-B-author-r03.md`](phase-B-author-r03.md)：作者功能失败、零计分；300文件原样接收、34份轨迹重步。启动/回复未超限，但策略快照超限、汇总与判据需补正；下一任务仅零运行账本/结论补正，保留r01，不扩大修复。
+
+- [`phase-B-next-preparation.md`](phase-B-next-preparation.md)：此前7份作者补正/前置材料归档及有限修复转交时点；astra完成剩余路线、静态规格和18项双hashseed纯检查，零bot/新局。4400局试验仍待明确批准。
 
 - [`phase-B-astra-stop-review.md`](phase-B-astra-stop-review.md)：astra三轮止损后的只读复盘；重计旧6720public结果，提出一条主线的条件式算力试验，最大4400新局只是待批准额度。本次零bot/新局，止损仍有效。
 
