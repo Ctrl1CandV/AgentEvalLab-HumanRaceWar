@@ -1,5 +1,7 @@
 # B阶段启动交接
 
+最新停后推进：E只读复盘完成，见`reports/phase-B-astra-compute-trial01-postmortem.md`；原两稿P0失败不变。`docs/PHASE_B_E_QUALIFICATION02_PLAN.md`是新的一次P0资格提案（1快照/6编译/128启动/6000项/1check/0计分），尚待批准，未写候选或冻结，不恢复旧执行。作者r04准备包聚合见`reports/phase-B-author-r04-ready-package.md`，仍不可运行；原协调者布置下一工程修订、用户转交，E只集成状态。以下各时点按历史阅读，最新权限以STATUS为准。
+
 2026-11-11最新会话拆分：原GPT会话专管DeepSeek接收/审查，新GPT接续已获批的E试验并负责共享仓库集成。先读`docs/SESSION_COORDINATION.md`与`private/phase-b/astra-compute-trial01/HANDOFF_TO_NEW_SESSION.md`；E现已另存draft04/探针v4/输入v4、具体计数器/运行器/判据，两份P0已运行并失败：首稿预算门失败，唯一修订通过四档压力但失败于原功能门；累计2快照/12编译/140启动/6282项/0check/0新计分，本轮已停止，不运行第三稿或P1/P2，见`reports/phase-B-astra-compute-trial01-p0.md`。新E会话已接手并完成交接保全/全量登记，见`data/phase-b/e-handoff-integration.json`；后续P0前置与作者新接收亦已统一登记637295文件/全摘要通过，3项生命周期变化有精确前像。r04-plan-v2已收审，下一项仅用户转交的120分钟工程前置包，零编译/bot/check/新局，见`reports/phase-B-author-r04-plan-v2.md`。以下“最新接续”是此前检查点，权限和实际进度以本段/STATUS为准。
 
 此前接续：2026-11-11用户明确批准`docs/PHASE_B_NEXT_TRIAL_PLAN.md`的一次E单组件试验，P0→public2320→条件dev2080，总上限4400；不再请求同一批准。当前已有未执行初稿，P0夹具/期望、日程/计数器及正式冻结仍待完成，编译/bot/新局为0；续作先读`private/phase-b/astra-compute-trial01/CHECKPOINT.md`，已写draft01修改须另存（本轮全局登记待收束）。DeepSeek补正已收并核账、作者继续停止，范围申请未批准，见`reports/phase-B-author-r03-reconciliation.md`。剩余顺序见`docs/PHASE_B_ROADMAP.md`及STATUS；不把P0获批说成已通过，也不把一次授权扩为无限继续。

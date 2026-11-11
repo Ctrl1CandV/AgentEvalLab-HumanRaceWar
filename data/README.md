@@ -4,6 +4,9 @@
 
 ## 当前入口
 
+- [`phase-b/e-compute-trial01-postmortem.json`](phase-b/e-compute-trial01-postmortem.json)：停后只读证据复盘、纯检查及新资格提案预算；零新执行，未写候选/冻结，原trial01判定和用量不变。
+- [`phase-b/author-r04-ready-package-review.json`](phase-b/author-r04-ready-package-review.json)：原协调会话的工程准备包聚合；旧记录对照不是引擎重放，复用资格未过，下一修订由用户转交；E只集成队列。
+
 - [`phase-b/e-compute-trial01-p0.json`](phase-b/e-compute-trial01-p0.json)：两份真实P0均失败，最终计数与只读核验；本轮停止、0新计分，压力工作量不是强度证据。
 
 - [`phase-b/author-r04-plan-v2-review.json`](phase-b/author-r04-plan-v2-review.json)：原协调会话的v2接收/审查聚合；E仅集成receipt，未重做作者审计，不授权执行。

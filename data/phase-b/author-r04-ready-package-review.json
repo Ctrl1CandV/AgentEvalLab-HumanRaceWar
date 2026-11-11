@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "scope": "Aggregate frozen-queue integration only; findings and tests are from the original coordinating session, not repeated by E",
+  "delivery": {"filesIncludingManifest": 45, "declaredFiles": 44, "bytes": 12470419, "allDeclaredDigestsMatchReported": true},
+  "verdict": "blocked_engineering_repair_required",
+  "savedRecordsComparedReported": 872,
+  "independentEngineReplay": false,
+  "c0RowsReported": 80,
+  "c0ReplayDigestsCheckedReported": 80,
+  "c0WdlReported": [51, 0, 29],
+  "c0ComparabilityPassed": false,
+  "reportedStepReclassification": {"oldReconstruction": 918, "fixedAction": 7, "total": 925, "completeHistoricalActivityVerified": false},
+  "currentScheduleReported": {"launches": 22, "turnReplies": 1452, "replies": 1474},
+  "correctedWindowScheduleProposed": {"launches": 22, "turnReplies": 1450, "replies": 1472},
+  "reviewerTestsReported": {"pureCaseCount": 5, "hashSeeds": [0, 1], "allPassed": true, "lspDiagnostics": 0},
+  "reviewerNewExecutionReported": {"botStarts": 0, "compiles": 0, "checks": 0, "engineSteps": 0, "newGames": 0},
+  "nextTask": {"requiresUserTransfer": true, "startedByE": false, "timeLimitMinutes": 120, "engineStepCaps": {"oldReconstruction": 46, "fixedActionOracle": 32, "total": 78}, "botExecutionAuthorized": false, "compilesAuthorized": false, "checksAuthorized": false, "probesAuthorized": false, "scoringAuthorized": false},
+  "eIntegrator": {"authorImplementationRead": false, "detailedReviewRead": false, "authorCodeExecuted": false, "reviewerTestsRerun": false, "newBotStarts": 0, "newCompiles": 0, "newEngineSteps": 0, "newGames": 0},
+  "sharedRegistrationSummary": "data/phase-b/e-postmortem01-registration.json",
+  "pushed": false
+}

@@ -1,0 +1,7 @@
+2026-11-11 E trial01 post-stop review, baseline5611db5.
+Read-only comparison:12 registered originals matched; distinguish1 full-input/same-budget reference from1 historical different-budget reference. Old negative outcome and usage2 snapshots/12 compiles/140 starts/6282 items/0check unchanged.
+5 synthetic record/arithmetic tests passed at hashseed0/1;2 final analysis files LSP0. Initial14 mixed text/JSON loader type diagnostics and initial source retained; no candidate code was run. Registration helper separately LSP0.
+Measured stored-evidence review host CPU163923600ns; tests/LSP/whole-session CPU not fully measured. New snapshots/compiles/bot starts/checks/engine steps/games/benchmarks all0.
+New proposal only:1 snapshot/6 compiles/128 starts/6000 combined items/1check/0 scored games; planned126 starts/4066 replies plus at most16 reference steps=4082 items. No retry, no new execution authority, no candidate/freeze, no inherited4400 scoring allowance.
+Other coordinator initially active, later frozen. E integrated only the ready-package aggregate queue; no author implementation/task-body inspection, author scripts or reviewer tests rerun. E does not assign the next author task.
+New joint frozen window completed:639543 prior files,639541 byte-unchanged,2 lane changes with exact advance preimages;639658 current files registered and digests verified,0 exceptions. Trial01 ledger unchanged. Maintenance host CPU160195720700ns;5 publication tests at hashseed0/1 pass. Local commit only, no push; B incomplete, C not started.
