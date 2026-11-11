@@ -1,6 +1,6 @@
 # 审查报告
 
-- [`phase-B-astra-compute-trial01-p0.md`](phase-B-astra-compute-trial01-p0.md)：首稿6编译/42启动/2297项，模型与关闭等价通过，10%压力CPU门失败；唯一预算修订已登记待完整复验，第二次失败即停，零新计分。
+- [`phase-B-astra-compute-trial01-p0.md`](phase-B-astra-compute-trial01-p0.md)：两稿P0失败，本轮停止。首稿预算门失败，唯一修订通过四档压力但未过原功能门；总2快照/12编译/140启动/6282项/0check/0新局，禁止第三稿或P1/P2。
 
 - [`phase-B-author-r04-plan-v2.md`](phase-B-author-r04-plan-v2.md)：原协调会话接收10文件，计划仍不可执行；下一项为用户转交的120分钟工程准备，零编译/bot/check/新局。E仅核聚合receipt与前像，不读取作者实现。
 

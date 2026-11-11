@@ -4,7 +4,7 @@
 
 ## 当前入口
 
-- [`phase-b/e-compute-trial01-p0.json`](phase-b/e-compute-trial01-p0.json)：真实P0首稿预算失败与唯一修订的执行计数、覆盖边界；不是强度证据。
+- [`phase-b/e-compute-trial01-p0.json`](phase-b/e-compute-trial01-p0.json)：两份真实P0均失败，最终计数与只读核验；本轮停止、0新计分，压力工作量不是强度证据。
 
 - [`phase-b/author-r04-plan-v2-review.json`](phase-b/author-r04-plan-v2-review.json)：原协调会话的v2接收/审查聚合；E仅集成receipt，未重做作者审计，不授权执行。
 
