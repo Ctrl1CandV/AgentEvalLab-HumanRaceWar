@@ -4,6 +4,8 @@
 
 复盘见[`reports/phase-B-astra-stop-review.md`](../reports/phase-B-astra-stop-review.md)。详细实现边界、源文件身份和未公开对手清单仅在private；不转给另一作者。
 
+接续准备已完成，见[准备记录](../reports/phase-B-next-preparation.md)及[B剩余路线](PHASE_B_ROADMAP.md)：旧baseline来源/预算静态匹配、29配对算术通过；具体候选、评价参数和P0输入尚未实现/冻结。准备工作不改变本提案的待批准状态或总上限。
+
 ## 要回答的问题
 
 从保留的E-r02出发，只增加一个可随计算预算扩展的组件，不叠加宏观调参，不使用未采纳的dev05参数。先验证该组件的规则模型和运行正确性，再检验10%、25%、50%、100%四档是否有可用的强度增益。最后只有事前指定的100%版本可能进入原dev取舍。

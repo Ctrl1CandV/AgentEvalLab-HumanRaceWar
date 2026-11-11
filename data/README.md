@@ -4,9 +4,11 @@
 
 ## 当前入口
 
+- [`phase-b/next-preparation.json`](phase-b/next-preparation.json)：7份作者材料归档与静态来源/配对核对、18项双hashseed纯测试及保全用量；用户已转交作者有限修复任务、完成情况待核。astra仍待试验批准，零bot/新局，未实现候选。
+
 - [`phase-b/astra-stop-review.json`](phase-b/astra-stop-review.json)：旧6720public账本配对复核，终选56改善/42退步，训练五个最高分条件逐格胜负相同；新方案预算算术与纯测试。当前未授权实施、零新局，不是新强度结果。
 
-- [`phase-b/author-r02-review.json`](phase-b/author-r02-review.json)：作者r02的160局及1次check核验、阴性停止与原样保全；主仓库零新局，不批准r03；这是补正前检查点，后续只读任务状态见STATUS。
+- [`phase-b/author-r02-review.json`](phase-b/author-r02-review.json)：作者r02的160局及1次check核验、阴性停止与原样保全；主仓库零新局，不批准r03；这是补正前检查点，后续前置定位归档和有限修复转交状态见STATUS及本次准备汇总。
 
 - [`phase-b/mainlines-dev05.json`](phase-b/mainlines-dev05.json)：完整6720public搜索＋80dev首段；候选37.5%低于45%早停线，不采纳。复用1440局、追加5360，保留一次启动前资源错误；连续三轮止损，不追加下一候选。收束检查见[`phase-b/dev05-completion-validation.json`](phase-b/dev05-completion-validation.json)：专项检查、8080份当前评测回放摘要复核、旧证据两项明确生命周期例外及最终632178文件登记。
 - [`phase-b/author-addendum-D-c01.json`](phase-b/author-addendum-D-c01.json)：补充198份既有作者/公开参考对局，纠正2份误归，合计2814份记录及6份历史调试故障；补充会话自述不证明原开发身份；这是r02执行前的历史快照，后续见上列r02复核。
