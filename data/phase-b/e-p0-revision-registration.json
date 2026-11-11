@@ -1,0 +1,21 @@
+{
+  "allRegisteredDigestsVerified": true,
+  "benchmarks": 0,
+  "botStarts": 0,
+  "compiles": 0,
+  "date": "2026-11-11",
+  "exceptions": 0,
+  "expectedLifecycleChangesWithExactPreimages": 2,
+  "maintenanceProcessCpuNs": 172199977200,
+  "newGames": 0,
+  "otherLaneFrozenAndUnchanged": true,
+  "priorFiles": 637295,
+  "priorFilesUnchanged": 637293,
+  "priorRegistrySha256": "b5d9a59fe11c97e46972be9fe69c7c47baf6b48f3539cda0aa52211babd9de4f",
+  "pushed": false,
+  "registeredFiles": 638015,
+  "registrySha256": "75ba5949ab8ce67175e4fa5eae5d76bc1ba0dc1144b974b053c712abc3ec4b5d",
+  "schemaVersion": 1,
+  "scope": "revision registration only; prior P0 execution usage is separate; no author content inspection",
+  "wholeSessionCpuKnown": false
+}

@@ -4,6 +4,8 @@
 
 ## 当前入口
 
+- [`phase-b/e-compute-trial01-p0.json`](phase-b/e-compute-trial01-p0.json)：真实P0首稿预算失败与唯一修订的执行计数、覆盖边界；不是强度证据。
+
 - [`phase-b/author-r04-plan-v2-review.json`](phase-b/author-r04-plan-v2-review.json)：原协调会话的v2接收/审查聚合；E仅集成receipt，未重做作者审计，不授权执行。
 
 - [`phase-b/e-compute-trial01-preflight.json`](phase-b/e-compute-trial01-preflight.json)：E执行前置、精确日程和纯检查；freeze01已在新共享静止窗口全量登记，此登记检查点实际执行0，不是P0通过；保全/登记见`phase-b/e-p0-preflight-registration.json`。
