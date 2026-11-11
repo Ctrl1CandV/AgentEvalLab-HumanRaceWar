@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "status": "accounting_correction_accepted_original_failure_preserved",
+  "retainedAuthorBaseline": "D-c01/r01",
+  "intake": {
+    "files": 9,
+    "bytes": 599373,
+    "declaredDigestsChecked": 8,
+    "priorAuthorFilesUnchanged": 300
+  },
+  "historicalR03Accounting": {
+    "functionalStarts": 34,
+    "checkStarts": 1,
+    "totalStarts": 35,
+    "functionalTurnReplies": 2159,
+    "functionalReadyReplies": 34,
+    "checkReplies": 6,
+    "totalReplies": 2199,
+    "sourceByteVersions": 9,
+    "baselineVersions": 1,
+    "decisionVariantsBeyondBaseline": 6,
+    "logOnlyVariants": 2,
+    "savedFunctionalInitPlusCheckCpuNs": 832751900,
+    "functionalTurnCpuKnown": false,
+    "functionalSessionCpuKnown": false,
+    "scoringGames": 0
+  },
+  "originalChecksPreserved": true,
+  "correctedSummaryResultFieldsPreserved": true,
+  "reviewerActivity": {
+    "botStarts": 0,
+    "compiles": 0,
+    "checks": 0,
+    "benchmarks": 0,
+    "engineSteps": 0,
+    "newGames": 0,
+    "intakeProcessCpuNs": 44376800,
+    "wholeSessionCpuKnown": false
+  },
+  "validation": {
+    "pureTestsPerHashSeed": 4,
+    "hashSeeds": [0, 1],
+    "passed": true,
+    "lspFiles": 2,
+    "finalLspDiagnostics": 0,
+    "initialAuditFailurePreserved": true,
+    "fullPublicSuiteRerun": false
+  },
+  "limitations": [
+    "Historical missing harness versions, real prefix outputs and TURN CPU remain unknown.",
+    "Current file and ledger agreement does not independently prove all author session activity.",
+    "Reconciliation does not approve r04, change the functional verdict or forgive the snapshot overrun."
+  ],
+  "repositoryFinalization": {
+    "status": "registered_and_included_in_this_local_commit",
+    "summary": "data/phase-b/e-handoff-integration.json",
+    "newAssetsCoveredByLastCompletedGlobalRegistry": true,
+    "committed": true,
+    "pushed": false
+  },
+  "_publication": {
+    "scope": "aggregate intake and accounting only",
+    "source": "private/phase-b/deepseek/r03-reconciliation-review/audit.json",
+    "omitted": "per-run records, source mechanisms, individual input diagnostics and author raw files"
+  }
+}

@@ -1,10 +1,13 @@
 # 审查报告
 
-- [`phase-B-author-r03.md`](phase-B-author-r03.md)：作者功能失败、零计分；300文件原样接收、34份轨迹重步。启动/回复未超限，但策略快照超限、汇总与判据需补正；下一任务仅零运行账本/结论补正，保留r01，不扩大修复。
+- [`phase-B-author-r04-plan.md`](phase-B-author-r04-plan.md)：r04计划6文件接收及只读审查，契约仍需修订；下一任务只有界计划/旧证据定位，未授权候选或80局。用户拆分会话，新GPT接续已获批E试验；新E会话已统一收束交接资产登记与本地提交，汇总见`../data/phase-b/e-handoff-integration.json`。
+- [`phase-B-author-r03-reconciliation.md`](phase-B-author-r03-reconciliation.md)：9文件补正接收，启动/回复/源码账与旧审计一致，原功能失败及快照超限不变，补正已收束。
 
-- [`phase-B-next-preparation.md`](phase-B-next-preparation.md)：此前7份作者补正/前置材料归档及有限修复转交时点；astra完成剩余路线、静态规格和18项双hashseed纯检查，零bot/新局。4400局试验仍待明确批准。
+- [`phase-B-author-r03.md`](phase-B-author-r03.md)：作者功能失败、零计分；300文件原样接收、34份轨迹重步。启动/回复未超限，但策略快照超限、汇总与判据需补正；当时下一任务仅零运行账本/结论补正，现已收束；保留r01，后续见上列最新报告。
 
-- [`phase-B-astra-stop-review.md`](phase-B-astra-stop-review.md)：astra三轮止损后的只读复盘；重计旧6720public结果，提出一条主线的条件式算力试验，最大4400新局只是待批准额度。本次零bot/新局，止损仍有效。
+- [`phase-B-next-preparation.md`](phase-B-next-preparation.md)：此前7份作者补正/前置材料归档及有限修复转交时点；astra完成剩余路线、静态规格和18项双hashseed纯检查，零bot/新局。该准备时点4400局试验尚待批准；用户后来已明确批准一次，最新进度见STATUS。
+
+- [`phase-B-astra-stop-review.md`](phase-B-astra-stop-review.md)：astra三轮止损后的只读复盘；重计旧6720public结果，提出一条主线的条件式算力试验，最大4400新局只是待批准额度。该复盘批零bot/新局；后续用户只解除一次E有限试验的止损限制，不抹去原失败。
 
 - [`phase-B-author-r02.md`](phase-B-author-r02.md)：作者160局筛选阴性停止，未交付新版本；原样归档及完整回放核验，原诊断解释需修正；这是当时停点；随后补正和前置定位归档、有限修复任务转交见最新准备记录，不自动扩大评测。
 

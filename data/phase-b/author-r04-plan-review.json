@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "status": "plan_received_revision_required_no_execution_authorization",
+  "retainedAuthorBaseline": "D-c01/r01",
+  "intake": {
+    "files": 6,
+    "bytes": 94813,
+    "declaredDigestsChecked": 5,
+    "claimedReadSetCurrentlyMatches": 52,
+    "historicalPrePostActivityIndependentlyProven": false,
+    "priorAuthorFilesUnchanged": 300,
+    "priorDeclaredDigestsChecked": 19,
+    "publicFilesChecked": 106
+  },
+  "reviewedProposalNotExecuted": {
+    "logicalInputs": 12,
+    "singlePassStarts": 17,
+    "singlePassTurns": 986,
+    "singlePassReplies": 1003,
+    "twoPassStarts": 34,
+    "twoPassReplies": 2006,
+    "arithmeticConsistent": true,
+    "contractRequiresRevision": true
+  },
+  "reviewTopics": [
+    "stateful probe prehistory and nonvacuous controls",
+    "occupancy and conflict handling",
+    "actual prefix output comparison",
+    "prior action protection and complete failure criteria",
+    "strict transformed positive-case coverage",
+    "consistent failure, revision and execution accounting"
+  ],
+  "nextTaskPrepared": {
+    "kind": "bounded_plan_revision_and_old_evidence_inspection",
+    "requiresUserTransfer": true,
+    "wallMinutesMax": 60,
+    "oldReplayFlowsMax": 1,
+    "oldEngineStepsMax": 55,
+    "botStartsMax": 0,
+    "compilesMax": 0,
+    "checksMax": 0,
+    "newGamesMax": 0,
+    "candidateOrHarnessImplementationAllowed": false,
+    "scoringAuthorization": false,
+    "completed": false
+  },
+  "reviewerActivity": {
+    "botStarts": 0,
+    "compiles": 0,
+    "checks": 0,
+    "engineSteps": 0,
+    "benchmarks": 0,
+    "newScoredGames": 0,
+    "intakeProcessCpuNs": 105465800,
+    "wholeSessionCpuKnown": false
+  },
+  "validation": {
+    "pureTestsPerHashSeed": 4,
+    "hashSeeds": [0, 1],
+    "passed": true,
+    "lspFiles": 2,
+    "finalLspDiagnostics": 0,
+    "initialAuditAndTypeDiagnosticPreserved": true,
+    "fullPublicSuiteRerun": false
+  },
+  "repositoryFinalization": {
+    "status": "registered_and_included_in_this_local_commit",
+    "summary": "data/phase-b/e-handoff-integration.json",
+    "newAssetsCoveredByLastCompletedGlobalRegistry": true,
+    "committed": true,
+    "pushed": false
+  },
+  "_publication": {
+    "scope": "aggregate plan review; not functional or strength evidence",
+    "source": "private/phase-b/deepseek/r04-plan-review/archive-receipt.json",
+    "omitted": "mechanism, exact inputs, source diffs, per-input outcomes and author raw files"
+  }
+}
