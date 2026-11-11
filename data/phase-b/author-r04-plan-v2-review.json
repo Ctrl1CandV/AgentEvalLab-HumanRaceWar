@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "scope": "aggregate integration of the original coordinator's review; not a repeated author audit by E",
+  "decision": "delivery_received_not_runtime_ready",
+  "receiptSha256VerifiedByIntegrator": "914a1a458bfd70921f3c8fb5478c3b98192c5dea020c92d18eb345910cdd0fe2",
+  "delivery": {"files": 10, "bytes": 587494, "declaredDigestsPassed": 9, "priorPlanFilesUnchanged": 6, "publicFilesChecked": 106},
+  "coordinatorValidation": {
+    "savedStepsComparedWithOriginalRecords": 50,
+    "boundariesChecked": 6,
+    "independentEngineRestep": false,
+    "pureTestsPerHashSeed": 4,
+    "hashSeeds": [0, 1],
+    "zeroLspDiagnosticPythonFiles": 3,
+    "initialTypeDiagnosticPreserved": true,
+    "fullPublicBotSuiteRerun": false
+  },
+  "authorReportedUsage": {"oldReplayEngineSteps": 50, "compiles": 0, "botStarts": 0, "checks": 0, "newScoredGames": 0},
+  "coordinatorUsage": {"compiles": 0, "botStarts": 0, "checks": 0, "engineSteps": 0, "newGames": 0, "auditProcessCpuNs": 36397200, "handoffFinalizationProcessCpuNs": 13084100, "wholeSessionCpuKnown": false},
+  "nextTaskPrepared": {
+    "requiresUserTransfer": true,
+    "wallMinutesCap": 120,
+    "conditionalUnexecutedDraftOnly": true,
+    "oldRecordReconstructionStepCap": 900,
+    "fixedActionOracleAndPureEngineStepCap": 64,
+    "compilesAllowed": 0,
+    "botStartsAllowed": 0,
+    "checksAllowed": 0,
+    "newScoredGamesAllowed": 0,
+    "runtimeRequiresSeparateApproval": true,
+    "notStartedByCoordinator": true,
+    "executionNotObserved": true
+  },
+  "integratorBoundary": {"readAggregateOnly": true, "authorSourceFixturesDetailedReviewAndTaskBodyRead": false, "priorLaneExactPreimageVerified": true, "newAuthorImplementationUsedByE": false},
+  "pushed": false
+}

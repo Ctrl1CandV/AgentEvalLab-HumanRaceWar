@@ -2,9 +2,9 @@
 
 更新：2026-11-11。astra负责进攻/经济主线、统一评测、阶梯组装和B交审；DeepSeek独立负责控制线，不能替代astra的工作。此表整理既有要求和依赖，**不是新增实验授权**。A已通过，B未完成，C未启动。
 
-2026-11-11用户已拆分会话：原GPT协调DeepSeek，新GPT接续E及共享仓库集成，见[会话分工](SESSION_COORDINATION.md)。r04计划已接收并审，尚不适于执行，下一任务仅有界计划修订/旧证据定位；不授权bot或80局，见[计划审查](../reports/phase-B-author-r04-plan.md)。新E会话已统一收束交接，旧637075文件不变、新637169文件登记/全摘要通过；见`../data/phase-b/e-handoff-integration.json`。以下原轮次停点不覆盖本段。
+2026-11-11用户已拆分会话：原GPT协调DeepSeek，新GPT接续E及共享仓库集成，见[会话分工](SESSION_COORDINATION.md)。r04-plan-v2已接收并审，仍不可执行；下一项为用户转交的120分钟工程准备包，条件式未执行草稿和有界旧重建/oracle，零编译/bot/check/新局，见[v2接收汇总](../reports/phase-B-author-r04-plan-v2.md)。新E会话已统一收束交接，旧637075文件不变、新637169文件登记/全摘要通过；见`../data/phase-b/e-handoff-integration.json`。以下原轮次停点不覆盖本段。
 
-当前保留A/E/C-r02和作者首版D-c01/r01。用户已在dev03–05三轮止损后明确批准astra一次E单组件有限试验，已进入实现，P0尚未冻结或执行；不是不限轮数继续。DeepSeek r03补正已接收核账，原功能失败、零计分和快照超限不变；新范围申请未批准，作者继续停止。见[补正接收](../reports/phase-B-author-r03-reconciliation.md)。astra不代开会话、不改或借用作者代码、不监看未交结果。
+当前保留A/E/C-r02和作者首版D-c01/r01。用户已在dev03–05三轮止损后明确批准astra一次E单组件有限试验，freeze01和前置已登记，待实际P0；不是不限轮数继续。DeepSeek r03补正已接收核账，原功能失败、零计分和快照超限不变；原范围申请不自动生效，最新v2工程准备边界见上段，运行仍须另批。见[补正接收](../reports/phase-B-author-r03-reconciliation.md)。astra不代开会话、不改或借用作者代码、不监看未交结果。
 
 ## 先后顺序
 

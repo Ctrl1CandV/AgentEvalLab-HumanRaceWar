@@ -4,6 +4,8 @@
 
 复盘见[`reports/phase-B-astra-stop-review.md`](../reports/phase-B-astra-stop-review.md)。详细实现边界、源文件身份和未公开对手清单仅在private；不转给另一作者。
 
+最新E前置：已另存具体输入、计数器/运行器、判据及freeze01；8项纯检查双seed通过，C++尚未编译。首次全量登记因另一lane active在扫描前拒绝；后来取得双方冻结窗口，637295文件登记/全摘要通过，freeze01身份已覆盖，继续P0而不重批授权。见[前置检查点](../reports/phase-B-astra-compute-trial01-preflight.md)。下段是交接时点的历史。
+
 历史接续准备见[准备记录](../reports/phase-B-next-preparation.md)及[B剩余路线](PHASE_B_ROADMAP.md)：旧baseline来源/预算静态匹配、29配对算术通过。获批后已写唯一实现选择、未执行draft01/draft02、探针及未运行输入生成器，但P0输入/预期、运行器/计数器与正式执行快照尚未冻结。该准备批当时没有执行授权；随后用户的明确批准不改变总上限或原门槛。
 
 ## 要回答的问题

@@ -4,6 +4,10 @@
 
 ## 当前入口
 
+- [`phase-b/author-r04-plan-v2-review.json`](phase-b/author-r04-plan-v2-review.json)：原协调会话的v2接收/审查聚合；E仅集成receipt，未重做作者审计，不授权执行。
+
+- [`phase-b/e-compute-trial01-preflight.json`](phase-b/e-compute-trial01-preflight.json)：E执行前置、精确日程和纯检查；freeze01已在新共享静止窗口全量登记，此登记检查点实际执行0，不是P0通过；保全/登记见`phase-b/e-p0-preflight-registration.json`。
+
 - [`phase-b/e-handoff-integration.json`](phase-b/e-handoff-integration.json)：新E会话接手及统一收束；旧637075文件不变、新637169文件登记/全摘要通过。仅字节保全，E仍零编译/启动/新局，不是P0通过。
 
 - [`phase-b/author-r04-plan-review.json`](phase-b/author-r04-plan-review.json)：6文件计划接收/预算核对/审查与下一项有界任务聚合；未授权r04执行，零bot/新局，接收后的全量登记已由新E会话统一收束。

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "status": "pre_execution_freeze_registered",
+  "scope": "pre-execution preparation, not P0 or strength evidence",
+  "handoffIntegrationCommit": "77d6c247d33fc6c30e613f0be455946704f651cc",
+  "authorization": {"valid": true, "newScoredGamesMax": 4400, "renewalNeeded": false},
+  "identity": {"model": "gpt-6-astra", "sameDevelopmentLineContinuation": true, "independentTopAuthorClaimed": false},
+  "executionFreeze": {
+    "sha256": "c73355adbe6f0c65b05ecbe82f2545abef702aff7488c67f091a4b15388bae41",
+    "boundInputFiles": 78,
+    "materializedEntries": 6,
+    "sourceInputsScheduleAndPredicatesPresent": true,
+    "globalRegistryCovered": true,
+    "approvedForSkippingRegistryGate": false
+  },
+  "singlePassSchedule": {"compiles": 6, "starts": 126, "repliesOrCheckedTransitions": 4050, "checks": 1},
+  "completeRetestFitsOriginalCaps": true,
+  "inputs": {
+    "baseModelCases": 49,
+    "modelReferenceStepsPerGeneration": 122,
+    "oldBaselinePrefixes": 40,
+    "oldBaselineReferenceStepsPerGeneration": 2000,
+    "pressureObservationsPerFraction": 384,
+    "originalLogicalFunctionalityChecks": 19,
+    "inputGenerations": 2,
+    "candidateExecutedForInputGeneration": false,
+    "modelComparisonIsPartialProjectionNotFullStateHash": true,
+    "inputGenerationHostCpuNs": 2197312500
+  },
+  "validation": {
+    "finalPureTestsPerHashSeed": 8,
+    "hashSeeds": [0, 1],
+    "passed": true,
+    "currentControlPythonLspFiles": 4,
+    "currentControlPythonLspDiagnostics": 0,
+    "fullPublicSuiteRerun": false,
+    "cppCompiledOrValidated": false
+  },
+  "actualExecutionUsage": {"snapshots": 0, "compiles": 0, "starts": 0, "repliesOrCheckedTransitions": 0, "checks": 0, "newScoredGames": 0, "benchmarks": 0},
+  "coordination": {
+    "previousHandoffFullyIntegrated": true,
+    "newAuthorReviewActiveAtPreflightRegistryAttempt": true,
+    "registryAttemptRefusedBeforeSweepOrReplacement": true,
+    "newQuiescentWindowRequested": true,
+    "subsequentFrozenWindowCompleted": true,
+    "registeredFilesAtPreExecutionCheckpoint": 637295,
+    "priorFilesUnchanged": 637166,
+    "exactLifecyclePreimagesVerified": 3,
+    "registrySummary": "data/phase-b/e-p0-preflight-registration.json",
+    "authorImplementationReadIntoEContext": false
+  },
+  "wholeSessionCpuKnown": false,
+  "pushed": false
+}

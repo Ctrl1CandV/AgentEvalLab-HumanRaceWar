@@ -1,5 +1,9 @@
 # 审查报告
 
+- [`phase-B-author-r04-plan-v2.md`](phase-B-author-r04-plan-v2.md)：原协调会话接收10文件，计划仍不可执行；下一项为用户转交的120分钟工程准备，零编译/bot/check/新局。E仅核聚合receipt与前像，不读取作者实现。
+
+- [`phase-B-astra-compute-trial01-preflight.md`](phase-B-astra-compute-trial01-preflight.md)：交接已本地收束；E的具体输入、计数器/运行器及freeze01已备，8项纯检查双seed通过。首次全量登记被active守卫拒绝，后来取得冻结窗口并完成637295文件登记/全摘要核验；本登记检查点零编译/bot/新局，下一步实际P0，不重批授权。
+
 - [`phase-B-author-r04-plan.md`](phase-B-author-r04-plan.md)：r04计划6文件接收及只读审查，契约仍需修订；下一任务只有界计划/旧证据定位，未授权候选或80局。用户拆分会话，新GPT接续已获批E试验；新E会话已统一收束交接资产登记与本地提交，汇总见`../data/phase-b/e-handoff-integration.json`。
 - [`phase-B-author-r03-reconciliation.md`](phase-B-author-r03-reconciliation.md)：9文件补正接收，启动/回复/源码账与旧审计一致，原功能失败及快照超限不变，补正已收束。
 
