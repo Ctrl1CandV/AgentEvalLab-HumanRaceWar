@@ -1,5 +1,6 @@
 # 审查报告
 
+- [`phase-B-astra-strength01-preflight.md`](phase-B-astra-strength01-preflight.md)：已批2320局的实际日程/121文件冻结、零重试/失败停发控制器及分析器；22新＋10既有纯检查双seed、5文件LSP0，执行前置不等于强度结果。
 - [`phase-B-author-r04-engineering-repair.md`](phase-B-author-r04-engineering-repair.md)：既有52文件工程包审查仍阻塞，E仅核聚合/89项摘要；新纯工程包尚未接收。共享收束后优先继续已批准2320局，到E下一合适停点再释放新接收。
 - [`phase-B-astra-strength01-preparation.md`](phase-B-astra-strength01-preparation.md)：资格02通过后的下一轮准备；480旧局来源/回放摘要/头及旧审计凭据、92冻结文件/四入口匹配，10纯检查双seed。新提案2320 public-only，通过也停；该准备批零新增执行；随后用户已明确批准具体范围，执行器/冻结仍须完成。
 - [`phase-B-astra-qualification02.md`](phase-B-astra-qualification02.md)：用户新批准的单次资格02已完整通过P0后停止；实际1快照/6编译/126启动/4074项含8参考步/1check/0计分，停后只读审计通过。只证明资格，不证明强度，不继承旧4400余量。
