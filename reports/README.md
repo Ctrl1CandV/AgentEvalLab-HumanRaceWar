@@ -1,6 +1,7 @@
 # 审查报告
 
-- [`phase-B-astra-compute-trial01-postmortem.md`](phase-B-astra-compute-trial01-postmortem.md)：E停后只读复盘与新的一次P0资格提案；12份旧原件核对、5纯检查双seed、零新bot/引擎步，原失败不变，新执行范围仍待批准。
+- [`phase-B-astra-qualification02.md`](phase-B-astra-qualification02.md)：用户明确新批准的单次资格02，唯一实现与冻结已准备；1快照/6编译/128启动/6000项/1check/0计分，成败均停，不继承旧4400余量。
+- [`phase-B-astra-compute-trial01-postmortem.md`](phase-B-astra-compute-trial01-postmortem.md)：E停后只读复盘与新的一次P0资格提案；12份旧原件核对、5纯检查双seed、零新bot/引擎步，原失败不变；当时待批准的新资格02已于2026-11-12明确获批，进度另列。
 - [`phase-B-author-r04-ready-package.md`](phase-B-author-r04-ready-package.md)：原协调会话的工程准备包审查聚合，仍不可运行；下一项仅用户转交的120分钟工程修订、最多78参考步，零编译/bot/check/新局。E不读实现、不下发任务。
 
 - [`phase-B-astra-compute-trial01-p0.md`](phase-B-astra-compute-trial01-p0.md)：两稿P0失败，本轮停止。首稿预算门失败，唯一修订通过四档压力但未过原功能门；总2快照/12编译/140启动/6282项/0check/0新局，禁止第三稿或P1/P2。

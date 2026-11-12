@@ -37,7 +37,7 @@
 
 ## 当前状态
 
-2026-11-11最新：r04工程准备包已由原协调会话审查，仍不可运行；下一项仅用户转交120分钟工程修订，旧重建≤46步、固定动作oracle≤32步，零编译/bot/check/探针/新局。E只集成无实现聚合，不读作者源码/详细审查/任务正文、不下发任务，见`reports/phase-B-author-r04-ready-package.md`。E自己的trial01已停止，之后只有只读复盘和待批准的新资格提案，没有新增候选或运行；见`docs/PHASE_B_E_QUALIFICATION02_PLAN.md`。共享扫描/提交仍按新静止窗口协调，不推送。
+2026-11-11最新：r04工程准备包已由原协调会话审查，仍不可运行；下一项仅用户转交120分钟工程修订，旧重建≤46步、固定动作oracle≤32步，零编译/bot/check/探针/新局。E只集成无实现聚合，不读作者源码/详细审查/任务正文、不下发任务，见`reports/phase-B-author-r04-ready-package.md`。E自己的trial01已停止；2026-11-12用户已另明确批准资格02，新实现/输入/账本已冻结，完成登记、干净提交后只执行一份P0，不自动计分，见`docs/PHASE_B_E_QUALIFICATION02_PLAN.md`及`reports/phase-B-astra-qualification02.md`。同一开发线续作，不算独立顶端作者。共享扫描/提交仍按新静止窗口协调，不推送。
 
 上一检查点（历史）：r04-plan-v2十文件已由原协调会话原样接收并审，仍未达可运行状态；E只集成聚合receipt，未读作者实现或详细材料。下一项120分钟工程准备包由用户转交，条件式未执行草稿、旧重建最多900步/纯引擎oracle最多64步，零编译/bot/check/新局，运行另须批准；见`reports/phase-B-author-r04-plan-v2.md`。r03失败/超快照及r04原计划历史不变。用户将原GPT会话改为DeepSeek协调，新GPT会话继续E及共享仓库集成；分工/全量登记静止窗口见`SESSION_COORDINATION.md`。E本轮已在P0第二次失败后停止，两份快照和12编译额度用完，新计分0，不据4400余量继续，不借作者实现；交接资产已由新E会话统一登记收束，见`data/phase-b/e-handoff-integration.json`。以下保留各次历史接收时点，不覆盖本段。
 

@@ -1,0 +1,50 @@
+{
+  "caps": {
+    "checks": 1,
+    "compiles": 6,
+    "items": 6000,
+    "snapshots": 1,
+    "starts": 128
+  },
+  "combinedScheduledItems": 4074,
+  "compilerCpuKnown": false,
+  "date": "2026-11-12",
+  "executionAuthorized": true,
+  "freezeSha256": "260a8be7e7ed02b6c11153060e964b78fce58bc989651133640e66eece972d0c",
+  "frozenFileCount": 92,
+  "inputGenerationHostCpuNs": 204911900,
+  "materializedEntrypoints": 6,
+  "p1Eligible": false,
+  "p2Eligible": false,
+  "pureTests": {
+    "diagnostics": 0,
+    "hashSeeds": [
+      0,
+      1
+    ],
+    "passed": true,
+    "pythonLspFiles": 4,
+    "testsPerSeed": 14
+  },
+  "pushed": false,
+  "scheduledExecution": {
+    "checks": 1,
+    "compiles": 6,
+    "items": 4066,
+    "snapshots": 1,
+    "starts": 126
+  },
+  "scheduledReferenceSteps": 8,
+  "schemaVersion": 1,
+  "scope": "authorized qualification02 preflight; not runtime success or strength evidence",
+  "scoredGamesAuthorized": 0,
+  "trial01StoppedAndUnchanged": true,
+  "usageBeforeExecution": {
+    "checks": 0,
+    "compiles": 0,
+    "items": 8,
+    "snapshots": 0,
+    "starts": 0
+  },
+  "wholeSessionCpuKnown": false
+}
