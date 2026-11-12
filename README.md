@@ -4,6 +4,8 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 ## 现在进行到哪一步
 
+**2026-11-12最新：资格02通过后，已推进下一轮public强度比较的准备，尚未开始计分。** [新方案](docs/PHASE_B_E_STRENGTH01_PLAN.md)申请2320新局、复用480，0新dev/修订/重试，通过也停止；不继承旧4400额度。存量证据匹配、10纯检查双seed通过，本批零新增执行；具体范围待批准，控制器/分析器及执行冻结尚待实施。见[准备报告](reports/phase-B-astra-strength01-preparation.md)。下列为此前阶段记录，不推送。
+
 **A阶段已通过审查，用户已授权进入B。** 依据见 [inbox/2026-11-08-phase-a-accepted.md](inbox/2026-11-08-phase-a-accepted.md)。standard-1和动物园v15按交审配置冻结；A最终40图3680局条件通过，两个哈希种子全套各198项通过，完整报告见 [reports/phase-A.md](reports/phase-A.md)。
 
 **dev05完成6800局并未采纳：首段dev得分37.5%低于45%门槛，保留原三轮止损结论。用户随后只批准一次E有限试验，不推送。** 原1440局未重跑，启动前资源失败保留；public搜索最优79.17%，但未通过对保留版的dev取舍，A/E/C-r02不变，不追加dev06或放宽门槛。见[完整dev05报告](reports/phase-B-mainlines-dev05.md)和[原计划](docs/PHASE_B_DEV05_PLAN.md)。D-c01首版另完成1280局，运行合规但强主线目标未达，只作同作者比较基线；随后作者r02完成160局public但未过筛选，未交新版本；后续有限修复r03功能失败、未计分，接收核验发现策略快照超限及汇总/判据问题，补正已核账收束；随后r04工程准备包已由原协调会话收审，仍不可运行，下一项仅用户转交的120分钟工程修订（旧重建46步/oracle32步），零编译/bot/check/新局，保留r01，见[最新接收汇总](reports/phase-B-author-r04-ready-package.md)、[补正接收](reports/phase-B-author-r03-reconciliation.md)、[r03报告](reports/phase-B-author-r03.md)、[首版报告](reports/phase-B-author-D-c01.md)和[r02报告](reports/phase-B-author-r02.md)。此前[第0步](reports/phase-B-mid-review-step0.md)已完成M1、历史分析、dev80和两公开材料目录：`~/projects/HRW-pilot/`、`~/projects/HRW-deepseek/`，由用户另开新会话，不用`hrw-dev`；分工与交付见[AUTHORS](docs/AUTHORS.md)。public调参、dev取舍/临时BT、calibration仅正式校准；grading/holdout仍未用。

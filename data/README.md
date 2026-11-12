@@ -4,6 +4,7 @@
 
 ## 当前入口
 
+- [`phase-b/e-strength01-preparation.json`](phase-b/e-strength01-preparation.json)：下一轮public强度提案及存量复用核对，480旧局摘要/头/旧审计凭据和92冻结文件/四入口匹配；10纯检查双seed，本批零新增执行。2320新局只是待批范围，非已计分；收束见[`e-strength01-preparation-registration.json`](phase-b/e-strength01-preparation-registration.json)。
 - [`phase-b/e-qualification02-p0.json`](phase-b/e-qualification02-p0.json)：资格02完整P0通过后停止，实际1快照/6编译/126启动/4066回复＋8参考步=4074项/1check/0计分，压力和停后只读审计聚合；不证明强度改善，不自动P1/P2。收束登记见[`e-qualification02-closure-registration.json`](phase-b/e-qualification02-closure-registration.json)，641668项全摘要通过、零例外。
 - [`phase-b/e-qualification02-preflight.json`](phase-b/e-qualification02-preflight.json)：用户新批准的单次P0资格02前置，92文件/6入口冻结，14纯检查双seed及4文件LSP通过；8参考步已记账，不是运行成功或强度证据。执行前登记见[`e-qualification02-preflight-registration.json`](phase-b/e-qualification02-preflight-registration.json)，639726项全量摘要通过，旧trial01账本不变。
 - [`phase-b/e-compute-trial01-postmortem.json`](phase-b/e-compute-trial01-postmortem.json)：停后只读证据复盘、纯检查及当时的新资格提案预算；该批零新执行、未写候选/冻结，原trial01判定和用量不变；资格02的新授权与实施另列。
