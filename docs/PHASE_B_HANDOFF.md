@@ -1,6 +1,8 @@
 # B阶段启动交接
 
-2026-11-12当前接续：资格02通过后用户要求下一轮，已完成`docs/PHASE_B_E_STRENGTH01_PLAN.md`及`reports/phase-B-astra-strength01-preparation.md`，新2320局public-only范围尚待批准；复用480旧局，0新dev/修订/重试，通过也停。本批只读存量核对和10项双seed纯检查，零编译/bot/引擎步/新局，未改候选。新的私有零重试/失败停发控制器、分析器、执行冻结尚未完成，不运行旧入口或继承4400。共享收束在本批新静止窗口完成后仍停止，后续写入重新协调，不推送。最新以STATUS为准。
+2026-11-12当前接续：用户已批准强度轮01的2320新public局，无需重批；先按既有作者聚合收束共享登记，再完成E控制器/分析器、冻结登记/干净提交并执行。新`r04-controller-repair01`已完成停止但未归档/审查，协调方保持frozen不写主仓库；E下一合适停点才明确释放接收窗口，不因新包中断、不读实现、不推送。当前实际新增执行0，最新见STATUS及`reports/phase-B-author-r04-engineering-repair.md`。
+
+2026-11-12准备检查点（历史）：资格02通过后用户要求下一轮，已完成`docs/PHASE_B_E_STRENGTH01_PLAN.md`及`reports/phase-B-astra-strength01-preparation.md`，新2320局public-only范围尚待批准；复用480旧局，0新dev/修订/重试，通过也停。本批只读存量核对和10项双seed纯检查，零编译/bot/引擎步/新局，未改候选。新的私有零重试/失败停发控制器、分析器、执行冻结尚未完成，不运行旧入口或继承4400。共享收束在本批新静止窗口完成后仍停止，后续写入重新协调，不推送。最新以STATUS为准。
 
 2026-11-12资格02完成记录：用户已明确批准`docs/PHASE_B_E_QUALIFICATION02_PLAN.md`的新资格02（1快照/6编译/128启动/6000项/1check/0计分），已从干净9a145d4完整执行P0并通过后停止：1快照/6编译/126启动/4066回复＋8参考步=4074项/1check/0计分。14纯控制检查和5纯审计检查双seed、4+2文件LSP通过，无修订重试；不证明强度提升、不自动P1/P2；见`reports/phase-B-astra-qualification02.md`。此前E只读复盘见`reports/phase-B-astra-compute-trial01-postmortem.md`，原两稿P0失败不变，不恢复旧执行。作者r04准备包聚合见`reports/phase-B-author-r04-ready-package.md`，仍不可运行；原协调者布置下一工程修订、用户转交，E只集成状态。以下各时点按历史阅读，最新权限以STATUS为准。
 

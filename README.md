@@ -4,7 +4,7 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 ## 现在进行到哪一步
 
-**2026-11-12最新：资格02通过后，已推进下一轮public强度比较的准备，尚未开始计分。** [新方案](docs/PHASE_B_E_STRENGTH01_PLAN.md)申请2320新局、复用480，0新dev/修订/重试，通过也停止；不继承旧4400额度。存量证据匹配、10纯检查双seed通过，本批零新增执行；具体范围待批准，控制器/分析器及执行冻结尚待实施。见[准备报告](reports/phase-B-astra-strength01-preparation.md)。下列为此前阶段记录，不推送。
+**2026-11-12最新：用户已批准E强度轮01的2320新public局，复用480旧局；无需重批。** 先收束[既有作者审查聚合](reports/phase-B-author-r04-engineering-repair.md)，再实施[已批方案](docs/PHASE_B_E_STRENGTH01_PLAN.md)的私有零重试控制器/分析器及冻结登记，干净提交后执行。当前新增运行0；0策略修订/重试/新dev，通过也停，不继承旧4400。新作者工程包已完成但未归档，协调方继续frozen，到E下一合适停点再释放接收窗口，不因新包中断E、不读作者实现。下列为此前阶段记录，不推送。
 
 **A阶段已通过审查，用户已授权进入B。** 依据见 [inbox/2026-11-08-phase-a-accepted.md](inbox/2026-11-08-phase-a-accepted.md)。standard-1和动物园v15按交审配置冻结；A最终40图3680局条件通过，两个哈希种子全套各198项通过，完整报告见 [reports/phase-A.md](reports/phase-A.md)。
 
