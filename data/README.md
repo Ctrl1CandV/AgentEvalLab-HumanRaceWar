@@ -4,6 +4,8 @@
 
 ## 当前入口
 
+- [`phase-b/e-strength01-readiness-fix.json`](phase-b/e-strength01-readiness-fix.json)：执行前登记守卫修复，原冻结/失败保留，零执行；新freeze02仍原源码/预算，登记见[`e-strength01-preflight02-registration.json`](phase-b/e-strength01-preflight02-registration.json)。
+
 - [`phase-b/e-strength01-preflight.json`](phase-b/e-strength01-preflight.json)：已批准public2320执行前置，121文件冻结、零重试控制器及纯检查；实际执行仍0，登记见[`e-strength01-preflight-registration.json`](phase-b/e-strength01-preflight-registration.json)。
 
 - [`phase-b/author-r04-engineering-repair-review.json`](phase-b/author-r04-engineering-repair-review.json)：旧工程包协调审查聚合，52文件原样归档、6组工程阻塞，E只核89项摘要。新工程包未接收，用户要求共享收束后继续已批2320局；收束见[`e-strength01-integration-registration.json`](phase-b/e-strength01-integration-registration.json)。
