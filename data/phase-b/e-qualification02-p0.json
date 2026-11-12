@@ -1,0 +1,103 @@
+{
+  "additionalInputsPassed": 8,
+  "auditBotStarts": 0,
+  "auditCompiles": 0,
+  "auditEngineSteps": 0,
+  "auditHostCpuNs": 1069809400,
+  "auditPureTestsPerHashSeed": 5,
+  "auditPythonLspFiles": 2,
+  "benchmarks": 0,
+  "botReplyCpuNs": 37465904400,
+  "candidateSourceSha256": "0d8ef895e10d688f4cd6643666446594125d22573376b9c3e392ceab1d4b7683",
+  "caps": {
+    "checks": 1,
+    "compiles": 6,
+    "items": 6000,
+    "snapshots": 1,
+    "starts": 128
+  },
+  "closedComponentTurnsRechecked": 2000,
+  "compiledIdentitiesChecked": 6,
+  "compilerCpuKnown": false,
+  "date": "2026-11-12",
+  "executionHostCpuNs": 3447306800,
+  "executionReplies": 4066,
+  "freezeSha256": "260a8be7e7ed02b6c11153060e964b78fce58bc989651133640e66eece972d0c",
+  "inputGenerationHostCpuNs": 204911900,
+  "lowFractionFunctionChecksPassed": 12,
+  "lspDiagnostics": 0,
+  "maintenancePythonLspFiles": 1,
+  "modelProjectedOutputsRechecked": 126,
+  "newReferenceSteps": 8,
+  "newScoredGames": 0,
+  "noRetriesOrRevision": true,
+  "originalLogicalFunctionChecksPassed": 19,
+  "p0Passed": true,
+  "p1Eligible": false,
+  "p2Eligible": false,
+  "preflightPureTestsPerHashSeed": 14,
+  "preflightPythonLspFiles": 4,
+  "preflightRegistryCpuNs": 186513365300,
+  "pressure": {
+    "10": {
+      "completedEvaluations": 3027,
+      "cpuCapNs": 6000000,
+      "maximumCpuNs": 5397000,
+      "medianCpuNs": 2960800,
+      "p95CpuNs": 3117100,
+      "turnReplies": 384
+    },
+    "100": {
+      "completedEvaluations": 50364,
+      "cpuCapNs": 60000000,
+      "maximumCpuNs": 54013000,
+      "medianCpuNs": 50707900,
+      "p95CpuNs": 53734200,
+      "turnReplies": 384
+    },
+    "25": {
+      "completedEvaluations": 13805,
+      "cpuCapNs": 15000000,
+      "maximumCpuNs": 13409200,
+      "medianCpuNs": 10692300,
+      "p95CpuNs": 11942000,
+      "turnReplies": 384
+    },
+    "50": {
+      "completedEvaluations": 30662,
+      "cpuCapNs": 30000000,
+      "maximumCpuNs": 26768000,
+      "medianCpuNs": 26417400,
+      "p95CpuNs": 26674100,
+      "turnReplies": 384
+    }
+  },
+  "priorTrial01StoppedAndUnchanged": true,
+  "protocolCheckPassed": true,
+  "pureTestHashSeeds": [
+    0,
+    1
+  ],
+  "pushed": false,
+  "qualificationStopped": true,
+  "retainedBaselineUnchanged": true,
+  "runtimeClonesChecked": 126,
+  "runtimeCommit": "9a145d4401906492d9d7b15d9f7ba8ffbd71fb47",
+  "sameInputWorkIncreaseCounts": {
+    "10-25": 384,
+    "25-50": 384,
+    "50-100": 384
+  },
+  "schemaVersion": 1,
+  "scope": "authorized qualification02 completed; aggregate stored-evidence audit, not strength or B acceptance",
+  "totals": {
+    "checks": 1,
+    "compiles": 6,
+    "items": 4074,
+    "snapshots": 1,
+    "starts": 126
+  },
+  "transcriptsChecked": 126,
+  "unassignedTailCpuNs": 0,
+  "wholeSessionCpuKnown": false
+}
