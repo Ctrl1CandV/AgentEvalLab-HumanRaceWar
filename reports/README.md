@@ -1,5 +1,6 @@
 # 审查报告
 
+- [`phase-B-astra-strength01.md`](phase-B-astra-strength01.md)：10% TURN CPU9.6049ms>6ms技术止损，456新局/912启动/11编译、456回放一次验证通过；余下1864不执行，矩阵不全不作强度结论，不采纳。
 - [`phase-B-astra-strength01-readiness-fix.md`](phase-B-astra-strength01-readiness-fix.md)：真实启动前守卫因公开/私有清单混用拒绝；零执行，原冻结/失败保留。修复后25新＋10既有纯检查双seed，新freeze02不改源码/额度。
 - [`phase-B-astra-strength01-preflight.md`](phase-B-astra-strength01-preflight.md)：已批2320局的实际日程/121文件冻结、零重试/失败停发控制器及分析器；22新＋10既有纯检查双seed、5文件LSP0，执行前置不等于强度结果。
 - [`phase-B-author-r04-engineering-repair.md`](phase-B-author-r04-engineering-repair.md)：既有52文件工程包审查仍阻塞，E仅核聚合/89项摘要；新纯工程包尚未接收。共享收束后优先继续已批准2320局，到E下一合适停点再释放新接收。

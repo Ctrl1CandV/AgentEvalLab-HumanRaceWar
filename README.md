@@ -4,7 +4,9 @@ AgentEvalLab 顶层题族 CA（竞技场）的开发仓库。被测模型写一�
 
 ## 现在进行到哪一步
 
-**2026-11-12最新：用户已批准E强度轮01的2320新public局，复用480旧局；无需重批。** 先收束[既有作者审查聚合](reports/phase-B-author-r04-engineering-repair.md)，再实施[已批方案](docs/PHASE_B_E_STRENGTH01_PLAN.md)的私有零重试控制器/分析器及冻结登记，干净提交后执行。[执行前置](reports/phase-B-astra-strength01-preflight.md)后发现公开/私有登记守卫错误，已[修复并保留失败](reports/phase-B-astra-strength01-readiness-fix.md)，尚未启动运行。新freeze02仍121文件/2320格，25新＋10既有纯检查双seed及5文件LSP通过，源码/额度不变；新登记/干净提交后才执行。0策略修订/重试/新dev，通过也停，不继承旧4400。新作者工程包已完成但未归档，协调方继续frozen，到E下一合适停点再释放接收窗口，不因新包中断E、不读作者实现。下列为此前阶段记录，不推送。
+**2026-11-12最新：E强度轮01已在456局后技术止损。** 10%档TURN CPU9.6049ms>6ms，停发后5个在途收束；11编译/912启动，456回放均一次验证通过。剩余1864局不运行、不重试；矩阵不全，未形成强度结论，不采纳或转dev。见[最终报告](reports/phase-B-astra-strength01.md)。最终共享收束后再明确释放新作者只读接收窗口，不读其实现、不推送。
+
+此前执行前置记录：用户已批准E强度轮01的2320新public局，复用480旧局；无需重批。 先收束[既有作者审查聚合](reports/phase-B-author-r04-engineering-repair.md)，再实施[已批方案](docs/PHASE_B_E_STRENGTH01_PLAN.md)的私有零重试控制器/分析器及冻结登记，干净提交后执行。[执行前置](reports/phase-B-astra-strength01-preflight.md)后发现公开/私有登记守卫错误，已[修复并保留失败](reports/phase-B-astra-strength01-readiness-fix.md)，尚未启动运行。新freeze02仍121文件/2320格，25新＋10既有纯检查双seed及5文件LSP通过，源码/额度不变；新登记/干净提交后才执行。0策略修订/重试/新dev，通过也停，不继承旧4400。新作者工程包已完成但未归档，协调方继续frozen，到E下一合适停点再释放接收窗口，不因新包中断E、不读作者实现。下列为此前阶段记录，不推送。
 
 **A阶段已通过审查，用户已授权进入B。** 依据见 [inbox/2026-11-08-phase-a-accepted.md](inbox/2026-11-08-phase-a-accepted.md)。standard-1和动物园v15按交审配置冻结；A最终40图3680局条件通过，两个哈希种子全套各198项通过，完整报告见 [reports/phase-A.md](reports/phase-A.md)。
 

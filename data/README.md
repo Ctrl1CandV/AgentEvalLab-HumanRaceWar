@@ -4,6 +4,8 @@
 
 ## 当前入口
 
+- [`phase-b/e-strength01.json`](phase-b/e-strength01.json)：E强度01在456局后触发低档CPU技术止损，全部一次回放验证及只读账本核对通过；不补1864、不作强度结论。收束见[`e-strength01-closure-registration.json`](phase-b/e-strength01-closure-registration.json)。
+
 - [`phase-b/e-strength01-readiness-fix.json`](phase-b/e-strength01-readiness-fix.json)：执行前登记守卫修复，原冻结/失败保留，零执行；新freeze02仍原源码/预算，登记见[`e-strength01-preflight02-registration.json`](phase-b/e-strength01-preflight02-registration.json)。
 
 - [`phase-b/e-strength01-preflight.json`](phase-b/e-strength01-preflight.json)：已批准public2320执行前置，121文件冻结、零重试控制器及纯检查；实际执行仍0，登记见[`e-strength01-preflight-registration.json`](phase-b/e-strength01-preflight-registration.json)。
