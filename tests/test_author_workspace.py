@@ -10,9 +10,10 @@ from tools import prepare_author_workspace as work
 class AuthorWorkspaceTests(unittest.TestCase):
     def test_role_overlays_common_identity_and_public_only_smoke(self):
         with TemporaryDirectory() as d:
-            paths = {role: Path(d)/role for role in ('pilot', 'deepseek')}
+            paths = {role: Path(d)/role for role in ('pilot', 'deepseek', 'claude')}
             results = {role: work.build(path, role) for role, path in paths.items()}
             self.assertEqual(results['pilot']['commonMaterialSha256'], results['deepseek']['commonMaterialSha256'])
+            self.assertEqual(results['pilot']['commonMaterialSha256'], results['claude']['commonMaterialSha256'])
             for role, path in paths.items():
                 entries, _ = work.declared(work.ROOT, role)
                 for target, source in entries: self.assertEqual((path/target).read_bytes(), (work.ROOT/source).read_bytes())
@@ -25,6 +26,74 @@ class AuthorWorkspaceTests(unittest.TestCase):
             self.assertFalse((paths['pilot']/'docs/BRIEF-DEEPSEEK.md').exists())
             self.assertTrue((paths['deepseek']/'docs/BRIEF-DEEPSEEK.md').is_file())
             self.assertFalse((paths['deepseek']/'PILOT.md').exists())
+            self.assertTrue((paths['claude']/'BRIEF-CLAUDE.md').is_file())
+            self.assertFalse((paths['claude']/'docs/BRIEF-DEEPSEEK.md').exists())
+            self.assertFalse((paths['claude']/'PILOT.md').exists())
+            self.assertTrue((paths['claude']/'budget-lock-jobs1.json').is_file())
+            self.assertTrue((paths['claude']/'budget-lock-jobs6.json').is_file())
+
+    def test_claude_keeps_exact_common_allowlist(self):
+        old, old_count = work.declared(work.ROOT, 'deepseek')
+        new, new_count = work.declared(work.ROOT, 'claude')
+        self.assertEqual(old_count, new_count)
+        self.assertEqual(old[:old_count], new[:new_count])
+        self.assertEqual({target for target, _ in new[new_count:]},
+                         {'BRIEF-CLAUDE.md', 'budget-lock-jobs1.json', 'budget-lock-jobs6.json'})
+
+    def test_public_lock_projection_preserves_runtime_and_drops_private_payload(self):
+        from arena.core.benchmark import workload_digest
+        from arena.core.timing import Calibration
+        for jobs in (1, 6):
+            with self.subTest(jobs=jobs):
+                value = json.loads((work.ROOT/f'package/claude-timing-jobs{jobs}.json').read_bytes())
+                benchmark = json.loads(value['benchmarkJson'])
+                marker = 'HIDDEN-EVALUATION-DO-NOT-EXPORT'
+                benchmark.update(directory=marker, runs=[{'result': marker}], curve=marker)
+                benchmark['reference']['privateExtra'] = marker
+                benchmark['machine']['privateExtra'] = marker
+                value['benchmarkJson'] = json.dumps(benchmark)
+                value['benchmarkSha256'] = sha256(value['benchmarkJson'].encode()).hexdigest()
+                raw = json.dumps(value).encode()
+                projected = work.public_timing_lock(raw, jobs=jobs)
+                self.assertNotIn(marker, projected.decode())
+                public = json.loads(projected)
+                self.assertEqual(public['sourceLockSha256'], sha256(raw).hexdigest())
+                self.assertEqual(public['sourceBenchmarkSha256'], value['benchmarkSha256'])
+                self.assertEqual(public['machineFingerprint'], value['machineFingerprint'])
+                before = Calibration.from_bytes(raw, workload_digest(), jobs=jobs)
+                after = Calibration.from_bytes(projected, workload_digest(), jobs=jobs)
+                self.assertEqual((before.factor, before.cpus, before.locked_budget),
+                                 (after.factor, after.cpus, after.locked_budget))
+                self.assertFalse(set(json.loads(public['benchmarkJson'])) & {'runs', 'curve', 'directory', 'resultFile'})
+
+    def test_legacy_wrapper_projection_does_not_export_its_outcomes(self):
+        from arena.core.benchmark import workload_digest
+        from arena.core.timing import bind_legacy_calibration
+        value = json.loads((work.ROOT/'package/claude-timing-jobs6.json').read_bytes())
+        benchmark = json.loads(value['benchmarkJson'])
+        count = benchmark['machine'].pop('logicalCpus')
+        old = {'schemaVersion': 1, 'kind': 'fixed-runtime-budget', 'budget': value['budget'],
+               'benchmarkJson': json.dumps(benchmark)}
+        old['benchmarkSha256'] = sha256(old['benchmarkJson'].encode()).hexdigest()
+        raw = json.dumps(old).encode()
+        evidence = {'fixedBudget': {'lockSha256': sha256(raw).hexdigest()},
+                    'machine': {'logicalCpus': count}, 'outcomes': 'HIDDEN-OUTCOME-SENTINEL'}
+        bound = bind_legacy_calibration(raw, json.dumps(evidence).encode(), workload_digest(), jobs=6)
+        projected = work.public_timing_lock(json.dumps(bound).encode(), jobs=6)
+        self.assertNotIn('HIDDEN-OUTCOME-SENTINEL', projected.decode())
+        self.assertNotIn('legacyOrigin', projected.decode())
+        self.assertEqual(json.loads(projected)['budget'], value['budget'])
+
+    def test_projection_rejects_wrong_concurrency_budget_machine_and_unbound_lock(self):
+        raw = (work.ROOT/'package/claude-timing-jobs6.json').read_bytes()
+        with self.assertRaises(ValueError): work.public_timing_lock(raw, jobs=1)
+        for mutation in ('budget', 'machine', 'schema'):
+            with self.subTest(mutation=mutation):
+                value = json.loads(raw)
+                if mutation == 'budget': value['budget']['limits']['TURN_CPU_MS'] += 1
+                elif mutation == 'machine': value['machineFingerprint']['logicalCpus'] += 1
+                else: value['schemaVersion'] = 1
+                with self.assertRaises(ValueError): work.public_timing_lock(json.dumps(value).encode(), jobs=6)
 
     def test_existing_directory_and_repo_subdirectory_are_not_overwritten(self):
         with TemporaryDirectory() as d:

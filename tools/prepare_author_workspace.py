@@ -1,4 +1,4 @@
-"""Explicit public-file export for a fresh pilot/DeepSeek session; no bots.
+"""Explicit public-file export for a fresh pilot/DeepSeek/Claude session; no bots.
 
 Not a clone, no symlinks, no Git metadata/remotes, no personal config. Directory
 isolation does not enforce an OS access boundary or clear a model's memory.
@@ -26,7 +26,7 @@ def safe_relative(text):
 
 def declared(root, role):
     spec = json.loads((root/'package/public-files.json').read_text())
-    if spec['schemaVersion'] != 1 or role not in ('pilot', 'deepseek'): raise ValueError('unknown export role/schema')
+    if spec['schemaVersion'] != 1 or role not in ('pilot', 'deepseek', 'claude'): raise ValueError('unknown export role/schema')
     if (set(spec['publicMapTypes']) != {'open', 'corridor', 'island', 'maze'}
             or spec['publicMapsPerType'] != 10 or len(spec['publicBotCodes']) != 10):
         raise ValueError('unexpected public catalog')
@@ -41,7 +41,8 @@ def declared(root, role):
     common = len(entries); entries += list(spec['roles'][role].items())
     if len({target for target, _ in entries}) != len(entries): raise ValueError('duplicate material destination')
     singles = {'rules/rules.md', 'rules/standard-1.json', 'package/workspace-README.md',
-               'package/benchmark-reference.json', 'package/pilot-instructions.md', 'docs/BRIEF-DEEPSEEK.md'}
+               'package/benchmark-reference.json', 'package/pilot-instructions.md', 'docs/BRIEF-DEEPSEEK.md',
+               'docs/BRIEF-CLAUDE.md', 'package/claude-timing-jobs1.json', 'package/claude-timing-jobs6.json'}
     for target, source in entries:
         safe_relative(target); relative = safe_relative(source)
         if source not in singles and not source.startswith(('arena/', 'sdk/', 'bots/public/', 'maps/public/', 'maps/scrimmage/')):
@@ -52,6 +53,53 @@ def declared(root, role):
         if not path.is_file() or any(p.is_symlink() for p in (path, *path.parents)):
             raise ValueError('missing/nonregular/symlink source')
     return entries, common
+
+
+def public_timing_lock(raw, *, jobs):
+    """Project an existing lock without private runs/results or a new measurement.
+
+    The original bytes remain untouched. Numeric calibration, budgets, CPUs and
+    machine binding are unchanged; the public wrapper has a new digest and pins
+    its original lock/benchmark digests rather than exporting their private body.
+    """
+    from arena.core.benchmark import workload_digest
+    from arena.core.timing import Calibration, legacy_inventory
+
+    value = json.loads(raw)
+    if (not isinstance(value, dict) or value.get('kind') != 'fixed-runtime-budget'
+            or value.get('schemaVersion') != 2):
+        raise ValueError('public export requires an existing machine-bound lock')
+    workload = workload_digest()
+    original = Calibration.from_bytes(raw, workload, jobs=jobs)
+    benchmark = json.loads(value['benchmarkJson'])
+    inventory = legacy_inventory(value, benchmark) if 'legacyOrigin' in value else benchmark['machine']
+    machine = {key: inventory[key] for key in ('cpu', 'architecture', 'logicalCpus', 'memoryBytes')}
+    reference = {'cpuNs': original.reference['cpuNs']}
+    digest = original.reference.get('reportSha256')
+    if digest is not None:
+        if not isinstance(digest, str) or len(digest) != 64 or any(c not in '0123456789abcdef' for c in digest):
+            raise ValueError('invalid timing reference digest')
+        reference['reportSha256'] = digest
+    public_benchmark = {
+        'schemaVersion': 1, 'status': 'complete', 'sandbox': original.sandbox,
+        'workloadSha256': workload, 'jobs': original.jobs, 'cpus': list(original.cpus),
+        'machine': machine, 'reference': reference,
+        'loadedMedianCpuNs': benchmark['loadedMedianCpuNs'], 'speedFactor': original.factor,
+    }
+    benchmark_raw = json.dumps(public_benchmark, sort_keys=True, separators=(',', ':')).encode()
+    projected = {
+        'schemaVersion': 2, 'kind': 'fixed-runtime-budget',
+        'benchmarkJson': benchmark_raw.decode(), 'benchmarkSha256': sha256(benchmark_raw).hexdigest(),
+        'machineFingerprint': value['machineFingerprint'], 'budget': value['budget'],
+        'sourceLockSha256': sha256(raw).hexdigest(), 'sourceBenchmarkSha256': value['benchmarkSha256'],
+        'scope': 'Public metadata projection of an existing lock; no new measurement or budget change.',
+    }
+    exported = json.dumps(projected, sort_keys=True, indent=2).encode()+b'\n'
+    check = Calibration.from_bytes(exported, workload, jobs=jobs)
+    if (check.factor != original.factor or check.cpus != original.cpus
+            or check.sandbox != original.sandbox or check.locked_budget != original.locked_budget):
+        raise ValueError('public lock projection changed runtime calibration')
+    return exported
 
 
 def validate(destination, entries):
@@ -117,7 +165,7 @@ def smoke(destination):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--role', choices=('pilot', 'deepseek'), required=True)
+    parser.add_argument('--role', choices=('pilot', 'deepseek', 'claude'), required=True)
     parser.add_argument('--out', type=Path, required=True)
     args = parser.parse_args(); result = build(args.out, args.role)
     result.update(smoke(args.out)); print(json.dumps(result, indent=2))

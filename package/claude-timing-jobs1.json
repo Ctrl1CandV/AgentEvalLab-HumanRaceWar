@@ -1,0 +1,30 @@
+{
+  "benchmarkJson": "{\"cpus\":[0,1],\"jobs\":1,\"loadedMedianCpuNs\":135995300.0,\"machine\":{\"architecture\":\"x86_64\",\"cpu\":\"Intel(R) Core(TM) i5-14600KF\",\"logicalCpus\":20,\"memoryBytes\":16679239680},\"reference\":{\"cpuNs\":259181615,\"reportSha256\":\"c3c1be5617a25b5349fafeae359534f943b25cb7e9cc1d40d0fa962d87a8c32e\"},\"sandbox\":\"bwrap\",\"schemaVersion\":1,\"speedFactor\":0.524710442906994,\"status\":\"complete\",\"workloadSha256\":\"6ad783455d6c625c0675f8b29d8e6af843f463e993ee4490a2b9baee20076348\"}",
+  "benchmarkSha256": "748723190e38da85d153aed1c6069c86b8bf8b41639064201f03ffa3f38b847c",
+  "budget": {
+    "baseLimits": {
+      "BANK_MS": 3000,
+      "INIT_CPU_MS": 2000,
+      "TURN_CPU_MS": 100
+    },
+    "cpuHardLimitSeconds": 22,
+    "limits": {
+      "BANK_MS": 1575,
+      "INIT_CPU_MS": 1050,
+      "TURN_CPU_MS": 53
+    },
+    "turns": 300,
+    "wallMarginMs": 263
+  },
+  "kind": "fixed-runtime-budget",
+  "machineFingerprint": {
+    "architecture": "x86_64",
+    "cpu": "Intel(R) Core(TM) i5-14600KF",
+    "logicalCpus": 20,
+    "visibleMemoryGiB": 16
+  },
+  "schemaVersion": 2,
+  "scope": "Public metadata projection of an existing lock; no new measurement or budget change.",
+  "sourceBenchmarkSha256": "efa536d7ea3afe3aa3c81080fb7b2e8fca94c7eb3f904d8a389c91648555ec8e",
+  "sourceLockSha256": "f839c9d044e605a2c182a323c1c8f898c4ce1177b5dc27ac72adfb8e6e5a8e7d"
+}

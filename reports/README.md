@@ -2,6 +2,8 @@
 
 当前进度只见STATUS；执行权限以2026-11-13新分工为准，下面历史报告不提供当前授权。以后每轮报告一页。
 
+- [`phase-B-claude-workspace.md`](phase-B-claude-workspace.md)：T4公开工作区及两份自测预算投影就绪，私有评测协议已登记，零运行；用户启动Claude，GPT停报等待交付通知。
+
 - [`phase-B-gpt-mainlines-final.md`](phase-B-gpt-mainlines-final.md)：T3完成2080局，直接半分174<176而不采纳E100%；零故障/超时/重试，全部回放各验证一次，GPT三线冻结。
 
 - [`phase-B-new-division-preparation.md`](phase-B-new-division-preparation.md)：T1按字节关闭DeepSeek、T2最后一次全量登记及逐轮归档切换；旧状态原样归入docs/history，零运行。

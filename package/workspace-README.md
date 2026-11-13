@@ -1,43 +1,55 @@
 # 前哨：独立公开材料工作区
 
-这里是公开材料的独立副本，不是构建仓库的克隆，没有Git历史或远程。`rules.md`是规则全文，`standard-1.json`是参数；SDK、引擎及运行工具均可阅读。`maps/public/`有40张地图，`maps/scrimmage/`有4张。没有隐藏对手、隐藏地图、其他作者的代码、开发结果或评分实现。`PUBLIC-MANIFEST.sha256`记录初始材料，不包含你之后写的bot和对局。
+这是公开材料的副本，不是构建仓库的克隆，没有Git历史或远程。规则见`rules.md`，参数见`standard-1.json`；SDK、arena和10个公开bot均可阅读。地图有40张public和4张scrimmage；开发与调参只用public。没有隐藏地图、隐藏对手、其他作者代码、逐局开发结果或评分实现。
 
-只在本目录工作，不要到上级或其他项目目录查找材料，也不要修改规则、工具、SDK或公开bot。`rules.md`和SDK说明中提到的构建仓库测试/文档路径不属于这份材料；工具命令以本README为准，不要为寻找那些路径离开工作区。`bot/`初始为空。你的开发任务和联网权限以用户给你的任务书为准；无论如何，bot、C++编译和对局始终离线。
+`PUBLIC-MANIFEST.sha256`登记初始材料，不包含你随后编写的bot和对局。只在本目录工作，不修改规则、arena、SDK、公开bot或预算锁。文档中提到但这里没有的构建者路径不属于这份材料，不要到其他目录寻找。`bot/`和`handoff/in/`、`handoff/out/`初始为空；第一轮由作者自行建立`NOTES.md`并先写计划。
 
-## 命令
+Claude先读根目录`BRIEF-CLAUDE.md`，交付后停止；其他历史导出角色只按自己工作区已有的任务书行动。本README不提供开启其他作者任务或恢复旧轮次的授权。
 
-需要已安装的Python 3.13、GCC 11和bubblewrap。本开发宿主不是外层bot沙箱，必须使用bwrap，不能裸跑bot、手工裸编译C++或回退到plain。框架只用标准库，不需要pip安装依赖。
+## 运行环境
+
+使用已安装的Python 3.13、GCC和bubblewrap；框架只用标准库，不需要pip安装依赖。本宿主不是外层bot沙箱，bot和C++编译必须由arena通过离线bwrap执行。不能裸跑、手工裸编译或回退plain；沙箱不可用、机器不匹配或CPU繁忙时，停下告知用户，不改配置或抢锁。
 
 ```sh
 python3.13 --version
 python3.13 -m arena --help
-# 在bot/写好main.py，或顶层C++源码后：
+# 写好bot后做基础合规检查；此命令不接受固定时限参数，不是评测预算压力测试
 python3.13 -m arena check bot --sandbox bwrap --out runs/check-r01
-# 新版本日常测试：10个公开对手 × 40图 × 两座 = 800局
+```
+
+## Claude固定预算命令
+
+Claude工作区提供`budget-lock-jobs1.json`与`budget-lock-jobs6.json`。它们是既有机器绑定锁的公开元数据投影：保留原测量数值、CPU分配、机器绑定和全部预算，标明原锁摘要；删除原封装中的私有结果、路径和无关原始测速记录。不是新测速，也没有改变原锁。
+
+| 并行 | TURN / INIT / BANK | 墙钟余量 | 进程CPU硬限 |
+|---|---|---|---|
+| jobs1 | 53 / 1050 / 1575 ms | 263 ms | 22 s |
+| jobs6 | 60 / 1200 / 1800 ms | 300 ms | 24 s |
+
+```sh
+# 小规模自测：一张公开图，对M双座2局
+python3.13 -m arena tournament --bot bot --opponents bots/public/M-balanced \
+  --maps maps/public/open-01.map --jobs 1 --sandbox bwrap \
+  --fixed-timing budget-lock-jobs1.json --out runs/r01-small
+# 完整公开自测：10对手 × 40图 × 两座 = 800局；用jobs6确认实际负载下的CPU余量
 python3.13 -m arena tournament --bot bot --opponents bots/public/* \
-  --maps maps/public --jobs 1 --sandbox bwrap \
-  --reference benchmark-reference.json --freeze-timing --out runs/r01-public
-# 中断后同一版本续跑：源码与所有参数必须不变
-python3.13 -m arena tournament --bot bot --opponents bots/public/* \
-  --maps maps/public --jobs 1 --sandbox bwrap \
-  --reference benchmark-reference.json --freeze-timing --out runs/r01-public --resume
-# 下一版或与上一版直接比较：用同一机器、同一jobs的原锁，不重新挑系数
-python3.13 -m arena tournament --bot bot --opponents versions/r01/bot \
-  --maps maps/public --jobs 1 --sandbox bwrap \
-  --fixed-timing runs/r01-public/timing-lock.json --out runs/r02-v-r01
+  --maps maps/public --jobs 6 --sandbox bwrap \
+  --fixed-timing budget-lock-jobs6.json --out runs/r01-public
+# 同一版本中断续跑：原命令的所有输入和参数不变，只追加--resume
+# 与自己上一份交付比较；第一轮没有上一版，不编造比较
+python3.13 -m arena tournament --bot bot --opponents handoff/out/r01/bot \
+  --maps maps/public --jobs 6 --sandbox bwrap \
+  --fixed-timing budget-lock-jobs6.json --out runs/r02-v-r01
+# 单局只可用jobs1锁
+python3.13 -m arena match --a bot --b bots/public/M-balanced \
+  --map maps/public/open-01.map --sandbox bwrap \
+  --timing budget-lock-jobs1.json --out runs/single
 python3.13 -m arena replay verify <回放路径>
-python3.13 -m arena replay show <回放路径> --turn 25
 python3.13 -m arena replay summary <回放路径>
 ```
 
-`versions/r01/bot`由你在修改前原样保存；第一轮没有上一版，不能编造比较。改变bot后使用新的输出目录，不能覆盖旧结果或对旧矩阵续跑。完整结果、失败尝试与回放都留在`runs/`，如实记录，不上传。`check`只是合规检查，不是强度证明。
+Claude不得运行bench或重新freeze-timing。`benchmark-reference.json`是白名单中保留的历史公开参考，不是重新测速的许可。锁只适用于原机器和标注的并发；不要改数字、改CPU编号或换锁来绕过匹配。实际时限从开局`LIMIT`读取，不要写死。
 
-`benchmark-reference.json`只有既有空闲参考值和公开硬件信息，没有重新测速。tournament会按本地实际并发测量一次并冻结；实际CPU限额由LIMIT传给bot，不能写死。固定锁只适用于原机器和原并发；移机后要重新测量/冻结，不能改数字假装兼容。
+每次改bot使用新的输出目录，不能覆盖旧结果或在旧矩阵里混入新源码。保留所有失败尝试、结果和回放于`runs/`，如实记录总局数、CPU最大值和自测结果，不上传。check通过不代表变强。
 
-同用户的arena运行器共用系统临时目录里的CPU与编译锁。不要修改TMPDIR、删除锁或抢占已租用CPU。默认`--jobs 1`便于小规模自测；若其他工作占满CPU，和用户协调错开批次，不连续重试或修改限额。机器上的别的程序并不会因此被自动隔离。
-
-## 会话与交付
-
-新会话从本目录开始，不恢复构建者或另一作者的会话，不读取工作区外的笔记或记忆。材料目录隔离不是同一WSL用户下的OS访问控制：用户还需在启动时核对项目上下文和记忆/工具范围，确保没有加载其他项目的AGENTS或历史。这里没有替用户修改pi的认证、全局配置或安全设置。
-
-DeepSeek使用`docs/BRIEF-DEEPSEEK.md`，按其中节奏交付`handoff/out/r<NN>/`并停下；反馈放在`handoff/in/`。标准预算试探使用`PILOT.md`，由用户另开两次干净会话并记录真实预算；不要把试探当作正式验收。每个工作区只提供与自己任务对应的那份说明。
+同用户的运行器共用原TMPDIR下的CPU和编译锁。不要改TMPDIR、锁目录或删除锁；GPT统一评测与作者大批自测由用户错开，不同时运行。最多jobs6，不抢占已租用CPU。目录分离不是OS隔离，也不证明会话或模型独立；用户启动时仍须核对上下文、记忆和工具范围。本材料未修改认证、全局配置或安全设置，不推送。

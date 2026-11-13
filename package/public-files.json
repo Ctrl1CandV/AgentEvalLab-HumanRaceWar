@@ -25,6 +25,11 @@
   "scrimmageMaps": ["open-01.map", "corridor-01.map", "island-01.map", "maze-01.map"],
   "roles": {
     "pilot": {"PILOT.md": "package/pilot-instructions.md"},
-    "deepseek": {"docs/BRIEF-DEEPSEEK.md": "docs/BRIEF-DEEPSEEK.md"}
+    "deepseek": {"docs/BRIEF-DEEPSEEK.md": "docs/BRIEF-DEEPSEEK.md"},
+    "claude": {
+      "BRIEF-CLAUDE.md": "docs/BRIEF-CLAUDE.md",
+      "budget-lock-jobs1.json": "package/claude-timing-jobs1.json",
+      "budget-lock-jobs6.json": "package/claude-timing-jobs6.json"
+    }
   }
 }

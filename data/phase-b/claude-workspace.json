@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "task": "T4",
+  "workspace": "~/projects/HRW-claude",
+  "ready": true,
+  "declaredFiles": 108,
+  "totalFilesIncludingManifest": 109,
+  "materialManifestSha256": "21772e8b2ef79418cfb07b3626d4bd9aff982fe12fbdb4f1389397c97b7ede5b",
+  "commonMaterialSha256": "d4827ef0171c629cccaa5b59393759b3ed0922988db96710ce326616dbbe459a",
+  "commonAllowlistUnchanged": true,
+  "onlyRoleOverlayAddsTaskAndBudgetMetadata": true,
+  "emptyBotAndHandoff": true,
+  "noGitOrLinks": true,
+  "modelSessionsStartedByGPT": 0,
+  "authorIdentityNotYetKnown": true,
+  "publicSelftestLocks": [
+    {
+      "jobs": 1,
+      "sourceLockSha256": "f839c9d044e605a2c182a323c1c8f898c4ce1177b5dc27ac72adfb8e6e5a8e7d",
+      "publicProjectionSha256": "cc6b1342442160467c50c2a9a85eca2812aece22fbc445d283f0a6591e39caa0",
+      "numericBudgetAndMachineBindingUnchanged": true
+    },
+    {
+      "jobs": 6,
+      "sourceLockSha256": "b106c1bf2c5d5b6b1751b180bf6c9e8aa091d964ed93f3ba4b38f3b1ed418b48",
+      "publicProjectionSha256": "ee9b839a55b86ac20dc10086c11fe8dcf51930ae296a91ee21153a6d8471bdf1",
+      "numericBudgetAndMachineBindingUnchanged": true
+    }
+  ],
+  "protocol": {
+    "id": "claude-evaluation-v1",
+    "sha256": "e9707ad2952b9086486a5e956b67c03a55cb8e8d3858bf0a0518c2db12c059c2",
+    "descriptionSha256": "1f40e612c33a7283de6ea6ebce0aff871c3ed0bf22665351ee424db2cc528012",
+    "poolCodes": [
+      "A-r02",
+      "E-r02",
+      "C-r02",
+      "M-balanced",
+      "Z-eco",
+      "Z-harass",
+      "Z-rush",
+      "Z-towers"
+    ],
+    "devMaps": 80,
+    "seats": 2,
+    "jobs": 6,
+    "botSeeds": [
+      17,
+      29
+    ],
+    "machineLockSha256": "b106c1bf2c5d5b6b1751b180bf6c9e8aa091d964ed93f3ba4b38f3b1ed418b48",
+    "firstVersionGames": 1280,
+    "normalLaterNewGames": 1440,
+    "perCandidateCap": 2080,
+    "matchWallSecondsPerCandidate": 7200,
+    "reuseRetainedPoolOnlyWithExactComparableIdentity": true,
+    "temporaryElo": "9-node star anchored at M; 4000 joint-map bootstrap draws, seed4219; separation and unidentified draws retained",
+    "poolSaturation": "report without replacement; new protocol required to change pool"
+  },
+  "runtime": {
+    "compiles": 0,
+    "botStarts": 0,
+    "engineSteps": 0,
+    "checks": 0,
+    "games": 0,
+    "benchmarks": 0
+  },
+  "roundManifestSha256": "44e01cefb17c19a9c0754283ff687eb4e90ca9b63d8fb1614a249f705d2816b4",
+  "ledgerEntrySha256": "d674c11dfe93028ab929061f234ee1aa7c56e4e9e56555cb94cb6799d42cf47c",
+  "evidenceFiles": 20,
+  "next": "stop; user starts Claude, T5 only after delivery notification",
+  "T6Started": false,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "pushed": false
+}

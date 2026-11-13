@@ -6,6 +6,8 @@
 
 当前权限与停点见STATUS和2026-11-13新分工，下面旧聚合只描述当时事实。
 
+- [`phase-b/claude-workspace.json`](phase-b/claude-workspace.json)：T4建区、预算公开投影、协议与归档摘要；工作区初始为空bot/交接目录，无作者会话/新执行，等用户启动和交付通知。
+
 - [`phase-b/e-dev-final.json`](phase-b/e-dev-final.json)：T3完成2080局，直接半分174未达176，不采纳E100%；A-r02、E-r02、C-r02原样冻结，本轮证据只读归档。
 
 - [`phase-b/e-dev-final-freeze.json`](phase-b/e-dev-final-freeze.json)：T3原样E100%对E-r02的执行前清单，2080局上限，分段/六池/种子/机器锁均已绑定；本文件不是运行结果。

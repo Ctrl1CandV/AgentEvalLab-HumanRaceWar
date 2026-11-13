@@ -11,7 +11,7 @@ GPT的T3仅原样评测已有E候选，不是重新开发策略。DeepSeek作者
 
 ## Claude材料与交付
 
-- 由`tools/prepare_author_workspace.py --role claude`按`package/public-files.json`导出公开材料、`BRIEF-CLAUDE.md`及说明，另提供已冻结jobs1/jobs6锁；不clone主仓库，不建Git，不留链接或个人上下文。
+- 由`tools/prepare_author_workspace.py --role claude`按`package/public-files.json`导出公开材料、`BRIEF-CLAUDE.md`及说明，另提供原jobs1/jobs6预算的公开元数据投影，保留机器绑定、去除私有结果/路径，原锁不改、不测速；不clone主仓库，不建Git，不留链接或个人上下文。
 - 初始`bot/`及`handoff/in/out/`为空。用户在T4就绪通知后开启Claude会话；GPT不代开、不委派bot开发。
 - Claude每轮按任务书最多8小时、30000自测/调参局、jobs6，最多交付3个bot；全部bot和编译使用离线bwrap，不能裸用plain，不重测或改TMPDIR/CPU锁。
 - 用户通知交付后GPT才按字节接收，核路径、类型、体积、清单和SHA，不读取或改动源码。作者自测/脚本/账本不是评测证据。
