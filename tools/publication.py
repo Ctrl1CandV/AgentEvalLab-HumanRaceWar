@@ -9,7 +9,8 @@ import argparse
 import csv
 import io
 import json
-from pathlib import PurePosixPath
+from hashlib import sha256
+from pathlib import Path, PurePosixPath
 import re
 import subprocess
 
@@ -147,9 +148,19 @@ def main() -> int:
     paths = subprocess.check_output([
         'git', 'diff', '--cached', '--name-only', '--diff-filter=ACMR', '-z'
     ]).decode().split('\0')
+    # The one-time legacy manifest stays fixed; new sealed rounds also protect
+    # hidden bytes. Validate ledger/manifests before accepting any staged file.
+    import sys
+    root = Path(__file__).resolve().parents[1]
+    sys.path.insert(0, str(root))
+    from tools.archive_round import hidden_digests
+    hidden = hidden_digests(root)
     failed = False
     for path in filter(None, paths):
         body = subprocess.check_output(['git', 'show', ':' + path])
+        if sha256(body).hexdigest() in hidden:
+            print(f'publication: {path}: identical to locally archived hidden bytes')
+            failed = True
         if problem := payload_problem(path, body):
             print(f'publication: {path}: {problem}; keep full evidence locally and publish a summary')
             failed = True

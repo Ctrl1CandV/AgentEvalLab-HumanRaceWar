@@ -1,5 +1,9 @@
 # 审查报告
 
+当前进度只见STATUS；执行权限以2026-11-13新分工为准，下面历史报告不提供当前授权。以后每轮报告一页。
+
+- [`phase-B-new-division-preparation.md`](phase-B-new-division-preparation.md)：T1按字节关闭DeepSeek、T2最后一次全量登记及逐轮归档切换；旧状态原样归入docs/history，零运行。
+
 - [`phase-B-author-r04-runtime-wiring02.md`](phase-B-author-r04-runtime-wiring02.md)：108文件只读审查仍有4组工程＋1组记录/写入范围阻塞，不是只差实机测试；E仅核156项摘要、零新增执行。共享收束后继续冻结，无新任务或下一窗口。
 
 - [`phase-B-author-r04-controller-repair01.md`](phase-B-author-r04-controller-repair01.md)：102文件审查聚合，仍4组工程阻塞；E只核130项摘要，新增执行0。wiring02已交付停止但未收审，共享收束/本地提交后才另发只读接收窗口，无运行授权。
@@ -52,4 +56,4 @@
 - [`phase-A-balance-rework.md`](phase-A-balance-rework.md)：二审后的诊断、参数与策略试验过程，包含失败版本。
 - [`archive/2026-11-07-phase-A-review-request.md`](archive/2026-11-07-phase-A-review-request.md)：此前资源、效率和平衡的历史审查请求，不作为当前阻塞清单。
 
-数据入口在`data/`，只上传审查汇总；原始对局与旧完整日志留本机。目录和历史限制见`docs/REPOSITORY.md`。B的前置留出复核未过就停止；B全部完成后仍须等待审查，不进入C。
+数据入口在`data/`，原始对局与完整日志留本机。目录与历史限制见`docs/REPOSITORY.md`；B未完成，C不启动。当前任务与停点只见STATUS及新分工，不从历史报告推定许可。

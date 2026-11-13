@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "scope": "T1-T2 approved new division, no runtime",
+  "deepseekLineEnded": true,
+  "userConfirmedBothSessionsStopped": true,
+  "workspaceFilesByteChecked": 79028,
+  "workspaceBytes": 839747038,
+  "reusedFiles": 59777,
+  "newlyArchivedFiles": 19251,
+  "newlyArchivedBytes": 39289012,
+  "sourceAndReviewArchivesReadOnly": true,
+  "authorCodeReadOrExecuted": false,
+  "D_c01RetainedUnchanged": true,
+  "externalDebugFilesNotTouched": true,
+  "lastLegacyRegistration": {
+    "oldItems": 658449,
+    "unchanged": 658447,
+    "lifecycleChangesWithExactOldBytes": 2,
+    "files": 677710,
+    "bytes": 10447909297,
+    "sha256": "eb627d4c3c23aa7fdcbd4d19dd28586a0a56d7cc8ec23df6b1d6fac682036353"
+  },
+  "archivePolicy": "read-only round manifests plus append-only hash-chain ledger",
+  "ledgerEntries": 2,
+  "ledgerHeadSha256": "03effaa4c57d923088bfef852734a4974f3d979d3d4e96b4f66167be8f2ec4d0",
+  "statusHistorySha256": "ff483eb3d842fd6b75bde8ceff7be973a0dbe904d356f1dec843eb5ae9069b7b",
+  "closedEOldBooksUnchanged": true,
+  "runtime": {
+    "compiles": 0,
+    "botStarts": 0,
+    "engineSteps": 0,
+    "checks": 0,
+    "newGames": 0,
+    "benchmarks": 0
+  },
+  "next": "T3 frozen standard tournament; T4 only if no technical stop",
+  "pushed": false,
+  "phaseBComplete": false,
+  "phaseCStarted": false
+}

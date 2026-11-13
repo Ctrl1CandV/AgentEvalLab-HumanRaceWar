@@ -1,6 +1,6 @@
 # 目录与上传范围
 
-2026-11-08，按用户要求：开发机负责运行和存储，GitHub用于代码审查和汇总报告，不作为对局数据库。
+2026-11-13。开发机运行/存储，GitHub只作公开审查与聚合，不是对局数据库。当前GPT/Claude分工见AUTHORS，归档按ARCHIVING执行，旧全局lane窗口不再使用。
 
 ## 目录入口
 
@@ -8,7 +8,7 @@
 |---|---|
 | `arena/`、`sdk/`、`bots/public/`、`maps/` | 框架、SDK、公开bot与地图；保持原代码布局 |
 | `rules/`、`tests/`、`tools/` | 规则配置、可运行测试与构建/分析工具 |
-| `STATUS.md`、`docs/PHASE_B_HANDOFF.md` | 当前状态与B阶段启动交接；A结论见`reports/phase-A.md` |
+| `STATUS.md` | 不超过40行的当前状态；原文保存在`docs/history/STATUS-before-new-division-20261113.md`，旧handoff只作历史 |
 | `data/balance.json`、`zoo-matrix.csv`、`timing.json` | 当前平衡、聚合胜率矩阵和效率入口 |
 | `data/phase-a/acceptance/` | 最后验收、资源、效率和本轮发布检查汇总 |
 | `data/phase-a/matrices/` | 每个候选及最后复跑的独立聚合矩阵，包含失败版本 |
@@ -18,7 +18,7 @@
 | `logs/` | 当前必要的测试诊断；历史完整日志不再上传 |
 | `docs/history/`、`reports/archive/` | 有审查价值的历史说明，不作为当前待办 |
 | `runs/` | 本机原始运行、结果库、完整回放、旧日志与证据归档；不入Git |
-| `private/` | B阶段隐藏资产、相关对局及原始分析，仅本机保管；创建进度以STATUS为准 |
+| `private/` | 隐藏资产、对局及原始分析；HIDDEN为一次性存量基线，轮清单在manifests/、追加总账ledger.jsonl，均只留本机 |
 
 ## 哪些内容不上传
 
@@ -27,6 +27,10 @@
 保留的是聚合局数/胜平负、按地图类型的矩阵、bootstrap区间、失败统计、资源/效率汇总，以及审查必要的诊断日志。汇总必须覆盖全部样本和失败，不因不上载明细而挑选结果。
 
 原始分析输出写入 `runs/`（隐藏输入仍只写 `private/`）；将审查需要的聚合部分纳入 `data/`。`tools/publication.py`的检查覆盖已知逐局格式，不能代替人工审查任意改名或新格式。pre-commit检查暂存内容，不用忽略规则掩盖已跟踪文件。
+
+## 新归档方法
+
+T1后最后一次全量登记形成只读HIDDEN基线；以后新轮目录设只读、写清单并追加总账，平时核新轮与链，里程碑/B交审再全量核验。发布钩子兼查基线及新轮摘要。旧DeepSeek工作区与交付只存档，不清理、不复活；新Claude工作区不是主仓库clone。见`docs/ARCHIVING.md`。
 
 ## 本机归档与历史
 

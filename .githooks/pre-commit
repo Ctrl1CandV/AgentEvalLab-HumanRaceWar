@@ -10,7 +10,6 @@
 # - raw game records/replays/indexes (only review summaries are published).
 set -u
 
-hidden="private/HIDDEN.sha256"
 limit=$((2 * 1024 * 1024))
 status=0
 
@@ -35,13 +34,7 @@ while IFS= read -r -d '' path; do
     status=1
     continue
   fi
-  if [ -f "$hidden" ]; then
-    sum=$(git show ":$path" | sha256sum | cut -d ' ' -f 1)
-    if grep -q "^$sum" "$hidden"; then
-      echo "pre-commit: $path has the same content as a hidden file listed in $hidden" >&2
-      status=1
-    fi
-  fi
+  # Legacy and per-round hidden-content checks run once in publication.py.
 done < <(git diff --cached --name-only --diff-filter=ACMR -z)
 
 if [ -x .venv/bin/python ]; then
