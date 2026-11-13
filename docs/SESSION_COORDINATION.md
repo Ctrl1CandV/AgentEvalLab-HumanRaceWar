@@ -6,7 +6,7 @@
 
 - GPT在`~/projects/AgentEvalLab-HumanRaceWar`统筹、维护框架/工具、评测、集成并组装阶梯，不再写阶梯bot。
 - Claude在`~/projects/HRW-claude`从零写强bot，只看导出的公开材料。
-- DeepSeek作者和原协调线已经结束，不再发窗口、任务或反馈。原目录只读保留。
+- DeepSeek作者和原协调线已经结束，不再发窗口、任务或反馈。旧DeepSeek/pilot目录已按用户后续授权在完整字节保全后删除；主仓库private档案只读保留，不再使用旧目录。
 
 ## 写入归属
 

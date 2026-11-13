@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "scope": "User-authorized deletion of the two retired external workspaces only after complete byte preservation",
+  "deletedWorkspaces": [
+    {
+      "name": "HRW-deepseek",
+      "files": 79028,
+      "bytes": 839747038,
+      "newArchiveCopies": 0,
+      "allSourceAndArchiveHashesCheckedTwice": true
+    },
+    {
+      "name": "HRW-pilot",
+      "files": 107,
+      "bytes": 528054,
+      "newArchiveCopies": 107,
+      "allSourceAndArchiveHashesCheckedTwice": true
+    }
+  ],
+  "totalFilesPreserved": 79135,
+  "allOriginalDirectoriesDeleted": true,
+  "archivesAndD_c01Retained": true,
+  "HRWClaudeNotAccessedOrModified": true,
+  "sourceCodeReadAsTextOrExecuted": false,
+  "recoveryIndexSha256": "81d83b915921ff8487e778ad34d8eb2a8c7e1061cacb516ac4c829b23fa615f1",
+  "archiveRoundManifestSha256": "0a40deb4355e3e3aff6f72717a3ba33c2efd3ac912060e3496f811c858301fa8",
+  "ledgerEntrySha256": "d3b30a1fe34fa13fb1bfb091500dfe3da6516c8a52aa271fcae3c432b70a44b8",
+  "privateEvidenceFiles": 121,
+  "runtime": {
+    "compiles": 0,
+    "botStarts": 0,
+    "engineSteps": 0,
+    "checks": 0,
+    "games": 0,
+    "benchmarks": 0
+  },
+  "cost": {
+    "preparationCpuSeconds": 21.2833216,
+    "preparationWallSeconds": 39.075378593,
+    "verificationAndRemovalCpuSeconds": 16.5203339,
+    "verificationAndRemovalWallSeconds": 16.595409959,
+    "completeMaintenanceOrSessionCpuSeconds": null
+  },
+  "noOriginalArchiveOrFailedEvidenceDeleted": true,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "pushed": false
+}

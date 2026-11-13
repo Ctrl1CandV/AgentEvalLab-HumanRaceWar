@@ -11,7 +11,7 @@ AgentEvalLab的CA竞技场题族：被测模型为“前哨”编写bot，由固
 
 ## 两个工作者
 
-GPT在本WSL主仓库负责统筹、框架、公共工具、评测、集成和阶梯组装，不再写阶梯bot。Claude在`~/projects/HRW-claude`从零开发强bot，只看公开材料；GPT不读改其源码。用户在T4就绪通知后启动Claude，任务书为[BRIEF-CLAUDE](docs/BRIEF-CLAUDE.md)。DeepSeek线结束，原件只读保留。
+GPT在本WSL主仓库负责统筹、框架、公共工具、评测、集成和阶梯组装，不再写阶梯bot。Claude在`~/projects/HRW-claude`从零开发强bot，只看公开材料；GPT不读改其源码。用户在T4就绪通知后启动Claude，任务书为[BRIEF-CLAUDE](docs/BRIEF-CLAUDE.md)。DeepSeek线结束；旧DeepSeek/pilot工作区已按用户后续授权删除，原始字节仍在主仓库private只读归档。
 
 阶段准备按T1→T2→T3→T4顺序；T3技术停不做T4，T4就绪后停报。T5等用户通知交付；T6新计分工具须先验收。本地提交，推送由用户负责。具体进度不在本页重复。
 

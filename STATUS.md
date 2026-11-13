@@ -4,12 +4,13 @@
 
 ## 当前停点
 - T1–T4已按顺序完成并停止；`~/projects/HRW-claude/`已就绪，由用户开启Claude会话。GPT未代开作者模型会话。
-- T4有108份公开材料加清单，根任务书及jobs1/jobs6预算投影齐备；bot和handoff/in/out为空，无Git或链接，原锁与预算未改、0测速。
+- T4初建有108份公开材料加清单，任务书及jobs1/jobs6预算投影齐备；初始bot和handoff/in/out为空，无Git或链接，原锁与预算未改、0测速；不窥探作者后续源码。
 - 8池/80张dev图/原种子与jobs6原锁的私有评测v1协议已登记；见reports/phase-B-claude-workspace.md及data/phase-b/claude-workspace.json。
 - T4编译、bot、引擎步、check、计分、测速均0；材料隔离不证明模型/会话独立，真实版本和自测数待交付登记。
 
 ## 已收束
-- T1结束DeepSeek：79028文件字节复核，59777复用、19251新回收；工作区/审查树只读，lane结束。D-c01作低层候选，其余只存档，零运行。
+- 用户后续授权清理已完成：DeepSeek79028份已有归档重核，pilot107份全部补存，79135份源/副本两次核字节后删除两个原工作区；只读档案及D-c01保留，Claude未动，零运行。
+- T1关闭DeepSeek及lane的历史保留；旧工作区现按后续用户授权删除，恢复索引见private/maintenance/workspace-retirement-20261113/backup/recovery-index.json。
 - T2最后存量基线677710项通过；旧658449中仅lane/追加笔记两项预期变化，旧字节可核。后续只读轮清单加追加总账；旧STATUS原字节在docs/history。
 - T3完成2080局：直接87/0/73、半分174<176，不采纳E100%，保留E-r02；池提高3.5417pp不替代直接门槛。
 - T3实际8编译/4160启动/0重试、check、测速或候选修订，零故障/超时/警告，2080回放各验证一次；见reports/phase-B-gpt-mainlines-final.md。

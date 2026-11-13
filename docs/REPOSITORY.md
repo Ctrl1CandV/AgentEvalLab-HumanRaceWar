@@ -30,7 +30,7 @@
 
 ## 新归档方法
 
-T1后最后一次全量登记形成只读HIDDEN基线；以后新轮目录设只读、写清单并追加总账，平时核新轮与链，里程碑/B交审再全量核验。发布钩子兼查基线及新轮摘要。旧DeepSeek工作区与交付只存档，不清理、不复活；新Claude工作区不是主仓库clone。见`docs/ARCHIVING.md`。
+T1后最后一次全量登记形成只读HIDDEN基线；以后新轮目录设只读、写清单并追加总账，平时核新轮与链，里程碑/B交审再全量核验。发布钩子兼查基线及新轮摘要。旧DeepSeek/pilot工作区已按用户后续授权，在所有文件与副本两次逐一核字节后删除；交付、失败和原始文件继续只读存档，不复活旧作者线。恢复索引在`private/maintenance/workspace-retirement-20261113/backup/recovery-index.json`：DeepSeek映射已有分散档案，pilot全目录备份在同级`HRW-pilot/`；空目录和权限也有记录。历史绝对工作区路径只作历史，不改写旧收条。新Claude工作区不是主仓库clone，也未被本次清理访问或修改。见`docs/ARCHIVING.md`。
 
 ## 本机归档与历史
 
