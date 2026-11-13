@@ -2,6 +2,8 @@
 
 当前进度只见STATUS；执行权限以2026-11-13新分工为准，下面历史报告不提供当前授权。以后每轮报告一页。
 
+- [`phase-B-gpt-mainlines-final.md`](phase-B-gpt-mainlines-final.md)：T3执行前冻结；原样E100%按标准tournament作两段式dev取舍，尚无运行结果。
+
 - [`phase-B-new-division-preparation.md`](phase-B-new-division-preparation.md)：T1按字节关闭DeepSeek、T2最后一次全量登记及逐轮归档切换；旧状态原样归入docs/history，零运行。
 
 - [`phase-B-author-r04-runtime-wiring02.md`](phase-B-author-r04-runtime-wiring02.md)：108文件只读审查仍有4组工程＋1组记录/写入范围阻塞，不是只差实机测试；E仅核156项摘要、零新增执行。共享收束后继续冻结，无新任务或下一窗口。

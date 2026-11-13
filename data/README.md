@@ -6,6 +6,8 @@
 
 当前权限与停点见STATUS和2026-11-13新分工，下面旧聚合只描述当时事实。
 
+- [`phase-b/e-dev-final-freeze.json`](phase-b/e-dev-final-freeze.json)：T3原样E100%对E-r02的执行前清单，2080局上限，分段/六池/种子/机器锁均已绑定；本文件不是运行结果。
+
 - [`phase-b/new-division-preparation.json`](phase-b/new-division-preparation.json)：T1按字节关闭DeepSeek，T2最后存量基线及逐轮总账切换，零运行；详细文件清单留本机。
 
 - [`phase-b/author-r04-runtime-wiring02-review.json`](phase-b/author-r04-runtime-wiring02-review.json)：108文件审查聚合，仍5组工程/记录阻塞、协调方8纯检查双seed/3文件最终LSP0，E仅核156项摘要。共享保全见[`本轮登记`](phase-b/author-r04-runtime-wiring02-registration.json)；没有新任务或下一接收/运行窗口，1864局不恢复。

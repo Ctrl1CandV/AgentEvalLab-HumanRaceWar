@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "task": "T3",
+  "scope": "approved E100 dev selection only; not old strength01 continuation",
+  "candidateSha256": "0d8ef895e10d688f4cd6643666446594125d22573376b9c3e392ceab1d4b7683",
+  "retainedSha256": "30f80b77fe68b0f9c5f69fd3d57e44358d7180a263ef5fad145a4c4ab2b9a69a",
+  "pool": [
+    {
+      "code": "M-balanced",
+      "sha256": "273fecd4a9039d73914454bbcce078462afce2071c87b468c7f2d8bf6d731d8a"
+    },
+    {
+      "code": "A-r02",
+      "sha256": "24b73f2aa9c67b300253437e89c0eac910602263ecf826a83cf2f1f43f749680"
+    },
+    {
+      "code": "C-r02",
+      "sha256": "54e9d52db706a8993964ae63f07bb8149142f2eb6d1c078d9f6e93356a64e966"
+    },
+    {
+      "code": "Z-harass",
+      "sha256": "9bb4d7effb2568ac78c22dcff20867862e951f15880d23355d5de2d9804d28b3"
+    },
+    {
+      "code": "Z-rush",
+      "sha256": "2d089a189f255bdec967fb4c13f5512afa5d9bc23f6bafd88b7b86c079edcd2e"
+    },
+    {
+      "code": "Z-towers",
+      "sha256": "3a93ef4f1d84b0e50a811f0622a75235d0d5b15156fd215ad44bbfaa51cecc78"
+    }
+  ],
+  "devPartition": {
+    "maps": 80,
+    "stages": [
+      {
+        "stage": 1,
+        "maps": 40,
+        "partitionSha256": "26071b816a585d2de304242e8da2763ae87fe4a8beba91941b96b5e356a4a9b7"
+      },
+      {
+        "stage": 2,
+        "maps": 40,
+        "partitionSha256": "4d421b7828916e0ffaa1a25e815d23f1f8470798fa22063d55c21fa3f08fe9a0"
+      }
+    ],
+    "source": "unchanged dev05 partition; hidden layouts/IDs remain private"
+  },
+  "botSeeds": [
+    17,
+    29
+  ],
+  "machineLockSha256": "b106c1bf2c5d5b6b1751b180bf6c9e8aa091d964ed93f3ba4b38f3b1ed418b48",
+  "jobs": 6,
+  "sandbox": "bwrap",
+  "frameworkSha256": "00310938f86fbd9703ad991277e21678d92eda903d2ca2c77006ca986c919177",
+  "gates": {
+    "earlyRejectHalfPointsBelow": 72,
+    "directAcceptHalfPointsAtLeast": 176,
+    "poolDropPercentMax": 2,
+    "candidateFaultAndTimeoutCompletedGameRateMax": 0.02
+  },
+  "caps": {
+    "games": 2080,
+    "compiles": 8,
+    "primaryBotStarts": 4160,
+    "infraRetriesPerGame": 3,
+    "checks": 1,
+    "benchmarks": 0,
+    "strategySnapshotsOrRevisions": 0,
+    "matchWallSeconds": 7200
+  },
+  "standardTournamentOnly": true,
+  "oneSharedCompileCache": true,
+  "checkPlanned": false,
+  "privateFreezeManifestSha256": "c25ba1110547701d21844140fbb2cbddadc40546d6778efc5c3aee390344f594",
+  "ledgerEntrySha256": "fc6942e28ef50c9f2548d8de4018cf4dc08da4ca294c557617e86f3b0057e666",
+  "runNotStartedAtFreeze": true
+}
