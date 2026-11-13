@@ -1,5 +1,7 @@
 # 审查报告
 
+- [`phase-B-author-r04-runtime-wiring02.md`](phase-B-author-r04-runtime-wiring02.md)：108文件只读审查仍有4组工程＋1组记录/写入范围阻塞，不是只差实机测试；E仅核156项摘要、零新增执行。共享收束后继续冻结，无新任务或下一窗口。
+
 - [`phase-B-author-r04-controller-repair01.md`](phase-B-author-r04-controller-repair01.md)：102文件审查聚合，仍4组工程阻塞；E只核130项摘要，新增执行0。wiring02已交付停止但未收审，共享收束/本地提交后才另发只读接收窗口，无运行授权。
 
 - [`phase-B-astra-strength01.md`](phase-B-astra-strength01.md)：10% TURN CPU9.6049ms>6ms技术止损，456新局/912启动/11编译、456回放一次验证通过；余下1864不执行，矩阵不全不作强度结论，不采纳。

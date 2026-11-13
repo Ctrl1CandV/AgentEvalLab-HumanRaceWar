@@ -2,6 +2,10 @@
 
 测试入口：`.venv/bin/python tools/run_tests.py`。运行bot和C++编译的测试仍使用bwrap；本宿主不可裸用plain。
 
+## runtime-wiring02共享集成（2026-11-13）
+
+协调方8项不同纯检查双seed最终通过，初次及最终共4遍；3文件最终LSP0，中间诊断、审计失败和前像保留。作者保存34例/seed自报通过的套件未由协调方执行，不能据此认定运行资格或生产覆盖。E仅核冻结守卫及156项审查摘要，不读实现、不重跑作者审计；2个维护文件LSP0、既有5发布检查双seed通过。新增编译/bot/check/probe/引擎步/新局均0，未跑含bot的完整套件。见`reports/phase-B-author-r04-runtime-wiring02.md`。
+
 ## controller-repair01共享集成（2026-11-12）
 
 协调方6项纯检查双seed、3文件LSP零诊断；作者自报58例/seed未由协调方执行，不能当运行资格。E仅机械核130项审查索引摘要，不重跑作者审计、不读实现；2个私有维护文件LSP零诊断、既有5项发布检查双seed通过。本批编译/bot/check/probe/引擎步/新局均0，未跑含bot的完整套件。字节保全和登记不等于功能或强度验证，见`reports/phase-B-author-r04-controller-repair01.md`。

@@ -4,6 +4,8 @@
 
 ## 当前入口
 
+- [`phase-b/author-r04-runtime-wiring02-review.json`](phase-b/author-r04-runtime-wiring02-review.json)：108文件审查聚合，仍5组工程/记录阻塞、协调方8纯检查双seed/3文件最终LSP0，E仅核156项摘要。共享保全见[`本轮登记`](phase-b/author-r04-runtime-wiring02-registration.json)；没有新任务或下一接收/运行窗口，1864局不恢复。
+
 - [`phase-b/author-r04-controller-repair01-review.json`](phase-b/author-r04-controller-repair01-review.json)：102文件审查聚合，仍4组工程阻塞，E仅核130项摘要、零新增执行。共享保全见[`本轮登记`](phase-b/author-r04-controller-repair01-registration.json)；wiring02接收窗口须在本轮提交后另行明确释放，不含运行授权。
 
 - [`phase-b/e-strength01.json`](phase-b/e-strength01.json)：E强度01在456局后触发低档CPU技术止损，全部一次回放验证及只读账本核对通过；不补1864、不作强度结论。收束见[`e-strength01-closure-registration.json`](phase-b/e-strength01-closure-registration.json)。
