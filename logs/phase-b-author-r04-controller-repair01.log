@@ -1,0 +1,8 @@
+2026-11-12 aggregate-only shared closure of r04-controller-repair01; E does not read author implementation.
+Coordinator: 102 files / 1288452 bytes archived; 101 declared digests matched; four concrete engineering finding groups remain, seven author-disclosed pending groups retained. Runtime not permitted.
+Previous52/public106 unchanged; ten tool and twenty preimage digests matched; fifteen saved logs, twenty-two process ledger rows, seven message scenarios checked; six captured failures retained. Exact historical process count unknown.
+Author reports 58 cases per seed passed; reviewer did not execute author suite. Reviewer six pure checks per seed 0/1 passed; three LSP files zero diagnostics. Reviewer new compile/bot/check/probe/engine/game counts all zero.
+E mechanically verified 130 review-index entries; two maintenance files LSP0; five publication checks per seed 0/1 passed. No author audit rerun, no new execution.
+Shared closure: 658132 of prior658135 files unchanged; two lanes and append-only notes have exact preimages. New658279 registered and all digests verified, zero exceptions; all three closed E ledgers unchanged. Maintenance CPU208.3284027 seconds; whole-session CPU unknown.
+User reports r04-runtime-wiring02 delivered/stopped; not archived or reviewed in this integration. Explicit read-only intake release only after all shared registration, validation and local commit finish; no new runtime or task-launch permission.
+E strength01 remains stopped at 456 games / 11 compiles / 912 starts; remaining1864 not reusable. B incomplete; C not started. Local commit only, no push.

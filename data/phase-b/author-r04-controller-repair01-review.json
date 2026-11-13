@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "scope": "Aggregate-only integration of coordinator review; no author implementation or new runtime",
+  "delivery": {
+    "name": "r04-controller-repair01",
+    "manifestSha256": "bb3180130debd6da2d7214b1a769d0e0ba36bded4e6ce44857e61298c41abef0",
+    "declaredFiles": 101,
+    "filesIncludingManifest": 102,
+    "bytes": 1288452,
+    "allDeclaredDigestsMatch": true,
+    "originalBytesArchived": true
+  },
+  "review": {
+    "verdict": "blocked_remaining_engineering_defects",
+    "concreteEngineeringFindingGroups": 4,
+    "authorDisclosedPendingGroupsRetained": 7,
+    "previousDeliveryFilesUnchanged": 52,
+    "publicFilesUnchanged": 106,
+    "r01CurrentMatched": true,
+    "candidateDirectoryAbsent": true,
+    "internalToolDigestsMatched": 10,
+    "preimageDigestsMatched": 20,
+    "capturedRunLogsChecked": 15,
+    "capturedFailuresRetained": 6,
+    "authorProcessLedgerRows": 22,
+    "exactHistoricalProcessCountKnown": false,
+    "messageScenariosChecked": 7
+  },
+  "authorReportedTests": {
+    "casesPerSeed": 58,
+    "hashseeds": [0, 1],
+    "allReportedPassed": true,
+    "suiteExecutedByReviewer": false,
+    "notRuntimeQualification": true
+  },
+  "coordinatorValidation": {
+    "pureChecksPerSeed": 6,
+    "hashseeds": [0, 1],
+    "allPassed": true,
+    "lspFiles": 3,
+    "lspDiagnostics": 0,
+    "intakeCpuSeconds": 0.0177084,
+    "storedEvidenceAuditCpuSeconds": 0.0643872,
+    "totalSessionCpuSeconds": "unknown",
+    "authorCodeExecuted": false,
+    "newCompiles": 0,
+    "newBotStarts": 0,
+    "newEngineSteps": 0,
+    "newChecks": 0,
+    "newProbes": 0,
+    "newGames": 0
+  },
+  "integratorValidation": {
+    "reviewEvidenceDigestsVerified": 130,
+    "authorImplementationRead": false,
+    "authorAuditRerun": false,
+    "maintenanceLspFiles": 2,
+    "lspDiagnostics": 0,
+    "publicationChecksPerSeed": 5,
+    "hashseeds": [0, 1],
+    "publicationChecksPassed": true,
+    "fullBotTestSuiteRun": false,
+    "newExecution": 0
+  },
+  "nextDelivery": {
+    "name": "r04-runtime-wiring02",
+    "userReportsDeliveredAndStopped": true,
+    "archivedOrReviewedInThisIntegration": false,
+    "priorZeroRuntimeTaskMinutes": 75,
+    "explicitReadOnlyIntakeReleaseAfterClosureAndCommitRequired": true,
+    "newTaskLaunchAuthorityCreated": false,
+    "newRuntimePermission": false
+  },
+  "eStrength01PermanentlyStoppedForThisRound": true,
+  "remaining1864Reusable": false,
+  "newEExecutionPermission": false,
+  "newAuthorRuntimePermission": false,
+  "pushed": false,
+  "phaseBComplete": false,
+  "phaseCStarted": false
+}

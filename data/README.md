@@ -4,6 +4,8 @@
 
 ## 当前入口
 
+- [`phase-b/author-r04-controller-repair01-review.json`](phase-b/author-r04-controller-repair01-review.json)：102文件审查聚合，仍4组工程阻塞，E仅核130项摘要、零新增执行。共享保全见[`本轮登记`](phase-b/author-r04-controller-repair01-registration.json)；wiring02接收窗口须在本轮提交后另行明确释放，不含运行授权。
+
 - [`phase-b/e-strength01.json`](phase-b/e-strength01.json)：E强度01在456局后触发低档CPU技术止损，全部一次回放验证及只读账本核对通过；不补1864、不作强度结论。收束见[`e-strength01-closure-registration.json`](phase-b/e-strength01-closure-registration.json)。
 
 - [`phase-b/e-strength01-readiness-fix.json`](phase-b/e-strength01-readiness-fix.json)：执行前登记守卫修复，原冻结/失败保留，零执行；新freeze02仍原源码/预算，登记见[`e-strength01-preflight02-registration.json`](phase-b/e-strength01-preflight02-registration.json)。

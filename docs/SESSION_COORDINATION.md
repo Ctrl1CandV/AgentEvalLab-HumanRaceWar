@@ -62,6 +62,14 @@ E已完成唯一实际执行：10% TURN CPU9.6049ms>6ms触发停发，5在途收
 
 新静止窗口`private/coordination/e-strength01-closure-window-20261112.json`仅用于最终保全/登记和本地提交，见`../data/phase-b/e-strength01-closure-registration.json`。这些全部结束后，E才另发明确的`r04-controller-repair01`接收窗口收条；旧frozen、旧release和作者完成通知均不自动授权接收。新窗口只允许原样归档/只读审查、自己的lane/队列及handoff/in，不碰公共文件/index/HIDDEN/笔记；不新增作者编译/bot/check/probe/oracle/新局权限。E不读其实现，不推送。
 
+## 2026-11-12 controller-repair01收束与wiring02交接
+
+强度01已在5cb045f完成最终登记、验证及本地提交，之后通过`private/coordination/e-integration-release-20261112-02.json`明确释放controller-repair01原样接收/只读审查。协调方现已完成并重新frozen，交回无实现聚合收条；E仅核130项证据摘要，不读作者实现、详细审查或任务正文。
+
+用户本次通知runtime-wiring02交付停止、尚未接收。新的静止窗口`private/coordination/e-controller-repair01-integration-window-20261112.json`仅处理上一轮共享保全/登记/本地提交；旧lane“作者仓外运行”是历史，不改写其冻结原件。登记见`../data/phase-b/author-r04-controller-repair01-registration.json`。本次零新增执行，E三份已关闭账本不变，1864局不恢复。
+
+全部维护/验证/本地提交结束后，E才另发针对wiring02的明确只读接收收条。该窗口只允许新私有原样归档/只读审查、协调方自己的lane/无实现队列及既有委托范围内的handoff/in反馈；不写公共文件、HIDDEN、笔记、index或提交。E同时暂停实施/执行、全量扫描、共享/index写入和提交。它不新增作者编译/bot/check/probe/oracle/引擎步/新局或任务启动权限。完成后协调方停止主仓库证据写入、重新frozen、交无实现聚合及精确前像指针，再另协调静止收束。新release及lane更新属于登记后变化，下一共同静止窗口再登记；Git干净不表示私有登记已覆盖。双方都不推送。
+
 ## CPU窗口
 
 所有目录仍共用既有CPU/编译锁。E计分jobs6需18核，DeepSeek的jobs1至少3核，本机20逻辑核，应错峰；不改jobs/TMPDIR/CPU池/锁目录，不抢锁或终止他人任务。DeepSeek最新纯工程任务已由用户报告完成停止，零编译/bot/check/探针/引擎步/新局；新交付待未来明确接收窗口。这不构成之后作者运行的许可。未来作者执行必须另获授权并经用户协调窗口。
