@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "task": "T3",
+  "games": 2080,
+  "candidateSourceSha256": "0d8ef895e10d688f4cd6643666446594125d22573376b9c3e392ceab1d4b7683",
+  "retainedSourceSha256": "30f80b77fe68b0f9c5f69fd3d57e44358d7180a263ef5fad145a4c4ab2b9a69a",
+  "direct": {
+    "games": 160,
+    "wins": 87,
+    "draws": 0,
+    "losses": 73,
+    "halfPoints": 174
+  },
+  "candidatePool": {
+    "games": 960,
+    "wins": 786,
+    "draws": 0,
+    "losses": 174,
+    "halfPoints": 1572
+  },
+  "retainedPool": {
+    "games": 960,
+    "wins": 752,
+    "draws": 0,
+    "losses": 208,
+    "halfPoints": 1504
+  },
+  "poolScoreDeltaPercentagePoints": 3.5416666666666665,
+  "directGatePassed": false,
+  "poolGatePassed": true,
+  "accepted": false,
+  "technicalStop": false,
+  "finalE": "E-r02",
+  "faultGamesByCode": {},
+  "timeouts": 0,
+  "protocolWarnings": 0,
+  "infraRetries": 0,
+  "compiles": 8,
+  "cacheHitsOnResume": 8,
+  "botStarts": 4160,
+  "checks": 0,
+  "benchmarks": 0,
+  "sourceSnapshotsOrRevisions": 0,
+  "engineSteps": 566515,
+  "replyRecords": 1137190,
+  "replayAuditSteps": 566515,
+  "replaysAuditedExactlyOnce": 2080,
+  "identityHeadersAndCpuTotalsChecked": 2080,
+  "candidateTurnCpuMs": {
+    "count": 306157,
+    "p50": 50.5985,
+    "p99": 53.9162,
+    "max": 54.5497,
+    "method": "nearest-rank; TURN replies only"
+  },
+  "endingReasons": {
+    "base_destroyed": 811,
+    "turn_limit_score": 1262,
+    "turn_limit_deposit": 7
+  },
+  "cost": {
+    "botCpuSeconds": 12354.723971,
+    "harnessCpuSeconds": 867.5960283,
+    "replayAuditCpuSeconds": 295.2251647,
+    "grossMatchWindowSeconds": 2364.603775213,
+    "standardInvocationWallSeconds": 2207.558143458,
+    "compileCpuSeconds": null,
+    "wholeProcessTreeCpuSeconds": null,
+    "posthocFoldCpuSeconds": 15.4724013
+  },
+  "freezeGitHead": "55e0d5a5e206588e4e9ca79609e8de3f567fcfb8",
+  "machineLockSha256": "b106c1bf2c5d5b6b1751b180bf6c9e8aa091d964ed93f3ba4b38f3b1ed418b48",
+  "frameworkSha256": "00310938f86fbd9703ad991277e21678d92eda903d2ca2c77006ca986c919177",
+  "sdkCppSourceSha256": "6c4dba1f36110ee85c7a38afb9f4cf977371ffabc62a45b69e46f50f89d7ba9f",
+  "sourceCodeReadSemantically": false,
+  "archiving": {
+    "roundManifestSha256": "33a94c639758bf02a89b7915d46c30797f9d17d559ab9f33f4c4c05e835c8f27",
+    "files": 68242,
+    "bytes": 958144481,
+    "ledgerEntrySha256": "aaad648042b47201dd006c50545d380b241c6b6bf9ca098570d85e195665c7db",
+    "GPTFinalsManifestSha256": "bc948de98fb4cee28eb1158d63e3bacf9811fc311c8af46e3fa42b9e825ec46b"
+  },
+  "GPTFinals": [
+    {
+      "code": "A-r02",
+      "style": "attack",
+      "sourceSha256": "24b73f2aa9c67b300253437e89c0eac910602263ecf826a83cf2f1f43f749680"
+    },
+    {
+      "code": "E-r02",
+      "style": "economy",
+      "sourceSha256": "30f80b77fe68b0f9c5f69fd3d57e44358d7180a263ef5fad145a4c4ab2b9a69a"
+    },
+    {
+      "code": "C-r02",
+      "style": "control",
+      "sourceSha256": "54e9d52db706a8993964ae63f07bb8149142f2eb6d1c078d9f6e93356a64e966"
+    }
+  ],
+  "next": "T4 Claude public workspace and frozen evaluation protocol",
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "pushed": false
+}

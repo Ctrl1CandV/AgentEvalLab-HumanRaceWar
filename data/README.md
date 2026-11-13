@@ -6,6 +6,8 @@
 
 当前权限与停点见STATUS和2026-11-13新分工，下面旧聚合只描述当时事实。
 
+- [`phase-b/e-dev-final.json`](phase-b/e-dev-final.json)：T3完成2080局，直接半分174未达176，不采纳E100%；A-r02、E-r02、C-r02原样冻结，本轮证据只读归档。
+
 - [`phase-b/e-dev-final-freeze.json`](phase-b/e-dev-final-freeze.json)：T3原样E100%对E-r02的执行前清单，2080局上限，分段/六池/种子/机器锁均已绑定；本文件不是运行结果。
 
 - [`phase-b/new-division-preparation.json`](phase-b/new-division-preparation.json)：T1按字节关闭DeepSeek，T2最后存量基线及逐轮总账切换，零运行；详细文件清单留本机。
