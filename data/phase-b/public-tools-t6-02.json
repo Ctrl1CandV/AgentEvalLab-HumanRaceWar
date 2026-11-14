@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "task": "T6",
+  "delivery": 2,
+  "maximumDeliveries": 2,
+  "implementationSha256": "c7b462c05f94c5fcbb3a8b2493ac252301b7af3907ad3c036f6dbe77a71d2d35",
+  "implementationFiles": [
+    "tools/experiment_plan.py",
+    "tools/experiment.py",
+    "tools/profile_bot.py",
+    "tools/accept_t6.py",
+    "tools/process_evidence.py"
+  ],
+  "frameworkSha256": "00310938f86fbd9703ad991277e21678d92eda903d2ca2c77006ca986c919177",
+  "operatorReservation": {
+    "games": 18,
+    "compiles": 8,
+    "botStartsWorstCase": 144,
+    "sameScaleTwoDeliveriesCompiles": 16,
+    "sameScaleTwoDeliveriesStarts": 288,
+    "reasonForExtraTwoGamesOverReviewSuggestion": "jobs6 stopping must leave at least one queued task rather than launch all planned work before cancellation"
+  },
+  "runtimeActual": {
+    "cppCompiles": 0,
+    "botStarts": 0,
+    "bwrapRuns": 0,
+    "engineSteps": 0,
+    "checks": 0,
+    "games": 0,
+    "benchmarks": 0,
+    "cpuLeases": 0
+  },
+  "CAReview": "pending_delivery02",
+  "operatorBwrapAcceptance": "not_run; delivery01 execution denied by CA",
+  "mayScoreWithNewTools": false,
+  "budgetReset": false,
+  "modelProcessingSeconds": null,
+  "completeSessionCpuSeconds": null,
+  "toolContractTests": 36,
+  "processEvidenceTests": 6,
+  "existingPureRegressionTests": 19,
+  "hashSeeds": [
+    0,
+    1
+  ],
+  "finalTestExecutions": 122,
+  "LSPFiles": 7,
+  "LSPDiagnostics": 0,
+  "trustedFixtureSubprocessStartsFinalSuites": 18,
+  "arenaSdkRulesMapsBotsAndLocksUnchanged": true,
+  "reviewRequest": "reports/phase-B-public-tools-t6-02-review-request.md",
+  "readme": "docs/T6_TOOLS.md",
+  "actualBotResidualsObserved": false,
+  "realBotCleanupTested": false,
+  "note": "Trusted orphan counterexample is not bot residue. Actual bwrap stop/abnormal-controller cases have NOT run; still pending CA and operator acceptance.",
+  "archive": {
+    "round": "T6-public-tools-delivery02",
+    "manifestSha256": "cf6bc6bd70e630f462e2d3500d226df4a1e20793b290e0ec89662c6bafcf838c",
+    "files": 61,
+    "bytes": 117859
+  }
+}

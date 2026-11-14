@@ -6,6 +6,8 @@
 
 当前权限与停点见STATUS和2026-11-13新分工，下面旧聚合只描述当时事实。用户最新工具/对接会话拆分见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
 
+- [`phase-b/public-tools-t6-02.json`](phase-b/public-tools-t6-02.json)：稿02五模块版本、122次最终检查、可信进程夹具与零bot实际运行聚合；CA复核/用户实机未做，不能计分。
+
 - [`phase-b/public-tools-t6-01.json`](phase-b/public-tools-t6-01.json)：T6默认关闭首稿、纯检查及零真实运行聚合；CA与用户bwrap验收待，不得计分，工具和对接会话使用独立worktree。
 
 - [`phase-b/workspace-retirement.json`](phase-b/workspace-retirement.json)：后续用户授权删除两个旧工作区，79135份文件完整保全，恢复索引只留private；原归档和Claude工作区未删。

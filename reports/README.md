@@ -2,6 +2,9 @@
 
 当前进度只见STATUS；执行权限以2026-11-13新分工为准，下面历史报告不提供当前授权。以后每轮报告一页。用户随后拆分工具与对接/评测GPT，见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
 
+- [`phase-B-public-tools-t6-02-review-request.md`](phase-B-public-tools-t6-02-review-request.md)：稿02复核入口；已修停止验收、清理字段和空回放，五模块新摘要，未获准实机或计分。
+- [`phase-B-public-tools-t6-02.md`](phase-B-public-tools-t6-02.md)：第二稿修复/测试/预算，可信进程夹具不当bot残留证据；真实bot/编译/bwrap/引擎0，先CA再用户错峰验收。
+
 - [`phase-B-public-tools-t6-01-review-request.md`](phase-B-public-tools-t6-01-review-request.md)：T6交付01独立CA审查入口；源码仍45fb7ed，4项真实CLI/标准零任务规划补证通过，未开二稿、真实运行0。先审查，不能直接当作验收通过。
 
 - [`phase-B-public-tools-t6-01.md`](phase-B-public-tools-t6-01.md)：默认关闭的公共实验/profile工具、纯契约检查及用户验收脚本首稿；实机运行0，CA/用户验收待，不得计分。另登记独立对接会话交接，不代开或传源码。

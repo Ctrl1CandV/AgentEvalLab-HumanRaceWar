@@ -55,7 +55,7 @@ class ContractTests(unittest.TestCase):
         for code in ('M-balanced', 'Z-harass', 'Z-rush'):
             p = self.root/'bots/public'/code; p.mkdir(parents=True)
             (p/'main.cpp').write_bytes(b'opaque synthetic bytes, NEVER COMPILE: '+code.encode())
-        for folder, filename in (('public','open-01.map'), ('public','corridor-01.map'), ('scrimmage','island-01.map')):
+        for folder, filename in (('public','open-01.map'), ('public','corridor-01.map'), ('scrimmage','island-01.map'), ('public','maze-01.map')):
             p = self.root/'maps'/folder/filename; p.parent.mkdir(parents=True, exist_ok=True)
             p.write_bytes((REAL_ROOT/'maps'/folder/filename).read_bytes())
         for jobs in (1, 6):
@@ -191,10 +191,7 @@ class ContractTests(unittest.TestCase):
     def test_synthetic_approval_is_version_bound_and_does_not_issue_itself(self):
         (self.root/'runs').mkdir(exist_ok=True)
         evidence=self.root/'runs/evidence.json'
-        synthetic_evidence = {'passed':True,'executed':True,'evidenceKind':'public-bwrap-acceptance',
-            'implementationSha256':plan.implementation_digest(),'frameworkSha256':tournament.fingerprint(self.root),
-            'cases':[{'jobs':j,'completedGames':g,'auditedReplays':g,'headersAndCpuTotalsChecked':g,'logVerified':True}
-                     for j,g in ((1,2),(6,6))]}
+        synthetic_evidence = self.acceptance_evidence()
         evidence.write_text(json.dumps(synthetic_evidence))
         receipt={'schemaVersion':1,'implementationSha256':plan.implementation_digest(),
                  'frameworkSha256':tournament.fingerprint(self.root),'caReviewAccepted':True,
@@ -401,10 +398,117 @@ class ContractTests(unittest.TestCase):
         self.assertIsNone(observer.poll());self.assertEqual(len(observer.completed),0)
         with self.assertRaises(ValueError):observer.poll(final=True)
 
+    def empty_replay_run(self, name, payload, *, complete):
+        out,frame,digest=self.frozen(name)
+        def prepare():
+            self.synthetic(out,frame)
+            batch=self.root/out/'batch'
+            attempts=[json.loads(x) for x in (batch/'attempts.jsonl').read_text().splitlines()]
+            row=attempts[0];Path(row['replay']).write_bytes(payload);row['replaySha256']=plan.digest_file(row['replay'])
+            if not complete:row['status']='infra_error'
+            (batch/'attempts.jsonl').write_text(''.join(json.dumps(x)+'\n' for x in attempts))
+            results=[{**x,**task} for x,task in zip(attempts,run.expected_manifest(frame)['tasks']) if x['status']=='complete']
+            (batch/'results.jsonl').write_text(''.join(json.dumps(x)+'\n' for x in results))
+            executions=[json.loads(x) for x in (batch/'executions.jsonl').read_text().splitlines()]
+            executions[0]['completed']=complete
+            (batch/'executions.jsonl').write_text(''.join(json.dumps(x)+'\n' for x in executions))
+        with patch.object(run.subprocess,'Popen',return_value=FakeProcess(prepare)):
+            run.execute(out,digest,enable_experimental=True)
+        return out
+
+    def test_incomplete_empty_raw_and_gzip_replays_are_preserved_and_counted(self):
+        for index,payload in enumerate((b'',gzip.compress(b''))):
+            out=self.empty_replay_run(f'empty-{index}',payload,complete=False)
+            summary=profile.collect(out)
+            self.assertEqual(summary['partialAttemptReplays'],1)
+            self.assertEqual(summary['attemptsWithoutReplayHeader'],1)
+            self.assertEqual(summary['completedGames'],1)
+            attempt=json.loads((self.root/out/'batch/attempts.jsonl').read_text().splitlines()[0])
+            self.assertEqual(Path(attempt['replay']).read_bytes(),payload)
+
+    def test_complete_empty_replay_is_a_validation_error_not_stopiteration(self):
+        for index,payload in enumerate((b'',gzip.compress(b''))):
+            out=self.empty_replay_run(f'complete-empty-{index}',payload,complete=True)
+            with self.assertRaises(ValueError):profile.collect(out)
+
+    def acceptance_evidence(self):
+        cases=[]
+        for kind,jobs,games in (('normal',1,2),('normal',6,6),('inflight-stop',1,2),('inflight-stop',6,8)):
+            completed=games if kind=='normal' else 0
+            cases.append({'kind':kind,'jobs':jobs,'plannedGames':games,'completedGames':completed,
+                'auditedReplays':completed,'headersAndCpuTotalsChecked':completed,'logVerified':True,
+                'status':'complete' if kind=='normal' else 'stopped','reason':'wall-limit',
+                'controllerReaped':True,'descendantCleanupState':'confirmed','noChildrenAndECHILD':True,
+                'safetyCleanupPerformed':False,'stopAcknowledged':True,'noDispatchAfterAck':True,
+                'startedWorkersReaped':True,'unstartedPlannedTasks':1,'activeWorkerDeadlineArmed':True,
+                'abnormalControllerExitTested':kind=='inflight-stop' and jobs==6,
+                'controllerReturncode':0 if kind=='normal' else (70 if jobs==6 else -2),
+                'overlap':{'activeCount':jobs,'positiveOverlap':True,'overlapStartMonotonicNs':1,'overlapEndMonotonicNs':2}})
+        return {'passed':True,'executed':True,'acceptanceEvidenceVersion':2,'evidenceKind':'public-bwrap-acceptance',
+                'implementationSha256':plan.implementation_digest(),'frameworkSha256':tournament.fingerprint(self.root),
+                'cases':cases,'trustedProcessFixtures':[{'mode':m,'passed':True} for m in ('int','term','kill','abnormal')]}
+
+    def test_normal_games_alone_or_unknown_cleanup_cannot_pass_acceptance(self):
+        good=self.acceptance_evidence();plan.validate_acceptance_cases(good)
+        for mutate in (lambda e:e['cases'].__delitem__(slice(2,None)),
+                       lambda e:e['cases'][2].update(descendantCleanupState='unknown'),
+                       lambda e:e['cases'][2].update(noDispatchAfterAck=False),
+                       lambda e:e['cases'][3].update(overlap={'activeCount':1}),
+                       lambda e:e['trustedProcessFixtures'][2].update(passed=False),
+                       lambda e:e['cases'][2].update(activeWorkerDeadlineArmed=False)):
+            value=deepcopy(good);mutate(value)
+            with self.assertRaises(ValueError):plan.validate_acceptance_cases(value)
+
+    def test_generic_controller_reaping_never_claims_descendant_cleanup(self):
+        _,_,result=self.finished('controller-only')
+        self.assertTrue(result['controllerReaped'])
+        self.assertEqual(result['descendantCleanupState'],'unknown')
+        self.assertNotIn('cleanupConfirmed',result)
+
+    def test_worker_ack_freezes_dispatch_set_and_restores_signal_handler(self):
+        out,_,digest=self.frozen('worker-ack')
+        root=self.root/out;job=root/'batch/tasks/task/execution/job.json';job.parent.mkdir(parents=True);job.write_text('{}')
+        (root/'run-started.json').write_text(json.dumps({'parentPid':os.getppid(),'frameSha256':digest,'deadlineEpochNs':10**30}))
+        previous=signal.getsignal(signal.SIGINT)
+        with patch.object(run,'run_tournament',side_effect=lambda *a,**k:signal.raise_signal(signal.SIGINT)):
+            with self.assertRaises(KeyboardInterrupt):run.worker(out)
+        self.assertEqual(signal.getsignal(signal.SIGINT),previous)
+        self.assertEqual(plan.load_json(root/'stop-ack.json')['jobs'],['tasks/task/execution/job.json'])
+
+    def test_public_abnormal_on_ack_is_explicit_and_emits_receipt_before_exit(self):
+        spec=self.spec();spec['stop'].update(afterActiveWorkers=1,controllerExitOnAck=True)
+        out='runs/abnormal-ack';_,digest=plan.freeze(spec,out)
+        root=self.root/out
+        (root/'run-started.json').write_text(json.dumps({'parentPid':os.getppid(),'frameSha256':digest,'deadlineEpochNs':10**30}))
+        with patch.object(run,'run_tournament',side_effect=lambda *a,**k:signal.raise_signal(signal.SIGINT)),patch.object(run.os,'_exit',side_effect=SystemExit(70)):
+            with self.assertRaises(SystemExit) as caught:run.worker(out)
+        self.assertEqual(caught.exception.code,70)
+        self.assertTrue(plan.load_json(root/'stop-ack.json')['abnormalControllerExit'])
+        spec=self.spec();spec['purpose']='diagnostic';spec['stop'].update(afterActiveWorkers=1,controllerExitOnAck=True)
+        with self.assertRaises(ValueError):plan.freeze(spec,'runs/not-allowed')
+
+    def test_active_overlap_arms_real_wall_deadline_and_detects_late_dispatch(self):
+        for late in (False,True):
+            spec=self.spec();spec['stop']['afterActiveWorkers']=1
+            out=f'runs/active-{late}';frame,digest=plan.freeze(spec,out)
+            process=FakeProcess(lambda:self.synthetic(out,frame,only_manifest=True),active=True)
+            original=process.send_signal
+            def send(value):
+                atomic={'jobs':[],'signal':value};(self.root/out/'stop-ack.json').write_text(json.dumps(atomic))
+                if late:
+                    p=self.root/out/'batch/tasks/late/new/job.json';p.parent.mkdir(parents=True);p.write_text('{}')
+                original(value)
+            process.send_signal=send
+            peak={'activeCount':1,'positiveOverlap':True,'overlapStartMonotonicNs':1,'overlapEndMonotonicNs':2,'workers':[]}
+            with patch.object(run.subprocess,'Popen',return_value=process),patch.object(run.process_evidence,'overlap_snapshot',return_value=peak):
+                result=run.execute(out,digest,enable_experimental=True)
+            self.assertEqual(result['reason'],'wall-limit');self.assertTrue(result['activeWorkerDeadlineArmed'])
+            self.assertEqual(result['noDispatchAfterAck'],not late)
+
     def test_acceptance_is_dry_and_review_exclusive_gates_precede_execution(self):
         result=accept_t6.run('runs/acceptance')
-        self.assertFalse(result['executed']);self.assertEqual(result['perInvocationReservations']['games'],8)
-        self.assertEqual(result['perInvocationReservations']['botStarts'],64)
+        self.assertFalse(result['executed']);self.assertEqual(result['perInvocationReservations']['games'],18)
+        self.assertEqual(result['perInvocationReservations']['botStarts'],144)
         self.assertFalse((self.root/'runs/acceptance').exists())
         with self.assertRaises(ValueError):accept_t6.run('runs/acceptance',execute=True)
         with self.assertRaises(ValueError):accept_t6.run('runs/acceptance',execute=True,reviewed_sha256=plan.implementation_digest())

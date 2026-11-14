@@ -73,7 +73,7 @@ def collect(out, *, report_name='profile'):
     database.execute('CREATE INDEX rank_samples ON samples(label,phase,cpu)')
     cpus = {b['label']: set() for b in frame['bots']}
     faults = Counter(); compile_faults = Counter(); exceedances = Counter()
-    seen = set(); missing = 0; partial = 0; verified = 0
+    seen = set(); missing = 0; missing_headers = 0; partial = 0; verified = 0
     timing = frame['timingHeader']; limits = timing['fixedRuntime']['limits']
     expected_joint = [sha256(f"{b['sha256']}:{frame['sdkSha256'][b['language']]}".encode()).hexdigest()
                       for b in frame['bots']]
@@ -107,7 +107,13 @@ def collect(out, *, report_name='profile'):
                 totals = [0, 0]; terminal = None; initialization = 0; turns = 0; damaged = False
                 try:
                     with gzip.open(path, 'rt') as stream:
-                        head = json.loads(next(stream))
+                        first = next(stream, None)
+                        if first is None:
+                            if row['status'] == 'complete':
+                                raise ValueError('complete replay has no header')
+                            missing_headers += 1; partial += 1
+                            continue
+                        head = json.loads(first)
                         if (head['type'] != 'header' or head['taskId'] != task['taskId'] or head['sandbox'] != 'bwrap'
                                 or head['mapSha256'] != frame['maps'][task['mapIndex']]['sha256']
                                 or sha256(head['map'].encode()).hexdigest() != head['mapSha256']
@@ -179,7 +185,7 @@ def collect(out, *, report_name='profile'):
                    'configuredBotCpuPool': timing['cpus'], 'configuredConcurrencyNotConstantOccupancy': True,
                    'completedGames': len(results), 'attemptsObserved': len(attempts),
                    'completeReplaysHeaderAndCpuChecked': verified, 'partialAttemptReplays': partial,
-                   'attemptsWithoutReplay': missing, 'quantiles': 'exact nearest-rank; on-disk SQLite sorting',
+                   'attemptsWithoutReplay': missing, 'attemptsWithoutReplayHeader': missing_headers, 'quantiles': 'exact nearest-rank; on-disk SQLite sorting',
                    'labels': {b['label']: {'TURN': statistics(database, b['label'], 'TURN'),
                                           'INIT': statistics(database, b['label'], 'INIT'),
                                           'cpuIds': sorted(cpus[b['label']]), 'faultReplies': faults[b['label']],

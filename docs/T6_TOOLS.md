@@ -1,36 +1,37 @@
-# T6工具：默认关闭，先审查再验收
+# T6工具交付02：默认关闭，仍待CA与用户验收
 
-代码审查入口：`reports/phase-B-public-tools-t6-01-review-request.md`。首稿只通过纯检查；**CA审查待做、用户bwrap验收未跑，不能接到T5计分/取舍**。四个新tools模块不改arena、引擎、SDK、规则、机器锁或旧默认。当前Claude作者不得兼任读取主仓库的CA审查会话。
+交付01已被CA阻塞，**禁止运行旧验收脚本**。本稿修复停止/清理证据和空回放；只完成合成契约与可信Python进程夹具检查，真实bot/bwrap/编译/引擎步骤均0，不能用于计分。审查入口：`reports/phase-B-public-tools-t6-02-review-request.md`。源码指纹现在覆盖五模块（含process_evidence），旧批准收条无效。
 
-## 先审查，再由用户错峰验收
+## CA确认版本后，用户亲自错峰验收
 
 ```sh
-# 默认只输出计划、implementationSha256，不运行bot
+# 默认只输出计划/源码摘要，不启任何进程夹具或bot
 .venv/bin/python -B -m tools.accept_t6
-# CA确认该摘要版本，用户确认作者自测/T5评测均空闲后，亲自运行一次
-.venv/bin/python -B -m tools.accept_t6 --execute --reviewed-sha256 <SHA> --exclusive-window --out runs/t6-acceptance01
+# 仅在CA明确允许，且作者自测和T5评测均空闲时运行一次
+.venv/bin/python -B -m tools.accept_t6 --execute --reviewed-sha256 <新SHA> --exclusive-window --out runs/t6-acceptance02
 ```
 
-验收仅公开bot与public/scrimmage图：jobs1两局、jobs6六局，正常4编译/16启动，含标准三次框架重试预留64启动。两次交付的预留仍低于T6总帽40编译/400启动；每交付只运行一次，不自动整批重试。回传`acceptance-summary.json`聚合，原始回放/索引留本机。脚本不自行签发CA/生产批准。
+四组均用公开bot和public/scrimmage图：正常jobs1两局、jobs6六局；在途停止jobs1计划两局、jobs6计划八局。停止计划先观察实际worker、双沙箱及叶进程的两遍核身份重叠区间，再收紧真实墙钟截止；jobs1走SIGINT清理，jobs6在ACK后故意异常退出标准控制器，验证worker父死亡路径。停止后ACK任务集不得增加，且须有未派发任务。jobs6多留两任务是为了真实检查队列未派发，不只是已有全部任务收尾。
 
-## 清单与CPU画像
+保守预留每交付8编译/144启动/18计划局，两份同规模也仅16/288，小于原40/400总帽（稿01实际0）。不自动整批重试。另有SIGINT、TERM、KILL及异常控制器可信Python夹具，单独记录，不是bot启动。四组和所有夹具不齐不能整体通过；只返回本机acceptance-summary.json聚合，原件不上传。两次交付失败后停划范围，不开第三稿。
 
-完整JSON样例在`tools/examples/t6-public.json`：固定标签/源码SHA、地图SHA、配对、种子、jobs、既有锁、游戏/编译/启动/墙钟帽及故障停止条件。源码只字节校验/标准snapshot，不作AST/import或语义阅读。
+## 清单与画像
+
+JSON样例`tools/examples/t6-public.json`绑定标签/源码、SDK、地图、种子、jobs、原锁、预算与停止条件；不解释或import bot源码。
 
 ```sh
-# 只冻结，不执行；保存输出的frameSha256
-.venv/bin/python -B -m tools.experiment freeze tools/examples/t6-public.json --out runs/t6-example
-# 以下只用于经审查、错峰的非计分操作；开关不可省略
-.venv/bin/python -B -m tools.experiment run runs/t6-example --frame-sha256 <SHA> --enable-experimental
-.venv/bin/python -B -m tools.profile_bot --from-experiment runs/t6-example
+# 只冻结，保存frameSha256；以下执行仅在获得相应授权后使用
+.venv/bin/python -B -m tools.experiment freeze tools/examples/t6-public.json --out runs/t6-example02
+.venv/bin/python -B -m tools.experiment run runs/t6-example02 --frame-sha256 <SHA> --enable-experimental
+.venv/bin/python -B -m tools.profile_bot --from-experiment runs/t6-example02
 ```
 
-profile前端可用`--bot <目录> --opponents <公开目录...> --maps <公开map文件...> --jobs N --timing <现有固定锁> --out <新目录>`；同样默认仅冻结，显式`--enable-experimental`才执行。报告INIT、TURN（含故障TURN）的精确最近秩p50/p99/最大、核号和超限回合。超名义TURN额度可能合法消耗BANK，不等于超时；声明并发不表示每时刻满载。头/身份/CPU合计检查不是引擎重放，验收脚本另用旧验证器且复用已有恢复凭据。
+profile前端用`--bot <目录> --opponents <公开目录...> --maps <公开map...> --jobs N --timing <原锁> --out <新目录>`，默认仅冻结。分别报告INIT/TURN（含故障）、最近秩p50/p99/max、核号和超限。合法消耗BANK不等于超时；实际进程重叠也不证明CPU满载或普遍时限上界。完整回放无头拒绝；未完成的空文件/空gzip计入部分/无头数量，保留原件。
 
-## 必须知道的边界
+## 证据边界
 
-- 仅新批次，无resume/覆盖/整批重试。整计划按每局最坏8启动及全部C++输入预留，不依赖及时停止守住帽值。输入与工具版本变动就停，不热改工具继续运行。
-- 外层每0.1秒观测持久化输出，不是零延迟派发钩子。截止时中断自己的标准控制器，最多15+5秒清理后仅强停自己持有的子进程，不向sidecar PID发信号；不承诺失败后绝不多派一局。CPU/编译租约仍由标准tournament负责，外层不保证额外独占CPU或OS隔离。
-- 无人工收条时只允许公开非计分验收。诊断/非公开输入需`--approval <本机收条>`，字段见`experiment_plan.approval()`；必须绑定当前工具/框架与真实8局验收，不能拿合成检查、缺项或旧版本冒充通过。这是操作者收条，不是密码学认证。
-- 私有输入只能输出private；超限JSONL、CPU SQLite、日志及回放全部只留本机。哈希链终点/行数另存run.json；损坏/截断即停，原字节保留，不自动修复，也不声称防同UID伪造。
-- 不改TMPDIR/锁目录、不回退plain、不测速、不访问作者工作区。工具通过验收也不自动授予新对局额度；实际运行仍按各自用户授权及错峰安排。
+- 通用run.json只记controllerReaped，后代状态unknown（未启动则not-started），不再把控制器退出叫“整个树清理确认”。15秒SIGINT、5秒TERM再KILL，记录升级，不能据此推断后代已结束。
+- 用户验收的专用子进程才启用进程局部subreaper；控制器结束后核空子树和ECHILD，等待中的异步退出可收束。超时仅对内核确认的自身子进程做安全清理，仍判失败/unknown，不能清理后冒称自然通过。无全局安全设置改动，不向sidecar PID发信号、不扫无关进程。
+- ACK是“不再派发”的证据边界；外层每0.1秒轮询，不保证触发请求前零延迟停发。afterActiveWorkers/controllerExitOnAck仅显式公开验收可用，正常/私有诊断无此故意异常退出。
+- 仅新批次，无resume/覆盖/整批重跑；事前按每局最坏8启动预留。私有输入只能输出private，须有绑定当前代码与完整真实验收的人工收条；它不是密码学认证。哈希链及外部终点不能防同UID伪造。
+- 原始CPU SQLite、超限JSONL、日志/回放均留本机；不改arena/规则/SDK/锁/TMPDIR，不测速或回退plain。工具验收不自动授予计分资格、新对局额度或阶段通过。

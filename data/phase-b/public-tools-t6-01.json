@@ -22,8 +22,8 @@
     "games": 0,
     "benchmarks": 0
   },
-  "CAReview": "pending",
-  "operatorBwrapAcceptance": "not_run",
+  "CAReview": "blocked_by_delivery01_review",
+  "operatorBwrapAcceptance": "not_run; old version execution prohibited",
   "mayScoreWithNewTools": false,
   "maximumDeliveries": 2,
   "totalRuntimeCaps": {
@@ -58,5 +58,6 @@
     "measuredParentCpuSeconds": 0.013369599999999995,
     "measuredParentWallSeconds": 0.19250649999594316,
     "wholeProcessTreeCpuSeconds": null
-  }
+  },
+  "supersededBy": "data/phase-b/public-tools-t6-02.json"
 }

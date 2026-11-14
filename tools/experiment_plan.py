@@ -16,7 +16,7 @@ from arena.tournament import fingerprint, selected_pairings
 
 ROOT = Path(__file__).resolve().parents[1]
 IMPLEMENTATION = ('tools/experiment_plan.py', 'tools/experiment.py',
-                  'tools/profile_bot.py', 'tools/accept_t6.py')
+                  'tools/profile_bot.py', 'tools/accept_t6.py', 'tools/process_evidence.py')
 LABEL = re.compile(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}\Z')
 HEX = re.compile(r'[0-9a-f]{64}\Z')
 SENSITIVE = {'.git', '.pi', '.agents', '.ssh', '.aws', '.config', '.venv',
@@ -155,17 +155,45 @@ def approval(path):
             or e.get('implementationSha256') != implementation_digest()
             or e.get('frameworkSha256') != fingerprint(ROOT)):
         raise ValueError('acceptance evidence does not cover an actual run of this implementation')
-    cases = e.get('cases')
-    if (not isinstance(cases, list) or len(cases) != 2
-            or any(not isinstance(c, dict) for c in cases)
-            or any(type(c.get(k)) is not int for c in cases
-                   for k in ('jobs', 'completedGames', 'auditedReplays', 'headersAndCpuTotalsChecked'))
-            or [(c.get('jobs'), c.get('completedGames')) for c in cases] != [(1, 2), (6, 6)]
-            or any(c.get('auditedReplays') != c['completedGames']
-                   or c.get('headersAndCpuTotalsChecked') != c['completedGames']
-                   or c.get('logVerified') is not True for c in cases)):
-        raise ValueError('acceptance evidence is incomplete')
+    validate_acceptance_cases(e)
     return digest_file(p)
+
+
+def validate_acceptance_cases(e):
+    """No overall PASS from normal games alone; this is not an authenticity signature."""
+    cases = e.get('cases')
+    expected = [('normal',1,2),('normal',6,6),('inflight-stop',1,2),('inflight-stop',6,8)]
+    if (e.get('acceptanceEvidenceVersion') != 2 or not isinstance(cases,list) or len(cases) != 4
+            or any(not isinstance(c,dict) for c in cases)
+            or [(c.get('kind'),c.get('jobs'),c.get('plannedGames')) for c in cases] != expected):
+        raise ValueError('normal and in-flight jobs1/jobs6 evidence required')
+    for c in cases:
+        for key in ('jobs','plannedGames','completedGames','auditedReplays','headersAndCpuTotalsChecked'):
+            integer(c.get(key))
+        if (c['auditedReplays'] != c['completedGames'] or c['headersAndCpuTotalsChecked'] != c['completedGames']
+                or c.get('logVerified') is not True or c.get('controllerReaped') is not True
+                or c.get('descendantCleanupState') != 'confirmed'
+                or c.get('noChildrenAndECHILD') is not True or c.get('safetyCleanupPerformed') is not False):
+            raise ValueError('case lacks complete replay/controller/descendant evidence')
+        if c['kind'] == 'normal':
+            if c.get('status') != 'complete' or c['completedGames'] != c['plannedGames'] or c.get('controllerReturncode') != 0:
+                raise ValueError('normal case incomplete')
+        else:
+            overlap = c.get('overlap', {})
+            if (c.get('status') != 'stopped' or c.get('reason') != 'wall-limit' or c.get('activeWorkerDeadlineArmed') is not True
+                    or c.get('stopAcknowledged') is not True or c.get('noDispatchAfterAck') is not True
+                    or c.get('startedWorkersReaped') is not True or c.get('unstartedPlannedTasks',0) < 1
+                    or overlap.get('activeCount',0) < c['jobs'] or overlap.get('positiveOverlap') is not True
+                    or overlap.get('overlapEndMonotonicNs',0) <= overlap.get('overlapStartMonotonicNs',0)):
+                raise ValueError('in-flight stop/queue/concurrency evidence incomplete')
+            if c['jobs'] == 6 and (c.get('abnormalControllerExitTested') is not True or c.get('controllerReturncode') != 70):
+                raise ValueError('jobs6 must test abnormal standard-controller exit after ACK')
+    fixtures = e.get('trustedProcessFixtures')
+    if (not isinstance(fixtures,list) or len(fixtures) != 4
+            or any(not isinstance(f,dict) for f in fixtures)
+            or [f.get('mode') for f in fixtures] != ['int','term','kill','abnormal']
+            or any(f.get('passed') is not True for f in fixtures)):
+        raise ValueError('signal escalation and abnormal-controller fixtures required')
 
 
 def validate_spec(spec, out, *, approval_path=None, fresh=True):
@@ -222,7 +250,16 @@ def validate_spec(spec, out, *, approval_path=None, fresh=True):
     games = 2*len(maps)*len(pairs)
     if games > spec['caps']['games'] or 8*games > spec['caps']['botStarts']:
         raise ValueError('caps must reserve the whole plan and all three standard infrastructure retries')
-    keys(spec['stop'], ('onFrameworkError', 'maxBotFaultGames'))
+    stop = spec['stop']
+    required_stop = {'onFrameworkError', 'maxBotFaultGames'}
+    if not isinstance(stop,dict) or not required_stop <= set(stop) <= required_stop|{'afterActiveWorkers','controllerExitOnAck'}:
+        raise ValueError('unexpected stop fields')
+    if 'afterActiveWorkers' in stop:
+        integer(stop['afterActiveWorkers'],1,spec['jobs'])
+        if spec['purpose'] != 'acceptance' or not all(public_bot(p) for p in sources) or not all(public_map(p) for p in maps):
+            raise ValueError('active-worker stop is public acceptance only')
+    if 'controllerExitOnAck' in stop and (stop['controllerExitOnAck'] is not True or 'afterActiveWorkers' not in stop):
+        raise ValueError('abnormal-on-ACK is explicit in-flight public acceptance only')
     if spec['stop']['onFrameworkError'] is not True:
         raise ValueError('framework terminal errors cannot be ignored')
     if spec['stop']['maxBotFaultGames'] is not None:

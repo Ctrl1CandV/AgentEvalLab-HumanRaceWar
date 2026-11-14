@@ -20,7 +20,7 @@ import time
 from arena.core.journal import atomic_json
 from arena.core.sandbox import parent_death_guard
 from arena.tournament import run_tournament
-from tools import experiment_plan as plan
+from tools import experiment_plan as plan, process_evidence
 
 
 class HashLog:
@@ -187,30 +187,31 @@ def worker(out):
         raise ValueError('missing live parent/frame binding')
     if time.time_ns() >= ticket['deadlineEpochNs']:
         raise ValueError('experiment deadline expired before execution')
-    result = run_tournament([plan.safe_path(b['frozen']) for b in frame['bots']],
-                            [plan.safe_path(m['frozen']) for m in frame['maps']], root/'batch',
-                            jobs=frame['spec']['jobs'], pairings=frame['pairs'], seeds=tuple(frame['spec']['seeds']),
-                            sandbox='bwrap', fixed_timing=root/'inputs/timing-lock.json')
-    atomic_json(root/'standard-return.json', result)
-    return 0 if result['status'] == 'complete' else 2
+    def interrupted(signum, _stack):
+        # Only this controller writes job declarations. Freeze its dispatch set at ACK.
+        batch = root/'batch'
+        jobs = sorted(p.relative_to(batch).as_posix() for p in batch.glob('tasks/*/*/job.json'))
+        atomic_json(root/'stop-ack.json', {'signal': signum, 'timeNs': time.time_ns(),
+                                         'monotonicNs': time.monotonic_ns(), 'jobs': jobs,
+                                         'abnormalControllerExit': frame['spec']['stop'].get('controllerExitOnAck',False)})
+        if frame['spec']['stop'].get('controllerExitOnAck') is True:
+            os._exit(70)  # public acceptance only: exercise workers' real parent-death cleanup
+        raise KeyboardInterrupt('owned experiment stop acknowledged')
+    previous_handler = signal.signal(signal.SIGINT, interrupted)
+    try:
+        result = run_tournament([plan.safe_path(b['frozen']) for b in frame['bots']],
+                                [plan.safe_path(m['frozen']) for m in frame['maps']], root/'batch',
+                                jobs=frame['spec']['jobs'], pairings=frame['pairs'], seeds=tuple(frame['spec']['seeds']),
+                                sandbox='bwrap', fixed_timing=root/'inputs/timing-lock.json')
+        atomic_json(root/'standard-return.json', result)
+        return 0 if result['status'] == 'complete' else 2
+    finally:
+        signal.signal(signal.SIGINT, previous_handler)
 
 
 def stop_owned(process):
     """Never signal sidecar PIDs or unrelated processes; keep normal cleanup first."""
-    if process.poll() is not None:
-        return
-    try:
-        process.send_signal(signal.SIGINT)
-    except ProcessLookupError:
-        pass
-    try:
-        process.wait(timeout=15)
-    except subprocess.TimeoutExpired:
-        process.terminate()
-        try:
-            process.wait(timeout=5)
-        except subprocess.TimeoutExpired:
-            process.kill(); process.wait()
+    return process_evidence.stop_process(process)
 
 
 def execute(out, expected_sha256, *, enable_experimental=False):
@@ -236,6 +237,9 @@ def execute(out, expected_sha256, *, enable_experimental=False):
                                               'botStarts': 8*frame['games']}})
         observer = Observer(root, frame, log)
         process = None; reason = None; failure = None
+        cleanup = {'controllerReaped': False, 'signals': [], 'descendantCleanupState': 'unknown'}
+        peak = {'activeCount': 0, 'positiveOverlap': False}
+        active_deadline = False
         env = {'PATH': '/usr/bin:/bin', 'LANG': 'C.UTF-8', 'PYTHONHASHSEED': '0',
                'PYTHONDONTWRITEBYTECODE': '1', 'PYTHONNOUSERSITE': '1'}
         for key in ('TMPDIR', 'TMP', 'TEMP'):
@@ -251,6 +255,14 @@ def execute(out, expected_sha256, *, enable_experimental=False):
                 log.append('controller', {'pid': process.pid})
                 while True:
                     reason = observer.poll()
+                    overlap = process_evidence.overlap_snapshot(root/'batch', process.pid)
+                    if overlap['activeCount'] > peak['activeCount']:
+                        peak = overlap; log.append('worker-overlap', peak)
+                    target = frame['spec']['stop'].get('afterActiveWorkers')
+                    if reason is None and target is not None and overlap['activeCount'] >= target and overlap['positiveOverlap']:
+                        deadline = min(deadline, time.monotonic())
+                        active_deadline = True
+                        log.append('deadline-armed', {'basis': 'afterActiveWorkers', 'overlap': overlap})
                     if reason is not None:
                         break
                     if time.monotonic() >= deadline:
@@ -263,7 +275,7 @@ def execute(out, expected_sha256, *, enable_experimental=False):
         finally:
             if process is not None:
                 try:
-                    stop_owned(process)
+                    cleanup = stop_owned(process)
                 except BaseException as error:
                     failure = failure or type(error).__name__; reason = reason or 'cleanup-error'
             try:
@@ -275,9 +287,23 @@ def execute(out, expected_sha256, *, enable_experimental=False):
             if reason is None and (code != 0 or len(observer.completed) != frame['games']):
                 reason = 'incomplete-standard-batch'
             status = 'complete' if reason is None else 'stopped'
+            ack = root/'stop-ack.json'
+            dispatch = None; acknowledged = ack.exists()
+            if acknowledged:
+                try:
+                    body = plan.load_json(ack)
+                    current_jobs = sorted(p.relative_to(root/'batch').as_posix() for p in (root/'batch').glob('tasks/*/*/job.json'))
+                    dispatch = current_jobs == body['jobs']
+                    log.append('stop-ack', {'sha256': plan.digest_file(ack), 'noDispatchAfterAck': dispatch})
+                except (OSError, ValueError, KeyError):
+                    acknowledged = False; dispatch = False
             terminal = {'status': status, 'reason': reason, 'errorType': failure, 'returncode': code,
                         'completedGames': len(observer.completed), 'plannedGames': frame['games'],
-                        'cleanupConfirmed': process is None or process.poll() is not None,
+                        'controllerReaped': process is None or process.poll() is not None,
+                        'descendantCleanupState': 'not-started' if process is None else cleanup.get('descendantCleanupState','unknown'),
+                        'controllerCleanup': cleanup, 'workerOverlap': peak,
+                        'stopAcknowledged': acknowledged, 'noDispatchAfterAck': dispatch,
+                        'activeWorkerDeadlineArmed': active_deadline,
                         'observedAttempts': len(observer.rows['attempts']),
                         'observedFrameworkErrors': sum(r['status'] != 'complete' for r in observer.rows['attempts']),
                         'wallSeconds': time.monotonic()-started}
