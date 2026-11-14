@@ -1,13 +1,13 @@
 # T6工具：默认关闭，先审查再验收
 
-首稿只通过纯检查；**CA审查待做、用户bwrap验收未跑，不能接到T5计分/取舍**。四个新tools模块不改arena、引擎、SDK、规则、机器锁或旧默认。当前Claude作者不得兼任读取主仓库的CA审查会话。
+代码审查入口：`reports/phase-B-public-tools-t6-01-review-request.md`。首稿只通过纯检查；**CA审查待做、用户bwrap验收未跑，不能接到T5计分/取舍**。四个新tools模块不改arena、引擎、SDK、规则、机器锁或旧默认。当前Claude作者不得兼任读取主仓库的CA审查会话。
 
 ## 先审查，再由用户错峰验收
 
 ```sh
 # 默认只输出计划、implementationSha256，不运行bot
 .venv/bin/python -B -m tools.accept_t6
-# CA确认该摘要版本，用户确认作者不在大批自测后，亲自运行一次
+# CA确认该摘要版本，用户确认作者自测/T5评测均空闲后，亲自运行一次
 .venv/bin/python -B -m tools.accept_t6 --execute --reviewed-sha256 <SHA> --exclusive-window --out runs/t6-acceptance01
 ```
 

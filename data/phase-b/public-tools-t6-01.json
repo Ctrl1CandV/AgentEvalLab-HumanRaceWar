@@ -43,5 +43,20 @@
     "files": 26,
     "bytes": 81325,
     "manifestSha256": "036610ae394014c4cd26884848ffb44efe22145659619514be4afb51b0bd6d22"
+  },
+  "supplementaryChecks": {
+    "cliAndStandardPlanningChecksPassed": 4,
+    "sourceChanged": false,
+    "isAnotherSoftwareDelivery": false,
+    "realBwrapOrBotExecution": false,
+    "cpuLeaseAcquisitions": 0,
+    "reviewRequest": "reports/phase-B-public-tools-t6-01-review-request.md",
+    "round": "T6-public-tools-delivery01-supplement01",
+    "files": 63,
+    "bytes": 301266,
+    "manifestSha256": "ff644174d94c49ddff605c93b89a635c07f837dfaafa953d5ec12f56b9d78035",
+    "measuredParentCpuSeconds": 0.013369599999999995,
+    "measuredParentWallSeconds": 0.19250649999594316,
+    "wholeProcessTreeCpuSeconds": null
   }
 }
