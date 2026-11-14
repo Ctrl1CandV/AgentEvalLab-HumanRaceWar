@@ -1,6 +1,6 @@
 # B阶段路线与任务依赖
 
-依据[2026-11-13新分工](../inbox/2026-11-13-phase-b-new-division.md)。本页只描述依赖，不重复当前状态；进度见[STATUS](../STATUS.md)。A已通过，B未完成，C不启动。
+依据[2026-11-13新分工](../inbox/2026-11-13-phase-b-new-division.md)。用户随后拆分GPT职责：工具会话做T6，对接/评测会话在独立worktree做T5，见[会话交接](CLAUDE_EVALUATION_HANDOFF.md)。本页只描述依赖，不重复当前状态；进度见[STATUS](../STATUS.md)。A已通过，B未完成，C不启动。
 
 | 顺序 | 任务 | 产出与停点 |
 |---|---|---|

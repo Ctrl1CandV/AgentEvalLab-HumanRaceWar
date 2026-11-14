@@ -638,7 +638,7 @@ bwrap --unshare-all --die-with-parent --new-session --cap-drop ALL --proc /proc 
 - 早期原型主要由astra写，存在同作者偏差。2026-11-13起，已有GPT三线按T3结果冻结，后续强bot由Claude从零独立开发；换作者不消除历史暴露，也不冒称正式独立自测已完成。
 - 对策：
   - 每级的几个 bot 风格不同；
-  - 当前仅GPT与Claude两个工作者。GPT负责框架/工具/统一评测，不读改Claude源码；Claude只看导出的公开材料，不访问主仓库、DeepSeek或pilot。DeepSeek线结束，只有D-c01保留为低层校准候选，其余只存档。材料、按字节接收与反馈见`docs/AUTHORS.md`；
+  - 用户最新将GPT拆为工具与对接/评测两个会话，另有Claude作者；两个GPT用隔离worktree，不共写index/私有总账，不读改或转交Claude源码。分工见`docs/CLAUDE_EVALUATION_HANDOFF.md`；Claude只看导出的公开材料，不访问主仓库、DeepSeek或pilot。DeepSeek线结束，只有D-c01保留为低层校准候选，其余只存档。材料、按字节接收与反馈见`docs/AUTHORS.md`；
   - 试跑以后，把其他模型（sol、deepseek 等）的最好提交加进阶梯（11.6）；
   - 报告按 bot 分项列出成绩，这种偏差可以看出来。
 

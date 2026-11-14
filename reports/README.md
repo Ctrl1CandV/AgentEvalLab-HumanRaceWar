@@ -1,6 +1,8 @@
 # 审查报告
 
-当前进度只见STATUS；执行权限以2026-11-13新分工为准，下面历史报告不提供当前授权。以后每轮报告一页。
+当前进度只见STATUS；执行权限以2026-11-13新分工为准，下面历史报告不提供当前授权。以后每轮报告一页。用户随后拆分工具与对接/评测GPT，见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
+
+- [`phase-B-public-tools-t6-01.md`](phase-B-public-tools-t6-01.md)：默认关闭的公共实验/profile工具、纯契约检查及用户验收脚本首稿；实机运行0，CA/用户验收待，不得计分。另登记独立对接会话交接，不代开或传源码。
 
 - [`phase-B-workspace-retirement.md`](phase-B-workspace-retirement.md)：用户后续授权在79135份文件完整保全、两次核字节后删除旧DeepSeek/pilot目录；私有档案及D-c01保留，Claude未动、零运行。
 

@@ -4,11 +4,11 @@
 
 以 `inbox/2026-11-13-phase-b-new-division.md` 和用户最新指令为准；同日blockage-review的A、B1/B3/B4/B5有效，旧角色表和工作包已被取代。
 
-- 只有两个工作者：GPT在本WSL仓库负责统筹、框架、工具、评测、集成和阶梯组装；Claude在`~/projects/HRW-claude`从零写强bot。
+- 用户最新拆分为工具GPT、对接/评测GPT和Claude作者。工具GPT只在本WSL主worktree做T6；对接GPT在独立`~/projects/HRW-claude-eval` worktree/`claude-evaluation`分支做T5；Claude在`~/projects/HRW-claude`从零写强bot。详见`docs/CLAUDE_EVALUATION_HANDOFF.md`，旧“两工作者”表仅为历史。
 - GPT不再写阶梯bot；T3只原样评测已经冻结的E100%候选，不改源码。GPT不读、不改Claude源码，也不把它交给其他人。
 - DeepSeek线已经结束。用户后续授权在完整字节保全后删除旧HRW-deepseek/HRW-pilot工作区，现已删除；原始文件、交付和失败证据仍在private只读归档。不再开旧作者会话、发任务或反馈；不读、不执行作者或pilot代码，只按字节处理档案。
-- 除T4初次按白名单创建作者材料外，GPT只写主仓库和Claude工作区的`handoff/in/`反馈，不修改作者工作区其他文件。Claude只写自己的工作区。不再使用旧E/协调方lane和全局冻结/释放窗口。
-- T1→T2→T3→T4依次完成，无中间审查停点。T3技术停则停止且不做T4；T4就绪后停报，由用户启动Claude。T5等用户通知；T6只能在T4后开始，验收前不得用于计分。
+- 两个GPT各自独占本worktree的代码/私有档案/总账/STATUS/index，不直接写对方目录或自动合并分支。只有对接GPT可写Claude的`handoff/in/`反馈，除此不改作者工作区。新评测worktree按交接复制最小已冻结输入，不复制整库private或主总账。旧lane/全局冻结窗口不恢复。
+- T1–T4已完成，用户已启动Claude；对接GPT的T5仍必须等用户明确通知交付及错峰运行。工具GPT专做T6，CA及用户验收前不得接到计分。新会话由用户开启，当前会话不代开、不转交作者源码。
 
 ## 每次开工
 

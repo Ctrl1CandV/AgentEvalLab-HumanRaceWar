@@ -9,9 +9,9 @@ AgentEvalLab的CA竞技场题族：被测模型为“前哨”编写bot，由固
 - [专项审查](inbox/2026-11-13-phase-b-blockage-review.md)：分析依据，旧角色表/工作包以新分工为准。
 - [路线](docs/PHASE_B_ROADMAP.md)、[分工](docs/AUTHORS.md)、[工作区约定](docs/SESSION_COORDINATION.md)。
 
-## 两个工作者
+## 分开的会话职责
 
-GPT在本WSL主仓库负责统筹、框架、公共工具、评测、集成和阶梯组装，不再写阶梯bot。Claude在`~/projects/HRW-claude`从零开发强bot，只看公开材料；GPT不读改其源码。用户在T4就绪通知后启动Claude，任务书为[BRIEF-CLAUDE](docs/BRIEF-CLAUDE.md)。DeepSeek线结束；旧DeepSeek/pilot工作区已按用户后续授权删除，原始字节仍在主仓库private只读归档。
+按用户最新拆分，原GPT在本主worktree专做T6公共工具，另一个GPT在`~/projects/HRW-claude-eval`独立worktree专做Claude对接/T5评测；各自独占index、STATUS及私有总账，不互写或自动合并。启动交接见[CLAUDE_EVALUATION_HANDOFF](docs/CLAUDE_EVALUATION_HANDOFF.md)。GPT不再写阶梯bot。Claude在`~/projects/HRW-claude`从零开发强bot，只看公开材料；两个GPT都不读改或转交其源码。用户在T4就绪通知后启动Claude，任务书为[BRIEF-CLAUDE](docs/BRIEF-CLAUDE.md)。DeepSeek线结束；旧DeepSeek/pilot工作区已按用户后续授权删除，原始字节仍在主仓库private只读归档。
 
 阶段准备按T1→T2→T3→T4顺序；T3技术停不做T4，T4就绪后停报。T5等用户通知交付；T6新计分工具须先验收。本地提交，推送由用户负责。具体进度不在本页重复。
 

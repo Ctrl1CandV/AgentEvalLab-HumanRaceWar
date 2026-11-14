@@ -3,10 +3,11 @@
 更新：2026-11-13。依据`inbox/2026-11-13-phase-b-new-division.md`；B未完成，C未启动。只本地提交，不推送。
 
 ## 当前停点
-- T1–T4已按顺序完成并停止；`~/projects/HRW-claude/`已就绪，由用户开启Claude会话。GPT未代开作者模型会话。
+- T1–T4已完成，用户已报Claude开工。用户最新拆分：本会话只做T6工具；新增GPT专做Claude对接/T5，另用HRW-claude-eval worktree及claude-evaluation分支。
 - T4初建有108份公开材料加清单，任务书及jobs1/jobs6预算投影齐备；初始bot和handoff/in/out为空，无Git或链接，原锁与预算未改、0测速；不窥探作者后续源码。
 - 8池/80张dev图/原种子与jobs6原锁的私有评测v1协议已登记；见reports/phase-B-claude-workspace.md及data/phase-b/claude-workspace.json。
-- T4编译、bot、引擎步、check、计分、测速均0；材料隔离不证明模型/会话独立，真实版本和自测数待交付登记。
+- T6交付01源码/纯检查/说明已成稿，26份本机证据只读封存；CA审查和用户错峰bwrap验收均待，编译/bot/引擎步/check/新局/测速0，不能用于计分。
+- 新对接会话由用户开启，启动提示及最小输入/隔离规则见docs/CLAUDE_EVALUATION_HANDOFF.md；当前未代开或创建该worktree。
 
 ## 已收束
 - 用户后续授权清理已完成：DeepSeek79028份已有归档重核，pilot107份全部补存，79135份源/副本两次核字节后删除两个原工作区；只读档案及D-c01保留，Claude未动，零运行。
@@ -19,8 +20,9 @@
 ## 下一项与有效边界
 - T5等待用户通知Claude交付：最多3候选，每候选先check；首版1280局，后续同作者两段式、正常新增1440，硬帽2080局/2小时/0测速。反馈后停止。
 - Claude按BRIEF-CLAUDE每轮1会话/8小时/30000自测调参局/jobs≤6，从公开材料独立起步；到达里程碑停交CA。
-- GPT只写主仓库及作者handoff/in反馈，不读改或委派其源码；不向作者泄露隐藏输入、回放、逐局信息或隐藏逐对弱点。
+- 两个GPT各写自己的worktree/index/STATUS/private/总账，不互写或自动合并；只有对接GPT写作者handoff/in反馈，均不读改/转交源码，不泄露隐藏输入/逐局/隐藏逐对弱点。
 - 双方不同时大批运行，沿用原TMPDIR和CPU/编译锁；bot/编译离线bwrap，不裸用plain、不重测或抢锁。
-- T6本批未启动；新计分工具CA审查和用户验收前不得用于计分。旧lane窗口不再使用，不再开DeepSeek任务。
+- T6上限6小时模型时间/2交付、总帽40编译/400启动，仅公开运行；当前不再扩展首稿源码。断网长空档不冒算模型耗时，不重置预算，不与作者争用bwrap。
+- T6新功能默认关闭，CA审查及用户错峰验收前不计分；不改arena/规则/SDK/锁或旧默认。旧lane不再使用，不再开DeepSeek任务。
 - 不改冻结规则/引擎/SDK/standard-1/地图/计量锁；public开发、dev取舍/临时BT、calibration正式校准、grading正式评分、holdout仅B末一次。
 - 待裁定B-SCORE-001在阶梯冻结前处理；不迁移Windows，不读/复制/清理仓外调试文件，不推送。

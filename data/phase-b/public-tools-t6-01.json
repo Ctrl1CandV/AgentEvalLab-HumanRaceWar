@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "task": "T6",
+  "delivery": 1,
+  "status": "first_draft_pending_CA_and_operator_bwrap_acceptance",
+  "implementationSha256": "6a29c6bce1cab3a35482fe0da1d2f3cf95849efe3f34f69ffa13350572d92978",
+  "frameworkSha256": "00310938f86fbd9703ad991277e21678d92eda903d2ca2c77006ca986c919177",
+  "newUniquePureTests": 29,
+  "existingPureTests": 19,
+  "hashSeeds": [
+    0,
+    1
+  ],
+  "finalTestExecutions": 96,
+  "LSPFiles": 5,
+  "LSPDiagnostics": 0,
+  "runtimeActual": {
+    "compiles": 0,
+    "botStarts": 0,
+    "engineSteps": 0,
+    "checks": 0,
+    "games": 0,
+    "benchmarks": 0
+  },
+  "CAReview": "pending",
+  "operatorBwrapAcceptance": "not_run",
+  "mayScoreWithNewTools": false,
+  "maximumDeliveries": 2,
+  "totalRuntimeCaps": {
+    "compiles": 40,
+    "botStarts": 400,
+    "scope": "public bots on public/scrimmage only; never concurrent bwrap tests with author bulk selftests"
+  },
+  "modelProcessingSeconds": null,
+  "completeSessionCpuSeconds": null,
+  "arenaSdkRulesMapsBotsAndLocksUnchanged": true,
+  "authorWorkspaceAccess": false,
+  "sessionSplitHandoff": "docs/CLAUDE_EVALUATION_HANDOFF.md",
+  "evaluatorWorktreeCreatedByThisSession": false,
+  "note": "Pure checks are not bwrap acceptance, strength evidence, or phase-B acceptance. Network gaps are not measured model processing time.",
+  "archive": {
+    "round": "T6-public-tools-delivery01",
+    "files": 26,
+    "bytes": 81325,
+    "manifestSha256": "036610ae394014c4cd26884848ffb44efe22145659619514be4afb51b0bd6d22"
+  }
+}

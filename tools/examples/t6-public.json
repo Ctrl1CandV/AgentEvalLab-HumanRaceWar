@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "t6-public-example",
+  "purpose": "acceptance",
+  "bots": [
+    {
+      "label": "target",
+      "path": "bots/public/M-balanced",
+      "sha256": "273fecd4a9039d73914454bbcce078462afce2071c87b468c7f2d8bf6d731d8a"
+    },
+    {
+      "label": "ref0",
+      "path": "bots/public/Z-harass",
+      "sha256": "9bb4d7effb2568ac78c22dcff20867862e951f15880d23355d5de2d9804d28b3"
+    }
+  ],
+  "maps": [
+    {
+      "path": "maps/public/open-01.map",
+      "sha256": "e276f85a727d216dfd1004a229f5c78fc7d3b13c1375251f44f39d7278a1c2ba"
+    }
+  ],
+  "pairs": [
+    [
+      "target",
+      "ref0"
+    ]
+  ],
+  "jobs": 1,
+  "seeds": [
+    17,
+    29
+  ],
+  "timing": {
+    "path": "package/claude-timing-jobs1.json",
+    "sha256": "cc6b1342442160467c50c2a9a85eca2812aece22fbc445d283f0a6591e39caa0"
+  },
+  "caps": {
+    "games": 2,
+    "compiles": 2,
+    "botStarts": 16,
+    "wallSeconds": 600
+  },
+  "stop": {
+    "onFrameworkError": true,
+    "maxBotFaultGames": 0
+  }
+}
