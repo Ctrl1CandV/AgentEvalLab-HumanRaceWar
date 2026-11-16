@@ -1,0 +1,2563 @@
+{
+  "schemaVersion": 1,
+  "comparison": "graph05-r08-lower-pair",
+  "protocolSha256": "6773b0366dfba927448a519e577d0ea77055241f9d551860dca435a0cc973116",
+  "complete": true,
+  "nodes": [
+    {
+      "code": "K-a-r02",
+      "lineage": "attack",
+      "sourceSha256": "2cbcd20e4bd2821b0c102b5420892ac09f802984ac39e22ddd135ffd37900a97"
+    },
+    {
+      "code": "K-e-r03",
+      "lineage": "economic",
+      "sourceSha256": "6aa4bb9ce49f6cb1b8c8378208db8c32ce93efb0e750664fbcfd92042083d3f6"
+    },
+    {
+      "code": "K-c-r04",
+      "lineage": "control",
+      "sourceSha256": "482ff34d9785a46b0aeca7b15e50fb93da46106424366dbe1b695d124354cdf2"
+    },
+    {
+      "code": "M-balanced",
+      "lineage": "public-anchor",
+      "sourceSha256": "273fecd4a9039d73914454bbcce078462afce2071c87b468c7f2d8bf6d731d8a"
+    },
+    {
+      "code": "K-e-w01-r05",
+      "lineage": "economic",
+      "sourceSha256": "169b8f681ec2de7d405fc60e35d3dab04a9e53d003ada434caa534d4ed4996f7"
+    },
+    {
+      "code": "K-c-w01-r05",
+      "lineage": "control",
+      "sourceSha256": "00e672a3e9cd92c124f3a8c74b3432b927612d6aff8b705bb865e7c5eecd8efa"
+    },
+    {
+      "code": "K-e-f01-r06",
+      "lineage": "economic",
+      "sourceSha256": "0f7ca65686b5d348d82c7d9d618aa99055e6da8ee019e5748b7da03a285aceea"
+    },
+    {
+      "code": "K-c-f01-r07",
+      "lineage": "control",
+      "sourceSha256": "3f15653aae7b8f0d0d07096d887c1ee2f8ce05901fecdf850a27af691299aa60"
+    },
+    {
+      "code": "K-e-f02-r08",
+      "lineage": "economic",
+      "sourceSha256": "860a1f049d0853d185519b6a43866331683084f6d5ebf3381228857b8e83abac"
+    },
+    {
+      "code": "K-c-f02-r08",
+      "lineage": "control",
+      "sourceSha256": "96205ba5879836f659a89644dd440dddec377c3610d6146c3aca8fd31809b983"
+    }
+  ],
+  "pairs": [
+    {
+      "left": "K-a-r02",
+      "right": "K-e-r03",
+      "games": 320,
+      "wins": 106,
+      "draws": 0,
+      "losses": 214,
+      "halfPoints": 212,
+      "scoreRate": 0.33125,
+      "scoreInterval95": [
+        0.259375,
+        0.403125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 53,
+          "draws": 0,
+          "losses": 107,
+          "halfPoints": 106,
+          "scoreRate": 0.33125
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 53,
+          "draws": 0,
+          "losses": 107,
+          "halfPoints": 106,
+          "scoreRate": 0.33125
+        }
+      ]
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-c-r04",
+      "games": 320,
+      "wins": 116,
+      "draws": 0,
+      "losses": 204,
+      "halfPoints": 232,
+      "scoreRate": 0.3625,
+      "scoreInterval95": [
+        0.29375,
+        0.43125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 57,
+          "draws": 0,
+          "losses": 103,
+          "halfPoints": 114,
+          "scoreRate": 0.35625
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 59,
+          "draws": 0,
+          "losses": 101,
+          "halfPoints": 118,
+          "scoreRate": 0.36875
+        }
+      ]
+    },
+    {
+      "left": "K-a-r02",
+      "right": "M-balanced",
+      "games": 320,
+      "wins": 318,
+      "draws": 0,
+      "losses": 2,
+      "halfPoints": 636,
+      "scoreRate": 0.99375,
+      "scoreInterval95": [
+        0.984375,
+        1.0
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        }
+      ]
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-e-w01-r05",
+      "games": 320,
+      "wins": 129,
+      "draws": 0,
+      "losses": 191,
+      "halfPoints": 258,
+      "scoreRate": 0.403125,
+      "scoreInterval95": [
+        0.33125,
+        0.475
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 69,
+          "draws": 0,
+          "losses": 91,
+          "halfPoints": 138,
+          "scoreRate": 0.43125
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 60,
+          "draws": 0,
+          "losses": 100,
+          "halfPoints": 120,
+          "scoreRate": 0.375
+        }
+      ]
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-c-w01-r05",
+      "games": 320,
+      "wins": 148,
+      "draws": 0,
+      "losses": 172,
+      "halfPoints": 296,
+      "scoreRate": 0.4625,
+      "scoreInterval95": [
+        0.3875,
+        0.5375
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 75,
+          "draws": 0,
+          "losses": 85,
+          "halfPoints": 150,
+          "scoreRate": 0.46875
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 73,
+          "draws": 0,
+          "losses": 87,
+          "halfPoints": 146,
+          "scoreRate": 0.45625
+        }
+      ]
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-e-f01-r06",
+      "games": 320,
+      "wins": 175,
+      "draws": 0,
+      "losses": 145,
+      "halfPoints": 350,
+      "scoreRate": 0.546875,
+      "scoreInterval95": [
+        0.465625,
+        0.628125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 91,
+          "draws": 0,
+          "losses": 69,
+          "halfPoints": 182,
+          "scoreRate": 0.56875
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 84,
+          "draws": 0,
+          "losses": 76,
+          "halfPoints": 168,
+          "scoreRate": 0.525
+        }
+      ]
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-c-f01-r07",
+      "games": 320,
+      "wins": 195,
+      "draws": 0,
+      "losses": 125,
+      "halfPoints": 390,
+      "scoreRate": 0.609375,
+      "scoreInterval95": [
+        0.521875,
+        0.696875
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 101,
+          "draws": 0,
+          "losses": 59,
+          "halfPoints": 202,
+          "scoreRate": 0.63125
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 94,
+          "draws": 0,
+          "losses": 66,
+          "halfPoints": 188,
+          "scoreRate": 0.5875
+        }
+      ]
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-c-r04",
+      "games": 320,
+      "wins": 173,
+      "draws": 0,
+      "losses": 147,
+      "halfPoints": 346,
+      "scoreRate": 0.540625,
+      "scoreInterval95": [
+        0.5,
+        0.58125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 89,
+          "draws": 0,
+          "losses": 71,
+          "halfPoints": 178,
+          "scoreRate": 0.55625
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 84,
+          "draws": 0,
+          "losses": 76,
+          "halfPoints": 168,
+          "scoreRate": 0.525
+        }
+      ]
+    },
+    {
+      "left": "K-e-r03",
+      "right": "M-balanced",
+      "games": 320,
+      "wins": 318,
+      "draws": 0,
+      "losses": 2,
+      "halfPoints": 636,
+      "scoreRate": 0.99375,
+      "scoreInterval95": [
+        0.984375,
+        1.0
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        }
+      ]
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-e-w01-r05",
+      "games": 320,
+      "wins": 192,
+      "draws": 0,
+      "losses": 128,
+      "halfPoints": 384,
+      "scoreRate": 0.6,
+      "scoreInterval95": [
+        0.565625,
+        0.634375
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 97,
+          "draws": 0,
+          "losses": 63,
+          "halfPoints": 194,
+          "scoreRate": 0.60625
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 95,
+          "draws": 0,
+          "losses": 65,
+          "halfPoints": 190,
+          "scoreRate": 0.59375
+        }
+      ]
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-c-w01-r05",
+      "games": 320,
+      "wins": 197,
+      "draws": 0,
+      "losses": 123,
+      "halfPoints": 394,
+      "scoreRate": 0.615625,
+      "scoreInterval95": [
+        0.565625,
+        0.66875
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 99,
+          "draws": 0,
+          "losses": 61,
+          "halfPoints": 198,
+          "scoreRate": 0.61875
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 98,
+          "draws": 0,
+          "losses": 62,
+          "halfPoints": 196,
+          "scoreRate": 0.6125
+        }
+      ]
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-e-f01-r06",
+      "games": 320,
+      "wins": 238,
+      "draws": 0,
+      "losses": 82,
+      "halfPoints": 476,
+      "scoreRate": 0.74375,
+      "scoreInterval95": [
+        0.696875,
+        0.790625
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 119,
+          "draws": 0,
+          "losses": 41,
+          "halfPoints": 238,
+          "scoreRate": 0.74375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 119,
+          "draws": 0,
+          "losses": 41,
+          "halfPoints": 238,
+          "scoreRate": 0.74375
+        }
+      ]
+    },
+    {
+      "left": "K-c-r04",
+      "right": "M-balanced",
+      "games": 320,
+      "wins": 318,
+      "draws": 0,
+      "losses": 2,
+      "halfPoints": 636,
+      "scoreRate": 0.99375,
+      "scoreInterval95": [
+        0.98125,
+        1.0
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        }
+      ]
+    },
+    {
+      "left": "K-c-r04",
+      "right": "K-e-w01-r05",
+      "games": 320,
+      "wins": 182,
+      "draws": 0,
+      "losses": 138,
+      "halfPoints": 364,
+      "scoreRate": 0.56875,
+      "scoreInterval95": [
+        0.525,
+        0.6125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 95,
+          "draws": 0,
+          "losses": 65,
+          "halfPoints": 190,
+          "scoreRate": 0.59375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 87,
+          "draws": 0,
+          "losses": 73,
+          "halfPoints": 174,
+          "scoreRate": 0.54375
+        }
+      ]
+    },
+    {
+      "left": "K-c-r04",
+      "right": "K-c-w01-r05",
+      "games": 320,
+      "wins": 190,
+      "draws": 0,
+      "losses": 130,
+      "halfPoints": 380,
+      "scoreRate": 0.59375,
+      "scoreInterval95": [
+        0.553125,
+        0.63125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 101,
+          "draws": 0,
+          "losses": 59,
+          "halfPoints": 202,
+          "scoreRate": 0.63125
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 89,
+          "draws": 0,
+          "losses": 71,
+          "halfPoints": 178,
+          "scoreRate": 0.55625
+        }
+      ]
+    },
+    {
+      "left": "K-c-r04",
+      "right": "K-c-f01-r07",
+      "games": 320,
+      "wins": 232,
+      "draws": 0,
+      "losses": 88,
+      "halfPoints": 464,
+      "scoreRate": 0.725,
+      "scoreInterval95": [
+        0.675,
+        0.775
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 124,
+          "draws": 0,
+          "losses": 36,
+          "halfPoints": 248,
+          "scoreRate": 0.775
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 108,
+          "draws": 0,
+          "losses": 52,
+          "halfPoints": 216,
+          "scoreRate": 0.675
+        }
+      ]
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-e-w01-r05",
+      "games": 320,
+      "wins": 2,
+      "draws": 0,
+      "losses": 318,
+      "halfPoints": 4,
+      "scoreRate": 0.00625,
+      "scoreInterval95": [
+        0.0,
+        0.015625
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 1,
+          "draws": 0,
+          "losses": 159,
+          "halfPoints": 2,
+          "scoreRate": 0.00625
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 1,
+          "draws": 0,
+          "losses": 159,
+          "halfPoints": 2,
+          "scoreRate": 0.00625
+        }
+      ]
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-c-w01-r05",
+      "games": 320,
+      "wins": 2,
+      "draws": 0,
+      "losses": 318,
+      "halfPoints": 4,
+      "scoreRate": 0.00625,
+      "scoreInterval95": [
+        0.0,
+        0.015625
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 2,
+          "draws": 0,
+          "losses": 158,
+          "halfPoints": 4,
+          "scoreRate": 0.0125
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 0,
+          "draws": 0,
+          "losses": 160,
+          "halfPoints": 0,
+          "scoreRate": 0.0
+        }
+      ]
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-e-f01-r06",
+      "games": 320,
+      "wins": 2,
+      "draws": 0,
+      "losses": 318,
+      "halfPoints": 4,
+      "scoreRate": 0.00625,
+      "scoreInterval95": [
+        0.0,
+        0.015625
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 1,
+          "draws": 0,
+          "losses": 159,
+          "halfPoints": 2,
+          "scoreRate": 0.00625
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 1,
+          "draws": 0,
+          "losses": 159,
+          "halfPoints": 2,
+          "scoreRate": 0.00625
+        }
+      ]
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-c-f01-r07",
+      "games": 320,
+      "wins": 9,
+      "draws": 0,
+      "losses": 311,
+      "halfPoints": 18,
+      "scoreRate": 0.028125,
+      "scoreInterval95": [
+        0.00625,
+        0.05625
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 3,
+          "draws": 0,
+          "losses": 157,
+          "halfPoints": 6,
+          "scoreRate": 0.01875
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 6,
+          "draws": 0,
+          "losses": 154,
+          "halfPoints": 12,
+          "scoreRate": 0.0375
+        }
+      ]
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-e-f02-r08",
+      "games": 320,
+      "wins": 1,
+      "draws": 0,
+      "losses": 319,
+      "halfPoints": 2,
+      "scoreRate": 0.003125,
+      "scoreInterval95": [
+        0.0,
+        0.009375
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 0,
+          "draws": 0,
+          "losses": 160,
+          "halfPoints": 0,
+          "scoreRate": 0.0
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 1,
+          "draws": 0,
+          "losses": 159,
+          "halfPoints": 2,
+          "scoreRate": 0.00625
+        }
+      ]
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-c-f02-r08",
+      "games": 320,
+      "wins": 7,
+      "draws": 0,
+      "losses": 313,
+      "halfPoints": 14,
+      "scoreRate": 0.021875,
+      "scoreInterval95": [
+        0.009375,
+        0.0375
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 3,
+          "draws": 0,
+          "losses": 157,
+          "halfPoints": 6,
+          "scoreRate": 0.01875
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 4,
+          "draws": 0,
+          "losses": 156,
+          "halfPoints": 8,
+          "scoreRate": 0.025
+        }
+      ]
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-c-w01-r05",
+      "games": 320,
+      "wins": 174,
+      "draws": 0,
+      "losses": 146,
+      "halfPoints": 348,
+      "scoreRate": 0.54375,
+      "scoreInterval95": [
+        0.50625,
+        0.584375
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 87,
+          "draws": 0,
+          "losses": 73,
+          "halfPoints": 174,
+          "scoreRate": 0.54375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 87,
+          "draws": 0,
+          "losses": 73,
+          "halfPoints": 174,
+          "scoreRate": 0.54375
+        }
+      ]
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-e-f01-r06",
+      "games": 320,
+      "wins": 220,
+      "draws": 0,
+      "losses": 100,
+      "halfPoints": 440,
+      "scoreRate": 0.6875,
+      "scoreInterval95": [
+        0.634375,
+        0.7375
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 110,
+          "draws": 0,
+          "losses": 50,
+          "halfPoints": 220,
+          "scoreRate": 0.6875
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 110,
+          "draws": 0,
+          "losses": 50,
+          "halfPoints": 220,
+          "scoreRate": 0.6875
+        }
+      ]
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-c-f01-r07",
+      "games": 320,
+      "wins": 230,
+      "draws": 0,
+      "losses": 90,
+      "halfPoints": 460,
+      "scoreRate": 0.71875,
+      "scoreInterval95": [
+        0.6625,
+        0.771875
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 118,
+          "draws": 0,
+          "losses": 42,
+          "halfPoints": 236,
+          "scoreRate": 0.7375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 112,
+          "draws": 0,
+          "losses": 48,
+          "halfPoints": 224,
+          "scoreRate": 0.7
+        }
+      ]
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-e-f02-r08",
+      "games": 320,
+      "wins": 269,
+      "draws": 0,
+      "losses": 51,
+      "halfPoints": 538,
+      "scoreRate": 0.840625,
+      "scoreInterval95": [
+        0.79375,
+        0.884375
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 135,
+          "draws": 0,
+          "losses": 25,
+          "halfPoints": 270,
+          "scoreRate": 0.84375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 134,
+          "draws": 0,
+          "losses": 26,
+          "halfPoints": 268,
+          "scoreRate": 0.8375
+        }
+      ]
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-c-f02-r08",
+      "games": 320,
+      "wins": 274,
+      "draws": 0,
+      "losses": 46,
+      "halfPoints": 548,
+      "scoreRate": 0.85625,
+      "scoreInterval95": [
+        0.8125,
+        0.9
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 141,
+          "draws": 0,
+          "losses": 19,
+          "halfPoints": 282,
+          "scoreRate": 0.88125
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 133,
+          "draws": 0,
+          "losses": 27,
+          "halfPoints": 266,
+          "scoreRate": 0.83125
+        }
+      ]
+    },
+    {
+      "left": "K-c-w01-r05",
+      "right": "K-e-f01-r06",
+      "games": 320,
+      "wins": 215,
+      "draws": 0,
+      "losses": 105,
+      "halfPoints": 430,
+      "scoreRate": 0.671875,
+      "scoreInterval95": [
+        0.621875,
+        0.721875
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 108,
+          "draws": 0,
+          "losses": 52,
+          "halfPoints": 216,
+          "scoreRate": 0.675
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "halfPoints": 214,
+          "scoreRate": 0.66875
+        }
+      ]
+    },
+    {
+      "left": "K-c-w01-r05",
+      "right": "K-c-f01-r07",
+      "games": 320,
+      "wins": 222,
+      "draws": 0,
+      "losses": 98,
+      "halfPoints": 444,
+      "scoreRate": 0.69375,
+      "scoreInterval95": [
+        0.64375,
+        0.74375
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 115,
+          "draws": 0,
+          "losses": 45,
+          "halfPoints": 230,
+          "scoreRate": 0.71875
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 107,
+          "draws": 0,
+          "losses": 53,
+          "halfPoints": 214,
+          "scoreRate": 0.66875
+        }
+      ]
+    },
+    {
+      "left": "K-c-w01-r05",
+      "right": "K-e-f02-r08",
+      "games": 320,
+      "wins": 234,
+      "draws": 0,
+      "losses": 86,
+      "halfPoints": 468,
+      "scoreRate": 0.73125,
+      "scoreInterval95": [
+        0.665625,
+        0.790625
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 124,
+          "draws": 0,
+          "losses": 36,
+          "halfPoints": 248,
+          "scoreRate": 0.775
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 110,
+          "draws": 0,
+          "losses": 50,
+          "halfPoints": 220,
+          "scoreRate": 0.6875
+        }
+      ]
+    },
+    {
+      "left": "K-c-w01-r05",
+      "right": "K-c-f02-r08",
+      "games": 320,
+      "wins": 265,
+      "draws": 0,
+      "losses": 55,
+      "halfPoints": 530,
+      "scoreRate": 0.828125,
+      "scoreInterval95": [
+        0.775,
+        0.878125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 136,
+          "draws": 0,
+          "losses": 24,
+          "halfPoints": 272,
+          "scoreRate": 0.85
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 129,
+          "draws": 0,
+          "losses": 31,
+          "halfPoints": 258,
+          "scoreRate": 0.80625
+        }
+      ]
+    },
+    {
+      "left": "K-e-f01-r06",
+      "right": "K-c-f01-r07",
+      "games": 320,
+      "wins": 168,
+      "draws": 0,
+      "losses": 152,
+      "halfPoints": 336,
+      "scoreRate": 0.525,
+      "scoreInterval95": [
+        0.4875,
+        0.5625
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 83,
+          "draws": 0,
+          "losses": 77,
+          "halfPoints": 166,
+          "scoreRate": 0.51875
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 85,
+          "draws": 0,
+          "losses": 75,
+          "halfPoints": 170,
+          "scoreRate": 0.53125
+        }
+      ]
+    },
+    {
+      "left": "K-e-f01-r06",
+      "right": "K-e-f02-r08",
+      "games": 320,
+      "wins": 219,
+      "draws": 0,
+      "losses": 101,
+      "halfPoints": 438,
+      "scoreRate": 0.684375,
+      "scoreInterval95": [
+        0.621875,
+        0.746875
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 110,
+          "draws": 0,
+          "losses": 50,
+          "halfPoints": 220,
+          "scoreRate": 0.6875
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 109,
+          "draws": 0,
+          "losses": 51,
+          "halfPoints": 218,
+          "scoreRate": 0.68125
+        }
+      ]
+    },
+    {
+      "left": "K-e-f01-r06",
+      "right": "K-c-f02-r08",
+      "games": 320,
+      "wins": 238,
+      "draws": 0,
+      "losses": 82,
+      "halfPoints": 476,
+      "scoreRate": 0.74375,
+      "scoreInterval95": [
+        0.690625,
+        0.796875
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 119,
+          "draws": 0,
+          "losses": 41,
+          "halfPoints": 238,
+          "scoreRate": 0.74375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 119,
+          "draws": 0,
+          "losses": 41,
+          "halfPoints": 238,
+          "scoreRate": 0.74375
+        }
+      ]
+    },
+    {
+      "left": "K-c-f01-r07",
+      "right": "K-e-f02-r08",
+      "games": 320,
+      "wins": 202,
+      "draws": 0,
+      "losses": 118,
+      "halfPoints": 404,
+      "scoreRate": 0.63125,
+      "scoreInterval95": [
+        0.559375,
+        0.7
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 106,
+          "draws": 0,
+          "losses": 54,
+          "halfPoints": 212,
+          "scoreRate": 0.6625
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 96,
+          "draws": 0,
+          "losses": 64,
+          "halfPoints": 192,
+          "scoreRate": 0.6
+        }
+      ]
+    },
+    {
+      "left": "K-c-f01-r07",
+      "right": "K-c-f02-r08",
+      "games": 320,
+      "wins": 229,
+      "draws": 0,
+      "losses": 91,
+      "halfPoints": 458,
+      "scoreRate": 0.715625,
+      "scoreInterval95": [
+        0.65625,
+        0.771875
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 120,
+          "draws": 0,
+          "losses": 40,
+          "halfPoints": 240,
+          "scoreRate": 0.75
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 109,
+          "draws": 0,
+          "losses": 51,
+          "halfPoints": 218,
+          "scoreRate": 0.68125
+        }
+      ]
+    },
+    {
+      "left": "K-e-f02-r08",
+      "right": "K-c-f02-r08",
+      "games": 320,
+      "wins": 192,
+      "draws": 0,
+      "losses": 128,
+      "halfPoints": 384,
+      "scoreRate": 0.6,
+      "scoreInterval95": [
+        0.553125,
+        0.65
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 96,
+          "draws": 0,
+          "losses": 64,
+          "halfPoints": 192,
+          "scoreRate": 0.6
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 96,
+          "draws": 0,
+          "losses": 64,
+          "halfPoints": 192,
+          "scoreRate": 0.6
+        }
+      ]
+    }
+  ],
+  "registeredEdges": 37,
+  "notCompleteK10": true,
+  "omittedPairs": [
+    [
+      0,
+      8
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      2,
+      9
+    ]
+  ],
+  "historicalUnsubmittedR06ControlConsumed": false,
+  "MAnchoredBT": {
+    "fit": {
+      "elo": [
+        862.0259661401403,
+        991.0788383147677,
+        964.5792590269614,
+        0.0,
+        934.3728919530649,
+        902.0908211411332,
+        805.8332398811214,
+        778.9965104658897,
+        688.9155887606343,
+        622.4391032343252
+      ],
+      "anchorComponent": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "finiteFullMLE": true,
+      "iterations": 8,
+      "maxScoreResidual": 1.9895196601282805e-13
+    },
+    "bootstrapRatings": [
+      {
+        "interval95": [
+          759.9728529097724,
+          1013.9398359710962
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          896.8014641309625,
+          1142.6737317058194
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          862.1215543078295,
+          1120.6170387876498
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          0.0,
+          0.0
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          840.2880905286805,
+          1083.8858991248287
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          803.3063563021693,
+          1051.9738343246822
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          704.7057464913854,
+          957.9844918187798
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          674.5391361139647,
+          933.6128034131011
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          591.4668356183821,
+          832.8920058386257
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          527.2486865061359,
+          763.8811003396853
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      }
+    ],
+    "finiteFullMLEReplicates": 4000,
+    "samples": 4000,
+    "seed": 4219,
+    "mapClusters": 80
+  },
+  "pairedEloContrasts": [
+    {
+      "left": "K-a-r02",
+      "right": "K-e-r03",
+      "eloLeftMinusRight": -129.05287217462742,
+      "anchor": "K-a-r02",
+      "observedPair": true,
+      "interval95": [
+        -176.61945420566707,
+        -84.448021015679
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-c-r04",
+      "eloLeftMinusRight": -102.5532928868212,
+      "anchor": "K-a-r02",
+      "observedPair": true,
+      "interval95": [
+        -149.66107105972185,
+        -56.31921889630634
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-a-r02",
+      "right": "M-balanced",
+      "eloLeftMinusRight": 862.0259661401403,
+      "anchor": "K-a-r02",
+      "observedPair": true,
+      "interval95": [
+        759.9728529593892,
+        1013.9398363477751
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-e-w01-r05",
+      "eloLeftMinusRight": -72.34692581292474,
+      "anchor": "K-a-r02",
+      "observedPair": true,
+      "interval95": [
+        -121.22989679956568,
+        -24.187022905233178
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-c-w01-r05",
+      "eloLeftMinusRight": -40.06485500099304,
+      "anchor": "K-a-r02",
+      "observedPair": true,
+      "interval95": [
+        -91.8921567688521,
+        10.387503417646027
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-e-f01-r06",
+      "eloLeftMinusRight": 56.192726259018826,
+      "anchor": "K-a-r02",
+      "observedPair": true,
+      "interval95": [
+        -0.44836807867999795,
+        112.7435376338262
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-c-f01-r07",
+      "eloLeftMinusRight": 83.02945567425039,
+      "anchor": "K-a-r02",
+      "observedPair": true,
+      "interval95": [
+        20.173127668123726,
+        145.8503718563201
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-c-r04",
+      "eloLeftMinusRight": 26.49957928780624,
+      "anchor": "K-e-r03",
+      "observedPair": true,
+      "interval95": [
+        6.463138725769265,
+        48.24661094375894
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-r03",
+      "right": "M-balanced",
+      "eloLeftMinusRight": 991.0788383147677,
+      "anchor": "K-e-r03",
+      "observedPair": true,
+      "interval95": [
+        896.8014641309625,
+        1142.6737317058194
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-e-w01-r05",
+      "eloLeftMinusRight": 56.70594636170272,
+      "anchor": "K-e-r03",
+      "observedPair": true,
+      "interval95": [
+        41.38771200834795,
+        73.12276644183079
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-c-w01-r05",
+      "eloLeftMinusRight": 88.9880171736344,
+      "anchor": "K-e-r03",
+      "observedPair": true,
+      "interval95": [
+        64.41302150398768,
+        114.90961844596954
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-e-f01-r06",
+      "eloLeftMinusRight": 185.24559843364628,
+      "anchor": "K-e-r03",
+      "observedPair": true,
+      "interval95": [
+        150.92005954890953,
+        221.27696126645068
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-r04",
+      "right": "M-balanced",
+      "eloLeftMinusRight": 964.5792590269614,
+      "anchor": "K-c-r04",
+      "observedPair": true,
+      "interval95": [
+        862.1215543078295,
+        1120.6170387876498
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-r04",
+      "right": "K-e-w01-r05",
+      "eloLeftMinusRight": 30.20636707389647,
+      "anchor": "K-c-r04",
+      "observedPair": true,
+      "interval95": [
+        7.36030200491445,
+        52.48851252900594
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-r04",
+      "right": "K-c-w01-r05",
+      "eloLeftMinusRight": 62.48843788582817,
+      "anchor": "K-c-r04",
+      "observedPair": true,
+      "interval95": [
+        41.623498861825894,
+        84.3069958188599
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-r04",
+      "right": "K-c-f01-r07",
+      "eloLeftMinusRight": 185.58274856107158,
+      "anchor": "K-c-r04",
+      "observedPair": true,
+      "interval95": [
+        148.1847870733265,
+        225.0639106121945
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-e-w01-r05",
+      "eloLeftMinusRight": -934.3728919530649,
+      "anchor": "M-balanced",
+      "observedPair": true,
+      "interval95": [
+        -1084.0537259289931,
+        -840.3241709647043
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-c-w01-r05",
+      "eloLeftMinusRight": -902.0908211411332,
+      "anchor": "M-balanced",
+      "observedPair": true,
+      "interval95": [
+        -1052.3772090167638,
+        -803.3997083071791
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-e-f01-r06",
+      "eloLeftMinusRight": -805.8332398811214,
+      "anchor": "M-balanced",
+      "observedPair": true,
+      "interval95": [
+        -957.9922021048549,
+        -704.7392207426408
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-c-f01-r07",
+      "eloLeftMinusRight": -778.9965104658897,
+      "anchor": "M-balanced",
+      "observedPair": true,
+      "interval95": [
+        -934.2450781671835,
+        -674.7431957034557
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-e-f02-r08",
+      "eloLeftMinusRight": -688.9155887606343,
+      "anchor": "M-balanced",
+      "observedPair": true,
+      "interval95": [
+        -833.1672816804921,
+        -591.4805489004144
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "M-balanced",
+      "right": "K-c-f02-r08",
+      "eloLeftMinusRight": -622.4391032343252,
+      "anchor": "M-balanced",
+      "observedPair": true,
+      "interval95": [
+        -764.5802354110334,
+        -527.408050329684
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-c-w01-r05",
+      "eloLeftMinusRight": 32.28207081193172,
+      "anchor": "K-e-w01-r05",
+      "observedPair": true,
+      "interval95": [
+        14.117209739019382,
+        52.39746041539766
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-e-f01-r06",
+      "eloLeftMinusRight": 128.53965207194358,
+      "anchor": "K-e-w01-r05",
+      "observedPair": true,
+      "interval95": [
+        100.19882631934604,
+        158.4517207698136
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-c-f01-r07",
+      "eloLeftMinusRight": 155.37638148717514,
+      "anchor": "K-e-w01-r05",
+      "observedPair": true,
+      "interval95": [
+        122.85093400195497,
+        189.1972660964094
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-e-f02-r08",
+      "eloLeftMinusRight": 245.45730319243077,
+      "anchor": "K-e-w01-r05",
+      "observedPair": true,
+      "interval95": [
+        201.93508506519927,
+        292.9785814952109
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-w01-r05",
+      "right": "K-c-f02-r08",
+      "eloLeftMinusRight": 311.9337887187397,
+      "anchor": "K-e-w01-r05",
+      "observedPair": true,
+      "interval95": [
+        266.55461990624656,
+        362.641315704894
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-w01-r05",
+      "right": "K-e-f01-r06",
+      "eloLeftMinusRight": 96.25758126001186,
+      "anchor": "K-c-w01-r05",
+      "observedPair": true,
+      "interval95": [
+        68.57434761846072,
+        125.91341552935974
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-w01-r05",
+      "right": "K-c-f01-r07",
+      "eloLeftMinusRight": 123.09431067524343,
+      "anchor": "K-c-w01-r05",
+      "observedPair": true,
+      "interval95": [
+        94.74732487881782,
+        152.38127294166017
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-w01-r05",
+      "right": "K-e-f02-r08",
+      "eloLeftMinusRight": 213.17523238049907,
+      "anchor": "K-c-w01-r05",
+      "observedPair": true,
+      "interval95": [
+        167.62760509015882,
+        262.25972879439126
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-w01-r05",
+      "right": "K-c-f02-r08",
+      "eloLeftMinusRight": 279.65171790680796,
+      "anchor": "K-c-w01-r05",
+      "observedPair": true,
+      "interval95": [
+        234.93683925459624,
+        327.93284916780067
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-f01-r06",
+      "right": "K-c-f01-r07",
+      "eloLeftMinusRight": 26.83672941523156,
+      "anchor": "K-e-f01-r06",
+      "observedPair": true,
+      "interval95": [
+        9.298529250714367,
+        45.10006651224908
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-f01-r06",
+      "right": "K-e-f02-r08",
+      "eloLeftMinusRight": 116.91765112048719,
+      "anchor": "K-e-f01-r06",
+      "observedPair": true,
+      "interval95": [
+        73.12261446989454,
+        164.09964628801004
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-f01-r06",
+      "right": "K-c-f02-r08",
+      "eloLeftMinusRight": 183.39413664679608,
+      "anchor": "K-e-f01-r06",
+      "observedPair": true,
+      "interval95": [
+        139.03655834864256,
+        231.46701521887604
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-f01-r07",
+      "right": "K-e-f02-r08",
+      "eloLeftMinusRight": 90.08092170525566,
+      "anchor": "K-c-f01-r07",
+      "observedPair": true,
+      "interval95": [
+        43.35487547310379,
+        140.29186721776279
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-f01-r07",
+      "right": "K-c-f02-r08",
+      "eloLeftMinusRight": 156.55740723156455,
+      "anchor": "K-c-f01-r07",
+      "observedPair": true,
+      "interval95": [
+        113.21822557848961,
+        203.57961091158614
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-f02-r08",
+      "right": "K-c-f02-r08",
+      "eloLeftMinusRight": 66.47648552630893,
+      "anchor": "K-e-f02-r08",
+      "observedPair": true,
+      "interval95": [
+        41.61141903171936,
+        94.15826440717993
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-e-f02-r08",
+      "eloLeftMinusRight": 173.11037737950602,
+      "anchor": "K-a-r02",
+      "observedPair": false,
+      "directScoreRate": null,
+      "interval95": [
+        127.4326803413329,
+        220.76936280662574
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-c-f02-r08",
+      "eloLeftMinusRight": 239.58686290581494,
+      "anchor": "K-a-r02",
+      "observedPair": false,
+      "directScoreRate": null,
+      "interval95": [
+        188.21522680528471,
+        297.0347422907347
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-c-f01-r07",
+      "eloLeftMinusRight": 212.0823278488778,
+      "anchor": "K-e-r03",
+      "observedPair": false,
+      "directScoreRate": null,
+      "interval95": [
+        173.04698558015025,
+        252.21496835246268
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-e-f02-r08",
+      "eloLeftMinusRight": 302.1632495541335,
+      "anchor": "K-e-r03",
+      "observedPair": false,
+      "directScoreRate": null,
+      "interval95": [
+        256.5662502284133,
+        351.067066273179
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-c-f02-r08",
+      "eloLeftMinusRight": 368.63973508044245,
+      "anchor": "K-e-r03",
+      "observedPair": false,
+      "directScoreRate": null,
+      "interval95": [
+        321.78517528159705,
+        420.3256629650463
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-r04",
+      "right": "K-e-f01-r06",
+      "eloLeftMinusRight": 158.74601914584005,
+      "anchor": "K-c-r04",
+      "observedPair": false,
+      "directScoreRate": null,
+      "interval95": [
+        122.83778871820142,
+        196.10914422820963
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-r04",
+      "right": "K-e-f02-r08",
+      "eloLeftMinusRight": 275.66367026632724,
+      "anchor": "K-c-r04",
+      "observedPair": false,
+      "directScoreRate": null,
+      "interval95": [
+        229.1619053341114,
+        324.76734098896395
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "left": "K-c-r04",
+      "right": "K-c-f02-r08",
+      "eloLeftMinusRight": 342.14015579263616,
+      "anchor": "K-c-r04",
+      "observedPair": false,
+      "directScoreRate": null,
+      "interval95": [
+        298.6813027455588,
+        390.08568351397366
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    }
+  ],
+  "prototypeMinusParent": [
+    {
+      "prototype": "K-e-f02-r08",
+      "parent": "K-e-f01-r06",
+      "referenceRole": "near-r06-r07",
+      "eloPrototypeMinusParent": -116.91765112048719,
+      "interval95": [
+        -164.35400915093356,
+        -73.13005463254231
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "prototype": "K-c-f02-r08",
+      "parent": "K-c-f01-r07",
+      "referenceRole": "near-r06-r07",
+      "eloPrototypeMinusParent": -156.55740723156455,
+      "interval95": [
+        -203.61648847783607,
+        -113.2823373678021
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "prototype": "K-e-f02-r08",
+      "parent": "K-e-w01-r05",
+      "referenceRole": "upper-r05",
+      "eloPrototypeMinusParent": -245.45730319243077,
+      "interval95": [
+        -293.1704719024662,
+        -201.9421214401879
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "prototype": "K-c-f02-r08",
+      "parent": "K-c-w01-r05",
+      "referenceRole": "upper-r05",
+      "eloPrototypeMinusParent": -279.65171790680796,
+      "interval95": [
+        -327.9331734142315,
+        -235.2197973994844
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    }
+  ],
+  "prototypeMinusCrossStyleTarget": {
+    "prototype": "K-c-f02-r08",
+    "target": "K-e-f02-r08",
+    "eloPrototypeMinusTarget": -66.47648552630893,
+    "interval95": [
+      -94.2000106733591,
+      -41.70804914954608
+    ],
+    "samples": 4000,
+    "unidentifiedSamples": 0,
+    "positiveInfiniteSamples": 0,
+    "negativeInfiniteSamples": 0
+  },
+  "newNodeCpu": [
+    {
+      "node": "K-a-r02",
+      "newTurn": null,
+      "newInit": null,
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-e-r03",
+      "newTurn": null,
+      "newInit": null,
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-c-r04",
+      "newTurn": null,
+      "newInit": null,
+      "newBankUseGames": 0
+    },
+    {
+      "node": "M-balanced",
+      "newTurn": {
+        "samples": 173222,
+        "p50Ms": 0.3955,
+        "p99Ms": 1.1601,
+        "maxMs": 3.7741,
+        "totalCpuNs": 76193894700,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 640,
+        "p50Ms": 10.8493,
+        "p99Ms": 15.8757,
+        "maxMs": 18.0892,
+        "totalCpuNs": 7165595000,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-e-w01-r05",
+      "newTurn": {
+        "samples": 187216,
+        "p50Ms": 0.3316,
+        "p99Ms": 0.6889,
+        "maxMs": 2.8931,
+        "totalCpuNs": 65929611500,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 640,
+        "p50Ms": 17.6372,
+        "p99Ms": 33.1645,
+        "maxMs": 40.0926,
+        "totalCpuNs": 12236463400,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-c-w01-r05",
+      "newTurn": {
+        "samples": 188735,
+        "p50Ms": 0.322,
+        "p99Ms": 0.6742,
+        "maxMs": 2.5779,
+        "totalCpuNs": 64478543800,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 640,
+        "p50Ms": 17.8348,
+        "p99Ms": 33.3299,
+        "maxMs": 38.939,
+        "totalCpuNs": 12195890000,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-e-f01-r06",
+      "newTurn": {
+        "samples": 188938,
+        "p50Ms": 0.3307,
+        "p99Ms": 0.6809,
+        "maxMs": 2.2452,
+        "totalCpuNs": 66218813100,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 640,
+        "p50Ms": 17.8019,
+        "p99Ms": 33.8713,
+        "maxMs": 35.8616,
+        "totalCpuNs": 12392455800,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-c-f01-r07",
+      "newTurn": {
+        "samples": 189815,
+        "p50Ms": 0.318,
+        "p99Ms": 0.6628,
+        "maxMs": 2.678,
+        "totalCpuNs": 63923094000,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 640,
+        "p50Ms": 17.7413,
+        "p99Ms": 32.9699,
+        "maxMs": 34.0403,
+        "totalCpuNs": 12208033200,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-e-f02-r08",
+      "newTurn": {
+        "samples": 557093,
+        "p50Ms": 0.3287,
+        "p99Ms": 0.6866,
+        "maxMs": 3.5989,
+        "totalCpuNs": 193961291700,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 1920,
+        "p50Ms": 17.8172,
+        "p99Ms": 33.7456,
+        "maxMs": 39.9438,
+        "totalCpuNs": 37137578100,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-c-f02-r08",
+      "newTurn": {
+        "samples": 559269,
+        "p50Ms": 0.3148,
+        "p99Ms": 0.6531,
+        "maxMs": 2.8644,
+        "totalCpuNs": 186096665600,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 1920,
+        "p50Ms": 17.433,
+        "p99Ms": 32.987,
+        "maxMs": 36.7537,
+        "totalCpuNs": 36177849200,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    }
+  ],
+  "newFaults": {},
+  "newWarnings": 0,
+  "newTimeouts": 0,
+  "newEndReasons": {
+    "base_destroyed": 574,
+    "turn_limit_score": 2935,
+    "turn_limit_deposit": 11
+  },
+  "usage": {
+    "newScoredGames": 3520,
+    "oldReusedGames": 8320,
+    "uniqueGraphGames": 11840,
+    "checks": 2,
+    "checkEngineSteps": 10,
+    "scoredCompiles": 26,
+    "checkCompiles": 2,
+    "compiles": 28,
+    "newAttempts": 3520,
+    "infraErrorAttempts": 0,
+    "nominalNewBotStartsIncludingChecks": 7042,
+    "newBotStartsIncludingChecks": 7042,
+    "extraStartsDuringInfraAttempts": 0,
+    "benchmarks": 0,
+    "newMatchEngineTransitions": 1022144,
+    "newReplayVerificationTransitions": 1022144,
+    "oldReplayEngineReverifications": 0,
+    "newMatchBotCpuNs": 846315779100,
+    "newMatchHarnessCpuNs": 1719462966200,
+    "shortCheckBotCpuNs": 37393900,
+    "newReplayVerificationCpuNs": 663883763900,
+    "compileCpuSeconds": null,
+    "compileWallSeconds": 140.84923355900173,
+    "newScoringWallSeconds": 567.244800755001,
+    "completeSessionCpuSeconds": null,
+    "rejectedBeforeCheckPreparation": 1,
+    "scope": "two unscaled short smokes; one private-output rejection before prepare had0 work; old8320 CPU not charged; scopes not blindly added"
+  },
+  "oldV1Graph01Through04StrongVersionsAndAdoptionCountsUnchanged": true,
+  "formalTierAssigned": false,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "limits": [
+    "two fixed identity seeds only",
+    "old/new edges not time randomized; deterministic work/no clock author-reported",
+    "dev reused for selection, not independent holdout",
+    "exploratory intervals, no multiplicity correction",
+    "scalar BT not proof of transitivity/style independence; changed graph not changed old code",
+    "37 observed edges/45 modeled contrasts;8 far-end edges prospectively missing, inferred is not observed"
+  ],
+  "scope": "lower economic/control prototypes,37 observed edges not complete K10;no formal tier or strong replacement",
+  "authorReports": {
+    "independentlyVerified": false,
+    "model": "Claude Opus5.5",
+    "realSessions": 1,
+    "sameSession": true,
+    "games": 3360,
+    "checks": 2,
+    "nominalWallSeconds": 1620,
+    "finishMinutePrecision": true,
+    "waitingSeconds": 0,
+    "sourceCoreStyleSnapshotEqualityAndDirectoryIncidentHistory": "self-report only"
+  },
+  "directoryIncident": {
+    "r06CurrentFileAndTreeMatchEvaluatorSealedCopy": true,
+    "currentNarrowDirectoryOnlyMainCpp": true,
+    "historicNoFileMutationAndEightSnapshotImpactIndependentlyVerified": false,
+    "immutabilityMetadataBoundaryIncidentRecorded": true,
+    "oldEvaluatorEvidenceUnchanged": true,
+    "automaticSourceForfeitureInvented": false
+  },
+  "nextTask": {
+    "round": "r09",
+    "purpose": "continue economic/control lower range from r08,not force same strength",
+    "dispatched": true,
+    "authorReadOrStartConfirmed": false,
+    "candidateBytesUnknown": true,
+    "evaluationStarted": false,
+    "prospectiveNewGamesByEligibleCount": {"0": 0, "1": 1600, "2": 3520},
+    "prospectiveRegisteredEdgesTwoEligible": 48,
+    "notCompleteK12": true
+  }
+}

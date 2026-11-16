@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "candidate": "K-c-r04",
+  "lineage": "control",
+  "firstVersion": true,
+  "sourceSha256": "482ff34d9785a46b0aeca7b15e50fb93da46106424366dbe1b695d124354cdf2",
+  "sourceFileSha256": "9ee09ea8dc75a12ba5559e64235691e7c8148ae97fcc1e9025027601827ef09b",
+  "protocol": "claude-evaluation-v1",
+  "complete": true,
+  "checkPassed": true,
+  "total": {
+    "games": 1280,
+    "wins": 1225,
+    "draws": 0,
+    "losses": 55,
+    "halfPoints": 2450,
+    "scoreRate": 0.95703125
+  },
+  "publicOpponents": [
+    {
+      "opponent": "M-balanced",
+      "games": 160,
+      "wins": 159,
+      "draws": 0,
+      "losses": 1,
+      "halfPoints": 318,
+      "scoreRate": 0.99375
+    },
+    {
+      "opponent": "Z-eco",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-harass",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-rush",
+      "games": 160,
+      "wins": 159,
+      "draws": 0,
+      "losses": 1,
+      "halfPoints": 318,
+      "scoreRate": 0.99375
+    },
+    {
+      "opponent": "Z-towers",
+      "games": 160,
+      "wins": 159,
+      "draws": 0,
+      "losses": 1,
+      "halfPoints": 318,
+      "scoreRate": 0.99375
+    }
+  ],
+  "hiddenOpponentsCombined": {
+    "games": 480,
+    "wins": 428,
+    "draws": 0,
+    "losses": 52,
+    "halfPoints": 856,
+    "scoreRate": 0.8916666666666667
+  },
+  "candidateTurnCpu": {
+    "samples": 341512,
+    "p50Ms": 0.3649,
+    "p99Ms": 0.7239,
+    "maxMs": 10.8029,
+    "totalCpuNs": 130814075800,
+    "percentiles": "nearest rank"
+  },
+  "candidateInitCpu": {
+    "samples": 1280,
+    "p50Ms": 18.5456,
+    "p99Ms": 34.7644,
+    "maxMs": 39.906,
+    "totalCpuNs": 25310854900,
+    "percentiles": "nearest rank"
+  },
+  "candidateFaults": {},
+  "allBotFaults": {},
+  "candidateTimeoutGames": 0,
+  "candidateWarnings": 0,
+  "allWarnings": 0,
+  "candidateLegalBankUseGames": 0,
+  "candidateOverTurnLimitReplies": 0,
+  "endReasons": {
+    "base_destroyed": 550,
+    "turn_limit_score": 730
+  },
+  "temporaryBT": {
+    "elo": 880.5588497262903,
+    "interval95": [
+      687.511359075639,
+      "+infinity"
+    ],
+    "unidentifiedSamples": 0,
+    "negativeInfiniteSamples": 0,
+    "positiveInfiniteSamples": 1473,
+    "samples": 4000,
+    "finiteFullMLE": false,
+    "finiteFullMLEReplicates": 0,
+    "anchor": "M-balanced",
+    "mapClusters": 80,
+    "bootstrapSamples": 4000,
+    "bootstrapSeed": 4219,
+    "scope": "this 9-node star only; no old matrix; no pseudocount/clipping/draw rejection"
+  },
+  "usage": {
+    "scoredGames": 1280,
+    "checks": 1,
+    "checkTurns": 5,
+    "compiles": 10,
+    "cacheHits": 0,
+    "botStarts": 2561,
+    "frameworkRetries": 0,
+    "benchmarks": 0,
+    "matchEngineTransitions": 341512,
+    "replayVerificationTransitions": 341512,
+    "checkEngineTransitions": 5,
+    "candidateBotCpuNs": 156124930700,
+    "allMatchBotCpuNs": 320971398100,
+    "matchHarnessCpuNs": 582202600800,
+    "replayVerificationCpuNs": 208925920400,
+    "compileCpuSeconds": null,
+    "compileWallSeconds": 26.372990924995975,
+    "totalSessionCpuSeconds": null,
+    "scope": "compile, bot replies, match harness and replay audit separate; external time totals overlap, never add them again"
+  },
+  "scoringWallSeconds": 175.17677671200363,
+  "firstVersionBaseline": true,
+  "improvementAdoptions": 0,
+  "candidatePointAndAllBootstrapClosedFormCrossCheck": true,
+  "adoptedAsFirstControlDevBaseline": true,
+  "retainedControlAfter": "K-c-r04",
+  "attackRetainedUnchanged": "K-a-r02",
+  "attackConsecutiveImprovementAdoptionsUnchanged": 1,
+  "economicRetainedUnchanged": "K-e-r03",
+  "economicConsecutiveImprovementAdoptionsUnchanged": 0,
+  "independentExternalFinalAcceptance": false,
+  "interimReviewRole": "current user-assigned Claude evaluator/reviewer",
+  "formalTierAssigned": false,
+  "T6Used": false,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "authorReports": {
+    "model": "Claude Opus 5.5",
+    "sessions": 1,
+    "sameSessionAsR01": true,
+    "selftestAndTuningGames": 6800,
+    "finalTestGames": 2080,
+    "reportedWallSecondsFromNominalTimes": 2772,
+    "reportedWaitingSeconds": 0,
+    "finishTimeMinutePrecision": true,
+    "reportedNonBwrapCompiles": 0,
+    "reportedPipelineCalls": 0,
+    "reportedInfraErrors": 0,
+    "internalDevelopmentComparison": {
+      "games": 320,
+      "wins": 178,
+      "scoreRate": 0.55625
+    },
+    "internalReservedConfirmation": {
+      "games": 160,
+      "wins": 87,
+      "draws": 0,
+      "losses": 73,
+      "scoreRate": 0.54375
+    },
+    "internalConfirmationNotAUniformAdoptionGate": true,
+    "independentlyVerified": false
+  },
+  "r04WaitingExceptionRequestedOrGranted": false,
+  "noNewDevelopmentIncidentDeclared": true,
+  "independentAuthorComplianceCertified": false,
+  "r03HistoricalCompileViolationUnchanged": true,
+  "statisticalLimits": [
+    "candidate M-star contrast not a joint finite ladder fit or cross-lineage ranking",
+    "all three lineages have the same M-edge score, not evidence they are equally strong",
+    "bootstrap conditional on fixed maps and identity seeds; no seed-robustness proof",
+    "dev maps repeatedly used for selection, not independent holdout",
+    "control style and author process registered from self-report, not source-level independence proof"
+  ],
+  "nextRecommendation": "preregister a three-lineage comparison graph, seed-balance scheme and explicit budget before tiers; no r05 or new games dispatched",
+  "authorDevelopmentReviewIssue": {
+    "evidenceScope": "reported NOTES/table only, not audited author runs",
+    "c1FivePublicReported": [
+      399,
+      0,
+      1
+    ],
+    "c2FinalS1SameFiveDerivedFromReportedTable": [
+      398,
+      0,
+      2
+    ],
+    "internalNoRegressionRuleCertified": false,
+    "configurationAndC1BehaviorEquivalenceNotVerified": true,
+    "clarificationNeededWithoutNewTests": true,
+    "notANewUniformFirstVersionGate": true
+  }
+}

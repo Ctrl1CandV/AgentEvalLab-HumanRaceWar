@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "snapshotScope": "historical intake before explicit user waiting exclusion and evaluation",
+  "supersededBy": "data/phase-b/claude-r03.json",
+  "candidate": "K-e-r03",
+  "lineage": "economic",
+  "firstVersion": true,
+  "sourceSha256": "6aa4bb9ce49f6cb1b8c8378208db8c32ce93efb0e750664fbcfd92042083d3f6",
+  "sourceFileSha256": "bdf8cfaac7991f708cd794b3dd62c187cf0641ab5418fb362402166a666769f8",
+  "declaredDeliveryByteChecksPassed": true,
+  "state": "pending_explicit_user_wall_budget_exception_decision",
+  "unifiedCheckStatus": "not_started",
+  "unifiedOutcome": null,
+  "unifiedCpuStats": null,
+  "temporaryBT": null,
+  "economicBaselineEstablished": false,
+  "attackRetained": "K-a-r02",
+  "authorReports": {
+    "model": "Claude Opus 5.5",
+    "sessions": 1,
+    "sameSessionAsR01": true,
+    "selftestTuningGames": 8338,
+    "finalTestGames": 1920,
+    "grossWallSecondsFromReportedTimes": 42971,
+    "approvalWaitSecondsFromReportedTimes": 38231,
+    "activeSecondsIfThatWaitExcluded": 4740,
+    "finishTimeMinutePrecision": true,
+    "independentlyVerified": false
+  },
+  "developmentIncidents": {
+    "nonBwrapCompilerInvocationsAdmitted": 1,
+    "nonconformingBuildBinaryNotRunAndDeleted": "self-report only; artifact not received",
+    "managedEntryPipelineFailureAttemptsAdmitted": 4,
+    "authorEvidenceOrSessionFilesInspected": false
+  },
+  "grossReportedWallExceeds8Hours": true,
+  "specificWaitingExceptionApproved": false,
+  "compileViolationErasedOrRetrospectivelyAuthorized": false,
+  "automaticCandidateForfeitureInvented": false,
+  "recommendation": "user may explicitly exclude only this reported idle approval wait and permit original evaluation, while retaining compile violation",
+  "protocol": "claude-evaluation-v1",
+  "conditionalFirstVersionGames": 1280,
+  "capsUnchanged": {
+    "gamesPerCandidate": 2080,
+    "matchWallSecondsPerCandidate": 7200,
+    "benchmarks": 0
+  },
+  "authorSeedSensitivityDoesNotChangeV1": true,
+  "newEvaluatorRuntime": {
+    "compiles": 0,
+    "botStarts": 0,
+    "engineSteps": 0,
+    "checks": 0,
+    "games": 0,
+    "benchmarks": 0
+  },
+  "T6Used": false,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "intakeFeedback": "author handoff/in/intake-r03.md"
+}

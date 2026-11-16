@@ -1,0 +1,562 @@
+{
+  "schemaVersion": 1,
+  "protocol": "claude-three-mainline-graph01-v1",
+  "complete": true,
+  "nodes": [
+    {
+      "code": "K-a-r02",
+      "lineage": "attack",
+      "sourceSha256": "2cbcd20e4bd2821b0c102b5420892ac09f802984ac39e22ddd135ffd37900a97"
+    },
+    {
+      "code": "K-e-r03",
+      "lineage": "economic",
+      "sourceSha256": "6aa4bb9ce49f6cb1b8c8378208db8c32ce93efb0e750664fbcfd92042083d3f6"
+    },
+    {
+      "code": "K-c-r04",
+      "lineage": "control",
+      "sourceSha256": "482ff34d9785a46b0aeca7b15e50fb93da46106424366dbe1b695d124354cdf2"
+    },
+    {
+      "code": "M-balanced",
+      "lineage": "public-anchor",
+      "sourceSha256": "273fecd4a9039d73914454bbcce078462afce2071c87b468c7f2d8bf6d731d8a"
+    }
+  ],
+  "pairs": [
+    {
+      "left": "K-a-r02",
+      "right": "K-e-r03",
+      "games": 320,
+      "wins": 106,
+      "draws": 0,
+      "losses": 214,
+      "halfPoints": 212,
+      "scoreRate": 0.33125,
+      "scoreInterval95": [
+        0.259375,
+        0.403125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 53,
+          "draws": 0,
+          "losses": 107,
+          "halfPoints": 106,
+          "scoreRate": 0.33125
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 53,
+          "draws": 0,
+          "losses": 107,
+          "halfPoints": 106,
+          "scoreRate": 0.33125
+        }
+      ]
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-c-r04",
+      "games": 320,
+      "wins": 116,
+      "draws": 0,
+      "losses": 204,
+      "halfPoints": 232,
+      "scoreRate": 0.3625,
+      "scoreInterval95": [
+        0.29375,
+        0.43125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 57,
+          "draws": 0,
+          "losses": 103,
+          "halfPoints": 114,
+          "scoreRate": 0.35625
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 59,
+          "draws": 0,
+          "losses": 101,
+          "halfPoints": 118,
+          "scoreRate": 0.36875
+        }
+      ]
+    },
+    {
+      "left": "K-a-r02",
+      "right": "M-balanced",
+      "games": 320,
+      "wins": 318,
+      "draws": 0,
+      "losses": 2,
+      "halfPoints": 636,
+      "scoreRate": 0.99375,
+      "scoreInterval95": [
+        0.984375,
+        1.0
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        }
+      ]
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-c-r04",
+      "games": 320,
+      "wins": 173,
+      "draws": 0,
+      "losses": 147,
+      "halfPoints": 346,
+      "scoreRate": 0.540625,
+      "scoreInterval95": [
+        0.5,
+        0.58125
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 89,
+          "draws": 0,
+          "losses": 71,
+          "halfPoints": 178,
+          "scoreRate": 0.55625
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 84,
+          "draws": 0,
+          "losses": 76,
+          "halfPoints": 168,
+          "scoreRate": 0.525
+        }
+      ]
+    },
+    {
+      "left": "K-e-r03",
+      "right": "M-balanced",
+      "games": 320,
+      "wins": 318,
+      "draws": 0,
+      "losses": 2,
+      "halfPoints": 636,
+      "scoreRate": 0.99375,
+      "scoreInterval95": [
+        0.984375,
+        1.0
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        }
+      ]
+    },
+    {
+      "left": "K-c-r04",
+      "right": "M-balanced",
+      "games": 320,
+      "wins": 318,
+      "draws": 0,
+      "losses": 2,
+      "halfPoints": 636,
+      "scoreRate": 0.99375,
+      "scoreInterval95": [
+        0.98125,
+        1.0
+      ],
+      "seedAssignments": [
+        {
+          "leftSeed": 17,
+          "rightSeed": 29,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        },
+        {
+          "leftSeed": 29,
+          "rightSeed": 17,
+          "games": 160,
+          "wins": 159,
+          "draws": 0,
+          "losses": 1,
+          "halfPoints": 318,
+          "scoreRate": 0.99375
+        }
+      ]
+    }
+  ],
+  "MAnchoredBT": {
+    "fit": {
+      "elo": [
+        816.0661246550792,
+        938.4586931635992,
+        911.7117961181988,
+        0.0
+      ],
+      "anchorComponent": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "finiteFullMLE": true,
+      "iterations": 8,
+      "maxScoreResidual": 4.126832209294662e-11
+    },
+    "bootstrapRatings": [
+      {
+        "interval95": [
+          667.3267596262293,
+          1141.0529004326634
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 68,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          797.1350310125231,
+          1260.6369319185783
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 68,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          766.8745386950883,
+          1237.9234979574483
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 68,
+        "samples": 4000
+      },
+      {
+        "interval95": [
+          0.0,
+          0.0
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000
+      }
+    ],
+    "finiteFullMLEReplicates": 3932,
+    "samples": 4000,
+    "seed": 4219,
+    "mapClusters": 80
+  },
+  "pairedEloContrasts": [
+    {
+      "left": "K-a-r02",
+      "right": "K-e-r03",
+      "eloLeftMinusRight": -122.39256850851994,
+      "interval95": [
+        -175.83503984773012,
+        -71.93618393628137
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "anchorUsed": "K-a-r02"
+    },
+    {
+      "left": "K-a-r02",
+      "right": "K-c-r04",
+      "eloLeftMinusRight": -95.64567146311965,
+      "interval95": [
+        -149.70442568358555,
+        -45.80807589911541
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "anchorUsed": "K-a-r02"
+    },
+    {
+      "left": "K-e-r03",
+      "right": "K-c-r04",
+      "eloLeftMinusRight": 26.74689704540028,
+      "interval95": [
+        2.199737406494257,
+        52.59483955786393
+      ],
+      "samples": 4000,
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "anchorUsed": "K-e-r03"
+    }
+  ],
+  "newNodeCpu": [
+    {
+      "node": "K-a-r02",
+      "newTurn": {
+        "samples": 227942,
+        "p50Ms": 0.3603,
+        "p99Ms": 0.7232,
+        "maxMs": 5.9186,
+        "totalCpuNs": 86029753500,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 800,
+        "p50Ms": 18.9935,
+        "p99Ms": 34.9536,
+        "maxMs": 37.0547,
+        "totalCpuNs": 16438319500,
+        "percentiles": "nearest rank"
+      },
+      "allGraphTurnIncludingHistorical": {
+        "samples": 270567,
+        "p50Ms": 0.3536,
+        "p99Ms": 0.7129,
+        "maxMs": 5.9186,
+        "totalCpuNs": 100341227200,
+        "percentiles": "nearest rank"
+      },
+      "allGraphInitIncludingHistorical": {
+        "samples": 960,
+        "p50Ms": 18.6187,
+        "p99Ms": 34.6258,
+        "maxMs": 37.0547,
+        "totalCpuNs": 19328862100,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-e-r03",
+      "newTurn": {
+        "samples": 228847,
+        "p50Ms": 0.3852,
+        "p99Ms": 0.7582,
+        "maxMs": 5.0843,
+        "totalCpuNs": 92376648900,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 800,
+        "p50Ms": 19.0582,
+        "p99Ms": 34.5875,
+        "maxMs": 42.0937,
+        "totalCpuNs": 16402978500,
+        "percentiles": "nearest rank"
+      },
+      "allGraphTurnIncludingHistorical": {
+        "samples": 271415,
+        "p50Ms": 0.3811,
+        "p99Ms": 0.7519,
+        "maxMs": 5.0843,
+        "totalCpuNs": 108422788300,
+        "percentiles": "nearest rank"
+      },
+      "allGraphInitIncludingHistorical": {
+        "samples": 960,
+        "p50Ms": 18.6483,
+        "p99Ms": 34.5187,
+        "maxMs": 42.0937,
+        "totalCpuNs": 19364368800,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    },
+    {
+      "node": "K-c-r04",
+      "newTurn": {
+        "samples": 229926,
+        "p50Ms": 0.3758,
+        "p99Ms": 0.7491,
+        "maxMs": 2.4355,
+        "totalCpuNs": 90731934700,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 800,
+        "p50Ms": 18.9565,
+        "p99Ms": 34.6201,
+        "maxMs": 37.5793,
+        "totalCpuNs": 16315432500,
+        "percentiles": "nearest rank"
+      },
+      "allGraphTurnIncludingHistorical": {
+        "samples": 273409,
+        "p50Ms": 0.3738,
+        "p99Ms": 0.7442,
+        "maxMs": 2.4355,
+        "totalCpuNs": 107314108000,
+        "percentiles": "nearest rank"
+      },
+      "allGraphInitIncludingHistorical": {
+        "samples": 960,
+        "p50Ms": 18.6615,
+        "p99Ms": 34.5503,
+        "maxMs": 37.5793,
+        "totalCpuNs": 19402194900,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    },
+    {
+      "node": "M-balanced",
+      "newTurn": {
+        "samples": 127465,
+        "p50Ms": 0.4327,
+        "p99Ms": 1.1235,
+        "maxMs": 3.3796,
+        "totalCpuNs": 59252780300,
+        "percentiles": "nearest rank"
+      },
+      "newInit": {
+        "samples": 480,
+        "p50Ms": 11.7107,
+        "p99Ms": 15.5641,
+        "maxMs": 24.0074,
+        "totalCpuNs": 5733257200,
+        "percentiles": "nearest rank"
+      },
+      "allGraphTurnIncludingHistorical": {
+        "samples": 256141,
+        "p50Ms": 0.4275,
+        "p99Ms": 1.1489,
+        "maxMs": 3.3796,
+        "totalCpuNs": 118317976700,
+        "percentiles": "nearest rank"
+      },
+      "allGraphInitIncludingHistorical": {
+        "samples": 960,
+        "p50Ms": 11.2394,
+        "p99Ms": 15.5641,
+        "maxMs": 24.0074,
+        "totalCpuNs": 10987203000,
+        "percentiles": "nearest rank"
+      },
+      "newBankUseGames": 0
+    }
+  ],
+  "newFaults": {},
+  "newWarnings": 0,
+  "newTimeouts": 0,
+  "newEndReasons": {
+    "base_destroyed": 334,
+    "turn_limit_score": 1106
+  },
+  "usage": {
+    "newScoredGames": 1440,
+    "reusedOldGames": 480,
+    "uniqueGraphGames": 1920,
+    "checks": 0,
+    "nominalCompiles": 10,
+    "compiles": 10,
+    "cacheHits": 0,
+    "nominalNewBotStarts": 2880,
+    "newBotStarts": 2880,
+    "infraErrorAttempts": 0,
+    "extraStartsDuringInfraAttempts": 0,
+    "newAttempts": 1440,
+    "benchmarks": 0,
+    "newMatchEngineTransitions": 407090,
+    "newReplayVerificationTransitions": 407090,
+    "oldReplayEngineReverifications": 0,
+    "newMatchBotCpuNs": 383281105100,
+    "oldReusedBotCpuNsForDescriptionNotNewCost": 120197623900,
+    "newMatchHarnessCpuNs": 749041300200,
+    "newReplayVerificationCpuNs": 291943624900,
+    "compileCpuSeconds": null,
+    "compileWallSeconds": 52.8852618230012,
+    "newScoringWallSeconds": 244.2654673979996,
+    "totalSessionCpuSeconds": null,
+    "scope": "old evidence CPU is descriptive, not new expense; external time overlaps other scopes"
+  },
+  "oldV1ResultsAndAdoptionsUnchanged": true,
+  "formalTierAssigned": false,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "limits": [
+    "two specified identity seeds balanced, not arbitrary-seed robustness",
+    "old/new M halves not time-randomized; fixed-workload/no-clock only author-reported",
+    "dev reused for selection, not independent holdout",
+    "exploratory marginal intervals, no multiplicity-adjusted superiority claim",
+    "BT scalar need not represent nontransitivity or certify source-level style independence"
+  ],
+  "reviewScope": "new four-node exploratory comparison, not replacing old v1 star estimates, adoption gates or formal calibration",
+  "nextTask": {
+    "dispatched": true,
+    "authorReadingOrStartConfirmed": false,
+    "futureEvaluationSourceFreezeRequired": true,
+    "futureMaxNewScoredGamesForTwoValidPrototypes": 2880,
+    "round": "r05",
+    "purpose": "two lower-workload/function-ablation tier prototypes, economic and control",
+    "strongParentVersionsUnchanged": [
+      "K-a-r02",
+      "K-e-r03",
+      "K-c-r04"
+    ],
+    "prototypeRangeReference": "roughly one design interval below each parent; not a delivery gate or formal level",
+    "no55PercentWinGateAgainstStrongerParent": true,
+    "candidateSourcesPendingDelivery": true
+  }
+}

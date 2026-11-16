@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "round": "r09",
+  "scope": "report-only intake/interim review;no candidate or unified evaluation",
+  "deliveredCandidates": 0,
+  "packageFiles": [
+    "NOTES.md",
+    "SHA256SUMS"
+  ],
+  "packageByteIntegrityChecked": true,
+  "authorReports": {
+    "independentlyVerified": false,
+    "model": "Claude Opus5.5",
+    "realSessions": 1,
+    "sameSession": true,
+    "games": 640,
+    "checks": 0,
+    "nominalWallSeconds": 774,
+    "finishMinutePrecision": true,
+    "waitingSeconds": 0,
+    "authorSelectionRule": {
+      "range": [
+        0.25,
+        0.4
+      ],
+      "closestTo": 0.33,
+      "bothOutOfRangeMeansNoCandidate": true
+    },
+    "variants": [
+      {
+        "authorLabel": "E-E",
+        "lineage": "economic",
+        "directions": [
+          [
+            40,
+            0,
+            40
+          ],
+          [
+            39,
+            0,
+            41
+          ]
+        ],
+        "totalWDL": [
+          79,
+          0,
+          81
+        ],
+        "scoreRate": 0.49375,
+        "selectedByAuthor": false,
+        "arithmeticCheckedOnly": true,
+        "independentlyVerified": false
+      },
+      {
+        "authorLabel": "E-F",
+        "lineage": "economic",
+        "directions": [
+          [
+            36,
+            0,
+            44
+          ],
+          [
+            35,
+            0,
+            45
+          ]
+        ],
+        "totalWDL": [
+          71,
+          0,
+          89
+        ],
+        "scoreRate": 0.44375,
+        "selectedByAuthor": false,
+        "arithmeticCheckedOnly": true,
+        "independentlyVerified": false
+      },
+      {
+        "authorLabel": "K-E",
+        "lineage": "control",
+        "directions": [
+          [
+            36,
+            0,
+            44
+          ],
+          [
+            29,
+            0,
+            51
+          ]
+        ],
+        "totalWDL": [
+          65,
+          0,
+          95
+        ],
+        "scoreRate": 0.40625,
+        "selectedByAuthor": false,
+        "arithmeticCheckedOnly": true,
+        "independentlyVerified": false
+      },
+      {
+        "authorLabel": "K-F",
+        "lineage": "control",
+        "directions": [
+          [
+            48,
+            0,
+            32
+          ],
+          [
+            48,
+            0,
+            32
+          ]
+        ],
+        "totalWDL": [
+          96,
+          0,
+          64
+        ],
+        "scoreRate": 0.6,
+        "selectedByAuthor": false,
+        "arithmeticCheckedOnly": true,
+        "independentlyVerified": false
+      }
+    ],
+    "cpuMs": {
+      "turnMedian": 0.331,
+      "turnP99": 0.72,
+      "turnMax": 5.337,
+      "initMax": 48.55
+    },
+    "faults": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "infraErrors": 0,
+    "bankMinMs": 1800,
+    "rejectedCommand": {
+      "count": 1,
+      "exitCode": 64,
+      "beforeCompileOrGame": true,
+      "reason": "managed entry rejects work/ paths",
+      "independentlyVerified": false
+    }
+  },
+  "authorConfirmationReferencePublicStyleStopChecksRun": false,
+  "authorHistoricDirectoryAndSourceCoreClaimsIndependentlyVerified": false,
+  "evaluatorUsage": {
+    "checks": 0,
+    "compiles": 0,
+    "botStarts": 0,
+    "engineTransitions": 0,
+    "scoredGames": 0,
+    "benchmarks": 0,
+    "replayEngineReverifications": 0,
+    "newBTFitsOrBootstrapDraws": 0
+  },
+  "noUnsubmittedVariantsReceivedOrExecuted": true,
+  "r09SelectionUnchanged": true,
+  "noPosthocWindowRelaxationOrBorderlineAcceptance": true,
+  "doesNotProveBothLinesUnableToWeakenOrStyleFailure": true,
+  "latestComparisonGraphUnchanged": {
+    "report": "reports/phase-B-claude-r08.md",
+    "data": "data/phase-b/claude-r08.json",
+    "observedEdges": 37,
+    "nodes": 10,
+    "uniqueGames": 11840,
+    "missingEdges": 8,
+    "notCompleteK10": true,
+    "newGraphCreated": false,
+    "oldReplaysReverifiedThisRound": false
+  },
+  "oldStrongVersionsPrototypesAndAdoptionCountsUnchanged": true,
+  "strongAdoptions": [
+    1,
+    0,
+    0
+  ],
+  "formalTierAssigned": false,
+  "nextTask": {
+    "round": "r10",
+    "purpose": "bounded explanatory factors/own prospective selection,not retrospective r09 rescue",
+    "dispatched": true,
+    "authorReadOrStartConfirmed": false,
+    "candidateBytesUnknown": true,
+    "evaluationStarted": false,
+    "prospectiveNewGamesByEligibleCount": {"0": 0, "1": 1600, "2": 3520},
+    "prospectiveRegisteredEdgesTwoEligible": 48,
+    "notCompleteK12": true
+  },
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "limits": [
+    "author-run aggregates and CPU are self-report,arithmetic only checked",
+    "no confirmation/public/check/style-stop test for r09",
+    "point window and one-game boundary not statistical tier proof",
+    "four factors do not exhaust possible style-preserving weakening",
+    "new future rules cannot retroactively change r09 or formal acceptance"
+  ]
+}

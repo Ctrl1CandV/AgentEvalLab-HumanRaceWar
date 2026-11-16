@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "closedAt": "2026-11-16T12:05:36.115351+00:00",
+  "decision": "Claude current author batch ready for combined second review;stop automatic development",
+  "readyForAggregationAndSubmission": true,
+  "completePhaseBAcceptance": false,
+  "formalTierOrStyleAcceptance": false,
+  "sourceInspectionOrIndependentRawReproductionClaimed": false,
+  "latestUserInstruction": {
+    "otherGptTasksAlreadyCompleted": true,
+    "reportedBy": "user",
+    "thisSessionMustDecideAndCloseClaudeBatchThenHandoff": true,
+    "notNewT6InspectionOrAcceptance": true
+  },
+  "acceptedBatchInputs": "receivedandsealedr01throughr09;9retainedcandidatesplusoriginalhistory/negativeevidence;r09reportonly",
+  "roster": [
+    {
+      "code": "K-a-r02",
+      "lineage": "attack",
+      "sourceSha256": "2cbcd20e4bd2821b0c102b5420892ac09f802984ac39e22ddd135ffd37900a97",
+      "role": "strong retained",
+      "latestGraphMAnchoredElo": 862.0259661401403
+    },
+    {
+      "code": "K-e-r03",
+      "lineage": "economic",
+      "sourceSha256": "6aa4bb9ce49f6cb1b8c8378208db8c32ce93efb0e750664fbcfd92042083d3f6",
+      "role": "strong retained",
+      "latestGraphMAnchoredElo": 991.0788383147677
+    },
+    {
+      "code": "K-c-r04",
+      "lineage": "control",
+      "sourceSha256": "482ff34d9785a46b0aeca7b15e50fb93da46106424366dbe1b695d124354cdf2",
+      "role": "strong retained",
+      "latestGraphMAnchoredElo": 964.5792590269614
+    },
+    {
+      "code": "K-e-w01-r05",
+      "lineage": "economic",
+      "sourceSha256": "169b8f681ec2de7d405fc60e35d3dab04a9e53d003ada434caa534d4ed4996f7",
+      "role": "development weaker prototype",
+      "latestGraphMAnchoredElo": 934.3728919530649
+    },
+    {
+      "code": "K-c-w01-r05",
+      "lineage": "control",
+      "sourceSha256": "00e672a3e9cd92c124f3a8c74b3432b927612d6aff8b705bb865e7c5eecd8efa",
+      "role": "development weaker prototype",
+      "latestGraphMAnchoredElo": 902.0908211411332
+    },
+    {
+      "code": "K-e-f01-r06",
+      "lineage": "economic",
+      "sourceSha256": "0f7ca65686b5d348d82c7d9d618aa99055e6da8ee019e5748b7da03a285aceea",
+      "role": "development weaker prototype",
+      "latestGraphMAnchoredElo": 805.8332398811214
+    },
+    {
+      "code": "K-c-f01-r07",
+      "lineage": "control",
+      "sourceSha256": "3f15653aae7b8f0d0d07096d887c1ee2f8ce05901fecdf850a27af691299aa60",
+      "role": "development weaker prototype",
+      "latestGraphMAnchoredElo": 778.9965104658897
+    },
+    {
+      "code": "K-e-f02-r08",
+      "lineage": "economic",
+      "sourceSha256": "860a1f049d0853d185519b6a43866331683084f6d5ebf3381228857b8e83abac",
+      "role": "development weaker prototype",
+      "latestGraphMAnchoredElo": 688.9155887606343
+    },
+    {
+      "code": "K-c-f02-r08",
+      "lineage": "control",
+      "sourceSha256": "96205ba5879836f659a89644dd440dddec377c3610d6146c3aca8fd31809b983",
+      "role": "development weaker prototype",
+      "latestGraphMAnchoredElo": 622.4391032343252
+    }
+  ],
+  "strongCandidates": 3,
+  "weakerPrototypes": 6,
+  "strongAdoptions": [
+    1,
+    0,
+    0
+  ],
+  "historicalAttackR01PreservedNotCurrentRetained": true,
+  "latestGraph": {
+    "data": "data/phase-b/claude-r08.json",
+    "nodes": 10,
+    "observedEdges": 37,
+    "modelledPairContrasts": 45,
+    "uniqueGameSlots": 11840,
+    "missingEdges": 8,
+    "notCompleteK10": true,
+    "MAnchoredBT": {
+      "fit": {
+        "elo": [
+          862.0259661401403,
+          991.0788383147677,
+          964.5792590269614,
+          0.0,
+          934.3728919530649,
+          902.0908211411332,
+          805.8332398811214,
+          778.9965104658897,
+          688.9155887606343,
+          622.4391032343252
+        ],
+        "anchorComponent": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "finiteFullMLE": true,
+        "iterations": 8,
+        "maxScoreResidual": 1.9895196601282805e-13
+      },
+      "bootstrapRatings": [
+        {
+          "interval95": [
+            759.9728529097724,
+            1013.9398359710962
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        },
+        {
+          "interval95": [
+            896.8014641309625,
+            1142.6737317058194
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        },
+        {
+          "interval95": [
+            862.1215543078295,
+            1120.6170387876498
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        },
+        {
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        },
+        {
+          "interval95": [
+            840.2880905286805,
+            1083.8858991248287
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        },
+        {
+          "interval95": [
+            803.3063563021693,
+            1051.9738343246822
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        },
+        {
+          "interval95": [
+            704.7057464913854,
+            957.9844918187798
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        },
+        {
+          "interval95": [
+            674.5391361139647,
+            933.6128034131011
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        },
+        {
+          "interval95": [
+            591.4668356183821,
+            832.8920058386257
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        },
+        {
+          "interval95": [
+            527.2486865061359,
+            763.8811003396853
+          ],
+          "unidentifiedSamples": 0,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0,
+          "samples": 4000
+        }
+      ],
+      "finiteFullMLEReplicates": 4000,
+      "samples": 4000,
+      "seed": 4219,
+      "mapClusters": 80
+    },
+    "mapClusters": 80,
+    "seeds": [
+      17,
+      29
+    ],
+    "formalCalibration": false,
+    "oldRatingsOrWDLRewritten": false
+  },
+  "scoringTimeline": [
+    {
+      "round": "r01",
+      "newScoredGames": 1280,
+      "publicData": "data/phase-b/claude-r01.json"
+    },
+    {
+      "round": "r02",
+      "newScoredGames": 1440,
+      "publicData": "data/phase-b/claude-r02.json"
+    },
+    {
+      "round": "r03",
+      "newScoredGames": 1280,
+      "publicData": "data/phase-b/claude-r03.json"
+    },
+    {
+      "round": "r04",
+      "newScoredGames": 1280,
+      "publicData": "data/phase-b/claude-r04.json"
+    },
+    {
+      "round": "graph01",
+      "newScoredGames": 1440,
+      "publicData": "data/phase-b/claude-graph01.json"
+    },
+    {
+      "round": "r05",
+      "newScoredGames": 2880,
+      "publicData": "data/phase-b/claude-r05.json"
+    },
+    {
+      "round": "r06",
+      "newScoredGames": 1600,
+      "publicData": "data/phase-b/claude-r06.json"
+    },
+    {
+      "round": "r07",
+      "newScoredGames": 1920,
+      "publicData": "data/phase-b/claude-r07.json"
+    },
+    {
+      "round": "r08",
+      "newScoredGames": 3520,
+      "publicData": "data/phase-b/claude-r08.json"
+    },
+    {
+      "round": "r09",
+      "newScoredGames": 0,
+      "publicData": "data/phase-b/claude-r09.json"
+    }
+  ],
+  "totalActualNewScoredGamesAcrossHistory": 16640,
+  "doNotAddReusedGamesOrLatestGraphAgain": true,
+  "fullInventory": {
+    "verifiedReadonlyRounds": 52,
+    "files": 495643,
+    "bytes": 11349777368,
+    "scope": "evaluatorworktreeonly,nootherworktreeprivateaudit",
+    "sourceBytesHashedNotReadAsCode": true,
+    "oldReplayEngineSteps": 0
+  },
+  "authorBudgetAndSourceCoreStyleWorkloadClaims": "authorreported,perroundnotindependentlycertified;onesessiondoesnotreplaceformalindependenttests",
+  "historicalIssuesRetained": [
+    "r03 admitted nonbwrapsyntaxcompile;onetimeuserwaitingexceptiononly",
+    "r04 missinginternalpublicregressiongateandonegamepointregressionadmitted;c1behavioralequivalenceunverified",
+    "r08 oldr06directorytemporaryemptystatedirectories;then-currentbytehashmatchnotproofhistoricnomutationoreightsnapshotimpact",
+    "r09 fourpredeclaredschemesoutofownwindow,reportonly;notstylefailureorproofnoprogresspossible",
+    "r08 evaluatorcheckprivateoutputguardrejectedbeforeprepare,zeroexecution;originalfailurepreserved"
+  ],
+  "r10": {
+    "priorTaskPreservedAsHistory": true,
+    "supersededForCurrentBatch": true,
+    "noReceivedCandidateOrEvaluation": true,
+    "authorStartedOrStoppedAcknowledgementKnown": false,
+    "stopNotice": "handoff/in/stop-author-batch-after-r09.md",
+    "stopNoticeByteReadbackVerified": true,
+    "ifAlreadyStarted": "stopnewwork,safelycleanup,preserveallhistory,reportusagethroughuser;notautomaticallyincluded"
+  },
+  "remainingBWorkNotPreconditionForThisBatchReview": [
+    "globalcandidateassemblyandgaplist",
+    "formalcalibrationandtier/style/monotonicityacceptance",
+    "requiredindependentsessionsandanti-exploit/publiczootests",
+    "B-SCORE-001beforeformaltesting,finalsingleholdoutandBacceptance"
+  ],
+  "handoffToAggregationGpt": {
+    "publicReport": "reports/phase-B-claude-author-batch-handoff.md",
+    "branch": "claude-evaluation",
+    "aggregateExistingCompletedToolWork": true,
+    "noNeedToCompleteT6Again": true,
+    "doNotOverwriteMainWorktreeAgentStatusManifest": true,
+    "privateCodeReplaysLedgerNotForPublicUpload": true,
+    "noAutomaticMergePushOrOtherWorktreeWriteByThisSession": true
+  },
+  "thisClosureNewRuntime": {
+    "compiles": 0,
+    "botStarts": 0,
+    "checks": 0,
+    "scoredGames": 0,
+    "benchmarks": 0,
+    "engineTransitions": 0,
+    "BTFits": 0,
+    "bootstrapDraws": 0
+  },
+  "phaseCStarted": false,
+  "furtherAuthorRoundsRequireExplicitUserOrReviewDefinedBoundedTask": true,
+  "closureTechnicalReview": {
+    "runId": "ca4c0462-8640-484f-b48b-311dee752338",
+    "verdict": "No issues found",
+    "scope": "bounded static batch-freeze and public-handoff review only",
+    "independentRawEvidenceReproduction": false,
+    "phaseOrToolAcceptance": false
+  }
+}

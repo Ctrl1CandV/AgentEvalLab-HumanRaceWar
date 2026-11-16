@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "candidate": "K-a-r01",
+  "lineage": "attack",
+  "firstVersion": true,
+  "sourceSha256": "58746ca08f6134ba7281caed72513fa0cbaf0640176359d5e7e070b0e3175bf7",
+  "sourceFileSha256": "2999c4d2c70b9ae62f5539aa790ef887f1b5a632630aa09bd8afa62ab7c82738",
+  "protocol": "claude-evaluation-v1",
+  "complete": true,
+  "checkPassed": true,
+  "total": {
+    "games": 1280,
+    "wins": 1199,
+    "draws": 0,
+    "losses": 81,
+    "halfPoints": 2398,
+    "scoreRate": 0.93671875
+  },
+  "publicOpponents": [
+    {
+      "opponent": "M-balanced",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-eco",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-harass",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-rush",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-towers",
+      "games": 160,
+      "wins": 159,
+      "draws": 0,
+      "losses": 1,
+      "halfPoints": 318,
+      "scoreRate": 0.99375
+    }
+  ],
+  "hiddenOpponentsCombined": {
+    "games": 480,
+    "wins": 400,
+    "draws": 0,
+    "losses": 80,
+    "halfPoints": 800,
+    "scoreRate": 0.8333333333333334
+  },
+  "candidateTurnCpu": {
+    "samples": 323743,
+    "p50Ms": 0.2945,
+    "p99Ms": 0.6083,
+    "maxMs": 1.8097,
+    "totalCpuNs": 100756344500,
+    "percentiles": "nearest rank"
+  },
+  "candidateInitCpu": {
+    "samples": 1280,
+    "p50Ms": 16.7407,
+    "p99Ms": 30.2381,
+    "maxMs": 36.6279,
+    "totalCpuNs": 22875224800,
+    "percentiles": "nearest rank"
+  },
+  "candidateFaults": {},
+  "allBotFaults": {},
+  "candidateTimeoutGames": 0,
+  "candidateWarnings": 0,
+  "allWarnings": 0,
+  "candidateLegalBankUseGames": 0,
+  "candidateOverTurnLimitReplies": 0,
+  "endReasons": {
+    "base_destroyed": 613,
+    "turn_limit_score": 665,
+    "turn_limit_deposit": 2
+  },
+  "temporaryBT": {
+    "elo": "+infinity",
+    "interval95": [
+      "+infinity",
+      "+infinity"
+    ],
+    "unidentifiedSamples": 0,
+    "negativeInfiniteSamples": 0,
+    "positiveInfiniteSamples": 4000,
+    "samples": 4000,
+    "finiteFullMLE": false,
+    "finiteFullMLEReplicates": 0,
+    "anchor": "M-balanced",
+    "mapClusters": 80,
+    "bootstrapSamples": 4000,
+    "bootstrapSeed": 4219,
+    "scope": "this 9-node star only; no old matrix; no pseudocount/clipping/draw rejection"
+  },
+  "usage": {
+    "scoredGames": 1280,
+    "checks": 1,
+    "checkTurns": 5,
+    "compiles": 10,
+    "cacheHits": 0,
+    "botStarts": 2561,
+    "frameworkRetries": 0,
+    "benchmarks": 0,
+    "matchEngineTransitions": 323743,
+    "replayVerificationTransitions": 323743,
+    "checkEngineTransitions": 5,
+    "candidateBotCpuNs": 123631569300,
+    "allMatchBotCpuNs": 262416296200,
+    "matchHarnessCpuNs": 453144628000,
+    "replayVerificationCpuNs": 170083272000,
+    "compileCpuSeconds": null,
+    "compileWallSeconds": 21.397227048008062,
+    "totalSessionCpuSeconds": null,
+    "scope": "compile, bot replies, match harness and replay audit separate; external time totals overlap, never add them again"
+  },
+  "firstVersionBaseline": true,
+  "improvementAdoptions": 0,
+  "authorReports": {
+    "model": "Claude Opus 5.5",
+    "modelId": "claude-opus-5-5",
+    "sessions": 1,
+    "segments": 2,
+    "selftestAndTuningGames": 25377,
+    "wallMinutesApprox": 246,
+    "independentlyVerified": false
+  },
+  "machineFingerprint": {
+    "architecture": "x86_64",
+    "cpu": "Intel(R) Core(TM) i5-14600KF",
+    "logicalCpus": 20,
+    "visibleMemoryGiB": 16
+  },
+  "speedFactor": 0.5998025747312362,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "T6Used": false,
+  "decision": "retain first-version baseline; feedback then stop; CA to interpret separated BT, no finite threshold claim",
+  "feedback": "author handoff/in/feedback-r01.md",
+  "limitations": [
+    "dev temporary star rating, not formal joint calibration",
+    "positive infinity is separation, not infinite strength or verified M+600",
+    "author development costs/model/session count are self-reported, not independently verified",
+    "compile CPU and full-session CPU unknown; disjoint counters not added to overlapping external time"
+  ]
+}

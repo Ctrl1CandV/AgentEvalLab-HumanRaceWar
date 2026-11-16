@@ -1,31 +1,29 @@
 # 状态
 
-更新：2026-11-14。依据`inbox/2026-11-13-phase-b-new-division.md`；B未完成，C未启动。只本地提交，不推送。
+更新：2026-11-16。按用户最新指令汇总第二次审查；B尚未验收，C未启动。仅本地提交，供用户推送。
 
 ## 当前停点
-- T1–T4已完成，用户已报Claude开工。用户最新拆分：本会话只做T6工具；新增GPT专做Claude对接/T5，另用HRW-claude-eval worktree及claude-evaluation分支。
-- T4初建有108份公开材料加清单，任务书及jobs1/jobs6预算投影齐备；初始bot和handoff/in/out为空，无Git或链接，原锁与预算未改、0测速；不窥探作者后续源码。
-- 8池/80张dev图/原种子与jobs6原锁的私有评测v1协议已登记；见reports/phase-B-claude-workspace.md及data/phase-b/claude-workspace.json。
-- T6稿01被CA禁止实机；稿02修复三项阻塞，36工具契约+6进程证据+19既有回归双seed/LSP7文件0，待CA复核。真实bot/编译/bwrap/引擎/check/新局/测速/CPU租用均0，可信进程夹具另计，不得计分。
-- P1已改：四组正常/在途截止，jobs6含ACK后控制器异常退出、未派发队列及真实进程重叠；所有清理/升级夹具均是整体通过前置，实机路径未跑。
-- P2已改：controllerReaped与后代unknown分开，只有专用验收子reaper空树+ECHILD可确认；安全强清不判通过。
-- P3已改：空回放先复现StopIteration后转绿；完整无头拒绝、未完成计部分/无头并保留原件。
-- 用户已确认Claude对接交接，独立评测worktree已存在；本会话不访问其工作内容，只做T6。规则见docs/CLAUDE_EVALUATION_HANDOFF.md。
+- GPT本轮已完成，Claude本批按已接收r01–r09收束，不再等待r10/继续降强/整梯填满才交审。
+- 总入口：reports/phase-B-second-review-request.md；综合聚合data/phase-b/second-review.json，等待远端安排下一步，不自动继续研发或运行。
+- 评测交接固定claude-evaluation提交1da0e91；仅精确集成15份公开报告/12份聚合，不合并分支代码或private，不导入其AGENTS/STATUS/MANIFEST；主STATUS自行更新、清单本地重建。
+- Claude保留三条强主线+六原型，进攻/经济/控制强版改进采纳1/0/0；9候选不是9个已验收等级，风格/源码性质仍仅作者自报。
+- r09仅报告、0候选；r10不纳入。本批按用户通知收束，交接点未载r10开工/作者停止回执，未知额外工作仅另报历史，不自动接收/评测。
 
-## 已收束
-- 用户后续授权清理已完成：DeepSeek79028份已有归档重核，pilot107份全部补存，79135份源/副本两次核字节后删除两个原工作区；只读档案及D-c01保留，Claude未动，零运行。
-- T1关闭DeepSeek及lane的历史保留；旧工作区现按后续用户授权删除，恢复索引见private/maintenance/workspace-retirement-20261113/backup/recovery-index.json。
-- T2最后存量基线677710项通过；旧658449中仅lane/追加笔记两项预期变化，旧字节可核。后续只读轮清单加追加总账；旧STATUS原字节在docs/history。
-- T3完成2080局：直接87/0/73、半分174<176，不采纳E100%，保留E-r02；池提高3.5417pp不替代直接门槛。
-- T3实际8编译/4160启动/0重试、check、测速或候选修订，零故障/超时/警告，2080回放各验证一次；见reports/phase-B-gpt-mainlines-final.md。
-- A-r02、E-r02、C-r02原字节引用已冻结，GPT不再开发策略。全部失败保留，T3已关闭，旧1864/4400等额度不恢复、不结转。
+## 已完成及证据
+- T1关闭DeepSeek线，D-c01仅留低层候选；旧DeepSeek/pilot工作区按后续授权保全后删除，档案和全部失败留本机，不复活旧作者线。
+- T2存量基线与逐轮只读归档/追加总账机制保留；本次不重扫主库private或宣称完成新的全量核验。
+- T3原样2080局，直接87/0/73、半分174<176而不采纳E100%；8编译/4160启动、0重试/check/测速。A-r02/E-r02/C-r02冻结，GPT不再写策略。
+- T4公开作者区及原8池/80dev/jobs6机器绑定协议已备；T5在独立评测worktree使用旧已验收路径，本批累计16640新增统一评测局。
+- 最新graph05为10节点/37实测边/11840唯一槽，八缺边未测；45模型差不是45实测边，含复用槽的11840不能再加到16640。
+- T6交付01被阻塞未实机；交付02 d490626五模块SHA c7b462c05f94c5fcbb3a8b2493ac252301b7af3907ad3c036f6dbe77a71d2d35已通过本地代码复核和用户授权独立Pi agent的单次公开验收。
+- T6正常8局+两组在途停止/ACK/未派发队列/异常控制器及四可信夹具均符合预期，实际bwrap四组无安全强清；异常可信夹具强清反例单列，不混称自然退出。
+- T6实际8编译；可证bot启动至少30、精确量未完整独立核计，按144启动保守预留，原40/400与两交付/6小时模型帽不重置。未接入T5或签发自动计分资格。
+- T6结果：reports/phase-B-public-tools-t6-acceptance02.md及对应聚合；原件留runs/t6-acceptance02，未复制回放/逐局索引。
 
-## 下一项与有效边界
-- T5等待用户通知Claude交付：最多3候选，每候选先check；首版1280局，后续同作者两段式、正常新增1440，硬帽2080局/2小时/0测速。反馈后停止。
-- Claude按BRIEF-CLAUDE每轮1会话/8小时/30000自测调参局/jobs≤6，从公开材料独立起步；到达里程碑停交CA。
-- 两个GPT各写自己的worktree/index/STATUS/private/总账，不互写或自动合并；只有对接GPT写作者handoff/in反馈，均不读改/转交源码，不泄露隐藏输入/逐局/隐藏逐对弱点。
-- 作者自测、T5评测、T6实机验收由用户错峰，沿用原TMPDIR和CPU/编译锁；bot/编译离线bwrap，不裸用plain、不重测或抢锁。
-- T6原6小时模型/2交付及40编译/400启动总帽不重置；稿02预留8编译/144启动，含队列的18计划局，源码01实际0。若本稿再未通过即停重划，不交第三稿。
-- 复核入口reports/phase-B-public-tools-t6-02-review-request.md；先由CA确认五模块版本，再由用户错峰运行一次，当前不允许运行或计分。
-- 不改冻结规则/引擎/SDK/standard-1/地图/计量锁；public开发、dev取舍/临时BT、calibration正式校准、grading正式评分、holdout仅B末一次。
-- 待裁定B-SCORE-001在阶梯冻结前处理；不迁移Windows，不读/复制/清理仓外调试文件，不推送。
+## 仍待裁定及安全边界
+- 全梯组装/缺口分析、正式校准、等级/风格检查、规定独立测试、防“一招鲜”、B-SCORE-001与最终一次holdout仍待后续计划，不以本批就绪冒充B通过。
+- 交接公开材料保留r03编译违规/单次等待例外、r04内部回归漏门、r08目录元数据事件及guard零运行失败、r09四未选方案等全部负例，不改旧判定。
+- 本次只整合公开报告/聚合并做纯发布检查；新增bot/编译/check/引擎步/对局/测速/拟合/bootstrap均0。完整会话/模型/编译CPU未知不补造。
+- 各worktree仍独占index/私有总账；不写评测或作者目录，不读改/AST/import/转交Claude源码，不复制private或认证材料。
+- 公开仅代码/测试/文档/聚合；隐藏输入、逐局/回放和原始清单留本机。保留hooks及发布检查，不reset/stash、改历史或推送。
+- public用于开发、dev用于取舍/临时BT、calibration正式校准、grading正式评分、holdout仅B末一次；规则/SDK/standard-1/原锁和验收门槛不改。

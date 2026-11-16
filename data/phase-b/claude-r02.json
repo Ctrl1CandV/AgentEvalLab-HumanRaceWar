@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "candidate": "K-a-r02",
+  "lineage": "attack",
+  "firstVersion": false,
+  "sourceSha256": "2cbcd20e4bd2821b0c102b5420892ac09f802984ac39e22ddd135ffd37900a97",
+  "sourceFileSha256": "046450d58a543ef6ad415c9137e84b5e3596277fe31466fe7a081e87beab9849",
+  "retainedVersionBefore": "K-a-r01",
+  "protocol": "claude-evaluation-v1",
+  "complete": true,
+  "checkPassed": true,
+  "firstStage": {
+    "games": 80,
+    "wins": 47,
+    "draws": 0,
+    "losses": 33,
+    "halfPoints": 94,
+    "scoreRate": 0.5875
+  },
+  "secondStage": {
+    "games": 80,
+    "wins": 52,
+    "draws": 0,
+    "losses": 28,
+    "halfPoints": 104,
+    "scoreRate": 0.65
+  },
+  "directTotal": {
+    "games": 160,
+    "wins": 99,
+    "draws": 0,
+    "losses": 61,
+    "halfPoints": 198,
+    "scoreRate": 0.61875
+  },
+  "total": {
+    "games": 1280,
+    "wins": 1199,
+    "draws": 0,
+    "losses": 81,
+    "halfPoints": 2398,
+    "scoreRate": 0.93671875
+  },
+  "oldPoolTotal": {
+    "games": 1280,
+    "wins": 1199,
+    "draws": 0,
+    "losses": 81,
+    "halfPoints": 2398,
+    "scoreRate": 0.93671875
+  },
+  "poolHalfPointComparisonLhs": 0,
+  "poolHalfPointComparisonRhs": 5120,
+  "poolScoreChangePercentagePoints": 0.0,
+  "directGatePassed": true,
+  "poolGatePassed": true,
+  "adopted": true,
+  "retainedVersionAfter": "K-a-r02",
+  "consecutiveImprovementAdoptions": 1,
+  "publicOpponents": [
+    {
+      "opponent": "M-balanced",
+      "games": 160,
+      "wins": 159,
+      "draws": 0,
+      "losses": 1,
+      "halfPoints": 318,
+      "scoreRate": 0.99375
+    },
+    {
+      "opponent": "Z-eco",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-harass",
+      "games": 160,
+      "wins": 156,
+      "draws": 0,
+      "losses": 4,
+      "halfPoints": 312,
+      "scoreRate": 0.975
+    },
+    {
+      "opponent": "Z-rush",
+      "games": 160,
+      "wins": 159,
+      "draws": 0,
+      "losses": 1,
+      "halfPoints": 318,
+      "scoreRate": 0.99375
+    },
+    {
+      "opponent": "Z-towers",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    }
+  ],
+  "hiddenOpponentsCombined": {
+    "games": 480,
+    "wins": 405,
+    "draws": 0,
+    "losses": 75,
+    "halfPoints": 810,
+    "scoreRate": 0.84375
+  },
+  "candidateTurnCpu": {
+    "samples": 373196,
+    "p50Ms": 0.3106,
+    "p99Ms": 0.6303,
+    "maxMs": 1.9787,
+    "totalCpuNs": 121794375100,
+    "percentiles": "nearest rank"
+  },
+  "candidateInitCpu": {
+    "samples": 1440,
+    "p50Ms": 16.6507,
+    "p99Ms": 30.6615,
+    "maxMs": 34.8957,
+    "totalCpuNs": 25705137000,
+    "percentiles": "nearest rank"
+  },
+  "candidatePoolTurnCpu": {
+    "samples": 326532,
+    "p50Ms": 0.3088,
+    "p99Ms": 0.622,
+    "maxMs": 1.9787,
+    "totalCpuNs": 105841249300,
+    "percentiles": "nearest rank"
+  },
+  "candidatePoolInitCpu": {
+    "samples": 1280,
+    "p50Ms": 16.6409,
+    "p99Ms": 30.5798,
+    "maxMs": 34.8957,
+    "totalCpuNs": 22804393400,
+    "percentiles": "nearest rank"
+  },
+  "candidateFaults": {},
+  "allBotFaults": {},
+  "candidateTimeoutGames": 0,
+  "candidateWarnings": 0,
+  "allWarnings": 0,
+  "candidateLegalBankUseGames": 0,
+  "candidateOverTurnLimitReplies": 0,
+  "endReasonsAllNewGames": {
+    "base_destroyed": 649,
+    "turn_limit_score": 790,
+    "turn_limit_deposit": 1
+  },
+  "poolEndReasons": {
+    "base_destroyed": 624,
+    "turn_limit_score": 656
+  },
+  "temporaryBT": {
+    "elo": 880.5588497262919,
+    "interval95": [
+      687.5113590756389,
+      "+infinity"
+    ],
+    "unidentifiedSamples": 0,
+    "negativeInfiniteSamples": 0,
+    "positiveInfiniteSamples": 1473,
+    "samples": 4000,
+    "finiteFullMLE": false,
+    "finiteFullMLEReplicates": 0,
+    "anchor": "M-balanced",
+    "mapClusters": 80,
+    "bootstrapSamples": 4000,
+    "bootstrapSeed": 4219,
+    "scope": "r02 9-node pool star only, excluding all direct games and all older matrices; no pseudocount/clipping/draw rejection"
+  },
+  "usage": {
+    "scoredGames": 1440,
+    "directGames": 160,
+    "candidatePoolGames": 1280,
+    "reusedRetainedPoolGames": 1280,
+    "checks": 1,
+    "checkTurns": 5,
+    "compiles": 14,
+    "cacheHits": 0,
+    "botStarts": 2881,
+    "frameworkRetries": 0,
+    "benchmarks": 0,
+    "matchEngineTransitions": 373196,
+    "replayVerificationTransitions": 373196,
+    "checkEngineTransitions": 5,
+    "newReplayAudits": 1440,
+    "oldReplayReverifications": 0,
+    "allMatchBotCpuNs": 304807452400,
+    "candidateBotCpuNs": 147499512100,
+    "matchHarnessCpuNs": 537448318900,
+    "replayVerificationCpuNs": 196278758600,
+    "compileCpuSeconds": null,
+    "compileWallSeconds": 39.95175219000015,
+    "matchBatchWallSeconds": 184.17000000000002,
+    "singleDeadlineWindowSeconds": 257.41149688599995,
+    "totalSessionCpuSeconds": null,
+    "checkExternalUsage": {
+      "wallSeconds": 4.82,
+      "userSeconds": 0.07,
+      "systemSeconds": 0.01,
+      "exitStatus": 0.0,
+      "maxRssKiB": 24444.0
+    },
+    "scope": "new r02 work only; compile/bot/match harness/replay counters separate; external time overlaps and is not added again"
+  },
+  "finiteEloMilestoneReached": true,
+  "authorReports": {
+    "model": "Claude Opus 5.5",
+    "modelId": "claude-opus-5-5",
+    "sessions": 1,
+    "sameSessionAsR01": true,
+    "selftestAndTuningGames": 16484,
+    "wallMinutesApprox": 107,
+    "startedAt": "2026-11-14T07:35:42+01:00",
+    "finishedAtApprox": "2026-11-14T09:23:00+01:00",
+    "independentlyVerified": false,
+    "authorRunsInspected": false
+  },
+  "machineFingerprint": {
+    "architecture": "x86_64",
+    "cpu": "Intel(R) Core(TM) i5-14600KF",
+    "logicalCpus": 20,
+    "visibleMemoryGiB": 16
+  },
+  "speedFactor": 0.5998025747312362,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "T6Used": false,
+  "milestoneReviewRequired": true,
+  "decision": "adopt K-a-r02; consecutive improvement adoption 1; finite dev Elo triggers original milestone CA stop",
+  "feedback": "author handoff/in/feedback-r02.md",
+  "reviewRequest": "reports/phase-B-claude-milestone-review-request.md",
+  "limitations": [
+    "finite candidate estimate is in its M-anchored identifiable component, not a finite full-graph MLE",
+    "all 1473 infinite candidate bootstrap draws retained; no clipping or pseudocounts",
+    "r01 infinite estimate cannot be numerically ranked against r02 finite estimate",
+    "dev temporary rating is not a formal ladder tier, joint calibration or B acceptance",
+    "same author session and development costs are self-reported; not formal independent testing"
+  ]
+}

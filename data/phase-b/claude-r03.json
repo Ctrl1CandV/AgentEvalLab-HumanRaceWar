@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "candidate": "K-e-r03",
+  "lineage": "economic",
+  "firstVersion": true,
+  "sourceSha256": "6aa4bb9ce49f6cb1b8c8378208db8c32ce93efb0e750664fbcfd92042083d3f6",
+  "sourceFileSha256": "bdf8cfaac7991f708cd794b3dd62c187cf0641ab5418fb362402166a666769f8",
+  "protocol": "claude-evaluation-v1",
+  "complete": true,
+  "checkPassed": true,
+  "total": {
+    "games": 1280,
+    "wins": 1231,
+    "draws": 0,
+    "losses": 49,
+    "halfPoints": 2462,
+    "scoreRate": 0.96171875
+  },
+  "publicOpponents": [
+    {
+      "opponent": "M-balanced",
+      "games": 160,
+      "wins": 159,
+      "draws": 0,
+      "losses": 1,
+      "halfPoints": 318,
+      "scoreRate": 0.99375
+    },
+    {
+      "opponent": "Z-eco",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-harass",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-rush",
+      "games": 160,
+      "wins": 160,
+      "draws": 0,
+      "losses": 0,
+      "halfPoints": 320,
+      "scoreRate": 1.0
+    },
+    {
+      "opponent": "Z-towers",
+      "games": 160,
+      "wins": 159,
+      "draws": 0,
+      "losses": 1,
+      "halfPoints": 318,
+      "scoreRate": 0.99375
+    }
+  ],
+  "hiddenOpponentsCombined": {
+    "games": 480,
+    "wins": 433,
+    "draws": 0,
+    "losses": 47,
+    "halfPoints": 866,
+    "scoreRate": 0.9020833333333333
+  },
+  "candidateTurnCpu": {
+    "samples": 325021,
+    "p50Ms": 0.3567,
+    "p99Ms": 0.726,
+    "maxMs": 3.8288,
+    "totalCpuNs": 122004342200,
+    "percentiles": "nearest rank"
+  },
+  "candidateInitCpu": {
+    "samples": 1280,
+    "p50Ms": 17.4978,
+    "p99Ms": 33.0036,
+    "maxMs": 44.5247,
+    "totalCpuNs": 24110496900,
+    "percentiles": "nearest rank"
+  },
+  "candidateFaults": {},
+  "allBotFaults": {},
+  "candidateTimeoutGames": 0,
+  "candidateWarnings": 0,
+  "allWarnings": 0,
+  "candidateLegalBankUseGames": 0,
+  "candidateOverTurnLimitReplies": 0,
+  "endReasons": {
+    "base_destroyed": 617,
+    "turn_limit_score": 663
+  },
+  "temporaryBT": {
+    "elo": 880.5588497262919,
+    "interval95": [
+      687.511359075639,
+      "+infinity"
+    ],
+    "unidentifiedSamples": 0,
+    "negativeInfiniteSamples": 0,
+    "positiveInfiniteSamples": 1435,
+    "samples": 4000,
+    "finiteFullMLE": false,
+    "finiteFullMLEReplicates": 0,
+    "anchor": "M-balanced",
+    "mapClusters": 80,
+    "bootstrapSamples": 4000,
+    "bootstrapSeed": 4219,
+    "scope": "this 9-node star only; no old matrix; no pseudocount/clipping/draw rejection"
+  },
+  "usage": {
+    "scoredGames": 1280,
+    "checks": 1,
+    "checkTurns": 5,
+    "compiles": 10,
+    "cacheHits": 0,
+    "botStarts": 2561,
+    "frameworkRetries": 0,
+    "benchmarks": 0,
+    "matchEngineTransitions": 325021,
+    "replayVerificationTransitions": 325021,
+    "checkEngineTransitions": 5,
+    "candidateBotCpuNs": 146114839100,
+    "allMatchBotCpuNs": 295970039300,
+    "matchHarnessCpuNs": 503705159600,
+    "replayVerificationCpuNs": 178348700000,
+    "compileCpuSeconds": null,
+    "compileWallSeconds": 26.972923791006906,
+    "totalSessionCpuSeconds": null,
+    "scope": "compile, bot replies, match harness and replay audit separate; external time totals overlap, never add them again"
+  },
+  "scoringWallSeconds": 160.10011645600025,
+  "firstVersionBaseline": true,
+  "improvementAdoptions": 0,
+  "candidatePointAndAllBootstrapClosedFormCrossCheck": true,
+  "adoptedAsFirstEconomicDevBaseline": true,
+  "retainedEconomicAfter": "K-e-r03",
+  "attackRetainedUnchanged": "K-a-r02",
+  "attackConsecutiveImprovementAdoptionsUnchanged": 1,
+  "independentExternalFinalAcceptance": false,
+  "interimReviewRole": "current user-assigned Claude evaluator/reviewer",
+  "formalTierAssigned": false,
+  "T6Used": false,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "authorReports": {
+    "model": "Claude Opus 5.5",
+    "sessions": 1,
+    "sameSessionAsR01": true,
+    "selftestAndTuningGames": 8338,
+    "independentlyVerified": false
+  },
+  "developmentCompliance": {
+    "specificR03WaitingExceptionApprovedByUser": true,
+    "reportedGrossWallSeconds": 42971,
+    "reportedIdleApprovalWaitSeconds": 38231,
+    "conditionalWorkWallSeconds": 4740,
+    "timestampsAndIdleWaitIndependentlyVerified": false,
+    "finishTimeMinutePrecision": true,
+    "futureWaitingAutomaticallyExcluded": false,
+    "nonBwrapCompilerInvocationsAdmitted": 1,
+    "compileViolationRetained": true,
+    "binaryNotRunOrDeletedIndependentlyVerified": false,
+    "deletedBinaryReceived": false,
+    "authorManagedEntryPipelineFailuresAdmitted": 4
+  },
+  "statisticalLimits": [
+    "dev maps reused for selection, not independent holdout",
+    "M-star contrast not a joint finite ladder fit or cross-lineage ranking",
+    "cluster interval conditional on frozen map/seed setup; no seed-robustness proof",
+    "economic style registered from self-report, no source-level independence certification"
+  ],
+  "nextRecommendation": "control mainline first version before workload tiers; not yet dispatched or execution-authorized"
+}

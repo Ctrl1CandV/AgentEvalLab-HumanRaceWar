@@ -1,9 +1,19 @@
 # 审查报告
 
-当前进度只见STATUS；执行权限以2026-11-13新分工为准，下面历史报告不提供当前授权。以后每轮报告一页。用户随后拆分工具与对接/评测GPT，见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
+当前停点见STATUS，最新交审入口如下；执行权限以用户最新指令和有效裁定为准，历史报告中的下一任务不自动提供当前授权。工具与对接/评测GPT分工见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
 
-- [`phase-B-public-tools-t6-02-review-request.md`](phase-B-public-tools-t6-02-review-request.md)：稿02复核入口；已修停止验收、清理字段和空回放，五模块新摘要，未获准实机或计分。
-- [`phase-B-public-tools-t6-02.md`](phase-B-public-tools-t6-02.md)：第二稿修复/测试/预算，可信进程夹具不当bot残留证据；真实bot/编译/bwrap/引擎0，先CA再用户错峰验收。
+## 第二次综合审查（2026-11-16）
+
+- [`phase-B-second-review-request.md`](phase-B-second-review-request.md)：本次总入口。GPT完成工作+Claude固定r01–r09，不再等继续开发；请远端安排整体组装/缺口与后续验收，不是B通过。
+- [`phase-B-claude-author-batch-handoff.md`](phase-B-claude-author-batch-handoff.md)：claude-evaluation固定提交1da0e91，三强主线/六原型、全部负例及剩余B工作；配套[`收束聚合`](../data/phase-b/claude-author-batch-closure.json)。
+- [`phase-B-public-tools-t6-acceptance02.md`](phase-B-public-tools-t6-acceptance02.md)：T6交付02本地代码复核及单次公开非计分实机验收通过；启动量未知和清理/并发边界单列，不自动授计分资格。
+- Claude原轮：[`r01`](phase-B-claude-r01.md)、[`r02`](phase-B-claude-r02.md)、[`r03收包问题`](phase-B-claude-r03-intake.md)、[`r03结果`](phase-B-claude-r03.md)、[`r04`](phase-B-claude-r04.md)、[`graph01`](phase-B-claude-graph01.md)、[`r05`](phase-B-claude-r05.md)、[`r06`](phase-B-claude-r06.md)、[`r07`](phase-B-claude-r07.md)、[`r08`](phase-B-claude-r08.md)、[`r09零交付`](phase-B-claude-r09.md)，各有对应data/phase-b聚合；历史图、无穷抽样和未选方案不丢弃。
+- Claude历史说明：[`会话连续性`](phase-B-claude-author-continuity.md)、[`进攻里程碑原请求`](phase-B-claude-milestone-review-request.md)、[`中间裁定`](phase-B-claude-milestone-review.md)。原文按固定提交保留，不当当前继续r10的授权。
+
+## 历史工作与检查点
+
+- [`phase-B-public-tools-t6-02-review-request.md`](phase-B-public-tools-t6-02-review-request.md)：第二稿执行前复核请求，历史“未获准实机”状态已由上列单次验收结果更新；原请求不改。
+- [`phase-B-public-tools-t6-02.md`](phase-B-public-tools-t6-02.md)：第二稿修复/测试/预算的执行前报告；可信夹具不当bot残留证据，当时真实运行0，后续实际验收另列。
 
 - [`phase-B-public-tools-t6-01-review-request.md`](phase-B-public-tools-t6-01-review-request.md)：T6交付01独立CA审查入口；源码仍45fb7ed，4项真实CLI/标准零任务规划补证通过，未开二稿、真实运行0。先审查，不能直接当作验收通过。
 

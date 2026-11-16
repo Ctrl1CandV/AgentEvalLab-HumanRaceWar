@@ -4,6 +4,7 @@ AgentEvalLab的CA竞技场题族：被测模型为“前哨”编写bot，由固
 
 ## 工作入口
 
+- [第二次综合审查](reports/phase-B-second-review-request.md)：GPT已完成工作、Claude r01–r09固定批次及T6公开验收；本批已可交审，不等于B通过。
 - [STATUS.md](STATUS.md)：当前停点、有效授权、上限和下一步，保持40行以内。
 - [2026-11-13新分工](inbox/2026-11-13-phase-b-new-division.md)：当前任务与权限；取代旧E/DeepSeek协调窗口。
 - [专项审查](inbox/2026-11-13-phase-b-blockage-review.md)：分析依据，旧角色表/工作包以新分工为准。
