@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
-  "date": "2026-11-16",
+  "date": "2026-11-17",
+  "decisionDate": "2026-11-16",
   "task": "two T6 follow-up fixes and exact public integration only",
   "decisionSource": "inbox/2026-11-16-phase-b-second-review.md",
   "baseCommit": "0ce8cf11630c7ae121fde89611137c32d841cbe6",
@@ -18,6 +19,7 @@
     "proxyOrAuthenticationSettingsChanged": false
   },
   "launchAccounting": {
+    "implementationCommit": "8b20ba54d3d9022059eb894f72c57075a2ae1e42",
     "implementationSha256": "f1cc79ed972db275b48852e3315d197421989fc63478fdf90d8b08eac0f4b21b",
     "implementationFiles": ["tools/experiment_plan.py", "tools/experiment.py", "tools/profile_bot.py", "tools/accept_t6.py", "tools/process_evidence.py", "tools/runtime_counts.py"],
     "fields": ["compiles", "botStarts"],
