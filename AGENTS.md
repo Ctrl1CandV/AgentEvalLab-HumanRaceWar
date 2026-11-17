@@ -2,13 +2,17 @@
 
 ## 当前分工与任务依据
 
-以 `inbox/2026-11-13-phase-b-new-division.md` 和用户最新指令为准；同日blockage-review的A、B1/B3/B4/B5有效，旧角色表和工作包已被取代。
+当前以 `inbox/2026-11-16-phase-b-second-review.md` 及用户最新指令为准；11-13分工的未冲突边界继续有效，同日blockage-review的A、B1/B3/B4/B5及历史保全要求不变。
 
 - 用户最新拆分为工具GPT、对接/评测GPT和Claude作者。工具GPT只在本WSL主worktree做T6；对接GPT在独立`~/projects/HRW-claude-eval` worktree/`claude-evaluation`分支做T5；Claude在`~/projects/HRW-claude`从零写强bot。详见`docs/CLAUDE_EVALUATION_HANDOFF.md`，旧“两工作者”表仅为历史。
 - GPT不再写阶梯bot；T3只原样评测已经冻结的E100%候选，不改源码。GPT不读、不改Claude源码，也不把它交给其他人。
 - DeepSeek线已经结束。用户后续授权在完整字节保全后删除旧HRW-deepseek/HRW-pilot工作区，现已删除；原始文件、交付和失败证据仍在private只读归档。不再开旧作者会话、发任务或反馈；不读、不执行作者或pilot代码，只按字节处理档案。
 - 两个GPT各自独占本worktree的代码/私有档案/总账/STATUS/index，不直接写对方目录或自动合并分支。只有对接GPT可写Claude的`handoff/in/`反馈，除此不改作者工作区。新评测worktree按交接复制最小已冻结输入，不复制整库private或主总账。旧lane/全局冻结窗口不恢复。
 - T1–T4已完成，用户已启动Claude；对接GPT的T5仍必须等用户明确通知交付及错峰运行。工具GPT专做T6，CA及用户验收前不得接到计分。新会话由用户开启，当前会话不代开、不转交作者源码。
+
+## 本轮工具/汇总收尾
+
+T6两项小修已在8b20ba5/b4a152c完成，用户确认WP-B另会话已完成，本会话不重做。当前仅按固定c47c435精确导入三项公开成果并汇总提交；不导入评测管理文件或private，不改其他工作区，不新增实机运行，不从源材料的旧派发状态推断WP-B未完成。具体WP-B结果以另一会话最终反馈为准，未提供的结果数字不得补造。
 
 ## 每次开工
 

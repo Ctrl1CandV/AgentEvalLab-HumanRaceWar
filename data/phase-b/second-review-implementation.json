@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-17",
+  "task": "Second-review implementation: finish tool/public integration and prepare combined handoff",
+  "entry": "reports/phase-B-second-review-implementation.md",
+  "localToolAndPublicIntegrationComplete": true,
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "authority": "inbox/2026-11-16-phase-b-second-review.md plus latest user instruction;do not redo WP-B or T6 fixes",
+  "integration": {
+    "baseCommit": "b4a152c297ff36b0662a66e3368f53b464ca657f",
+    "sourceCommit": "c47c4355bf4843f0494a5db517e1f910340599a5",
+    "sourceBranch": "claude-evaluation",
+    "method": "three explicitly selected public files from immutable git objects;no merge",
+    "files": [
+      {
+        "path": "reports/phase-B-claude-joint-dev01.md",
+        "bytes": 2221,
+        "sha256": "bafb07d937d31e6257b59999475053c10e1447cec9d4c5d4225d4b9eb6a023ba",
+        "exactCommittedBytes": true
+      },
+      {
+        "path": "data/phase-b/claude-joint-dev01.json",
+        "bytes": 69484,
+        "sha256": "74480738103523e701ae30333c5af78e73fe1e79eab0ee87fa3260fe89cd2938",
+        "exactCommittedBytes": true
+      },
+      {
+        "path": "docs/CLAUDE_DEV_ASSEMBLY_SCOPE.md",
+        "bytes": 2771,
+        "sha256": "181864e3a3f6c2138b6dcf202fc6fd3bd17cf1ffc49e88efe6ff90a1f66a6410",
+        "exactCommittedBytes": true
+      }
+    ],
+    "importedCodeOrPrivateFiles": 0,
+    "importedManagementFiles": 0,
+    "otherWorktreesModified": false
+  },
+  "t6": {
+    "implementationCommit": "8b20ba54d3d9022059eb894f72c57075a2ae1e42",
+    "recordCompletionCommit": "b4a152c297ff36b0662a66e3368f53b464ca657f",
+    "report": "reports/phase-B-t6-small-fixes-20261116.md",
+    "aggregate": "data/phase-b/t6-small-fixes-20261116.json",
+    "reportedPureTestsPerSeed": 91,
+    "reportedHashSeeds": [
+      0,
+      1
+    ],
+    "reportedLspFiles": 9,
+    "reportedLspDiagnostics": 0,
+    "fixes": [
+      "exact compilation/bot-launch call accounting",
+      "three positive host-lock tests skip on foreign host"
+    ],
+    "testsOrRealMachineAcceptanceRepeatedHere": false,
+    "productionScoringEligibilityGrantedHere": false
+  },
+  "wpa": {
+    "status": "completed and public results imported",
+    "sourceCommit": "c47c4355bf4843f0494a5db517e1f910340599a5",
+    "report": "reports/phase-B-claude-joint-dev01.md",
+    "aggregate": "data/phase-b/claude-joint-dev01.json",
+    "scope": "docs/CLAUDE_DEV_ASSEMBLY_SCOPE.md",
+    "reportedUsage": {
+      "newScoredGames": 7200,
+      "newJointGames": 5760,
+      "newProbeGames": 1440,
+      "oldReusedWithoutEngineStep": 11840,
+      "jointUniqueGames": 17600,
+      "allUniqueGamesIncludingProbe": 19040,
+      "historicalNewScoredGamesBeforeWPA": 16640,
+      "historicalNewScoredGamesThroughWPA": 23840,
+      "checks": 0,
+      "benchmarks": 0,
+      "compiles": 27,
+      "botStarts": 14400,
+      "infrastructureErrors": 0,
+      "configurationErrors": 0,
+      "standardRetries": 0,
+      "botFaults": 0,
+      "timeouts": 0,
+      "warnings": 0,
+      "scoringWallSeconds": 814.312333813,
+      "compileWallSecondsOverlappingScoring": 75.92022778199816,
+      "compilerCpuSeconds": null,
+      "botCpuNs": 1689894163000,
+      "hostHarnessCpuNs": 2570223975000,
+      "replayVerificationCpuNs": 1010944774700,
+      "replayVerificationWallSeconds": 169.014727983,
+      "newVerifiedReplays": 7200,
+      "oldReplayEngineReverifications": 0,
+      "newMatchEngineSteps": 1915387,
+      "newReplayVerificationEngineSteps": 1915387,
+      "styleExtractionEngineSteps": 0,
+      "minRemainingBankNs": 1800000000,
+      "turnCpuMs": {
+        "p50": 0.3596,
+        "p99": 0.9344,
+        "max": 6.3194
+      },
+      "initCpuMs": {
+        "p50": 10.102,
+        "p99": 27.2634,
+        "max": 36.1214
+      },
+      "endings": {
+        "base_destroyed": 2664,
+        "turn_limit_score": 4525,
+        "turn_limit_deposit": 11
+      },
+      "fullSessionCpuSeconds": null
+    },
+    "jointNodes": 13,
+    "observedEdges": 55,
+    "unobservedPairs": 23,
+    "uniqueJointGames": 17600,
+    "gapsBeforeWPB": [
+      {
+        "id": "P0",
+        "center": 0.0,
+        "range": [
+          -40.0,
+          40.0
+        ],
+        "existingCandidates": [
+          "M-balanced"
+        ],
+        "existingStyles": [
+          "public-anchor"
+        ],
+        "minimumAdditionalStyles": 1,
+        "requestedAuthorStyles": [
+          "economic",
+          "control"
+        ],
+        "expectedPublicMScoreRate": 0.5,
+        "expectedPublicMScoreRateRange": [
+          0.44268836623770724,
+          0.5573116337622928
+        ],
+        "bridgeOriginalGap": 0
+      },
+      {
+        "id": "P1",
+        "center": 84.57994298783493,
+        "range": [
+          44.579942987834926,
+          124.57994298783493
+        ],
+        "existingCandidates": [
+          "A-r02"
+        ],
+        "existingStyles": [
+          "attack"
+        ],
+        "minimumAdditionalStyles": 1,
+        "requestedAuthorStyles": [
+          "economic",
+          "control"
+        ],
+        "expectedPublicMScoreRate": 0.6193714691965643,
+        "expectedPublicMScoreRateRange": [
+          0.5638059159527216,
+          0.6719768706452245
+        ],
+        "bridgeOriginalGap": 0
+      },
+      {
+        "id": "P2",
+        "center": 218.88622864709075,
+        "range": [
+          178.88622864709075,
+          258.8862286470908
+        ],
+        "existingCandidates": [],
+        "existingStyles": [],
+        "minimumAdditionalStyles": 2,
+        "requestedAuthorStyles": [
+          "economic",
+          "control"
+        ],
+        "expectedPublicMScoreRate": 0.7790279011513883,
+        "expectedPublicMScoreRateRange": [
+          0.7368677953064084,
+          0.8161186336440717
+        ],
+        "bridgeOriginalGap": 268.61257131851164
+      }
+    ],
+    "maxPooledZooScore": 0.05,
+    "independentPrivateEvidenceReproduction": false,
+    "historicalDispatchFieldsAreAsOfSourceCommitNotCurrentWPBStatus": true
+  },
+  "wpb": {
+    "status": "user-confirmed completed in another session",
+    "source": "latest user message",
+    "redoRequestedOrPerformed": false,
+    "finalPublicReportReference": null,
+    "finalPublicCommitReference": null,
+    "finalPublicResultsImportedHere": false,
+    "attachmentActuallyProvided": "T6 completion receipt for8b20ba5/b4a152c",
+    "newUsageOrAdoptionsInferred": false,
+    "note": "Do not infer incompletion from the earlier WP-A snapshot. User can submit the other session feedback alongside this handoff;no source inspection or new evaluation."
+  },
+  "currentIntegrationRuntime": {
+    "botStarts": 0,
+    "compiles": 0,
+    "bwrapRuns": 0,
+    "checks": 0,
+    "engineSteps": 0,
+    "scoredGames": 0,
+    "benchmarks": 0,
+    "btFits": 0,
+    "bootstrapDraws": 0,
+    "cpuLeases": 0
+  },
+  "validation": {
+    "purePublicationTests": {"hashSeeds": [0, 1], "testsPerSeed": 5, "passed": true},
+    "historicalPublicFilesRechecked": 27,
+    "historicalPublicSetSha256": "9c152f924a3facf7f44955a4ea13ace305c3a70f6d8dc8b350203f5bc9d052ec",
+    "metadataHelperLspFiles": 2,
+    "metadataHelperLspDiagnostics": 0,
+    "completeRuntimeSuiteRepeated": false
+  },
+  "validationScope": "committed public byte identity,aggregate consistency,unchanged code scope,pure publication tests and staged release guard;not full B acceptance",
+  "privateBaselineOrEvaluatorRawArchiveRescanned": false,
+  "botSourceInterpretedAstImportedOrDelegated": false,
+  "publication": {
+    "localCommitOnly": true,
+    "pushByUser": true,
+    "rawEvidenceRemainsInOriginalWorktrees": true
+  }
+}

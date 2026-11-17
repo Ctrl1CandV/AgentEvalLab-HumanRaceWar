@@ -2,11 +2,12 @@
 
 当前停点见STATUS，最新交审入口如下；执行权限以用户最新指令和有效裁定为准，历史报告中的下一任务不自动提供当前授权。工具与对接/评测GPT分工见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
 
-## 第二次审查后：T6小修与公开材料同步
+## 第二次审查后：本轮实施汇总
 
-[审查结论](../inbox/2026-11-16-phase-b-second-review.md)已接受前一批成果，B转入阶梯组装。工具/汇总方仅做本轮两项小修及公开集成，WP-A/WP-B仍由评测方执行。
+当前入口是[本轮实施汇总](phase-B-second-review-implementation.md)及[对应JSON](../data/phase-b/second-review-implementation.json)。T6小修完成，WP-A三项公开成果已按c47c435精确集成；用户确认WP-B由另一会话完成，本会话不重做，其最终反馈可并列交审。导入材料的旧派发状态仅代表源提交时点。
 
-- [`phase-B-t6-small-fixes-20261116.md`](phase-B-t6-small-fixes-20261116.md)：精确计数、三项异机跳过与当前无新增公开增量；细节见对应JSON。
+- [`phase-B-claude-joint-dev01.md`](phase-B-claude-joint-dev01.md)：WP-A联合图、暂定组装和补候选前缺口；[聚合](../data/phase-b/claude-joint-dev01.json)与[口径说明](../docs/CLAUDE_DEV_ASSEMBLY_SCOPE.md)同步导入。
+- [`phase-B-t6-small-fixes-20261116.md`](phase-B-t6-small-fixes-20261116.md)：精确计数、三项异机跳过与当时的同步检查点；细节见对应JSON，历史原字节不改。
 - [统一报告口径](../docs/PHASE_B_REPORTING.md)：新报告简述结果、一张表；方法、负例和用量放JSON，不重写旧冻结报告。
 
 ## 第二次综合审查原提交集（已接受，非B验收）

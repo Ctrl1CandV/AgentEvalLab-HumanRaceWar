@@ -1,0 +1,2954 @@
+{
+  "schemaVersion": 1,
+  "WP": "A",
+  "status": "complete",
+  "jointNodeCount": 13,
+  "observedEdges": 55,
+  "possibleEdges": 78,
+  "completeGraph": false,
+  "anchor": "M-balanced",
+  "nodes": [
+    {
+      "code": "K-a-r02",
+      "reportedStyle": "attack",
+      "elo": 660.1081650228874,
+      "interval95": [
+        597.7040638774689,
+        729.507560774518
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "K-e-r03",
+      "reportedStyle": "economic",
+      "elo": 789.67065940812,
+      "interval95": [
+        742.8590153849713,
+        846.0364029010959
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "K-c-r04",
+      "reportedStyle": "control",
+      "elo": 763.2238364570031,
+      "interval95": [
+        712.9061405017957,
+        822.597857952795
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "M-balanced",
+      "reportedStyle": "public-anchor",
+      "elo": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "K-e-w01-r05",
+      "reportedStyle": "economic",
+      "elo": 733.2292830966365,
+      "interval95": [
+        689.7258741086049,
+        784.4144489549785
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "K-c-w01-r05",
+      "reportedStyle": "control",
+      "elo": 701.1201780609076,
+      "interval95": [
+        656.4693104745966,
+        754.3963561027671
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "K-e-f01-r06",
+      "reportedStyle": "economic",
+      "elo": 597.44510049294,
+      "interval95": [
+        556.212301300089,
+        644.7131558546841
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "K-c-f01-r07",
+      "reportedStyle": "control",
+      "elo": 569.9217011927346,
+      "interval95": [
+        525.6330828521529,
+        618.6852853604537
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "K-e-f02-r08",
+      "reportedStyle": "economic",
+      "elo": 490.6477319757073,
+      "interval95": [
+        444.21550782780815,
+        542.0270176749215
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "K-c-f02-r08",
+      "reportedStyle": "control",
+      "elo": 431.54427461154114,
+      "interval95": [
+        381.334949174362,
+        485.6402735820283
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "A-r02",
+      "reportedStyle": "attack",
+      "elo": 84.57994298783493,
+      "interval95": [
+        25.14287461542235,
+        145.22347474459247
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "E-r02",
+      "reportedStyle": "economic",
+      "elo": 327.5947527686406,
+      "interval95": [
+        266.5236276272804,
+        393.2037948552177
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    },
+    {
+      "code": "C-r02",
+      "reportedStyle": "control",
+      "elo": 378.79027584405253,
+      "interval95": [
+        316.81559296873024,
+        445.43794482608945
+      ],
+      "unidentifiedSamples": 0,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "samples": 4000
+    }
+  ],
+  "bootstrap": {
+    "samples": 4000,
+    "seed": 4219,
+    "mapClusters": 80,
+    "finiteFullMLEReplicates": 4000,
+    "method": "all opponents and both seats in each map jointly resampled; nearest-rank 2.5/97.5 percentiles; no rejected bootstrap draws, pseudocounts, clipping or multiplicity correction"
+  },
+  "pairs": [
+    {
+      "players": [
+        "K-a-r02",
+        "K-e-r03"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        106,
+        0,
+        214
+      ],
+      "directScoreRate": 0.33125,
+      "directScoreRateInterval95": [
+        0.259375,
+        0.403125
+      ],
+      "modelFirstMinusSecond": -129.56249438523253,
+      "modelInterval95": [
+        -176.81064501818437,
+        -84.90749720455727
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "K-c-r04"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        116,
+        0,
+        204
+      ],
+      "directScoreRate": 0.3625,
+      "directScoreRateInterval95": [
+        0.29375,
+        0.43125
+      ],
+      "modelFirstMinusSecond": -103.11567143411571,
+      "modelInterval95": [
+        -149.6234555943109,
+        -57.029681615348004
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "M-balanced"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        318,
+        0,
+        2
+      ],
+      "directScoreRate": 0.99375,
+      "directScoreRateInterval95": [
+        0.984375,
+        1.0
+      ],
+      "modelFirstMinusSecond": 660.1081650228874,
+      "modelInterval95": [
+        597.9474171379677,
+        729.5280683331819
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "K-e-w01-r05"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        129,
+        0,
+        191
+      ],
+      "directScoreRate": 0.403125,
+      "directScoreRateInterval95": [
+        0.33125,
+        0.475
+      ],
+      "modelFirstMinusSecond": -73.12111807374913,
+      "modelInterval95": [
+        -122.16105735708197,
+        -25.115552244760526
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "K-c-w01-r05"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        148,
+        0,
+        172
+      ],
+      "directScoreRate": 0.4625,
+      "directScoreRateInterval95": [
+        0.3875,
+        0.5375
+      ],
+      "modelFirstMinusSecond": -41.0120130380202,
+      "modelInterval95": [
+        -92.74799492324817,
+        9.300042378580637
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "K-e-f01-r06"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        175,
+        0,
+        145
+      ],
+      "directScoreRate": 0.546875,
+      "directScoreRateInterval95": [
+        0.465625,
+        0.628125
+      ],
+      "modelFirstMinusSecond": 62.663064529947405,
+      "modelInterval95": [
+        6.625738031123315,
+        118.44395290194568
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "K-c-f01-r07"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        195,
+        0,
+        125
+      ],
+      "directScoreRate": 0.609375,
+      "directScoreRateInterval95": [
+        0.521875,
+        0.696875
+      ],
+      "modelFirstMinusSecond": 90.18646383015277,
+      "modelInterval95": [
+        28.933991323446346,
+        151.8073252649186
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "K-e-f02-r08"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 169.46043304718012,
+      "modelInterval95": [
+        127.07809841298287,
+        214.3643734925496
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "K-c-f02-r08"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 228.56389041134628,
+      "modelInterval95": [
+        179.64274771481203,
+        279.1472615805303
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "A-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 575.5282220350525,
+      "modelInterval95": [
+        512.7451799769686,
+        650.0919936734265
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "E-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 332.5134122542468,
+      "modelInterval95": [
+        247.5845109875009,
+        416.696128252068
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-a-r02",
+        "C-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 281.3178891788349,
+      "modelInterval95": [
+        196.43415431305024,
+        372.3446216108643
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "K-c-r04"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        173,
+        0,
+        147
+      ],
+      "directScoreRate": 0.540625,
+      "directScoreRateInterval95": [
+        0.5,
+        0.58125
+      ],
+      "modelFirstMinusSecond": 26.446822951116815,
+      "modelInterval95": [
+        6.539475371998719,
+        48.13395106735336
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "M-balanced"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        318,
+        0,
+        2
+      ],
+      "directScoreRate": 0.99375,
+      "directScoreRateInterval95": [
+        0.984375,
+        1.0
+      ],
+      "modelFirstMinusSecond": 789.67065940812,
+      "modelInterval95": [
+        743.0579356015417,
+        846.1102606935029
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "K-e-w01-r05"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        192,
+        0,
+        128
+      ],
+      "directScoreRate": 0.6,
+      "directScoreRateInterval95": [
+        0.565625,
+        0.634375
+      ],
+      "modelFirstMinusSecond": 56.441376311483396,
+      "modelInterval95": [
+        41.315341700565654,
+        73.01121093055758
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "K-c-w01-r05"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        197,
+        0,
+        123
+      ],
+      "directScoreRate": 0.615625,
+      "directScoreRateInterval95": [
+        0.565625,
+        0.66875
+      ],
+      "modelFirstMinusSecond": 88.55048134721233,
+      "modelInterval95": [
+        63.943185749469706,
+        114.19206967042521
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "K-e-f01-r06"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        238,
+        0,
+        82
+      ],
+      "directScoreRate": 0.74375,
+      "directScoreRateInterval95": [
+        0.696875,
+        0.790625
+      ],
+      "modelFirstMinusSecond": 192.22555891517993,
+      "modelInterval95": [
+        158.02591635430866,
+        227.16446722098783
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "K-c-f01-r07"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 219.7489582153853,
+      "modelInterval95": [
+        182.06963896629762,
+        258.87693693856437
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "K-e-f02-r08"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 299.02292743241264,
+      "modelInterval95": [
+        257.9438348551694,
+        342.60711298568356
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "K-c-f02-r08"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 358.1263847965788,
+      "modelInterval95": [
+        317.8199749587071,
+        401.478086815365
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "A-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 705.090716420285,
+      "modelInterval95": [
+        653.8545196127616,
+        768.6492853322857
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "E-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 462.07590663947934,
+      "modelInterval95": [
+        399.10556016942206,
+        532.2216823786946
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-r03",
+        "C-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 410.8803835640674,
+      "modelInterval95": [
+        343.44811290913856,
+        487.4364326342468
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "M-balanced"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        318,
+        0,
+        2
+      ],
+      "directScoreRate": 0.99375,
+      "directScoreRateInterval95": [
+        0.98125,
+        1.0
+      ],
+      "modelFirstMinusSecond": 763.2238364570031,
+      "modelInterval95": [
+        712.913478207168,
+        822.6305006535508
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "K-e-w01-r05"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        182,
+        0,
+        138
+      ],
+      "directScoreRate": 0.56875,
+      "directScoreRateInterval95": [
+        0.525,
+        0.6125
+      ],
+      "modelFirstMinusSecond": 29.99455336036658,
+      "modelInterval95": [
+        7.2949139289611,
+        52.042312035944
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "K-c-w01-r05"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        190,
+        0,
+        130
+      ],
+      "directScoreRate": 0.59375,
+      "directScoreRateInterval95": [
+        0.553125,
+        0.63125
+      ],
+      "modelFirstMinusSecond": 62.10365839609551,
+      "modelInterval95": [
+        40.90518866766479,
+        83.91510826478464
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "K-e-f01-r06"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 165.77873596406312,
+      "modelInterval95": [
+        131.1288247225784,
+        201.9963584966302
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "K-c-f01-r07"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        232,
+        0,
+        88
+      ],
+      "directScoreRate": 0.725,
+      "directScoreRateInterval95": [
+        0.675,
+        0.775
+      ],
+      "modelFirstMinusSecond": 193.3021352642685,
+      "modelInterval95": [
+        157.0458712449677,
+        231.48747174650717
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "K-e-f02-r08"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 272.57610448129583,
+      "modelInterval95": [
+        231.4739787429539,
+        316.09644973411
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "K-c-f02-r08"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 331.679561845462,
+      "modelInterval95": [
+        294.5157000223586,
+        371.4231601604214
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "A-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 678.6438934691682,
+      "modelInterval95": [
+        624.6523488025786,
+        744.529708227583
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "E-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 435.6290836883625,
+      "modelInterval95": [
+        370.3765446513939,
+        505.9719551478103
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-r04",
+        "C-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 384.4335606129506,
+      "modelInterval95": [
+        315.44856615662286,
+        461.0625438101793
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "M-balanced",
+        "K-e-w01-r05"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        2,
+        0,
+        318
+      ],
+      "directScoreRate": 0.00625,
+      "directScoreRateInterval95": [
+        0.0,
+        0.015625
+      ],
+      "modelFirstMinusSecond": -733.2292830966365,
+      "modelInterval95": [
+        -784.4144489549785,
+        -689.7258741086049
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "M-balanced",
+        "K-c-w01-r05"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        2,
+        0,
+        318
+      ],
+      "directScoreRate": 0.00625,
+      "directScoreRateInterval95": [
+        0.0,
+        0.015625
+      ],
+      "modelFirstMinusSecond": -701.1201780609076,
+      "modelInterval95": [
+        -754.3963561027671,
+        -656.4693104745966
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "M-balanced",
+        "K-e-f01-r06"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        2,
+        0,
+        318
+      ],
+      "directScoreRate": 0.00625,
+      "directScoreRateInterval95": [
+        0.0,
+        0.015625
+      ],
+      "modelFirstMinusSecond": -597.44510049294,
+      "modelInterval95": [
+        -644.7131558546841,
+        -556.212301300089
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "M-balanced",
+        "K-c-f01-r07"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        9,
+        0,
+        311
+      ],
+      "directScoreRate": 0.028125,
+      "directScoreRateInterval95": [
+        0.00625,
+        0.05625
+      ],
+      "modelFirstMinusSecond": -569.9217011927346,
+      "modelInterval95": [
+        -618.6852853604537,
+        -525.6330828521529
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "M-balanced",
+        "K-e-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        1,
+        0,
+        319
+      ],
+      "directScoreRate": 0.003125,
+      "directScoreRateInterval95": [
+        0.0,
+        0.009375
+      ],
+      "modelFirstMinusSecond": -490.6477319757073,
+      "modelInterval95": [
+        -542.0270176749215,
+        -444.21550782780815
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "M-balanced",
+        "K-c-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        7,
+        0,
+        313
+      ],
+      "directScoreRate": 0.021875,
+      "directScoreRateInterval95": [
+        0.009375,
+        0.0375
+      ],
+      "modelFirstMinusSecond": -431.54427461154114,
+      "modelInterval95": [
+        -485.6402735820283,
+        -381.334949174362
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "M-balanced",
+        "A-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        174,
+        0,
+        146
+      ],
+      "directScoreRate": 0.54375,
+      "directScoreRateInterval95": [
+        0.45625,
+        0.63125
+      ],
+      "modelFirstMinusSecond": -84.57994298783493,
+      "modelInterval95": [
+        -145.22347474459247,
+        -25.14287461542235
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "M-balanced",
+        "E-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        42,
+        0,
+        278
+      ],
+      "directScoreRate": 0.13125,
+      "directScoreRateInterval95": [
+        0.06875,
+        0.2
+      ],
+      "modelFirstMinusSecond": -327.5947527686406,
+      "modelInterval95": [
+        -393.2037948552177,
+        -266.5236276272804
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "M-balanced",
+        "C-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        40,
+        0,
+        280
+      ],
+      "directScoreRate": 0.125,
+      "directScoreRateInterval95": [
+        0.06875,
+        0.1875
+      ],
+      "modelFirstMinusSecond": -378.79027584405253,
+      "modelInterval95": [
+        -445.43794482608945,
+        -316.81559296873024
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-w01-r05",
+        "K-c-w01-r05"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        174,
+        0,
+        146
+      ],
+      "directScoreRate": 0.54375,
+      "directScoreRateInterval95": [
+        0.50625,
+        0.584375
+      ],
+      "modelFirstMinusSecond": 32.10910503572893,
+      "modelInterval95": [
+        14.032817645547098,
+        52.193811216610236
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-w01-r05",
+        "K-e-f01-r06"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        220,
+        0,
+        100
+      ],
+      "directScoreRate": 0.6875,
+      "directScoreRateInterval95": [
+        0.634375,
+        0.7375
+      ],
+      "modelFirstMinusSecond": 135.78418260369654,
+      "modelInterval95": [
+        107.52231309443445,
+        164.9907082583568
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-w01-r05",
+        "K-c-f01-r07"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        230,
+        0,
+        90
+      ],
+      "directScoreRate": 0.71875,
+      "directScoreRateInterval95": [
+        0.6625,
+        0.771875
+      ],
+      "modelFirstMinusSecond": 163.3075819039019,
+      "modelInterval95": [
+        131.982307457439,
+        196.33093844329318
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-w01-r05",
+        "K-e-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        269,
+        0,
+        51
+      ],
+      "directScoreRate": 0.840625,
+      "directScoreRateInterval95": [
+        0.79375,
+        0.884375
+      ],
+      "modelFirstMinusSecond": 242.58155112092925,
+      "modelInterval95": [
+        202.71617456502756,
+        285.21417801229273
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-w01-r05",
+        "K-c-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        274,
+        0,
+        46
+      ],
+      "directScoreRate": 0.85625,
+      "directScoreRateInterval95": [
+        0.8125,
+        0.9
+      ],
+      "modelFirstMinusSecond": 301.6850084850954,
+      "modelInterval95": [
+        262.0926094009924,
+        344.33262161295204
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-w01-r05",
+        "A-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 648.6493401088017,
+      "modelInterval95": [
+        598.2308019783222,
+        709.5367792934238
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-w01-r05",
+        "E-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 405.63453032799595,
+      "modelInterval95": [
+        346.7471391134189,
+        471.26926262582776
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-w01-r05",
+        "C-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 354.439007252584,
+      "modelInterval95": [
+        292.8609768916864,
+        424.13782908863146
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-w01-r05",
+        "K-e-f01-r06"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        215,
+        0,
+        105
+      ],
+      "directScoreRate": 0.671875,
+      "directScoreRateInterval95": [
+        0.621875,
+        0.721875
+      ],
+      "modelFirstMinusSecond": 103.6750775679676,
+      "modelInterval95": [
+        75.86554156132023,
+        132.73958800933715
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-w01-r05",
+        "K-c-f01-r07"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        222,
+        0,
+        98
+      ],
+      "directScoreRate": 0.69375,
+      "directScoreRateInterval95": [
+        0.64375,
+        0.74375
+      ],
+      "modelFirstMinusSecond": 131.19847686817297,
+      "modelInterval95": [
+        103.83012352108226,
+        160.21175060761007
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-w01-r05",
+        "K-e-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        234,
+        0,
+        86
+      ],
+      "directScoreRate": 0.73125,
+      "directScoreRateInterval95": [
+        0.665625,
+        0.790625
+      ],
+      "modelFirstMinusSecond": 210.47244608520032,
+      "modelInterval95": [
+        168.92401174660372,
+        254.11395800517474
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-w01-r05",
+        "K-c-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        265,
+        0,
+        55
+      ],
+      "directScoreRate": 0.828125,
+      "directScoreRateInterval95": [
+        0.775,
+        0.878125
+      ],
+      "modelFirstMinusSecond": 269.5759034493665,
+      "modelInterval95": [
+        232.12100176578582,
+        309.7029153488145
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-w01-r05",
+        "A-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 616.5402350730727,
+      "modelInterval95": [
+        561.3558354152277,
+        681.5998953124521
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-w01-r05",
+        "E-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 373.525425292267,
+      "modelInterval95": [
+        314.1498390403686,
+        438.61416415708624
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-w01-r05",
+        "C-r02"
+      ],
+      "observedPair": false,
+      "games": 0,
+      "wdl": null,
+      "directScoreRate": null,
+      "directScoreRateInterval95": null,
+      "modelFirstMinusSecond": 322.3299022168551,
+      "modelInterval95": [
+        262.58444392741734,
+        388.53053617048755
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f01-r06",
+        "K-c-f01-r07"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        168,
+        0,
+        152
+      ],
+      "directScoreRate": 0.525,
+      "directScoreRateInterval95": [
+        0.4875,
+        0.5625
+      ],
+      "modelFirstMinusSecond": 27.52339930020537,
+      "modelInterval95": [
+        11.951320785375707,
+        43.664174285826874
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f01-r06",
+        "K-e-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        219,
+        0,
+        101
+      ],
+      "directScoreRate": 0.684375,
+      "directScoreRateInterval95": [
+        0.621875,
+        0.746875
+      ],
+      "modelFirstMinusSecond": 106.79736851723271,
+      "modelInterval95": [
+        68.23949025374843,
+        146.3674891371437
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f01-r06",
+        "K-c-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        238,
+        0,
+        82
+      ],
+      "directScoreRate": 0.74375,
+      "directScoreRateInterval95": [
+        0.690625,
+        0.796875
+      ],
+      "modelFirstMinusSecond": 165.90082588139887,
+      "modelInterval95": [
+        130.46152174228902,
+        204.53462380293578
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f01-r06",
+        "A-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        317,
+        0,
+        3
+      ],
+      "directScoreRate": 0.990625,
+      "directScoreRateInterval95": [
+        0.975,
+        1.0
+      ],
+      "modelFirstMinusSecond": 512.8651575051051,
+      "modelInterval95": [
+        458.7908075331021,
+        576.5806899641417
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f01-r06",
+        "E-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        258,
+        0,
+        62
+      ],
+      "directScoreRate": 0.80625,
+      "directScoreRateInterval95": [
+        0.73125,
+        0.871875
+      ],
+      "modelFirstMinusSecond": 269.8503477242994,
+      "modelInterval95": [
+        211.14947864702054,
+        335.31940851515805
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f01-r06",
+        "C-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        214,
+        0,
+        106
+      ],
+      "directScoreRate": 0.66875,
+      "directScoreRateInterval95": [
+        0.5875,
+        0.75
+      ],
+      "modelFirstMinusSecond": 218.65482464888748,
+      "modelInterval95": [
+        160.13816971674797,
+        285.9394080619225
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-f01-r07",
+        "K-e-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        202,
+        0,
+        118
+      ],
+      "directScoreRate": 0.63125,
+      "directScoreRateInterval95": [
+        0.559375,
+        0.7
+      ],
+      "modelFirstMinusSecond": 79.27396921702734,
+      "modelInterval95": [
+        38.571278221817806,
+        120.71125885885489
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-f01-r07",
+        "K-c-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        229,
+        0,
+        91
+      ],
+      "directScoreRate": 0.715625,
+      "directScoreRateInterval95": [
+        0.65625,
+        0.771875
+      ],
+      "modelFirstMinusSecond": 138.3774265811935,
+      "modelInterval95": [
+        102.78462173319012,
+        174.2279983683286
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-f01-r07",
+        "A-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        315,
+        0,
+        5
+      ],
+      "directScoreRate": 0.984375,
+      "directScoreRateInterval95": [
+        0.965625,
+        1.0
+      ],
+      "modelFirstMinusSecond": 485.34175820489975,
+      "modelInterval95": [
+        431.20597287777844,
+        549.8549475692987
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-f01-r07",
+        "E-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        241,
+        0,
+        79
+      ],
+      "directScoreRate": 0.753125,
+      "directScoreRateInterval95": [
+        0.678125,
+        0.821875
+      ],
+      "modelFirstMinusSecond": 242.32694842409404,
+      "modelInterval95": [
+        184.88534795410044,
+        306.0793134735109
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-f01-r07",
+        "C-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        210,
+        0,
+        110
+      ],
+      "directScoreRate": 0.65625,
+      "directScoreRateInterval95": [
+        0.575,
+        0.73125
+      ],
+      "modelFirstMinusSecond": 191.13142534868211,
+      "modelInterval95": [
+        134.88037015660015,
+        254.78679271016756
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f02-r08",
+        "K-c-f02-r08"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        192,
+        0,
+        128
+      ],
+      "directScoreRate": 0.6,
+      "directScoreRateInterval95": [
+        0.553125,
+        0.65
+      ],
+      "modelFirstMinusSecond": 59.10345736416616,
+      "modelInterval95": [
+        37.59159480249596,
+        82.8208908226711
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f02-r08",
+        "A-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        307,
+        0,
+        13
+      ],
+      "directScoreRate": 0.959375,
+      "directScoreRateInterval95": [
+        0.934375,
+        0.98125
+      ],
+      "modelFirstMinusSecond": 406.0677889878724,
+      "modelInterval95": [
+        352.88074080400185,
+        467.427403743461
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f02-r08",
+        "E-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        217,
+        0,
+        103
+      ],
+      "directScoreRate": 0.678125,
+      "directScoreRateInterval95": [
+        0.584375,
+        0.765625
+      ],
+      "modelFirstMinusSecond": 163.0529792070667,
+      "modelInterval95": [
+        93.9754966103377,
+        236.13837451998114
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-e-f02-r08",
+        "C-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        203,
+        0,
+        117
+      ],
+      "directScoreRate": 0.634375,
+      "directScoreRateInterval95": [
+        0.5375,
+        0.728125
+      ],
+      "modelFirstMinusSecond": 111.85745613165477,
+      "modelInterval95": [
+        37.17529051606973,
+        190.54806373531284
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-f02-r08",
+        "A-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        299,
+        0,
+        21
+      ],
+      "directScoreRate": 0.934375,
+      "directScoreRateInterval95": [
+        0.896875,
+        0.96875
+      ],
+      "modelFirstMinusSecond": 346.96433162370624,
+      "modelInterval95": [
+        292.3474698565849,
+        407.14442726056177
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-f02-r08",
+        "E-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        204,
+        0,
+        116
+      ],
+      "directScoreRate": 0.6375,
+      "directScoreRateInterval95": [
+        0.54375,
+        0.725
+      ],
+      "modelFirstMinusSecond": 103.94952184290054,
+      "modelInterval95": [
+        37.86216629415821,
+        170.5316871272017
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "K-c-f02-r08",
+        "C-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        175,
+        0,
+        145
+      ],
+      "directScoreRate": 0.546875,
+      "directScoreRateInterval95": [
+        0.453125,
+        0.6375
+      ],
+      "modelFirstMinusSecond": 52.75399876748861,
+      "modelInterval95": [
+        -15.694146496914527,
+        123.54062851175388
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "A-r02",
+        "E-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        100,
+        0,
+        220
+      ],
+      "directScoreRate": 0.3125,
+      "directScoreRateInterval95": [
+        0.225,
+        0.4125
+      ],
+      "modelFirstMinusSecond": -243.01480978080568,
+      "modelInterval95": [
+        -328.6160742273347,
+        -167.2062552656672
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "A-r02",
+        "C-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        124,
+        0,
+        196
+      ],
+      "directScoreRate": 0.3875,
+      "directScoreRateInterval95": [
+        0.2875,
+        0.49375
+      ],
+      "modelFirstMinusSecond": -294.21033285621763,
+      "modelInterval95": [
+        -384.71541255705387,
+        -213.1249047634445
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    {
+      "players": [
+        "E-r02",
+        "C-r02"
+      ],
+      "observedPair": true,
+      "games": 320,
+      "wdl": [
+        136,
+        0,
+        184
+      ],
+      "directScoreRate": 0.425,
+      "directScoreRateInterval95": [
+        0.3375,
+        0.5125
+      ],
+      "modelFirstMinusSecond": -51.19552307541193,
+      "modelInterval95": [
+        -89.84740650482557,
+        -11.789524468488572
+      ],
+      "unidentifiedSamples": 0,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    }
+  ],
+  "provisionalPlan": {
+    "status": "provisional-valid-point-plan",
+    "levels": [
+      {
+        "nodes": [
+          3
+        ],
+        "mean": 0.0,
+        "center": 0.0,
+        "styles": [
+          "public-anchor"
+        ],
+        "span": 0.0,
+        "bridgeOriginalGap": 0,
+        "id": "P0",
+        "tolerance": [
+          -40.0,
+          40.0
+        ],
+        "candidateCodes": [
+          "M-balanced"
+        ],
+        "provisional": true,
+        "hasTwoReportedStyles": false
+      },
+      {
+        "nodes": [
+          10
+        ],
+        "mean": 84.57994298783493,
+        "center": 84.57994298783493,
+        "styles": [
+          "attack"
+        ],
+        "span": 0.0,
+        "bridgeOriginalGap": 0,
+        "id": "P1",
+        "tolerance": [
+          44.579942987834926,
+          124.57994298783493
+        ],
+        "candidateCodes": [
+          "A-r02"
+        ],
+        "provisional": true,
+        "hasTwoReportedStyles": false
+      },
+      {
+        "nodes": [],
+        "mean": 218.88622864709075,
+        "center": 218.88622864709075,
+        "styles": [],
+        "span": 0,
+        "bridgeOriginalGap": 268.61257131851164,
+        "id": "P2",
+        "tolerance": [
+          178.88622864709075,
+          258.8862286470908
+        ],
+        "candidateCodes": [],
+        "provisional": true,
+        "hasTwoReportedStyles": false
+      },
+      {
+        "nodes": [
+          11,
+          12
+        ],
+        "mean": 353.19251430634654,
+        "center": 353.19251430634654,
+        "styles": [
+          "control",
+          "economic"
+        ],
+        "span": 51.19552307541193,
+        "bridgeOriginalGap": 0,
+        "id": "P3",
+        "tolerance": [
+          313.19251430634654,
+          393.19251430634654
+        ],
+        "candidateCodes": [
+          "E-r02",
+          "C-r02"
+        ],
+        "provisional": true,
+        "hasTwoReportedStyles": true
+      },
+      {
+        "nodes": [
+          9,
+          8
+        ],
+        "mean": 461.0960032936242,
+        "center": 461.0960032936242,
+        "styles": [
+          "control",
+          "economic"
+        ],
+        "span": 59.10345736416616,
+        "bridgeOriginalGap": 0,
+        "id": "P4",
+        "tolerance": [
+          421.0960032936242,
+          501.0960032936242
+        ],
+        "candidateCodes": [
+          "K-c-f02-r08",
+          "K-e-f02-r08"
+        ],
+        "provisional": true,
+        "hasTwoReportedStyles": true
+      },
+      {
+        "nodes": [
+          7,
+          6
+        ],
+        "mean": 583.6834008428373,
+        "center": 583.6834008428373,
+        "styles": [
+          "control",
+          "economic"
+        ],
+        "span": 27.52339930020537,
+        "bridgeOriginalGap": 0,
+        "id": "P5",
+        "tolerance": [
+          543.6834008428373,
+          623.6834008428373
+        ],
+        "candidateCodes": [
+          "K-c-f01-r07",
+          "K-e-f01-r06"
+        ],
+        "provisional": true,
+        "hasTwoReportedStyles": true
+      },
+      {
+        "nodes": [
+          0,
+          5
+        ],
+        "mean": 680.6141715418976,
+        "center": 680.6141715418976,
+        "styles": [
+          "attack",
+          "control"
+        ],
+        "span": 41.0120130380202,
+        "bridgeOriginalGap": 0,
+        "id": "P6",
+        "tolerance": [
+          640.6141715418976,
+          720.6141715418976
+        ],
+        "candidateCodes": [
+          "K-a-r02",
+          "K-c-w01-r05"
+        ],
+        "provisional": true,
+        "hasTwoReportedStyles": true
+      },
+      {
+        "nodes": [
+          4,
+          2,
+          1
+        ],
+        "mean": 762.0412596539198,
+        "center": 761.4499712523782,
+        "styles": [
+          "control",
+          "economic"
+        ],
+        "span": 56.441376311483396,
+        "bridgeOriginalGap": 0,
+        "id": "P7",
+        "tolerance": [
+          721.4499712523782,
+          801.4499712523782
+        ],
+        "candidateCodes": [
+          "K-e-w01-r05",
+          "K-c-r04",
+          "K-e-r03"
+        ],
+        "provisional": true,
+        "hasTwoReportedStyles": true
+      }
+    ],
+    "gaps": [
+      {
+        "id": "P2",
+        "center": 218.88622864709075,
+        "range": [
+          178.88622864709075,
+          258.8862286470908
+        ],
+        "existingCandidates": [],
+        "existingStyles": [],
+        "minimumAdditionalStyles": 2,
+        "requestedAuthorStyles": [
+          "economic",
+          "control"
+        ],
+        "expectedPublicMScoreRate": 0.7790279011513883,
+        "expectedPublicMScoreRateRange": [
+          0.7368677953064084,
+          0.8161186336440717
+        ],
+        "bridgeOriginalGap": 268.61257131851164
+      },
+      {
+        "id": "P0",
+        "center": 0.0,
+        "range": [
+          -40.0,
+          40.0
+        ],
+        "existingCandidates": [
+          "M-balanced"
+        ],
+        "existingStyles": [
+          "public-anchor"
+        ],
+        "minimumAdditionalStyles": 1,
+        "requestedAuthorStyles": [
+          "economic",
+          "control"
+        ],
+        "expectedPublicMScoreRate": 0.5,
+        "expectedPublicMScoreRateRange": [
+          0.44268836623770724,
+          0.5573116337622928
+        ],
+        "bridgeOriginalGap": 0
+      },
+      {
+        "id": "P1",
+        "center": 84.57994298783493,
+        "range": [
+          44.579942987834926,
+          124.57994298783493
+        ],
+        "existingCandidates": [
+          "A-r02"
+        ],
+        "existingStyles": [
+          "attack"
+        ],
+        "minimumAdditionalStyles": 1,
+        "requestedAuthorStyles": [
+          "economic",
+          "control"
+        ],
+        "expectedPublicMScoreRate": 0.6193714691965643,
+        "expectedPublicMScoreRateRange": [
+          0.5638059159527216,
+          0.6719768706452245
+        ],
+        "bridgeOriginalGap": 0
+      }
+    ],
+    "round01PriorityGapIds": [
+      "P2",
+      "P0",
+      "P1"
+    ],
+    "minimumNewStyleCandidates": 4,
+    "formalLevelsAssigned": false,
+    "MAnchorStyleShortfallIncluded": true,
+    "method": "predeclared continuous <=3-node groups;span<=80;mean steps>=80;>200 gaps equally split with ceil(gap/150);min missing styles,then levels,then distance from125;target midrange +/-40"
+  },
+  "styleMetrics": [
+    {
+      "code": "K-a-r02",
+      "reportedStyle": "attack",
+      "exposure": "joint-graph",
+      "games": 2240,
+      "firstCombatTurnMedian": 52.0,
+      "noCombatGames": 46,
+      "meanTowerScoreShare": 0.5373429975338949,
+      "meanDepositedShare": 0.5414947699467453,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.14285714285714285,
+      "eitherBaseEndingRate": 0.20357142857142857,
+      "newTurnCpuMaxNs": null,
+      "newInitCpuMaxNs": null
+    },
+    {
+      "code": "K-e-r03",
+      "reportedStyle": "economic",
+      "exposure": "joint-graph",
+      "games": 1920,
+      "firstCombatTurnMedian": 54.0,
+      "noCombatGames": 18,
+      "meanTowerScoreShare": 0.5528123095153854,
+      "meanDepositedShare": 0.5425173347950893,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.15364583333333334,
+      "eitherBaseEndingRate": 0.18958333333333333,
+      "newTurnCpuMaxNs": null,
+      "newInitCpuMaxNs": null
+    },
+    {
+      "code": "K-c-r04",
+      "reportedStyle": "control",
+      "exposure": "joint-graph",
+      "games": 1920,
+      "firstCombatTurnMedian": 54,
+      "noCombatGames": 15,
+      "meanTowerScoreShare": 0.54895348088681,
+      "meanDepositedShare": 0.5378512591387244,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.14166666666666666,
+      "eitherBaseEndingRate": 0.18541666666666667,
+      "newTurnCpuMaxNs": null,
+      "newInitCpuMaxNs": null
+    },
+    {
+      "code": "M-balanced",
+      "reportedStyle": "public-anchor",
+      "exposure": "joint-graph",
+      "games": 3840,
+      "firstCombatTurnMedian": 56.0,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.3390292714476283,
+      "meanDepositedShare": 0.37082346824527823,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.01640625,
+      "eitherBaseEndingRate": 0.32317708333333334,
+      "newTurnCpuMaxNs": 2823800,
+      "newInitCpuMaxNs": 13830600
+    },
+    {
+      "code": "K-e-w01-r05",
+      "reportedStyle": "economic",
+      "exposure": "joint-graph",
+      "games": 2880,
+      "firstCombatTurnMedian": 54.0,
+      "noCombatGames": 14,
+      "meanTowerScoreShare": 0.5442370924187443,
+      "meanDepositedShare": 0.5317718021906448,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.11388888888888889,
+      "eitherBaseEndingRate": 0.16597222222222222,
+      "newTurnCpuMaxNs": null,
+      "newInitCpuMaxNs": null
+    },
+    {
+      "code": "K-c-w01-r05",
+      "reportedStyle": "control",
+      "exposure": "joint-graph",
+      "games": 2880,
+      "firstCombatTurnMedian": 54.0,
+      "noCombatGames": 16,
+      "meanTowerScoreShare": 0.5332101456578138,
+      "meanDepositedShare": 0.5219734022157317,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0920138888888889,
+      "eitherBaseEndingRate": 0.1597222222222222,
+      "newTurnCpuMaxNs": null,
+      "newInitCpuMaxNs": null
+    },
+    {
+      "code": "K-e-f01-r06",
+      "reportedStyle": "economic",
+      "exposure": "joint-graph",
+      "games": 3520,
+      "firstCombatTurnMedian": 52,
+      "noCombatGames": 13,
+      "meanTowerScoreShare": 0.5338065362433456,
+      "meanDepositedShare": 0.5378711134360946,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.1474431818181818,
+      "eitherBaseEndingRate": 0.1963068181818182,
+      "newTurnCpuMaxNs": 3373600,
+      "newInitCpuMaxNs": 33290200
+    },
+    {
+      "code": "K-c-f01-r07",
+      "reportedStyle": "control",
+      "exposure": "joint-graph",
+      "games": 3520,
+      "firstCombatTurnMedian": 52.0,
+      "noCombatGames": 10,
+      "meanTowerScoreShare": 0.52673673118762,
+      "meanDepositedShare": 0.5282380076957023,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.11818181818181818,
+      "eitherBaseEndingRate": 0.18238636363636362,
+      "newTurnCpuMaxNs": 2141100,
+      "newInitCpuMaxNs": 31097100
+    },
+    {
+      "code": "K-e-f02-r08",
+      "reportedStyle": "economic",
+      "exposure": "joint-graph",
+      "games": 2880,
+      "firstCombatTurnMedian": 52,
+      "noCombatGames": 3,
+      "meanTowerScoreShare": 0.5412270692834633,
+      "meanDepositedShare": 0.5579830843562501,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.18229166666666666,
+      "eitherBaseEndingRate": 0.21666666666666667,
+      "newTurnCpuMaxNs": 3128800,
+      "newInitCpuMaxNs": 32309000
+    },
+    {
+      "code": "K-c-f02-r08",
+      "reportedStyle": "control",
+      "exposure": "joint-graph",
+      "games": 2880,
+      "firstCombatTurnMedian": 53,
+      "noCombatGames": 3,
+      "meanTowerScoreShare": 0.5283004494364082,
+      "meanDepositedShare": 0.5447075950522537,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.15243055555555557,
+      "eitherBaseEndingRate": 0.19826388888888888,
+      "newTurnCpuMaxNs": 5176500,
+      "newInitCpuMaxNs": 36121400
+    },
+    {
+      "code": "A-r02",
+      "reportedStyle": "attack",
+      "exposure": "joint-graph",
+      "games": 2240,
+      "firstCombatTurnMedian": 42.0,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.35828828851796,
+      "meanDepositedShare": 0.413139715807963,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.12767857142857142,
+      "eitherBaseEndingRate": 0.33214285714285713,
+      "newTurnCpuMaxNs": 5839400,
+      "newInitCpuMaxNs": 16717400
+    },
+    {
+      "code": "E-r02",
+      "reportedStyle": "economic",
+      "exposure": "joint-graph",
+      "games": 2240,
+      "firstCombatTurnMedian": 43.0,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.4861570515668762,
+      "meanDepositedShare": 0.4521118486164322,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.06919642857142858,
+      "eitherBaseEndingRate": 0.2642857142857143,
+      "newTurnCpuMaxNs": 5679000,
+      "newInitCpuMaxNs": 25586100
+    },
+    {
+      "code": "C-r02",
+      "reportedStyle": "control",
+      "exposure": "joint-graph",
+      "games": 2240,
+      "firstCombatTurnMedian": 42.0,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.5228266977108119,
+      "meanDepositedShare": 0.4407941700103006,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.005357142857142857,
+      "eitherBaseEndingRate": 0.25491071428571427,
+      "newTurnCpuMaxNs": 6319400,
+      "newInitCpuMaxNs": 17940000
+    },
+    {
+      "code": "Z-idle",
+      "reportedStyle": "public-zoo",
+      "exposure": "probe-against-two-lowest-K-pooled",
+      "games": 160,
+      "firstCombatTurnMedian": 106.5,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.0,
+      "meanDepositedShare": 0.0,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0,
+      "eitherBaseEndingRate": 0.9875,
+      "newTurnCpuMaxNs": 247200,
+      "newInitCpuMaxNs": 13200400
+    },
+    {
+      "code": "Z-random",
+      "reportedStyle": "public-zoo",
+      "exposure": "probe-against-two-lowest-K-pooled",
+      "games": 160,
+      "firstCombatTurnMedian": 87.5,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.047018819328216735,
+      "meanDepositedShare": 0.029807688107457382,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0,
+      "eitherBaseEndingRate": 0.95,
+      "newTurnCpuMaxNs": 327000,
+      "newInitCpuMaxNs": 12660300
+    },
+    {
+      "code": "Z-miner",
+      "reportedStyle": "public-zoo",
+      "exposure": "probe-against-two-lowest-K-pooled",
+      "games": 160,
+      "firstCombatTurnMedian": 92.5,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.0,
+      "meanDepositedShare": 0.25376319060539915,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0,
+      "eitherBaseEndingRate": 0.975,
+      "newTurnCpuMaxNs": 331800,
+      "newInitCpuMaxNs": 13759100
+    },
+    {
+      "code": "Z-rush",
+      "reportedStyle": "public-zoo",
+      "exposure": "probe-against-two-lowest-K-pooled",
+      "games": 160,
+      "firstCombatTurnMedian": 37.5,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.0,
+      "meanDepositedShare": 0.2791680158365312,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0,
+      "eitherBaseEndingRate": 0.55625,
+      "newTurnCpuMaxNs": 635400,
+      "newInitCpuMaxNs": 12552600
+    },
+    {
+      "code": "Z-wrush",
+      "reportedStyle": "public-zoo",
+      "exposure": "probe-against-two-lowest-K-pooled",
+      "games": 160,
+      "firstCombatTurnMedian": 40.0,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.0,
+      "meanDepositedShare": 0.0,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0,
+      "eitherBaseEndingRate": 0.9875,
+      "newTurnCpuMaxNs": 720600,
+      "newInitCpuMaxNs": 12021600
+    },
+    {
+      "code": "Z-eco",
+      "reportedStyle": "public-zoo",
+      "exposure": "probe-against-two-lowest-K-pooled",
+      "games": 160,
+      "firstCombatTurnMedian": 55.0,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.0,
+      "meanDepositedShare": 0.29022966836280534,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0,
+      "eitherBaseEndingRate": 0.44375,
+      "newTurnCpuMaxNs": 1100700,
+      "newInitCpuMaxNs": 13021600
+    },
+    {
+      "code": "Z-turtle",
+      "reportedStyle": "public-zoo",
+      "exposure": "probe-against-two-lowest-K-pooled",
+      "games": 160,
+      "firstCombatTurnMedian": 106.5,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.0,
+      "meanDepositedShare": 0.19588645900002427,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0,
+      "eitherBaseEndingRate": 0.41875,
+      "newTurnCpuMaxNs": 586100,
+      "newInitCpuMaxNs": 12650000
+    },
+    {
+      "code": "Z-towers",
+      "reportedStyle": "public-zoo",
+      "exposure": "probe-against-two-lowest-K-pooled",
+      "games": 160,
+      "firstCombatTurnMedian": 45.0,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.38210869465979513,
+      "meanDepositedShare": 0.3187774589736198,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0,
+      "eitherBaseEndingRate": 0.6625,
+      "newTurnCpuMaxNs": 882400,
+      "newInitCpuMaxNs": 12364400
+    },
+    {
+      "code": "Z-harass",
+      "reportedStyle": "public-zoo",
+      "exposure": "probe-against-two-lowest-K-pooled",
+      "games": 160,
+      "firstCombatTurnMedian": 41.0,
+      "noCombatGames": 0,
+      "meanTowerScoreShare": 0.0,
+      "meanDepositedShare": 0.28222508026901477,
+      "zeroTotalTowerScoreGames": 0,
+      "zeroTotalDepositGames": 0,
+      "baseDestructionWinRate": 0.0,
+      "eitherBaseEndingRate": 0.5625,
+      "newTurnCpuMaxNs": 683800,
+      "newInitCpuMaxNs": 11543800
+    }
+  ],
+  "pooledZooProbe": [
+    {
+      "Z": "Z-idle",
+      "games": 160,
+      "wdl": [
+        0,
+        0,
+        160
+      ],
+      "meanScoreAgainstTwoLowestK": 0.0,
+      "abovePointOne": false
+    },
+    {
+      "Z": "Z-random",
+      "games": 160,
+      "wdl": [
+        0,
+        0,
+        160
+      ],
+      "meanScoreAgainstTwoLowestK": 0.0,
+      "abovePointOne": false
+    },
+    {
+      "Z": "Z-miner",
+      "games": 160,
+      "wdl": [
+        0,
+        0,
+        160
+      ],
+      "meanScoreAgainstTwoLowestK": 0.0,
+      "abovePointOne": false
+    },
+    {
+      "Z": "Z-rush",
+      "games": 160,
+      "wdl": [
+        0,
+        0,
+        160
+      ],
+      "meanScoreAgainstTwoLowestK": 0.0,
+      "abovePointOne": false
+    },
+    {
+      "Z": "Z-wrush",
+      "games": 160,
+      "wdl": [
+        0,
+        0,
+        160
+      ],
+      "meanScoreAgainstTwoLowestK": 0.0,
+      "abovePointOne": false
+    },
+    {
+      "Z": "Z-eco",
+      "games": 160,
+      "wdl": [
+        0,
+        0,
+        160
+      ],
+      "meanScoreAgainstTwoLowestK": 0.0,
+      "abovePointOne": false
+    },
+    {
+      "Z": "Z-turtle",
+      "games": 160,
+      "wdl": [
+        0,
+        0,
+        160
+      ],
+      "meanScoreAgainstTwoLowestK": 0.0,
+      "abovePointOne": false
+    },
+    {
+      "Z": "Z-towers",
+      "games": 160,
+      "wdl": [
+        8,
+        0,
+        152
+      ],
+      "meanScoreAgainstTwoLowestK": 0.05,
+      "abovePointOne": false
+    },
+    {
+      "Z": "Z-harass",
+      "games": 160,
+      "wdl": [
+        0,
+        0,
+        160
+      ],
+      "meanScoreAgainstTwoLowestK": 0.0,
+      "abovePointOne": false
+    }
+  ],
+  "usage": {
+    "newScoredGames": 7200,
+    "newJointGames": 5760,
+    "newProbeGames": 1440,
+    "oldReusedWithoutEngineStep": 11840,
+    "jointUniqueGames": 17600,
+    "allUniqueGamesIncludingProbe": 19040,
+    "historicalNewScoredGamesBeforeWPA": 16640,
+    "historicalNewScoredGamesThroughWPA": 23840,
+    "checks": 0,
+    "benchmarks": 0,
+    "compiles": 27,
+    "botStarts": 14400,
+    "infrastructureErrors": 0,
+    "configurationErrors": 0,
+    "standardRetries": 0,
+    "botFaults": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "scoringWallSeconds": 814.312333813,
+    "compileWallSecondsOverlappingScoring": 75.92022778199816,
+    "compilerCpuSeconds": null,
+    "botCpuNs": 1689894163000,
+    "hostHarnessCpuNs": 2570223975000,
+    "replayVerificationCpuNs": 1010944774700,
+    "replayVerificationWallSeconds": 169.014727983,
+    "newVerifiedReplays": 7200,
+    "oldReplayEngineReverifications": 0,
+    "newMatchEngineSteps": 1915387,
+    "newReplayVerificationEngineSteps": 1915387,
+    "styleExtractionEngineSteps": 0,
+    "minRemainingBankNs": 1800000000,
+    "turnCpuMs": {
+      "p50": 0.3596,
+      "p99": 0.9344,
+      "max": 6.3194
+    },
+    "initCpuMs": {
+      "p50": 10.102,
+      "p99": 27.2634,
+      "max": 36.1214
+    },
+    "endings": {
+      "base_destroyed": 2664,
+      "turn_limit_score": 4525,
+      "turn_limit_deposit": 11
+    },
+    "fullSessionCpuSeconds": null
+  },
+  "fixedProtocol": "original graph protocol;80 ordered dev maps;17/29 and29/17 identities;both seats;probe first40,17/17,both seats",
+  "scopeDocument": "docs/CLAUDE_DEV_ASSEMBLY_SCOPE.md",
+  "r10Evaluated": false,
+  "T6Used": false,
+  "formalCalibrationOrAcceptance": false,
+  "nextTask": {
+    "round": "WP-B01/r11",
+    "targets": [
+      {
+        "id": "P2",
+        "center": 218.88622864709075,
+        "range": [
+          178.88622864709075,
+          258.8862286470908
+        ],
+        "existingCandidates": [],
+        "existingStyles": [],
+        "minimumAdditionalStyles": 2,
+        "requestedAuthorStyles": [
+          "economic",
+          "control"
+        ],
+        "expectedPublicMScoreRate": 0.7790279011513883,
+        "expectedPublicMScoreRateRange": [
+          0.7368677953064084,
+          0.8161186336440717
+        ],
+        "bridgeOriginalGap": 268.61257131851164
+      },
+      {
+        "id": "P0",
+        "center": 0.0,
+        "range": [
+          -40.0,
+          40.0
+        ],
+        "existingCandidates": [
+          "M-balanced"
+        ],
+        "existingStyles": [
+          "public-anchor"
+        ],
+        "minimumAdditionalStyles": 1,
+        "requestedAuthorStyles": [
+          "economic",
+          "control"
+        ],
+        "expectedPublicMScoreRate": 0.5,
+        "expectedPublicMScoreRateRange": [
+          0.44268836623770724,
+          0.5573116337622928
+        ],
+        "bridgeOriginalGap": 0
+      },
+      {
+        "id": "P1",
+        "center": 84.57994298783493,
+        "range": [
+          44.579942987834926,
+          124.57994298783493
+        ],
+        "existingCandidates": [
+          "A-r02"
+        ],
+        "existingStyles": [
+          "attack"
+        ],
+        "minimumAdditionalStyles": 1,
+        "requestedAuthorStyles": [
+          "economic",
+          "control"
+        ],
+        "expectedPublicMScoreRate": 0.6193714691965643,
+        "expectedPublicMScoreRateRange": [
+          0.5638059159527216,
+          0.6719768706452245
+        ],
+        "bridgeOriginalGap": 0
+      }
+    ],
+    "maximumCandidates": 6,
+    "maximumRounds": 2,
+    "maximumScoredGamesPerRound": 5760,
+    "maximumScoringWallSecondsPerRound": 10800,
+    "stopWhenAllTargetGapsHaveTwoStyles": true,
+    "spacingConflictsReportedToCAWithoutAutomaticContinuation": true,
+    "boundaryPairingsRequireUserOrCAConfirmation": true,
+    "proposedBoundaryOpponents": [
+      "M-balanced",
+      "A-r02",
+      "E-r02"
+    ],
+    "authorReadOrStartedConfirmed": false,
+    "evaluatorStarted": false
+  },
+  "postprocessingIncidents": [
+    {
+      "kind": "stop-wording-corrected-before-WPB",
+      "originalTaskPreserved": true,
+      "authorInAddendumReadbackVerified": true,
+      "rule": "Stop for CA when all target gaps have two styles; report spacing conflicts too, without automatically extending development. Stop after two rounds even if gaps remain.",
+      "newBotOrEngineWork": 0
+    },
+    {
+      "kind": "duplicate-audit-launch-refused",
+      "beforeEngineSteps": true,
+      "successful7200ReplayAuditPreserved": true,
+      "noRepeatVerification": true
+    },
+    {
+      "kind": "CPU-diagnostic-field-name-error",
+      "actualField": "cpu_ns",
+      "incorrectField": "cpuNs",
+      "failedBeforeBTOrOutput": true,
+      "originalHelperAndErrorRetained": true,
+      "correctedAgainstOriginalReplyRecordAndPureRegressionTest": true,
+      "newBotOrEngineWork": 0
+    }
+  ]
+}
