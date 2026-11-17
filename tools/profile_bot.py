@@ -51,6 +51,15 @@ def collect(out, *, report_name='profile'):
     log = experiment.verify_log(root/'run-log.jsonl', expected_head=run['logHeadSha256'], expected_count=run['logRows'])
     if log[0]['payload']['frameSha256'] != digest or log[-1]['payload']['status'] != run['status']:
         raise ValueError('run log does not bind this result')
+    counts = run['executionCounts']
+    if (log[-1]['payload']['executionCounts'] != counts or counts['closed'] is not True
+            or plan.digest_file(root/'launch-counts.json') != counts['stateSha256']):
+        raise ValueError('launch counters changed after supervision')
+    state = plan.load_json(root/'launch-counts.json')
+    for key in ('compiles','botStarts'):
+        plan.integer(counts[key])
+        if counts[key] != state[key] or counts[key] != run[key]:
+            raise ValueError('run launch counts disagree')
     if plan.load_json(batch/'manifest.json') != experiment.expected_manifest(frame):
         raise ValueError('standard manifest identity changed')
     tasks = {t['taskId']: t for t in experiment.expected_manifest(frame)['tasks']}
@@ -184,6 +193,8 @@ def collect(out, *, report_name='profile'):
                    'implementationSha256': frame['implementationSha256'], 'declaredJobs': frame['spec']['jobs'],
                    'configuredBotCpuPool': timing['cpus'], 'configuredConcurrencyNotConstantOccupancy': True,
                    'completedGames': len(results), 'attemptsObserved': len(attempts),
+                   'compiles': counts['compiles'], 'botStarts': counts['botStarts'],
+                   'launchCountBasis': counts['countBasis'],
                    'completeReplaysHeaderAndCpuChecked': verified, 'partialAttemptReplays': partial,
                    'attemptsWithoutReplay': missing, 'attemptsWithoutReplayHeader': missing_headers, 'quantiles': 'exact nearest-rank; on-disk SQLite sorting',
                    'labels': {b['label']: {'TURN': statistics(database, b['label'], 'TURN'),

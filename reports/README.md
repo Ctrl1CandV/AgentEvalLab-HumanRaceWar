@@ -2,7 +2,14 @@
 
 当前停点见STATUS，最新交审入口如下；执行权限以用户最新指令和有效裁定为准，历史报告中的下一任务不自动提供当前授权。工具与对接/评测GPT分工见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
 
-## 第二次综合审查（2026-11-16）
+## 第二次审查后：T6小修与公开材料同步
+
+[审查结论](../inbox/2026-11-16-phase-b-second-review.md)已接受前一批成果，B转入阶梯组装。工具/汇总方仅做本轮两项小修及公开集成，WP-A/WP-B仍由评测方执行。
+
+- [`phase-B-t6-small-fixes-20261116.md`](phase-B-t6-small-fixes-20261116.md)：精确计数、三项异机跳过与当前无新增公开增量；细节见对应JSON。
+- [统一报告口径](../docs/PHASE_B_REPORTING.md)：新报告简述结果、一张表；方法、负例和用量放JSON，不重写旧冻结报告。
+
+## 第二次综合审查原提交集（已接受，非B验收）
 
 - [`phase-B-second-review-request.md`](phase-B-second-review-request.md)：本次总入口。GPT完成工作+Claude固定r01–r09，不再等继续开发；请远端安排整体组装/缺口与后续验收，不是B通过。
 - [`phase-B-claude-author-batch-handoff.md`](phase-B-claude-author-batch-handoff.md)：claude-evaluation固定提交1da0e91，三强主线/六原型、全部负例及剩余B工作；配套[`收束聚合`](../data/phase-b/claude-author-batch-closure.json)。

@@ -16,7 +16,8 @@ from arena.tournament import fingerprint, selected_pairings
 
 ROOT = Path(__file__).resolve().parents[1]
 IMPLEMENTATION = ('tools/experiment_plan.py', 'tools/experiment.py',
-                  'tools/profile_bot.py', 'tools/accept_t6.py', 'tools/process_evidence.py')
+                  'tools/profile_bot.py', 'tools/accept_t6.py', 'tools/process_evidence.py',
+                  'tools/runtime_counts.py')
 LABEL = re.compile(r'[A-Za-z0-9][A-Za-z0-9_-]{0,63}\Z')
 HEX = re.compile(r'[0-9a-f]{64}\Z')
 SENSITIVE = {'.git', '.pi', '.agents', '.ssh', '.aws', '.config', '.venv',
@@ -168,13 +169,15 @@ def validate_acceptance_cases(e):
             or [(c.get('kind'),c.get('jobs'),c.get('plannedGames')) for c in cases] != expected):
         raise ValueError('normal and in-flight jobs1/jobs6 evidence required')
     for c in cases:
-        for key in ('jobs','plannedGames','completedGames','auditedReplays','headersAndCpuTotalsChecked'):
+        for key in ('jobs','plannedGames','completedGames','auditedReplays','headersAndCpuTotalsChecked','compiles','botStarts'):
             integer(c.get(key))
         if (c['auditedReplays'] != c['completedGames'] or c['headersAndCpuTotalsChecked'] != c['completedGames']
                 or c.get('logVerified') is not True or c.get('controllerReaped') is not True
                 or c.get('descendantCleanupState') != 'confirmed'
                 or c.get('noChildrenAndECHILD') is not True or c.get('safetyCleanupPerformed') is not False):
             raise ValueError('case lacks complete replay/controller/descendant evidence')
+        if c['botStarts'] < 2*c['completedGames']:
+            raise ValueError('case launch count cannot cover completed games')
         if c['kind'] == 'normal':
             if c.get('status') != 'complete' or c['completedGames'] != c['plannedGames'] or c.get('controllerReturncode') != 0:
                 raise ValueError('normal case incomplete')
@@ -188,6 +191,10 @@ def validate_acceptance_cases(e):
                 raise ValueError('in-flight stop/queue/concurrency evidence incomplete')
             if c['jobs'] == 6 and (c.get('abnormalControllerExitTested') is not True or c.get('controllerReturncode') != 70):
                 raise ValueError('jobs6 must test abnormal standard-controller exit after ACK')
+    for key in ('compiles','botStarts'):
+        integer(e.get(key))
+        if e[key] != sum(c[key] for c in cases):
+            raise ValueError('acceptance launch totals differ from case counts')
     fixtures = e.get('trustedProcessFixtures')
     if (not isinstance(fixtures,list) or len(fixtures) != 4
             or any(not isinstance(f,dict) for f in fixtures)

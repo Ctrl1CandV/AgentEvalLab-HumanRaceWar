@@ -18,7 +18,7 @@ from arena.core.journal import atomic_json
 from arena.core.sandbox import parent_death_guard
 from arena.games.outpost.replay import verify
 from arena.tournament import fingerprint
-from tools import experiment, experiment_plan as plan, profile_bot, process_evidence as evidence
+from tools import experiment, experiment_plan as plan, profile_bot, process_evidence as evidence, runtime_counts
 
 
 def acceptance_specs():
@@ -54,6 +54,8 @@ def case_child(out):
         result.update(settled)
         result.update({'jobs':frame['spec']['jobs'],'plannedGames':frame['games'],
             'completedGames':runtime['completedGames'],'status':runtime['status'],'reason':runtime['reason'],
+            'compiles':runtime['compiles'],'botStarts':runtime['botStarts'],
+            'launchCountBasis':runtime['executionCounts']['countBasis'],
             'controllerReaped':runtime['controllerReaped'],'genericDescendantCleanupState':runtime['descendantCleanupState'],
             'controllerReturncode':runtime['returncode'],
             'abnormalControllerExitTested':frame['spec']['stop'].get('controllerExitOnAck') is True,
@@ -179,11 +181,16 @@ def run(out, *, execute=False, reviewed_sha256=None, exclusive_window=False):
             result['caseGuardianLaunchAttempts']+=1
             result['cases'].append(invoke_case(folder,kind,spec))
             atomic_json(root/'acceptance-summary.json',result)
+        result.update(runtime_counts.totals(root/f'{kind}-jobs{jobs}' for kind,jobs,_ in specs))
         plan.validate_acceptance_cases(result)
         result['passed']=True
     except Exception as error:
         result['errorType']=type(error).__name__;result['message']=str(error)
     finally:
+        result.update(runtime_counts.totals(root/f'{kind}-jobs{jobs}' for kind,jobs,_ in specs))
+        if result['compiles'] > reserved['compiles'] or result['botStarts'] > reserved['botStarts']:
+            result['passed']=False
+            result['errorType']='ValueError';result['message']='actual launch counts exceed reserved caps'
         result['measuredScriptCpuSeconds']=(time.process_time_ns()-before)/1e9
         result['scriptWallSeconds']=(time.monotonic_ns()-wall)/1e9
         result['wholeProcessTreeCpuSeconds']=None

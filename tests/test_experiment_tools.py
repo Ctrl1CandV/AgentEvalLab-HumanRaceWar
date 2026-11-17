@@ -15,7 +15,7 @@ from arena.core.benchmark import workload_digest
 from arena.core.machine import machine_info, machine_fingerprint
 from arena.core.timing import runtime_budget
 from arena import tournament
-from tools import experiment as run, experiment_plan as plan, profile_bot as profile, accept_t6
+from tools import experiment as run, experiment_plan as plan, profile_bot as profile, accept_t6, runtime_counts
 
 REAL_ROOT = Path(__file__).resolve().parents[1]
 
@@ -245,6 +245,42 @@ class ContractTests(unittest.TestCase):
         run.verify_log(self.root/out/'run-log.jsonl',expected_head=result['logHeadSha256'],expected_count=result['logRows'])
         with self.assertRaises(FileExistsError):run.execute(out,digest,enable_experimental=True)
 
+    def test_exact_launch_counts_are_bound_to_run_log_and_profile(self):
+        out,frame,digest=self.frozen('counted')
+        def prepare():
+            meter=runtime_counts.LaunchCounts(self.root/out)
+            meter.launch(True,lambda:None)
+            for _ in range(4):meter.launch(False,lambda:None)
+            self.synthetic(out,frame)
+        with patch.object(run.subprocess,'Popen',side_effect=lambda *a,**k:FakeProcess(prepare)):
+            result=run.execute(out,digest,enable_experimental=True)
+        self.assertEqual((result['compiles'],result['botStarts']),(1,4))
+        log=run.verify_log(self.root/out/'run-log.jsonl',expected_head=result['logHeadSha256'],expected_count=result['logRows'])
+        self.assertEqual(log[-1]['payload']['executionCounts'],result['executionCounts'])
+        summary=profile.collect(out)
+        self.assertEqual((summary['compiles'],summary['botStarts']),(1,4))
+        path=self.root/out/'launch-counts.json';path.write_bytes(path.read_bytes()+b' ')
+        with self.assertRaises(ValueError):profile.collect(out,report_name='tampered-counts')
+
+    def test_stop_closes_count_gate_before_signalling_controller(self):
+        out,frame,digest=self.frozen('counted-stop')
+        def prepare():
+            runtime_counts.LaunchCounts(self.root/out).launch(False,lambda:None)
+            self.synthetic(out,frame,fault=True)
+        process=FakeProcess(active=True)
+        old_send=process.send_signal
+        def send(value):
+            with self.assertRaises(runtime_counts.InfrastructureError):
+                runtime_counts.LaunchCounts(self.root/out).launch(False,lambda:self.fail('late launch'))
+            old_send(value)
+        process.send_signal=send
+        def launch(*args,**kwargs):
+            prepare();return process
+        with patch.object(run.subprocess,'Popen',side_effect=launch):
+            result=run.execute(out,digest,enable_experimental=True)
+        self.assertEqual(result['reason'],'bot-fault-limit')
+        self.assertEqual(result['botStarts'],1)
+
     def test_spawn_failure_is_retained_and_not_a_whole_plan_retry(self):
         out,_,digest=self.frozen()
         with patch.object(run.subprocess,'Popen',side_effect=OSError('synthetic launch failure')):
@@ -437,6 +473,7 @@ class ContractTests(unittest.TestCase):
             completed=games if kind=='normal' else 0
             cases.append({'kind':kind,'jobs':jobs,'plannedGames':games,'completedGames':completed,
                 'auditedReplays':completed,'headersAndCpuTotalsChecked':completed,'logVerified':True,
+                'compiles':2,'botStarts':2*(completed if kind=='normal' else jobs),
                 'status':'complete' if kind=='normal' else 'stopped','reason':'wall-limit',
                 'controllerReaped':True,'descendantCleanupState':'confirmed','noChildrenAndECHILD':True,
                 'safetyCleanupPerformed':False,'stopAcknowledged':True,'noDispatchAfterAck':True,
@@ -446,7 +483,8 @@ class ContractTests(unittest.TestCase):
                 'overlap':{'activeCount':jobs,'positiveOverlap':True,'overlapStartMonotonicNs':1,'overlapEndMonotonicNs':2}})
         return {'passed':True,'executed':True,'acceptanceEvidenceVersion':2,'evidenceKind':'public-bwrap-acceptance',
                 'implementationSha256':plan.implementation_digest(),'frameworkSha256':tournament.fingerprint(self.root),
-                'cases':cases,'trustedProcessFixtures':[{'mode':m,'passed':True} for m in ('int','term','kill','abnormal')]}
+                'cases':cases,'compiles':sum(c['compiles'] for c in cases),'botStarts':sum(c['botStarts'] for c in cases),
+                'trustedProcessFixtures':[{'mode':m,'passed':True} for m in ('int','term','kill','abnormal')]}
 
     def test_normal_games_alone_or_unknown_cleanup_cannot_pass_acceptance(self):
         good=self.acceptance_evidence();plan.validate_acceptance_cases(good)
@@ -455,7 +493,9 @@ class ContractTests(unittest.TestCase):
                        lambda e:e['cases'][2].update(noDispatchAfterAck=False),
                        lambda e:e['cases'][3].update(overlap={'activeCount':1}),
                        lambda e:e['trustedProcessFixtures'][2].update(passed=False),
-                       lambda e:e['cases'][2].update(activeWorkerDeadlineArmed=False)):
+                       lambda e:e['cases'][2].update(activeWorkerDeadlineArmed=False),
+                       lambda e:e['cases'][2].update(botStarts=-1),
+                       lambda e:e.update(compiles=7)):
             value=deepcopy(good);mutate(value)
             with self.assertRaises(ValueError):plan.validate_acceptance_cases(value)
 

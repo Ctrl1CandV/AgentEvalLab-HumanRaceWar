@@ -20,7 +20,7 @@ import time
 from arena.core.journal import atomic_json
 from arena.core.sandbox import parent_death_guard
 from arena.tournament import run_tournament
-from tools import experiment_plan as plan, process_evidence
+from tools import experiment_plan as plan, process_evidence, runtime_counts
 
 
 class HashLog:
@@ -199,10 +199,11 @@ def worker(out):
         raise KeyboardInterrupt('owned experiment stop acknowledged')
     previous_handler = signal.signal(signal.SIGINT, interrupted)
     try:
-        result = run_tournament([plan.safe_path(b['frozen']) for b in frame['bots']],
-                                [plan.safe_path(m['frozen']) for m in frame['maps']], root/'batch',
-                                jobs=frame['spec']['jobs'], pairings=frame['pairs'], seeds=tuple(frame['spec']['seeds']),
-                                sandbox='bwrap', fixed_timing=root/'inputs/timing-lock.json')
+        with runtime_counts.instrument(root, workers=True):
+            result = run_tournament([plan.safe_path(b['frozen']) for b in frame['bots']],
+                                    [plan.safe_path(m['frozen']) for m in frame['maps']], root/'batch',
+                                    jobs=frame['spec']['jobs'], pairings=frame['pairs'], seeds=tuple(frame['spec']['seeds']),
+                                    sandbox='bwrap', fixed_timing=root/'inputs/timing-lock.json')
         atomic_json(root/'standard-return.json', result)
         return 0 if result['status'] == 'complete' else 2
     finally:
@@ -236,6 +237,8 @@ def execute(out, expected_sha256, *, enable_experimental=False):
                              'reservations': {'games': frame['games'], 'compiles': frame['reservedCompiles'],
                                               'botStarts': 8*frame['games']}})
         observer = Observer(root, frame, log)
+        counts = runtime_counts.LaunchCounts(root)
+        counts.create(frame['spec']['caps']['compiles'], frame['spec']['caps']['botStarts'])
         process = None; reason = None; failure = None
         cleanup = {'controllerReaped': False, 'signals': [], 'descendantCleanupState': 'unknown'}
         peak = {'activeCount': 0, 'positiveOverlap': False}
@@ -273,11 +276,18 @@ def execute(out, expected_sha256, *, enable_experimental=False):
         except BaseException as error:
             failure = type(error).__name__; reason = 'supervisor-error'
         finally:
-            if process is not None:
+            try:
+                counts.begin_close()
+            finally:
                 try:
-                    cleanup = stop_owned(process)
-                except BaseException as error:
-                    failure = failure or type(error).__name__; reason = reason or 'cleanup-error'
+                    if process is not None:
+                        try:
+                            cleanup = stop_owned(process)
+                        except BaseException as error:
+                            failure = failure or type(error).__name__; reason = reason or 'cleanup-error'
+                finally:
+                    actual_counts = counts.close()
+            log.append('launch-counts', actual_counts)
             try:
                 final_reason = observer.poll(final=True)
                 reason = reason or final_reason
@@ -299,6 +309,8 @@ def execute(out, expected_sha256, *, enable_experimental=False):
                     acknowledged = False; dispatch = False
             terminal = {'status': status, 'reason': reason, 'errorType': failure, 'returncode': code,
                         'completedGames': len(observer.completed), 'plannedGames': frame['games'],
+                        'compiles': actual_counts['compiles'], 'botStarts': actual_counts['botStarts'],
+                        'executionCounts': actual_counts,
                         'controllerReaped': process is None or process.poll() is not None,
                         'descendantCleanupState': 'not-started' if process is None else cleanup.get('descendantCleanupState','unknown'),
                         'controllerCleanup': cleanup, 'workerOverlap': peak,
