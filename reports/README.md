@@ -2,9 +2,16 @@
 
 当前停点见STATUS，最新交审入口如下；执行权限以用户最新指令和有效裁定为准，历史报告中的下一任务不自动提供当前授权。工具与对接/评测GPT分工见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
 
-## 2026-11-18 审查落实
+## WP-A2 与 r11 阶段性结果
 
-[落实报告](phase-B-wpa-review-followup.md)和[对应 JSON](../data/phase-b/wpa-review-followup.json)记录阶梯公开范围和状态更正。T6 小修与 WP-A 获接受；本地评测分支尚无 WP-A2/WP-B 公开结果，r11 的实际进度以用户说明为准。
+[汇总报告](phase-B-wpa2-wpb01-integration.md)和[详细 JSON](../data/phase-b/wpa2-wpb01-integration.json)对应评测分支 `9f3f204`。修订版 WP-A2 与 WP-B 第一轮已完成；r11 暂保留 5 份，仍有三个区段缺候选，r12 未启动。
+
+- WP-A2：[风格分析及早期停点](phase-B-claude-wpa2-checkpoint.md)、[修订联合图](phase-B-claude-wpa2-revised.md)。
+- WP-B：[r11 接收记录（历史）](phase-B-claude-r11-intake.md)、[第一轮评测结果](phase-B-claude-wpb01.md)。
+
+## 2026-11-18 审查落实（导入前记录）
+
+[落实报告](phase-B-wpa-review-followup.md)和[对应 JSON](../data/phase-b/wpa-review-followup.json)记录阶梯公开范围和当时的状态更正。T6 小修与 WP-A 获接受；其中“暂无新结果”只描述当时的 `c47c435`，以本页上方的最新结果为准。
 
 ## 第二次审查后的实施汇总（历史）
 

@@ -1,0 +1,1367 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-18",
+  "status": "WP-B round 1 evaluated",
+  "intakeCommit": "1954c8b",
+  "WP-A2Commit": "ab7c8dd",
+  "protocol": {
+    "B1B2": [
+      "M-balanced",
+      "Z-towers",
+      "Z-harass"
+    ],
+    "P0P1P2": [
+      "M-balanced",
+      "A-r02",
+      "E-r02"
+    ],
+    "maps": 80,
+    "identitySeeds": [
+      [
+        17,
+        29
+      ],
+      [
+        29,
+        17
+      ]
+    ],
+    "doubleSeat": true,
+    "jobs": 6,
+    "sandbox": "bwrap",
+    "D-c01": false,
+    "T6": false,
+    "formalCalibration": false
+  },
+  "graph": {
+    "nodes": 31,
+    "observedEdges": 114,
+    "possibleEdges": 465,
+    "jointUniqueGames": 36480,
+    "reusedSlots": 26880,
+    "newEdges": 30,
+    "newScoredGames": 9600,
+    "historicalEvaluatorNewGamesThroughThisRound": 42720,
+    "allTenIncludedBeforeSelection": true,
+    "pairwiseRecordsPublished": false
+  },
+  "bt": {
+    "anchor": "M-balanced",
+    "finiteFullPointMLE": true,
+    "anchorComponentCodes": [
+      "K-a-r02",
+      "K-e-r03",
+      "K-c-r04",
+      "M-balanced",
+      "K-e-w01-r05",
+      "K-c-w01-r05",
+      "K-e-f01-r06",
+      "K-c-f01-r07",
+      "K-e-f02-r08",
+      "K-c-f02-r08",
+      "A-r02",
+      "E-r02",
+      "C-r02",
+      "Z-random",
+      "Z-miner",
+      "Z-rush",
+      "Z-eco",
+      "Z-towers",
+      "Z-harass",
+      "Z-wrush",
+      "Z-turtle",
+      "b1-ctrl",
+      "b1-econ",
+      "b2-ctrl",
+      "b2-econ",
+      "p0-ctrl",
+      "p0-econ",
+      "p1-ctrl",
+      "p1-econ",
+      "p2-ctrl",
+      "p2-econ"
+    ],
+    "maxScoreResidual": 2.0319248505984433e-09,
+    "nodes": [
+      {
+        "code": "K-a-r02",
+        "style": "attack",
+        "mAnchor": 629.23771580459,
+        "interval95": [
+          571.1253682614828,
+          695.2752070650891
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2299.6135236631044,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-e-r03",
+        "style": "economic",
+        "mAnchor": 758.7796970049139,
+        "interval95": [
+          715.7490984779176,
+          811.7231603400066
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2429.155504863428,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-c-r04",
+        "style": "control",
+        "mAnchor": 732.3626121034829,
+        "interval95": [
+          686.0153265904947,
+          787.8802911768479
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2402.7384199619974,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "M-balanced",
+        "style": "public-anchor",
+        "mAnchor": 0.0,
+        "interval95": [
+          0.0,
+          0.0
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1670.3758078585145,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-e-w01-r05",
+        "style": "economic",
+        "mAnchor": 702.0062461576437,
+        "interval95": [
+          662.3551007910039,
+          749.8842976731202
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2372.3820540161582,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-c-w01-r05",
+        "style": "control",
+        "mAnchor": 669.9065414795368,
+        "interval95": [
+          630.1622970829563,
+          718.8717876980484
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2340.282349338051,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-e-f01-r06",
+        "style": "economic",
+        "mAnchor": 565.4495263332385,
+        "interval95": [
+          525.5850156681479,
+          612.0680428974107
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2235.825334191753,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-c-f01-r07",
+        "style": "control",
+        "mAnchor": 537.8678644309014,
+        "interval95": [
+          496.68895429853876,
+          583.471105309859
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2208.243672289416,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-e-f02-r08",
+        "style": "economic",
+        "mAnchor": 458.09025464391675,
+        "interval95": [
+          413.3836712755505,
+          507.5568959008742
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2128.466062502431,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-c-f02-r08",
+        "style": "control",
+        "mAnchor": 398.7592267248745,
+        "interval95": [
+          352.50072791237847,
+          448.61671096017665
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2069.135034583389,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "A-r02",
+        "style": "attack",
+        "mAnchor": 7.22482211217877,
+        "interval95": [
+          -38.82637107888864,
+          52.956972367061844
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1677.6006299706933,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "E-r02",
+        "style": "economic",
+        "mAnchor": 299.42194366220133,
+        "interval95": [
+          243.24445889828618,
+          362.7322215623706
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1969.7977515207158,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "C-r02",
+        "style": "control",
+        "mAnchor": 345.4876277364729,
+        "interval95": [
+          287.94715083310547,
+          408.33165045324
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2015.8634355949873,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-random",
+        "style": "public-zoo",
+        "mAnchor": -1927.6424751403267,
+        "interval95": [
+          -2411.2385953366165,
+          -1733.8205959394554
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 62,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": -257.26666728181226,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-miner",
+        "style": "public-zoo",
+        "mAnchor": -1413.1091405767022,
+        "interval95": [
+          -1835.567632785534,
+          -1269.628090514991
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 62,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 257.26666728181226,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-rush",
+        "style": "public-zoo",
+        "mAnchor": -653.9866684858139,
+        "interval95": [
+          -853.4688002249773,
+          -555.4173602519936
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 3,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1016.3891393727006,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-eco",
+        "style": "public-zoo",
+        "mAnchor": -635.2841494654334,
+        "interval95": [
+          -905.551582347248,
+          -476.41358350316034
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1035.0916583930812,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-towers",
+        "style": "public-zoo",
+        "mAnchor": -179.40720499286923,
+        "interval95": [
+          -230.19216287529687,
+          -132.51430001112644
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1490.9686028656452,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-harass",
+        "style": "public-zoo",
+        "mAnchor": -577.56972175382,
+        "interval95": [
+          -677.3614553198684,
+          -498.13750864818354
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1092.8060861046945,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-wrush",
+        "style": "public-zoo",
+        "mAnchor": -939.9379410570239,
+        "interval95": [
+          -1356.8413029134788,
+          -795.898136742764
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 62,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 730.4378668014906,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-turtle",
+        "style": "public-zoo",
+        "mAnchor": -1738.600456915596,
+        "interval95": [
+          -2184.9039595937907,
+          -1581.2439138255957
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 62,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": -68.22464905708148,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b1-ctrl",
+        "style": "control",
+        "mAnchor": -274.85216764236407,
+        "interval95": [
+          -346.0880722584061,
+          -211.71399884435988
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1395.5236402161504,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b1-econ",
+        "style": "economic",
+        "mAnchor": -258.6723798396505,
+        "interval95": [
+          -319.90090640272086,
+          -205.30693626235538
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1411.703428018864,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b2-ctrl",
+        "style": "control",
+        "mAnchor": -146.17410223542444,
+        "interval95": [
+          -204.9343835892855,
+          -90.4884706330573
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1524.20170562309,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b2-econ",
+        "style": "economic",
+        "mAnchor": -129.75807979253432,
+        "interval95": [
+          -181.47983315115926,
+          -85.45446400430747
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1540.6177280659801,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p0-ctrl",
+        "style": "control",
+        "mAnchor": -88.5840858046343,
+        "interval95": [
+          -159.64043528217974,
+          -24.636304896575478
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1581.7917220538802,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p0-econ",
+        "style": "economic",
+        "mAnchor": -20.1692382012666,
+        "interval95": [
+          -69.80431151598503,
+          27.080601085600662
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1650.2065696572479,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p1-ctrl",
+        "style": "control",
+        "mAnchor": 84.37318449867396,
+        "interval95": [
+          35.382629813887135,
+          137.48816666279856
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1754.7489923571884,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p1-econ",
+        "style": "economic",
+        "mAnchor": 109.56255010132352,
+        "interval95": [
+          65.3592062916321,
+          155.08748970969097
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1779.938357959838,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p2-ctrl",
+        "style": "control",
+        "mAnchor": 207.0860344755708,
+        "interval95": [
+          161.65965723271933,
+          254.24851916439061
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1877.4618423340853,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p2-econ",
+        "style": "economic",
+        "mAnchor": 274.1591489962986,
+        "interval95": [
+          234.96093238530142,
+          314.8037389208335
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1944.5349568548131,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "positiveInfiniteSamples": 0,
+          "negativeInfiniteSamples": 0
+        }
+      }
+    ],
+    "L0OffsetToSubtractFromMAnchor": -1670.3758078585145,
+    "L0OffsetBootstrap": {
+      "interval95": null,
+      "unidentifiedSamples": 62,
+      "positiveInfiniteSamples": 0,
+      "negativeInfiniteSamples": 0
+    },
+    "validL0ConversionDraws": 3938,
+    "bootstrap": {
+      "samples": 4000,
+      "seed": 4219,
+      "mapClusters": 80,
+      "finiteFullMLEReplicates": 3938,
+      "method": "all opponents and both seats in each map jointly resampled; nearest-rank 2.5/97.5 percentiles; no rejected bootstrap draws, pseudocounts, clipping or multiplicity correction"
+    }
+  },
+  "selection": {
+    "rule": "inclusive frozen range, allow cross-target, closest center per style, then lexical tie; unselected preserved",
+    "candidates": [
+      {
+        "id": "b1-ctrl",
+        "declaredSlot": "B1",
+        "reportedStyle": "control",
+        "estimate": -274.85216764236407,
+        "assignedWindow": null,
+        "bootstrapWindowCounts": {
+          "B1": 776,
+          "outsideOrUnidentified": 3107,
+          "B2": 117
+        },
+        "interval95": [
+          -346.0880722584061,
+          -211.71399884435988
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "outside-every-target",
+        "devAllThreeOpponentsWDL": [
+          444,
+          0,
+          516
+        ]
+      },
+      {
+        "id": "b1-econ",
+        "declaredSlot": "B1",
+        "reportedStyle": "economic",
+        "estimate": -258.6723798396505,
+        "assignedWindow": null,
+        "bootstrapWindowCounts": {
+          "outsideOrUnidentified": 3516,
+          "B1": 280,
+          "B2": 204
+        },
+        "interval95": [
+          -319.90090640272086,
+          -205.30693626235538
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "outside-every-target",
+        "devAllThreeOpponentsWDL": [
+          459,
+          0,
+          501
+        ]
+      },
+      {
+        "id": "b2-ctrl",
+        "declaredSlot": "B2",
+        "reportedStyle": "control",
+        "estimate": -146.17410223542444,
+        "assignedWindow": "B2",
+        "bootstrapWindowCounts": {
+          "outsideOrUnidentified": 1281,
+          "B2": 2719
+        },
+        "interval95": [
+          -204.9343835892855,
+          -90.4884706330573
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "selected",
+        "devAllThreeOpponentsWDL": [
+          567,
+          0,
+          393
+        ]
+      },
+      {
+        "id": "b2-econ",
+        "declaredSlot": "B2",
+        "reportedStyle": "economic",
+        "estimate": -129.75807979253432,
+        "assignedWindow": null,
+        "bootstrapWindowCounts": {
+          "B2": 1782,
+          "outsideOrUnidentified": 2218
+        },
+        "interval95": [
+          -181.47983315115926,
+          -85.45446400430747
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "outside-every-target",
+        "devAllThreeOpponentsWDL": [
+          583,
+          0,
+          377
+        ]
+      },
+      {
+        "id": "p0-ctrl",
+        "declaredSlot": "P0",
+        "reportedStyle": "control",
+        "estimate": -88.5840858046343,
+        "assignedWindow": null,
+        "bootstrapWindowCounts": {
+          "B2": 444,
+          "outsideOrUnidentified": 3296,
+          "P0": 260
+        },
+        "interval95": [
+          -159.64043528217974,
+          -24.636304896575478
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "outside-every-target",
+        "devAllThreeOpponentsWDL": [
+          268,
+          0,
+          692
+        ]
+      },
+      {
+        "id": "p0-econ",
+        "declaredSlot": "P0",
+        "reportedStyle": "economic",
+        "estimate": -20.1692382012666,
+        "assignedWindow": "P0",
+        "bootstrapWindowCounts": {
+          "outsideOrUnidentified": 912,
+          "P0": 3077,
+          "P1": 11
+        },
+        "interval95": [
+          -69.80431151598503,
+          27.080601085600662
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "selected",
+        "devAllThreeOpponentsWDL": [
+          342,
+          0,
+          618
+        ]
+      },
+      {
+        "id": "p1-ctrl",
+        "declaredSlot": "P1",
+        "reportedStyle": "control",
+        "estimate": 84.37318449867396,
+        "assignedWindow": "P1",
+        "bootstrapWindowCounts": {
+          "outsideOrUnidentified": 365,
+          "P1": 3473,
+          "P0": 162
+        },
+        "interval95": [
+          35.382629813887135,
+          137.48816666279856
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "selected",
+        "devAllThreeOpponentsWDL": [
+          465,
+          0,
+          495
+        ]
+      },
+      {
+        "id": "p1-econ",
+        "declaredSlot": "P1",
+        "reportedStyle": "economic",
+        "estimate": 109.56255010132352,
+        "assignedWindow": "P1",
+        "bootstrapWindowCounts": {
+          "P1": 3268,
+          "outsideOrUnidentified": 709,
+          "P2": 20,
+          "P0": 3
+        },
+        "interval95": [
+          65.3592062916321,
+          155.08748970969097
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "selected",
+        "devAllThreeOpponentsWDL": [
+          495,
+          0,
+          465
+        ]
+      },
+      {
+        "id": "p2-ctrl",
+        "declaredSlot": "P2",
+        "reportedStyle": "control",
+        "estimate": 207.0860344755708,
+        "assignedWindow": "P2",
+        "bootstrapWindowCounts": {
+          "outsideOrUnidentified": 378,
+          "P2": 3620,
+          "P1": 2
+        },
+        "interval95": [
+          161.65965723271933,
+          254.24851916439061
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "selected",
+        "devAllThreeOpponentsWDL": [
+          607,
+          0,
+          353
+        ]
+      },
+      {
+        "id": "p2-econ",
+        "declaredSlot": "P2",
+        "reportedStyle": "economic",
+        "estimate": 274.1591489962986,
+        "assignedWindow": null,
+        "bootstrapWindowCounts": {
+          "P2": 504,
+          "outsideOrUnidentified": 3496
+        },
+        "interval95": [
+          234.96093238530142,
+          314.8037389208335
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "outcome": "outside-every-target",
+        "devAllThreeOpponentsWDL": [
+          677,
+          0,
+          283
+        ]
+      }
+    ],
+    "targetGroups": [
+      {
+        "id": "B1",
+        "center": -345.6487865160375,
+        "range": [
+          -385.6487865160375,
+          -305.6487865160375
+        ],
+        "previousMembers": [],
+        "selected": [],
+        "distinctRegisteredStyles": [],
+        "minimumAdditionalStyleSlots": 2,
+        "anyOneOfMissingStylesSuffices": false,
+        "missingAuthorStylesEligible": [
+          "economic",
+          "control"
+        ]
+      },
+      {
+        "id": "B2",
+        "center": -172.82439325801874,
+        "range": [
+          -212.82439325801874,
+          -132.82439325801874
+        ],
+        "previousMembers": [],
+        "selected": [
+          "b2-ctrl"
+        ],
+        "distinctRegisteredStyles": [
+          "control"
+        ],
+        "minimumAdditionalStyleSlots": 1,
+        "anyOneOfMissingStylesSuffices": false,
+        "missingAuthorStylesEligible": [
+          "economic"
+        ]
+      },
+      {
+        "id": "P0",
+        "center": 0.0,
+        "range": [
+          -40.0,
+          40.0
+        ],
+        "previousMembers": [
+          {
+            "id": "M-balanced",
+            "style": "balanced-reference"
+          }
+        ],
+        "selected": [
+          "p0-econ"
+        ],
+        "distinctRegisteredStyles": [
+          "balanced-reference",
+          "economic"
+        ],
+        "minimumAdditionalStyleSlots": 0,
+        "anyOneOfMissingStylesSuffices": false,
+        "missingAuthorStylesEligible": []
+      },
+      {
+        "id": "P1",
+        "center": 90.0,
+        "range": [
+          50.0,
+          130.0
+        ],
+        "previousMembers": [
+          {
+            "id": "A-r02",
+            "style": "attack"
+          }
+        ],
+        "selected": [
+          "p1-econ",
+          "p1-ctrl"
+        ],
+        "distinctRegisteredStyles": [
+          "attack",
+          "control",
+          "economic"
+        ],
+        "minimumAdditionalStyleSlots": 0,
+        "anyOneOfMissingStylesSuffices": false,
+        "missingAuthorStylesEligible": []
+      },
+      {
+        "id": "P2",
+        "center": 212.34802932595522,
+        "range": [
+          172.34802932595522,
+          252.34802932595522
+        ],
+        "previousMembers": [],
+        "selected": [
+          "p2-ctrl"
+        ],
+        "distinctRegisteredStyles": [
+          "control"
+        ],
+        "minimumAdditionalStyleSlots": 1,
+        "anyOneOfMissingStylesSuffices": false,
+        "missingAuthorStylesEligible": [
+          "economic"
+        ]
+      }
+    ],
+    "remainingGaps": [
+      {
+        "id": "B1",
+        "center": -345.6487865160375,
+        "range": [
+          -385.6487865160375,
+          -305.6487865160375
+        ],
+        "previousMembers": [],
+        "selected": [],
+        "distinctRegisteredStyles": [],
+        "minimumAdditionalStyleSlots": 2,
+        "anyOneOfMissingStylesSuffices": false,
+        "missingAuthorStylesEligible": [
+          "economic",
+          "control"
+        ]
+      },
+      {
+        "id": "B2",
+        "center": -172.82439325801874,
+        "range": [
+          -212.82439325801874,
+          -132.82439325801874
+        ],
+        "previousMembers": [],
+        "selected": [
+          "b2-ctrl"
+        ],
+        "distinctRegisteredStyles": [
+          "control"
+        ],
+        "minimumAdditionalStyleSlots": 1,
+        "anyOneOfMissingStylesSuffices": false,
+        "missingAuthorStylesEligible": [
+          "economic"
+        ]
+      },
+      {
+        "id": "P2",
+        "center": 212.34802932595522,
+        "range": [
+          172.34802932595522,
+          252.34802932595522
+        ],
+        "previousMembers": [],
+        "selected": [
+          "p2-ctrl"
+        ],
+        "distinctRegisteredStyles": [
+          "control"
+        ],
+        "minimumAdditionalStyleSlots": 1,
+        "anyOneOfMissingStylesSuffices": false,
+        "missingAuthorStylesEligible": [
+          "economic"
+        ]
+      }
+    ],
+    "draftLevelDiagnostic": [
+      {
+        "id": "L0",
+        "members": [
+          "Z-random",
+          "Z-miner"
+        ],
+        "mean": -1670.3758078585145,
+        "span": 514.5333345636245
+      },
+      {
+        "id": "L1",
+        "members": [
+          "Z-rush",
+          "Z-eco",
+          "Z-towers"
+        ],
+        "mean": -489.5593409813722,
+        "span": 474.5794634929447
+      },
+      {
+        "id": "B1",
+        "members": [],
+        "mean": null,
+        "span": null
+      },
+      {
+        "id": "B2",
+        "members": [
+          "b2-ctrl"
+        ],
+        "mean": -146.17410223542444,
+        "span": 0.0
+      },
+      {
+        "id": "P0",
+        "members": [
+          "M-balanced",
+          "p0-econ"
+        ],
+        "mean": -10.0846191006333,
+        "span": 20.1692382012666
+      },
+      {
+        "id": "P1",
+        "members": [
+          "A-r02",
+          "p1-econ",
+          "p1-ctrl"
+        ],
+        "mean": 67.05351890405875,
+        "span": 102.33772798914475
+      },
+      {
+        "id": "P2",
+        "members": [
+          "p2-ctrl"
+        ],
+        "mean": 207.0860344755708,
+        "span": 0.0
+      },
+      {
+        "id": "P3",
+        "members": [
+          "E-r02",
+          "C-r02"
+        ],
+        "mean": 322.4547856993371,
+        "span": 46.06568407427159
+      },
+      {
+        "id": "P4",
+        "members": [
+          "K-c-f02-r08",
+          "K-e-f02-r08"
+        ],
+        "mean": 428.4247406843956,
+        "span": 59.33102791904224
+      },
+      {
+        "id": "P5",
+        "members": [
+          "K-c-f01-r07",
+          "K-e-f01-r06"
+        ],
+        "mean": 551.6586953820699,
+        "span": 27.581661902337146
+      },
+      {
+        "id": "P6",
+        "members": [
+          "K-a-r02",
+          "K-c-w01-r05"
+        ],
+        "mean": 649.5721286420635,
+        "span": 40.66882567494679
+      },
+      {
+        "id": "P7",
+        "members": [
+          "K-e-w01-r05",
+          "K-c-r04",
+          "K-e-r03"
+        ],
+        "mean": 731.0495184220135,
+        "span": 56.77345084727028
+      }
+    ],
+    "adjacentSpacingDiagnostic": [
+      {
+        "from": "L0",
+        "to": "L1",
+        "delta": 1180.8164668771424
+      },
+      {
+        "from": "L1",
+        "to": "B1",
+        "delta": null
+      },
+      {
+        "from": "B1",
+        "to": "B2",
+        "delta": null
+      },
+      {
+        "from": "B2",
+        "to": "P0",
+        "delta": 136.08948313479115
+      },
+      {
+        "from": "P0",
+        "to": "P1",
+        "delta": 77.13813800469205
+      },
+      {
+        "from": "P1",
+        "to": "P2",
+        "delta": 140.03251557151208
+      },
+      {
+        "from": "P2",
+        "to": "P3",
+        "delta": 115.36875122376628
+      },
+      {
+        "from": "P3",
+        "to": "P4",
+        "delta": 105.96995498505851
+      },
+      {
+        "from": "P4",
+        "to": "P5",
+        "delta": 123.23395469767433
+      },
+      {
+        "from": "P5",
+        "to": "P6",
+        "delta": 97.91343325999355
+      },
+      {
+        "from": "P6",
+        "to": "P7",
+        "delta": 81.47738977995004
+      }
+    ],
+    "formalLevelsAssigned": false,
+    "formalStyleCertified": false,
+    "passedCoverageRule": false,
+    "selectionCounts": {
+      "outside-every-target": 5,
+      "selected": 5
+    },
+    "secondRoundStarted": false,
+    "remainingAuthorRoundsMaximum": 1
+  },
+  "usage": {
+    "newScoredGames": 9600,
+    "shortChecks": 10,
+    "shortCheckEngineSteps": 50,
+    "scoringCompiles": 15,
+    "checkCompiles": 10,
+    "totalCompiles": 25,
+    "compileCacheHits": 15,
+    "scoringBotStarts": 19200,
+    "checkBotStarts": 10,
+    "totalBotStarts": 19210,
+    "benchmarks": 0,
+    "scoringWallSeconds": 1093.667,
+    "checkWallSeconds": 48.767,
+    "scoringHardWallSeconds": 7200,
+    "infraErrors": 0,
+    "retries": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "protocolWarnings": 0,
+    "endingCounts": {
+      "base_destroyed": 2055,
+      "turn_limit_score": 7534,
+      "turn_limit_deposit": 11
+    },
+    "botCpuNsInScoredGames": 2207310927900,
+    "harnessCpuNsInScoredGames": 3781543150100,
+    "compilationCpuSeconds": null,
+    "fullSessionCpuSeconds": null,
+    "scoredEngineSteps": 2747795,
+    "newVerifiedReplays": 9600,
+    "oldReplayEngineSteps": 0,
+    "auditCpuNs": 1496326678300,
+    "auditWallNs": 250176039232,
+    "analysisCpuNs": 25802258900,
+    "analysisWallNs": 26075975145
+  },
+  "authorEvidence": "separate intake self-report, not used in dev fit; original 9/10 equal-weight aiming not acceptance",
+  "next": "Stop and report first-round remaining gaps and choices; no automatic r12"
+}

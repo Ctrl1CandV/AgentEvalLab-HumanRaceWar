@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 1,
+  "status": "intake-sealed-awaiting-third-reference",
+  "round": "WP-B01/r11-revised",
+  "targetBasis": "ab7c8dd",
+  "authorStoppedByUserNotice": true,
+  "intake": {
+    "candidates": 10,
+    "regularFiles": 12,
+    "checksummedFiles": 11,
+    "packageBytes": 1319500,
+    "secondReadAndCopyDigestsAllMatch": true,
+    "selfReportedCandidateHashPrefixesMatch": true,
+    "sealed": true,
+    "sourceInterpretedOrExecuted": false
+  },
+  "referenceAliases": {
+    "K-e-f02-r08": "e-lower1",
+    "K-c-f02-r08": "c-lower1"
+  },
+  "checkedReferenceAliasesAgainstFrozenWPATree": true,
+  "authorTestSnapshotIdentityIndependentlyVerified": false,
+  "authorRunsOrWorkingDirectoriesInspected": false,
+  "authorReported": {
+    "finalCandidatesAndEstimates": [
+      {
+        "id": "b1-ctrl",
+        "declaredSlot": "B1",
+        "reportedStyle": "control",
+        "authorPublicM320WDL": [
+          57,
+          0,
+          263
+        ],
+        "authorActualGameWeightEstimate": -295,
+        "authorEqualEdgeWeightEstimate": -328.5,
+        "targetRange": [
+          -385.6487865160375,
+          -305.6487865160375
+        ],
+        "actualGameWeightInTarget": false,
+        "equalEdgeWeightInTarget": true
+      },
+      {
+        "id": "b1-econ",
+        "declaredSlot": "B1",
+        "reportedStyle": "economic",
+        "authorPublicM320WDL": [
+          112,
+          0,
+          208
+        ],
+        "authorActualGameWeightEstimate": -206.5,
+        "authorEqualEdgeWeightEstimate": -366.5,
+        "targetRange": [
+          -385.6487865160375,
+          -305.6487865160375
+        ],
+        "actualGameWeightInTarget": false,
+        "equalEdgeWeightInTarget": true
+      },
+      {
+        "id": "b2-ctrl",
+        "declaredSlot": "B2",
+        "reportedStyle": "control",
+        "authorPublicM320WDL": [
+          95,
+          0,
+          225
+        ],
+        "authorActualGameWeightEstimate": -157.5,
+        "authorEqualEdgeWeightEstimate": -170,
+        "targetRange": [
+          -212.82439325801874,
+          -132.82439325801874
+        ],
+        "actualGameWeightInTarget": true,
+        "equalEdgeWeightInTarget": true
+      },
+      {
+        "id": "b2-econ",
+        "declaredSlot": "B2",
+        "reportedStyle": "economic",
+        "authorPublicM320WDL": [
+          178,
+          0,
+          142
+        ],
+        "authorActualGameWeightEstimate": -53,
+        "authorEqualEdgeWeightEstimate": -225,
+        "targetRange": [
+          -212.82439325801874,
+          -132.82439325801874
+        ],
+        "actualGameWeightInTarget": false,
+        "equalEdgeWeightInTarget": false
+      },
+      {
+        "id": "p0-ctrl",
+        "declaredSlot": "P0",
+        "reportedStyle": "control",
+        "authorPublicM320WDL": [
+          97,
+          0,
+          223
+        ],
+        "authorActualGameWeightEstimate": -108,
+        "authorEqualEdgeWeightEstimate": -35.5,
+        "targetRange": [
+          -40.0,
+          40.0
+        ],
+        "actualGameWeightInTarget": false,
+        "equalEdgeWeightInTarget": true
+      },
+      {
+        "id": "p0-econ",
+        "declaredSlot": "P0",
+        "reportedStyle": "economic",
+        "authorPublicM320WDL": [
+          139,
+          0,
+          181
+        ],
+        "authorActualGameWeightEstimate": -35.5,
+        "authorEqualEdgeWeightEstimate": -14.5,
+        "targetRange": [
+          -40.0,
+          40.0
+        ],
+        "actualGameWeightInTarget": true,
+        "equalEdgeWeightInTarget": true
+      },
+      {
+        "id": "p1-ctrl",
+        "declaredSlot": "P1",
+        "reportedStyle": "control",
+        "authorPublicM320WDL": [
+          168,
+          0,
+          152
+        ],
+        "authorActualGameWeightEstimate": 53,
+        "authorEqualEdgeWeightEstimate": 114,
+        "targetRange": [
+          50.0,
+          130.0
+        ],
+        "actualGameWeightInTarget": true,
+        "equalEdgeWeightInTarget": true
+      },
+      {
+        "id": "p1-econ",
+        "declaredSlot": "P1",
+        "reportedStyle": "economic",
+        "authorPublicM320WDL": [
+          199,
+          0,
+          121
+        ],
+        "authorActualGameWeightEstimate": 85,
+        "authorEqualEdgeWeightEstimate": 83,
+        "targetRange": [
+          50.0,
+          130.0
+        ],
+        "actualGameWeightInTarget": true,
+        "equalEdgeWeightInTarget": true
+      },
+      {
+        "id": "p2-ctrl",
+        "declaredSlot": "P2",
+        "reportedStyle": "control",
+        "authorPublicM320WDL": [
+          225,
+          0,
+          95
+        ],
+        "authorActualGameWeightEstimate": 177.5,
+        "authorEqualEdgeWeightEstimate": 212,
+        "targetRange": [
+          172.34802932595522,
+          252.34802932595522
+        ],
+        "actualGameWeightInTarget": true,
+        "equalEdgeWeightInTarget": true
+      },
+      {
+        "id": "p2-econ",
+        "declaredSlot": "P2",
+        "reportedStyle": "economic",
+        "authorPublicM320WDL": [
+          264,
+          0,
+          56
+        ],
+        "authorActualGameWeightEstimate": 236.5,
+        "authorEqualEdgeWeightEstimate": 206.5,
+        "targetRange": [
+          172.34802932595522,
+          252.34802932595522
+        ],
+        "actualGameWeightInTarget": true,
+        "equalEdgeWeightInTarget": true
+      }
+    ],
+    "equalEdgeWeightInTargetCount": 9,
+    "actualGameWeightInTargetCount": 6,
+    "reportedGames": 11360,
+    "probeGames": 6880,
+    "probeCombinations": 36,
+    "finalGames": 4480,
+    "finalMPerCandidate": 320,
+    "authorChecks": 10,
+    "scope": "self-reported public-only and own prior bot references; evaluator did not replay or adopt",
+    "faults": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "infrastructureErrors": 0,
+    "cpuTurnMs": {
+      "p50": 0.239,
+      "p99": 0.555,
+      "max": 12.855,
+      "finalMax": 7.823
+    },
+    "model": "Claude Opus 5.5",
+    "sameAuthorSessionReported": true,
+    "estimatedElapsedMinutes": 76,
+    "waitingReported": false,
+    "styleMetricsInOriginalNOTES": true,
+    "preferredKf02SelectionDeviation": "P slots selected from M plus both K-f02 rather than prioritizing own-line K-f02; both reported weights kept; no after-the-fact retest or disqualification",
+    "oldDeliveryIntegrityClaimIndependentlyVerified": false
+  },
+  "evaluator": {
+    "actual": {
+      "newGames": 0,
+      "checks": 0,
+      "compiles": 0,
+      "botStarts": 0,
+      "engineSteps": 0,
+      "benchmarks": 0,
+      "btFits": 0
+    },
+    "scoringStarted": false,
+    "acceptedFormalTierOrStyle": false,
+    "candidateRanksAssigned": false,
+    "P0P1P2References": [
+      "M-balanced",
+      "A-r02",
+      "E-r02"
+    ],
+    "B1B2EstablishedReferences": [
+      "M-balanced",
+      "Z-towers"
+    ],
+    "B1B2ThirdReference": null,
+    "D-c01ExecutionDisallowed": true,
+    "maximumGames": 9600,
+    "scoringWallSeconds": 7200,
+    "maximumRounds": 2,
+    "partialScoringStarted": false,
+    "T6": false
+  }
+}

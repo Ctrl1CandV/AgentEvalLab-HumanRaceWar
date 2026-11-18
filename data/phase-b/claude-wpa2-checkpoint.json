@@ -1,0 +1,1455 @@
+{
+  "schemaVersion": 1,
+  "status": "partial-style-analysis-complete-scoring-blocked",
+  "authority": "inbox/2026-11-18-phase-b-wpa-review.md",
+  "wpaAccepted": true,
+  "newScoring": {
+    "state": "not-started",
+    "plannedNodes": 22,
+    "plannedNewEdges": 35,
+    "plannedGames": 11200,
+    "gamesPerEdge": 320,
+    "edgeGroups": {
+      "eightZooToMAndA": 16,
+      "DC01ToApprovedReferences": 6,
+      "L0ToOtherZoo": 12,
+      "internalL0": 1
+    },
+    "actualGames": 0,
+    "compiles": 0,
+    "botStarts": 0,
+    "checks": 0,
+    "benchmarks": 0,
+    "btFits": 0,
+    "compileCap": 15,
+    "hardWallSeconds": 3600,
+    "T6Used": false,
+    "blocker": "D-c01 is an archived DeepSeek author artifact and current repository instructions prohibit executing it. No substitute, cache workaround, or partial tournament run.",
+    "sourceBytesReadCopiedOrExecuted": false,
+    "jointBT": null,
+    "l0MeanZeroConversion": null,
+    "newLevels": null,
+    "newGaps": null
+  },
+  "style": {
+    "schemaVersion": 1,
+    "scope": "matched-opponent style reanalysis of existing sealed WPA replays;WP-A2 scoring has not started",
+    "sourceCommit": "c47c4355bf4843f0494a5db517e1f910340599a5",
+    "uniqueReplays": 5760,
+    "matchedOpponentRows": 19,
+    "panels": [
+      {
+        "bot": "K-a-r02",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 53.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 128,
+          "value": 196.0,
+          "missing": 192
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.7155081589130811,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6887603105107194,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.3875,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.25,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 13.9,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.246875,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 22.91875,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 5.48125,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-e-r03",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 56.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 118,
+          "value": 191.5,
+          "missing": 202
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.6936698820937399,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6663944453687116,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.365625,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.246875,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 11.84375,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.153125,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.271875,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 5.315625,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-c-r04",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 58.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 115,
+          "value": 205,
+          "missing": 205
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.6934664813629066,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6595223926203735,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.340625,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.24375,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 11.8125,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.1,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.4,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 5.4125,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "M-balanced",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "self-edge-not-in-protocol"
+      },
+      {
+        "bot": "K-e-w01-r05",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 57.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 121,
+          "value": 196,
+          "missing": 199
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.6929641236440813,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6653293617350422,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.353125,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.246875,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 11.859375,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.140625,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.265625,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 5.31875,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-c-w01-r05",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 59.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 115,
+          "value": 205,
+          "missing": 205
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.6916283967713709,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6576288479770946,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.340625,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.24375,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 11.828125,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.121875,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.384375,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 5.384375,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-e-f01-r06",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 63.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 126,
+          "value": 208.5,
+          "missing": 194
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.6714133431906767,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6525552816348588,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.38125,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.246875,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 11.8875,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.090625,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.525,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 5.29375,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-c-f01-r07",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 67.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 116,
+          "value": 217.0,
+          "missing": 204
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.6716965359280962,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6421251958627612,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.3375,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.24375,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 11.8375,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.0375,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.778125,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 5.30625,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-e-f02-r08",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 61.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 128,
+          "value": 204.0,
+          "missing": 192
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.7121421193764236,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6749872347193222,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.36875,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.25,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 14.35,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.178125,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 23.928125,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 4.953125,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-c-f02-r08",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 68.5,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 117,
+          "value": 206,
+          "missing": 203
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.7038310951596648,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6598065349973737,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.34375,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.25,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 14.43125,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.14375,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.3125,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 4.83125,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "A-r02",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 43.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 68,
+          "value": 219.5,
+          "missing": 252
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.49481581777157285,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.5018217546610672,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.19375,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 8,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 12.8875,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 8,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 18.06875,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 1.9875,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "E-r02",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 44.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 86,
+          "value": 215.0,
+          "missing": 234
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.5767112877488175,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.5503175115735167,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.25625,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 14.8125,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 6.4125,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 14.83125,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 20.48125,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 4.725,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "C-r02",
+        "opponent": "M-balanced",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 43.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 6,
+          "value": 262.0,
+          "missing": 314
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.6138015006680292,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.53086950939582,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.0125,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 10.8875,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 6.625,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 10.89375,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 18.39375,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 5.54375,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "Z-random",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-miner",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-rush",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-eco",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-towers",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-harass",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-wrush",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-turtle",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "D-c01",
+        "opponent": "M-balanced",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "K-a-r02",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "unobserved-edge"
+      },
+      {
+        "bot": "K-e-r03",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "unobserved-edge"
+      },
+      {
+        "bot": "K-c-r04",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "unobserved-edge"
+      },
+      {
+        "bot": "M-balanced",
+        "opponent": "E-r02",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 44.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 12,
+          "value": 244.0,
+          "missing": 308
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.4232887122511825,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.4496824884264833,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.0375,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 8.46875,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 8.54375,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 8.21875,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 20.29375,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 3.375,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-e-w01-r05",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "unobserved-edge"
+      },
+      {
+        "bot": "K-c-w01-r05",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "unobserved-edge"
+      },
+      {
+        "bot": "K-e-f01-r06",
+        "opponent": "E-r02",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 45.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 97,
+          "value": 216,
+          "missing": 223
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.5653642329578573,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6068091975909388,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.2875,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.24375,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 11.69375,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.190625,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.546875,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 4.915625,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-c-f01-r07",
+        "opponent": "E-r02",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 46.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 74,
+          "value": 235.5,
+          "missing": 246
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.5618324296678725,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.5951467213544446,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.209375,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.240625,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 11.665625,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.165625,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.5125,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 4.90625,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-e-f02-r08",
+        "opponent": "E-r02",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 44.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 98,
+          "value": 212.5,
+          "missing": 222
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.561857029203103,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6131554611190189,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.296875,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.246875,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 13.8875,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.165625,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.14375,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 4.528125,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "K-c-f02-r08",
+        "opponent": "E-r02",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 44.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 86,
+          "value": 222.0,
+          "missing": 234
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.5599309437344105,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.6017492129755906,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.253125,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 13.246875,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 13.896875,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 13.171875,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 24.253125,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 4.503125,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "A-r02",
+        "opponent": "E-r02",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 39.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 100,
+          "value": 211.5,
+          "missing": 220
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.3905722687155302,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.478289374909143,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.275,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 8,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 13.05,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 8,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 20.6125,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 1.975,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "E-r02",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "self-edge-not-in-protocol"
+      },
+      {
+        "bot": "C-r02",
+        "opponent": "E-r02",
+        "available": true,
+        "games": 320,
+        "firstCombatTurn": {
+          "n": 320,
+          "value": 40.0,
+          "missing": 0
+        },
+        "firstEnemyBaseDamageTurn": {
+          "n": 6,
+          "value": 156.0,
+          "missing": 314
+        },
+        "towerScoreShare": {
+          "n": 320,
+          "value": 0.5340550225019103,
+          "missing": 0
+        },
+        "depositShare": {
+          "n": 320,
+          "value": 0.4903846033093555,
+          "missing": 0
+        },
+        "baseDestructionWin": {
+          "n": 320,
+          "value": 0.00625,
+          "missing": 0
+        },
+        "workers50": {
+          "n": 320,
+          "value": 10.9125,
+          "missing": 0
+        },
+        "soldiers50": {
+          "n": 320,
+          "value": 6.95625,
+          "missing": 0
+        },
+        "workers100": {
+          "n": 320,
+          "value": 10.89375,
+          "missing": 0
+        },
+        "soldiers100": {
+          "n": 320,
+          "value": 18.29375,
+          "missing": 0
+        },
+        "towers100": {
+          "n": 320,
+          "value": 4.925,
+          "missing": 0
+        },
+        "zeroTowerScoreGames": 0,
+        "zeroDepositGames": 0
+      },
+      {
+        "bot": "Z-random",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-miner",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-rush",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-eco",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-towers",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-harass",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-wrush",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "Z-turtle",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      },
+      {
+        "bot": "D-c01",
+        "opponent": "E-r02",
+        "available": false,
+        "reason": "not-measured-in-WP-A"
+      }
+    ],
+    "strongKPairedDescriptives": [
+      {
+        "bots": [
+          "K-a-r02",
+          "K-e-r03"
+        ],
+        "opponent": "M-balanced",
+        "fixedCheckpointContrasts": {
+          "workers50": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 0.003125
+          },
+          "soldiers50": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 2.05625
+          },
+          "workers100": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 0.09375
+          },
+          "soldiers100": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": -1.353125
+          },
+          "towers100": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 0.165625
+          }
+        }
+      },
+      {
+        "bots": [
+          "K-a-r02",
+          "K-c-r04"
+        ],
+        "opponent": "M-balanced",
+        "fixedCheckpointContrasts": {
+          "workers50": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 0.00625
+          },
+          "soldiers50": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 2.0875
+          },
+          "workers100": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 0.146875
+          },
+          "soldiers100": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": -1.48125
+          },
+          "towers100": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 0.06875
+          }
+        }
+      },
+      {
+        "bots": [
+          "K-e-r03",
+          "K-c-r04"
+        ],
+        "opponent": "M-balanced",
+        "fixedCheckpointContrasts": {
+          "workers50": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 0.003125
+          },
+          "soldiers50": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 0.03125
+          },
+          "workers100": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": 0.053125
+          },
+          "soldiers100": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": -0.128125
+          },
+          "towers100": {
+            "matchedSlots": 320,
+            "meanFirstMinusSecond": -0.096875
+          }
+        }
+      }
+    ],
+    "additionalIndicators": [
+      "workers50",
+      "soldiers50",
+      "workers100",
+      "soldiers100",
+      "towers100",
+      "firstEnemyBaseDamageTurn"
+    ],
+    "method": {
+      "unitCounts": "mean surviving own workers/soldiers after round 50/100",
+      "towerCount": "mean surviving owned towers after round 100",
+      "checkpointMissing": "match ended earlier;null excluded rather than assigning zero;per-metric n is provided",
+      "firstCombat": "median first positive DAMAGE by either player conditional on occurrence;missing count retained",
+      "firstEnemyBaseDamage": "median first positive DAMAGE to enemy base by this bot conditional on occurrence;missing count retained",
+      "shares": "mean per-game own fraction of final tower score or deposited ore, 0/0=0.5, counters provided",
+      "baseDestructionWin": "own base-destruction wins divided by all matches",
+      "contrasts": "descriptive only, map+identity direction+seat paired under M; counts only when both reach checkpoint",
+      "confounding": "matches for each reference use identical map/seed/seat slots;metrics still affected by adversary interaction and survival;not a formal style test"
+    },
+    "usage": {
+      "newGames": 0,
+      "botStarts": 0,
+      "compiles": 0,
+      "checks": 0,
+      "benchmarks": 0,
+      "BTFits": 0,
+      "replayedExistingEngineSteps": 1591335,
+      "replayWorkerCpuNs": 1119301698100,
+      "replayPassWallNs": 188503437328,
+      "totalWallNs": 277864037480,
+      "parentCpuNs": 33158378600
+    }
+  },
+  "styleDecision": {
+    "attackLineShowsEarlierCombatAndMoreSoldiersAt50AgainstM": true,
+    "economicAndControlSeparatedByThisMetricSet": false,
+    "formalStyleJudgment": false,
+    "strongKSharedEOpponentAvailable": false
+  },
+  "wpbRevision": {
+    "maximumCandidatesPerRound": 10,
+    "maximumScoredGamesPerRound": 9600,
+    "hardWallSecondsPerRound": 7200,
+    "maximumRounds": 2,
+    "gamesPerEdge": 320,
+    "checksPerCandidate": 1,
+    "P0P1P2Opponents": [
+      "M-balanced",
+      "A-r02",
+      "E-r02"
+    ],
+    "belowM": [
+      "M-balanced",
+      "D-c01",
+      "nearest L1 Z to the gap center"
+    ],
+    "selfTestTargets": "M and own K-f02 variants for M and above; M and applicable L1 Z below M; public only, off-target delivery still requested",
+    "r11CompletedUnderOldTaskCountsAsRound1": true,
+    "r11NotStartedGetsFullRevisionFirst": true,
+    "r11ActualStartAndDeliveryConfirmed": false,
+    "r10ArchiveOnly": true,
+    "authorTaskDispatched": false,
+    "dispatchBlocker": "new target centers and rates require WP-A2 and r11 status confirmation"
+  },
+  "scope": {
+    "mainWorktreeWritten": false,
+    "authorWorkspaceWritten": false,
+    "botSourceInterpreted": false,
+    "formalCalibration": false,
+    "formalHoldout": false,
+    "phaseCStarted": false
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-18",
+  "scope": "Stage handoff only; no formal ladder or phase-B acceptance",
+  "sourceReview": "inbox/2026-11-18-phase-b-wpa-review.md",
+  "baseMainCommit": "12b095c67efa03c07d04795a4c55c1978e1b50fb",
+  "integration": {
+    "sourceBranch": "claude-evaluation",
+    "previousSourceCommit": "c47c4355bf4843f0494a5db517e1f910340599a5",
+    "sourceCommit": "9f3f2042cb0cba96a8e9c20057e2468fa44ad610",
+    "exactCommittedBytes": true,
+    "importedFiles": [
+      {
+        "path": "data/phase-b/claude-r11-intake.json",
+        "recordedAtCommit": "1954c8b8aa4b141fbf73603e489242ea2c31ca4b",
+        "bytes": 6990,
+        "sha256": "ddfe4acb776f0df6d2c49f5532bcfa66b678fd13eaec7e6bf1ead402ae1c2fe1"
+      },
+      {
+        "path": "data/phase-b/claude-wpa2-checkpoint.json",
+        "recordedAtCommit": "db627724f3f6e902d71123b6cc7eed87fd53aa07",
+        "bytes": 34695,
+        "sha256": "11b76d28b7265708cbb8302be5e71412b5f2019aa76c4fd4bdc031e0cea4866d"
+      },
+      {
+        "path": "data/phase-b/claude-wpa2-revised.json",
+        "recordedAtCommit": "ab7c8dd989c1c20f53672bf7a5ac9e367a845fb8",
+        "bytes": 89573,
+        "sha256": "05989b9bf450d640e93eeee9244a760d52eae13575e2f1d5748c9d1112b12cc1"
+      },
+      {
+        "path": "data/phase-b/claude-wpb01.json",
+        "recordedAtCommit": "9f3f2042cb0cba96a8e9c20057e2468fa44ad610",
+        "bytes": 35010,
+        "sha256": "d2ce7d0511ee37a9f82701230991ef0f6a88d9777abc8a3748e279d36feeb16c"
+      },
+      {
+        "path": "reports/phase-B-claude-r11-intake.md",
+        "recordedAtCommit": "1954c8b8aa4b141fbf73603e489242ea2c31ca4b",
+        "bytes": 1378,
+        "sha256": "0e6b1c458e635f3860f669378a5ad572318293a31bf727bc06d3d477882f1f5d"
+      },
+      {
+        "path": "reports/phase-B-claude-wpa2-checkpoint.md",
+        "recordedAtCommit": "db627724f3f6e902d71123b6cc7eed87fd53aa07",
+        "bytes": 1990,
+        "sha256": "0d2f50da272ee40168fe3ee7a51cc2f36663fd9667c629da0660c1223ab7ef29"
+      },
+      {
+        "path": "reports/phase-B-claude-wpa2-revised.md",
+        "recordedAtCommit": "ab7c8dd989c1c20f53672bf7a5ac9e367a845fb8",
+        "bytes": 2155,
+        "sha256": "a1ddaaa5c0a91c7699562c9a40528a6998017ef518a2ce57ce7715d721aa7160"
+      },
+      {
+        "path": "reports/phase-B-claude-wpb01.md",
+        "recordedAtCommit": "9f3f2042cb0cba96a8e9c20057e2468fa44ad610",
+        "bytes": 1722,
+        "sha256": "0bb1aaf8ded2df03fefda632282c955f7ed664615c3aebfaef571432ea8938a8"
+      }
+    ],
+    "totalImportedBytes": 173513,
+    "branchMerged": false,
+    "copiedCodePrivateOrRawEvidence": false,
+    "otherWorktreesModified": false
+  },
+  "acceptedEarlier": {
+    "t6SmallFixes": true,
+    "wpA": true,
+    "t6FormalCalibrationAdoptionDecided": false
+  },
+  "wpa2": {
+    "initialCheckpoint": {
+      "newScoredGames": 0,
+      "reason": "D-c01 archival-use conflict; planned 22-node run did not start",
+      "existingReplaysUsedForStyleAnalysis": 5760,
+      "economicAndControlSeparatedByPublishedMetrics": false
+    },
+    "revisedRun": {
+      "newScoredGames": 9280,
+      "newEdges": 29,
+      "nodes": 21,
+      "observedEdges": 84,
+      "reusedSlots": 17600,
+      "jointUniqueGames": 26880,
+      "compiles": 10,
+      "botStarts": 18560,
+      "scoringWallSeconds": 817.772,
+      "dC01Included": false,
+      "dC01FormalInclusionDeferred": true,
+      "t6Used": false,
+      "formalLevelsAssigned": false
+    }
+  },
+  "wpbRound1": {
+    "round": "revised-r11",
+    "receivedCandidates": 10,
+    "shortChecksPassed": 10,
+    "newScoredGames": 9600,
+    "newEdges": 30,
+    "nodes": 31,
+    "observedEdges": 114,
+    "reusedSlots": 26880,
+    "jointUniqueGames": 36480,
+    "historicalEvaluatorNewScoredGames": 42720,
+    "scoringWallSeconds": 1093.667,
+    "totalCompilesIncludingChecks": 25,
+    "totalBotStartsIncludingChecks": 19210,
+    "infraErrors": 0,
+    "retries": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "protocolWarnings": 0,
+    "benchmarks": 0,
+    "provisionallyRetained": 5,
+    "archivedOutsideAllTargetWindows": 5,
+    "selectedByTarget": {
+      "B1": [],
+      "B2": [
+        "b2-ctrl"
+      ],
+      "P0": [
+        "p0-econ"
+      ],
+      "P1": [
+        "p1-econ",
+        "p1-ctrl"
+      ],
+      "P2": [
+        "p2-ctrl"
+      ]
+    },
+    "remainingRegisteredStyleGaps": {
+      "B1": [
+        "economic",
+        "control"
+      ],
+      "B2": [
+        "economic"
+      ],
+      "P2": [
+        "economic"
+      ]
+    },
+    "adjacentSpacingBelowMinimum": {
+      "from": "P0",
+      "to": "P1",
+      "elo": 77.13813800469205
+    },
+    "formalLevelsAssigned": false,
+    "formalStyleCertified": false,
+    "passedCoverageRule": false,
+    "t6Used": false,
+    "dC01Used": false,
+    "r12Started": false,
+    "remainingAuthorRoundsMaximum": 1
+  },
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "newRuntime": {
+    "games": 0,
+    "compiles": 0,
+    "botStarts": 0,
+    "checks": 0,
+    "engineSteps": 0,
+    "benchmarks": 0,
+    "btFits": 0
+  },
+  "localCommitOnly": true
+}
