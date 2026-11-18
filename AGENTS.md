@@ -2,7 +2,7 @@
 
 ## 当前分工与任务依据
 
-当前以 `inbox/2026-11-16-phase-b-second-review.md` 及用户最新指令为准；11-13分工的未冲突边界继续有效，同日blockage-review的A、B1/B3/B4/B5及历史保全要求不变。
+当前以 `inbox/2026-11-18-phase-b-wpa-review.md` 及用户最新指令为准；11-16审查、11-13分工中未被取代的要求和历史保全边界继续有效。
 
 - 用户最新拆分为工具GPT、对接/评测GPT和Claude作者。工具GPT只在本WSL主worktree做T6；对接GPT在独立`~/projects/HRW-claude-eval` worktree/`claude-evaluation`分支做T5；Claude在`~/projects/HRW-claude`从零写强bot。详见`docs/CLAUDE_EVALUATION_HANDOFF.md`，旧“两工作者”表仅为历史。
 - GPT不再写阶梯bot；T3只原样评测已经冻结的E100%候选，不改源码。GPT不读、不改Claude源码，也不把它交给其他人。
@@ -12,7 +12,7 @@
 
 ## 本轮工具/汇总收尾
 
-T6两项小修已在8b20ba5/b4a152c完成，用户确认WP-B另会话已完成，本会话不重做。当前仅按固定c47c435精确导入三项公开成果并汇总提交；不导入评测管理文件或private，不改其他工作区，不新增实机运行，不从源材料的旧派发状态推断WP-B未完成。具体WP-B结果以另一会话最终反馈为准，未提供的结果数字不得补造。
+T6 两项小修及 WP-A 已获接受。本轮仅落实阶梯公开范围裁定、更正状态并核对 WP-A2/WP-B 公开材料；只从固定评测提交精确导入，不导入评测管理文件或 private，不改其他工作区，不新增实机运行。WP-B 没有公开结果可核时，不登记为已完成；r11 的实际进度只按用户最新说明登记。
 
 ## 每次开工
 

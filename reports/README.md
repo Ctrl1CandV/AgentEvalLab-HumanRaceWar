@@ -2,9 +2,13 @@
 
 当前停点见STATUS，最新交审入口如下；执行权限以用户最新指令和有效裁定为准，历史报告中的下一任务不自动提供当前授权。工具与对接/评测GPT分工见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
 
-## 第二次审查后：本轮实施汇总
+## 2026-11-18 审查落实
 
-当前入口是[本轮实施汇总](phase-B-second-review-implementation.md)及[对应JSON](../data/phase-b/second-review-implementation.json)。T6小修完成，WP-A三项公开成果已按c47c435精确集成；用户确认WP-B由另一会话完成，本会话不重做，其最终反馈可并列交审。导入材料的旧派发状态仅代表源提交时点。
+[落实报告](phase-B-wpa-review-followup.md)和[对应 JSON](../data/phase-b/wpa-review-followup.json)记录阶梯公开范围和状态更正。T6 小修与 WP-A 获接受；本地评测分支尚无 WP-A2/WP-B 公开结果，r11 的实际进度以用户说明为准。
+
+## 第二次审查后的实施汇总（历史）
+
+[实施汇总](phase-B-second-review-implementation.md)及[对应 JSON](../data/phase-b/second-review-implementation.json)记录 T6 小修和 WP-A 三项公开成果的精确集成。其中 WP-B 完成的说法已在本次审查落实报告中更正，不作为当前进度。
 
 - [`phase-B-claude-joint-dev01.md`](phase-B-claude-joint-dev01.md)：WP-A联合图、暂定组装和补候选前缺口；[聚合](../data/phase-b/claude-joint-dev01.json)与[口径说明](../docs/CLAUDE_DEV_ASSEMBLY_SCOPE.md)同步导入。
 - [`phase-B-t6-small-fixes-20261116.md`](phase-B-t6-small-fixes-20261116.md)：精确计数、三项异机跳过与当时的同步检查点；细节见对应JSON，历史原字节不改。

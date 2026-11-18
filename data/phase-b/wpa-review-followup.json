@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-18",
+  "sourceReview": "inbox/2026-11-18-phase-b-wpa-review.md",
+  "baseMainCommit": "4e952ce56fb582b02df97828ed4d10dd5e59ebc1",
+  "acceptedByReview": {
+    "reviewedMainCommit": "544702b",
+    "t6SmallFixes": true,
+    "t6ReportedPureTestCases": 64,
+    "t6ReportedPassed": 61,
+    "t6ReportedForeignMachineSkips": 3,
+    "t6AdoptionForFormalCalibrationDecided": false,
+    "wpA": true,
+    "wpAReportedNewGames": 7200
+  },
+  "designDecision": {
+    "by": "user",
+    "date": "2026-11-18",
+    "sections": ["11.1", "11.3"],
+    "l0AndL1CompositionUnchanged": true,
+    "hiddenClaudeBotsAllowedInMLevelAndBridgeLevelsBetweenL1AndM": true,
+    "publicBots": ["Z zoo", "M-balanced"],
+    "otherLadderBotsHidden": true,
+    "finalLevelNumbersAssigned": false,
+    "otherDesignClausesChanged": false
+  },
+  "wpB": {
+    "priorCompletionStatementWithdrawn": true,
+    "publicResultsAvailableAtCheckedRef": false,
+    "actualProgressInferredFromAbsenceOfPublicResults": false,
+    "r11StartConfirmedInCurrentInstruction": null,
+    "r11DeliveryConfirmedInCurrentInstruction": null,
+    "r11CompletionConfirmedInCurrentInstruction": null,
+    "r11ProgressAuthority": "latest explicit user statement; old dispatch fields do not establish current progress",
+    "candidateSelectionOrUsageInferred": false
+  },
+  "publicSync": {
+    "sourceBranch": "claude-evaluation",
+    "checkedCommit": "c47c4355bf4843f0494a5db517e1f910340599a5",
+    "scope": "local committed public reports and aggregates only; not an assessment of work in progress",
+    "previouslyImportedWpAFilesVerifiedExact": [
+      "reports/phase-B-claude-joint-dev01.md",
+      "data/phase-b/claude-joint-dev01.json",
+      "docs/CLAUDE_DEV_ASSEMBLY_SCOPE.md"
+    ],
+    "newWpA2PublicResultFilesImported": [],
+    "newWpBPublicResultFilesImported": [],
+    "nextStep": "On receipt of a fixed evaluator commit, import only explicitly selected public reports and aggregates byte for byte; no branch merge",
+    "otherWorktreesModified": false,
+    "privateFilesOrRawEvidenceImported": false
+  },
+  "phaseBComplete": false,
+  "phaseCStarted": false,
+  "newRuntime": {"botStarts": 0, "compiles": 0, "bwrapRuns": 0, "checks": 0, "games": 0, "engineSteps": 0, "benchmarks": 0, "btFits": 0},
+  "localCommitOnly": true
+}
