@@ -1,5 +1,19 @@
 # 当前会话隔离约定
 
+## 现行分工（2026-11-18 起）
+
+由一个综合 GPT 会话统筹主仓库和评测 worktree，接替原工具/汇总与 Claude 对接/评测两个 GPT 会话。开工和本轮停点以[综合会话提示词](../inbox/2026-11-18-coordinator-session-prompt.md)及[WP-B 第 1 轮审查](../inbox/2026-11-18-phase-b-wpb01-review.md)为准。
+
+| 工作区 | 综合会话的写入范围 |
+|---|---|
+| `~/projects/AgentEvalLab-HumanRaceWar` / `main` | 公开文档、状态、公开报告和聚合。只从评测的固定提交原字节导入允许公开的成果，不导入私有材料。 |
+| `~/projects/HRW-claude-eval` / `claude-evaluation` | 评测、私有原件、对局、独立总账和本工作区的公开成果。 |
+| `~/projects/HRW-claude` | 只写 `handoff/in/`；只按字节接收 `handoff/out/`，不进入作者开发或自测目录，不读改或转交其源码。 |
+
+命令明确指定绝对工作目录。两个 worktree 的 index、状态、发布清单与总账仍各自维护；不改共享 Git 配置、不合并分支。用户负责开 Claude 会话、确认交付和停测、推送以及联络 CA。收到停测确认之前不接收、不跑 `check` 或对局。保留原错峰、离线 bwrap、固定锁和已验收标准路径；不用 T6，不执行 D-c01。
+
+## 历史：两个 GPT 会话的隔离约定（仅存档）
+
 用户最新指令把GPT拆为工具会话与Claude对接/评测会话。原2026-11-13裁定的规则、预算、源码保密和T5通知停点不变；旧“两工作者”、共享index及旧lane安排不作为当前权限。完整启动说明见[CLAUDE_EVALUATION_HANDOFF](CLAUDE_EVALUATION_HANDOFF.md)。
 
 ## 分开工作，不共用写入点
