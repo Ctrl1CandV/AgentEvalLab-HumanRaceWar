@@ -1,0 +1,877 @@
+{
+  "schemaVersion": 1,
+  "test": "DESIGN 11.5 item 7",
+  "totalScoredGames": 6240,
+  "reusedScoredGames": 192,
+  "newScoredGames": 6048,
+  "upperTierCount": 6,
+  "publicSubmissionCount": 10,
+  "tierPanels": [
+    {
+      "publicBot": "M-balanced",
+      "tier": 6,
+      "games": 96,
+      "wins": 43,
+      "draws": 0,
+      "losses": 53,
+      "point": 0.4479166666666667,
+      "interval95": [
+        0.2916666666666667,
+        0.6041666666666666
+      ],
+      "passed": false
+    },
+    {
+      "publicBot": "M-balanced",
+      "tier": 7,
+      "games": 96,
+      "wins": 12,
+      "draws": 0,
+      "losses": 84,
+      "point": 0.125,
+      "interval95": [
+        0.052083333333333336,
+        0.21875
+      ],
+      "passed": false
+    },
+    {
+      "publicBot": "M-balanced",
+      "tier": 8,
+      "games": 96,
+      "wins": 6,
+      "draws": 0,
+      "losses": 90,
+      "point": 0.0625,
+      "interval95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "M-balanced",
+      "tier": 9,
+      "games": 96,
+      "wins": 1,
+      "draws": 0,
+      "losses": 95,
+      "point": 0.010416666666666666,
+      "interval95": [
+        0.0,
+        0.03125
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "M-balanced",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "M-balanced",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-eco",
+      "tier": 6,
+      "games": 96,
+      "wins": 9,
+      "draws": 0,
+      "losses": 87,
+      "point": 0.09375,
+      "interval95": [
+        0.020833333333333332,
+        0.17708333333333334
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-eco",
+      "tier": 7,
+      "games": 96,
+      "wins": 4,
+      "draws": 0,
+      "losses": 92,
+      "point": 0.041666666666666664,
+      "interval95": [
+        0.0,
+        0.09375
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-eco",
+      "tier": 8,
+      "games": 96,
+      "wins": 6,
+      "draws": 0,
+      "losses": 90,
+      "point": 0.0625,
+      "interval95": [
+        0.0,
+        0.16666666666666666
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-eco",
+      "tier": 9,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-eco",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-eco",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-harass",
+      "tier": 6,
+      "games": 96,
+      "wins": 3,
+      "draws": 0,
+      "losses": 93,
+      "point": 0.03125,
+      "interval95": [
+        0.0,
+        0.08333333333333333
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-harass",
+      "tier": 7,
+      "games": 96,
+      "wins": 1,
+      "draws": 0,
+      "losses": 95,
+      "point": 0.010416666666666666,
+      "interval95": [
+        0.0,
+        0.03125
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-harass",
+      "tier": 8,
+      "games": 96,
+      "wins": 14,
+      "draws": 0,
+      "losses": 82,
+      "point": 0.14583333333333334,
+      "interval95": [
+        0.041666666666666664,
+        0.2708333333333333
+      ],
+      "passed": false
+    },
+    {
+      "publicBot": "Z-harass",
+      "tier": 9,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-harass",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-harass",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-idle",
+      "tier": 6,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-idle",
+      "tier": 7,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-idle",
+      "tier": 8,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-idle",
+      "tier": 9,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-idle",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-idle",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-miner",
+      "tier": 6,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-miner",
+      "tier": 7,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-miner",
+      "tier": 8,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-miner",
+      "tier": 9,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-miner",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-miner",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-random",
+      "tier": 6,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-random",
+      "tier": 7,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-random",
+      "tier": 8,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-random",
+      "tier": 9,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-random",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-random",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-rush",
+      "tier": 6,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-rush",
+      "tier": 7,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-rush",
+      "tier": 8,
+      "games": 96,
+      "wins": 4,
+      "draws": 0,
+      "losses": 92,
+      "point": 0.041666666666666664,
+      "interval95": [
+        0.0,
+        0.125
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-rush",
+      "tier": 9,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-rush",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-rush",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-towers",
+      "tier": 6,
+      "games": 96,
+      "wins": 2,
+      "draws": 0,
+      "losses": 94,
+      "point": 0.020833333333333332,
+      "interval95": [
+        0.0,
+        0.052083333333333336
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-towers",
+      "tier": 7,
+      "games": 96,
+      "wins": 1,
+      "draws": 0,
+      "losses": 95,
+      "point": 0.010416666666666666,
+      "interval95": [
+        0.0,
+        0.03125
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-towers",
+      "tier": 8,
+      "games": 96,
+      "wins": 2,
+      "draws": 0,
+      "losses": 94,
+      "point": 0.020833333333333332,
+      "interval95": [
+        0.0,
+        0.0625
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-towers",
+      "tier": 9,
+      "games": 96,
+      "wins": 3,
+      "draws": 0,
+      "losses": 93,
+      "point": 0.03125,
+      "interval95": [
+        0.0,
+        0.0625
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-towers",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-towers",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-turtle",
+      "tier": 6,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-turtle",
+      "tier": 7,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-turtle",
+      "tier": 8,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-turtle",
+      "tier": 9,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-turtle",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-turtle",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-wrush",
+      "tier": 6,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-wrush",
+      "tier": 7,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-wrush",
+      "tier": 8,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-wrush",
+      "tier": 9,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-wrush",
+      "tier": 10,
+      "games": 96,
+      "wins": 0,
+      "draws": 0,
+      "losses": 96,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    },
+    {
+      "publicBot": "Z-wrush",
+      "tier": 11,
+      "games": 144,
+      "wins": 0,
+      "draws": 0,
+      "losses": 144,
+      "point": 0.0,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "passed": true
+    }
+  ],
+  "maximumPointScore": 0.1,
+  "passed": false,
+  "failingPublicTierPanelCount": 3,
+  "timingAndReplayUsage": {
+    "newScoredGames": 6048,
+    "newReplaysVerified": 6048,
+    "newIngestVerificationReused": 0,
+    "scoringWallSeconds": 579.8885689629999,
+    "infraErrorAttempts": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "scoringCompiles": 23,
+    "scoringCacheHits": 0,
+    "recordedBotStarts": 12096,
+    "botCpuNs": 936086717200,
+    "harnessCpuNs": 1668015637900,
+    "endingCounts": {
+      "base_destroyed": 4043,
+      "turn_limit_score": 2005
+    },
+    "replayAuditCpuNs": 593393642100,
+    "replayAuditWallNs": 99773581066
+  },
+  "holdoutUsed": false,
+  "reusedMapClustersIndependentlyCrossChecked": true
+}

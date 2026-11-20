@@ -4,6 +4,7 @@
 
 ## 11-20 CA 冻结裁定后的结果
 
+- [第 7 条防“一招鲜”基线](phase-B-one-trick-baseline.md)及[聚合](../data/phase-b/one-trick-baseline.json)来自评测提交 `574c996`，6,240 局中 60 项判定有 3 项超出门槛。
 - [第 5 条知情对比](phase-B-ladder-awareness.md)及[聚合](../data/phase-b/ladder-awareness.json)来自评测提交 `65b602f`，两组各 364 局核验，主分差门槛通过。
 - [第 6 条标准预算自测](phase-B-standard-budget.md)及[聚合](../data/standard-budget.json)来自评测提交 `182cb21`，两阶段各 364 局核验，最终主分超过 0.60。
 - [低段重排补校准](phase-B-claude-r13-repair.md)及[聚合](../data/phase-b/claude-r13-repair.json)来自评测提交 `233be2b`：新增 768 局全核验，第 1–4 条均通过。
