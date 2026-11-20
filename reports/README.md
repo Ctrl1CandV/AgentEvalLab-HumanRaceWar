@@ -2,7 +2,12 @@
 
 当前停点见 [STATUS](../STATUS.md)。执行权限以用户最新指令和有效裁定为准；[综合会话交接](../docs/CLAUDE_EVALUATION_HANDOFF.md)说明两个 worktree 的写入边界。
 
-## WP-B 收尾与阶梯冻结审查
+## 11-20 CA 冻结裁定后的结果
+
+- [CA 冻结审查](../inbox/2026-11-20-phase-b-ladder-freeze-review.md)：12 级名单冻结、B 剩余任务和停点。
+- [r12 同对手风格核对](phase-B-claude-r12-m-style.md)及[聚合](../data/phase-b/claude-r12-m-style.json)，按评测提交 `464d357` 原字节导入。只补独立风格数据，不改变冻结名单。
+
+## WP-B 收尾与原阶梯冻结材料（历史）
 
 - [r12 评测](phase-B-claude-wpb02.md)及[聚合 JSON](../data/phase-b/claude-wpb02.json)：最后一轮完成，四份候选均保留于图中。与冻结材料一起按评测分支 `801dcc8` 原字节导入。
 - [阶梯冻结审查材料](phase-B-claude-ladder-freeze-preparation.md)及[分组 JSON](../data/phase-b/claude-ladder-freeze-preparation.json)：方案未过全部门槛，等 CA 审查，不是正式冻结。

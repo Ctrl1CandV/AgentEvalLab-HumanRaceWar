@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-20",
+  "authority": "2026-11-20 CA freeze review fourth section step 2",
+  "scope": {
+    "mapSet": "dev",
+    "maps": 80,
+    "opponent": "M-balanced",
+    "identitySeeds": [
+      [
+        17,
+        29
+      ],
+      [
+        29,
+        17
+      ]
+    ],
+    "doubleSeat": true,
+    "candidates": [
+      {
+        "code": "b0-ctrl-hi",
+        "style": "control",
+        "games": 320
+      },
+      {
+        "code": "b0-ctrl-lo",
+        "style": "control",
+        "games": 320
+      },
+      {
+        "code": "b0-econ-hi",
+        "style": "economic",
+        "games": 320
+      },
+      {
+        "code": "b0-econ-lo",
+        "style": "economic",
+        "games": 320
+      }
+    ],
+    "jobs": 6,
+    "independentlyRecomputed": true,
+    "notPooledWithAuthorPublic": true,
+    "seedOrMapChange": false
+  },
+  "aggregateByStyle": {
+    "economic": {
+      "workers50": {
+        "rangeAcrossTwoCandidates": [
+          13.23125,
+          13.234375
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "workers100": {
+        "rangeAcrossTwoCandidates": [
+          12.965625,
+          13.01875
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "soldiers50": {
+        "rangeAcrossTwoCandidates": [
+          2,
+          2
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "soldiers100": {
+        "rangeAcrossTwoCandidates": [
+          1.909375,
+          1.9125
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "towers100": {
+        "rangeAcrossTwoCandidates": [
+          4.35625,
+          4.478125
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "firstCombatTurn": {
+        "rangeAcrossTwoCandidates": [
+          92.0,
+          93.0
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 636
+      },
+      "firstEnemyBaseDamageTurn": {
+        "rangeAcrossTwoCandidates": null,
+        "candidatesWithValues": 0,
+        "totalReplaysWithValues": 0
+      },
+      "towerScoreShare": {
+        "rangeAcrossTwoCandidates": [
+          0.39756450282980177,
+          0.4083570185025088
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "depositShare": {
+        "rangeAcrossTwoCandidates": [
+          0.4684430647674185,
+          0.47550267465332813
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "baseDestructionWin": {
+        "rangeAcrossTwoCandidates": [
+          0,
+          0
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      }
+    },
+    "control": {
+      "workers50": {
+        "rangeAcrossTwoCandidates": [
+          4,
+          4
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "workers100": {
+        "rangeAcrossTwoCandidates": [
+          3.971875,
+          3.98125
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "soldiers50": {
+        "rangeAcrossTwoCandidates": [
+          3.965625,
+          4.928125
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "soldiers100": {
+        "rangeAcrossTwoCandidates": [
+          3.88125,
+          4.86875
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "towers100": {
+        "rangeAcrossTwoCandidates": [
+          1.915625,
+          2.825
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "firstCombatTurn": {
+        "rangeAcrossTwoCandidates": [
+          51.0,
+          51.0
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "firstEnemyBaseDamageTurn": {
+        "rangeAcrossTwoCandidates": [
+          278,
+          278
+        ],
+        "candidatesWithValues": 1,
+        "totalReplaysWithValues": 1
+      },
+      "towerScoreShare": {
+        "rangeAcrossTwoCandidates": [
+          0.2802443126715281,
+          0.3727566881482455
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "depositShare": {
+        "rangeAcrossTwoCandidates": [
+          0.33748257229142625,
+          0.35534971503156876
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      },
+      "baseDestructionWin": {
+        "rangeAcrossTwoCandidates": [
+          0,
+          0
+        ],
+        "candidatesWithValues": 2,
+        "totalReplaysWithValues": 640
+      }
+    }
+  },
+  "nonOverlappingMetrics": [
+    "workers50",
+    "workers100",
+    "soldiers50",
+    "soldiers100",
+    "towers100",
+    "firstCombatTurn",
+    "towerScoreShare",
+    "depositShare"
+  ],
+  "usage": {
+    "scoredGames": 1280,
+    "scoringWallSeconds": 143.150608817,
+    "singlePassVerifierAndStyleGames": 1280,
+    "styleEngineSteps": 333073,
+    "styleWorkerCpuNs": 146513990900,
+    "styleWallSeconds": 25.347004263000002,
+    "benchmarks": 0,
+    "checks": 0,
+    "compiles": 5,
+    "cacheHits": 5,
+    "botFaultGames": 0,
+    "infraErrors": 0,
+    "retries": 0,
+    "botStartsRecorded": 2560,
+    "timeouts": 0,
+    "protocolWarnings": 0,
+    "endingCounts": {
+      "base_destroyed": 738,
+      "turn_limit_score": 541,
+      "turn_limit_deposit": 1
+    },
+    "botCpuNs": 244592903500
+  },
+  "decision": {
+    "noFrozenRosterChanges": true,
+    "noFormalCalibration": true,
+    "originalFreezeGraphUnchanged": true,
+    "computedOutcomeNotFormalStyleCertification": true
+  },
+  "metricDefinitions": "WP-A2 matched-opponent style metrics; two roles reported as ranges, missing values are not zeros"
+}
