@@ -9,7 +9,9 @@
 - 按用户最新安排，在当前开发 WSL 完成标准离线 jobs6 测速并冻结本机正式预算锁，不处理另一台评测机。[测速报告](reports/phase-B-claude-formal-budget.md)及[聚合](data/phase-b/claude-b-formal-budget.json)按评测固定提交 `893429f` 导入。每回合 61 ms、初始化 1210 ms、储备 1814 ms；原 dev 锁未改。
 - [正式校准](reports/phase-B-claude-formal-calibration.md)与[聚合](data/phase-b/claude-b-formal-calibration.json)按固定评测提交 `aa07179` 原字节导入。112 对、5,376 局全部完成并核验；无故障、超时、警告或框架重试。不作为另一台评测机的复核。
 - 上轮按点估计未过第 1–3 条。[正式校准审查](inbox/2026-11-20-phase-b-calibration-review.md)接受原数据，并依用户裁定改为 95% 地图簇区间判定；基础组公开 Z bot 作为低级一方的隔级反胜只作诊断，DESIGN 11.5 已更新。原结果保留。
-- 本轮按预定修法只将 b1-econ 换入 L3，补打它的 10 对、480 局，原 b0-econ-hi 的对局保留用于拟合。独立测试、防“一招鲜”和唯一 holdout 均未启动。
+- [L3 修法与区间复查](reports/phase-B-claude-calibration-l3-repair.md)和[聚合](data/phase-b/claude-b-calibration-l3-repair.json)按评测提交 `098b5b9` 原字节导入。仅补 10 对、480 局并逐局核验，无故障、超时、警告或重试。原 5,376 局全部保留参与拟合，仅在验收名单中用 b1-econ 换下 b0-econ-hi。
+- **按第四节停下。** 第 2、4 条通过；L3 组内跨度降至 48.68 Elo。第 1 条仍未过：L2→L3 间距 298.20，95% 区间 259.49–351.09。第 3 条仍未过：一条正式隔级配对得分率 60.42%，区间 41.67%–77.08%。原两条告警一条为基础 Z 诊断、一条按新区间通过。
+- 不再换人、删级、补赛或改门槛。独立测试、防“一招鲜”、holdout 及 C 均未启动。隐藏对阵、轨迹和原始证据仅保留于评测 worktree。
 
 ## WP-B 收尾与冻结材料（历史）
 - [r12 评测](reports/phase-B-claude-wpb02.md)及[聚合 JSON](data/phase-b/claude-wpb02.json)、[冻结审查材料](reports/phase-B-claude-ladder-freeze-preparation.md)及[分组 JSON](data/phase-b/claude-ladder-freeze-preparation.json)，都按评测分支固定提交 `801dcc8` 的原字节导入。未合并分支；原件、原始回放、隔级逐边诊断和异常收据留评测 worktree。
