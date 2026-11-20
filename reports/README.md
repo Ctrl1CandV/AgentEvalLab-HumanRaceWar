@@ -4,6 +4,7 @@
 
 ## 11-20 CA 冻结裁定后的结果
 
+- [正式校准](phase-B-claude-formal-calibration.md)和[聚合](../data/phase-b/claude-b-formal-calibration.json)来自评测提交 `aa07179`：前 4 条验收中，级距、同级跨度和隔级反胜未通过，已停止后续测试。
 - [B 正式预算锁](phase-B-claude-formal-budget.md)和[聚合](../data/phase-b/claude-b-formal-budget.json)来自评测提交 `893429f`：开发 WSL 标准测速与新固定锁。
 - [CA 冻结审查](../inbox/2026-11-20-phase-b-ladder-freeze-review.md)：12 级名单冻结、B 剩余任务和停点。
 - [r12 同对手风格核对](phase-B-claude-r12-m-style.md)及[聚合](../data/phase-b/claude-r12-m-style.json)，按评测提交 `464d357` 原字节导入。只补独立风格数据，不改变冻结名单。

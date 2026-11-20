@@ -7,7 +7,9 @@
 - B-SCORE-001 已关闭；第 5、6 条按胜负主分数判定，过程分只作参考。本轮不改任何其他规则或门槛。
 - [r12 同对手风格核对](reports/phase-B-claude-r12-m-style.md)和[聚合](data/phase-b/claude-r12-m-style.json)按评测固定提交 `464d357` 原字节导入。1,280 局全部完成并核验，无故障、超时、警告或重试。经济和控制的近期工兵数差异在独立 dev 样本中得到复核，不改变冻结名单或原联合图。
 - 按用户最新安排，在当前开发 WSL 完成标准离线 jobs6 测速并冻结本机正式预算锁，不处理另一台评测机。[测速报告](reports/phase-B-claude-formal-budget.md)及[聚合](data/phase-b/claude-b-formal-budget.json)按评测固定提交 `893429f` 导入。每回合 61 ms、初始化 1210 ms、储备 1814 ms；原 dev 锁未改。
-- 下一步用新锁做正式校准：112 对、5,376 局，在 8,000 局上限内。第二台机器的复核不在本轮范围内。
+- [正式校准](reports/phase-B-claude-formal-calibration.md)与[聚合](data/phase-b/claude-b-formal-calibration.json)按固定评测提交 `aa07179` 原字节导入。112 对、5,376 局全部完成并核验；无故障、超时、警告或框架重试。不作为另一台评测机的复核。
+- **已到审查停点。** 11.5 第 1–3 条未过：L2→L3 相差 200.42 Elo；5 级组内跨度超 80，L3 最大 184.12 Elo；有两条隔两级配对越过 40%，最高 58.33%。第 4 条按登记风格通过，K 行为相近照常披露。
+- 不改名单、规则、协议或门槛，不补局；独立测试、防“一招鲜”和唯一 holdout 均未启动，等 CA 裁定。原始回放、锁和逐边证据只留评测 worktree。
 
 ## WP-B 收尾与冻结材料（历史）
 - [r12 评测](reports/phase-B-claude-wpb02.md)及[聚合 JSON](data/phase-b/claude-wpb02.json)、[冻结审查材料](reports/phase-B-claude-ladder-freeze-preparation.md)及[分组 JSON](data/phase-b/claude-ladder-freeze-preparation.json)，都按评测分支固定提交 `801dcc8` 的原字节导入。未合并分支；原件、原始回放、隔级逐边诊断和异常收据留评测 worktree。

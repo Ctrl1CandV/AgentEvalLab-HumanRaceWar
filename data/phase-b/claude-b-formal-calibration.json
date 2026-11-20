@@ -1,0 +1,1208 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-20",
+  "stage": "formal Phase B calibration on operator-designated development WSL",
+  "schedule": {
+    "tiers": 12,
+    "nodes": 26,
+    "maps": 24,
+    "pairsByTierDifference": {
+      "0": 16,
+      "1": 50,
+      "2": 46
+    },
+    "totalPairs": 112,
+    "gamesEachPair": 48,
+    "identitySeeds": [
+      17,
+      29
+    ],
+    "doubleSeat": true,
+    "jobs": 6,
+    "sandbox": "bwrap",
+    "oneFixedMachineBoundBudget": true,
+    "usesT6": false,
+    "executesD_c01": false,
+    "previousCalibrationMapDevelopmentExposureDisclosed": true,
+    "remoteEvaluationMachineReproduction": false
+  },
+  "bt": {
+    "anchor": "M-balanced",
+    "formalAnchorPoint": 0.0,
+    "finiteFullPointMLE": true,
+    "maxScoreResidual": 2.842170943040401e-14,
+    "bootstrap": {
+      "samples": 4000,
+      "seed": 4219,
+      "mapClusters": 24,
+      "finiteFullMLEReplicates": 2174,
+      "method": "all opponents and both seats in each map jointly resampled; nearest-rank 2.5/97.5 percentiles; no rejected bootstrap draws, pseudocounts, clipping or multiplicity correction"
+    },
+    "l0Supplement": {
+      "mAnchorOffset": -1550.1523374882345,
+      "availableDraws": 2174,
+      "offsetBootstrap": {
+        "draws": 4000,
+        "unavailable": 1826,
+        "negativeInfinite": 0,
+        "positiveInfinite": 0,
+        "interval95": null
+      },
+      "usedForGate": false
+    },
+    "levels": [
+      {
+        "level": 0,
+        "members": [
+          {
+            "code": "Z-random",
+            "registeredStyle": "random",
+            "eloM": -1762.3264656475353,
+            "interval95": [
+              "-infinity",
+              -1471.8012075018503
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 1826,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": -212.17412815930084
+          },
+          {
+            "code": "Z-miner",
+            "registeredStyle": "economic",
+            "eloM": -1337.9782093289334,
+            "interval95": [
+              "-infinity",
+              -1059.1792295189066
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 1475,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 212.17412815930106
+          }
+        ],
+        "eloMean": -1550.1523374882345,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 1826,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": null
+        },
+        "eloSpan": 424.3482563186019,
+        "registeredStyles": [
+          "economic",
+          "random"
+        ]
+      },
+      {
+        "level": 1,
+        "members": [
+          {
+            "code": "Z-eco",
+            "registeredStyle": "economic",
+            "eloM": -482.56730478075417,
+            "interval95": [
+              -639.8537870139136,
+              -361.5058919263562
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1067.5850327074804
+          },
+          {
+            "code": "Z-harass",
+            "registeredStyle": "control",
+            "eloM": -615.4341534513826,
+            "interval95": [
+              -795.8065884879682,
+              -469.92240824192487
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 934.7181840368519
+          }
+        ],
+        "eloMean": -549.0007291160684,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            -711.558916237773,
+            -423.1115985901718
+          ]
+        },
+        "eloSpan": 132.86684867062843,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ]
+      },
+      {
+        "level": 2,
+        "members": [
+          {
+            "code": "b0-ctrl-lo",
+            "registeredStyle": "control",
+            "eloM": -513.2138315112231,
+            "interval95": [
+              -658.2333519013033,
+              -388.88527339339
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1036.9385059770113
+          },
+          {
+            "code": "b0-econ-lo",
+            "registeredStyle": "economic",
+            "eloM": -480.023659678019,
+            "interval95": [
+              -614.7510144916722,
+              -365.5886182373683
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1070.1286778102155
+          }
+        ],
+        "eloMean": -496.61874559462103,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            -633.4033366593555,
+            -379.12236483497577
+          ]
+        },
+        "eloSpan": 33.19017183320415,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ]
+      },
+      {
+        "level": 3,
+        "members": [
+          {
+            "code": "b1-ctrl",
+            "registeredStyle": "control",
+            "eloM": -204.13797297235942,
+            "interval95": [
+              -352.20845362162885,
+              -64.62323165231048
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1346.014364515875
+          },
+          {
+            "code": "b0-econ-hi",
+            "registeredStyle": "economic",
+            "eloM": -388.26039986162294,
+            "interval95": [
+              -528.5188785654613,
+              -266.7216975591787
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1161.8919376266115
+          }
+        ],
+        "eloMean": -296.1991864169912,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            -438.8525612403611,
+            -168.5115297171795
+          ]
+        },
+        "eloSpan": 184.12242688926352,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ]
+      },
+      {
+        "level": 4,
+        "members": [
+          {
+            "code": "b2-ctrl",
+            "registeredStyle": "control",
+            "eloM": -78.08382610929054,
+            "interval95": [
+              -190.64535362268342,
+              35.0095185311564
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1472.0685113789439
+          },
+          {
+            "code": "b2-econ",
+            "registeredStyle": "economic",
+            "eloM": -165.13323988422607,
+            "interval95": [
+              -286.0318817089828,
+              -58.63089142131777
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1385.0190976040085
+          }
+        ],
+        "eloMean": -121.6085329967583,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            -230.04443023094075,
+            -20.9602600984693
+          ]
+        },
+        "eloSpan": 87.04941377493553,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ]
+      },
+      {
+        "level": 5,
+        "members": [
+          {
+            "code": "p0-econ",
+            "registeredStyle": "economic",
+            "eloM": -39.875154543267755,
+            "interval95": [
+              -163.8066261827034,
+              86.01802323950993
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1510.2771829449666
+          },
+          {
+            "code": "M-balanced",
+            "registeredStyle": "balanced",
+            "eloM": 0.0,
+            "interval95": [
+              0.0,
+              0.0
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1550.1523374882345
+          },
+          {
+            "code": "A-r02",
+            "registeredStyle": "attack",
+            "eloM": -29.457758774358425,
+            "interval95": [
+              -101.53556013414813,
+              39.938728428034864
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1520.6945787138761
+          }
+        ],
+        "eloMean": -23.110971105875393,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            -78.3837583532492,
+            28.885256413348557
+          ]
+        },
+        "eloSpan": 39.875154543267755,
+        "registeredStyles": [
+          "attack",
+          "balanced",
+          "economic"
+        ]
+      },
+      {
+        "level": 6,
+        "members": [
+          {
+            "code": "p1-ctrl",
+            "registeredStyle": "control",
+            "eloM": 193.06465140378813,
+            "interval95": [
+              70.92353511367489,
+              340.7204127453606
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1743.2169888920225
+          },
+          {
+            "code": "p1-econ",
+            "registeredStyle": "economic",
+            "eloM": 102.39555376059535,
+            "interval95": [
+              -5.8769517726806955,
+              225.35301892979695
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1652.5478912488297
+          }
+        ],
+        "eloMean": 147.73010258219173,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            34.23062348946223,
+            281.00360763907224
+          ]
+        },
+        "eloSpan": 90.66909764319279,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ]
+      },
+      {
+        "level": 7,
+        "members": [
+          {
+            "code": "p2-ctrl",
+            "registeredStyle": "control",
+            "eloM": 385.0851711114035,
+            "interval95": [
+              257.8672891291597,
+              533.9235310718002
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1935.237508599638
+          },
+          {
+            "code": "p2-econ",
+            "registeredStyle": "economic",
+            "eloM": 291.83721528013797,
+            "interval95": [
+              223.3089317197374,
+              380.25042969404984
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1841.9895527683725
+          }
+        ],
+        "eloMean": 338.46119319577076,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            241.91811627241145,
+            453.7009620711807
+          ]
+        },
+        "eloSpan": 93.24795583126553,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ]
+      },
+      {
+        "level": 8,
+        "members": [
+          {
+            "code": "E-r02",
+            "registeredStyle": "economic",
+            "eloM": 422.9792014554631,
+            "interval95": [
+              324.97070222668333,
+              557.6465803984022
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 1973.1315389436977
+          },
+          {
+            "code": "C-r02",
+            "registeredStyle": "control",
+            "eloM": 485.77883165727735,
+            "interval95": [
+              365.7822064647424,
+              640.3710510650737
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 2035.9311691455118
+          }
+        ],
+        "eloMean": 454.37901655637023,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            350.7149080894993,
+            597.2380139045808
+          ]
+        },
+        "eloSpan": 62.79963020181424,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ]
+      },
+      {
+        "level": 9,
+        "members": [
+          {
+            "code": "K-c-f02-r08",
+            "registeredStyle": "control",
+            "eloM": 531.8604466407379,
+            "interval95": [
+              421.8221795981634,
+              666.6690318031675
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 2082.0127841289723
+          },
+          {
+            "code": "K-e-f02-r08",
+            "registeredStyle": "economic",
+            "eloM": 594.4641405405283,
+            "interval95": [
+              493.7575104629386,
+              731.4411372678352
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 2144.6164780287627
+          }
+        ],
+        "eloMean": 563.1622935906331,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            460.0493479816163,
+            696.5663041066557
+          ]
+        },
+        "eloSpan": 62.603693899790414,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ]
+      },
+      {
+        "level": 10,
+        "members": [
+          {
+            "code": "K-e-f01-r06",
+            "registeredStyle": "economic",
+            "eloM": 707.4302815178398,
+            "interval95": [
+              619.289524526412,
+              835.4717498709833
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 2257.5826190060743
+          },
+          {
+            "code": "K-a-r02",
+            "registeredStyle": "attack",
+            "eloM": 792.5658992707578,
+            "interval95": [
+              662.1815152108584,
+              972.75328551782
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 2342.718236758992
+          }
+        ],
+        "eloMean": 749.9980903942987,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            652.0639873579571,
+            892.5932592709576
+          ]
+        },
+        "eloSpan": 85.13561775291794,
+        "registeredStyles": [
+          "attack",
+          "economic"
+        ]
+      },
+      {
+        "level": 11,
+        "members": [
+          {
+            "code": "K-e-w01-r05",
+            "registeredStyle": "economic",
+            "eloM": 872.4894339314972,
+            "interval95": [
+              741.071365512235,
+              1056.1233054505863
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 2422.6417714197314
+          },
+          {
+            "code": "K-c-r04",
+            "registeredStyle": "control",
+            "eloM": 869.9721782941048,
+            "interval95": [
+              752.8698397682107,
+              1043.935867166141
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 2420.124515782339
+          },
+          {
+            "code": "K-e-r03",
+            "registeredStyle": "economic",
+            "eloM": 890.3424729208454,
+            "interval95": [
+              754.1629413934412,
+              1084.2892253704395
+            ],
+            "unidentifiedSamples": 0,
+            "negativeInfiniteSamples": 0,
+            "positiveInfiniteSamples": 0,
+            "samples": 4000,
+            "eloL0Supplement": 2440.49481040908
+          }
+        ],
+        "eloMean": 877.6013617154824,
+        "eloMeanBootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            752.3858278270023,
+            1057.5628954187744
+          ]
+        },
+        "eloSpan": 20.370294626740588,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ]
+      }
+    ]
+  },
+  "gates": {
+    "status": {
+      "1_spacing": "fail",
+      "2_withinTier": "fail",
+      "3_twoTierUpsets": "fail",
+      "4_registeredStyles": "pass"
+    },
+    "allPassed": false,
+    "spacing": [
+      {
+        "left": 0,
+        "right": 1,
+        "pointGap": 1001.151608372166,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 1826,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": null
+        },
+        "status": "diagnostic"
+      },
+      {
+        "left": 1,
+        "right": 2,
+        "pointGap": 52.38198352144741,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            -57.47820544888941,
+            177.79930135982
+          ]
+        },
+        "status": "diagnostic"
+      },
+      {
+        "left": 2,
+        "right": 3,
+        "pointGap": 200.41955917762982,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            164.5074469712742,
+            246.72662980233002
+          ]
+        },
+        "status": "fail"
+      },
+      {
+        "left": 3,
+        "right": 4,
+        "pointGap": 174.5906534202329,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            131.16905780422317,
+            227.17391331744304
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "left": 4,
+        "right": 5,
+        "pointGap": 98.4975618908829,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            40.878152559682846,
+            159.5990959267877
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "left": 5,
+        "right": 6,
+        "pointGap": 170.84107368806713,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            96.95003601682924,
+            260.8115265508168
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "left": 6,
+        "right": 7,
+        "pointGap": 190.73109061357903,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            122.44419571691881,
+            273.68117447081863
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "left": 7,
+        "right": 8,
+        "pointGap": 115.91782336059947,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            17.83769962111387,
+            224.86021601866133
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "left": 8,
+        "right": 9,
+        "pointGap": 108.78327703426288,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            -1.8620881736479191,
+            228.85208880130892
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "left": 9,
+        "right": 10,
+        "pointGap": 186.83579680366563,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            142.98715293903933,
+            243.4728527207227
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "left": 10,
+        "right": 11,
+        "pointGap": 127.60327132118368,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            64.15390637484222,
+            198.74457956691003
+          ]
+        },
+        "status": "pass"
+      }
+    ],
+    "withinTier": [
+      {
+        "level": 0,
+        "pointSpan": 424.3482563186019,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 1826,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": null
+        },
+        "status": "diagnostic"
+      },
+      {
+        "level": 1,
+        "pointSpan": 132.86684867062843,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            37.024484589230326,
+            247.57529111175882
+          ]
+        },
+        "status": "diagnostic"
+      },
+      {
+        "level": 2,
+        "pointSpan": 33.19017183320415,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            2.3500185877691138,
+            98.13709536215464
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "level": 3,
+        "pointSpan": 184.12242688926352,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            139.33957928127717,
+            233.92356855185184
+          ]
+        },
+        "status": "fail"
+      },
+      {
+        "level": 4,
+        "pointSpan": 87.04941377493553,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            9.237734043599573,
+            180.82680799221598
+          ]
+        },
+        "status": "fail"
+      },
+      {
+        "level": 5,
+        "pointSpan": 39.875154543267755,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            12.199710340170379,
+            170.85479225216164
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "level": 6,
+        "pointSpan": 90.66909764319279,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            44.10734733778527,
+            145.12895069447404
+          ]
+        },
+        "status": "fail"
+      },
+      {
+        "level": 7,
+        "pointSpan": 93.24795583126553,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            21.059733391580323,
+            171.4338015123351
+          ]
+        },
+        "status": "fail"
+      },
+      {
+        "level": 8,
+        "pointSpan": 62.79963020181424,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            6.309334313219608,
+            131.31007960589153
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "level": 9,
+        "pointSpan": 62.603693899790414,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            17.516606972206546,
+            111.97127165105042
+          ]
+        },
+        "status": "pass"
+      },
+      {
+        "level": 10,
+        "pointSpan": 85.13561775291794,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            6.040340164633221,
+            202.2383804726444
+          ]
+        },
+        "status": "fail"
+      },
+      {
+        "level": 11,
+        "pointSpan": 20.370294626740588,
+        "bootstrap": {
+          "draws": 4000,
+          "unavailable": 0,
+          "negativeInfinite": 0,
+          "positiveInfinite": 0,
+          "interval95": [
+            5.426619508563704,
+            82.02672412258198
+          ]
+        },
+        "status": "pass"
+      }
+    ],
+    "twoTierUpsets": {
+      "observedExactTwoTierPairs": 46,
+      "thresholdWinRateStrictlyBelow": 0.4,
+      "violatingPairs": 2,
+      "maxLowerWinRate": 0.5833333333333334,
+      "maxLowerWinDrawScoreRate": 0.5833333333333334,
+      "pairsAtLeast40WinDrawScoreRate": 2,
+      "pairNamesAndPrivateRecordsPublished": false
+    },
+    "registeredStyles": [
+      {
+        "level": 0,
+        "registeredStyles": [
+          "economic",
+          "random"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 1,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 2,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 3,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 4,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 5,
+        "registeredStyles": [
+          "attack",
+          "balanced",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 6,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 7,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 8,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 9,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 10,
+        "registeredStyles": [
+          "attack",
+          "economic"
+        ],
+        "status": "pass"
+      },
+      {
+        "level": 11,
+        "registeredStyles": [
+          "control",
+          "economic"
+        ],
+        "status": "pass"
+      }
+    ],
+    "sameOpponentEvidence": {
+      "r11DevMReplays": 3200,
+      "r12DevMReplays": 1280,
+      "sameOpponent": "M-balanced",
+      "checkedDevLevels": [
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "levelsWithEconomicGreaterWorkers50": [
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "levelsWithEconomicGreaterWorkers100": [
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "authorPublicNotPooled": true,
+      "KRegisteredStylesAcceptedByCA": true,
+      "KBehaviorSimilarityDisclosed": true,
+      "KScope": "level 9–11 family behavior similar under matched M; labels accepted by CA, tests 5 and 7 still pending"
+    }
+  },
+  "usage": {
+    "scoredGames": 5376,
+    "hardGameLimit": 8000,
+    "originalVerifierChecks": 5376,
+    "reusedVerifiedOnIngest": 0,
+    "scoringWallSeconds": 663.895299001,
+    "sandboxBootsInCompletedGames": 10752,
+    "scoringCompiles": 26,
+    "compileCacheHits": 0,
+    "benchmarksInScoring": 0,
+    "infraErrorAttempts": 0,
+    "technicalRerunsStartedByCoordinator": 0,
+    "scoredEngineSteps": 1510795,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "warningCount": 0,
+    "endingCounts": {
+      "turn_limit_deposit": 81,
+      "turn_limit_score": 4154,
+      "base_destroyed": 1141
+    },
+    "botCpuNsInScoredGames": 1121167273400,
+    "harnessCpuNsInScoredGames": 2049189095100,
+    "replayAuditCpuNs": 795783170600,
+    "replayAuditWallNs": 133187084267,
+    "benchmarkRawDataRepeated": false,
+    "fullSessionCpuSeconds": null,
+    "analysisWallSeconds": 170.63677922299985,
+    "analysisParentCpuSeconds": 27.2701539
+  },
+  "next": {
+    "stopForAcceptanceAdjudication": true,
+    "independentSessionsStarted": false,
+    "antiOneTrickStarted": false,
+    "holdoutStarted": false,
+    "phaseCStarted": false
+  }
+}
