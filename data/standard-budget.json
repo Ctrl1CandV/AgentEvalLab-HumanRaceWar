@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "test": "DESIGN 11.5 item 6",
+  "maximumFinalMainScore": 0.6,
+  "mainScoreGate": "fail",
+  "stages": [
+    {
+      "mainScore": 0.8680555555555555,
+      "interval95": [
+        0.8185433201058201,
+        0.9122354497354497
+      ],
+      "tierMeans": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9642857142857143,
+        0.9523809523809524,
+        0.9285714285714286,
+        0.9285714285714286,
+        0.9642857142857143,
+        0.6785714285714286,
+        0.5714285714285714,
+        0.42857142857142855
+      ],
+      "verifiedGames": 364,
+      "wallSeconds": 203.64753777199996,
+      "infraErrorAttempts": 0,
+      "faults": 0,
+      "timeouts": 0,
+      "warnings": 0,
+      "diagnosticOnly": true,
+      "stage": "phase1",
+      "authorReported": {
+        "wallSeconds": 3608.83,
+        "tokens": null,
+        "wallBudgetSeconds": 9000,
+        "withinWallBudget": true,
+        "model": "GPT-6 (Codex)"
+      }
+    },
+    {
+      "mainScore": 0.9186507936507936,
+      "interval95": [
+        0.8826719576719576,
+        0.951509139009139
+      ],
+      "tierMeans": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9642857142857143,
+        0.9642857142857143,
+        0.8214285714285714,
+        0.75,
+        0.5238095238095238
+      ],
+      "verifiedGames": 364,
+      "wallSeconds": 201.72359841599973,
+      "infraErrorAttempts": 0,
+      "faults": 0,
+      "timeouts": 0,
+      "warnings": 0,
+      "diagnosticOnly": false,
+      "stage": "phase2",
+      "authorReported": {
+        "wallSeconds": 1697,
+        "tokens": null,
+        "wallBudgetSeconds": 10800,
+        "withinWallBudget": true,
+        "model": "GPT-6"
+      }
+    }
+  ],
+  "phase2MinusPhase1": {
+    "point": 0.05059523809523814,
+    "interval95": [
+      0.01041666666666663,
+      0.09436177248677247
+    ],
+    "validClusterDraws": 3972
+  },
+  "publicScrimmage": {
+    "games": 12,
+    "wins": 12,
+    "draws": 0,
+    "losses": 0
+  },
+  "fixedScheduleRepairBound": {
+    "scope": "same slot weights, assigned maps, and all outcomes against retained members",
+    "hypotheticalPointsAgainstReplacement": 0,
+    "maxReplacementsInApprovedStrengtheningRound": 4,
+    "bestPossibleReductionWithFourReplacements": 0.16666666666666666,
+    "optimisticMainScoreFloorWithFourReplacements": 0.751984126984127,
+    "minimumReplacementSlotsByOptimisticBound": 8,
+    "fourReplacementsSufficientUnderBound": false
+  },
+  "fixedScheduleSharedByBothStages": true,
+  "independentContexts": true,
+  "actualTokenUsageVerified": false,
+  "holdoutUsed": false
+}
