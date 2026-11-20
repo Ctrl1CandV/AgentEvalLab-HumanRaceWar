@@ -1,10 +1,15 @@
 # 审查报告
 
-当前停点见STATUS，最新交审入口如下；执行权限以用户最新指令和有效裁定为准，历史报告中的下一任务不自动提供当前授权。工具与对接/评测GPT分工见`docs/CLAUDE_EVALUATION_HANDOFF.md`。
+当前停点见 [STATUS](../STATUS.md)。执行权限以用户最新指令和有效裁定为准；[综合会话交接](../docs/CLAUDE_EVALUATION_HANDOFF.md)说明两个 worktree 的写入边界。
 
-## WP-A2 与 r11 阶段性结果
+## WP-B 收尾与阶梯冻结审查
 
-[汇总报告](phase-B-wpa2-wpb01-integration.md)和[详细 JSON](../data/phase-b/wpa2-wpb01-integration.json)对应评测分支 `9f3f204`。修订版 WP-A2 与 WP-B 第一轮已完成；r11 暂保留 5 份，仍有三个区段缺候选，r12 未启动。
+- [r12 评测](phase-B-claude-wpb02.md)及[聚合 JSON](../data/phase-b/claude-wpb02.json)：最后一轮完成，四份候选均保留于图中。与冻结材料一起按评测分支 `801dcc8` 原字节导入。
+- [阶梯冻结审查材料](phase-B-claude-ladder-freeze-preparation.md)及[分组 JSON](../data/phase-b/claude-ladder-freeze-preparation.json)：方案未过全部门槛，等 CA 审查，不是正式冻结。
+
+## WP-A2 与 r11 阶段性结果（历史）
+
+[汇总报告](phase-B-wpa2-wpb01-integration.md)和[详细 JSON](../data/phase-b/wpa2-wpb01-integration.json)对应评测分支 `9f3f204`。旧窗口的暂选和缺口只是当时结果，后续重组由本轮 CA 裁定更新。
 
 - WP-A2：[风格分析及早期停点](phase-B-claude-wpa2-checkpoint.md)、[修订联合图](phase-B-claude-wpa2-revised.md)。
 - WP-B：[r11 接收记录（历史）](phase-B-claude-r11-intake.md)、[第一轮评测结果](phase-B-claude-wpb01.md)。

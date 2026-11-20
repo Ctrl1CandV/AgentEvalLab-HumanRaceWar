@@ -1,0 +1,874 @@
+{
+  "schemaVersion": 1,
+  "utc": "2026-11-20T01:55:08.910522+00:00",
+  "graph": {
+    "nodes": 35,
+    "observedEdges": 126,
+    "possibleEdges": 595,
+    "jointUniqueGames": 40320,
+    "reusedGraphGames": 36480,
+    "newEdges": 12,
+    "newGames": 3840,
+    "historicalEvaluatorNewGamesThroughR12": 46560
+  },
+  "bt": {
+    "anchor": "M-balanced",
+    "finiteFullPointMLE": true,
+    "nodes": [
+      {
+        "code": "K-a-r02",
+        "style": "attack",
+        "mAnchor": 630.5475797260484,
+        "interval95": [
+          572.358872100548,
+          696.7454827342212
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2263.8094269043404,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-e-r03",
+        "style": "economic",
+        "mAnchor": 760.090301409481,
+        "interval95": [
+          716.8201374628569,
+          813.3342736069526
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2393.3521485877727,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-c-r04",
+        "style": "control",
+        "mAnchor": 733.6717921705801,
+        "interval95": [
+          687.1515583742101,
+          789.2574219355843
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2366.933639348872,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "M-balanced",
+        "style": "public-anchor",
+        "mAnchor": 0.0,
+        "interval95": [
+          0.0,
+          0.0
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1633.2618471782919,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-e-w01-r05",
+        "style": "economic",
+        "mAnchor": 703.3316310602612,
+        "interval95": [
+          663.5531467459047,
+          751.3064119554763
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2336.593478238553,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-c-w01-r05",
+        "style": "control",
+        "mAnchor": 671.2314590571076,
+        "interval95": [
+          631.2258493645081,
+          720.4498121647069
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2304.4933062353994,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-e-f01-r06",
+        "style": "economic",
+        "mAnchor": 566.8122670146096,
+        "interval95": [
+          526.9611072661368,
+          613.5514059128066
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2200.0741141929016,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-c-f01-r07",
+        "style": "control",
+        "mAnchor": 539.23285959788,
+        "interval95": [
+          498.08231349508344,
+          584.9218387772484
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2172.494706776172,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-e-f02-r08",
+        "style": "economic",
+        "mAnchor": 459.47561107364544,
+        "interval95": [
+          414.747053287263,
+          509.27901725143096
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2092.7374582519374,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "K-c-f02-r08",
+        "style": "control",
+        "mAnchor": 400.15064515912246,
+        "interval95": [
+          353.6715200408624,
+          449.9473218057763
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 2033.4124923374143,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "A-r02",
+        "style": "attack",
+        "mAnchor": 10.154875649500777,
+        "interval95": [
+          -35.97474722587179,
+          55.46500360223282
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1643.4167228277927,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "E-r02",
+        "style": "economic",
+        "mAnchor": 300.85399945511097,
+        "interval95": [
+          244.2999186481336,
+          364.3064641102097
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1934.1158466334027,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "C-r02",
+        "style": "control",
+        "mAnchor": 346.89499454997383,
+        "interval95": [
+          289.2389781077362,
+          409.856411243781
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1980.1568417282656,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-random",
+        "style": "public-zoo",
+        "mAnchor": -1890.542998316272,
+        "interval95": [
+          -2324.2573417316667,
+          -1704.8028354946416
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 62,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": -257.28115113798003,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-miner",
+        "style": "public-zoo",
+        "mAnchor": -1375.9806960403118,
+        "interval95": [
+          -1747.595917901214,
+          -1243.832193619078
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 62,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 257.28115113798003,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-rush",
+        "style": "public-zoo",
+        "mAnchor": -487.98942027228816,
+        "interval95": [
+          -547.0869275402025,
+          -438.7738208323612
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1145.2724269060036,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-eco",
+        "style": "public-zoo",
+        "mAnchor": -626.5252820789199,
+        "interval95": [
+          -885.0853584239201,
+          -472.39838885996556
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1006.736565099372,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-towers",
+        "style": "public-zoo",
+        "mAnchor": -187.69285757960085,
+        "interval95": [
+          -238.82997526436768,
+          -139.88228847823143
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1445.5689895986911,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-harass",
+        "style": "public-zoo",
+        "mAnchor": -588.2876377429034,
+        "interval95": [
+          -686.3621938663715,
+          -509.3657396559427
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1044.9742094353885,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-wrush",
+        "style": "public-zoo",
+        "mAnchor": -907.5569036975071,
+        "interval95": [
+          -1270.0288582195303,
+          -776.7103455950175
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 62,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 725.7049434807848,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "Z-turtle",
+        "style": "public-zoo",
+        "mAnchor": -1701.5014754644562,
+        "interval95": [
+          -2096.5054195033026,
+          -1553.3586156205174
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 62,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": -68.23962828616436,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b1-ctrl",
+        "style": "control",
+        "mAnchor": -281.4273132553942,
+        "interval95": [
+          -353.3142742396947,
+          -217.89298923401662
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1351.8345339228977,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b1-econ",
+        "style": "economic",
+        "mAnchor": -291.0313856746953,
+        "interval95": [
+          -352.7184249382269,
+          -238.55626691782558
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1342.2304615035966,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b2-ctrl",
+        "style": "control",
+        "mAnchor": -151.4939102948933,
+        "interval95": [
+          -209.99792217518555,
+          -95.38571883969354
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1481.7679368833985,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b2-econ",
+        "style": "economic",
+        "mAnchor": -134.92713856269486,
+        "interval95": [
+          -185.84999893118996,
+          -91.21454000649601
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1498.334708615597,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p0-ctrl",
+        "style": "control",
+        "mAnchor": -87.1322656711508,
+        "interval95": [
+          -158.38370304463155,
+          -22.731174544217172
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1546.129581507141,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p0-econ",
+        "style": "economic",
+        "mAnchor": -18.71256794996207,
+        "interval95": [
+          -68.68687123453535,
+          28.863104569228362
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1614.5492792283299,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p1-ctrl",
+        "style": "control",
+        "mAnchor": 85.83546296524146,
+        "interval95": [
+          36.924731508554,
+          138.98074154214174
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1719.0973101435334,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p1-econ",
+        "style": "economic",
+        "mAnchor": 111.02562852324084,
+        "interval95": [
+          66.91789103842689,
+          156.7469512990733
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1744.2874757015327,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p2-ctrl",
+        "style": "control",
+        "mAnchor": 208.54985835350223,
+        "interval95": [
+          162.9403393853322,
+          255.83185993335024
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1841.8117055317941,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "p2-econ",
+        "style": "economic",
+        "mAnchor": 275.6216909181796,
+        "interval95": [
+          236.37608964524642,
+          316.42418163876755
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1908.8835380964715,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b0-ctrl-hi",
+        "style": "control",
+        "mAnchor": -366.29388047943587,
+        "interval95": [
+          -427.6742967433265,
+          -312.2966097075053
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1266.967966698856,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b0-ctrl-lo",
+        "style": "control",
+        "mAnchor": -391.7864027274142,
+        "interval95": [
+          -456.8639668993195,
+          -334.74895888279497
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1241.4754444508776,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b0-econ-hi",
+        "style": "economic",
+        "mAnchor": -276.5080237935779,
+        "interval95": [
+          -346.45382015991794,
+          -211.1590741754028
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1356.753823384714,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      },
+      {
+        "code": "b0-econ-lo",
+        "style": "economic",
+        "mAnchor": -355.03309548762803,
+        "interval95": [
+          -425.3330304081806,
+          -291.6663388516859
+        ],
+        "unidentifiedSamples": 0,
+        "negativeInfiniteSamples": 0,
+        "positiveInfiniteSamples": 0,
+        "samples": 4000,
+        "l0Anchor": 1278.2287516906638,
+        "l0Bootstrap": {
+          "interval95": null,
+          "unidentifiedSamples": 62,
+          "negativeInfiniteSamples": 0,
+          "positiveInfiniteSamples": 0
+        }
+      }
+    ],
+    "bootstrap": {
+      "samples": 4000,
+      "seed": 4219,
+      "mapClusters": 80,
+      "finiteFullMLEReplicates": 3938,
+      "method": "all opponents and both seats in each map jointly resampled; nearest-rank 2.5/97.5 percentiles; no rejected bootstrap draws, pseudocounts, clipping or multiplicity correction"
+    },
+    "L0OffsetToSubtractFromMAnchor": -1633.2618471782919,
+    "validL0ConversionDraws": 3938,
+    "L0OffsetBootstrap": {
+      "interval95": null,
+      "unidentifiedSamples": 62,
+      "negativeInfiniteSamples": 0,
+      "positiveInfiniteSamples": 0
+    },
+    "maxScoreResidual": 1.7332126844848972e-09
+  },
+  "selection": {
+    "frozenCenter": -444.52122682134814,
+    "frozenRange": [
+      -484.52122682134814,
+      -404.52122682134814
+    ],
+    "candidates": [
+      {
+        "code": "b0-ctrl-hi",
+        "style": "control",
+        "mAnchor": -366.29388047943587,
+        "interval95": [
+          -427.6742967433265,
+          -312.2966097075053
+        ],
+        "inFrozenWindow": false,
+        "shortCheckPassed": true
+      },
+      {
+        "code": "b0-ctrl-lo",
+        "style": "control",
+        "mAnchor": -391.7864027274142,
+        "interval95": [
+          -456.8639668993195,
+          -334.74895888279497
+        ],
+        "inFrozenWindow": false,
+        "shortCheckPassed": true
+      },
+      {
+        "code": "b0-econ-hi",
+        "style": "economic",
+        "mAnchor": -276.5080237935779,
+        "interval95": [
+          -346.45382015991794,
+          -211.1590741754028
+        ],
+        "inFrozenWindow": false,
+        "shortCheckPassed": true
+      },
+      {
+        "code": "b0-econ-lo",
+        "style": "economic",
+        "mAnchor": -355.03309548762803,
+        "interval95": [
+          -425.3330304081806,
+          -291.6663388516859
+        ],
+        "inFrozenWindow": false,
+        "shortCheckPassed": true
+      }
+    ],
+    "nearestInWindowPerStyle": [],
+    "remainingAuthorRounds": 0
+  },
+  "executionReceiptException": {
+    "outerShellExitCode": 1,
+    "outerShellMessage": "exit: : numeric argument required",
+    "rawOuterExitReceiptBlank": true,
+    "scoringChildStderrEmpty": true,
+    "acceptedEvidence": "operator authorized using unchanged standard completion summaries, inner count/wall receipt, exact frozen task identities and original replay verification",
+    "noReruns": true
+  },
+  "usage": {
+    "newScoredGames": 3840,
+    "shortChecks": 4,
+    "shortCheckEngineSteps": 20,
+    "scoringCompiles": 7,
+    "checkCompiles": 4,
+    "compileCacheHits": 7,
+    "scoringBotStarts": 7680,
+    "checkBotStarts": 4,
+    "benchmarks": 0,
+    "infraErrors": 0,
+    "retries": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "protocolWarnings": 0,
+    "scoringWallSeconds": 336.4242900049994,
+    "scoringHardWallSeconds": 3600,
+    "checkWallSeconds": 23.10773289000008,
+    "endingCounts": {
+      "base_destroyed": 683,
+      "turn_limit_score": 3127,
+      "turn_limit_deposit": 30
+    },
+    "botCpuNsInScoredGames": 570181709600,
+    "harnessCpuNsInScoredGames": 1058381577800,
+    "replayAuditCpuNs": 375115336100,
+    "replayAuditWallNs": 63021898570,
+    "newReplayVerifierPasses": 3840,
+    "reusedNewStandardRecoveryReceipts": 0,
+    "compilationCpuSeconds": null,
+    "fullSessionCpuSeconds": null,
+    "oldReplayEngineSteps": 0,
+    "analysisWallSeconds": 212.05071613799998,
+    "analysisParentCpuSeconds": 86.348264
+  },
+  "date": "2026-11-20",
+  "status": "r12 evaluated; final author round closed; development ratings only",
+  "protocol": {
+    "devMaps": 80,
+    "identitySeeds": [
+      [
+        17,
+        29
+      ],
+      [
+        29,
+        17
+      ]
+    ],
+    "doubleSeat": true,
+    "jobs": 6,
+    "sandbox": "bwrap",
+    "T6": false,
+    "archiveDeepSeekExecuted": false,
+    "formalCalibration": false,
+    "timeBenchmark": false
+  },
+  "authorSelfReport": {
+    "games": 12480,
+    "probeGames": 10240,
+    "finalGames": 2240,
+    "wallMinutesApprox": 71,
+    "modelAsReported": "Claude Opus 5.5",
+    "newSessionsThisRound": 1,
+    "totalActualSessionsAsReported": 2,
+    "candidatesInWindowBySelfEstimate": 3,
+    "failedNonScoringCheckEnvironmentAttemptsReported": 1,
+    "independentlyVerified": false,
+    "publicMReplayIncludedInDelivery": false
+  },
+  "publication": {
+    "pairWDLPublished": false,
+    "replaysPublished": false,
+    "hiddenImplementationOrWeaknessPublished": false
+  }
+}

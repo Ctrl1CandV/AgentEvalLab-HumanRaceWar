@@ -1,0 +1,1325 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-20",
+  "status": "freeze-review preparation only",
+  "graph": {
+    "nodes": 35,
+    "observedEdges": 126,
+    "possibleEdges": 595,
+    "jointUniqueGames": 40320,
+    "reusedGraphGames": 36480,
+    "newEdges": 12,
+    "newGames": 3840,
+    "historicalEvaluatorNewGamesThroughR12": 46560,
+    "pairwiseResultsNotPublished": true,
+    "registeredPool": [
+      {
+        "code": "K-a-r02",
+        "mAnchor": 630.5475797260484,
+        "interval95": [
+          572.358872100548,
+          696.7454827342212
+        ],
+        "registeredStyle": "attack"
+      },
+      {
+        "code": "K-e-r03",
+        "mAnchor": 760.090301409481,
+        "interval95": [
+          716.8201374628569,
+          813.3342736069526
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "K-c-r04",
+        "mAnchor": 733.6717921705801,
+        "interval95": [
+          687.1515583742101,
+          789.2574219355843
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "M-balanced",
+        "mAnchor": 0.0,
+        "interval95": [
+          0.0,
+          0.0
+        ],
+        "registeredStyle": "public-anchor"
+      },
+      {
+        "code": "K-e-w01-r05",
+        "mAnchor": 703.3316310602612,
+        "interval95": [
+          663.5531467459047,
+          751.3064119554763
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "K-c-w01-r05",
+        "mAnchor": 671.2314590571076,
+        "interval95": [
+          631.2258493645081,
+          720.4498121647069
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "K-e-f01-r06",
+        "mAnchor": 566.8122670146096,
+        "interval95": [
+          526.9611072661368,
+          613.5514059128066
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "K-c-f01-r07",
+        "mAnchor": 539.23285959788,
+        "interval95": [
+          498.08231349508344,
+          584.9218387772484
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "K-e-f02-r08",
+        "mAnchor": 459.47561107364544,
+        "interval95": [
+          414.747053287263,
+          509.27901725143096
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "K-c-f02-r08",
+        "mAnchor": 400.15064515912246,
+        "interval95": [
+          353.6715200408624,
+          449.9473218057763
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "A-r02",
+        "mAnchor": 10.154875649500777,
+        "interval95": [
+          -35.97474722587179,
+          55.46500360223282
+        ],
+        "registeredStyle": "attack"
+      },
+      {
+        "code": "E-r02",
+        "mAnchor": 300.85399945511097,
+        "interval95": [
+          244.2999186481336,
+          364.3064641102097
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "C-r02",
+        "mAnchor": 346.89499454997383,
+        "interval95": [
+          289.2389781077362,
+          409.856411243781
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "Z-random",
+        "mAnchor": -1890.542998316272,
+        "interval95": [
+          -2324.2573417316667,
+          -1704.8028354946416
+        ],
+        "registeredStyle": "foundation-random"
+      },
+      {
+        "code": "Z-miner",
+        "mAnchor": -1375.9806960403118,
+        "interval95": [
+          -1747.595917901214,
+          -1243.832193619078
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "Z-rush",
+        "mAnchor": -487.98942027228816,
+        "interval95": [
+          -547.0869275402025,
+          -438.7738208323612
+        ],
+        "registeredStyle": "attack"
+      },
+      {
+        "code": "Z-eco",
+        "mAnchor": -626.5252820789199,
+        "interval95": [
+          -885.0853584239201,
+          -472.39838885996556
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "Z-towers",
+        "mAnchor": -187.69285757960085,
+        "interval95": [
+          -238.82997526436768,
+          -139.88228847823143
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "Z-harass",
+        "mAnchor": -588.2876377429034,
+        "interval95": [
+          -686.3621938663715,
+          -509.3657396559427
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "Z-wrush",
+        "mAnchor": -907.5569036975071,
+        "interval95": [
+          -1270.0288582195303,
+          -776.7103455950175
+        ],
+        "registeredStyle": "attack"
+      },
+      {
+        "code": "Z-turtle",
+        "mAnchor": -1701.5014754644562,
+        "interval95": [
+          -2096.5054195033026,
+          -1553.3586156205174
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "b1-ctrl",
+        "mAnchor": -281.4273132553942,
+        "interval95": [
+          -353.3142742396947,
+          -217.89298923401662
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "b1-econ",
+        "mAnchor": -291.0313856746953,
+        "interval95": [
+          -352.7184249382269,
+          -238.55626691782558
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "b2-ctrl",
+        "mAnchor": -151.4939102948933,
+        "interval95": [
+          -209.99792217518555,
+          -95.38571883969354
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "b2-econ",
+        "mAnchor": -134.92713856269486,
+        "interval95": [
+          -185.84999893118996,
+          -91.21454000649601
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "p0-ctrl",
+        "mAnchor": -87.1322656711508,
+        "interval95": [
+          -158.38370304463155,
+          -22.731174544217172
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "p0-econ",
+        "mAnchor": -18.71256794996207,
+        "interval95": [
+          -68.68687123453535,
+          28.863104569228362
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "p1-ctrl",
+        "mAnchor": 85.83546296524146,
+        "interval95": [
+          36.924731508554,
+          138.98074154214174
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "p1-econ",
+        "mAnchor": 111.02562852324084,
+        "interval95": [
+          66.91789103842689,
+          156.7469512990733
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "p2-ctrl",
+        "mAnchor": 208.54985835350223,
+        "interval95": [
+          162.9403393853322,
+          255.83185993335024
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "p2-econ",
+        "mAnchor": 275.6216909181796,
+        "interval95": [
+          236.37608964524642,
+          316.42418163876755
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "b0-ctrl-hi",
+        "mAnchor": -366.29388047943587,
+        "interval95": [
+          -427.6742967433265,
+          -312.2966097075053
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "b0-ctrl-lo",
+        "mAnchor": -391.7864027274142,
+        "interval95": [
+          -456.8639668993195,
+          -334.74895888279497
+        ],
+        "registeredStyle": "control"
+      },
+      {
+        "code": "b0-econ-hi",
+        "mAnchor": -276.5080237935779,
+        "interval95": [
+          -346.45382015991794,
+          -211.1590741754028
+        ],
+        "registeredStyle": "economic"
+      },
+      {
+        "code": "b0-econ-lo",
+        "mAnchor": -355.03309548762803,
+        "interval95": [
+          -425.3330304081806,
+          -291.6663388516859
+        ],
+        "registeredStyle": "economic"
+      }
+    ],
+    "scopeExclusions": {
+      "Z-idle": "public zoo member; omitted from graph per WP-A2; no comparable scored edge in this graph",
+      "D-c01": "archival only; execution disallowed; CA decision pending for formal ladder",
+      "r10": "archive only, not evaluated; no additional comparable edge in registered graph",
+      "otherPreGraphSupersededVersions": "preserved at source; board counts only candidates registered on the comparable joint dev protocol"
+    }
+  },
+  "groupingMethod": {
+    "2Or3Members": true,
+    "minimumRegisteredStyles": 2,
+    "maximumSpanFromL1": 80,
+    "spacingRangeFromL1Up": [
+      80,
+      200
+    ],
+    "nearSpacingFloor": [
+      80,
+      90
+    ],
+    "aimLevelCountIncludingL0": 12,
+    "L0FloorExceptionProposedNotApproved": true,
+    "originalCADraftL1": [
+      "Z-rush",
+      "Z-eco",
+      "Z-harass"
+    ],
+    "originalCADraftL1Span": 138.53586180663171,
+    "allowedDraftL1RootSubsets": [
+      {
+        "l1Codes": [
+          "Z-eco",
+          "Z-harass"
+        ],
+        "l1Span": 38.2376443360165,
+        "closestPossibleNextGroup": [
+          "b0-ctrl-lo",
+          "b0-econ-lo"
+        ],
+        "minimumNextMeanGap": 233.9967108033905
+      }
+    ],
+    "preferIncludeMAndHighestPoint": "K-e-r03",
+    "strengthOrderedNonoverlappingGroups": true,
+    "selection": "rank by fewest spacing violations, then smallest deviation, closest to 12 levels and other gaps close to 125; do not use pairwise upsets to select",
+    "strictSearchFoundFullCoverageDraft": false,
+    "registeredStylesOnly": true
+  },
+  "plans": {
+    "推荐草案": {
+      "includesM": true,
+      "levels": [
+        {
+          "level": 0,
+          "members": [
+            {
+              "code": "Z-random",
+              "declaredStyle": "foundation-random"
+            },
+            {
+              "code": "Z-miner",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -1633.2618471782919,
+          "span": 514.5623022759601,
+          "gapFromPrevious": null,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 1,
+          "members": [
+            {
+              "code": "Z-eco",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "Z-harass",
+              "declaredStyle": "control"
+            }
+          ],
+          "mean": -607.4064599109116,
+          "span": 38.2376443360165,
+          "gapFromPrevious": 1025.8553872673801,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 2,
+          "members": [
+            {
+              "code": "b0-ctrl-lo",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "b0-econ-lo",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -373.4097491075211,
+          "span": 36.75330723978618,
+          "gapFromPrevious": 233.9967108033905,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": true
+        },
+        {
+          "level": 3,
+          "members": [
+            {
+              "code": "b1-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "b0-econ-hi",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -278.96766852448604,
+          "span": 4.919289461816334,
+          "gapFromPrevious": 94.44208058303508,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 4,
+          "members": [
+            {
+              "code": "b2-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "b2-econ",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -143.2105244287941,
+          "span": 16.566771732198447,
+          "gapFromPrevious": 135.75714409569196,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 5,
+          "members": [
+            {
+              "code": "p0-econ",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "M-balanced",
+              "declaredStyle": "public-anchor"
+            }
+          ],
+          "mean": -9.356283974981036,
+          "span": 18.71256794996207,
+          "gapFromPrevious": 133.85424045381305,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 6,
+          "members": [
+            {
+              "code": "p1-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "p1-econ",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 98.43054574424116,
+          "span": 25.19016555799938,
+          "gapFromPrevious": 107.7868297192222,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 7,
+          "members": [
+            {
+              "code": "p2-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "p2-econ",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 242.0857746358409,
+          "span": 67.07183256467735,
+          "gapFromPrevious": 143.65522889159973,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 8,
+          "members": [
+            {
+              "code": "E-r02",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "C-r02",
+              "declaredStyle": "control"
+            }
+          ],
+          "mean": 323.8744970025424,
+          "span": 46.040995094862865,
+          "gapFromPrevious": 81.7887223667015,
+          "styleCount": 2,
+          "nearSpacingFloor": true,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 9,
+          "members": [
+            {
+              "code": "K-c-f02-r08",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "K-e-f02-r08",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 429.81312811638395,
+          "span": 59.32496591452298,
+          "gapFromPrevious": 105.93863111384155,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 10,
+          "members": [
+            {
+              "code": "K-e-f01-r06",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "K-a-r02",
+              "declaredStyle": "attack"
+            }
+          ],
+          "mean": 598.679923370329,
+          "span": 63.73531271143884,
+          "gapFromPrevious": 168.86679525394504,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 11,
+          "members": [
+            {
+              "code": "K-e-w01-r05",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "K-c-r04",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "K-e-r03",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 732.3645748801074,
+          "span": 56.758670349219756,
+          "gapFromPrevious": 133.6846515097784,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        }
+      ],
+      "unassignedFromGraph": [
+        "A-r02",
+        "K-c-f01-r07",
+        "K-c-w01-r05",
+        "Z-rush",
+        "Z-towers",
+        "Z-turtle",
+        "Z-wrush",
+        "b0-ctrl-hi",
+        "b1-econ",
+        "p0-ctrl"
+      ],
+      "meetsDevSpanAndSpacingFromL1Up": false,
+      "styleLabelsAreNotFormalCertification": true,
+      "upsetCheck": {
+        "eligiblePairCount": 240,
+        "observedPairs": 27,
+        "unobservedPairs": 213,
+        "maximumObservedLowerScoreRate": 0.33125,
+        "numberAtLeast35Pct": 0,
+        "numberAtLeast40Pct": 0,
+        "publicOnlyAlarmPairs": []
+      }
+    },
+    "备选一": {
+      "includesM": true,
+      "levels": [
+        {
+          "level": 0,
+          "members": [
+            {
+              "code": "Z-random",
+              "declaredStyle": "foundation-random"
+            },
+            {
+              "code": "Z-miner",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -1633.2618471782919,
+          "span": 514.5623022759601,
+          "gapFromPrevious": null,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 1,
+          "members": [
+            {
+              "code": "Z-eco",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "Z-harass",
+              "declaredStyle": "control"
+            }
+          ],
+          "mean": -607.4064599109116,
+          "span": 38.2376443360165,
+          "gapFromPrevious": 1025.8553872673801,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 2,
+          "members": [
+            {
+              "code": "b0-ctrl-lo",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "b0-econ-lo",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -373.4097491075211,
+          "span": 36.75330723978618,
+          "gapFromPrevious": 233.9967108033905,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": true
+        },
+        {
+          "level": 3,
+          "members": [
+            {
+              "code": "b1-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "b0-econ-hi",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -278.96766852448604,
+          "span": 4.919289461816334,
+          "gapFromPrevious": 94.44208058303508,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 4,
+          "members": [
+            {
+              "code": "b2-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "b2-econ",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -143.2105244287941,
+          "span": 16.566771732198447,
+          "gapFromPrevious": 135.75714409569196,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 5,
+          "members": [
+            {
+              "code": "p0-econ",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "M-balanced",
+              "declaredStyle": "public-anchor"
+            }
+          ],
+          "mean": -9.356283974981036,
+          "span": 18.71256794996207,
+          "gapFromPrevious": 133.85424045381305,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 6,
+          "members": [
+            {
+              "code": "p1-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "p1-econ",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 98.43054574424116,
+          "span": 25.19016555799938,
+          "gapFromPrevious": 107.7868297192222,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 7,
+          "members": [
+            {
+              "code": "p2-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "p2-econ",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 242.0857746358409,
+          "span": 67.07183256467735,
+          "gapFromPrevious": 143.65522889159973,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 8,
+          "members": [
+            {
+              "code": "E-r02",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "C-r02",
+              "declaredStyle": "control"
+            }
+          ],
+          "mean": 323.8744970025424,
+          "span": 46.040995094862865,
+          "gapFromPrevious": 81.7887223667015,
+          "styleCount": 2,
+          "nearSpacingFloor": true,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 9,
+          "members": [
+            {
+              "code": "K-c-f02-r08",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "K-e-f02-r08",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 429.81312811638395,
+          "span": 59.32496591452298,
+          "gapFromPrevious": 105.93863111384155,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 10,
+          "members": [
+            {
+              "code": "K-c-f01-r07",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "K-e-f01-r06",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 553.0225633062448,
+          "span": 27.579407416729623,
+          "gapFromPrevious": 123.20943518986087,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 11,
+          "members": [
+            {
+              "code": "K-e-w01-r05",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "K-c-r04",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "K-e-r03",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 732.3645748801074,
+          "span": 56.758670349219756,
+          "gapFromPrevious": 179.34201157386258,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        }
+      ],
+      "unassignedFromGraph": [
+        "A-r02",
+        "K-a-r02",
+        "K-c-w01-r05",
+        "Z-rush",
+        "Z-towers",
+        "Z-turtle",
+        "Z-wrush",
+        "b0-ctrl-hi",
+        "b1-econ",
+        "p0-ctrl"
+      ],
+      "meetsDevSpanAndSpacingFromL1Up": false,
+      "styleLabelsAreNotFormalCertification": true,
+      "upsetCheck": {
+        "eligiblePairCount": 240,
+        "observedPairs": 29,
+        "unobservedPairs": 211,
+        "maximumObservedLowerScoreRate": 0.34375,
+        "numberAtLeast35Pct": 0,
+        "numberAtLeast40Pct": 0,
+        "publicOnlyAlarmPairs": []
+      }
+    },
+    "备选二": {
+      "includesM": true,
+      "levels": [
+        {
+          "level": 0,
+          "members": [
+            {
+              "code": "Z-random",
+              "declaredStyle": "foundation-random"
+            },
+            {
+              "code": "Z-miner",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -1633.2618471782919,
+          "span": 514.5623022759601,
+          "gapFromPrevious": null,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 1,
+          "members": [
+            {
+              "code": "Z-rush",
+              "declaredStyle": "attack"
+            },
+            {
+              "code": "Z-eco",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "Z-harass",
+              "declaredStyle": "control"
+            }
+          ],
+          "mean": -567.6007800313705,
+          "span": 138.53586180663171,
+          "gapFromPrevious": 1065.6610671469214,
+          "styleCount": 3,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": true,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 2,
+          "members": [
+            {
+              "code": "b0-ctrl-lo",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "b0-econ-lo",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -373.4097491075211,
+          "span": 36.75330723978618,
+          "gapFromPrevious": 194.19103092384938,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 3,
+          "members": [
+            {
+              "code": "b1-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "b0-econ-hi",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -278.96766852448604,
+          "span": 4.919289461816334,
+          "gapFromPrevious": 94.44208058303508,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 4,
+          "members": [
+            {
+              "code": "b2-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "b2-econ",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": -143.2105244287941,
+          "span": 16.566771732198447,
+          "gapFromPrevious": 135.75714409569196,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 5,
+          "members": [
+            {
+              "code": "p0-econ",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "M-balanced",
+              "declaredStyle": "public-anchor"
+            }
+          ],
+          "mean": -9.356283974981036,
+          "span": 18.71256794996207,
+          "gapFromPrevious": 133.85424045381305,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 6,
+          "members": [
+            {
+              "code": "p1-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "p1-econ",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 98.43054574424116,
+          "span": 25.19016555799938,
+          "gapFromPrevious": 107.7868297192222,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 7,
+          "members": [
+            {
+              "code": "p2-ctrl",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "p2-econ",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 242.0857746358409,
+          "span": 67.07183256467735,
+          "gapFromPrevious": 143.65522889159973,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 8,
+          "members": [
+            {
+              "code": "E-r02",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "C-r02",
+              "declaredStyle": "control"
+            }
+          ],
+          "mean": 323.8744970025424,
+          "span": 46.040995094862865,
+          "gapFromPrevious": 81.7887223667015,
+          "styleCount": 2,
+          "nearSpacingFloor": true,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 9,
+          "members": [
+            {
+              "code": "K-c-f02-r08",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "K-e-f02-r08",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 429.81312811638395,
+          "span": 59.32496591452298,
+          "gapFromPrevious": 105.93863111384155,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 10,
+          "members": [
+            {
+              "code": "K-e-f01-r06",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "K-a-r02",
+              "declaredStyle": "attack"
+            }
+          ],
+          "mean": 598.679923370329,
+          "span": 63.73531271143884,
+          "gapFromPrevious": 168.86679525394504,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        },
+        {
+          "level": 11,
+          "members": [
+            {
+              "code": "K-e-w01-r05",
+              "declaredStyle": "economic"
+            },
+            {
+              "code": "K-c-r04",
+              "declaredStyle": "control"
+            },
+            {
+              "code": "K-e-r03",
+              "declaredStyle": "economic"
+            }
+          ],
+          "mean": 732.3645748801074,
+          "span": 56.758670349219756,
+          "gapFromPrevious": 133.6846515097784,
+          "styleCount": 2,
+          "nearSpacingFloor": false,
+          "spanOutOfSpec": false,
+          "spacingOutOfSpecOutsideL0": false
+        }
+      ],
+      "unassignedFromGraph": [
+        "A-r02",
+        "K-c-f01-r07",
+        "K-c-w01-r05",
+        "Z-towers",
+        "Z-turtle",
+        "Z-wrush",
+        "b0-ctrl-hi",
+        "b1-econ",
+        "p0-ctrl"
+      ],
+      "meetsDevSpanAndSpacingFromL1Up": false,
+      "styleLabelsAreNotFormalCertification": true,
+      "upsetCheck": {
+        "eligiblePairCount": 259,
+        "observedPairs": 29,
+        "unobservedPairs": 230,
+        "maximumObservedLowerScoreRate": 0.496875,
+        "numberAtLeast35Pct": 1,
+        "numberAtLeast40Pct": 1,
+        "publicOnlyAlarmPairs": []
+      }
+    }
+  },
+  "matchedMStyle": {
+    "r11": {
+      "source": "existing evaluator dev M-balanced replays",
+      "replays": 3200,
+      "analysisEngineSteps": 924245,
+      "wallSeconds": 75.47064567599995,
+      "analysisCpuNs": 447694133400,
+      "candidates": 10,
+      "nonoverlappingMetrics": [
+        "workers50",
+        "workers100"
+      ]
+    },
+    "r12": {
+      "source": "author self-report from existing public M-balanced replays; no independent replay access",
+      "candidates": 4,
+      "reportedGamesPerCandidate": 320,
+      "devMEdge": false,
+      "nonoverlappingMetrics": [
+        "workers50",
+        "workers100",
+        "soldiers50",
+        "soldiers100",
+        "towers100",
+        "firstCombatTurn"
+      ]
+    },
+    "withinPlanSameDatasetContrastCounts": {
+      "推荐草案": 4,
+      "备选一": 4,
+      "备选二": 4
+    },
+    "crossDatasetPooling": false,
+    "formalStyleCertification": false
+  },
+  "evaluatorUsage": {
+    "r12": {
+      "newScoredGames": 3840,
+      "shortChecks": 4,
+      "shortCheckEngineSteps": 20,
+      "scoringCompiles": 7,
+      "checkCompiles": 4,
+      "compileCacheHits": 7,
+      "scoringBotStarts": 7680,
+      "checkBotStarts": 4,
+      "benchmarks": 0,
+      "infraErrors": 0,
+      "retries": 0,
+      "botFaultGames": 0,
+      "timeouts": 0,
+      "protocolWarnings": 0,
+      "scoringWallSeconds": 336.4242900049994,
+      "scoringHardWallSeconds": 3600,
+      "checkWallSeconds": 23.10773289000008,
+      "endingCounts": {
+        "base_destroyed": 683,
+        "turn_limit_score": 3127,
+        "turn_limit_deposit": 30
+      },
+      "botCpuNsInScoredGames": 570181709600,
+      "harnessCpuNsInScoredGames": 1058381577800,
+      "replayAuditCpuNs": 375115336100,
+      "replayAuditWallNs": 63021898570,
+      "newReplayVerifierPasses": 3840,
+      "reusedNewStandardRecoveryReceipts": 0,
+      "compilationCpuSeconds": null,
+      "fullSessionCpuSeconds": null,
+      "oldReplayEngineSteps": 0,
+      "analysisWallSeconds": 212.05071613799998,
+      "analysisParentCpuSeconds": 86.348264
+    },
+    "wpb01": {
+      "newScoredGames": 9600,
+      "shortChecks": 10,
+      "shortCheckEngineSteps": 50,
+      "scoringCompiles": 15,
+      "checkCompiles": 10,
+      "totalCompiles": 25,
+      "compileCacheHits": 15,
+      "scoringBotStarts": 19200,
+      "checkBotStarts": 10,
+      "totalBotStarts": 19210,
+      "benchmarks": 0,
+      "scoringWallSeconds": 1093.667,
+      "checkWallSeconds": 48.767,
+      "scoringHardWallSeconds": 7200,
+      "infraErrors": 0,
+      "retries": 0,
+      "botFaultGames": 0,
+      "timeouts": 0,
+      "protocolWarnings": 0,
+      "endingCounts": {
+        "base_destroyed": 2055,
+        "turn_limit_score": 7534,
+        "turn_limit_deposit": 11
+      },
+      "botCpuNsInScoredGames": 2207310927900,
+      "harnessCpuNsInScoredGames": 3781543150100,
+      "compilationCpuSeconds": null,
+      "fullSessionCpuSeconds": null,
+      "scoredEngineSteps": 2747795,
+      "newVerifiedReplays": 9600,
+      "oldReplayEngineSteps": 0,
+      "auditCpuNs": 1496326678300,
+      "auditWallNs": 250176039232,
+      "analysisCpuNs": 25802258900,
+      "analysisWallNs": 26075975145
+    },
+    "newScoredGamesForFreezePreparation": 0
+  },
+  "pendingCAAndUser": [
+    "formal levels including L1 membership and style qualification",
+    "L0 spacing exception and formal anchor",
+    "B-SCORE-001",
+    "independent testers",
+    "T6 for formal calibration",
+    "D-c01 eligibility",
+    "accept r12 author-reported style or request existing public replay evidence, no new games"
+  ],
+  "shutdown": {
+    "newAuthorRounds": 0,
+    "formalCalibrationStarted": false,
+    "holdoutStarted": false,
+    "phaseCStarted": false
+  }
+}
