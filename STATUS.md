@@ -11,7 +11,8 @@
 - 上轮按点估计未过第 1–3 条。[正式校准审查](inbox/2026-11-20-phase-b-calibration-review.md)接受原数据，并依用户裁定改为 95% 地图簇区间判定；基础组公开 Z bot 作为低级一方的隔级反胜只作诊断，DESIGN 11.5 已更新。原结果保留。
 - [L3 修法与区间复查](reports/phase-B-claude-calibration-l3-repair.md)和[聚合](data/phase-b/claude-b-calibration-l3-repair.json)按评测提交 `098b5b9` 原字节导入。仅补 10 对、480 局并逐局核验，无故障、超时、警告或重试。原 5,376 局全部保留参与拟合，仅在验收名单中用 b1-econ 换下 b0-econ-hi。
 - **按第四节停下。** 第 2、4 条通过；L3 组内跨度降至 48.68 Elo。第 1 条仍未过：L2→L3 间距 298.20，95% 区间 259.49–351.09。第 3 条仍未过：一条正式隔级配对得分率 60.42%，区间 41.67%–77.08%。原两条告警一条为基础 Z 诊断、一条按新区间通过。
-- 不再换人、删级、补赛或改门槛。独立测试、防“一招鲜”、holdout 及 C 均未启动。隐藏对阵、轨迹和原始证据仅保留于评测 worktree。
+- 后续用户授权分两段试验 L3/L4 候选重排。[首段筛查](reports/phase-B-claude-b-lowband-screen.md)及[聚合](data/phase-b/claude-b-lowband-screen.json)从评测提交 `fa88c66` 原字节导入：4 对、192 局全核验，原 5,856 局全部复用。草案 L3 组内跨度 190.09 Elo，95% 区间 168.25–211.83，整体高于 80；按计划不跑剩余 384 局。
+- 已测候选又做了零对局重排；114,480 种低段草案中无一同时满足级距和同级跨度。正式名单和门槛保持不变。需要新的中间档候选；独立测试、防“一招鲜”、holdout 与 C 均未启动。隐藏对阵、轨迹和原始证据仅保留于评测 worktree。
 
 ## WP-B 收尾与冻结材料（历史）
 - [r12 评测](reports/phase-B-claude-wpb02.md)及[聚合 JSON](data/phase-b/claude-wpb02.json)、[冻结审查材料](reports/phase-B-claude-ladder-freeze-preparation.md)及[分组 JSON](data/phase-b/claude-ladder-freeze-preparation.json)，都按评测分支固定提交 `801dcc8` 的原字节导入。未合并分支；原件、原始回放、隔级逐边诊断和异常收据留评测 worktree。

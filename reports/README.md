@@ -4,6 +4,7 @@
 
 ## 11-20 CA 冻结裁定后的结果
 
+- [低段候选首段筛查](phase-B-claude-b-lowband-screen.md)及[聚合](../data/phase-b/claude-b-lowband-screen.json)来自评测提交 `fa88c66`：192 局核验，L3 组内跨度不通过，余下 384 局未运行。
 - [L3 修法与区间复查](phase-B-claude-calibration-l3-repair.md)及[聚合](../data/phase-b/claude-b-calibration-l3-repair.json)来自评测提交 `098b5b9`：新增 480 局已核验复用旧图，第 1、3 条仍未通过，停在校准。
 - [正式校准](phase-B-claude-formal-calibration.md)和[聚合](../data/phase-b/claude-b-formal-calibration.json)来自评测提交 `aa07179`：前 4 条验收中，级距、同级跨度和隔级反胜未通过，已停止后续测试。
 - [B 正式预算锁](phase-B-claude-formal-budget.md)和[聚合](../data/phase-b/claude-b-formal-budget.json)来自评测提交 `893429f`：开发 WSL 标准测速与新固定锁。
