@@ -4,6 +4,7 @@
 
 ## 11-20 CA 冻结裁定后的结果
 
+- [第 5 条知情对比](phase-B-ladder-awareness.md)及[聚合](../data/phase-b/ladder-awareness.json)来自评测提交 `65b602f`，两组各 364 局核验，主分差门槛通过。
 - [第 6 条标准预算自测](phase-B-standard-budget.md)及[聚合](../data/standard-budget.json)来自评测提交 `182cb21`，两阶段各 364 局核验，最终主分超过 0.60。
 - [低段重排补校准](phase-B-claude-r13-repair.md)及[聚合](../data/phase-b/claude-r13-repair.json)来自评测提交 `233be2b`：新增 768 局全核验，第 1–4 条均通过。
 - [r13 校准报告](phase-B-claude-r13-calibration.md)及[聚合](../data/phase-b/claude-r13-calibration.json)来自评测提交 `e56efc5`：1,392 局全量核验，第 2–4 条通过，L2→L3 级距仍未过。

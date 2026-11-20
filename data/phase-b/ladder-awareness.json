@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "test": "DESIGN 11.5 item 5",
+  "maximumAbsoluteMainScoreDifference": 0.15,
+  "mainScoreGapGate": "pass",
+  "groups": [
+    {
+      "mainScore": 0.8978174603174603,
+      "interval95": [
+        0.8560929232804232,
+        0.9362268518518518
+      ],
+      "tierMeans": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9285714285714286,
+        1.0,
+        0.9642857142857143,
+        0.9642857142857143,
+        0.8571428571428572,
+        0.9285714285714286,
+        0.6071428571428572,
+        0.5238095238095238
+      ],
+      "verifiedGames": 364,
+      "wallSeconds": 256.89343672900003,
+      "infraErrorAttempts": 0,
+      "faults": 0,
+      "timeouts": 0,
+      "warnings": 0,
+      "group": "blind",
+      "authorReported": {
+        "wallSeconds": 4053,
+        "tokens": null,
+        "model": "GPT-6",
+        "developmentGames": 1776,
+        "withinWallBudget": true
+      }
+    },
+    {
+      "mainScore": 0.9087301587301587,
+      "interval95": [
+        0.861359126984127,
+        0.9477513227513228
+      ],
+      "tierMeans": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9642857142857143,
+        0.9642857142857143,
+        0.9285714285714286,
+        0.8571428571428571,
+        0.6428571428571428,
+        0.5476190476190476
+      ],
+      "verifiedGames": 364,
+      "wallSeconds": 212.050918303,
+      "infraErrorAttempts": 0,
+      "faults": 0,
+      "timeouts": 0,
+      "warnings": 0,
+      "group": "informed",
+      "authorReported": {
+        "wallSeconds": 1796,
+        "tokens": null,
+        "model": "Codex (GPT-6)",
+        "developmentGames": 900,
+        "withinWallBudget": true
+      }
+    }
+  ],
+  "informedMinusBlind": {
+    "point": 0.010912698412698374,
+    "absolutePoint": 0.010912698412698374,
+    "interval95": [
+      -0.03961640211640205,
+      0.057407407407407574
+    ],
+    "validClusterDraws": 3972
+  },
+  "sharedBudget": {
+    "tokenBudget": 6000000,
+    "wallBudgetSeconds": 9000
+  },
+  "samePublicMaterials": true,
+  "identicalFormalSchedule": true,
+  "separateContextForEachAuthor": true,
+  "informedSourceAccessIndividuallyAuthorized": true,
+  "readOnlyReferenceArchivedAfterCompletion": true,
+  "wholeFilePrivateSourceDigestMatches": 0,
+  "actualTokenUsageVerified": false,
+  "holdoutUsed": false
+}
