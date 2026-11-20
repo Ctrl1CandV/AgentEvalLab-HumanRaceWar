@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "historicalUniqueScoredGames": 7440,
+  "initialOfflineScreen": {
+    "gapSpanStylePass": 238,
+    "failedObservedReversal": 173,
+    "measuredConditionsPass": 65,
+    "fullyObservedPass": 0
+  },
+  "numberOfScreenedCandidates": 15,
+  "retainedMemberCountsForTiers2To5": [
+    2,
+    2,
+    2,
+    3
+  ],
+  "newScoredGames": 768,
+  "passedCalibration": true,
+  "trials": [
+    {
+      "number": 1,
+      "priorScoredGames": 7440,
+      "newScoredGames": 768,
+      "totalUniqueGames": 8208,
+      "passed": true,
+      "checks": {
+        "gates": [
+          "pass",
+          "pass",
+          "pass",
+          "pass"
+        ],
+        "levelGapChecks": [
+          {
+            "lowerTier": 0,
+            "higherTier": 1,
+            "point": 1029.448175978037,
+            "interval95": null,
+            "status": "diagnostic"
+          },
+          {
+            "lowerTier": 1,
+            "higherTier": 2,
+            "point": 284.47142321589854,
+            "interval95": [
+              186.21868491078055,
+              416.10577797452254
+            ],
+            "status": "diagnostic"
+          },
+          {
+            "lowerTier": 2,
+            "higherTier": 3,
+            "point": 56.95505520960978,
+            "interval95": [
+              29.798182795710716,
+              88.44689537219193
+            ],
+            "status": "pass"
+          },
+          {
+            "lowerTier": 3,
+            "higherTier": 4,
+            "point": 155.01141325805668,
+            "interval95": [
+              94.274768273767,
+              227.15103311128473
+            ],
+            "status": "pass"
+          },
+          {
+            "lowerTier": 4,
+            "higherTier": 5,
+            "point": 97.65426097544868,
+            "interval95": [
+              61.10647969870378,
+              140.15856831936574
+            ],
+            "status": "pass"
+          },
+          {
+            "lowerTier": 5,
+            "higherTier": 6,
+            "point": 191.31275981742084,
+            "interval95": [
+              143.8123680809667,
+              255.1278078856835
+            ],
+            "status": "pass"
+          },
+          {
+            "lowerTier": 6,
+            "higherTier": 7,
+            "point": 190.40835570753396,
+            "interval95": [
+              121.85875027104163,
+              274.6296326870896
+            ],
+            "status": "pass"
+          },
+          {
+            "lowerTier": 7,
+            "higherTier": 8,
+            "point": 115.57833138829312,
+            "interval95": [
+              17.857286398319843,
+              224.27934122540523
+            ],
+            "status": "pass"
+          },
+          {
+            "lowerTier": 8,
+            "higherTier": 9,
+            "point": 108.70158096842192,
+            "interval95": [
+              -2.4018820100053517,
+              228.47469047537533
+            ],
+            "status": "pass"
+          },
+          {
+            "lowerTier": 9,
+            "higherTier": 10,
+            "point": 186.85872623278374,
+            "interval95": [
+              142.985578682746,
+              243.67016296215547
+            ],
+            "status": "pass"
+          },
+          {
+            "lowerTier": 10,
+            "higherTier": 11,
+            "point": 127.594609683199,
+            "interval95": [
+              64.20534741874656,
+              198.72300347473026
+            ],
+            "status": "pass"
+          }
+        ],
+        "withinLevelSpanChecks": [
+          {
+            "tier": 0,
+            "point": 424.3341239693748,
+            "interval95": null,
+            "status": "diagnostic"
+          },
+          {
+            "tier": 1,
+            "point": 110.9555728881644,
+            "interval95": [
+              26.677775600049586,
+              214.78671857065842
+            ],
+            "status": "diagnostic"
+          },
+          {
+            "tier": 2,
+            "point": 16.357807241667444,
+            "interval95": [
+              1.5003594801785312,
+              90.49112782979057
+            ],
+            "status": "pass"
+          },
+          {
+            "tier": 3,
+            "point": 145.42590317279343,
+            "interval95": [
+              49.644236752373104,
+              240.1990665279681
+            ],
+            "status": "pass"
+          },
+          {
+            "tier": 4,
+            "point": 109.10096315931223,
+            "interval95": [
+              7.449628864922062,
+              263.99414510967006
+            ],
+            "status": "pass"
+          },
+          {
+            "tier": 5,
+            "point": 96.93958272534596,
+            "interval95": [
+              65.1328905768113,
+              216.39033787806235
+            ],
+            "status": "pass"
+          },
+          {
+            "tier": 6,
+            "point": 85.05784458784204,
+            "interval95": [
+              37.72827925802471,
+              138.07537110446444
+            ],
+            "status": "pass"
+          },
+          {
+            "tier": 7,
+            "point": 85.24488652005294,
+            "interval95": [
+              14.949842006741392,
+              163.22947459705637
+            ],
+            "status": "pass"
+          },
+          {
+            "tier": 8,
+            "point": 62.742861244005155,
+            "interval95": [
+              6.311457250520448,
+              131.1790602169142
+            ],
+            "status": "pass"
+          },
+          {
+            "tier": 9,
+            "point": 62.587527669186215,
+            "interval95": [
+              17.516913287420493,
+              111.98132521926675
+            ],
+            "status": "pass"
+          },
+          {
+            "tier": 10,
+            "point": 85.13337012816271,
+            "interval95": [
+              6.039602113894148,
+              202.23546266879634
+            ],
+            "status": "pass"
+          },
+          {
+            "tier": 11,
+            "point": 20.370395735878674,
+            "interval95": [
+              5.426978752000991,
+              82.02707562598687
+            ],
+            "status": "pass"
+          }
+        ],
+        "failedOrUnresolvedTierChecks": [],
+        "reversalCounts": {
+          "pass": 38,
+          "fail": 0,
+          "diagnostic": 8,
+          "unmeasured": 0
+        },
+        "unmeasuredRequiredPairCount": 0
+      },
+      "usage": {
+        "newScoredGames": 768,
+        "newReplaysVerified": 768,
+        "newIngestVerificationReused": 0,
+        "scoringWallSeconds": 118.41737022200005,
+        "infraErrorAttempts": 0,
+        "botFaultGames": 0,
+        "timeouts": 0,
+        "warnings": 0,
+        "scoringCompiles": 13,
+        "scoringCacheHits": 0,
+        "recordedBotStarts": 1536,
+        "botCpuNs": 124210545800,
+        "harnessCpuNs": 242728999700,
+        "endingCounts": {
+          "base_destroyed": 125,
+          "turn_limit_score": 639,
+          "turn_limit_deposit": 1,
+          "turn_limit_draw": 3
+        },
+        "replayAuditCpuNs": 82080204100,
+        "replayAuditWallNs": 14212567613
+      },
+      "finiteFullMLEReplicates": 2174
+    }
+  ],
+  "holdoutUsed": false
+}
