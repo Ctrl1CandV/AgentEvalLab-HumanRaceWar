@@ -6,7 +6,8 @@
 - [CA 阶梯冻结审查](inbox/2026-11-20-phase-b-ladder-freeze-review.md)为当前任务依据。DESIGN 已按裁定落实 L0、L1 诊断边界、L2 起的正式强度门槛、M 锚点、K 风格披露和防“一招鲜”门槛。
 - B-SCORE-001 已关闭；第 5、6 条按胜负主分数判定，过程分只作参考。本轮不改任何其他规则或门槛。
 - [r12 同对手风格核对](reports/phase-B-claude-r12-m-style.md)和[聚合](data/phase-b/claude-r12-m-style.json)按评测固定提交 `464d357` 原字节导入。1,280 局全部完成并核验，无故障、超时、警告或重试。经济和控制的近期工兵数差异在独立 dev 样本中得到复核，不改变冻结名单或原联合图。
-- 下一步是在评测机重测并冻结正式预算锁。当前可访问的 WSL 是开发机，硬件与既有评测机记录不同；未启动正式测速，也不套用 dev 锁。冻结名单的正式校准为 112 对、5,376 局，在 8,000 局上限内，仍未开跑。
+- 按用户最新安排，在当前开发 WSL 完成标准离线 jobs6 测速并冻结本机正式预算锁，不处理另一台评测机。[测速报告](reports/phase-B-claude-formal-budget.md)及[聚合](data/phase-b/claude-b-formal-budget.json)按评测固定提交 `893429f` 导入。每回合 61 ms、初始化 1210 ms、储备 1814 ms；原 dev 锁未改。
+- 下一步用新锁做正式校准：112 对、5,376 局，在 8,000 局上限内。第二台机器的复核不在本轮范围内。
 
 ## WP-B 收尾与冻结材料（历史）
 - [r12 评测](reports/phase-B-claude-wpb02.md)及[聚合 JSON](data/phase-b/claude-wpb02.json)、[冻结审查材料](reports/phase-B-claude-ladder-freeze-preparation.md)及[分组 JSON](data/phase-b/claude-ladder-freeze-preparation.json)，都按评测分支固定提交 `801dcc8` 的原字节导入。未合并分支；原件、原始回放、隔级逐边诊断和异常收据留评测 worktree。

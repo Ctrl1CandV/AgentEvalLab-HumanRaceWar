@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-20",
+  "stage": "B formal budget, designated development WSL",
+  "remoteEvaluationMachineRetested": false,
+  "lockSchemaVersion": 2,
+  "reuseDevelopmentLock": false,
+  "jobs": 6,
+  "workerCpus": 12,
+  "sandbox": "bwrap",
+  "samplesPerLoad": 3,
+  "turns": 300,
+  "referenceKind": "operator-supplied-evaluation-idle",
+  "referenceSource": "existing repository normalization reference",
+  "idleReferenceCpuNs": 259181615,
+  "localIdleCpuNs": 141083700,
+  "localLoadedCpuNs": 156699000.0,
+  "speedFactor": 0.6045914946552053,
+  "lockedLimits": {
+    "TURN_CPU_MS": 61,
+    "INIT_CPU_MS": 1210,
+    "BANK_MS": 1814
+  },
+  "wallMarginMs": 303,
+  "cpuHardLimitSeconds": 25,
+  "measuredHarnessCpuSeconds": 0.0850944,
+  "recordedBenchmarkCpuSeconds": 6.110283,
+  "benchmarkWallSeconds": null,
+  "benchmarkSessions": 1,
+  "benchmarkSandboxCompiles": 1,
+  "scoredGames": 0,
+  "usesT6": false,
+  "lockAndRawBenchmarkPublished": false,
+  "publicationRecovery": {
+    "scoringGames": 0,
+    "benchmarkSessions": 1,
+    "remeasured": false,
+    "rawBenchmarkAndLockUnchanged": true,
+    "cause": "post-benchmark reporting assertion compared Calibration.cpus tuple to the lease list",
+    "scope": "metadata-only revalidation of completed raw benchmark and existing machine-bound lock"
+  }
+}
