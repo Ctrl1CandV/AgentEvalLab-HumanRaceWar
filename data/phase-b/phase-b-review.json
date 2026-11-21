@@ -1,0 +1,101 @@
+{
+  "decision": "Current frozen B ladder fails acceptance; refer to CA for negative closure.",
+  "evidenceThroughAuthorRound": "r18",
+  "gates": {
+    "1-4": "pass",
+    "5": "pass",
+    "6": "fail",
+    "7": "fail",
+    "8-final-holdout": "not-run"
+  },
+  "awarenessAbsoluteGap": 0.010912698412698374,
+  "standardBudgetFinalMainScore": 0.9186507936507936,
+  "standardBudgetFinalInterval95": [
+    0.8826719576719576,
+    0.951509139009139
+  ],
+  "requiredMainScoreMaximum": 0.6,
+  "requiredReduction": 0.31865079365079363,
+  "fixedSlotBound": {
+    "scope": "same slot weights, assigned maps, and all outcomes against retained members",
+    "hypotheticalPointsAgainstReplacement": 0,
+    "maxReplacementsInApprovedStrengtheningRound": 4,
+    "bestPossibleReductionWithFourReplacements": 0.16666666666666666,
+    "optimisticMainScoreFloorWithFourReplacements": 0.751984126984127,
+    "minimumReplacementSlotsByOptimisticBound": 8,
+    "fourReplacementsSufficientUnderBound": false
+  },
+  "sameRetainedScoresFloorIfLevels8To11AllZero": 0.6636904761904762,
+  "requiredUpperSixMeanIfLowerSixUnchanged": 0.19999999999999987,
+  "failingOneTrickPanels": [
+    {
+      "publicBot": "M-balanced",
+      "tier": 6,
+      "games": 96,
+      "point": 0.4479166666666667,
+      "interval95": [
+        0.2916666666666667,
+        0.6041666666666666
+      ]
+    },
+    {
+      "publicBot": "M-balanced",
+      "tier": 7,
+      "games": 96,
+      "point": 0.125,
+      "interval95": [
+        0.052083333333333336,
+        0.21875
+      ]
+    },
+    {
+      "publicBot": "Z-harass",
+      "tier": 8,
+      "games": 96,
+      "point": 0.14583333333333334,
+      "interval95": [
+        0.041666666666666664,
+        0.2708333333333333
+      ]
+    }
+  ],
+  "oneTrickMax": 0.1,
+  "matchedCandidateHistory": {
+    "uniqueCandidates": 10,
+    "matchedHistoricalGames": 2400,
+    "anyUpperAnchorPlanningSignal": false
+  },
+  "erratumToStrengthLossAudit": {
+    "withdrawnThreeMemberL6Floor": 0.1146,
+    "actualL6MemberCount": 2,
+    "actualL6MTotalGames": 96,
+    "verifiedTwoRetainedMatchupsIndividually": true,
+    "onePerfectReplacementSufficientOnFixedL6Schedule": false
+  },
+  "round19Disposition": "Optional addendum if already in progress. Otherwise defer. Outside current frozen roster ruling.",
+  "reopeningBasis": "A roster-level development proposal with feasible weighted reduction for 6 and coverage of all three failed panels for 7, subject to CA and user decision.",
+  "newGamesForThisReport": 0,
+  "finalHoldoutUsed": false,
+  "publicEvidence": {
+    "calibration": {
+      "path": "data/phase-b/claude-r13-repair.json",
+      "sha256": "11278363271ecd7ed05f017be814d934484ec54b4330c17ed82a4870f2af4fc0"
+    },
+    "awareness": {
+      "path": "data/phase-b/ladder-awareness.json",
+      "sha256": "4fd80932f1bca1b235010fd5c6a1680479a2cd30eaeb4ea4adefbb0d46428ff5"
+    },
+    "standardBudget": {
+      "path": "data/standard-budget.json",
+      "sha256": "60162ccb99d48b3b468518c80193f7f93ec01d28841de1efa520f9ad3b30e1ce"
+    },
+    "oneTrick": {
+      "path": "data/phase-b/one-trick-baseline.json",
+      "sha256": "033914a6d65937c114f344afa6eca8989f32ae3b79b24981c040680cb0d88a3b"
+    },
+    "candidateHistory": {
+      "path": "data/phase-b/claude-r18-strength.json",
+      "sha256": "80689ab43b053071207b3274a38d48e5782ea2993683efe0717f8518e3ef2834"
+    }
+  }
+}

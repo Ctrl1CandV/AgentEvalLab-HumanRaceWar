@@ -2,6 +2,10 @@
 
 当前停点见 [STATUS](../STATUS.md)。执行权限以用户最新指令和有效裁定为准；[综合会话交接](../docs/CLAUDE_EVALUATION_HANDOFF.md)说明两个 worktree 的写入边界。
 
+## 当前审查入口
+
+- [B 阶段报告：当前冻结阶梯未通过](phase-B.md)和[收束聚合](../data/phase-b/phase-b-review.json)按评测提交 `ab386ec` 导入。含验收状态、范围下界及 L6 更正。
+
 ## 11-20 CA 冻结裁定后的结果
 
 - [r18 候选筛查与同赛程复盘](phase-B-claude-r18-strength.md)及[聚合](../data/phase-b/claude-r18-strength.json)来自评测提交 `048655c`，400 局新 dev 全核验。另复算十份候选的已有共同配对。
