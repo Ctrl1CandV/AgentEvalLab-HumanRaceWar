@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "registeredStyle": "economic",
+  "candidate": "s16-strong",
+  "deliveryByteVerified": true,
+  "standardFiveTurnCheckPassed": true,
+  "initialIntakeRetriedBeforeExecution": "Original two-style shape rejected the agreed single-candidate delivery. R16 intake applied the same byte, path, file type, size and digest checks to its declared one-candidate shape.",
+  "combinedIndependentProbeScore": {
+    "point": 0.5458333333333333,
+    "interval95": [
+      0.45416666666666666,
+      0.6333333333333333
+    ]
+  },
+  "pairedGainAgainstOriginalFrozenEconomicReference": {
+    "point": 0.0125,
+    "interval95": [
+      -0.058333333333333334,
+      0.08333333333333333
+    ]
+  },
+  "pairedComparisonAgainstOwnR14Base": {
+    "baselineCombinedScore": 0.5583333333333333,
+    "pairedGain": {
+      "point": -0.0125,
+      "interval95": [
+        -0.0375,
+        0.008333333333333333
+      ]
+    }
+  },
+  "replicationNominated": false,
+  "upperAnchorExploratorySignal": false,
+  "newDevUsage": {
+    "newScoredGames": 400,
+    "newReplaysVerified": 400,
+    "newIngestVerificationReused": 0,
+    "scoringWallSeconds": 83.13225272199998,
+    "infraErrorAttempts": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "scoringCompiles": 6,
+    "scoringCacheHits": 0,
+    "recordedBotStarts": 800,
+    "botCpuNs": 132793208300,
+    "harnessCpuNs": 210506795100,
+    "endingCounts": {
+      "base_destroyed": 78,
+      "turn_limit_score": 321,
+      "turn_limit_deposit": 1
+    },
+    "replayAuditCpuNs": 90130516400,
+    "replayAuditWallNs": 15711089980
+  },
+  "reusedMatchedReferenceGames": 480,
+  "mapSeedSeatCrossCheckWithR14": true,
+  "authorSelfReport": {
+    "source": "Author self-report relayed by user on delivery; distinct from independent dev screening.",
+    "hoursElapsedApprox": 0.2,
+    "totalGames": 608,
+    "pilotGames": 288,
+    "finalGames": 320,
+    "plannedFinalGamesIncludingAdditionalDirectBlock": 400,
+    "additionalDirectBlockReported": false,
+    "reclaimRateEnabledDisabled": [
+      0.13,
+      0.116
+    ],
+    "netTowerPointGainTurns50to150EnabledDisabled": [
+      2.2,
+      1.5
+    ],
+    "pairedCommonOpponentGain": {
+      "point": 0.025,
+      "interval95": [
+        0.006,
+        0.05
+      ]
+    },
+    "directAgainstOwnBase": {
+      "record": [
+        44,
+        0,
+        36
+      ],
+      "point": 0.55,
+      "interval95": [
+        0.438,
+        0.662
+      ]
+    },
+    "stableDirectImprovementConfirmed": false,
+    "bandDelivered": false,
+    "sameConversationSinceR14": true,
+    "maxTurnCpuMs": 2.2,
+    "faultsReported": 0,
+    "timeoutsReported": 0,
+    "warningsReported": 0
+  },
+  "formalRosterChanges": 0,
+  "holdoutUsed": false
+}
