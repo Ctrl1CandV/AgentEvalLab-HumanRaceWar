@@ -6,6 +6,8 @@
 
 [阶段报告](reports/phase-B.md)和[收束聚合](data/phase-b/phase-b-review.json)来自评测提交 `ab386ec`。第 1–5 条通过，第 6、7 条未通过，最终 holdout 待前项通过。r19 仅作可选补充，后续作者轮次暂停排期。L6 人数和旧下界的勘误见阶段报告。
 
+[存量重排与替换规模](reports/phase-B-roster-feasibility.md)按评测提交 `c201790` 导入。已核算 26 名原成员的重排下界并补齐 1,520 局开发对阵，31 份库存仍无法组成有过线证据的上半梯。
+
 ## 冻结版本的证据记录
 - [低段重排补校准](reports/phase-B-claude-r13-repair.md)及[聚合](data/phase-b/claude-r13-repair.json)按评测提交 `233be2b` 原字节导入。新增 768 局全量核验，复用 7,440 局；第 1–4 条均通过。L2→L3 点估计为 56.96 Elo，95% 区间 29.80–88.45，与允许范围相交。通过名单已在评测侧封存。
 - [第 6 条标准预算自测](reports/phase-B-standard-budget.md)及[聚合](data/standard-budget.json)按评测提交 `182cb21` 原字节导入。两个阶段各 364 局核验，最终主分 0.9187，超过 0.60。其余成员结果固定时，四个替换位置的理论最低分 0.7520，门槛所需降幅至少相当于 8 个替换位置。

@@ -1,0 +1,107 @@
+{
+  "decision": "Current frozen B version remains unsuccessful. No inventory-only repair supported by this screen.",
+  "formalScore": 0.9186507936507936,
+  "formalMainScoreMaximum": 0.6,
+  "formalGamesAlreadyMeasured": 364,
+  "oneTrickGamesAlreadyMeasured": 6240,
+  "relaxedReorderFloorUsingMeasuredMemberScores": 0.8988095238095238,
+  "relaxedSelectionWith24To26OriginalMembersFloor": 0.8988095238095238,
+  "rosterReorderAssumption": "Hold each member score fixed, freely assign the largest weights to the smallest scores, relax all style and anchoring restrictions.",
+  "devInventory": {
+    "upperFrozenMembers": 13,
+    "olderEconomicOrControlAlternatives": 8,
+    "recentDeliveredCandidates": 10,
+    "distinctMembers": 31,
+    "newGames": 1520,
+    "reusedGames": 960,
+    "maps": 40,
+    "bothSeats": true,
+    "allReplaysVerified": true,
+    "usage": {
+      "scoringWallSeconds": 320.2292640759988,
+      "botFaultGames": 0,
+      "timeouts": 0,
+      "warnings": 0,
+      "infraErrorAttempts": 0
+    },
+    "bestUpperMeanProbeScore": 0.5923611111111111,
+    "mixedConditionalMainScoreFloor": 0.7961805555555556,
+    "maximumLowerSixMeanToReachCapWithBestDevUpperGroup": 0.6076388888888888,
+    "scope": "Lower half held at its observed formal sweep. Upper 13 chosen from 31 on first-half dev; ten paired-group slots get the most favorable rates, the other three get lower weight. No restrictions on placement beyond the slot weights."
+  },
+  "onlyPublicAnchorsFixedSensitivity": {
+    "onlyAnchorsFixedUnderOriginalCounts": 0.7239583333333334,
+    "allowArbitrary2Or3MembersAboveL1": 0.7217013888888889,
+    "assumptions": "Four L0-L1 public members and M retain their formal sweep; other lower original members also measured at 1 formally. All 31 measured rates freely usable anywhere above L1 except M slot. Mixed dev and formal schedules."
+  },
+  "jointPlanningScenarios": [
+    {
+      "candidateScoreVsStandard": 1.0,
+      "publicChallengerScoreVsNew": 0.05,
+      "minimumUpperSlotsForBothPointTargets": 8,
+      "bestProjectedScoreAtMinimum": 0.5972222222222222,
+      "bestAnyReplacementCount": 0.5,
+      "oneExampleCountsL6ThroughL11": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "candidateScoreVsStandard": 0.9,
+      "publicChallengerScoreVsNew": 0.05,
+      "minimumUpperSlotsForBothPointTargets": 10,
+      "bestProjectedScoreAtMinimum": 0.5853174603174603,
+      "bestAnyReplacementCount": 0.55,
+      "oneExampleCountsL6ThroughL11": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "candidateScoreVsStandard": 0.8,
+      "publicChallengerScoreVsNew": 0.05,
+      "minimumUpperSlotsForBothPointTargets": 13,
+      "bestProjectedScoreAtMinimum": 0.6,
+      "bestAnyReplacementCount": 0.6,
+      "oneExampleCountsL6ThroughL11": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+      ]
+    },
+    {
+      "candidateScoreVsStandard": 0.7,
+      "publicChallengerScoreVsNew": 0.05,
+      "minimumUpperSlotsForBothPointTargets": null,
+      "bestProjectedScoreAtMinimum": null,
+      "bestAnyReplacementCount": 0.6496031746031746,
+      "oneExampleCountsL6ThroughL11": null
+    }
+  ],
+  "illustrativeGradedRoute": {
+    "candidateMeanScoresByTierL6ToL11": [
+      0.5,
+      0.7,
+      0.85,
+      0.9,
+      0.95,
+      0.98
+    ],
+    "projectedMainScoreIfLowerSixSweep": 0.5933333333333334,
+    "notAnAcceptanceChange": true
+  },
+  "untested": "A substantially different lineup, different outcomes on the formal schedule, or replacements below L6 could change these estimates. Ability, calibration, style, awareness and one-trick acceptance require direct evidence.",
+  "holdoutUsed": false,
+  "formalRosterChanges": 0
+}

@@ -4,6 +4,7 @@
 
 ## 当前审查入口
 
+- [冻结阶梯的存量重排与替换规模](phase-B-roster-feasibility.md)和[聚合](../data/phase-b/roster-feasibility.json)来自评测提交 `c201790`。
 - [B 阶段报告：当前冻结阶梯未通过](phase-B.md)和[收束聚合](../data/phase-b/phase-b-review.json)按评测提交 `ab386ec` 导入。含验收状态、范围下界及 L6 更正。
 
 ## 11-20 CA 冻结裁定后的结果
