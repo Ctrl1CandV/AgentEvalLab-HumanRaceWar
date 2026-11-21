@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "stage": "r15 development evidence",
+  "newDevGames": 800,
+  "reusedDevGames": 480,
+  "reuseIndependentlyCrossChecked": true,
+  "shortChecksPassed": 2,
+  "roles": [
+    {
+      "registeredStyle": "economic",
+      "independentProbeScore": {
+        "point": 0.5125,
+        "interval95": [
+          0.42083333333333334,
+          0.6041666666666666
+        ]
+      },
+      "gainVsOriginalReference": {
+        "point": -0.020833333333333332,
+        "interval95": [
+          -0.1,
+          0.05
+        ]
+      },
+      "gainVsPreviousSameStyleCandidate": {
+        "point": -0.04583333333333333,
+        "interval95": [
+          -0.07916666666666666,
+          -0.016666666666666666
+        ]
+      },
+      "authorTest": {
+        "registeredStyle": "economic",
+        "ownBaselineWdl": [
+          39,
+          0,
+          41
+        ],
+        "ownBaselineInterval95": [
+          0.375,
+          0.6
+        ],
+        "commonOpponentGain": [
+          -0.001,
+          -0.0083,
+          0.0062
+        ],
+        "validatedMechanism": true,
+        "mechanismDifferenceProbe": 0.253,
+        "mechanismDifferenceFinal": 0.342,
+        "sharedProbeSamples": 199
+      },
+      "replicationNominated": false
+    },
+    {
+      "registeredStyle": "control",
+      "independentProbeScore": {
+        "point": 0.175,
+        "interval95": [
+          0.10416666666666667,
+          0.25833333333333336
+        ]
+      },
+      "gainVsOriginalReference": {
+        "point": -0.29583333333333334,
+        "interval95": [
+          -0.3958333333333333,
+          -0.2
+        ]
+      },
+      "gainVsPreviousSameStyleCandidate": {
+        "point": -0.3625,
+        "interval95": [
+          -0.4708333333333333,
+          -0.26666666666666666
+        ]
+      },
+      "authorTest": {
+        "registeredStyle": "control",
+        "ownBaselineWdl": [
+          9,
+          0,
+          71
+        ],
+        "commonOpponentGainPoint": -0.101,
+        "validatedMechanism": false,
+        "mechanismDifferenceProbe": 0.058,
+        "finalAgainstPublicM": [
+          67,
+          0,
+          13
+        ],
+        "reportedFailure": "Retreat activated for most of the game, surrendering space."
+      },
+      "replicationNominated": false
+    }
+  ],
+  "secondDevNominationCount": 0,
+  "formalRosterChanges": 0,
+  "holdoutUsed": false,
+  "authorReported": {
+    "developmentAndSelfTestGames": 4880,
+    "finalGames": 3040,
+    "shortChecksPassed": 2,
+    "actualTokens": null,
+    "calendarMinutesApprox": 34,
+    "elapsedStartLocal": "05:10",
+    "elapsedEndLocal": "05:44",
+    "timezone": "Asia/Shanghai",
+    "sameConversationAsR14": true,
+    "noIdleOrResumeReported": true,
+    "turnCpuMaxMs": 16.6,
+    "faults": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "frameworkRetries": 0
+  },
+  "usage": {
+    "newScoredGames": 800,
+    "newReplaysVerified": 800,
+    "newIngestVerificationReused": 0,
+    "scoringWallSeconds": 139.63887855800021,
+    "infraErrorAttempts": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "scoringCompiles": 7,
+    "scoringCacheHits": 0,
+    "recordedBotStarts": 1600,
+    "botCpuNs": 263356187600,
+    "harnessCpuNs": 400082076400,
+    "endingCounts": {
+      "base_destroyed": 140,
+      "turn_limit_score": 658,
+      "turn_limit_deposit": 2
+    },
+    "replayAuditCpuNs": 176112063000,
+    "replayAuditWallNs": 30116676280
+  },
+  "secondDevGames": 0
+}

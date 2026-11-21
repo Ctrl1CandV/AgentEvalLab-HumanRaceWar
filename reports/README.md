@@ -4,6 +4,7 @@
 
 ## 11-20 CA 冻结裁定后的结果
 
+- [r15 候选强度筛查](phase-B-claude-r15-strength.md)及[聚合](../data/phase-b/claude-r15-strength.json)来自评测提交 `acba1ec`，800 局新对局和 480 局参考对照，两份均未获续测资格。
 - [r14 候选强度筛查](phase-B-claude-r14-strength.md)及[聚合](../data/phase-b/claude-r14-strength.json)来自评测提交 `4c008c2`，首段 1,280 局核验，两份均无续测资格。
 - [第 7 条防“一招鲜”基线](phase-B-one-trick-baseline.md)及[聚合](../data/phase-b/one-trick-baseline.json)来自评测提交 `574c996`，6,240 局中 60 项判定有 3 项超出门槛。
 - [第 5 条知情对比](phase-B-ladder-awareness.md)及[聚合](../data/phase-b/ladder-awareness.json)来自评测提交 `65b602f`，两组各 364 局核验，主分差门槛通过。
