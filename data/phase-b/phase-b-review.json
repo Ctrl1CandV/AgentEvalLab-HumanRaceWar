@@ -1,5 +1,5 @@
 {
-  "decision": "Current frozen B ladder fails acceptance; refer to CA for negative closure.",
+  "decision": "CA accepted closure of the frozen B ladder as not passed.",
   "evidenceThroughAuthorRound": "r18",
   "gates": {
     "1-4": "pass",
@@ -72,7 +72,7 @@
     "verifiedTwoRetainedMatchupsIndividually": true,
     "onePerfectReplacementSufficientOnFixedL6Schedule": false
   },
-  "round19Disposition": "Optional addendum if already in progress. Otherwise defer. Outside current frozen roster ruling.",
+  "round19Disposition": "Defer if unstarted. Archive only if previously started.",
   "reopeningBasis": "A roster-level development proposal with feasible weighted reduction for 6 and coverage of all three failed panels for 7, subject to CA and user decision.",
   "newGamesForThisReport": 0,
   "finalHoldoutUsed": false,
@@ -97,5 +97,24 @@
       "path": "data/phase-b/claude-r18-strength.json",
       "sha256": "80689ab43b053071207b3274a38d48e5782ea2993683efe0717f8518e3ef2834"
     }
+  },
+  "caClosure": {
+    "review": "inbox/2026-11-21-phase-b-closure-review.md",
+    "newGames": 0,
+    "stageCStarted": false,
+    "originalGatesRetained": true,
+    "futureOneTrickRule": {
+      "mBalancedMinimumTierDistance": 4,
+      "zMinimumTier": 6,
+      "maximumScore": 0.1
+    },
+    "existingPanelsAboveLimitUnderFutureScope": [
+      {
+        "publicBot": "Z-harass",
+        "tier": 8
+      }
+    ],
+    "finalHoldoutUsed": false,
+    "calibrationUsedForClosure": false
   }
 }

@@ -2,11 +2,13 @@
 
 更新：2026-11-21。CA 已接受 r12 与冻结材料，并冻结 12 级名单。B 尚未验收，C 未启动；本地提交，推送由用户负责。
 
-## 当前决定：冻结阶梯未通过，交 CA 收束审查
+## 当前冻结版结案
 
-[阶段报告](reports/phase-B.md)和[收束聚合](data/phase-b/phase-b-review.json)来自评测提交 `ab386ec`。第 1–5 条通过，第 6、7 条未通过，最终 holdout 待前项通过。r19 仅作可选补充，后续作者轮次暂停排期。L6 人数和旧下界的勘误见阶段报告。
+[CA 收束审查](inbox/2026-11-21-phase-b-closure-review.md)确认本版 B 未通过。[阶段报告](reports/phase-B.md)保留第 1–8 条原判。C 未启动，calibration 和最终 holdout 继续封存，r19 未启动则暂缓，已启动则按登记存档。
 
-[存量重排与替换规模](reports/phase-B-roster-feasibility.md)按评测提交 `c201790` 导入。已核算 26 名原成员的重排下界并补齐 1,520 局开发对阵，31 份库存仍无法组成有过线证据的上半梯。
+[天花板实验](inbox/2026-11-21-ceiling-experiment.md)作为独立实验启动，评测仅使用 dev 图。新版 DESIGN 采用 M-balanced 的相对级距口径。
+
+[存量重排与替换规模](reports/phase-B-roster-feasibility.md)留作已核验的收束证据。
 
 ## 冻结版本的证据记录
 - [低段重排补校准](reports/phase-B-claude-r13-repair.md)及[聚合](data/phase-b/claude-r13-repair.json)按评测提交 `233be2b` 原字节导入。新增 768 局全量核验，复用 7,440 局；第 1–4 条均通过。L2→L3 点估计为 56.96 Elo，95% 区间 29.80–88.45，与允许范围相交。通过名单已在评测侧封存。
