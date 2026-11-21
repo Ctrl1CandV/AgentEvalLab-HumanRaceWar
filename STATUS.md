@@ -9,7 +9,8 @@
 - [第 7 条防“一招鲜”基线](reports/phase-B-one-trick-baseline.md)及[聚合](data/phase-b/one-trick-baseline.json)按评测提交 `574c996` 原字节导入。总计 6,240 局，复用 192 局、6,048 局新回放全量核验。60 项中 3 项超过 0.10，第 7 条未通过。
 - [r14 候选强度筛查](reports/phase-B-claude-r14-strength.md)及[聚合](data/phase-b/claude-r14-strength.json)按评测提交 `4c008c2` 原字节导入。两份均过标准短检查，首段 1,280 局全核验，无续测候选。作者墙钟超出既有条件，行为风格未拉开，本轮材料用于强度判断。
 - [r15 候选强度筛查](reports/phase-B-claude-r15-strength.md)及[聚合](data/phase-b/claude-r15-strength.json)按评测提交 `acba1ec` 原字节导入。800 局新对局全部核验，480 局参考对照逐槽复核。两份均过短检查，合计得分均低于 r14 同风格候选，未进入续测。
-- [独立 GPT 候选强度筛查](reports/phase-B-gpt-ladder-strength.md)及[聚合](data/phase-b/gpt-ladder-strength.json)按评测提交 `becf7db` 原字节导入。两份均过短检查，800 局新对局全部核验，复用 480 局旧参考对照。两份均未入选续测或正式名单，第 6、7 条仍待加强，最终 holdout 尚未启动。
+- [独立 GPT 候选强度筛查及控制备选补测](reports/phase-B-gpt-ladder-strength.md)和[聚合](data/phase-b/gpt-ladder-strength.json)按评测提交 `13a2cbf` 原字节导入。综合会话主动跟踪 GPT 子进程到交付停测后接收。原两份和控制备选共 1,200 局新对局全部核验，复用同一批 480 局旧参考对照，三份均未入选续测。
+- 第 6、7 条仍待更强候选，最终 holdout 尚未启动。
 - [r13 校准报告](reports/phase-B-claude-r13-calibration.md)及[聚合](data/phase-b/claude-r13-calibration.json)按评测提交 `e56efc5` 原字节导入。筛查 768 局、补校准 624 局均已核验。第 2–4 条通过，第 1 条仅 L2→L3 级距未过，点估计 261.36 Elo，95% 区间 222.25–310.82，整体高于 200。当轮止于 1,392 局，原结果作为历史记录保留。
 - [r13 校准预登记](reports/phase-B-claude-r13-prereg.md)及[预算](data/phase-b/claude-r13-prereg.json)按评测提交 `8b234a7` 原字节导入。预登记与模拟检查完成后已按用户的交付停测确认执行。筛查每份 192 局，合格的一对补 624 局，合计封顶 1,392 局。
 - [CA 阶梯冻结审查](inbox/2026-11-20-phase-b-ladder-freeze-review.md)为当前任务依据。DESIGN 已按裁定落实 L0、L1 诊断边界、L2 起的正式强度门槛、M 锚点、K 风格披露和防“一招鲜”门槛。

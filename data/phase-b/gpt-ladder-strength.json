@@ -126,5 +126,58 @@
   "secondDevNominationCount": 0,
   "formalRosterChanges": 0,
   "holdoutUsed": false,
-  "secondDevGames": 0
+  "secondDevGames": 0,
+  "frozenControlSupplement": {
+    "newDevGames": 400,
+    "reusedDevGames": 480,
+    "independentProbeScore": {
+      "point": 0.37916666666666665,
+      "interval95": [
+        0.3,
+        0.4583333333333333
+      ]
+    },
+    "pairedGainVsFirstControlCandidate": {
+      "point": -0.04583333333333333,
+      "interval95": [
+        -0.10833333333333334,
+        0.025
+      ]
+    },
+    "authorHeadToHeadWdlAgainstFirst": [
+      15,
+      0,
+      9
+    ],
+    "sourceTreeMatchedEarlierFrozenDigest": true,
+    "authorNewSelfTestGames": 0,
+    "authorNewCompiles": 0,
+    "otherArchivedAlternativesChecked": 7,
+    "archivedAlternativesAboveStyleReferenceDevPoint": 0,
+    "secondDevNominationCount": 0,
+    "formalRosterChanges": 0,
+    "holdoutUsed": false,
+    "usage": {
+      "newScoredGames": 400,
+      "newReplaysVerified": 400,
+      "newIngestVerificationReused": 0,
+      "scoringWallSeconds": 92.41768963799768,
+      "infraErrorAttempts": 0,
+      "botFaultGames": 0,
+      "timeouts": 0,
+      "warnings": 0,
+      "scoringCompiles": 6,
+      "scoringCacheHits": 0,
+      "recordedBotStarts": 800,
+      "botCpuNs": 133369067400,
+      "harnessCpuNs": 257221772900,
+      "endingCounts": {
+        "base_destroyed": 60,
+        "turn_limit_score": 338,
+        "turn_limit_deposit": 2
+      },
+      "replayAuditCpuNs": 104934996900,
+      "replayAuditWallNs": 18324178907
+    }
+  }
 }
