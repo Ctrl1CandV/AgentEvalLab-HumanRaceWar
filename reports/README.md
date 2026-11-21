@@ -4,6 +4,7 @@
 
 ## 11-20 CA 冻结裁定后的结果
 
+- [r18 候选筛查与同赛程复盘](phase-B-claude-r18-strength.md)及[聚合](../data/phase-b/claude-r18-strength.json)来自评测提交 `048655c`，400 局新 dev 全核验。另复算十份候选的已有共同配对。
 - [r17 候选强度筛查](phase-B-claude-r17-strength.md)及[聚合](../data/phase-b/claude-r17-strength.json)来自评测提交 `d062bf5`，400 局新 dev 全核验，未安排续测。
 - [r16 候选强度筛查](phase-B-claude-r16-strength.md)及[聚合](../data/phase-b/claude-r16-strength.json)来自评测提交 `d3831f7`，400 局新 dev 全核验，未安排续测。
 - [候选败局复核与 r16 准备](phase-B-strength-loss-audit.md)及[聚合](../data/phase-b/strength-loss-audit.json)来自评测提交 `bbd2b4c`，复核 1,680 局，r16 dev 已预登记。

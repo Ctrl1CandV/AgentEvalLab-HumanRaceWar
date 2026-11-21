@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "registeredStyle": "economic",
+  "candidate": "s18-strong",
+  "styleAssignmentBasis": "Uses the s14-econ execution family described upon delivery. No behavioral style certification.",
+  "deliveryByteVerified": true,
+  "standardFiveTurnCheckPassed": true,
+  "combinedIndependentProbeScore": {
+    "point": 0.4625,
+    "interval95": [
+      0.37083333333333335,
+      0.5541666666666667
+    ]
+  },
+  "pairedGainAgainstOriginalFrozenEconomicReference": {
+    "point": -0.07083333333333333,
+    "interval95": [
+      -0.16666666666666666,
+      0.020833333333333332
+    ]
+  },
+  "pairedComparisonAgainstOwnR14Base": {
+    "point": -0.09583333333333334,
+    "interval95": [
+      -0.175,
+      -0.016666666666666666
+    ],
+    "improvedSlots": 21,
+    "worsenedSlots": 44,
+    "unchangedSlots": 175
+  },
+  "replicationNominated": false,
+  "upperAnchorExploratorySignal": false,
+  "newDevUsage": {
+    "newScoredGames": 400,
+    "newReplaysVerified": 400,
+    "newIngestVerificationReused": 0,
+    "scoringWallSeconds": 81.99538455000584,
+    "infraErrorAttempts": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "scoringCompiles": 6,
+    "scoringCacheHits": 0,
+    "recordedBotStarts": 800,
+    "botCpuNs": 135728853200,
+    "harnessCpuNs": 208453169400,
+    "endingCounts": {
+      "base_destroyed": 31,
+      "turn_limit_score": 365,
+      "turn_limit_deposit": 4
+    },
+    "replayAuditCpuNs": 91106253600,
+    "replayAuditWallNs": 15851430912
+  },
+  "reusedMatchedReferenceGames": 480,
+  "authorSelfReport": {
+    "source": "Author self-report relayed by the user. Strategy hypotheses and synthetic tests are self-reported.",
+    "totalGames": 384,
+    "pilotGamesByStage": [
+      192,
+      192
+    ],
+    "finalGames": 0,
+    "standardChecksIncludingSynthetic": 5,
+    "hoursElapsedApprox": 0.5333333333333333,
+    "sameConversationSinceR14": true,
+    "enabledWinDrawLossByPilot": [
+      [
+        27,
+        0,
+        69
+      ],
+      [
+        36,
+        2,
+        58
+      ]
+    ],
+    "disabledWinDrawLossByPilot": [
+      [
+        54,
+        0,
+        42
+      ],
+      [
+        52,
+        0,
+        44
+      ]
+    ],
+    "pairedWinScoreDeltaByPilot": [
+      {
+        "point": -0.281,
+        "interval95": [
+          -0.417,
+          -0.146
+        ]
+      },
+      {
+        "point": -0.156,
+        "interval95": [
+          -0.302,
+          -0.01
+        ]
+      }
+    ],
+    "ownBaseDestroyedEnabledDisabledByPilot": [
+      [
+        16,
+        8
+      ],
+      [
+        12,
+        9
+      ]
+    ],
+    "whenLeadingOwnArmyOnEnemyHalfApproxEnabledDisabled": [
+      0.12,
+      0.44
+    ],
+    "whenTrailingForwardPressureChangeRange": [
+      -0.09,
+      -0.06
+    ],
+    "revision": "Removed the contest-tower plan following the preregistered revision rule after more own-base losses.",
+    "revisionTimeCorrectedInNotes": true,
+    "finalStoppedFollowingPilotRule": true,
+    "maxTurnCpuMs": 3.6,
+    "faultsReported": 0,
+    "timeoutsReported": 0,
+    "warningsReported": 0
+  },
+  "matchedHistoryCrossCheck": {
+    "deliveredCandidates": 10,
+    "priorRecordedProbeGames": 2400,
+    "newGamesForThisCrossCheck": 0,
+    "identicalMapSeedSeatAndOpponentDigestsChecked": true,
+    "r14EconomicFamilyPairedGains": {
+      "s15-econ": {
+        "point": -0.04583333333333333,
+        "interval95": [
+          -0.07916666666666666,
+          -0.016666666666666666
+        ],
+        "improvedSlots": 1,
+        "worsenedSlots": 12,
+        "unchangedSlots": 227
+      },
+      "s16-strong": {
+        "point": -0.0125,
+        "interval95": [
+          -0.0375,
+          0.008333333333333333
+        ],
+        "improvedSlots": 1,
+        "worsenedSlots": 4,
+        "unchangedSlots": 235
+      },
+      "s17-strong": {
+        "point": -0.004166666666666667,
+        "interval95": [
+          -0.0125,
+          0.0
+        ],
+        "improvedSlots": 0,
+        "worsenedSlots": 1,
+        "unchangedSlots": 239
+      },
+      "s18-strong": {
+        "point": -0.09583333333333334,
+        "interval95": [
+          -0.175,
+          -0.016666666666666666
+        ],
+        "improvedSlots": 21,
+        "worsenedSlots": 44,
+        "unchangedSlots": 175
+      }
+    },
+    "anyFixedCandidateReachedUpperAnchorPlanningSignal": false,
+    "notFormalAcceptanceEvidence": true
+  },
+  "formalRosterChanges": 0,
+  "holdoutUsed": false
+}

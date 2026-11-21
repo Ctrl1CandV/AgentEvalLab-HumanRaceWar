@@ -13,6 +13,7 @@
 - [候选败局复核与 r16 准备](reports/phase-B-strength-loss-audit.md)和[聚合](data/phase-b/strength-loss-audit.json)按评测提交 `bbd2b4c` 原字节导入。复核 1,680 局，塔分决定了大多数败局。r16 作者任务和 dev 预登记已备。第 6、7 条待验证，最终 holdout 尚未启动。
 - [r16 候选强度筛查](reports/phase-B-claude-r16-strength.md)及[聚合](data/phase-b/claude-r16-strength.json)按评测提交 `d3831f7` 原字节导入。400 局新 dev 全核验，单份经济候选未达到续测条件。
 - [r17 候选强度筛查](reports/phase-B-claude-r17-strength.md)及[聚合](data/phase-b/claude-r17-strength.json)按评测提交 `d062bf5` 原字节导入。作者按先导结果停止终测，独立 400 局 dev 已核验，候选未达到续测条件。
+- [r18 候选筛查与同赛程复盘](reports/phase-B-claude-r18-strength.md)及[聚合](data/phase-b/claude-r18-strength.json)按评测提交 `048655c` 原字节导入。400 局新 dev 全核验，未达到续测条件。十份候选使用同赛程复盘，没有一份达到上半梯强锚筛查目标。
 - [r13 校准报告](reports/phase-B-claude-r13-calibration.md)及[聚合](data/phase-b/claude-r13-calibration.json)按评测提交 `e56efc5` 原字节导入。筛查 768 局、补校准 624 局均已核验。第 2–4 条通过，第 1 条仅 L2→L3 级距未过，点估计 261.36 Elo，95% 区间 222.25–310.82，整体高于 200。当轮止于 1,392 局，原结果作为历史记录保留。
 - [r13 校准预登记](reports/phase-B-claude-r13-prereg.md)及[预算](data/phase-b/claude-r13-prereg.json)按评测提交 `8b234a7` 原字节导入。预登记与模拟检查完成后已按用户的交付停测确认执行。筛查每份 192 局，合格的一对补 624 局，合计封顶 1,392 局。
 - [CA 阶梯冻结审查](inbox/2026-11-20-phase-b-ladder-freeze-review.md)为当前任务依据。DESIGN 已按裁定落实 L0、L1 诊断边界、L2 起的正式强度门槛、M 锚点、K 风格披露和防“一招鲜”门槛。
