@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "scope": "independent public-only candidate authors",
+  "panels": [
+    {
+      "registeredStyle": "economic",
+      "independentProbeScore": {
+        "point": 0.1875,
+        "interval95": [
+          0.13333333333333333,
+          0.24583333333333332
+        ]
+      },
+      "pairedGainVsStrongStyleReference": {
+        "point": -0.3458333333333333,
+        "interval95": [
+          -0.44583333333333336,
+          -0.24583333333333332
+        ]
+      },
+      "pairedGainVsR14Candidate": {
+        "point": -0.37083333333333335,
+        "interval95": [
+          -0.4583333333333333,
+          -0.2791666666666667
+        ]
+      },
+      "authorSelfTest": {
+        "publicWdl": [
+          79,
+          0,
+          1
+        ],
+        "otherFinalWdl": [
+          [
+            6,
+            0,
+            2
+          ],
+          [
+            6,
+            0,
+            2
+          ]
+        ],
+        "completedGames": 392,
+        "wallSeconds": 1357,
+        "selfTestProtocolFaults": 0,
+        "reportedShortChecksPassed": 1
+      },
+      "replicationNominated": false
+    },
+    {
+      "registeredStyle": "control",
+      "independentProbeScore": {
+        "point": 0.425,
+        "interval95": [
+          0.3333333333333333,
+          0.5166666666666667
+        ]
+      },
+      "pairedGainVsStrongStyleReference": {
+        "point": -0.04583333333333333,
+        "interval95": [
+          -0.14583333333333334,
+          0.05416666666666667
+        ]
+      },
+      "pairedGainVsR14Candidate": {
+        "point": -0.1125,
+        "interval95": [
+          -0.2125,
+          -0.0125
+        ]
+      },
+      "authorSelfTest": {
+        "publicWdl": [
+          236,
+          0,
+          4
+        ],
+        "otherFinalWdl": [
+          [
+            16,
+            0,
+            8
+          ],
+          [
+            9,
+            0,
+            15
+          ]
+        ],
+        "startedGames": 1032,
+        "compileFailureSlotsWithoutGameStart": 112,
+        "wallSecondsApprox": 1931,
+        "reportedShortChecksPassed": 1
+      },
+      "replicationNominated": false
+    }
+  ],
+  "newDevGames": 800,
+  "reusedDevGames": 480,
+  "stageOneUsage": {
+    "newScoredGames": 800,
+    "newReplaysVerified": 800,
+    "newIngestVerificationReused": 0,
+    "scoringWallSeconds": 163.4562857009987,
+    "infraErrorAttempts": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "scoringCompiles": 7,
+    "scoringCacheHits": 0,
+    "recordedBotStarts": 1600,
+    "botCpuNs": 297315912000,
+    "harnessCpuNs": 525772654700,
+    "endingCounts": {
+      "base_destroyed": 159,
+      "turn_limit_score": 641
+    },
+    "replayAuditCpuNs": 202565477500,
+    "replayAuditWallNs": 34520119795
+  },
+  "shortChecksPassed": 2,
+  "secondDevNominationCount": 0,
+  "formalRosterChanges": 0,
+  "holdoutUsed": false,
+  "secondDevGames": 0
+}
