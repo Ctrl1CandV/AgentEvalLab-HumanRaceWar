@@ -1,6 +1,6 @@
 # 状态
 
-更新：2026-11-20。CA 已接受 r12 与冻结材料，并冻结 12 级名单。B 尚未验收，C 未启动；本地提交，推送由用户负责。
+更新：2026-11-21。CA 已接受 r12 与冻结材料，并冻结 12 级名单。B 尚未验收，C 未启动；本地提交，推送由用户负责。
 
 ## 冻结裁定与下一步
 - [低段重排补校准](reports/phase-B-claude-r13-repair.md)及[聚合](data/phase-b/claude-r13-repair.json)按评测提交 `233be2b` 原字节导入。新增 768 局全量核验，复用 7,440 局；第 1–4 条均通过。L2→L3 点估计为 56.96 Elo，95% 区间 29.80–88.45，与允许范围相交。通过名单已在评测侧封存。
@@ -10,7 +10,7 @@
 - [r14 候选强度筛查](reports/phase-B-claude-r14-strength.md)及[聚合](data/phase-b/claude-r14-strength.json)按评测提交 `4c008c2` 原字节导入。两份均过标准短检查，首段 1,280 局全核验，无续测候选。作者墙钟超出既有条件，行为风格未拉开，本轮材料用于强度判断。
 - [r15 候选强度筛查](reports/phase-B-claude-r15-strength.md)及[聚合](data/phase-b/claude-r15-strength.json)按评测提交 `acba1ec` 原字节导入。800 局新对局全部核验，480 局参考对照逐槽复核。两份均过短检查，合计得分均低于 r14 同风格候选，未进入续测。
 - [独立 GPT 候选强度筛查及控制备选补测](reports/phase-B-gpt-ladder-strength.md)和[聚合](data/phase-b/gpt-ladder-strength.json)按评测提交 `13a2cbf` 原字节导入。综合会话主动跟踪 GPT 子进程到交付停测后接收。原两份和控制备选共 1,200 局新对局全部核验，复用同一批 480 局旧参考对照，三份均未入选续测。
-- 第 6、7 条仍待更强候选，最终 holdout 尚未启动。
+- [候选败局复核与 r16 准备](reports/phase-B-strength-loss-audit.md)和[聚合](data/phase-b/strength-loss-audit.json)按评测提交 `bbd2b4c` 原字节导入。复核 1,680 局，塔分决定了大多数败局。r16 作者任务和 dev 预登记已备。第 6、7 条待验证，最终 holdout 尚未启动。
 - [r13 校准报告](reports/phase-B-claude-r13-calibration.md)及[聚合](data/phase-b/claude-r13-calibration.json)按评测提交 `e56efc5` 原字节导入。筛查 768 局、补校准 624 局均已核验。第 2–4 条通过，第 1 条仅 L2→L3 级距未过，点估计 261.36 Elo，95% 区间 222.25–310.82，整体高于 200。当轮止于 1,392 局，原结果作为历史记录保留。
 - [r13 校准预登记](reports/phase-B-claude-r13-prereg.md)及[预算](data/phase-b/claude-r13-prereg.json)按评测提交 `8b234a7` 原字节导入。预登记与模拟检查完成后已按用户的交付停测确认执行。筛查每份 192 局，合格的一对补 624 局，合计封顶 1,392 局。
 - [CA 阶梯冻结审查](inbox/2026-11-20-phase-b-ladder-freeze-review.md)为当前任务依据。DESIGN 已按裁定落实 L0、L1 诊断边界、L2 起的正式强度门槛、M 锚点、K 风格披露和防“一招鲜”门槛。

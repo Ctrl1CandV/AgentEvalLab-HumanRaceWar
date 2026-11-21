@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "scope": "Pooled retrospective terminal results from seven candidates in the r14, r15 and independent GPT matched dev screens, including the frozen GPT control alternative.",
+  "evaluationSet": "Prior verified development matches only",
+  "uniqueCandidates": 7,
+  "reusedScoredGames": 1680,
+  "newScoredGames": 0,
+  "winDrawLoss": [
+    666,
+    0,
+    1014
+  ],
+  "lossesByEnding": {
+    "base_destroyed": 123,
+    "turn_limit_score": 889,
+    "turn_limit_deposit": 2
+  },
+  "scoreLossesWithAtLeastAsMuchDeposit": 171,
+  "candidateFaultGames": 0,
+  "limitations": [
+    "Terminal outcomes identify the deciding rule, without establishing the causal mechanism.",
+    "Repeated maps and shared comparators make the pooled counts descriptive, with no independent-game confidence interval.",
+    "The candidates were drawn from previous screens and are not representative of all development strategies."
+  ],
+  "existingGateReview": {
+    "theoreticalConflictDemonstrated": false,
+    "strictCommonBradleyTerryExpectationIsAnAdditionalAssumption": true,
+    "fixedResultBounds": {
+      "standardBudgetFourOptimallyReplacedPositionsMinimumRounded": 0.752,
+      "standardBudgetMinimumTheoreticalReplacements": 8,
+      "mBalancedL6OneOfThreeReplacedMinimumRounded": 0.1146
+    },
+    "formalGatesAndRosterChanged": false
+  },
+  "nextAuthorRound": {
+    "round": "r16",
+    "taskWrittenAndChecksummed": true,
+    "primaryQuestion": "Does a paired mechanism ablation show that more productive tower building or tower contests convert into better match score?",
+    "internalDevScreenPreregistered": true,
+    "authorDeliveryReceived": false
+  },
+  "holdoutUsed": false
+}

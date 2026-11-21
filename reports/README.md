@@ -4,6 +4,7 @@
 
 ## 11-20 CA 冻结裁定后的结果
 
+- [候选败局复核与 r16 准备](phase-B-strength-loss-audit.md)及[聚合](../data/phase-b/strength-loss-audit.json)来自评测提交 `bbd2b4c`，复核 1,680 局，r16 dev 已预登记。
 - [独立 GPT 候选强度筛查](phase-B-gpt-ladder-strength.md)及[聚合](../data/phase-b/gpt-ladder-strength.json)来自评测提交 `13a2cbf`，原两份和控制备选共 1,200 局全核验，均未获续测资格。
 - [r15 候选强度筛查](phase-B-claude-r15-strength.md)及[聚合](../data/phase-b/claude-r15-strength.json)来自评测提交 `acba1ec`，800 局新对局和 480 局参考对照，两份均未获续测资格。
 - [r14 候选强度筛查](phase-B-claude-r14-strength.md)及[聚合](../data/phase-b/claude-r14-strength.json)来自评测提交 `4c008c2`，首段 1,280 局核验，两份均无续测资格。
