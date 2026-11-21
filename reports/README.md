@@ -4,6 +4,7 @@
 
 ## 当前审查入口
 
+- [天花板实验预登记](phase-B-ceiling-preparation.md)及[聚合](../data/phase-b/ceiling-preparation.json)按评测提交 `fcd743e` 导入。
 - [CA 收束审查](../inbox/2026-11-21-phase-b-closure-review.md)确认冻结版 B 未通过。[天花板实验](../inbox/2026-11-21-ceiling-experiment.md)记录后续实验安排。
 
 - [冻结阶梯的存量重排与替换规模](phase-B-roster-feasibility.md)和[聚合](../data/phase-b/roster-feasibility.json)来自评测提交 `c201790`。

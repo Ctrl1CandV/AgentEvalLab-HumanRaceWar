@@ -6,7 +6,7 @@
 
 [CA 收束审查](inbox/2026-11-21-phase-b-closure-review.md)确认本版 B 未通过。[阶段报告](reports/phase-B.md)保留第 1–8 条原判。C 未启动，calibration 和最终 holdout 继续封存，r19 未启动则暂缓，已启动则按登记存档。
 
-[天花板实验](inbox/2026-11-21-ceiling-experiment.md)作为独立实验启动，评测仅使用 dev 图。新版 DESIGN 采用 M-balanced 的相对级距口径。
+[天花板实验已预登记](reports/phase-B-ceiling-preparation.md)，来自评测提交 `fcd743e`。Fable 已获启动提示，独立 astra 会话已启动。经验包和四份参照分组已核对，dev 赛程已通过零对局检查。新版 DESIGN 采用 M-balanced 的相对级距口径。
 
 [存量重排与替换规模](reports/phase-B-roster-feasibility.md)留作已核验的收束证据。
 
