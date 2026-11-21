@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "scope": "r14 development evidence",
+  "newDevGames": 1280,
+  "shortChecksPassed": 2,
+  "candidatePanels": [
+    {
+      "registeredStyle": "control",
+      "combinedIndependentProbeScore": {
+        "point": 0.5375,
+        "interval95": [
+          0.44166666666666665,
+          0.6333333333333333
+        ]
+      },
+      "matchedCombinedGain": {
+        "point": 0.06666666666666667,
+        "interval95": [
+          0.004166666666666667,
+          0.13333333333333333
+        ]
+      },
+      "authorVsOwnStrongest": {
+        "vsOwnStrongestWdl": [
+          90,
+          0,
+          70
+        ],
+        "vsOwnStrongestInterval95": [
+          0.488,
+          0.637
+        ],
+        "matchedGain": [
+          -0.0018,
+          -0.0205,
+          0.0188
+        ],
+        "withinOwnAuthorCriterion": false
+      },
+      "replicateOnReservedDevHalf": false
+    },
+    {
+      "registeredStyle": "economic",
+      "combinedIndependentProbeScore": {
+        "point": 0.5583333333333333,
+        "interval95": [
+          0.4625,
+          0.65
+        ]
+      },
+      "matchedCombinedGain": {
+        "point": 0.025,
+        "interval95": [
+          -0.04583333333333333,
+          0.09583333333333334
+        ]
+      },
+      "authorVsOwnStrongest": {
+        "vsOwnStrongestWdl": [
+          113,
+          0,
+          47
+        ],
+        "vsOwnStrongestInterval95": [
+          0.619,
+          0.788
+        ],
+        "matchedGain": [
+          0.0384,
+          0.0161,
+          0.0616
+        ],
+        "withinOwnAuthorCriterion": true
+      },
+      "replicateOnReservedDevHalf": false
+    }
+  ],
+  "authorSelfReport": {
+    "model": "Claude Opus 5.5",
+    "actualTokens": null,
+    "developmentAndSelfTestGames": 23520,
+    "shortChecksPassed": 2,
+    "elapsedMinutesApprox": 827,
+    "activeMinutesApprox": 135,
+    "existingAuthorWallBudgetMinutes": 480,
+    "initialInterruptedTournamentResumed": true,
+    "selfReportedBehavioralStyleSeparation": false,
+    "medianTurnCpuMs": 0.38,
+    "maxTurnCpuMs": 9.8
+  },
+  "evalUsage": {
+    "newScoredGames": 1280,
+    "newReplaysVerified": 1280,
+    "newIngestVerificationReused": 0,
+    "scoringWallSeconds": 229.09937474100025,
+    "infraErrorAttempts": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "warnings": 3,
+    "scoringCompiles": 7,
+    "scoringCacheHits": 0,
+    "recordedBotStarts": 2560,
+    "botCpuNs": 469001554300,
+    "harnessCpuNs": 739164451700,
+    "endingCounts": {
+      "base_destroyed": 242,
+      "turn_limit_score": 1037,
+      "turn_limit_deposit": 1
+    },
+    "replayAuditCpuNs": 300265655600,
+    "replayAuditWallNs": 50756196746
+  },
+  "secondDevNominationCount": 0,
+  "formalRosterChanges": 0,
+  "holdoutUsed": false,
+  "authorWallBudgetExceeded": true,
+  "secondDevGames": 0
+}

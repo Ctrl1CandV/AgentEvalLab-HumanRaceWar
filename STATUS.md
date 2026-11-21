@@ -7,7 +7,8 @@
 - [第 6 条标准预算自测](reports/phase-B-standard-budget.md)及[聚合](data/standard-budget.json)按评测提交 `182cb21` 原字节导入。两个阶段各 364 局核验，最终主分 0.9187，超过 0.60。其余成员结果固定时，四个替换位置的理论最低分 0.7520，门槛所需降幅至少相当于 8 个替换位置。
 - [第 5 条知情对比](reports/phase-B-ladder-awareness.md)及[聚合](data/phase-b/ladder-awareness.json)按评测提交 `65b602f` 原字节导入。两组各 364 局全量核验，主分绝对差 0.0109，通过 0.15 的主分差门槛。知情组源码只读副本已核验归档。
 - [第 7 条防“一招鲜”基线](reports/phase-B-one-trick-baseline.md)及[聚合](data/phase-b/one-trick-baseline.json)按评测提交 `574c996` 原字节导入。总计 6,240 局，复用 192 局、6,048 局新回放全量核验。60 项中 3 项超过 0.10，第 7 条未通过。
-- r14 公开作者任务和 dev 筛查已准备，运行窗口已开放。先取候选强度证据，再安排正式加强和第 6、7 条复查。最终 holdout 尚未启动。
+- [r14 候选强度筛查](reports/phase-B-claude-r14-strength.md)及[聚合](data/phase-b/claude-r14-strength.json)按评测提交 `4c008c2` 原字节导入。两份均过标准短检查，首段 1,280 局全核验，无续测候选。作者墙钟超出既有条件，行为风格未拉开，本轮材料用于强度判断。
+- 继续验证更强且有行为区分的候选，再安排正式补校准与第 6、7 条复查。最终 holdout 尚未启动。
 - [r13 校准报告](reports/phase-B-claude-r13-calibration.md)及[聚合](data/phase-b/claude-r13-calibration.json)按评测提交 `e56efc5` 原字节导入。筛查 768 局、补校准 624 局均已核验。第 2–4 条通过，第 1 条仅 L2→L3 级距未过，点估计 261.36 Elo，95% 区间 222.25–310.82，整体高于 200。当轮止于 1,392 局，原结果作为历史记录保留。
 - [r13 校准预登记](reports/phase-B-claude-r13-prereg.md)及[预算](data/phase-b/claude-r13-prereg.json)按评测提交 `8b234a7` 原字节导入。预登记与模拟检查完成后已按用户的交付停测确认执行。筛查每份 192 局，合格的一对补 624 局，合计封顶 1,392 局。
 - [CA 阶梯冻结审查](inbox/2026-11-20-phase-b-ladder-freeze-review.md)为当前任务依据。DESIGN 已按裁定落实 L0、L1 诊断边界、L2 起的正式强度门槛、M 锚点、K 风格披露和防“一招鲜”门槛。
