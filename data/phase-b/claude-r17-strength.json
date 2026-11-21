@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "registeredStyle": "economic",
+  "candidate": "s17-strong",
+  "deliveryByteVerified": true,
+  "standardFiveTurnCheckPassed": true,
+  "combinedIndependentProbeScore": {
+    "point": 0.5541666666666667,
+    "interval95": [
+      0.4583333333333333,
+      0.6458333333333334
+    ]
+  },
+  "pairedGainAgainstOriginalFrozenEconomicReference": {
+    "point": 0.020833333333333332,
+    "interval95": [
+      -0.04583333333333333,
+      0.0875
+    ]
+  },
+  "pairedComparisonAgainstOwnR14Base": {
+    "referenceCombinedScore": 0.5583333333333333,
+    "pairedGain": {
+      "point": -0.004166666666666667,
+      "interval95": [
+        -0.0125,
+        0.0
+      ]
+    }
+  },
+  "pairedComparisonAgainstPriorR16Candidate": {
+    "referenceCombinedScore": 0.5458333333333333,
+    "pairedGain": {
+      "point": 0.008333333333333333,
+      "interval95": [
+        -0.0125,
+        0.03333333333333333
+      ]
+    }
+  },
+  "replicationNominated": false,
+  "upperAnchorExploratorySignal": false,
+  "newDevUsage": {
+    "newScoredGames": 400,
+    "newReplaysVerified": 400,
+    "newIngestVerificationReused": 0,
+    "scoringWallSeconds": 85.46891361700182,
+    "infraErrorAttempts": 0,
+    "botFaultGames": 0,
+    "timeouts": 0,
+    "warnings": 0,
+    "scoringCompiles": 6,
+    "scoringCacheHits": 0,
+    "recordedBotStarts": 800,
+    "botCpuNs": 137045831000,
+    "harnessCpuNs": 218882855300,
+    "endingCounts": {
+      "base_destroyed": 74,
+      "turn_limit_score": 325,
+      "turn_limit_deposit": 1
+    },
+    "replayAuditCpuNs": 94650331500,
+    "replayAuditWallNs": 16459709711
+  },
+  "reusedMatchedReferenceGames": 480,
+  "mapSeedSeatCrossCheckWithR14AndR16": true,
+  "authorSelfReport": {
+    "source": "Author self-report relayed by user on delivery.",
+    "hoursElapsedApprox": 0.26666666666666666,
+    "totalGames": 384,
+    "pilotGamesByStage": [
+      192,
+      192
+    ],
+    "finalGames": 0,
+    "finalSeedsUsed": false,
+    "sameConversationSinceR14": true,
+    "takeoverAndHoldPerGameEnabledDisabled": [
+      [
+        0.69,
+        0.37
+      ],
+      [
+        0.41,
+        0.33
+      ]
+    ],
+    "opponentTowerDemolitionsPerGameEnabledDisabled": [
+      [
+        1.99,
+        2.33
+      ],
+      [
+        2.27,
+        2.25
+      ]
+    ],
+    "ownBaseDestroyedEnabledDisabled": [
+      [
+        9,
+        6
+      ],
+      [
+        7,
+        7
+      ]
+    ],
+    "pairedWinScoreDeltaByPilot": [
+      -0.031,
+      0.0
+    ],
+    "pairedTerminalTowerScoreDeltaByPilot": [
+      -6.0,
+      5.6
+    ],
+    "pairedTerminalTowerScoreDeltaPilot2Interval95": [
+      -1.3,
+      15.3
+    ],
+    "continuedToFinal": false,
+    "stoppedOnPreregisteredPilotCriterion": true,
+    "maxTurnCpuMs": 17,
+    "faultsReported": 0,
+    "timeoutsReported": 0,
+    "warningsReported": 0
+  },
+  "formalRosterChanges": 0,
+  "holdoutUsed": false
+}
