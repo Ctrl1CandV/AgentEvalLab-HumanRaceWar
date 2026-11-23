@@ -1,0 +1,151 @@
+{
+  "rounds": [
+    {
+      "line": "fable",
+      "round": 1,
+      "authorUsageSelfReported": {
+        "batches": 151,
+        "games": 44296,
+        "tuningGames": 40136,
+        "frozenConfirmationGames": 4160,
+        "wallHoursApprox": 8.7,
+        "arenaHours": 2.19,
+        "jobs": 6,
+        "maxTurnCpuMs": 2.26,
+        "tokens": null
+      },
+      "authorReportedDeviations": [
+        "Used managed hrw-arena rather than the handoff coordination flock.",
+        "Short check and confirmation used matching frozen copies within the managed author workspace.",
+        "Reported an extra s18-strong diagnostic not listed in the author preregistration."
+      ],
+      "noCandidates": false,
+      "candidates": {
+        "fable-r1-f1-fort": {
+          "code": "fable-r1-f1-fort",
+          "style": "control-economy; conservative version",
+          "shortCheckPassed": true,
+          "newScoredGames": 3040,
+          "visibleA": 0.525,
+          "visibleB": 0.59375,
+          "heldMean": 0.63515625,
+          "heldInterval95": [
+            0.5671875,
+            0.703125
+          ],
+          "visibilityGap": -0.07578125,
+          "specializationSignal": false,
+          "classification": "fail",
+          "level11Mean": 0.7000000000000001,
+          "publicZooMean": 0.9949999999999999,
+          "usage": {
+            "newScoredGames": 3040,
+            "newReplaysVerified": 3040,
+            "newIngestVerificationReused": 0,
+            "scoringWallSeconds": 465.03656064400093,
+            "infraErrorAttempts": 0,
+            "botFaultGames": 0,
+            "warnings": 7,
+            "timeouts": 0,
+            "botCpuNs": 910886585700,
+            "harnessCpuNs": 1305650644000,
+            "replayAuditWallNs": 90362146509,
+            "replayAuditCpuNs": 530409893300,
+            "scoringCompiles": 27,
+            "scoringCacheHits": 0
+          }
+        },
+        "fable-r1-f1-openfort": {
+          "code": "fable-r1-f1-openfort",
+          "style": "control-economy; open terrain prioritizes army",
+          "shortCheckPassed": true,
+          "newScoredGames": 3040,
+          "visibleA": 0.54375,
+          "visibleB": 0.596875,
+          "heldMean": 0.65078125,
+          "heldInterval95": [
+            0.58203125,
+            0.71875
+          ],
+          "visibilityGap": -0.08046875,
+          "specializationSignal": false,
+          "classification": "partial",
+          "level11Mean": 0.7229166666666668,
+          "publicZooMean": 0.9949999999999999,
+          "usage": {
+            "newScoredGames": 3040,
+            "newReplaysVerified": 3040,
+            "newIngestVerificationReused": 0,
+            "scoringWallSeconds": 462.4517919289992,
+            "infraErrorAttempts": 0,
+            "botFaultGames": 0,
+            "warnings": 3,
+            "timeouts": 0,
+            "botCpuNs": 908898746800,
+            "harnessCpuNs": 1293163828900,
+            "replayAuditWallNs": 91288414784,
+            "replayAuditCpuNs": 534867070400,
+            "scoringCompiles": 27,
+            "scoringCacheHits": 0
+          }
+        }
+      },
+      "newScoredGames": 6080
+    },
+    {
+      "line": "astra",
+      "round": 1,
+      "authorUsageSelfReported": {
+        "games": 224,
+        "finalConfirmationGames": 0,
+        "batchWallSeconds": 53.939,
+        "infraErrorAttempts": 0
+      },
+      "authorReportedDeviations": [],
+      "noCandidates": true,
+      "candidates": {},
+      "newScoredGames": 0
+    },
+    {
+      "line": "astra",
+      "round": 2,
+      "authorUsageSelfReported": {
+        "games": 48,
+        "finalConfirmationGames": 0,
+        "batchWallSeconds": 30.21,
+        "candidateCpuSeconds": 2.431,
+        "infraErrorAttempts": 0
+      },
+      "authorReportedDeviations": [],
+      "noCandidates": true,
+      "candidates": {},
+      "newScoredGames": 0
+    }
+  ],
+  "newScoredGames": 6080,
+  "holdoutUsed": false,
+  "calibrationUsed": false,
+  "pairedFableR1HeldComparison": {
+    "main": "fable-r1-f1-openfort",
+    "comparison": "fable-r1-f1-fort",
+    "difference": 0.015625,
+    "interval95": [
+      0.0015625,
+      0.03125
+    ],
+    "pairedSlots": 640,
+    "slotChanges": {
+      "same": 620,
+      "improved": 15,
+      "worsened": 5
+    }
+  },
+  "fableRoundTwoRequired": true,
+  "astraRoundsComplete": true,
+  "astraFullEvaluationCandidates": 0,
+  "recovery": {
+    "replayParams": "Engine-expanded rule comparison restored.",
+    "mapClusters": "Map digest join restored; direct point tallies match.",
+    "completedGamesRepeated": 0
+  }
+}

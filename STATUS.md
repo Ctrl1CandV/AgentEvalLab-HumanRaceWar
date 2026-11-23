@@ -10,7 +10,7 @@
 
 [存量重排与替换规模](reports/phase-B-roster-feasibility.md)留作已核验的收束证据。
 
-Fable 第 1 轮已停测，按清单封存两份候选，正在统一评测。astra 第 1 轮 224 局为作者自报的公开图探测，归档零候选，未产生统一评测局。astra 第 2 轮在隔离作者区启动。
+[天花板实验阶段结果](reports/phase-B-ceiling-round-one.md)按评测提交 `264791b` 原字节导入。Fable 两份候选首轮 6,080 局全核验，主候选判部分。Fable 第二轮开场白已交用户。astra 两轮均为零候选，作者线已结束。
 
 ## 冻结版本的证据记录
 - [低段重排补校准](reports/phase-B-claude-r13-repair.md)及[聚合](data/phase-b/claude-r13-repair.json)按评测提交 `233be2b` 原字节导入。新增 768 局全量核验，复用 7,440 局；第 1–4 条均通过。L2→L3 点估计为 56.96 Elo，95% 区间 29.80–88.45，与允许范围相交。通过名单已在评测侧封存。
