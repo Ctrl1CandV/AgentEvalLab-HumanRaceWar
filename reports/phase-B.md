@@ -16,6 +16,6 @@
 
 **更正。** 此前败局复核按三名成员计算 L6 单换下界 0.1146，现撤回该数值。本版 L6 实有两名成员，M-balanced 合计得 43/96 分。按原始两条各 48 局的配对分别复算，保留其中任何一名，即使另一位置全胜，M 的整级得分仍高于 0.10。正式第 7 条的三个失败项和点估计均已复核。[原诊断](phase-B-strength-loss-audit.md)
 
-**CA 确认收束。** 原第 7 条的三项失败照原口径登记。M-balanced 进入 L5 后，对 L6、L7 属于近级对阵。自后续版本起，M-balanced 只计比它所在级高至少四级的级别，Z bot 继续从 L6 起计。用后续口径回看现有数据，Z-harass 对 L8 是唯一超线组合。本次收束新增零局，C 未启动，calibration 和最终 holdout 继续封存。r19 未启动则暂缓，已启动则按登记收尾存档。[CA 收束审查](../inbox/2026-11-21-phase-b-closure-review.md) · [独立天花板实验](../inbox/2026-11-21-ceiling-experiment.md)
+**CA 确认收束。** 原第 7 条的三项失败照原口径登记。M-balanced 进入 L5 后，对 L6、L7 属于近级对阵。自后续版本起，M-balanced 只计比它所在级高至少四级的级别，Z bot 继续从 L6 起计。用后续口径回看现有数据，Z-harass 对 L8 是唯一超线组合。本次收束新增零局，C 未启动，calibration 和最终 holdout 继续封存。r19 已备任务书和评测方案，本次收束未启动 r19 或开展其评测。[CA 收束审查](../inbox/2026-11-21-phase-b-closure-review.md) · [独立天花板实验](../inbox/2026-11-21-ceiling-experiment.md)
 
 本报告新增对局为零。数据、限定条件和证据摘要见[收束聚合](../data/phase-b/phase-b-review.json)。

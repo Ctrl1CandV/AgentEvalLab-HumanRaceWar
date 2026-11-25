@@ -4,17 +4,17 @@
 
 ## 当前冻结版结案
 
-[CA 收束审查](inbox/2026-11-21-phase-b-closure-review.md)确认本版 B 未通过。[阶段报告](reports/phase-B.md)保留第 1–8 条原判。C 未启动，calibration 和最终 holdout 继续封存，r19 未启动则暂缓，已启动则按登记存档。
+[CA 收束审查](inbox/2026-11-21-phase-b-closure-review.md)确认本版 B 未通过。[阶段报告](reports/phase-B.md)保留第 1–8 条原判。C 未启动，calibration 和最终 holdout 继续封存，r19 已备任务书和评测方案，收束后暂缓启动。
 
 [天花板实验已预登记](reports/phase-B-ceiling-preparation.md)，来自评测提交 `fcd743e`。Fable 已获启动提示，独立 astra 会话已启动。经验包和四份参照分组已核对，dev 赛程已通过零对局检查。新版 DESIGN 采用 M-balanced 的相对级距口径。
 
 [存量重排与替换规模](reports/phase-B-roster-feasibility.md)留作已核验的收束证据。
 
-[天花板实验阶段结果](reports/phase-B-ceiling-round-one.md)按评测提交 `264791b` 原字节导入。Fable 两份候选首轮 6,080 局全核验，主候选判部分。Fable 第二轮开场白已交用户。astra 两轮均为零候选，作者线已结束。
+[天花板实验阶段结果](reports/phase-B-ceiling-round-one.md)按评测提交 `264791b` 导入，正文百分比显示已在交审前校正。Fable 两份候选首轮 6,080 局全核验，主候选判部分。Fable 第二轮开场白已交用户。astra 两轮均为零候选，作者线已结束。
 
 Fable 额度优先用于关键策略决策、实现和候选定型。综合会话负责资料准备、配对统计、统一评测及报告。Fable 第二轮补充包已放入作者收件目录，原会话可继续使用。后续如需游戏深度备忘，先由综合会话准备证据与初稿，仅把需要 Fable 专长的部分留给它。
 
-[天花板实验最终结果](reports/phase-B-ceiling-result.md)已按评测提交 `e3e5f50` 导入。9,120 局 dev 全量核验，合规主判定为部分。Fable 第二轮墙钟超限，独立实测作为开发证据。[游戏深度备忘](reports/phase-B-ceiling-game-depth.md)给出三个新版本原型方向，随结果交审。
+[天花板实验最终结果](reports/phase-B-ceiling-result.md)已按评测提交 `0fac64d` 核对。9,120 局 dev 全量核验，合规主判定为部分。Fable 第二轮墙钟超限，独立实测作为开发证据。[游戏深度备忘](reports/phase-B-ceiling-game-depth.md)给出三个新版本原型方向，随结果交审。
 
 ## 冻结版本的证据记录
 - [低段重排补校准](reports/phase-B-claude-r13-repair.md)及[聚合](data/phase-b/claude-r13-repair.json)按评测提交 `233be2b` 原字节导入。新增 768 局全量核验，复用 7,440 局；第 1–4 条均通过。L2→L3 点估计为 56.96 Elo，95% 区间 29.80–88.45，与允许范围相交。通过名单已在评测侧封存。

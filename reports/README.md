@@ -4,8 +4,8 @@
 
 ## 当前审查入口
 
-- [天花板实验最终结果](phase-B-ceiling-result.md) · [游戏深度备忘](phase-B-ceiling-game-depth.md) · [聚合](../data/phase-b/ceiling-result.json)按评测提交 `e3e5f50` 导入。
-- [天花板实验阶段结果](phase-B-ceiling-round-one.md)及[聚合](../data/phase-b/ceiling-round-one.json)按评测提交 `264791b` 导入。
+- [天花板实验最终结果](phase-B-ceiling-result.md) · [游戏深度备忘](phase-B-ceiling-game-depth.md) · [聚合](../data/phase-b/ceiling-result.json)按评测提交 `0fac64d` 核对。
+- [天花板实验阶段结果](phase-B-ceiling-round-one.md)及[聚合](../data/phase-b/ceiling-round-one.json)按评测提交 `264791b` 导入，正文显示精度按 `0fac64d` 校正。
 - [天花板实验预登记](phase-B-ceiling-preparation.md)及[聚合](../data/phase-b/ceiling-preparation.json)按评测提交 `fcd743e` 导入。
 - [CA 收束审查](../inbox/2026-11-21-phase-b-closure-review.md)确认冻结版 B 未通过。[天花板实验](../inbox/2026-11-21-ceiling-experiment.md)记录后续实验安排。
 
