@@ -2,11 +2,13 @@
 
 原冻结 B 版已结案。当前由综合会话负责开发、评测和交审发布，用户负责开启所需作者、测试会话与联系审查者。[交接停点](AGENTS.md)
 
-## 进行中：standard-1 发布工单
+## 当前停点：standard-1 1.0.0 开发机交付，待 CA 最终审查
 
-依据 [用户确认的发布工单](inbox/2026-11-26-release-work-order.md)，B 收尾和 C 并行。原型搁置；本轮不重测第 6 条，目标低于 0.9 由 AgentEvalLab 第三次验证实测。L12 校准 864 局、第 7 条补测 1,440 局、[唯一 holdout](docs/RELEASE_HOLDOUT_PREREGISTRATION.md) 2,208 局全部完成并核验。holdout 未通过，按工单继续，不再运行。组 3 已按优先顺序选定首个组合 f1-openfort、f2-press，冻结 13 级、28 名成员。
+[发布工单](inbox/2026-11-26-release-work-order.md)已完成开发机部分。阶梯固定 13 级、28 名成员，L0–L11 不变，L12 为 f1-openfort、f2-press。[B 阶段报告](reports/phase-B-ladder-1.0.md)保留第 7 条 Z-harass 对 L8 和唯一最终留出的未通过项；两项均不修、不重跑。第 6 条仍待 AgentEvalLab 第三次验证实测胜负主分严格低于 0.9。
 
-组 2 增加 `grade`、`scrimmage`、`calibrate`，保持 `bench`。407 项测试全部通过；引擎版本升至 1.0.0 后，104 份旧回放的 29,404 回合状态与协议输出仍逐字节一致；公开包已导出核验，SDK 检查通过，练习赛完成 12 局。先推供主项目对接，不交最终审查。迁移初稿见 [MIGRATION](MIGRATION.md)。
+[C 阶段报告](reports/phase-C.md)交付 `grade`、`scrimmage`、`calibrate` 和 108 份公开材料。38 次串行自评共 14,896 局；P1 三项检查通过，方案待用户确认，未冻结。最终回归 407 项通过；104 份旧回放的 29,404 回合状态与协议输出逐字节一致。六进程噪声测试的两种主分均未变化。
+
+[审查入口](reports/README.md)与[迁移说明](MIGRATION.md)已备。私有包不上传；由用户线下拷往评测机。评测机测速、相邻校准复核、评分复核及正式验证尚未运行。`league` 延后；本轮未开作者或测试会话。
 
 ## 历史：两项深度原型均未过筛
 
@@ -14,7 +16,7 @@
 
 [原型筛选结果](reports/phase-B-depth-prototypes.md)：能量塔分 7,440 局和远程兵种 2,480 局全部完成，均未过筛。960 份确认集回放全核验。未启动小型天花板测试，不新增作者会话或对局。完整测试 393 项通过，104 份旧 `standard-1` 回放的 29,404 回合规范状态和协议输出逐字节一致；calibration、grading、最终 holdout 继续封存，C 未启动。
 
-## 当前冻结版结案
+## 历史：原 12 级冻结版结案
 
 [CA 收束审查](inbox/2026-11-21-phase-b-closure-review.md)确认本版 B 未通过。[阶段报告](reports/phase-B.md)保留第 1–8 条原判。C 未启动，calibration 和最终 holdout 继续封存，r19 已备任务书和评测方案，收束后暂缓启动。
 

@@ -1,0 +1,7 @@
+standard-1 / engine and ladder 1.0.0 / development WSL only
+Z-idle outcome=0.00000000; pass=True
+Fixed-ladder Elo Spearman=0.9960312122835584; pass=True; formal in intervals=25/28
+Fault and lock tests: full suite 407, failures=0, errors=0
+Noise: six CPU loops; idle={'headline': 0.8348867613354694, 'headlineOutcomeOnly': 0.8571428571428571, 'games': 392, 'wallSeconds': 51.737204307999946, 'infraErrors': 0}; loaded={'headline': 0.8348867613354694, 'headlineOutcomeOnly': 0.8571428571428571, 'games': 392, 'wallSeconds': 64.011203543, 'infraErrors': 0}; repeated idle=None; pass=True
+Wall seconds: min=25.815, median=40.326, max=136.724, count=39, above 2700=0
+Source: data/phase-c/release-evaluation.json; no per-game records.

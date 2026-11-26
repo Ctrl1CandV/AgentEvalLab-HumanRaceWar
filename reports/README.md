@@ -2,6 +2,14 @@
 
 当前停点见 [STATUS](../STATUS.md)。执行权限以用户最新指令和有效裁定为准；[综合会话交接](../docs/CLAUDE_EVALUATION_HANDOFF.md)说明两个 worktree 的写入边界。
 
+## standard-1 1.0.0：CA 最终审查入口
+
+- [发布工单](../inbox/2026-11-26-release-work-order.md) · [B 阶段判定与 L12 选择](phase-B-ladder-1.0.md) · [B 聚合](../data/phase-c/ladder-1.0.0.json)
+- [C 阶段交付及 P1 提案](phase-C.md) · [C 聚合](../data/phase-c/release-evaluation.json) · [自检日志](../logs/self-calibration.log)
+- [评测机迁移说明](../MIGRATION.md) · [公开材料导出](../package/README.md)
+
+请按工单一起审查 B、C：核对 L12 选择、第 7 条及唯一留出的披露、公开与私有材料边界、评分和练习赛接口，以及 P1 的三项证据。P1 待用户确认；第 6 条仍由 AgentEvalLab 第三次验证实测。这次提交是开发机交付，不是 B 全部通过，也不是评测机已迁移或已复核。
+
 ## 游戏深度原型：两个方案均未过筛
 
 - [本轮筛选报告](phase-B-depth-prototypes.md) · [远程及合计数据](../data/phase-b/depth-ranged-screen.json)。共 9,920 局公开图筛选；没有启动小型天花板测试。
@@ -10,7 +18,7 @@
 - 远程兵种按预定分支筛选了一次，也未过筛。[规则](../rules/proto-ranged-1.md) · [公开图预登记](../docs/PHASE_B_RANGED_SCREEN.md)。
 - [现版本的 13 级方案草案](phase-B-standard-1-options.md)及[局数和主分算术](../data/phase-b/standard-1-options.json)按评测提交 `252cb6d` 导入。只作决策参考，未重启验收。
 
-## 当前审查入口
+## 历史审查入口
 
 - [天花板实验最终结果](phase-B-ceiling-result.md) · [游戏深度备忘](phase-B-ceiling-game-depth.md) · [聚合](../data/phase-b/ceiling-result.json)按评测提交 `0fac64d` 核对。
 - [天花板实验阶段结果](phase-B-ceiling-round-one.md)及[聚合](../data/phase-b/ceiling-round-one.json)按评测提交 `264791b` 导入，正文显示精度按 `0fac64d` 校正。

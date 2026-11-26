@@ -1,0 +1,476 @@
+{
+  "schemaVersion": 1,
+  "scope": "standard-1 development-host self checks and nonformal archived Astra diagnostics",
+  "selfEvaluation": {
+    "submissions": 38,
+    "scoredGames": 14896,
+    "scheduled": 14896,
+    "membersScored": 28,
+    "completeSubmissions": 38,
+    "infraRetryAttempts": 0,
+    "usagePlanGroups": {
+      "ladder": 28,
+      "public": 5,
+      "fable-reference": 1,
+      "astra-diagnostic": 4
+    },
+    "rawMetricSharesRetained": [
+      "tower",
+      "deposit",
+      "damage",
+      "survival"
+    ]
+  },
+  "scoring": {
+    "proposed": {
+      "schemaVersion": 1,
+      "status": "provisional, not frozen",
+      "proposal": "P1",
+      "processWeight": 0.25,
+      "metricWeights": {
+        "tower": 0.4,
+        "deposit": 0.3,
+        "damage": 0.3
+      }
+    },
+    "trials": [
+      {
+        "id": "P1",
+        "processWeight": 0.25,
+        "metricWeights": {
+          "tower": 0.4,
+          "deposit": 0.3,
+          "damage": 0.3
+        },
+        "spearman": 0.9681127776441182,
+        "MProcess": 0.5743928413185536,
+        "zProcess": {
+          "Z-eco": 0.36957071002283476,
+          "Z-harass": 0.3872410140520624,
+          "Z-idle": 0.05879120879120879,
+          "Z-miner": 0.19620228878924373,
+          "Z-random": 0.1360477089349671,
+          "Z-rush": 0.3316429757432733,
+          "Z-towers": 0.3505024836583583,
+          "Z-turtle": 0.2598261908341734,
+          "Z-wrush": 0.1919292880720295
+        },
+        "zOverM": {},
+        "separation": {
+          "pairs": [
+            {
+              "lowerTier": 0,
+              "pointGap": 0.16089988612350611,
+              "SE": 0.017334107022620476,
+              "t": 9.282271415166452,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 1,
+              "pointGap": 0.065624953948972,
+              "SE": 0.023449314017794428,
+              "t": 2.7985873658893703,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 2,
+              "pointGap": 0.021329833416285582,
+              "SE": 0.009677464451189194,
+              "t": 2.2040725154680896,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 3,
+              "pointGap": 0.09784955666759276,
+              "SE": 0.013661210835480338,
+              "t": 7.162583013027066,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 4,
+              "pointGap": 0.028834607914297428,
+              "SE": 0.013200597796358557,
+              "t": 2.1843410699363615,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 5,
+              "pointGap": 0.09600924556070428,
+              "SE": 0.016726712061003634,
+              "t": 5.739875548198057,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 6,
+              "pointGap": 0.05045921538877629,
+              "SE": 0.016742331222349846,
+              "t": 3.0138703337452046,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 7,
+              "pointGap": 0.03330846205672766,
+              "SE": 0.035153546299345785,
+              "t": 0.947513567282614,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 8,
+              "pointGap": 0.0636426457722804,
+              "SE": 0.040059740252313715,
+              "t": 1.588693420662023,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 9,
+              "pointGap": 0.07932652427569475,
+              "SE": 0.01900660715121574,
+              "t": 4.173628867297376,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 10,
+              "pointGap": 0.05984951557784324,
+              "SE": 0.014007901635070173,
+              "t": 4.272553958260532,
+              "validDraws": 3972,
+              "excluded": null
+            },
+            {
+              "lowerTier": 11,
+              "pointGap": 0.04023140766121869,
+              "SE": 0.014957466694261512,
+              "t": 2.6897206915829948,
+              "validDraws": 3972,
+              "excluded": null
+            }
+          ],
+          "medianT": 2.9062288498172872,
+          "zeroSECount": 0,
+          "unidentifiedPairs": 0
+        },
+        "checks": [
+          true,
+          true,
+          true
+        ],
+        "metricsRemovedBeforeThisTrial": []
+      }
+    ],
+    "outcomeOnlySeparation": {
+      "pairs": [
+        {
+          "lowerTier": 0,
+          "pointGap": 0.14377289377289376,
+          "SE": 0.018338271091271518,
+          "t": 7.8400462648480245,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 1,
+          "pointGap": 0.06776556776556777,
+          "SE": 0.025648784874226293,
+          "t": 2.6420576295473315,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 2,
+          "pointGap": 0.020146520146520158,
+          "SE": 0.012613848855103993,
+          "t": 1.5971746909245856,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 3,
+          "pointGap": 0.10576923076923078,
+          "SE": 0.01616199432643812,
+          "t": 6.544318023686676,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 4,
+          "pointGap": 0.04075091575091577,
+          "SE": 0.015593425789105211,
+          "t": 2.6133395125648113,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 5,
+          "pointGap": 0.12225274725274721,
+          "SE": 0.02160299614457371,
+          "t": 5.659064438774847,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 6,
+          "pointGap": 0.05128205128205121,
+          "SE": 0.02072649635250699,
+          "t": 2.4742267293935742,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 7,
+          "pointGap": 0.04441391941391948,
+          "SE": 0.0424506688729174,
+          "t": 1.0462478117100904,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 8,
+          "pointGap": 0.0567765567765568,
+          "SE": 0.04880427472115682,
+          "t": 1.1633521264469064,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 9,
+          "pointGap": 0.09294871794871795,
+          "SE": 0.024156971787090104,
+          "t": 3.8476974170409606,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 10,
+          "pointGap": 0.07371794871794868,
+          "SE": 0.017417768395864133,
+          "t": 4.232341769767308,
+          "validDraws": 3972,
+          "excluded": null
+        },
+        {
+          "lowerTier": 11,
+          "pointGap": 0.050824175824175755,
+          "SE": 0.017858889488861298,
+          "t": 2.8458754871558565,
+          "validDraws": 3972,
+          "excluded": null
+        }
+      ],
+      "medianT": 2.7439665583515938,
+      "zeroSECount": 0,
+      "unidentifiedPairs": 0
+    },
+    "publicMetricShares": {
+      "Z-eco": {
+        "tower": 0.07417582417582418,
+        "deposit": 0.39500940613818486,
+        "damage": 0.4949786077764283,
+        "survival": 0.9294871794871795
+      },
+      "Z-harass": {
+        "tower": 0.07417582417582418,
+        "deposit": 0.4098294078839195,
+        "damage": 0.5573463622810233,
+        "survival": 0.9250885225885226
+      },
+      "Z-idle": {
+        "tower": 0.07417582417582418,
+        "deposit": 0.0,
+        "damage": 0.09706959706959707,
+        "survival": 0.566984126984127
+      },
+      "Z-miner": {
+        "tower": 0.07417582417582418,
+        "deposit": 0.3279337165715591,
+        "damage": 0.2271728138248211,
+        "survival": 0.586492673992674
+      },
+      "Z-random": {
+        "tower": 0.10375595249544865,
+        "deposit": 0.06785282403738181,
+        "damage": 0.2472982690852436,
+        "survival": 0.6529395604395604
+      },
+      "Z-rush": {
+        "tower": 0.07417582417582418,
+        "deposit": 0.3686980369343281,
+        "damage": 0.5262354042474885,
+        "survival": 0.8916758241758242
+      },
+      "Z-towers": {
+        "tower": 0.5086092455606674,
+        "deposit": 0.444530986061148,
+        "damage": 0.045664965385823084,
+        "survival": 0.8192948717948718
+      },
+      "Z-turtle": {
+        "tower": 0.07417582417582418,
+        "deposit": 0.2805098390538704,
+        "damage": 0.48667636482560883,
+        "survival": 0.9273778998779
+      },
+      "Z-wrush": {
+        "tower": 0.07417582417582418,
+        "deposit": 0.0,
+        "damage": 0.4015585937295936,
+        "survival": 0.6349786324786325
+      },
+      "M-balanced": {
+        "tower": 0.5195199525057255,
+        "deposit": 0.4956407114384798,
+        "damage": 0.5452750286913485,
+        "survival": 0.95752442002442
+      }
+    },
+    "unit": "paired map clusters; equal members within level, equal levels",
+    "survivalUsedInFormula": false,
+    "holdoutUsed": false,
+    "elapsedSeconds": 2.2174329939999993
+  },
+  "newNoiseGames": 392,
+  "noise": {
+    "sixTrustedCpuBusyLoops": true,
+    "idle": {
+      "headline": 0.8348867613354694,
+      "headlineOutcomeOnly": 0.8571428571428571,
+      "games": 392,
+      "wallSeconds": 51.737204307999946,
+      "infraErrors": 0
+    },
+    "loaded": {
+      "headline": 0.8348867613354694,
+      "headlineOutcomeOnly": 0.8571428571428571,
+      "games": 392,
+      "wallSeconds": 64.011203543,
+      "infraErrors": 0
+    },
+    "repeatIdle": null,
+    "loadedMinusIdle": {
+      "headline": 0.0,
+      "headlineOutcomeOnly": 0.0
+    },
+    "limit": 0.03,
+    "passed": true,
+    "newGames": 392
+  },
+  "selfChecks": {
+    "ZIdleOutcome": 0.0,
+    "ZIdlePassed": true,
+    "eloRankCorrelation": 0.9960312122835584,
+    "eloAgreementPassed": true,
+    "fitWithinSelfInterval": 25,
+    "identifiableSelfIntervals": 28,
+    "ladderMembers": 28,
+    "faultAndLockChecksPassed": true
+  },
+  "gradingTimeSeconds": {
+    "minimum": 25.815349255,
+    "median": 40.32631803100003,
+    "maximum": 136.724454789,
+    "limit": 2700,
+    "aboveGoal": 0,
+    "count": 39
+  },
+  "migrationBaselinePublicBots": {
+    "Z-idle": {
+      "outcome": 0.0,
+      "headline": 0.014697802197802198,
+      "games": 392
+    },
+    "M-balanced": {
+      "outcome": 0.45238095238095244,
+      "headline": 0.4828839246153527,
+      "games": 392
+    }
+  },
+  "astraDiagnostics": {
+    "astra-phase1": {
+      "outcome": 0.8232600732600732,
+      "headline": 0.8079489405367789,
+      "processDiagnostic": 0.7620155423668956,
+      "outcome95": [
+        0.7679276741776742,
+        0.873491785991786
+      ],
+      "games": 392,
+      "wasVisibleInCeiling": false
+    },
+    "astra-informed": {
+      "outcome": 0.7957875457875457,
+      "headline": 0.7596919373494775,
+      "processDiagnostic": 0.6514051120352724,
+      "outcome95": [
+        0.7501179376179377,
+        0.8405259092759092
+      ],
+      "games": 392,
+      "wasVisibleInCeiling": false
+    },
+    "astra-phase2": {
+      "outcome": 0.8571428571428571,
+      "headline": 0.8348867613354694,
+      "processDiagnostic": 0.7681184739133065,
+      "outcome95": [
+        0.7955204517704518,
+        0.9105477855477856
+      ],
+      "games": 392,
+      "wasVisibleInCeiling": true
+    },
+    "astra-blind": {
+      "outcome": 0.8452380952380953,
+      "headline": 0.8101408816000324,
+      "processDiagnostic": 0.7048492406858433,
+      "outcome95": [
+        0.7911019536019536,
+        0.8958896872358412
+      ],
+      "games": 392,
+      "wasVisibleInCeiling": true
+    }
+  },
+  "officialItem6Retest": false,
+  "compatibility": {
+    "fullSuiteTests": 407,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "standardReplaysCompared": 104,
+    "standardTurnsCompared": 29404,
+    "canonicalStateAndMessagesIdentical": true,
+    "archivedScoresAndIntervalsCompared": 4,
+    "legacyBootstrapDrawsCompared": 16000,
+    "publicExportFiles": 108,
+    "publicExportManifestSha256": "ae81f3415baa0c358ca8abb5d34681a1b2c755a3fae522d7396907b499a4665e",
+    "publicSDKCheckPassed": true,
+    "publicPracticeGames": 12
+  },
+  "privateReleasePackage": {
+    "filename": "humanracewar-1.0.0-private.tar",
+    "sha256": "9f4949c41d601cb57e3debd7ea6c1442b6c70c13feac3b89eee0f5b89bbfd25b",
+    "bytes": 2928640,
+    "regularFiles": 110,
+    "mapCounts": {
+      "calibration": 24,
+      "grading": 24,
+      "holdout": 24
+    },
+    "ladderMembers": 28,
+    "byteVerifiedAllEntries": true,
+    "excludedRawMatchesAndAuthorArchives": true
+  },
+  "newScoredGamesExcludingFixtures": 19812,
+  "leagueDeferred": true,
+  "benchTimingMethodUnchanged": true,
+  "scoringProposalFrozen": false
+}
