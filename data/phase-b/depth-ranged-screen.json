@@ -1,0 +1,270 @@
+{
+  "calibrationUsed": false,
+  "combined": {
+    "confirmationReplaysVerified": 960,
+    "energyGames": 7440,
+    "enhancedAuthorSessionsStarted": 0,
+    "newPublicScoredGames": 9920,
+    "rangedGames": 2480,
+    "selectedVariant": null,
+    "standardBudgetSessionsStarted": 0
+  },
+  "gradingUsed": false,
+  "holdoutUsed": false,
+  "matchedMapClusterCount": 20,
+  "newScoredGames": 2480,
+  "next": "close-depth-screen-no-variant",
+  "ranged": {
+    "acceptedResearchAndSpawns": {
+      "M-balanced": {
+        "acceptedRangedSpawnsWithoutInvalidEvent": 0,
+        "gamesWithResearchRequest": 0,
+        "medianFirstResearchRequestTurn": null
+      },
+      "adaptive": {
+        "acceptedRangedSpawnsWithoutInvalidEvent": 862,
+        "gamesWithResearchRequest": 60,
+        "medianFirstResearchRequestTurn": 120.0
+      },
+      "fixed-020-320": {
+        "acceptedRangedSpawnsWithoutInvalidEvent": 386,
+        "gamesWithResearchRequest": 34,
+        "medianFirstResearchRequestTurn": 160.0
+      }
+    },
+    "acceptedResearchAndSpawnsScope": "Across the whole confirmation set; counts describe accepted actions without an INVALID event, not independently counted entities.",
+    "commonMeleeOpponent": {
+      "adaptiveMinusFixed": 0.0,
+      "adaptiveScore": 0.5,
+      "fixedScore": 0.5,
+      "interval95": [
+        0.0,
+        0.0
+      ]
+    },
+    "confirmationBotCpu": {
+      "M-balanced": {
+        "maxCpuMs": 2.7665,
+        "measuredTurns": 46578,
+        "medianCpuMs": 0.4226,
+        "p99CpuMs": 1.1321
+      },
+      "adaptive": {
+        "maxCpuMs": 2.3028,
+        "measuredTurns": 46740,
+        "medianCpuMs": 0.4213,
+        "p99CpuMs": 1.1361
+      },
+      "fixed-020-320": {
+        "maxCpuMs": 2.2456,
+        "measuredTurns": 46578,
+        "medianCpuMs": 0.4101,
+        "p99CpuMs": 1.0908
+      }
+    },
+    "confirmationBotFaultGames": 0,
+    "confirmationFailedOrders": 41134,
+    "confirmationGames": 240,
+    "confirmationWarnings": 0,
+    "newReplaysVerified": 240,
+    "primary": {
+      "adaptiveMinusFixed": 0.0,
+      "adaptiveScore": 0.5,
+      "adaptiveWDL": {
+        "draws": 0,
+        "losses": 40,
+        "wins": 40
+      },
+      "deltaByMapType": {
+        "corridor": 0.0,
+        "island": 0.0,
+        "maze": 0.0,
+        "open": 0.0
+      },
+      "endings": {
+        "base_destroyed": 18,
+        "turn_limit_score": 62
+      },
+      "finalTowerMarginQuantiles": {
+        "0.05": -543,
+        "0.25": -277,
+        "0.5": -2,
+        "0.75": 277,
+        "0.95": 414
+      },
+      "games": 80,
+      "interval95": [
+        0.0,
+        0.0
+      ],
+      "towerDecidedShare": 0.775,
+      "turn150Comebacks": {
+        "trailingGames": 80,
+        "trailingWinShare": 0.15,
+        "trailingWon": 12
+      }
+    },
+    "screenPassed": false,
+    "selection": {
+      "bestTies": [
+        "fixed-020-320",
+        "fixed-045-160",
+        "fixed-045-320",
+        "fixed-070-160",
+        "fixed-070-320",
+        "fixed-095-160",
+        "fixed-095-320",
+        "fixed-120-160",
+        "fixed-120-320",
+        "fixed-155-080",
+        "fixed-155-160",
+        "fixed-155-320",
+        "fixed-200-080",
+        "fixed-200-160",
+        "fixed-200-320"
+      ],
+      "boundary": true,
+      "fixed": "fixed-020-320",
+      "grid": {
+        "fixed-020-000": {
+          "games": 80,
+          "score": 0.075
+        },
+        "fixed-020-080": {
+          "games": 80,
+          "score": 0.075
+        },
+        "fixed-020-160": {
+          "games": 80,
+          "score": 0.35
+        },
+        "fixed-020-320": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-045-000": {
+          "games": 80,
+          "score": 0.25
+        },
+        "fixed-045-080": {
+          "games": 80,
+          "score": 0.325
+        },
+        "fixed-045-160": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-045-320": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-070-000": {
+          "games": 80,
+          "score": 0.35
+        },
+        "fixed-070-080": {
+          "games": 80,
+          "score": 0.4
+        },
+        "fixed-070-160": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-070-320": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-095-000": {
+          "games": 80,
+          "score": 0.375
+        },
+        "fixed-095-080": {
+          "games": 80,
+          "score": 0.45
+        },
+        "fixed-095-160": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-095-320": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-120-000": {
+          "games": 80,
+          "score": 0.375
+        },
+        "fixed-120-080": {
+          "games": 80,
+          "score": 0.475
+        },
+        "fixed-120-160": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-120-320": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-155-000": {
+          "games": 80,
+          "score": 0.4
+        },
+        "fixed-155-080": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-155-160": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-155-320": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-200-000": {
+          "games": 80,
+          "score": 0.475
+        },
+        "fixed-200-080": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-200-160": {
+          "games": 80,
+          "score": 0.5
+        },
+        "fixed-200-320": {
+          "games": 80,
+          "score": 0.5
+        }
+      },
+      "price": 160,
+      "scoredGames": 2240
+    }
+  },
+  "rangedScoring": {
+    "batches": 4,
+    "confirmationReplayVerification": "complete independent engine verification",
+    "infrastructureErrorAttempts": 0,
+    "tuningReplayVerification": "standard tournament results bound to scheduled rows and replay digests; no full engine replay pass claimed for tuning"
+  },
+  "rangedSmoke": {
+    "passed": true,
+    "turns": 100,
+    "warnings": 0
+  },
+  "schemaVersion": 1,
+  "scope": "public map screen, not an author comparison or formal B acceptance",
+  "selectedVariant": null,
+  "standardRegression": {
+    "canonicalStateAndProtocolByteIdentical": true,
+    "errors": 0,
+    "existingReplays": 104,
+    "existingTurns": 29404,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 393
+  },
+  "variantsRejectedByThePredeclaredScreen": true
+}

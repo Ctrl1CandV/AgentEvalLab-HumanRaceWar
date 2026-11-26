@@ -2,10 +2,12 @@
 
 当前停点见 [STATUS](../STATUS.md)。执行权限以用户最新指令和有效裁定为准；[综合会话交接](../docs/CLAUDE_EVALUATION_HANDOFF.md)说明两个 worktree 的写入边界。
 
-## 游戏深度原型（进行中，不是交审点）
+## 游戏深度原型：两个方案均未过筛
+
+- [本轮筛选报告](phase-B-depth-prototypes.md) · [远程及合计数据](../data/phase-b/depth-ranged-screen.json)。共 9,920 局公开图筛选；没有启动小型天花板测试。
 
 - [CA 原型任务](../inbox/2026-11-25-ceiling-result-review.md) · [能量结果](phase-B-depth-energy-screen.md)及[聚合](../data/phase-b/depth-energy-screen.json)按评测提交 `62ba212` 导入。三档都未过筛。[规则](../rules/proto-energy-1.md) · [预登记](../docs/PHASE_B_DEPTH_SCREEN.md) · [旧规则回归证据](../data/phase-b/depth-step0.json)。
-- 按预定分支试一次远程兵种：[规则](../rules/proto-ranged-1.md) · [公开图预登记](../docs/PHASE_B_RANGED_SCREEN.md)。
+- 远程兵种按预定分支筛选了一次，也未过筛。[规则](../rules/proto-ranged-1.md) · [公开图预登记](../docs/PHASE_B_RANGED_SCREEN.md)。
 - [现版本的 13 级方案草案](phase-B-standard-1-options.md)及[局数和主分算术](../data/phase-b/standard-1-options.json)按评测提交 `252cb6d` 导入。只作决策参考，未重启验收。
 
 ## 当前审查入口
