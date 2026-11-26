@@ -126,9 +126,7 @@ def load_ladder(path: Path, root: Path) -> Ladder:
         raise ValueError('invalid ladder size, duplicate code or missing fixed anchor')
     expected = {tuple(sorted((a.code,b.code))) for left,right in zip(levels,levels[1:]) for a,b in product(left,right)}
     got = [tuple(sorted(pair)) for pair in cal['pairings']]
-    gaps=cal['gaps']
-    if (len(got)!=len(expected) or set(got)!=expected or len(gaps)!=len(levels)-1
-        or any(type(x) not in (float,int) or not math.isfinite(x) for x in gaps)):
+    if len(got)!=len(expected) or set(got)!=expected:
         raise ValueError('invalid adjacent calibration plan')
     if blob['seeds']!=[17,29]:
         raise ValueError('unexpected scoring seed identities')

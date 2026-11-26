@@ -8,7 +8,9 @@ python3.13 -m arena check bot --sandbox bwrap --out runs/check
 # 小规模开发局，使用宿主提供的同机 jobs=1 时限锁。
 python3.13 -m arena tournament --bot bot --opponents bots/public/M-balanced \
   --maps maps/public/open-01.map --jobs 1 --sandbox bwrap \
-  --fixed-timing /path/to/host-jobs1-lock.json --out runs/example
+  --fixed-timing timing-lock-jobs1.json --out runs/example
 ```
+
+宿主把 `timing-lock-jobs1.json` 和 `timing-lock-jobs6.json` 放在工作区根目录，不列入 `PUBLIC-MANIFEST.sha256`。不要改名、移动或修改；`--jobs` 必须与锁匹配。
 
 只用 Python 3.13 或 C++ 标准库。bot 和 C++ 编译只走离线 bubblewrap；不要直接执行或编译提交。实际时限从开局 `LIMIT` 读取。沙箱或匹配的预算锁不可用时，请报告，不回退到 plain 或自改时限。中场的公开练习赛由宿主在两个阶段之间运行，结果写入 `scrimmage/`。

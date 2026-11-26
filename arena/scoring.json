@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "provisional, not frozen",
+  "status": "frozen for ladder 1.0.0 (user 2026-11-26)",
   "proposal": "P1",
   "processWeight": 0.25,
   "metricWeights": {

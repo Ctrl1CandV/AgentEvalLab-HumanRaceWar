@@ -42,6 +42,7 @@ def main() -> int:
         "failures": len(result.failures),
         "errors": len(result.errors),
         "skipped": len(result.skipped),
+        "skippedTests": [{"name": case.id(), "reason": reason} for case, reason in result.skipped],
         "passed": result.wasSuccessful(),
         "measuredTestProcessCpuSeconds": cpu_ns / 1_000_000_000,
         "measuredTestWallSeconds": wall_ns / 1_000_000_000,

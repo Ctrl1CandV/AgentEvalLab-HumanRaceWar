@@ -2,15 +2,18 @@
 import json
 import os
 from pathlib import Path
+import stat
 import subprocess
 import sys
+from tempfile import TemporaryFile
 import time
 import unittest
 from unittest.mock import patch
 from uuid import uuid4
 
 from arena.core import resources
-from arena.core.sandbox import Bubblewrap, ROOT, STARTED, stop
+from arena.core.sandbox import Bubblewrap, InfrastructureError, ROOT, STARTED, stop
+from arena.grade import grading_lock
 
 
 class ReviewBalanceRuntimeTests(unittest.TestCase):
@@ -19,7 +22,7 @@ class ReviewBalanceRuntimeTests(unittest.TestCase):
         self.root.mkdir(parents=True)
 
     def test_cpu_lock_respects_tmpdir(self):
-        with patch.dict(os.environ, {'TMPDIR': str(self.root)}):
+        with patch.dict(os.environ, {'TMPDIR': str(self.root), 'HRW_LOCK_DIR': ''}):
             with resources.CpuLease(1) as lease:
                 expected = self.root / f'hrw-cpu-locks-{os.getuid()}'
                 self.assertTrue(expected.is_dir())
@@ -27,10 +30,31 @@ class ReviewBalanceRuntimeTests(unittest.TestCase):
                                     for fd in lease.files))
 
     def test_empty_tmpdir_falls_back_to_tmp(self):
-        with patch.dict(os.environ, {'TMPDIR': ''}):
+        try:
+            with TemporaryFile(dir='/tmp'):
+                pass
+        except OSError:
+            self.skipTest('/tmp 不可写')
+        with patch.dict(os.environ, {'TMPDIR': '', 'HRW_LOCK_DIR': ''}):
             with resources.CpuLease(1) as lease:
                 expected = Path('/tmp') / f'hrw-cpu-locks-{os.getuid()}'
                 self.assertEqual(Path(os.readlink(f'/proc/self/fd/{lease.files[0]}')).parent, expected)
+
+    def test_explicit_lock_directory_is_shared_across_tmpdirs(self):
+        directory = self.root / 'new-parent' / 'locks'
+        with patch.dict(os.environ, {'TMPDIR': str(self.root/'one'), 'HRW_LOCK_DIR': str(directory)}):
+            with resources.CpuLease(1) as cpu, resources.CompileLease() as compiler:
+                self.assertTrue(all(Path(os.readlink(f'/proc/self/fd/{fd}')).parent == directory
+                                    for fd in [*cpu.files, compiler.fd]))
+            with patch.dict(os.environ, TMPDIR=str(self.root/'other')):
+                with grading_lock() as actual:
+                    self.assertEqual(actual, directory)
+                    self.assertTrue((directory/'one-formal-grader').is_file())
+        self.assertEqual(stat.S_IMODE(directory.stat().st_mode), 0o700)
+
+    def test_relative_lock_directory_is_rejected(self):
+        with patch.dict(os.environ, HRW_LOCK_DIR='relative'), self.assertRaisesRegex(InfrastructureError, 'absolute'):
+            resources.lock_directory()
 
     def test_compile_limits_inside_real_bwrap(self):
         source = self.root / 'source'; source.mkdir()

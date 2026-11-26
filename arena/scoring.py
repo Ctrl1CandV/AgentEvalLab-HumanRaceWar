@@ -15,6 +15,8 @@ METRICS = ('tower','deposit','damage')
 class Config:
     weight: float
     metrics: dict[str, float]
+    proposal: str | None = None
+    status: str | None = None
 
 
 def load_config(path: Path) -> Config:
@@ -24,7 +26,7 @@ def load_config(path: Path) -> Config:
             or set(weights)!=set(METRICS) or any(type(x) not in (int,float) or not 0<=x<=1 for x in weights.values())
             or not isclose(sum(weights.values()),1,rel_tol=0,abs_tol=1e-10)):
         raise ValueError('invalid scoring proposal')
-    return Config(w,weights)
+    return Config(w,weights,obj.get('proposal'),obj.get('status'))
 
 
 def shares(result: dict, seat: int, turn_limit: int) -> dict:

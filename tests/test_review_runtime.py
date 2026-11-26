@@ -237,13 +237,23 @@ for directory in ('/', '/tmp', '/dev', '/dev/shm'):
         assert error.errno == errno.EROFS
     else:
         raise AssertionError(directory+' is writable')
-try:
-    os.memfd_create('must-not-allocate')
-except OSError as error:
-    assert error.errno == errno.EPERM
-else:
-    raise AssertionError('memfd is writable outside address-space budget')
 libc = ctypes.CDLL(None, use_errno=True)
+if hasattr(os, 'memfd_create'):
+    try:
+        os.memfd_create('must-not-allocate')
+    except OSError as error:
+        assert error.errno == errno.EPERM
+    else:
+        raise AssertionError('memfd is writable outside address-space budget')
+else:
+    call = {'x86_64': 319, 'aarch64': 279}.get(os.uname().machine)
+    if call is None:
+        import sys
+        print('memfd denial subcheck skipped: no Python wrapper or known syscall for '+os.uname().machine,
+              file=sys.stderr)
+    else:
+        assert libc.syscall(call, ctypes.c_char_p(b'must-not-allocate'), 0) == -1
+        assert ctypes.get_errno() == errno.EPERM
 for call in (29, 64, 68, 240):
     assert libc.syscall(call, 0, 4096, 0o1600) == -1
     assert ctypes.get_errno() == errno.EPERM

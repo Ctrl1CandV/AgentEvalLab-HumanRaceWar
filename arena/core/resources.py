@@ -15,9 +15,16 @@ from .sandbox import InfrastructureError
 
 
 def lock_directory():
-    # All cooperating arena commands must use the same TMPDIR on a host.
-    directory = Path(os.environ.get('TMPDIR') or '/tmp') / f'hrw-cpu-locks-{os.getuid()}'
-    directory.mkdir(mode=0o700, exist_ok=True)
+    # A shared explicit directory keeps the locks common even across TMPDIRs.
+    override = os.environ.get('HRW_LOCK_DIR')
+    if override:
+        directory = Path(override)
+        if not directory.is_absolute():
+            raise InfrastructureError('HRW_LOCK_DIR must be an absolute path')
+        directory.mkdir(mode=0o700, parents=True, exist_ok=True)
+    else:
+        directory = Path(os.environ.get('TMPDIR') or '/tmp') / f'hrw-cpu-locks-{os.getuid()}'
+        directory.mkdir(mode=0o700, exist_ok=True)
     info = directory.lstat()
     if not stat.S_ISDIR(info.st_mode) or info.st_uid != os.getuid() or info.st_mode & 0o077:
         raise InfrastructureError('unsafe global resource-lock directory')

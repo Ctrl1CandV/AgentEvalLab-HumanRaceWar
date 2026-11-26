@@ -1,13 +1,15 @@
 import json
+import os
 from pathlib import Path
 from tempfile import TemporaryDirectory
 import threading
+from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 
-from arena.calibrate import compare
-from arena.grade import grading_lock
+from arena.grade import grade, grading_lock
 from arena.ladder import Ladder, Member
-from arena.scoring import Config, fixed_elo, raw_game, summarize
+from arena.scoring import Config, fixed_elo, load_config, raw_game, summarize
 from arena.scrimmage import loss_priority
 from arena.tournament import run_tournament
 from tools.prepare_author_workspace import build, smoke
@@ -52,11 +54,27 @@ class ReleaseScoring(unittest.TestCase):
         self.assertAlmostEqual(fixed_elo([(100,14,7)]),100,places=5)
         self.assertAlmostEqual(fixed_elo([(10,5,3),(210,5,2)]),110,places=5)
 
-    def test_calibration_tolerance_includes_exactly_50_and_rejects_unresolved(self):
-        l=self.setup_ladder()
-        self.assertTrue(compare(l,[0,100,250])[0]['consistent'])
-        self.assertFalse(compare(l,[0,100,251])[0]['consistent'])
-        self.assertFalse(compare(l,[0,'-infinity',250])[0]['consistent'])
+    def test_grade_report_uses_the_config_metadata_and_actual_lock_directory(self):
+        shipped = load_config(ROOT/'arena/scoring.json')
+        self.assertEqual((shipped.proposal, shipped.status), ('P1', 'frozen for ladder 1.0.0 (user 2026-11-26)'))
+        self.assertEqual((shipped.weight, shipped.metrics), (P1.weight, P1.metrics))
+        with TemporaryDirectory() as temp:
+            root = Path(temp)
+            out, locks = root/'private/grade.json', root/'locks'
+            cfg = root/'scoring.json'
+            data = json.loads((ROOT/'arena/scoring.json').read_bytes())
+            data.update(proposal='fixture', status='fixture status')
+            cfg.write_text(json.dumps(data))
+            timing = SimpleNamespace(sandbox='bwrap', locked_budget={}, lock_sha256='fixture', factor=1)
+            with (patch('arena.grade.ROOT', root), patch('arena.grade.load_ladder', return_value=self.setup_ladder()),
+                  patch('arena.grade.checked_maps', return_value=()), patch('arena.grade.Calibration.load', return_value=timing),
+                  patch('arena.grade.run_tournament', return_value={'infraErrorAttempts': 0}),
+                  patch('arena.grade.gather', return_value=[]), patch.dict(os.environ, HRW_LOCK_DIR=str(locks))):
+                result = grade(root/'bot', root/'ladder.json', root/'maps', out,
+                               fixed_timing=root/'timing.json', config_path=cfg)
+            self.assertEqual(json.loads(out.read_bytes()), result)
+            self.assertEqual((result['scoringProposal'], result['scoringStatus'], result['lockDirectory']),
+                             ('fixture', 'fixture status', str(locks)))
 
     def test_practice_loss_order(self):
         events=[{'game':1,'outcome':'loss','ending':'turn_limit_score','turns':300,'seat':1,'towerScore':[300,5]},

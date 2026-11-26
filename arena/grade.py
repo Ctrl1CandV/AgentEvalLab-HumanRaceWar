@@ -20,10 +20,11 @@ from arena.tournament import run_tournament
 
 @contextmanager
 def grading_lock():
-    fd=open_lock(lock_directory(),'one-formal-grader')
+    directory=lock_directory()
+    fd=open_lock(directory,'one-formal-grader')
     try:
         fcntl.flock(fd,fcntl.LOCK_EX)
-        yield
+        yield directory
     finally:
         os.close(fd)
 
@@ -79,7 +80,7 @@ def grade(submission,ladder_path,maps,out,*,fixed_timing,jobs=6,config_path=None
     batch=work/'batch'
     if batch.is_dir()!=resume:
         raise ValueError('grade resume must name the original batch')
-    with grading_lock():
+    with grading_lock() as directory:
         started=monotonic()
         summary=run_tournament([submission,*[m.source for m in ladder.members]],paths,batch,
             jobs=jobs,pairings=pairs,pair_maps={p:m.slots for p,m in zip(pairs,ladder.members,strict=True)},
@@ -91,6 +92,7 @@ def grade(submission,ladder_path,maps,out,*,fixed_timing,jobs=6,config_path=None
             speedFactor=timing.factor,ladderVersion=ladder.version,engineVersion=__version__,
             mapsSha256=sha256(''.join(m['sha256'] for m in ladder.grading).encode()).hexdigest(),
             timingLockSha256=timing.lock_sha256,scoringConfigSha256=sha256(config_path.read_bytes()).hexdigest(),
+            scoringProposal=config.proposal,scoringStatus=config.status,lockDirectory=str(directory.absolute()),
             replays=str(batch/'tasks'),rawResults=str(work/'games.json'),
             infraRetryAttempts=summary['infraErrorAttempts'],wallSeconds=monotonic()-started,lockWaitSeconds=started-begin)
         atomic_json(work/'games.json',games)
