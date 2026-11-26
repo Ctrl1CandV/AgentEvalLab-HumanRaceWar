@@ -1,0 +1,604 @@
+{
+  "calibrationUsed": false,
+  "confirmationReplaysVerified": 720,
+  "gradingUsed": false,
+  "holdoutUsed": false,
+  "infrastructureErrorAttempts": 0,
+  "limit": {
+    "realizedScheduleBatches": 12,
+    "stage1PublicScoredGames": 100000,
+    "usedByThisPrototype": 7440
+  },
+  "matchedMapClusterCount": 20,
+  "method": "See docs/PHASE_B_DEPTH_SCREEN.md; tuning rows use standard tournament outcomes and replay digest checks, confirmation replays were engine-verified.",
+  "newScoredGames": 7440,
+  "next": "ranged-prototype-once",
+  "prices": [
+    {
+      "commonAllActivationOpponent": {
+        "adaptiveMinusFixed": -0.175,
+        "adaptiveScore": 0.525,
+        "fixedScore": 0.7,
+        "interval95": [
+          -0.3,
+          -0.05
+        ]
+      },
+      "confirmationBotCpu": {
+        "M-balanced": {
+          "maxCpuMs": 2.2334,
+          "measuredTurns": 44402,
+          "medianCpuMs": 0.3847,
+          "p99CpuMs": 1.0669
+        },
+        "adaptive": {
+          "maxCpuMs": 2.3246,
+          "measuredTurns": 45252,
+          "medianCpuMs": 0.4487,
+          "p99CpuMs": 1.1725
+        },
+        "fixed-090-000": {
+          "maxCpuMs": 2.0958,
+          "measuredTurns": 45478,
+          "medianCpuMs": 0.4216,
+          "p99CpuMs": 1.1702
+        }
+      },
+      "confirmationBotFaultGames": 0,
+      "confirmationFailedOrders": 35030,
+      "confirmationGames": 240,
+      "confirmationWarnings": 0,
+      "newReplaysVerified": 240,
+      "primary": {
+        "adaptiveMinusFixed": -0.15,
+        "adaptiveScore": 0.425,
+        "deltaByMapType": {
+          "corridor": -0.2,
+          "island": 0.0,
+          "maze": -0.8,
+          "open": 0.4
+        },
+        "endings": {
+          "base_destroyed": 20,
+          "turn_limit_score": 60
+        },
+        "finalTowerMarginQuantiles": {
+          "0.05": -661,
+          "0.25": -193,
+          "0.5": -112,
+          "0.75": -18,
+          "0.95": 20
+        },
+        "games": 80,
+        "interval95": [
+          -0.45,
+          0.15
+        ],
+        "towerDecidedShare": 0.75,
+        "turn150Comebacks": {
+          "trailingGames": 80,
+          "trailingWinShare": 0.475,
+          "trailingWon": 38
+        }
+      },
+      "screenPassed": false,
+      "selection": {
+        "bestTies": [
+          "fixed-090-000"
+        ],
+        "boundary": true,
+        "fixed": "fixed-090-000",
+        "grid": {
+          "fixed-001-000": {
+            "games": 80,
+            "score": 0.5
+          },
+          "fixed-001-080": {
+            "games": 80,
+            "score": 0.35
+          },
+          "fixed-001-160": {
+            "games": 80,
+            "score": 0.325
+          },
+          "fixed-001-320": {
+            "games": 80,
+            "score": 0.4
+          },
+          "fixed-045-000": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-045-080": {
+            "games": 80,
+            "score": 0.275
+          },
+          "fixed-045-160": {
+            "games": 80,
+            "score": 0.25
+          },
+          "fixed-045-320": {
+            "games": 80,
+            "score": 0.4
+          },
+          "fixed-090-000": {
+            "games": 80,
+            "score": 0.65
+          },
+          "fixed-090-080": {
+            "games": 80,
+            "score": 0.4
+          },
+          "fixed-090-160": {
+            "games": 80,
+            "score": 0.375
+          },
+          "fixed-090-320": {
+            "games": 80,
+            "score": 0.4
+          },
+          "fixed-135-000": {
+            "games": 80,
+            "score": 0.475
+          },
+          "fixed-135-080": {
+            "games": 80,
+            "score": 0.375
+          },
+          "fixed-135-160": {
+            "games": 80,
+            "score": 0.375
+          },
+          "fixed-135-320": {
+            "games": 80,
+            "score": 0.4
+          },
+          "fixed-180-000": {
+            "games": 80,
+            "score": 0.375
+          },
+          "fixed-180-080": {
+            "games": 80,
+            "score": 0.4
+          },
+          "fixed-180-160": {
+            "games": 80,
+            "score": 0.4
+          },
+          "fixed-180-320": {
+            "games": 80,
+            "score": 0.4
+          },
+          "fixed-225-000": {
+            "games": 80,
+            "score": 0.425
+          },
+          "fixed-225-080": {
+            "games": 80,
+            "score": 0.425
+          },
+          "fixed-225-160": {
+            "games": 80,
+            "score": 0.425
+          },
+          "fixed-225-320": {
+            "games": 80,
+            "score": 0.425
+          },
+          "fixed-270-000": {
+            "games": 80,
+            "score": 0.425
+          },
+          "fixed-270-080": {
+            "games": 80,
+            "score": 0.425
+          },
+          "fixed-270-160": {
+            "games": 80,
+            "score": 0.425
+          },
+          "fixed-270-320": {
+            "games": 80,
+            "score": 0.425
+          }
+        },
+        "price": 2,
+        "scoredGames": 2240
+      }
+    },
+    {
+      "commonAllActivationOpponent": {
+        "adaptiveMinusFixed": -0.225,
+        "adaptiveScore": 0.55,
+        "fixedScore": 0.775,
+        "interval95": [
+          -0.375,
+          -0.075
+        ]
+      },
+      "confirmationBotCpu": {
+        "M-balanced": {
+          "maxCpuMs": 1.8512,
+          "measuredTurns": 42448,
+          "medianCpuMs": 0.34775,
+          "p99CpuMs": 0.9325
+        },
+        "adaptive": {
+          "maxCpuMs": 2.5905,
+          "measuredTurns": 43276,
+          "medianCpuMs": 0.4309,
+          "p99CpuMs": 1.1059
+        },
+        "fixed-090-000": {
+          "maxCpuMs": 2.1113,
+          "measuredTurns": 43852,
+          "medianCpuMs": 0.3841,
+          "p99CpuMs": 1.0872
+        }
+      },
+      "confirmationBotFaultGames": 0,
+      "confirmationFailedOrders": 30904,
+      "confirmationGames": 240,
+      "confirmationWarnings": 0,
+      "newReplaysVerified": 240,
+      "primary": {
+        "adaptiveMinusFixed": -0.05,
+        "adaptiveScore": 0.475,
+        "deltaByMapType": {
+          "corridor": -0.2,
+          "island": 0.0,
+          "maze": -0.8,
+          "open": 0.8
+        },
+        "endings": {
+          "base_destroyed": 32,
+          "turn_limit_score": 48
+        },
+        "finalTowerMarginQuantiles": {
+          "0.05": -557,
+          "0.25": -189,
+          "0.5": -121,
+          "0.75": -45,
+          "0.95": 82
+        },
+        "games": 80,
+        "interval95": [
+          -0.4,
+          0.3
+        ],
+        "towerDecidedShare": 0.6,
+        "turn150Comebacks": {
+          "trailingGames": 80,
+          "trailingWinShare": 0.525,
+          "trailingWon": 42
+        }
+      },
+      "screenPassed": false,
+      "selection": {
+        "bestTies": [
+          "fixed-090-000"
+        ],
+        "boundary": true,
+        "fixed": "fixed-090-000",
+        "grid": {
+          "fixed-001-000": {
+            "games": 80,
+            "score": 0.5
+          },
+          "fixed-001-080": {
+            "games": 80,
+            "score": 0.45
+          },
+          "fixed-001-160": {
+            "games": 80,
+            "score": 0.55
+          },
+          "fixed-001-320": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-045-000": {
+            "games": 80,
+            "score": 0.775
+          },
+          "fixed-045-080": {
+            "games": 80,
+            "score": 0.65
+          },
+          "fixed-045-160": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-045-320": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-090-000": {
+            "games": 80,
+            "score": 0.8
+          },
+          "fixed-090-080": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-090-160": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-090-320": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-135-000": {
+            "games": 80,
+            "score": 0.7
+          },
+          "fixed-135-080": {
+            "games": 80,
+            "score": 0.55
+          },
+          "fixed-135-160": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-135-320": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-180-000": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-180-080": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-180-160": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-180-320": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-225-000": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-225-080": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-225-160": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-225-320": {
+            "games": 80,
+            "score": 0.6
+          },
+          "fixed-270-000": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-270-080": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-270-160": {
+            "games": 80,
+            "score": 0.575
+          },
+          "fixed-270-320": {
+            "games": 80,
+            "score": 0.575
+          }
+        },
+        "price": 4,
+        "scoredGames": 2240
+      }
+    },
+    {
+      "commonAllActivationOpponent": {
+        "adaptiveMinusFixed": -0.2,
+        "adaptiveScore": 0.675,
+        "fixedScore": 0.875,
+        "interval95": [
+          -0.35,
+          -0.075
+        ]
+      },
+      "confirmationBotCpu": {
+        "M-balanced": {
+          "maxCpuMs": 1.3483,
+          "measuredTurns": 40676,
+          "medianCpuMs": 0.312,
+          "p99CpuMs": 0.7887
+        },
+        "adaptive": {
+          "maxCpuMs": 2.0057,
+          "measuredTurns": 41154,
+          "medianCpuMs": 0.4258,
+          "p99CpuMs": 1.0842
+        },
+        "fixed-090-000": {
+          "maxCpuMs": 2.1092,
+          "measuredTurns": 41946,
+          "medianCpuMs": 0.3558,
+          "p99CpuMs": 1.0461
+        }
+      },
+      "confirmationBotFaultGames": 0,
+      "confirmationFailedOrders": 26180,
+      "confirmationGames": 240,
+      "confirmationWarnings": 0,
+      "newReplaysVerified": 240,
+      "primary": {
+        "adaptiveMinusFixed": 0.35,
+        "adaptiveScore": 0.675,
+        "deltaByMapType": {
+          "corridor": 0.4,
+          "island": 0.8,
+          "maze": -0.8,
+          "open": 1.0
+        },
+        "endings": {
+          "base_destroyed": 46,
+          "turn_limit_score": 34
+        },
+        "finalTowerMarginQuantiles": {
+          "0.05": -211,
+          "0.25": -134,
+          "0.5": -101,
+          "0.75": -75,
+          "0.95": 7
+        },
+        "games": 80,
+        "interval95": [
+          -0.05,
+          0.7
+        ],
+        "towerDecidedShare": 0.425,
+        "turn150Comebacks": {
+          "trailingGames": 80,
+          "trailingWinShare": 0.675,
+          "trailingWon": 54
+        }
+      },
+      "screenPassed": false,
+      "selection": {
+        "bestTies": [
+          "fixed-090-000",
+          "fixed-135-000"
+        ],
+        "boundary": true,
+        "fixed": "fixed-090-000",
+        "grid": {
+          "fixed-001-000": {
+            "games": 80,
+            "score": 0.5
+          },
+          "fixed-001-080": {
+            "games": 80,
+            "score": 0.775
+          },
+          "fixed-001-160": {
+            "games": 80,
+            "score": 0.775
+          },
+          "fixed-001-320": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-045-000": {
+            "games": 80,
+            "score": 0.9
+          },
+          "fixed-045-080": {
+            "games": 80,
+            "score": 0.725
+          },
+          "fixed-045-160": {
+            "games": 80,
+            "score": 0.775
+          },
+          "fixed-045-320": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-090-000": {
+            "games": 80,
+            "score": 0.925
+          },
+          "fixed-090-080": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-090-160": {
+            "games": 80,
+            "score": 0.775
+          },
+          "fixed-090-320": {
+            "games": 80,
+            "score": 0.775
+          },
+          "fixed-135-000": {
+            "games": 80,
+            "score": 0.925
+          },
+          "fixed-135-080": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-135-160": {
+            "games": 80,
+            "score": 0.775
+          },
+          "fixed-135-320": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-180-000": {
+            "games": 80,
+            "score": 0.775
+          },
+          "fixed-180-080": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-180-160": {
+            "games": 80,
+            "score": 0.775
+          },
+          "fixed-180-320": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-225-000": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-225-080": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-225-160": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-225-320": {
+            "games": 80,
+            "score": 0.75
+          },
+          "fixed-270-000": {
+            "games": 80,
+            "score": 0.725
+          },
+          "fixed-270-080": {
+            "games": 80,
+            "score": 0.725
+          },
+          "fixed-270-160": {
+            "games": 80,
+            "score": 0.725
+          },
+          "fixed-270-320": {
+            "games": 80,
+            "score": 0.725
+          }
+        },
+        "price": 8,
+        "scoredGames": 2240
+      }
+    }
+  ],
+  "recovery": {
+    "changedRulesSourcesOrDecision": false,
+    "confirmedExistingGamesReused": 2360,
+    "failure": "audit compared source-only digest with source+SDK runtime identity",
+    "preservedAllOriginalResults": true
+  },
+  "schemaVersion": 1,
+  "scope": "public-map mechanism screening, not a small-ceiling author comparison",
+  "selectedPrice": null
+}

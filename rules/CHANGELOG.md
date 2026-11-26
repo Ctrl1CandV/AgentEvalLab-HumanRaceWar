@@ -8,10 +8,15 @@
 
 只能在 DESIGN 附录 A 的范围内调参数。改规则机制，要先等评测负责人同意（BRIEF 3.3）。
 
+## 2026-11-26：备选深度原型 `proto-ranged-1`
+
+- [能量激活三档均未过筛](../reports/phase-B-depth-energy-screen.md)，依裁定增加独立的[远程兵种原型](proto-ranged-1.md)：一次基地研究、一个可在距离两格攻击的单位。标准版规则、SDK 和冻结构成都不动，两项原型不组合。
+- [公开图预登记](../docs/PHASE_B_RANGED_SCREEN.md)固定三种对照和 2,480 局，只有过筛才做小型天花板实验。
+
 ## 2026-11-26：深度筛选原型 `proto-energy-1`
 
 - 按 [CA 裁定](../inbox/2026-11-25-ceiling-result-review.md)增加单独的[能量激活规则](proto-energy-1.md)。三档定价来自 80 局既有公开图回放。不选原型时保留标准规则、协议、SDK 与冻结 bot；不打校准或留出对局。
-- [公开图预登记](../docs/PHASE_B_DEPTH_SCREEN.md)固定调参及确认矩阵，尚无原型筛选结果。
+- [公开图预登记](../docs/PHASE_B_DEPTH_SCREEN.md)固定调参及确认矩阵；[筛选结果](../reports/phase-B-depth-energy-screen.md)显示三档均未过筛。
 
 ## 2026-11-08：B受控候选D22（获准一轮已完成，失败不采纳）
 

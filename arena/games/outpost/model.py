@@ -94,6 +94,8 @@ class Order:
             return f"MOVE {self.unit_id} {self.direction}"
         if self.op == "SPAWN":
             return f"SPAWN {self.kind} {self.x} {self.y}"
+        if self.op == "UNLOCK":
+            return f"UNLOCK {self.kind}"
         if self.op in ("FIRE", "ACTIVATE"):
             return f"{self.op} {self.x} {self.y}"
         return f"{self.op} {self.unit_id} {self.x} {self.y}"
@@ -120,6 +122,7 @@ class State:
     bank_ms: list[int] = field(default_factory=list)  # Runner-owned, excluded from rule hashes.
     last_events: list[Event] = field(default_factory=list)
     outcome: Result | None = None
+    ranged_players: set[int] = field(default_factory=set)  # Serialized only in proto-ranged-1.
 
     def add_unit(self, player: int, kind: str, pos: Position) -> Unit:
         owner = self.players[player]

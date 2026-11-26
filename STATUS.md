@@ -6,7 +6,7 @@
 
 [11 月 25 日 CA 裁定](inbox/2026-11-25-ceiling-result-review.md)接受天花板实验的「部分」判定，关闭重写原上半梯的路线。[现版本的 13 级方案草案](reports/phase-B-standard-1-options.md)已备，未新增对局；去向待原型结果出来后由用户决定。
 
-[能量激活规则](rules/proto-energy-1.md)和[公开图筛选预登记](docs/PHASE_B_DEPTH_SCREEN.md)已就绪。现有测试 388 项通过，104 份原 standard-1 回放的 29,404 回合核验通过，变更前后的规范状态和协议文本逐字节比较一致。开始执行公开图筛选；只有过筛才开新的测试会话，calibration、grading 和最终 holdout 继续封存。
+[能量激活筛选](reports/phase-B-depth-energy-screen.md)完成 7,440 局，三档都未过筛。按预定分支启用一次[远程兵种](rules/proto-ranged-1.md)，[公开图预登记](docs/PHASE_B_RANGED_SCREEN.md)为 2,480 局。完整测试 393 项通过，104 份原 `standard-1` 回放的 29,404 回合再次核验，标准模式的规范状态和协议文本逐字节一致。只有原型过筛才开启测试会话，calibration、grading 和最终 holdout 继续封存。
 
 ## 当前冻结版结案
 

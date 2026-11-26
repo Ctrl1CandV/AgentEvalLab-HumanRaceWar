@@ -34,6 +34,14 @@ PARAMETERS = MappingProxyType({
 
 
 TOWER_ACTIVATION_COST = "TOWER_ACTIVATION_COST"
+RANGED_UNLOCK_COST = "RANGED_UNLOCK_COST"
+RANGED_PARAMETERS = MappingProxyType({
+    RANGED_UNLOCK_COST: 160,
+    "RANGED_COST": 100,
+    "RANGED_HP": 60,
+    "RANGED_DMG": 15,
+    "RANGED_RANGE": 2,
+})
 
 
 @dataclass(frozen=True)
@@ -46,6 +54,7 @@ class UnitSpec:
 UNIT_TYPES = MappingProxyType({
     "W": UnitSpec("WORKER", can_mine=True, can_build=True),
     "S": UnitSpec("SOLDIER"),
+    "R": UnitSpec("RANGED"),
 })
 
 
@@ -56,7 +65,12 @@ class Rules:
 
     @classmethod
     def from_dict(cls, overrides: Mapping[str, object]) -> Rules:
-        unknown = set(overrides) - PARAMETERS.keys() - {TOWER_ACTIVATION_COST}
+        ranged = RANGED_PARAMETERS.keys() & overrides.keys()
+        if ranged and (ranged != RANGED_PARAMETERS.keys() or TOWER_ACTIVATION_COST in overrides or any(
+            type(overrides[key]) is not int or overrides[key] != value for key, value in RANGED_PARAMETERS.items()
+        )):
+            raise ValueError("proto-ranged-1 requires its complete frozen configuration without other variants")
+        unknown = set(overrides) - PARAMETERS.keys() - {TOWER_ACTIVATION_COST} - RANGED_PARAMETERS.keys()
         if unknown:
             raise ValueError("unknown rule parameter")
         values = {}
@@ -71,10 +85,17 @@ class Rules:
                 raise ValueError(f"{TOWER_ACTIVATION_COST} must be an integer in [1, 200]")
             values[TOWER_ACTIVATION_COST] = price
             return cls(MappingProxyType(values), "proto-energy-1")
+        if ranged:
+            values.update(RANGED_PARAMETERS)
+            return cls(MappingProxyType(values), "proto-ranged-1")
         return cls(MappingProxyType(values))
 
     def __getitem__(self, name: str) -> int:
         return self.values[name]
+
+    @property
+    def has_ranged(self) -> bool:
+        return RANGED_UNLOCK_COST in self.values
 
     def unit_value(self, kind: str, attribute: str) -> int:
         return self[f"{UNIT_TYPES[kind].prefix}_{attribute}"]
@@ -83,7 +104,7 @@ class Rules:
 def load_prototype(path: Path) -> dict[str, int]:
     """Read an explicit prototype override, not a replacement for standard-1."""
     values = json.loads(path.read_bytes())
-    if not isinstance(values, dict) or values.keys() != {TOWER_ACTIVATION_COST}:
-        raise ValueError("expected a proto-energy-1 override with only TOWER_ACTIVATION_COST")
+    if not isinstance(values, dict) or values.keys() not in ({TOWER_ACTIVATION_COST}, RANGED_PARAMETERS.keys()):
+        raise ValueError("expected only the parameters of one prototype ruleset")
     Rules.from_dict(values)
     return values

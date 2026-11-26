@@ -15,7 +15,7 @@ from arena.core.game import Event, Result, Warning
 from .maps import parse_map
 from .model import DIRECTIONS, Order, Orders, Player, State, Tower, Unit, distance
 from .orders import order_slot, parse_orders, target_at, target_owner, validate
-from .rules import Rules, TOWER_ACTIVATION_COST
+from .rules import RANGED_UNLOCK_COST, Rules, TOWER_ACTIVATION_COST
 
 DEFAULT_LIMITS = {"TURN_CPU_MS": 100, "INIT_CPU_MS": 2000, "BANK_MS": 3000}
 
@@ -83,6 +83,8 @@ class Outpost:
         self._check_player(state, player)
         lines = [f"TURN {state.turn + 1}"]
         lines.extend(f"PLAYER {p.id} {p.energy} {p.score} {p.base_hp} {p.deposited}" for p in state.players)
+        if state.rules.has_ranged:
+            lines.extend(f"TECH {p.id} R {int(p.id in state.ranged_players)}" for p in state.players)
         lines.extend(f"UNIT {u.id} {u.owner} {u.kind} {u.x} {u.y} {u.hp} {u.carry}"
                      for u in sorted(state.units.values(), key=lambda unit: unit.id))
         lines.extend(f"TOWER {t.x} {t.y} {t.owner} {t.hp}"
@@ -207,6 +209,10 @@ class Outpost:
         for player, order in commands:
             if order.op == "SPAWN":
                 by_cell[order.pos].append((player, order))
+            elif order.op == "UNLOCK":
+                state.players[player].energy -= state.rules[RANGED_UNLOCK_COST]
+                state.ranged_players.add(player)
+                state.last_events.append(Event(3, "UNLOCKED", (player, "R")))
         for pos, attempts in sorted(by_cell.items()):
             if len(attempts) > 1:
                 for player, order in attempts:
@@ -369,6 +375,7 @@ class Outpost:
             "ore": [(x, y, n) for (x, y), n in sorted(state.ore.items())],
             "events": [asdict(e) for e in sorted(state.last_events, key=event_key)],
             "result": None if state.outcome is None else asdict(state.outcome),
+            **({"rangedPlayers": sorted(state.ranged_players)} if state.rules.has_ranged else {}),
         }
 
     def state_hash(self, state: State) -> str:

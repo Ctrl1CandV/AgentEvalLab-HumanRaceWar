@@ -64,15 +64,20 @@ class ReviewPolicyTests(unittest.TestCase):
                     value = node.value
                 if isinstance(value, str) and value.isupper(): codes.add(value)
         standard = (ROOT / "rules/rules.md").read_text()
-        variant = (ROOT / "rules/proto-energy-1.md").read_text()
-        prototype_codes = {"NOT_OWN_TOWER"}
+        variants = {
+            "proto-energy-1": {"NOT_OWN_TOWER"},
+            "proto-ranged-1": {"TECH_LOCKED", "ALREADY_UNLOCKED", "RANGE_BLOCKED"},
+        }
+        prototype_codes = set().union(*variants.values())
         self.assertLessEqual(prototype_codes, codes)
         self.assertEqual(len(codes - prototype_codes), 31)
         for code in codes - prototype_codes:
             self.assertIn(f"`{code}`", standard)
-        for code in prototype_codes:
-            self.assertIn(f"`{code}`", variant)
-            self.assertNotIn(f"`{code}`", standard)
+        for name, reason_codes in variants.items():
+            variant = (ROOT / "rules" / f"{name}.md").read_text()
+            for code in reason_codes:
+                self.assertIn(f"`{code}`", variant)
+                self.assertNotIn(f"`{code}`", standard)
 
 
 if __name__ == "__main__":
