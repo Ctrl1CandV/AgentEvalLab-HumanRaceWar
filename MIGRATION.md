@@ -24,8 +24,12 @@ umask 077
 test ! -e "$HRW_HOME"
 test ! -L "$HRW_HOME"
 mkdir -p "$(dirname "$HRW_HOME")"
-git clone git@github.com:Ctrl1CandV/AgentEvalLab-HumanRaceWar.git "$HRW_HOME"
+git clone --depth 1 --single-branch --branch main --no-tags --no-checkout \
+  git@github.com:Ctrl1CandV/AgentEvalLab-HumanRaceWar.git "$HRW_HOME"
 cd "$HRW_HOME"
+if ! git cat-file -e "$HRW_REVIEWED_COMMIT^{commit}" 2>/dev/null; then
+  git fetch --depth 1 --no-tags origin "$HRW_REVIEWED_COMMIT"
+fi
 git switch --detach "$HRW_REVIEWED_COMMIT"
 test "$(git rev-parse HEAD)" = "$HRW_REVIEWED_COMMIT"
 python3.13 -m venv --without-pip .venv
@@ -41,7 +45,7 @@ test -f private/ladder/ladder-1.0.0.json
 test -f private/ladder/adjacent-reference-1.0.0.json
 ```
 
-对照 [C 报告](reports/phase-C.md)的 SHA-256。除了相邻基准所需的逐局判定记录，不包含逐局原件、回放或作者档案。holdout 随包保全，不再打。
+浅克隆只取迁移所需的公开版本；若 CA 确认的提交不在浅克隆内，按完整提交号补取。对照 [C 报告](reports/phase-C.md)的 SHA-256。除了相邻基准所需的逐局判定记录，不包含逐局原件、回放或作者档案。holdout 随包保全，不再打。
 
 ## 2. 运行测试
 
