@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "status": "proposal only; not approved for execution",
+  "ruleset": "standard-1",
+  "newGames": 0,
+  "priorResultsUnmodified": true,
+  "sourceEvidence": ["data/standard-budget.json", "data/phase-b/ceiling-result.json", "data/phase-b/one-trick-baseline.json", "reports/phase-B-claude-r15-strength.md", "reports/phase-B-claude-r18-strength.md"],
+  "estimatedMainScore": {
+    "oldOfficialPointEstimate": 0.9186507936507936,
+    "l12CandidateLabels": ["f1-openfort", "f2-press"],
+    "standardFinalSubmissionDevVsL12Candidates": [0.45625, 0.459375],
+    "l12DevMean": 0.4578125,
+    "newPointEstimateHybrid": 0.883201694139194,
+    "proposedGateExclusive": 0.9,
+    "maxL12AtUnchangedOldScoreExclusive": 0.6761904761904773,
+    "limitations": "Not a formal score or confidence interval. Uses older submission with known public development exposure. Does not price roster change at L8, unknown formal L12 strength or variation across fresh submissions."
+  },
+  "l8Options": {
+    "publicDiagnostic": "Z-harass tier-level result only",
+    "originalPoints": 14,
+    "originalGames": 96,
+    "maxPointsAtHalfPointResolution": 9.5,
+    "minimumPointsReduction": 4.5,
+    "inventoryShortlist": ["r15 control", "r18 economy"],
+    "antiOneTrickAndFormalCalibratedTierFitProven": false,
+    "stopBeforeHoldoutIfRepairFails": true
+  },
+  "forecast": {
+    "formalCalibrationGamesPerPair": 48,
+    "newL12CalibrationPairs": 11,
+    "newL12CalibrationGames": 528,
+    "newL8CalibrationPairsOneReplacement": 9,
+    "newL8CalibrationGamesOneReplacement": 432,
+    "newL8CalibrationPairsTwoReplacements": 17,
+    "newL8CalibrationGamesTwoReplacements": 816,
+    "newIndependentAstraSessions": 4,
+    "members": 28,
+    "scoredGamesPerIndependentSubmission": 392,
+    "newIndependentScoredGames": 1568,
+    "publicPracticeGames": 12,
+    "newAntiOneTrickGamesOneReplacement": 1392,
+    "newAntiOneTrickGamesTwoReplacements": 1824,
+    "finalHoldoutGamesIfAllPriorGatesPass": 2208,
+    "newGamesOneReplacementExcludingOptionalDevAndRetries": 6140,
+    "newGamesTwoReplacementsExcludingOptionalDevAndRetries": 6956
+  },
+  "calibrationUsed": false,
+  "gradingUsed": false,
+  "holdoutUsed": false
+}
