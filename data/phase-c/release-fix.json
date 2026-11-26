@@ -1,0 +1,702 @@
+{
+  "schemaVersion": 1,
+  "scope": "release fix and development-host migration rehearsal",
+  "originalLadderBytesUnchanged": true,
+  "adjacentR1": {
+    "games": 1344,
+    "expected": 1344,
+    "infraErrors": 0,
+    "infraRetryAttempts": 0,
+    "wallSeconds": 131.75657964600003,
+    "passed": true,
+    "faultGames": 0
+  },
+  "adjacentR2": {
+    "games": 1344,
+    "expected": 1344,
+    "infraErrors": 0,
+    "infraRetryAttempts": 0,
+    "wallSeconds": 131.17461347800003,
+    "passed": true,
+    "faultGames": 0,
+    "gameAgreement": {
+      "same": 1344,
+      "compared": 1344,
+      "rate": 1.0,
+      "pairs": [
+        {
+          "lower": "L0",
+          "upper": "L1",
+          "same": 96,
+          "compared": 96,
+          "rate": 1.0
+        },
+        {
+          "lower": "L1",
+          "upper": "L2",
+          "same": 96,
+          "compared": 96,
+          "rate": 1.0
+        },
+        {
+          "lower": "L2",
+          "upper": "L3",
+          "same": 96,
+          "compared": 96,
+          "rate": 1.0
+        },
+        {
+          "lower": "L3",
+          "upper": "L4",
+          "same": 96,
+          "compared": 96,
+          "rate": 1.0
+        },
+        {
+          "lower": "L4",
+          "upper": "L5",
+          "same": 144,
+          "compared": 144,
+          "rate": 1.0
+        },
+        {
+          "lower": "L5",
+          "upper": "L6",
+          "same": 144,
+          "compared": 144,
+          "rate": 1.0
+        },
+        {
+          "lower": "L6",
+          "upper": "L7",
+          "same": 96,
+          "compared": 96,
+          "rate": 1.0
+        },
+        {
+          "lower": "L7",
+          "upper": "L8",
+          "same": 96,
+          "compared": 96,
+          "rate": 1.0
+        },
+        {
+          "lower": "L8",
+          "upper": "L9",
+          "same": 96,
+          "compared": 96,
+          "rate": 1.0
+        },
+        {
+          "lower": "L9",
+          "upper": "L10",
+          "same": 96,
+          "compared": 96,
+          "rate": 1.0
+        },
+        {
+          "lower": "L10",
+          "upper": "L11",
+          "same": 144,
+          "compared": 144,
+          "rate": 1.0
+        },
+        {
+          "lower": "L11",
+          "upper": "L12",
+          "same": 144,
+          "compared": 144,
+          "rate": 1.0
+        }
+      ]
+    },
+    "comparisons": [
+      {
+        "lower": "L0",
+        "upper": "L1",
+        "gate": false,
+        "consistent": true,
+        "referenceEloGap": null,
+        "eloGap": null,
+        "eloDelta": null,
+        "referenceScoreRate": 0.9791666666666666,
+        "scoreRate": 0.9791666666666666,
+        "scoreDelta": 0.0,
+        "games": 96
+      },
+      {
+        "lower": "L1",
+        "upper": "L2",
+        "gate": false,
+        "consistent": true,
+        "referenceEloGap": 214.37865457996998,
+        "eloGap": 214.37865457996998,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.7708333333333334,
+        "scoreRate": 0.7708333333333334,
+        "scoreDelta": 0.0,
+        "games": 96
+      },
+      {
+        "lower": "L2",
+        "upper": "L3",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 38.80238375541376,
+        "eloGap": 38.80238375541376,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.5520833333333334,
+        "scoreRate": 0.5520833333333334,
+        "scoreDelta": 0.0,
+        "games": 96
+      },
+      {
+        "lower": "L3",
+        "upper": "L4",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 87.7711679683315,
+        "eloGap": 87.7711679683315,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.6145833333333334,
+        "scoreRate": 0.6145833333333334,
+        "scoreDelta": 0.0,
+        "games": 96
+      },
+      {
+        "lower": "L4",
+        "upper": "L5",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 75.21051522959048,
+        "eloGap": 75.21051522959048,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.5972222222222222,
+        "scoreRate": 0.5972222222222222,
+        "scoreDelta": 0.0,
+        "games": 144
+      },
+      {
+        "lower": "L5",
+        "upper": "L6",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 291.88536014549123,
+        "eloGap": 291.88536014549123,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.8194444444444444,
+        "scoreRate": 0.8194444444444444,
+        "scoreDelta": 0.0,
+        "games": 144
+      },
+      {
+        "lower": "L6",
+        "upper": "L7",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 268.53340128436923,
+        "eloGap": 268.53340128436923,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.8020833333333334,
+        "scoreRate": 0.8020833333333334,
+        "scoreDelta": 0.0,
+        "games": 96
+      },
+      {
+        "lower": "L7",
+        "upper": "L8",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 87.78466611795574,
+        "eloGap": 87.78466611795574,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.6145833333333334,
+        "scoreRate": 0.6145833333333334,
+        "scoreDelta": 0.0,
+        "games": 96
+      },
+      {
+        "lower": "L8",
+        "upper": "L9",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 121.87529775884093,
+        "eloGap": 121.87529775884093,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.6666666666666666,
+        "scoreRate": 0.6666666666666666,
+        "scoreDelta": 0.0,
+        "games": 96
+      },
+      {
+        "lower": "L9",
+        "upper": "L10",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 181.9836231989226,
+        "eloGap": 181.9836231989226,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.7291666666666666,
+        "scoreRate": 0.7291666666666666,
+        "scoreDelta": 0.0,
+        "games": 96
+      },
+      {
+        "lower": "L10",
+        "upper": "L11",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 145.12276957792199,
+        "eloGap": 145.12276957792199,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.6875,
+        "scoreRate": 0.6875,
+        "scoreDelta": 0.0,
+        "games": 144
+      },
+      {
+        "lower": "L11",
+        "upper": "L12",
+        "gate": true,
+        "consistent": true,
+        "referenceEloGap": 248.5563691446033,
+        "eloGap": 248.5563691446033,
+        "eloDelta": 0.0,
+        "referenceScoreRate": 0.8055555555555556,
+        "scoreRate": 0.8055555555555556,
+        "scoreDelta": 0.0,
+        "games": 144
+      }
+    ]
+  },
+  "legacyFullFitComparison": [
+    {
+      "lower": "L0",
+      "upper": "L1",
+      "formalGap": 1029.4481660926465,
+      "adjacentGap": null,
+      "delta": null,
+      "passedOldRule": false
+    },
+    {
+      "lower": "L1",
+      "upper": "L2",
+      "formalGap": 284.47132834428294,
+      "adjacentGap": 214.37865457996998,
+      "delta": -70.09267376431296,
+      "passedOldRule": false
+    },
+    {
+      "lower": "L2",
+      "upper": "L3",
+      "formalGap": 56.95485264602303,
+      "adjacentGap": 38.80238375541376,
+      "delta": -18.15246889060927,
+      "passedOldRule": true
+    },
+    {
+      "lower": "L3",
+      "upper": "L4",
+      "formalGap": 155.01170470780306,
+      "adjacentGap": 87.7711679683315,
+      "delta": -67.24053673947157,
+      "passedOldRule": false
+    },
+    {
+      "lower": "L4",
+      "upper": "L5",
+      "formalGap": 97.65251959180421,
+      "adjacentGap": 75.21051522959048,
+      "delta": -22.442004362213723,
+      "passedOldRule": true
+    },
+    {
+      "lower": "L5",
+      "upper": "L6",
+      "formalGap": 191.33802518054173,
+      "adjacentGap": 291.88536014549123,
+      "delta": 100.5473349649495,
+      "passedOldRule": false
+    },
+    {
+      "lower": "L6",
+      "upper": "L7",
+      "formalGap": 190.3177856218924,
+      "adjacentGap": 268.53340128436923,
+      "delta": 78.21561566247684,
+      "passedOldRule": false
+    },
+    {
+      "lower": "L7",
+      "upper": "L8",
+      "formalGap": 115.8935152674037,
+      "adjacentGap": 87.78466611795574,
+      "delta": -28.108849149447963,
+      "passedOldRule": true
+    },
+    {
+      "lower": "L8",
+      "upper": "L9",
+      "formalGap": 107.80195134523547,
+      "adjacentGap": 121.87529775884093,
+      "delta": 14.073346413605464,
+      "passedOldRule": true
+    },
+    {
+      "lower": "L9",
+      "upper": "L10",
+      "formalGap": 189.90523258324242,
+      "adjacentGap": 181.9836231989226,
+      "delta": -7.921609384319822,
+      "passedOldRule": true
+    },
+    {
+      "lower": "L10",
+      "upper": "L11",
+      "formalGap": 119.6604385701819,
+      "adjacentGap": 145.12276957792199,
+      "delta": 25.46233100774009,
+      "passedOldRule": true
+    },
+    {
+      "lower": "L11",
+      "upper": "L12",
+      "formalGap": 222.57141658639512,
+      "adjacentGap": 248.5563691446033,
+      "delta": 25.984952558208192,
+      "passedOldRule": true
+    }
+  ],
+  "legacyRulePassed": false,
+  "frozenP1": {
+    "reportsCompared": 38,
+    "fieldComparison": "canonical JSON bytes for every scoring field; matched original and last published proposal",
+    "oldConfigSha256": "925aaa9780a67b387ed64b3cfbe300d8b1a9aa15db2a7cd24b8a347b7a79ce07",
+    "initialRunConfigSha256": "4d09533741a8f73b594246aeca5db286611c9cc17f32f6f6a9f7ff81d1965239",
+    "newConfigSha256": "b0e5756b8252820f07af3878084149d2b0a8f5145fe3d4bd603ad049551089c6",
+    "matchedAll": true,
+    "newGames": 0
+  },
+  "astra": {
+    "scheduleComparison": {
+      "retainedMembers": 26,
+      "sameMapSetMembers": 0,
+      "sameSlotIndexMembers": 26,
+      "oldGamesPerSubmission": 364,
+      "retainedGamesPerSubmission": 364,
+      "sharedMapAndSeatGames": 0,
+      "sameIdentityAndSeatPolicy": true,
+      "mapFamilies": {
+        "old": "calibration",
+        "new": "grading"
+      }
+    },
+    "submissions": {
+      "blind": {
+        "previousTierOutcome": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9285714285714286,
+          1.0,
+          0.9642857142857143,
+          0.9642857142857143,
+          0.8571428571428572,
+          0.9285714285714286,
+          0.6071428571428572,
+          0.5238095238095238
+        ],
+        "outcomeDeltaL0ToL11": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0714285714285714,
+          -0.023809523809523725,
+          -0.0357142857142857,
+          0.0,
+          -0.0714285714285714,
+          -0.1071428571428572,
+          0.1428571428571428,
+          0.023809523809523725
+        ],
+        "newTierOutcome": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9761904761904763,
+          0.9285714285714286,
+          0.9642857142857143,
+          0.7857142857142858,
+          0.8214285714285714,
+          0.75,
+          0.5476190476190476,
+          0.21428571428571427
+        ],
+        "newTierHeadline": [
+          1.0,
+          0.9762650912019022,
+          0.9419436423867907,
+          0.9413966567681162,
+          0.9643788153470123,
+          0.9090293686264859,
+          0.8585559572852228,
+          0.8824395241951748,
+          0.7527346489032589,
+          0.7602541835459268,
+          0.7110249658942887,
+          0.543389346869772,
+          0.29041925977646793
+        ],
+        "oldHeadlineOutcomeOnly": 0.8978174603174603,
+        "newHeadlineOutcomeOnly": 0.8452380952380953,
+        "deltaFromPreviousTiers": -8.540177112501205e-18,
+        "deltaFromAddedTier": -0.05257936507936508,
+        "wasVisibleInCeiling": true
+      },
+      "informed": {
+        "previousTierOutcome": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9642857142857143,
+          0.9642857142857143,
+          0.9285714285714286,
+          0.8571428571428571,
+          0.6428571428571428,
+          0.5476190476190476
+        ],
+        "outcomeDeltaL0ToL11": [
+          0.0,
+          0.0,
+          0.0,
+          -0.0357142857142857,
+          0.0,
+          -0.023809523809523725,
+          0.0357142857142857,
+          -0.0357142857142857,
+          0.0,
+          -0.3214285714285714,
+          -0.1428571428571428,
+          -0.28571428571428564
+        ],
+        "newTierOutcome": [
+          1.0,
+          1.0,
+          1.0,
+          0.9642857142857143,
+          1.0,
+          0.9761904761904763,
+          1.0,
+          0.9285714285714286,
+          0.9285714285714286,
+          0.5357142857142857,
+          0.5,
+          0.2619047619047619,
+          0.25
+        ],
+        "newTierHeadline": [
+          0.9913256582492916,
+          0.9545257085357933,
+          0.9224414336550526,
+          0.9015911375980082,
+          0.9394967971402449,
+          0.898487198102982,
+          0.9077175204766458,
+          0.8482340644270971,
+          0.8680149752559234,
+          0.5312239931370184,
+          0.49753184015651986,
+          0.31189170361180846,
+          0.303513155196821
+        ],
+        "oldHeadlineOutcomeOnly": 0.9087301587301587,
+        "newHeadlineOutcomeOnly": 0.7957875457875457,
+        "deltaFromPreviousTiers": -0.06227106227106226,
+        "deltaFromAddedTier": -0.05067155067155067,
+        "wasVisibleInCeiling": false
+      },
+      "phase1": {
+        "previousTierOutcome": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9642857142857143,
+          0.9523809523809524,
+          0.9285714285714286,
+          0.9285714285714286,
+          0.9642857142857143,
+          0.6785714285714286,
+          0.5714285714285714,
+          0.42857142857142855
+        ],
+        "outcomeDeltaL0ToL11": [
+          0.0,
+          0.0,
+          -0.0714285714285714,
+          -0.0357142857142857,
+          0.0357142857142857,
+          0.04761904761904756,
+          0.0,
+          -0.0714285714285714,
+          0.0,
+          0.0357142857142857,
+          0.0,
+          -0.047619047619047616
+        ],
+        "newTierOutcome": [
+          1.0,
+          1.0,
+          0.9285714285714286,
+          0.9642857142857143,
+          1.0,
+          1.0,
+          0.9285714285714286,
+          0.8571428571428572,
+          0.9642857142857143,
+          0.7142857142857143,
+          0.5714285714285714,
+          0.38095238095238093,
+          0.39285714285714285
+        ],
+        "newTierHeadline": [
+          1.0,
+          0.9772121526561577,
+          0.9089299751916149,
+          0.9351899984905924,
+          0.9735380990930442,
+          0.9523585837557599,
+          0.8908959785246089,
+          0.8303761166228985,
+          0.9260168875625372,
+          0.6806243273525511,
+          0.5760256414376506,
+          0.42046467181164493,
+          0.43170379447906493
+        ],
+        "oldHeadlineOutcomeOnly": 0.8680555555555555,
+        "newHeadlineOutcomeOnly": 0.8232600732600732,
+        "deltaFromPreviousTiers": -0.008241758241758242,
+        "deltaFromAddedTier": -0.03655372405372405,
+        "wasVisibleInCeiling": false
+      },
+      "phase2": {
+        "previousTierOutcome": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9642857142857143,
+          0.9642857142857143,
+          0.8214285714285714,
+          0.75,
+          0.5238095238095238
+        ],
+        "outcomeDeltaL0ToL11": [
+          0.0,
+          0.0,
+          -0.0357142857142857,
+          -0.0714285714285714,
+          0.0,
+          0.0,
+          -0.0714285714285714,
+          -0.07142857142857151,
+          0.0357142857142857,
+          -0.0357142857142857,
+          -0.1428571428571428,
+          0.04761904761904767
+        ],
+        "newTierOutcome": [
+          1.0,
+          1.0,
+          0.9642857142857143,
+          0.9285714285714286,
+          1.0,
+          1.0,
+          0.9285714285714286,
+          0.8928571428571428,
+          1.0,
+          0.7857142857142857,
+          0.6071428571428572,
+          0.5714285714285715,
+          0.4642857142857143
+        ],
+        "newTierHeadline": [
+          1.0,
+          0.9836420313083425,
+          0.9383119577784151,
+          0.8982073546031129,
+          0.9719024897482285,
+          0.9532082619322396,
+          0.8861316230344998,
+          0.8545103236251511,
+          0.9536656439534231,
+          0.7439906435368383,
+          0.6037320415316961,
+          0.5778190201619422,
+          0.4884065061472139
+        ],
+        "oldHeadlineOutcomeOnly": 0.9186507936507936,
+        "newHeadlineOutcomeOnly": 0.8571428571428571,
+        "deltaFromPreviousTiers": -0.02655677655677655,
+        "deltaFromAddedTier": -0.034951159951159945,
+        "wasVisibleInCeiling": true
+      }
+    },
+    "newGames": 0
+  },
+  "noiseReference": {
+    "code": "E-r02",
+    "cpuMsPerTurn": 0.6040500211412427,
+    "headline": 0.6035466693282732,
+    "headlineOutcomeOnly": 0.5998168498168498
+  },
+  "publicTimingLocks": {
+    "attachJobs": [
+      1,
+      6
+    ],
+    "evidence": "Both checksum entries matched the dispatched item 6 phase-2 workspace manifest."
+  },
+  "runtimeTests": {
+    "testsRun": 418,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "measuredTestWallSeconds": 108.186474564
+  },
+  "compatibility": {
+    "replays": 104,
+    "turns": 29404,
+    "canonicalStateAndProtocolBytesSame": true
+  },
+  "publicExport": {
+    "entries": 108,
+    "manifestSha256": "5c48e58e25e8ae87cca6970eb6dc0715cbca5117ba1989025985a0bcbc677c96",
+    "allowlistVerified": true,
+    "cliSmokeChecked": true
+  },
+  "privatePackage": {
+    "filename": "humanracewar-1.0.0-private-2.tar",
+    "sha256": "2f51dfce02a7861bdffb8572f89b5c811dc5e3433884a272dbbc4ba17591d13b",
+    "bytes": 3461120,
+    "originalEntriesUnchanged": 110,
+    "addedOnlyAdjacentReference": true,
+    "oldPackageSuperseded": true,
+    "cleanExtractionVerified": true
+  },
+  "newGamesExcludingFixtures": 2688,
+  "formalEvaluationHostMigrationRun": false,
+  "agentEvalLabIntegrationInThisWorkOrder": false,
+  "rehearsal": null
+}

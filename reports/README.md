@@ -2,13 +2,13 @@
 
 当前停点见 [STATUS](../STATUS.md)。执行权限以用户最新指令和有效裁定为准；[综合会话交接](../docs/CLAUDE_EVALUATION_HANDOFF.md)说明两个 worktree 的写入边界。
 
-## standard-1 1.0.0：CA 最终审查入口
+## standard-1 1.0.0：发布修正与迁移
 
-- [发布工单](../inbox/2026-11-26-release-work-order.md) · [B 阶段判定与 L12 选择](phase-B-ladder-1.0.md) · [B 聚合](../data/phase-c/ladder-1.0.0.json)
-- [C 阶段交付及 P1 提案](phase-C.md) · [C 聚合](../data/phase-c/release-evaluation.json) · [自检日志](../logs/self-calibration.log)
+- [最终审查裁定与修正工单](../inbox/2026-11-26-release-fix-work-order.md) · [B 阶段判定](phase-B-ladder-1.0.md) · [B 聚合](../data/phase-c/ladder-1.0.0.json)
+- [C 阶段发布修正](phase-C.md#发布修正) · [C 阶段逐级聚合](../data/phase-c/release-evaluation.json) · [修正与演练聚合](../data/phase-c/release-fix.json)
 - [评测机迁移说明](../MIGRATION.md) · [公开材料导出](../package/README.md)
 
-请按工单一起审查 B、C：核对 L12 选择、第 7 条及唯一留出的披露、公开与私有材料边界、评分和练习赛接口，以及 P1 的三项证据。P1 待用户确认；第 6 条仍由 AgentEvalLab 第三次验证实测。这次提交是开发机交付，不是 B 全部通过，也不是评测机已迁移或已复核。
+B 已按「1.0.0 带披露」接受，P1 已冻结；第 6 条仍由 AgentEvalLab 第三次验证实测。本提交仅供开发机演练，不交迁移复核。
 
 ## 游戏深度原型：两个方案均未过筛
 
