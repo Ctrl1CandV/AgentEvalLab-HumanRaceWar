@@ -695,8 +695,366 @@
     "oldPackageSuperseded": true,
     "cleanExtractionVerified": true
   },
-  "newGamesExcludingFixtures": 2688,
+  "newGamesExcludingFixtures": 5614,
   "formalEvaluationHostMigrationRun": false,
   "agentEvalLabIntegrationInThisWorkOrder": false,
-  "rehearsal": null
+  "rehearsal": {
+    "number": 2,
+    "commit": "bf0726b5e767b20bb1e3df51d43aa0ac50463eea",
+    "unmodifiedShellBlocks": true,
+    "passed": true,
+    "stepWallSeconds": {
+      "1": 11.95335418999997,
+      "2": 106.95519673500002,
+      "3": 2.6213255170000025,
+      "4": 249.10079460600008,
+      "5": 171.90700195,
+      "6": 4.9993258690000175,
+      "7": 9.760730838999962
+    },
+    "wallSeconds": 557.298935005,
+    "testCount": 418,
+    "rehearsalGames": 2926,
+    "timingLocks": {
+      "1": {
+        "speedFactor": 0.530534737195769,
+        "limits": {
+          "BANK_MS": 1592,
+          "INIT_CPU_MS": 1062,
+          "TURN_CPU_MS": 54
+        },
+        "sandbox": "bwrap"
+      },
+      "6": {
+        "speedFactor": 0.6098129298252887,
+        "limits": {
+          "BANK_MS": 1830,
+          "INIT_CPU_MS": 1220,
+          "TURN_CPU_MS": 61
+        },
+        "sandbox": "bwrap"
+      }
+    },
+    "adjacent": {
+      "games": 1344,
+      "expected": 1344,
+      "infraErrors": 0,
+      "infraRetryAttempts": 0,
+      "wallSeconds": 249.02813630800006,
+      "passed": true,
+      "faultGames": 0,
+      "gameAgreement": {
+        "same": 1344,
+        "compared": 1344,
+        "rate": 1.0,
+        "pairs": [
+          {
+            "lower": "L0",
+            "upper": "L1",
+            "same": 96,
+            "compared": 96,
+            "rate": 1.0
+          },
+          {
+            "lower": "L1",
+            "upper": "L2",
+            "same": 96,
+            "compared": 96,
+            "rate": 1.0
+          },
+          {
+            "lower": "L2",
+            "upper": "L3",
+            "same": 96,
+            "compared": 96,
+            "rate": 1.0
+          },
+          {
+            "lower": "L3",
+            "upper": "L4",
+            "same": 96,
+            "compared": 96,
+            "rate": 1.0
+          },
+          {
+            "lower": "L4",
+            "upper": "L5",
+            "same": 144,
+            "compared": 144,
+            "rate": 1.0
+          },
+          {
+            "lower": "L5",
+            "upper": "L6",
+            "same": 144,
+            "compared": 144,
+            "rate": 1.0
+          },
+          {
+            "lower": "L6",
+            "upper": "L7",
+            "same": 96,
+            "compared": 96,
+            "rate": 1.0
+          },
+          {
+            "lower": "L7",
+            "upper": "L8",
+            "same": 96,
+            "compared": 96,
+            "rate": 1.0
+          },
+          {
+            "lower": "L8",
+            "upper": "L9",
+            "same": 96,
+            "compared": 96,
+            "rate": 1.0
+          },
+          {
+            "lower": "L9",
+            "upper": "L10",
+            "same": 96,
+            "compared": 96,
+            "rate": 1.0
+          },
+          {
+            "lower": "L10",
+            "upper": "L11",
+            "same": 144,
+            "compared": 144,
+            "rate": 1.0
+          },
+          {
+            "lower": "L11",
+            "upper": "L12",
+            "same": 144,
+            "compared": 144,
+            "rate": 1.0
+          }
+        ]
+      },
+      "comparisons": [
+        {
+          "lower": "L0",
+          "upper": "L1",
+          "gate": false,
+          "consistent": true,
+          "referenceEloGap": null,
+          "eloGap": null,
+          "eloDelta": null,
+          "referenceScoreRate": 0.9791666666666666,
+          "scoreRate": 0.9791666666666666,
+          "scoreDelta": 0.0,
+          "games": 96
+        },
+        {
+          "lower": "L1",
+          "upper": "L2",
+          "gate": false,
+          "consistent": true,
+          "referenceEloGap": 214.37865457996998,
+          "eloGap": 214.37865457996998,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.7708333333333334,
+          "scoreRate": 0.7708333333333334,
+          "scoreDelta": 0.0,
+          "games": 96
+        },
+        {
+          "lower": "L2",
+          "upper": "L3",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 38.80238375541376,
+          "eloGap": 38.80238375541376,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.5520833333333334,
+          "scoreRate": 0.5520833333333334,
+          "scoreDelta": 0.0,
+          "games": 96
+        },
+        {
+          "lower": "L3",
+          "upper": "L4",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 87.7711679683315,
+          "eloGap": 87.7711679683315,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.6145833333333334,
+          "scoreRate": 0.6145833333333334,
+          "scoreDelta": 0.0,
+          "games": 96
+        },
+        {
+          "lower": "L4",
+          "upper": "L5",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 75.21051522959048,
+          "eloGap": 75.21051522959048,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.5972222222222222,
+          "scoreRate": 0.5972222222222222,
+          "scoreDelta": 0.0,
+          "games": 144
+        },
+        {
+          "lower": "L5",
+          "upper": "L6",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 291.88536014549123,
+          "eloGap": 291.88536014549123,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.8194444444444444,
+          "scoreRate": 0.8194444444444444,
+          "scoreDelta": 0.0,
+          "games": 144
+        },
+        {
+          "lower": "L6",
+          "upper": "L7",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 268.53340128436923,
+          "eloGap": 268.53340128436923,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.8020833333333334,
+          "scoreRate": 0.8020833333333334,
+          "scoreDelta": 0.0,
+          "games": 96
+        },
+        {
+          "lower": "L7",
+          "upper": "L8",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 87.78466611795574,
+          "eloGap": 87.78466611795574,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.6145833333333334,
+          "scoreRate": 0.6145833333333334,
+          "scoreDelta": 0.0,
+          "games": 96
+        },
+        {
+          "lower": "L8",
+          "upper": "L9",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 121.87529775884093,
+          "eloGap": 121.87529775884093,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.6666666666666666,
+          "scoreRate": 0.6666666666666666,
+          "scoreDelta": 0.0,
+          "games": 96
+        },
+        {
+          "lower": "L9",
+          "upper": "L10",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 181.9836231989226,
+          "eloGap": 181.9836231989226,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.7291666666666666,
+          "scoreRate": 0.7291666666666666,
+          "scoreDelta": 0.0,
+          "games": 96
+        },
+        {
+          "lower": "L10",
+          "upper": "L11",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 145.12276957792199,
+          "eloGap": 145.12276957792199,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.6875,
+          "scoreRate": 0.6875,
+          "scoreDelta": 0.0,
+          "games": 144
+        },
+        {
+          "lower": "L11",
+          "upper": "L12",
+          "gate": true,
+          "consistent": true,
+          "referenceEloGap": 248.5563691446033,
+          "eloGap": 248.5563691446033,
+          "eloDelta": 0.0,
+          "referenceScoreRate": 0.8055555555555556,
+          "scoreRate": 0.8055555555555556,
+          "scoreDelta": 0.0,
+          "games": 144
+        }
+      ]
+    },
+    "scores": {
+      "publicBaselines": {
+        "Z-idle": {
+          "headline": 0.014697802197802198,
+          "headlineOutcomeOnly": 0.0,
+          "games": 392,
+          "wallSeconds": 26.257265775000064,
+          "outcomeDeltaFromDev": 0.0
+        },
+        "M-balanced": {
+          "headline": 0.4828839246153527,
+          "headlineOutcomeOnly": 0.45238095238095244,
+          "games": 392,
+          "wallSeconds": 40.979561718000014,
+          "outcomeDeltaFromDev": -4.7619047538471904e-08
+        }
+      },
+      "heavy": "E-r02",
+      "devBaseline": {
+        "headline": 0.6035466693282732,
+        "headlineOutcomeOnly": 0.5998168498168498
+      },
+      "idle": {
+        "headline": 0.6035466693282732,
+        "headlineOutcomeOnly": 0.5998168498168498,
+        "games": 392,
+        "wallSeconds": 44.38945436600011
+      },
+      "loaded": {
+        "headline": 0.6035466693282732,
+        "headlineOutcomeOnly": 0.5998168498168498,
+        "games": 392,
+        "wallSeconds": 59.8708433889999
+      },
+      "repeatIdle": null,
+      "idleMinusDev": {
+        "headline": 0.0,
+        "headlineOutcomeOnly": 0.0
+      },
+      "loadedMinusIdle": {
+        "headline": 0.0,
+        "headlineOutcomeOnly": 0.0
+      },
+      "loadedMinusRepeatIdle": null,
+      "passed": true
+    },
+    "publicExportManifestSha256": "5c48e58e25e8ae87cca6970eb6dc0715cbca5117ba1989025985a0bcbc677c96",
+    "sdkCheckTurns": 5,
+    "exampleGames": 2,
+    "scrimmage": {
+      "status": "complete",
+      "completed": 12,
+      "expected": 12,
+      "infraErrors": 0,
+      "lossReplayCount": 2
+    },
+    "hostLockDirectoryAgreed": true
+  },
+  "priorRehearsal": {
+    "failedAtStep": 1,
+    "reason": "SSH early EOF during full Git clone",
+    "newGames": 0,
+    "keptOriginalEvidence": true
+  }
 }

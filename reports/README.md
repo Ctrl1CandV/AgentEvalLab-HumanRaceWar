@@ -8,7 +8,7 @@
 - [C 阶段发布修正](phase-C.md#发布修正) · [C 阶段逐级聚合](../data/phase-c/release-evaluation.json) · [修正与演练聚合](../data/phase-c/release-fix.json)
 - [评测机迁移说明](../MIGRATION.md) · [公开材料导出](../package/README.md)
 
-B 已按「1.0.0 带披露」接受，P1 已冻结；第 6 条仍由 AgentEvalLab 第三次验证实测。本提交仅供开发机演练，不交迁移复核。
+B 已按「1.0.0 带披露」接受，P1 已冻结；第 6 条仍由 AgentEvalLab 第三次验证实测。发布修正和开发机七步演练已通过。本次交给 CA 做评测机迁移复核；CA 复核通过后，才判定可输出第一版并接入 AgentEvalLab。
 
 ## 游戏深度原型：两个方案均未过筛
 
