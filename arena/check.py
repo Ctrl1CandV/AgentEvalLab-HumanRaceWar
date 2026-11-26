@@ -12,11 +12,11 @@ from arena.core.runner import cpu_hard_limit
 from arena.games.outpost import Outpost
 
 
-def check(source: Path, out: Path, *, turns=5, sandbox='bwrap', map_path=None):
+def check(source: Path, out: Path, *, turns=5, sandbox='bwrap', map_path=None, ruleset=None):
     if type(turns) is not int or not 1 <= turns <= 300: raise ValueError('check turns must be in [1,300]')
     if sandbox not in ('bwrap','plain'): raise ValueError('unknown backend')
     private = ROOT/'private'
-    map_path = map_path or ROOT/'maps/scrimmage/open-01.map'
+    map_path = map_path or ROOT/('maps/public/open-01.map' if ruleset else 'maps/scrimmage/open-01.map')
     if any(p.resolve().is_relative_to(private) for p in (source,map_path)) and not out.resolve().is_relative_to(private):
         raise ValueError('hidden check artifacts must stay private')
     directory = out.resolve()/uuid4().hex; directory.mkdir(parents=True)
@@ -34,7 +34,7 @@ def check(source: Path, out: Path, *, turns=5, sandbox='bwrap', map_path=None):
             bot = prepare(source,directory/'bot',launcher,lease.cpus[0])
             report.update(sha256=bot.digest,compileFault=bot.compile_fault,validationError=bot.validation_error)
             if not bot.compile_fault:
-                game = Outpost(); state = game.new_match(map_path.read_text(),{},[17,29])
+                game = Outpost(); state = game.new_match(map_path.read_text(),ruleset or {},[17,29])
                 connection = Connection(bot,launcher,lease.cpus[0],cpu_hard_limit(game.limits,300))
                 stack.callback(connection.close)
                 replies = []

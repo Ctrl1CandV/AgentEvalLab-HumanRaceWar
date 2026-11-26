@@ -14,8 +14,8 @@ import json
 from arena.core.game import Event, Result, Warning
 from .maps import parse_map
 from .model import DIRECTIONS, Order, Orders, Player, State, Tower, Unit, distance
-from .orders import parse_orders, target_at, target_owner, validate
-from .rules import Rules
+from .orders import order_slot, parse_orders, target_at, target_owner, validate
+from .rules import Rules, TOWER_ACTIVATION_COST
 
 DEFAULT_LIMITS = {"TURN_CPU_MS": 100, "INIT_CPU_MS": 2000, "BANK_MS": 3000}
 
@@ -126,7 +126,7 @@ class Outpost:
             seen = set()
             population = sum(u.owner == player for u in state.units.values())
             for order in packet.commands:
-                slot = order.unit_id if order.unit_id is not None else order.op
+                slot = order_slot(order)
                 if slot in seen or validate(state, player, order, occupied, population) is not None:
                     raise ValueError("orders must be parsed against the current state")
                 seen.add(slot)
@@ -148,8 +148,12 @@ class Outpost:
             self._deposit(state)
             self._build(state, commands)
             self._regenerate(state)
-            for tower in state.towers.values():
-                state.players[tower.owner].score += state.rules["TOWER_POINTS"]
+            price = state.rules.values.get(TOWER_ACTIVATION_COST)
+            if price is None:
+                for tower in state.towers.values():
+                    state.players[tower.owner].score += state.rules["TOWER_POINTS"]
+            else:
+                self._activate_towers(state, commands, price)
             if state.turn >= state.rules["TURNS"]:
                 self._turn_limit(state)
         state.last_events.sort(key=event_key)
@@ -318,6 +322,19 @@ class Outpost:
         for unit in state.units.values():
             if distance(unit.pos, state.players[unit.owner].pos) <= state.rules["REGEN_RANGE"]:
                 unit.hp = min(state.rules.unit_value(unit.kind, "HP"), unit.hp + state.rules["REGEN_HP"])
+
+    @staticmethod
+    def _activate_towers(state: State, commands: list[tuple[int, Order]], price: int) -> None:
+        # Each side spends only its own energy, in the order of its reply.
+        for player, order in commands:
+            if order.op != "ACTIVATE":
+                continue
+            owner = state.players[player]
+            if order.pos not in state.towers or owner.energy < price:
+                continue
+            owner.energy -= price
+            owner.score += state.rules["TOWER_POINTS"]
+            state.last_events.append(Event(9, "ACTIVATED", (*order.pos, player, price)))
 
     @staticmethod
     def _finish(state: State, winner: int | None, reason: str) -> None:

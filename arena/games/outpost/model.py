@@ -94,8 +94,8 @@ class Order:
             return f"MOVE {self.unit_id} {self.direction}"
         if self.op == "SPAWN":
             return f"SPAWN {self.kind} {self.x} {self.y}"
-        if self.op == "FIRE":
-            return f"FIRE {self.x} {self.y}"
+        if self.op in ("FIRE", "ACTIVATE"):
+            return f"{self.op} {self.x} {self.y}"
         return f"{self.op} {self.unit_id} {self.x} {self.y}"
 
 

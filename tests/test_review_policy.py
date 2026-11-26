@@ -63,9 +63,16 @@ class ReviewPolicyTests(unittest.TestCase):
                 elif isinstance(node, ast.Constant) and isinstance(node.value, str) and node.value.startswith("MOVE_"):
                     value = node.value
                 if isinstance(value, str) and value.isupper(): codes.add(value)
-        text = (ROOT / "rules/rules.md").read_text()
-        self.assertEqual(len(codes), 31)
-        for code in codes: self.assertIn(f"`{code}`", text)
+        standard = (ROOT / "rules/rules.md").read_text()
+        variant = (ROOT / "rules/proto-energy-1.md").read_text()
+        prototype_codes = {"NOT_OWN_TOWER"}
+        self.assertLessEqual(prototype_codes, codes)
+        self.assertEqual(len(codes - prototype_codes), 31)
+        for code in codes - prototype_codes:
+            self.assertIn(f"`{code}`", standard)
+        for code in prototype_codes:
+            self.assertIn(f"`{code}`", variant)
+            self.assertNotIn(f"`{code}`", standard)
 
 
 if __name__ == "__main__":

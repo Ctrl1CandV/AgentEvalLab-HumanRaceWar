@@ -11,6 +11,7 @@ from arena.core.sandbox import InfrastructureError
 from arena.games.outpost.replay import verify
 from arena.games.outpost.mapgen import TYPES, generate, inspect_layout
 from arena.games.outpost.maps import parse_map
+from arena.games.outpost.rules import load_prototype
 from arena.match import play
 from arena.check import check
 from arena.tournament import run_tournament
@@ -49,6 +50,8 @@ def main() -> int:
     tournament.add_argument("--resume", action="store_true")
     tournament.add_argument("--max-tasks", type=int, help="checkpoint after this many new tasks; retains incomplete status")
     tournament.add_argument("--sandbox", choices=("bwrap", "plain"), default="bwrap")
+    for command in (match, inspect, tournament):
+        command.add_argument("--prototype-rules", type=Path, help="explicit prototype rules JSON (default: standard-1)")
     bench = commands.add_parser("bench", help="measure fixed CPU work at the actual parallel load in bwrap")
     bench.add_argument("--jobs", type=int, default=6)
     bench.add_argument("--sandbox", choices=("bwrap", "plain"), default="bwrap")
@@ -68,8 +71,10 @@ def main() -> int:
     replay.add_argument("--turn", type=int, default=0)
     args = parser.parse_args()
     try:
+        prototype = getattr(args, "prototype_rules", None)
+        ruleset = load_prototype(prototype) if prototype is not None else None
         if args.command == "check":
-            result = check(args.bot,args.out,turns=args.turns,sandbox=args.sandbox)
+            result = check(args.bot,args.out,turns=args.turns,sandbox=args.sandbox,ruleset=ruleset)
             print(json.dumps(result,indent=2))
             return 0 if result["passed"] else 1
         if args.command == "tournament":
@@ -81,7 +86,7 @@ def main() -> int:
             result = run_tournament(sources,args.maps,args.out,jobs=args.jobs,
                 focus=None if args.bots else 0,include_self=args.include_self,seeds=args.seeds,
                 reference=args.reference,sandbox=args.sandbox,resume=args.resume,max_tasks=args.max_tasks,
-                freeze_timing=args.freeze_timing,fixed_timing=args.fixed_timing)
+                freeze_timing=args.freeze_timing,fixed_timing=args.fixed_timing,ruleset=ruleset)
             print(json.dumps(result,indent=2))
             return 0 if result["status"]=="complete" else 2
         if args.command == "bench":
@@ -103,7 +108,8 @@ def main() -> int:
             if args.map.resolve().is_relative_to(private) and not args.out.resolve().is_relative_to(private):
                 raise ValueError("hidden map artifacts must stay under private/")
             calibration = Calibration.load(args.timing, workload_digest(), jobs=1) if args.timing else None
-            row = play([args.a, args.b], args.map.read_text(), args.out, args.seeds, calibration=calibration, sandbox=args.sandbox)
+            row = play([args.a, args.b], args.map.read_text(), args.out, args.seeds, calibration=calibration,
+                       sandbox=args.sandbox, ruleset=ruleset)
             print(json.dumps(row, indent=2))
             if args.show_stderr:
                 for path in sorted(Path(row["directory"]).glob("p*/stderr.txt")):

@@ -8,6 +8,11 @@
 
 只能在 DESIGN 附录 A 的范围内调参数。改规则机制，要先等评测负责人同意（BRIEF 3.3）。
 
+## 2026-11-26：深度筛选原型 `proto-energy-1`
+
+- 按 [CA 裁定](../inbox/2026-11-25-ceiling-result-review.md)增加单独的[能量激活规则](proto-energy-1.md)。三档定价来自 80 局既有公开图回放。不选原型时保留标准规则、协议、SDK 与冻结 bot；不打校准或留出对局。
+- [公开图预登记](../docs/PHASE_B_DEPTH_SCREEN.md)固定调参及确认矩阵，尚无原型筛选结果。
+
 ## 2026-11-08：B受控候选D22（获准一轮已完成，失败不采纳）
 
 - 首次calibration留出2208局失败：Z-eco/Z-harass无单一克制者，M对铺塔maze为6/12；见`reports/phase-B-holdout.md`。用户随后明确批准一轮受控试验及分析。

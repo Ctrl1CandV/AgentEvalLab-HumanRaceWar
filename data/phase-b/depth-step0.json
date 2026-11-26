@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "scope": "public historical standard-1 replay and regression evidence; no prototype screening games",
+  "caTask": "inbox/2026-11-25-ceiling-result-review.md",
+  "historicalReferenceCommit": "12860f4",
+  "existingStandardReplaysVerified": 104,
+  "existingStandardTurnsVerified": 29404,
+  "standardProtocolAndStateComparison": "byte-identical canonical snapshots and messages before and after; each replay also checked against its stored accepted commands, invalid events, state hashes and terminal result",
+  "existingStandardEndings": {"baseDestroyed": 32, "towerScore": 72},
+  "pricing": {
+    "source": "80 existing standard-1 M-balanced self-play games on public maps",
+    "inclusiveTurnWindow": [81, 160],
+    "sideWindows": 160,
+    "eligibleSideWindows": 160,
+    "medianIncomePerTurn": 23.3125,
+    "medianTowersPerTurn": 3.64375,
+    "medianIncomePerTowerTurn": 7.0159010600706715,
+    "priceLevels": [2, 4, 8]
+  },
+  "testSuite": {
+    "command": ".venv/bin/python tools/run_tests.py",
+    "lastRun": {"tests": 388, "failures": 0, "errors": 0, "skipped": 0},
+    "previousFullFailure": "Static reason-code documentation test initially included the prototype-only code in the frozen standard list. Test now requires documentation in the appropriate ruleset; standard rules text unchanged.",
+    "lsp": "Host LSP cannot open the WSL UNC workspace; no host LSP result claimed."
+  },
+  "newScreeningGames": 0,
+  "calibrationUsed": false,
+  "gradingUsed": false,
+  "holdoutUsed": false
+}

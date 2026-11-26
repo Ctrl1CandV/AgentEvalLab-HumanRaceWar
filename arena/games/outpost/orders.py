@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from arena.core.game import Warning
 from .model import DIRECTIONS, Order, Orders, Player, State, Tower, Unit, distance
-from .rules import UNIT_TYPES
+from .rules import TOWER_ACTIVATION_COST, UNIT_TYPES
 
 MAX_LINE_BYTES = 256
 MAX_TURN_LINES = 1000
@@ -17,7 +17,7 @@ def integer(text: str) -> int:
     return int(text)
 
 
-def decode(parts: list[str], line: int) -> Order:
+def decode(parts: list[str], line: int, *, paid_towers: bool = False) -> Order:
     op = parts[0]
     if op == "MOVE" and len(parts) == 3:
         return Order(op, unit_id=integer(parts[1]), direction=parts[2], line=line)
@@ -26,9 +26,17 @@ def decode(parts: list[str], line: int) -> Order:
                      y=integer(parts[3]), line=line)
     if op == "SPAWN" and len(parts) == 4:
         return Order(op, kind=parts[1], x=integer(parts[2]), y=integer(parts[3]), line=line)
-    if op == "FIRE" and len(parts) == 3:
+    if (op == "FIRE" or (paid_towers and op == "ACTIVATE")) and len(parts) == 3:
         return Order(op, x=integer(parts[1]), y=integer(parts[2]), line=line)
     raise ValueError("unknown command or wrong field count")
+
+
+def order_slot(order: Order) -> int | str | tuple[int, int]:
+    if order.unit_id is not None:
+        return order.unit_id
+    if order.op == "ACTIVATE":
+        return order.pos
+    return order.op
 
 
 def target_at(state: State, pos: tuple[int, int], occupied: dict) -> Unit | Tower | Player | None:
@@ -92,6 +100,11 @@ def validate(state: State, player: int, order: Order, occupied: dict, population
         if distance(owner.pos, order.pos) > rules["BASE_FIRE_RANGE"]:
             return "OUT_OF_RANGE"
         return None
+    if order.op == "ACTIVATE" and TOWER_ACTIVATION_COST in rules.values:
+        tower = state.towers.get(order.pos)
+        if tower is None or tower.owner != player:
+            return "NOT_OWN_TOWER"
+        return None
     return "BAD_COMMAND"
 
 
@@ -100,7 +113,8 @@ def parse_orders(state: State, player: int, lines: list[str]) -> tuple[Orders, l
         raise ValueError("unknown player")
     occupied = state.occupied()
     population = sum(unit.owner == player for unit in state.units.values())
-    seen: set[int | str] = set()
+    paid_towers = TOWER_ACTIVATION_COST in state.rules.values
+    seen: set[int | str | tuple[int, int]] = set()
     commands = []
     warnings = []
     total_bytes = 0
@@ -144,7 +158,7 @@ def parse_orders(state: State, player: int, lines: list[str]) -> tuple[Orders, l
         if parts == ["END"]:
             break
         try:
-            order = decode(parts, number)
+            order = decode(parts, number, paid_towers=paid_towers)
         except ValueError:
             warn(number, "BAD_SYNTAX")
             continue
@@ -155,9 +169,7 @@ def parse_orders(state: State, player: int, lines: list[str]) -> tuple[Orders, l
             if unit is None or unit.owner != player:
                 warn(number, "NOT_OWN_UNIT")
                 continue
-            slot: int | str = order.unit_id
-        else:
-            slot = order.op  # FIRE and SPAWN are independent base slots.
+        slot = order_slot(order)
         if slot in seen:
             warn(number, "DUPLICATE")
             continue

@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
+from pathlib import Path
 from types import MappingProxyType
 from typing import Mapping
 
@@ -31,6 +33,9 @@ PARAMETERS = MappingProxyType({
 })
 
 
+TOWER_ACTIVATION_COST = "TOWER_ACTIVATION_COST"
+
+
 @dataclass(frozen=True)
 class UnitSpec:
     prefix: str
@@ -51,7 +56,7 @@ class Rules:
 
     @classmethod
     def from_dict(cls, overrides: Mapping[str, object]) -> Rules:
-        unknown = set(overrides) - PARAMETERS.keys()
+        unknown = set(overrides) - PARAMETERS.keys() - {TOWER_ACTIVATION_COST}
         if unknown:
             raise ValueError("unknown rule parameter")
         values = {}
@@ -60,6 +65,12 @@ class Rules:
             if type(value) is not int or not low <= value <= high:
                 raise ValueError(f"{name} must be an integer in [{low}, {high}]")
             values[name] = value
+        if TOWER_ACTIVATION_COST in overrides:
+            price = overrides[TOWER_ACTIVATION_COST]
+            if type(price) is not int or not 1 <= price <= 200:
+                raise ValueError(f"{TOWER_ACTIVATION_COST} must be an integer in [1, 200]")
+            values[TOWER_ACTIVATION_COST] = price
+            return cls(MappingProxyType(values), "proto-energy-1")
         return cls(MappingProxyType(values))
 
     def __getitem__(self, name: str) -> int:
@@ -67,3 +78,12 @@ class Rules:
 
     def unit_value(self, kind: str, attribute: str) -> int:
         return self[f"{UNIT_TYPES[kind].prefix}_{attribute}"]
+
+
+def load_prototype(path: Path) -> dict[str, int]:
+    """Read an explicit prototype override, not a replacement for standard-1."""
+    values = json.loads(path.read_bytes())
+    if not isinstance(values, dict) or values.keys() != {TOWER_ACTIVATION_COST}:
+        raise ValueError("expected a proto-energy-1 override with only TOWER_ACTIVATION_COST")
+    Rules.from_dict(values)
+    return values
