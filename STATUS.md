@@ -2,7 +2,13 @@
 
 原冻结 B 版已结案。当前由综合会话负责开发、评测和交审发布，用户负责开启所需作者、测试会话与联系审查者。[交接停点](AGENTS.md)
 
-## 当前停点：两项深度原型均未过筛
+## 进行中：standard-1 发布工单
+
+依据 [用户确认的发布工单](inbox/2026-11-26-release-work-order.md)，B 收尾和 C 并行。原型搁置；本轮不重测第 6 条，目标低于 0.9 由 AgentEvalLab 第三次验证实测。L12 校准 864 局、第 7 条补测 1,440 局、[唯一 holdout](docs/RELEASE_HOLDOUT_PREREGISTRATION.md) 2,208 局全部完成并核验。holdout 未通过，按工单继续，不再运行。组 3 已按优先顺序选定首个组合 f1-openfort、f2-press，冻结 13 级、28 名成员。
+
+组 2 增加 `grade`、`scrimmage`、`calibrate`，保持 `bench`。407 项测试全部通过；引擎版本升至 1.0.0 后，104 份旧回放的 29,404 回合状态与协议输出仍逐字节一致；公开包已导出核验，SDK 检查通过，练习赛完成 12 局。先推供主项目对接，不交最终审查。迁移初稿见 [MIGRATION](MIGRATION.md)。
+
+## 历史：两项深度原型均未过筛
 
 [11 月 25 日 CA 裁定](inbox/2026-11-25-ceiling-result-review.md)接受天花板实验的「部分」判定，关闭重写原上半梯的路线。[现版本的 13 级方案草案](reports/phase-B-standard-1-options.md)已备，未新增对局；去向待原型结果出来后由用户决定。
 

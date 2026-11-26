@@ -27,7 +27,7 @@ from arena.games.outpost.replay import invalid_events, outcome
 
 def play(sources: list[Path], map_text: str, out: Path, seeds: list[int], *, limits=None,
          retries: int = 3, calibration: Calibration | None = None, sandbox='bwrap',
-         prepared=None, ruleset=None, task_id=None, _allocation=None) -> dict:
+         prepared=None, ruleset=None, task_id=None, _allocation=None, _submission_seat=None) -> dict:
     """Standalone calls lease CPUs; trusted batch workers receive a leased slot."""
     if sandbox not in ('bwrap', 'plain'): raise ValueError('unknown sandbox backend')
     if _allocation is None:
@@ -36,13 +36,15 @@ def play(sources: list[Path], map_text: str, out: Path, seeds: list[int], *, lim
         with CpuLease(len(sources), exact=calibration.cpus if calibration else None) as lease:
             allocation = {'jobs':1, 'pool':lease.cpus, 'bots':lease.cpus, 'runners':lease.runners}
             return _play(sources,map_text,out,seeds,limits=limits,retries=retries,calibration=calibration,
-                         sandbox=sandbox,prepared=prepared,ruleset=ruleset,task_id=task_id,allocation=allocation)
+                         sandbox=sandbox,prepared=prepared,ruleset=ruleset,task_id=task_id,allocation=allocation,
+                         submission_seat=_submission_seat)
     return _play(sources,map_text,out,seeds,limits=limits,retries=retries,calibration=calibration,
-                 sandbox=sandbox,prepared=prepared,ruleset=ruleset,task_id=task_id,allocation=_allocation)
+                 sandbox=sandbox,prepared=prepared,ruleset=ruleset,task_id=task_id,allocation=_allocation,
+                 submission_seat=_submission_seat)
 
 
 def _play(sources, map_text, out, seeds, *, limits, retries, calibration, sandbox, prepared, ruleset,
-          task_id, allocation):
+          task_id, allocation, submission_seat):
     game = Outpost(limits)
     factor = calibration.factor if calibration else 1.0
     if calibration:
@@ -92,7 +94,8 @@ def _play(sources, map_text, out, seeds, *, limits, retries, calibration, sandbo
             launcher.cpus = list(allocation['pool'])
             bots = ([clone_prepared(bot,work/f'p{p}') for p,bot in enumerate(prepared)] if prepared is not None
                     else [prepare(source,work/f'p{p}',launcher,allocation['bots'][p]) for p,source in enumerate(sources)])
-            if any(bot.compile_fault and source.resolve().is_relative_to(private) for bot,source in zip(bots,sources)):
+            if any(i != submission_seat and bot.compile_fault and source.resolve().is_relative_to(private)
+                   for i,(bot,source) in enumerate(zip(bots,sources))):
                 raise ValueError('hidden ladder bot is invalid; see private attempt artifacts')
             state = game.new_match(map_text,ruleset or {},seeds)
             metrics = Metrics(state)

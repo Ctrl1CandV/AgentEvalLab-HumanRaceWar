@@ -26,12 +26,13 @@ def safe_relative(text):
 
 def declared(root, role):
     spec = json.loads((root/'package/public-files.json').read_text())
-    if spec['schemaVersion'] != 1 or role not in ('pilot', 'deepseek', 'claude'): raise ValueError('unknown export role/schema')
+    if spec['schemaVersion'] != 1 or role not in ('pilot', 'deepseek', 'claude', 'release'): raise ValueError('unknown export role/schema')
     if (set(spec['publicMapTypes']) != {'open', 'corridor', 'island', 'maze'}
             or spec['publicMapsPerType'] != 10 or len(spec['publicBotCodes']) != 10):
         raise ValueError('unexpected public catalog')
     entries = [(p, p) for p in spec['identity']]
-    entries += list(spec['renamed'].items())
+    entries += [(target,source) for target,source in spec['renamed'].items()
+                if role!='release' or target not in spec['roles']['release']]
     for code in spec['publicBotCodes']:
         if '/' in code or code in ('.', '..'): raise ValueError('invalid public bot code')
         entries += [(f'bots/public/{code}/{name}', f'bots/public/{code}/{name}') for name in ('main.cpp', 'strategy.hpp')]
@@ -42,12 +43,14 @@ def declared(root, role):
     if len({target for target, _ in entries}) != len(entries): raise ValueError('duplicate material destination')
     singles = {'rules/rules.md', 'rules/standard-1.json', 'package/workspace-README.md',
                'package/benchmark-reference.json', 'package/pilot-instructions.md', 'docs/BRIEF-DEEPSEEK.md',
-               'docs/BRIEF-CLAUDE.md', 'package/claude-timing-jobs1.json', 'package/claude-timing-jobs6.json'}
+               'docs/BRIEF-CLAUDE.md', 'package/claude-timing-jobs1.json', 'package/claude-timing-jobs6.json',
+               'package/release-README.md', 'package/task-phase1.md', 'package/task-phase2.md'}
     for target, source in entries:
         safe_relative(target); relative = safe_relative(source)
         if source not in singles and not source.startswith(('arena/', 'sdk/', 'bots/public/', 'maps/public/', 'maps/scrimmage/')):
             raise ValueError('source outside public allowlist')
-        if any(part.lower() in ('grade.py', 'grading.py', 'scoring.py', 'ladder.json', 'authors.md', 'agents.md') for part in relative.parts):
+        if any(part.lower() in ('grade.py', 'grading.py', 'scoring.py', 'scoring.json', 'ladder.py', 'ladder.json', 'calibrate.py',
+                               'release_commands.py', 'authors.md', 'agents.md') for part in relative.parts):
             raise ValueError('builder/scoring material cannot enter workspace')
         path = root/source
         if not path.is_file() or any(p.is_symlink() for p in (path, *path.parents)):
@@ -165,7 +168,7 @@ def smoke(destination):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--role', choices=('pilot', 'deepseek', 'claude'), required=True)
+    parser.add_argument('--role', choices=('pilot', 'deepseek', 'claude', 'release'), required=True)
     parser.add_argument('--out', type=Path, required=True)
     args = parser.parse_args(); result = build(args.out, args.role)
     result.update(smoke(args.out)); print(json.dumps(result, indent=2))

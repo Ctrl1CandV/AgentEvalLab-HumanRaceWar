@@ -1,5 +1,6 @@
-"""Local A-stage match/replay tools. No grading or unisolated bot execution."""
+"""HumanRaceWar arena commands. Use offline bwrap on the evaluation host."""
 import argparse
+from importlib.util import find_spec
 import json
 from pathlib import Path
 import sys
@@ -14,6 +15,7 @@ from arena.games.outpost.maps import parse_map
 from arena.games.outpost.rules import load_prototype
 from arena.match import play
 from arena.check import check
+from arena.scrimmage import register as register_scrimmage
 from arena.tournament import run_tournament
 
 
@@ -51,7 +53,7 @@ def main() -> int:
     tournament.add_argument("--max-tasks", type=int, help="checkpoint after this many new tasks; retains incomplete status")
     tournament.add_argument("--sandbox", choices=("bwrap", "plain"), default="bwrap")
     for command in (match, inspect, tournament):
-        command.add_argument("--prototype-rules", type=Path, help="explicit prototype rules JSON (default: standard-1)")
+        command.add_argument("--prototype-rules", type=Path, help=argparse.SUPPRESS)
     bench = commands.add_parser("bench", help="measure fixed CPU work at the actual parallel load in bwrap")
     bench.add_argument("--jobs", type=int, default=6)
     bench.add_argument("--sandbox", choices=("bwrap", "plain"), default="bwrap")
@@ -69,8 +71,14 @@ def main() -> int:
     replay.add_argument("action", choices=("verify", "show", "summary"))
     replay.add_argument("path", type=Path)
     replay.add_argument("--turn", type=int, default=0)
+    register_scrimmage(commands)
+    if find_spec('arena.release_commands') is not None:
+        from arena.release_commands import register
+        register(commands)
     args = parser.parse_args()
     try:
+        if hasattr(args,'handler'):
+            return args.handler(args)
         prototype = getattr(args, "prototype_rules", None)
         ruleset = load_prototype(prototype) if prototype is not None else None
         if args.command == "check":

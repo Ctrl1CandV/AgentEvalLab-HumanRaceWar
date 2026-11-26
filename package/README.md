@@ -1,4 +1,14 @@
-# 中期试探与独立作者的公开材料清单
+# 公开任务材料清单
+
+发布版从显式白名单导出：
+
+```sh
+.venv/bin/python -m tools.prepare_author_workspace --role release --out ~/projects/HRW-release-public
+```
+
+目标必须是新目录。用 `sha256sum --check PUBLIC-MANIFEST.sha256` 核验，SDK 示例可用 `arena check`。输出保留 `scrimmage`，不含评分和校准命令实现、计分配置、评测资料或原型。两阶段提示分别在 `TASK-PHASE1.md` 和 `TASK-PHASE2.md`；部署时按阶段交付。宿主时限锁由评测机提供，不随公开包复用开发机锁。
+
+## 历史角色：中期试探和独立作者
 
 这是用户2026-11-09授权的B阶段准备工作，不是C阶段正式任务包验收。清单`public-files.json`列明共同源文件和两个角色的任务说明；`tools/prepare_author_workspace.py`据此导出独立目录，生成并验证逐文件摘要。未列出的文件不会复制，未来增加模块必须重新审查清单。
 

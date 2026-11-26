@@ -7,7 +7,7 @@ from hashlib import sha256
 import json
 from pathlib import Path
 
-from arena import __version__
+from arena import REPLAY_ENGINE_VERSIONS
 from arena.core.replay import ReplayError, normalized
 from arena.games.outpost import Outpost
 from arena.games.outpost.metrics import Metrics
@@ -35,19 +35,19 @@ def outcome(game, state, faults=None):
                        "damageDealt": [p.damage_dealt for p in state.players]})
 
 
-def verify(path: Path, show_turn: int | None = None) -> dict:
+def verify(path: Path, show_turn: int | None = None, *, on_state=None) -> dict:
     """Validate transcript/accepted orders/events/hashes/result, not timing truth.
 
     Unknown additive fields are ignored. Missing/duplicate terminal records,
     truncated gzip, altered rules/map/actions/results are rejected.
     """
     try:
-        return _verify(path, show_turn)
+        return _verify(path, show_turn, on_state)
     except (OSError, EOFError, ValueError, KeyError, TypeError, IndexError) as error:
         raise ReplayError(f"invalid replay: {error}") from error
 
 
-def _verify(path: Path, show_turn: int | None) -> dict:
+def _verify(path: Path, show_turn: int | None, on_state=None) -> dict:
     with gzip.open(path, "rt", encoding="utf-8") as stream:
         # Bound decoded record size as well as total number of records.
         def read_record():
@@ -65,7 +65,7 @@ def _verify(path: Path, show_turn: int | None) -> dict:
         if header is None:
             raise ReplayError("empty replay")
         if (header["type"] != "header" or header["replayVersion"] != 1 or header["game"] != "outpost"
-                or header["engineVersion"] != __version__):
+                or header["engineVersion"] not in REPLAY_ENGINE_VERSIONS):
             raise ReplayError("unsupported replay/engine/game version")
         if sha256(header["map"].encode()).hexdigest() != header["mapSha256"]:
             raise ReplayError("map digest mismatch")
@@ -123,6 +123,8 @@ def _verify(path: Path, show_turn: int | None) -> dict:
                         raise ReplayError("invalid orders mismatch")
                     if show_turn == state.turn:
                         board = game.render(state)
+                    if on_state is not None:
+                        on_state(state)
                     if state.turn % 25 == 0 or game.result(state) is not None:
                         summaries.append({"turn": state.turn, "players": [
                             {"energy": p.energy, "score": p.score,

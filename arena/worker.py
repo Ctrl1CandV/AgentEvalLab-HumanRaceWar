@@ -34,7 +34,7 @@ def main():
         if sha256(map_text.encode()).hexdigest()!=job['mapSha256']: raise ValueError('frozen map changed')
         row = play([Path(p) for p in job['sources']],map_text,Path(job['out']),job['seeds'],
                    calibration=calibration,sandbox=job['sandbox'],prepared=bots,ruleset=job['ruleset'],retries=job['retries'],
-                   task_id=job['taskId'],_allocation=allocation)
+                   task_id=job['taskId'],_allocation=allocation,_submission_seat=job.get('submissionSeat'))
         atomic_json(Path(job['reply']),row)
         return 0 if row['status']=='complete' else 2
     except BaseException as error:

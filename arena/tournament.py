@@ -55,9 +55,25 @@ def selected_pairings(count, pairings):
     return sorted(result)
 
 
+def scheduled_maps(pairs, map_count, selection):
+    if selection is None:
+        return None
+    if set(selection) != set(pairs):
+        raise ValueError('every scheduled pair must have a map assignment')
+    bound = []
+    for pair in pairs:
+        slots = selection[pair]
+        if (not slots or any(type(i) is not int or not 0 <= i < map_count for i in slots)
+                or len(set(slots)) != len(slots)):
+            raise ValueError('invalid per-pair map assignment')
+        bound.append(list(slots))
+    return bound
+
+
 def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self=(), seeds=(17,29),
                    reference=None, sandbox='bwrap', resume=False, max_tasks=None, ruleset=None,
-                   freeze_timing=False, fixed_timing=None, pairings=None):
+                   freeze_timing=False, fixed_timing=None, pairings=None, pair_maps=None,
+                   submission_index=None, trusted_cache=None):
     if sandbox not in ('bwrap','plain'): raise ValueError('unknown backend')
     if freeze_timing and fixed_timing is not None: raise ValueError('choose a new timing freeze OR an existing lock')
     turns = Rules.from_dict(ruleset or {})['TURNS']
@@ -93,6 +109,12 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
         if focus is not None: pairs=[p for p in pairs if focus in p]
         pairs += [(i,i) for i,name in enumerate(names) if name in include_self]
     if not pairs: raise ValueError('no bot pairings')
+    map_selection = scheduled_maps(pairs,len(maps),pair_maps)
+    if submission_index is not None and (type(submission_index) is not int
+            or any(a == b or submission_index not in (a,b) for a,b in pairs)):
+        raise ValueError('submission must be the one focal participant in every pair')
+    if trusted_cache is not None and (sandbox != 'bwrap' or not trusted_cache.resolve().is_relative_to(ROOT/'private')):
+        raise ValueError('shared C++ cache must be private and offline')
     out.mkdir(parents=True,exist_ok=True)
     with (out/'controller.lock').open('a+b') as controller:
         try: fcntl.flock(controller,fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -106,6 +128,10 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
         if fixed_policy:
             request['fixedTiming'] = {'mode': 'import' if fixed_raw is not None else 'freeze-once',
                                       'sourceSha256': sha256(fixed_raw).hexdigest() if fixed_raw is not None else None}
+        if map_selection is not None:
+            request['pairMapSlots'] = map_selection
+        if submission_index is not None:
+            request['submissionIndex'] = submission_index
         # Validate source snapshots on every invocation; a resume must not mix
         # source revisions. Validation failures remain submissions, not infra wins.
         validation=out/'validation'/uuid4().hex; validation.mkdir(parents=True)
@@ -125,8 +151,10 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
             if manifest['request']!=request: raise ValueError('batch inputs/configuration changed; use a new output directory')
         else:
             manifest={'schemaVersion':1,'request':request,'tasks':[],'bots':names}
-            for a,b in pairs:
-                for index,map_path in enumerate(maps):
+            for n,(a,b) in enumerate(pairs):
+                slots = range(len(maps)) if map_selection is None else map_selection[n]
+                for index in slots:
+                    map_path = maps[index]
                     for swapped in (False,True):
                         players=[b,a] if swapped else [a,b]
                         ss=list(reversed(seeds)) if swapped else list(seeds)
@@ -251,7 +279,7 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
                     launcher=Plain()
                 launcher.cpus=lease.cpus
                 prepared=[]
-                cache=CompileCache(out/'cache')
+                cache=CompileCache(trusted_cache if trusted_cache is not None else out/'cache')
                 prep=out/'preparations'/uuid4().hex
                 for i,source in enumerate(sources):
                     # Valid sources use the just-validated frozen copy, not a live tree.
@@ -263,7 +291,7 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
                         atomic_json(directory/'validation.json',{'valid':False,'reason':reason})
                         bot=Bot(names[i],None,directory,'invalid',[],'compile_failed',reason)
                     bot.code=names[i]; prepared.append(bot)
-                    if bot.compile_fault and source.resolve().is_relative_to(ROOT/'private'):
+                    if bot.compile_fault and i != submission_index and source.resolve().is_relative_to(ROOT/'private'):
                         raise ValueError('hidden bot preparation failed; see private artifacts')
                 if fixed_policy and prior_cal is not None:
                     report = {'resultFile': str(lock_path), 'policy': 'fixed', 'lockSha256': prior_cal.lock_sha256}
@@ -297,6 +325,8 @@ def run_tournament(sources, maps, out: Path, *, jobs=6, focus=None, include_self
                                 'mapSha256':request['mapHashes'][task['mapIndex']],
                                 'allocation':{'jobs':jobs,'pool':lease.cpus,'bots':lease.cpus[slot*2:slot*2+2],
                                               'runners':[lease.runners[slot%len(lease.runners)]]}}
+                            if submission_index is not None:
+                                config['submissionSeat'] = task['players'].index(submission_index)
                             atomic_json(execution/'job.json',config)
                             stdout=(execution/'worker.stdout').open('wb'); stderr=(execution/'worker.stderr').open('wb')
                             parent_pid=os.getpid()

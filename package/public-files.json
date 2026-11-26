@@ -9,7 +9,7 @@
     "arena/games/__init__.py", "arena/games/outpost/__init__.py", "arena/games/outpost/engine.py",
     "arena/games/outpost/mapgen.py", "arena/games/outpost/maps.py", "arena/games/outpost/metrics.py",
     "arena/games/outpost/model.py", "arena/games/outpost/orders.py", "arena/games/outpost/replay.py",
-    "arena/games/outpost/rules.py", "arena/match.py", "arena/tournament.py", "arena/worker.py",
+    "arena/games/outpost/rules.py", "arena/match.py", "arena/scrimmage.py", "arena/tournament.py", "arena/worker.py",
     "sdk/README.md", "sdk/cpp/example/main.cpp", "sdk/cpp/hrw.hpp",
     "sdk/python/example/main.py", "sdk/python/hrw.py"
   ],
@@ -30,6 +30,11 @@
       "BRIEF-CLAUDE.md": "docs/BRIEF-CLAUDE.md",
       "budget-lock-jobs1.json": "package/claude-timing-jobs1.json",
       "budget-lock-jobs6.json": "package/claude-timing-jobs6.json"
+    },
+    "release": {
+      "README.md": "package/release-README.md",
+      "TASK-PHASE1.md": "package/task-phase1.md",
+      "TASK-PHASE2.md": "package/task-phase2.md"
     }
   }
 }
